@@ -9,7 +9,7 @@
   "place": "South Knoxville, TN",
   "feature": {
     "id": "pride-festival",
-    "label": "Feature Story",
+    "label": "Old Sevier",
     "labelColor": "rust",
     "layout": "imageTop",
     "image": "/assets/spots/feature_flag.png",
@@ -43,15 +43,15 @@
   },
   "scanner": [
     { "label": "Old Sevier", "hot": true, "image": "/assets/spots/s1_flag.png", "title": "Pride on Sevier Avenue", "blurb": "Street fest noon–6, then after-parties across SoKno.", "cue": "Jump to story", "href": "#pride-festival" },
-    { "label": "Urban Wilderness", "labelColor": "teal", "image": "/assets/spots/s5_fire.png", "title": "Phenomenal Fireflies", "blurb": "A guided night walk into the Ijams glow.", "cue": "Jump to story", "href": "#fireflies" },
+    { "label": "Ijams Park", "labelColor": "teal", "image": "/assets/spots/s5_fire.png", "title": "Phenomenal Fireflies", "blurb": "A guided night walk into the Ijams glow.", "cue": "Jump to story", "href": "#fireflies" },
     { "label": "Old Sevier", "image": "/assets/spots/make_music.png", "title": "Make Music Day", "blurb": "Bluegrass, karaoke, and free music all over SoKno.", "cue": "Jump to story", "href": "#make-music" },
-    { "label": "South Waterfront", "labelColor": "teal", "image": "/assets/spots/ronis_mac.png", "title": "Roni's Mac Bar", "blurb": "The build-your-own mac-and-cheese bar has landed.", "cue": "Jump to story", "href": "#ronis" },
-    { "label": "Neighborhood", "image": "/assets/spots/rezoning.png", "title": "A rezoning on Sevier", "blurb": "2704 Sevier Ave could go commercial.", "cue": "Jump to story", "href": "#rezoning" }
+    { "label": "Kern's", "labelColor": "green", "image": "/assets/spots/ronis_mac.png", "title": "Roni's Mac Bar", "blurb": "The build-your-own mac-and-cheese bar has landed.", "cue": "Jump to story", "href": "#ronis" },
+    { "label": "Old Sevier", "image": "/assets/spots/rezoning.png", "title": "A rezoning on Sevier", "blurb": "2704 Sevier Ave could go commercial.", "cue": "Jump to story", "href": "#rezoning" }
   ],
   "stories": [
     {
       "id": "fireflies",
-      "label": "Urban Wilderness",
+      "label": "Ijams Park",
       "labelColor": "teal",
       "layout": "imageRight",
       "image": "/assets/spots/s5_fire.png",
@@ -74,7 +74,7 @@
     },
     {
       "id": "bird-banding",
-      "label": "Urban Wilderness",
+      "label": "Ijams Park",
       "labelColor": "teal",
       "layout": "imageLeft",
       "image": "/assets/spots/bird_banding.png",
@@ -119,8 +119,8 @@
     },
     {
       "id": "ronis",
-      "label": "South Waterfront",
-      "labelColor": "teal",
+      "label": "Kern's",
+      "labelColor": "green",
       "layout": "imageLeft",
       "image": "/assets/spots/ronis_mac.png",
       "imageCaption": "A bowl with a view",
@@ -142,7 +142,7 @@
     },
     {
       "id": "rezoning",
-      "label": "Around the Neighborhood",
+      "label": "Old Sevier",
       "labelColor": "rust",
       "layout": "imageRight",
       "image": "/assets/spots/rezoning.png",

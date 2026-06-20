@@ -39,3 +39,20 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
   Schema: `Story.sources: { label, url? }[]` → renders a "Source(s):" line at the foot
   of the article. Use the `agenda` block (time → activity rows) for event schedules
   when the times are definitively sourced.
+
+## SoKno locations (the pill vocabulary)
+
+Story **labels are geographic location pills** — make them accurate. Keep one color per
+place for recognition: **Old Sevier = rust, Ijams Park = teal, Kern's = green.**
+
+- **Old Sevier** — the Sevier Avenue corridor (the main drag); Honeybee Coffee, Alliance
+  Brewing, SouthSide Garage, the Pink Cactus, Fly by Night.
+- **Kern's** — the Kern's Bakery / Food Hall pocket. Its own SoKno section, **no water
+  view** (starts ~2 cross streets up from the river). Roni's Mac Bar lives here.
+- **Ijams Park** — Ijams Nature Center / Meads Quarry; its own call-out (fireflies, bird
+  banding, the bluegrass jam). Say "Ijams Park," never just "nature center."
+- **Urban Wilderness** — the trail district, anchored by a converted church that now holds
+  a bar, a restaurant, and a bike shop, with miles of mountain-biking trails.
+- **Island Home** — established residential community: older homes, higher property values.
+- **South Waterfront** — a realtor marketing moniker for the riverfront strip; we rarely
+  use it (it's just South Knoxville).
