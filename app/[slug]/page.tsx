@@ -9,7 +9,17 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const e = getBySlug(undefined, slug);
-  return e ? { title: `The South Knoxville Ear — ${e.dateLabel ?? e.date}` } : {};
+  if (!e) return {};
+  const title = `The South Knoxville Ear — ${e.dateLabel ?? e.date}`;
+  const description = e.feature.deck ?? e.feature.title;
+  return {
+    title, description,
+    openGraph: {
+      title, description, type: "website", url: `https://soknoear.com/${e.slug}`,
+      siteName: "The South Knoxville Ear", images: ["/assets/masthead.png"],
+    },
+    twitter: { card: "summary_large_image", title, description, images: ["/assets/masthead.png"] },
+  };
 }
 export default async function EditionPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
