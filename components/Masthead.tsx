@@ -80,7 +80,7 @@ export function Masthead({ topline, sections }: MastheadProps) {
 
       <div style={{ background: "var(--paper-cream)", padding: "18px 16px 14px", textAlign: "center" }}>
         <img
-          src="/assets/masthead.png"
+          src="/assets/masthead.jpg"
           alt="The South Knoxville Ear — We Hear Things."
           style={{ width: "100%", maxWidth: 1180, height: "auto", margin: "0 auto" }}
         />

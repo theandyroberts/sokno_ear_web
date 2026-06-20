@@ -11,9 +11,9 @@ export function generateMetadata(): Metadata {
     alternates: { canonical: "/" },
     openGraph: {
       title, description, type: "website", url: "https://soknoear.com",
-      siteName: "The South Knoxville Ear", images: ["/assets/masthead.png"],
+      siteName: "The South Knoxville Ear", images: ["/assets/masthead.jpg"],
     },
-    twitter: { card: "summary_large_image", title, description, images: ["/assets/masthead.png"] },
+    twitter: { card: "summary_large_image", title, description, images: ["/assets/masthead.jpg"] },
   };
 }
 export default function Home() {

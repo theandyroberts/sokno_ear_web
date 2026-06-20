@@ -47,7 +47,7 @@ export function editionJsonLd(edition: Edition) {
         "@type": "NewsMediaOrganization",
         name: PUB,
         url: BASE,
-        logo: `${BASE}/assets/masthead.png`,
+        logo: `${BASE}/assets/masthead.jpg`,
         description: "A weekly events-and-stories paper for South Knoxville, Tennessee.",
       },
       { "@type": "WebSite", name: PUB, url: BASE },
