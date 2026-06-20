@@ -12,6 +12,7 @@ import { EventSubmitForm } from "@/components/EventSubmitForm";
 import { SubscribeForm } from "@/components/SubscribeForm";
 import { Footer } from "@/components/Footer";
 import { ArticleSources } from "@/components/ArticleSources";
+import { JsonLd } from "@/components/JsonLd";
 
 const Page = ({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) => (
   <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", ...style }}>{children}</div>
@@ -45,6 +46,7 @@ export function Paper({ edition }: { edition: Edition }) {
 
   return (
     <main id="top">
+      <JsonLd edition={edition} />
       <Masthead topline={topline} sections={sections} />
 
       {/* FEATURE BAND */}

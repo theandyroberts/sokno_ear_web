@@ -14,6 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const description = e.feature.deck ?? e.feature.title;
   return {
     title, description,
+    alternates: { canonical: `/${e.slug}` },
     openGraph: {
       title, description, type: "website", url: `https://soknoear.com/${e.slug}`,
       siteName: "The South Knoxville Ear", images: ["/assets/masthead.png"],

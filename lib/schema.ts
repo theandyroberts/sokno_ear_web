@@ -32,6 +32,14 @@ export const Fact = z.object({ label: z.string(), value: z.string() });
 // credit text (e.g. "Info from A. Roberts" for a tip with no link).
 export const Source = z.object({ label: z.string(), url: z.string().optional() });
 
+// Optional machine-readable event data → schema.org Event JSON-LD (SEO rich results).
+export const EventDetails = z.object({
+  startDate: z.string(),
+  endDate: z.string().optional(),
+  locationName: z.string(),
+  locationAddress: z.string().optional(),
+});
+
 export const StorySchema = z.object({
   id: z.string(),
   label: z.string(),
@@ -44,6 +52,7 @@ export const StorySchema = z.object({
   facts: z.array(Fact).default([]),
   body: z.array(Block).min(1),
   sources: z.array(Source).optional(),
+  event: EventDetails.optional(),
 });
 
 export const StoryCard = z.object({
@@ -95,3 +104,4 @@ export type StoryCard = z.infer<typeof StoryCard>;
 export type CalEvent = z.infer<typeof CalEvent>;
 export type Audio = z.infer<typeof Audio>;
 export type Source = z.infer<typeof Source>;
+export type EventDetails = z.infer<typeof EventDetails>;

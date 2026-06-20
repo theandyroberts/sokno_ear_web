@@ -42,7 +42,8 @@
       { "label": "@soknopride", "url": "https://www.instagram.com/soknopride/" },
       { "label": "soknopride.org", "url": "https://www.soknopride.org/" },
       { "label": "Visit Knoxville", "url": "https://www.visitknoxville.com/event/sokno-pride-2026/34249/" }
-    ]
+    ],
+    "event": { "startDate": "2026-06-20T12:00:00-04:00", "endDate": "2026-06-20T18:00:00-04:00", "locationName": "Sevier Avenue", "locationAddress": "Sevier Ave" }
   },
   "scanner": [
     { "label": "Old Sevier", "hot": true, "image": "/assets/spots/s1_flag.png", "title": "Pride on Sevier Avenue", "blurb": "5K & yoga at 7:30, street fest noon–6, after-parties at 8.", "cue": "Jump to story", "href": "#pride-festival" },
@@ -73,7 +74,8 @@
       ],
       "sources": [
         { "label": "Ijams — Phenomenal Fireflies", "url": "https://www.ijams.org/public-programs" }
-      ]
+      ],
+      "event": { "startDate": "2026-06-20T21:00:00-04:00", "endDate": "2026-06-20T22:30:00-04:00", "locationName": "Ijams Nature Center", "locationAddress": "2915 Island Home Ave" }
     },
     {
       "id": "bird-banding",
@@ -95,7 +97,8 @@
       ],
       "sources": [
         { "label": "Ijams events calendar", "url": "https://www.ijams.org/calendar-of-events" }
-      ]
+      ],
+      "event": { "startDate": "2026-06-20T07:30:00-04:00", "locationName": "Ijams Nature Center", "locationAddress": "2915 Island Home Ave" }
     },
     {
       "id": "make-music",
@@ -118,7 +121,8 @@
       ],
       "sources": [
         { "label": "Make Music Knoxville", "url": "https://makemusicday.org/knoxville/listings/venues" }
-      ]
+      ],
+      "event": { "startDate": "2026-06-21T14:00:00-04:00", "endDate": "2026-06-21T17:00:00-04:00", "locationName": "Ijams Nature Center", "locationAddress": "2915 Island Home Ave" }
     },
     {
       "id": "ronis",

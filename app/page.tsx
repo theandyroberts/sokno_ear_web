@@ -8,6 +8,7 @@ export function generateMetadata(): Metadata {
   const description = e.feature.deck ?? e.feature.title;
   return {
     title, description,
+    alternates: { canonical: "/" },
     openGraph: {
       title, description, type: "website", url: "https://soknoear.com",
       siteName: "The South Knoxville Ear", images: ["/assets/masthead.png"],
