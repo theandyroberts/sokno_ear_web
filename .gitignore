@@ -1,0 +1,48 @@
+# ── The South Knoxville Ear ──
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# Next.js build output
+/.next/
+/out/
+/build
+next-env.d.ts
+
+# Env & secrets — NEVER commit. Keep only a committable example template.
+.env
+.env.*
+!.env.example
+
+# Local SQLite (the live DB lives at /var/lib/soknoear on the VPS, outside the repo)
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+/data/
+
+# Logs & debug
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing / coverage
+/coverage
+
+# TypeScript
+*.tsbuildinfo
+
+# macOS / OS cruft
+.DS_Store
+**/.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
