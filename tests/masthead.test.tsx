@@ -3,10 +3,9 @@ import { render, screen } from "@testing-library/react";
 import { Masthead } from "@/components/Masthead";
 
 describe("Masthead", () => {
-  it("renders dateline + nav links to anchors", () => {
-    render(<Masthead dateline="Weekend Edition · Jun 20, 2026 · South Knoxville, TN"
-      volLine="Vol. 1 — No. 1" sections={[{ id: "events", label: "Events" }]} />);
-    expect(screen.getByText(/Weekend Edition/)).toBeInTheDocument();
+  it("renders the compact topline + nav links to anchors", () => {
+    render(<Masthead topline="Vol. 1 — No. 1 · Jun 19–21" sections={[{ id: "events", label: "Events" }]} />);
+    expect(screen.getByText(/Vol\. 1 — No\. 1/)).toBeInTheDocument();
     const link = screen.getByRole("link", { name: "Events" });
     expect(link.getAttribute("href")).toBe("#events");
   });

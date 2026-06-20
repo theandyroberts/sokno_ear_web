@@ -77,6 +77,7 @@ export const EditionSchema = z.object({
   edition: z.string(),
   date: z.string(),
   dateLabel: z.string().optional(),
+  shortDate: z.string().optional(),
   place: z.string(),
   feature: StorySchema,
   scanner: z.array(StoryCard).min(1),

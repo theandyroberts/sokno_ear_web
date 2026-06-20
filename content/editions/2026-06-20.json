@@ -5,6 +5,7 @@
   "edition": "Weekend Edition",
   "date": "2026-06-20",
   "dateLabel": "Fri–Sun, Jun 19–21, 2026",
+  "shortDate": "Jun 19–21",
   "place": "South Knoxville, TN",
   "feature": {
     "id": "pride-festival",
@@ -14,21 +15,34 @@
     "image": "/assets/spots/feature_flag.png",
     "imageCaption": "Sevier Ave, flags up",
     "title": "Pride takes over Sevier Avenue",
-    "deck": "For one Saturday the avenue belongs to the people: the annual SoKno Pride Festival closes Sevier to cars and fills it with makers, music, food, and neighbors from noon until six.",
+    "deck": "It's really two parties in one: a noon-to-six street festival on Sevier Avenue, and a wave of official after-parties that scatter across SoKno once the sun goes down.",
     "facts": [
-      { "label": "When", "value": "Sat, Jun 20 · Noon–6 PM" },
-      { "label": "Where", "value": "Sevier Ave" },
-      { "label": "Cost", "value": "Free" },
-      { "label": "Source", "value": "soknopride.org" }
+      { "label": "Daytime", "value": "Sat noon–6 PM · Sevier Ave" },
+      { "label": "After-parties", "value": "8 PM · across SoKno" },
+      { "label": "Cost", "value": "Free (day); venues vary" },
+      { "label": "Source", "value": "@soknopride" }
     ],
     "body": [
-      { "type": "paragraph", "text": "It starts the way the best South Knoxville things start — a little homemade, a little loud, and entirely ours. By noon the barricades are up and Sevier Avenue belongs to the crowd: local vendors and makers, community booths, food and drink from the businesses you already love, and live entertainment running straight through the afternoon." },
-      { "type": "paragraph", "runs": [ { "text": "Bring a chair, bring a friend, and bring the friend who never comes out — " }, { "text": "this is the one.", "italic": true }, { "text": " It's free, it's all ages, and it's the kind of afternoon that reminds you why you live on this side of the river." } ] },
-      { "type": "paragraph", "text": "The festival runs noon to six on Saturday. Park smart, walk in, and let the avenue do the rest." }
+      { "type": "subhead", "text": "The street festival — noon to six" },
+      { "type": "paragraph", "text": "It starts the way the best South Knoxville things start — a little homemade, a little loud, and entirely ours. At noon the barricades go up and Sevier Avenue belongs to the crowd: local vendors and makers, community booths, food and drinks from the businesses you already love, and live entertainment running straight through the afternoon." },
+      { "type": "paragraph", "runs": [ { "text": "Past years have brought drag sets, an opening ceremony, and a closing send-off — and the day stays all-ages and free. Bring a chair, bring a friend, and bring the friend who never comes out — " }, { "text": "this is the one.", "italic": true }, { "text": " The street party wraps at six." } ] },
+      { "type": "agenda", "title": "Saturday at a glance", "rows": [
+        { "time": "12:00 PM", "what": "Festival opens — vendors, makers, food, and live music on Sevier Ave" },
+        { "time": "6:00 PM", "what": "Street festival wraps up on Sevier" },
+        { "time": "8:00 PM", "what": "Official after-parties begin across SoKno" }
+      ] },
+      { "type": "subhead", "text": "The after-parties — 8 PM, all over SoKno" },
+      { "type": "paragraph", "text": "When the street clears, the night doesn't stop — it scatters. SoKno Pride's official after-parties kick off at eight and spread across the neighborhood, landing at The Pink Cactus, Hi-Wire Brewing, Alliance Brewing, Fly by Night, Club Core, Southside Garage, and more. Each spot runs its own show, so you can wander from one to the next." },
+      { "type": "paragraph", "runs": [ { "text": "The full stage lineup and set times live on the " }, { "text": "@soknopride", "href": "https://www.instagram.com/soknopride/" }, { "text": " feed — we'll fold them in here as they firm up." } ] }
+    ],
+    "sources": [
+      { "label": "soknopride.org", "url": "https://www.soknopride.org/" },
+      { "label": "@soknopride — after-parties", "url": "https://www.instagram.com/p/DU7_LH7DZHq/" },
+      { "label": "Visit Knoxville", "url": "https://www.visitknoxville.com/event/sokno-pride-2026/34249/" }
     ]
   },
   "scanner": [
-    { "label": "Old Sevier", "hot": true, "image": "/assets/spots/s1_flag.png", "title": "Pride on Sevier Avenue", "blurb": "The avenue closes, the flags go up, noon to six.", "cue": "Jump to story", "href": "#pride-festival" },
+    { "label": "Old Sevier", "hot": true, "image": "/assets/spots/s1_flag.png", "title": "Pride on Sevier Avenue", "blurb": "Street fest noon–6, then after-parties across SoKno.", "cue": "Jump to story", "href": "#pride-festival" },
     { "label": "Urban Wilderness", "labelColor": "teal", "image": "/assets/spots/s5_fire.png", "title": "Phenomenal Fireflies", "blurb": "A guided night walk into the Ijams glow.", "cue": "Jump to story", "href": "#fireflies" },
     { "label": "Old Sevier", "image": "/assets/spots/make_music.png", "title": "Make Music Day", "blurb": "Bluegrass, karaoke, and free music all over SoKno.", "cue": "Jump to story", "href": "#make-music" },
     { "label": "South Waterfront", "labelColor": "teal", "image": "/assets/spots/ronis_mac.png", "title": "Roni's Mac Bar", "blurb": "The build-your-own mac-and-cheese bar has landed.", "cue": "Jump to story", "href": "#ronis" },

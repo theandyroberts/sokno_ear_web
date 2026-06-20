@@ -8,8 +8,8 @@ interface Section {
 }
 
 interface MastheadProps {
-  dateline: string;
-  volLine: string;
+  /** Compact super-header line, e.g. "Vol. 1 — No. 1 · Jun 19–21". */
+  topline: string;
   sections: Section[];
 }
 
@@ -48,9 +48,10 @@ function NavLink({ href, label }: { href: string; label: string }) {
   );
 }
 
-export function Masthead({ dateline, volLine, sections }: MastheadProps) {
+export function Masthead({ topline, sections }: MastheadProps) {
   return (
     <header style={{ borderBottom: "var(--border-heavy) solid var(--ink-black)" }}>
+      {/* Compact dateline strip: "VOL. 1 — NO. 1 · JUN 19–21 ★ SOKNOEAR.COM" */}
       <div
         style={{
           display: "flex",
@@ -58,7 +59,7 @@ export function Masthead({ dateline, volLine, sections }: MastheadProps) {
           alignItems: "center",
           gap: 12,
           flexWrap: "wrap",
-          padding: "7px 24px",
+          padding: "7px 16px",
           borderBottom: "var(--border-hair) solid var(--ink-black)",
           fontFamily: "var(--font-label)",
           fontSize: "var(--label-sm)",
@@ -68,29 +69,25 @@ export function Masthead({ dateline, volLine, sections }: MastheadProps) {
           background: "var(--paper-shadow)",
         }}
       >
-        <span>{volLine}</span>
-        <span style={{ color: "var(--ink-black)" }}>{dateline}</span>
+        <span style={{ color: "var(--ink-black)", whiteSpace: "nowrap" }}>{topline}</span>
         <a
           href="https://soknoear.com"
-          style={{ color: "var(--rust)", textDecoration: "none", letterSpacing: "0.06em" }}
+          style={{ color: "var(--rust)", textDecoration: "none", letterSpacing: "0.06em", whiteSpace: "nowrap" }}
         >
           ★ soknoear.com
         </a>
       </div>
-      <div
-        style={{
-          background: "var(--paper-cream)",
-          padding: "18px 16px 14px",
-          textAlign: "center",
-        }}
-      >
+
+      <div style={{ background: "var(--paper-cream)", padding: "18px 16px 14px", textAlign: "center" }}>
         <img
           src="/assets/masthead.png"
           alt="The South Knoxville Ear — We Hear Things."
           style={{ width: "100%", maxWidth: 1180, height: "auto", margin: "0 auto" }}
         />
       </div>
+
       <nav
+        className="ear-nav"
         style={{
           background: "var(--paper-shadow)",
           borderTop: "var(--border-ink) solid var(--ink-black)",

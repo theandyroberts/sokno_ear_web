@@ -22,6 +22,11 @@ html { scroll-behavior: smooth; }
   .ear-twocol aside { position: static !important; }
 }
 
+/* Hide the in-page section nav below tablet — six rubrics wrap badly on phones */
+@media (max-width: 767px) {
+  .ear-nav { display: none !important; }
+}
+
 @media print {
   /* The Ear prints as one clean broadsheet */
   :root { }
