@@ -31,7 +31,7 @@
     { "label": "Old Sevier", "hot": true, "image": "/assets/spots/s1_flag.png", "title": "Pride on Sevier Avenue", "blurb": "The avenue closes, the flags go up, noon to six.", "cue": "Jump to story", "href": "#pride-festival" },
     { "label": "Urban Wilderness", "labelColor": "teal", "image": "/assets/spots/s5_fire.png", "title": "Phenomenal Fireflies", "blurb": "A guided night walk into the Ijams glow.", "cue": "Jump to story", "href": "#fireflies" },
     { "label": "Old Sevier", "image": "/assets/spots/make_music.png", "title": "Make Music Day", "blurb": "Bluegrass, karaoke, and free music all over SoKno.", "cue": "Jump to story", "href": "#make-music" },
-    { "label": "South Waterfront", "labelColor": "teal", "image": "/assets/spots/ronis_mac.png", "title": "Roni's Mac Bar", "blurb": "The viral mac-and-cheese bar has landed.", "cue": "Jump to story", "href": "#ronis" },
+    { "label": "South Waterfront", "labelColor": "teal", "image": "/assets/spots/ronis_mac.png", "title": "Roni's Mac Bar", "blurb": "The build-your-own mac-and-cheese bar has landed.", "cue": "Jump to story", "href": "#ronis" },
     { "label": "Neighborhood", "image": "/assets/spots/rezoning.png", "title": "A rezoning on Sevier", "blurb": "2704 Sevier Ave could go commercial.", "cue": "Jump to story", "href": "#rezoning" }
   ],
   "stories": [
@@ -102,14 +102,14 @@
       "image": "/assets/spots/ronis_mac.png",
       "imageCaption": "A bowl with a view",
       "title": "Roni's Mac Bar has landed at Kern's",
-      "deck": "The mac-and-cheese spot the whole internet was talking about is in South Knoxville now — and the word on the street is it's open.",
+      "deck": "The build-your-own mac-and-cheese spot has made its way to South Knoxville — and the word on the street is it's open.",
       "facts": [
         { "label": "Status", "value": "Open now" },
         { "label": "Where", "value": "Kern's Food Hall, 2201 Kern's Rising Way" },
         { "label": "The deal", "value": "Build-your-own mac" }
       ],
       "body": [
-        { "type": "paragraph", "text": "Roni's Mac Bar — the viral, build-your-own bowl of elbow macaroni and cheese — set up shop inside Kern's Food Hall on the old bakery campus. We've heard from more than one neighbor that the doors are open and the cheese is flowing." },
+        { "type": "paragraph", "text": "Roni's Mac Bar — the build-your-own bowl of elbow macaroni and cheese — has set up shop inside Kern's Food Hall on the old bakery campus. We've heard from more than one neighbor that the doors are open and the cheese is flowing." },
         { "type": "paragraph", "text": "We're getting the full scoop (and, in the name of journalism, a full bowl) and we'll report back. If you beat us to it, you know where to send your review — we're all ears." }
       ]
     },
@@ -137,9 +137,9 @@
   "sidebar": {
     "audio": {
       "title": "Weekend Audio Briefing",
-      "intro": "What's happening in So-No this weekend.",
-      "description": "Your ninety-second listen to the weekend around South Knoxville — Pride on Sevier, fireflies at Ijams, and Make Music Day.",
-      "duration": "01:16",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen to what's happening around South Knoxville — Pride on Sevier, fireflies at Ijams Park, and Make Music Day.",
+      "duration": "01:25",
       "src": "/audio/2026-06-20.mp3"
     },
     "calendar": [
