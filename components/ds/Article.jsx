@@ -17,17 +17,20 @@ export function Article({
   deck,
   facts = [],
   children,
-  layout = "wrap",
+  layout = "imageLeft",
   style = {},
   ...rest
 }) {
-  const figure = image && (
+  const floatVal = layout === "imageLeft" ? "left" : layout === "imageRight" ? "right" : "none";
+  const isFloat = floatVal !== "none";
+  const figure = image && layout !== "textOnly" && (
     <figure
       style={{
         margin: 0,
-        float: layout === "wrap" ? "left" : "none",
-        width: layout === "wrap" ? "min(42%, 340px)" : "100%",
-        marginRight: layout === "wrap" ? "var(--space-5)" : 0,
+        float: floatVal,
+        width: isFloat ? "min(42%, 340px)" : "100%",
+        marginRight: floatVal === "left" ? "var(--space-5)" : 0,
+        marginLeft: floatVal === "right" ? "var(--space-5)" : 0,
         marginBottom: "var(--space-4)",
       }}
     >
