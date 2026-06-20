@@ -10,8 +10,8 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
 | Term | Say it as | Notes |
 |---|---|---|
 | **SoKno** | **"SO-no"** (two beats: *So · No*) | NOT "sock-no." Short for South Knoxville. When generating TTS, spell it `So-No` / use a phoneme alias so the voice never says "sock-no." |
-| Sevier Ave | "suh-VEER" | Local pronunciation, not "SEE-vee-er." |
-| Ijams | "EYE-jams" | Ijams Nature Center. Not "ih-JAMS." |
+| Sevier Ave | "suh-VEER" (like the word *severe*) | Not "SEE-vee-er" or "Sue-veer." For TTS, spell it **`Severe`**. |
+| Ijams | "EYE-ams" (rhymes with *times*; **J is silent**) | Not "EYE-jams" or "ih-JAMS." For TTS, spell it **`Eye-ams`**. |
 
 *(Add venue names, street names, and people as we confirm them.)*
 
