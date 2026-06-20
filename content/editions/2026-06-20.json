@@ -1,34 +1,152 @@
 {
-  "slug": "2026-06-20", "volume": 1, "number": 1, "edition": "Weekend Edition",
-  "date": "2026-06-20", "dateLabel": "Fri–Sun, Jun 19–21, 2026", "place": "South Knoxville, TN",
+  "slug": "2026-06-20",
+  "volume": 1,
+  "number": 1,
+  "edition": "Weekend Edition",
+  "date": "2026-06-20",
+  "dateLabel": "Fri–Sun, Jun 19–21, 2026",
+  "place": "South Knoxville, TN",
   "feature": {
-    "id": "feature", "label": "Feature Story", "labelColor": "rust",
-    "layout": "imageTop", "image": "/assets/spots/feature_flag.png", "imageCaption": "Sevier Ave, flags up",
-    "title": "A big weekend on Sevier Avenue",
-    "deck": "Placeholder feature deck — the real Edition Zero replaces this.",
-    "facts": [{"label":"When","value":"This weekend"},{"label":"Where","value":"Sevier Ave"}],
+    "id": "pride-festival",
+    "label": "Feature Story",
+    "labelColor": "rust",
+    "layout": "imageTop",
+    "image": "/assets/spots/feature_flag.png",
+    "imageCaption": "Sevier Ave, flags up",
+    "title": "Pride takes over Sevier Avenue",
+    "deck": "For one Saturday the avenue belongs to the people: the annual SoKno Pride Festival closes Sevier to cars and fills it with makers, music, food, and neighbors from noon until six.",
+    "facts": [
+      { "label": "When", "value": "Sat, Jun 20 · Noon–6 PM" },
+      { "label": "Where", "value": "Sevier Ave" },
+      { "label": "Cost", "value": "Free" },
+      { "label": "Source", "value": "soknopride.org" }
+    ],
     "body": [
-      {"type":"paragraph","text":"This is placeholder feature copy to verify the layout and styling end to end."},
-      {"type":"paragraph","runs":[{"text":"Bold lead","bold":true},{"text":" then regular text flowing around the engraving."}]}
+      { "type": "paragraph", "text": "It starts the way the best South Knoxville things start — a little homemade, a little loud, and entirely ours. By noon the barricades are up and Sevier Avenue belongs to the crowd: local vendors and makers, community booths, food and drink from the businesses you already love, and live entertainment running straight through the afternoon." },
+      { "type": "paragraph", "runs": [ { "text": "Bring a chair, bring a friend, and bring the friend who never comes out — " }, { "text": "this is the one.", "italic": true }, { "text": " It's free, it's all ages, and it's the kind of afternoon that reminds you why you live on this side of the river." } ] },
+      { "type": "paragraph", "text": "The festival runs noon to six on Saturday. Park smart, walk in, and let the avenue do the rest." }
     ]
   },
   "scanner": [
-    {"label":"Old Sevier","hot":true,"image":"/assets/spots/s1_flag.png","title":"Pride on Sevier","blurb":"Parade, vendors, community.","cue":"Jump to story","href":"#pride"},
-    {"label":"Rumor Mill","image":"/assets/spots/s3_perc.png","title":"Around the neighborhood","blurb":"What's new this week.","cue":"Jump to story","href":"#hood"},
-    {"label":"Waterfront","image":"/assets/spots/s4_bridge.png","title":"South Waterfront","blurb":"Riverfront notes.","cue":"Jump to story","href":"#waterfront"},
-    {"label":"Wilderness","image":"/assets/spots/s5_fire.png","title":"Fireflies are back","blurb":"Trail glow times.","cue":"Jump to story","href":"#fireflies"}
+    { "label": "Old Sevier", "hot": true, "image": "/assets/spots/s1_flag.png", "title": "Pride on Sevier Avenue", "blurb": "The avenue closes, the flags go up, noon to six.", "cue": "Jump to story", "href": "#pride-festival" },
+    { "label": "Urban Wilderness", "labelColor": "teal", "image": "/assets/spots/s5_fire.png", "title": "Phenomenal Fireflies", "blurb": "A guided night walk into the Ijams glow.", "cue": "Jump to story", "href": "#fireflies" },
+    { "label": "Old Sevier", "image": "/assets/spots/make_music.png", "title": "Make Music Day", "blurb": "Bluegrass, karaoke, and free music all over SoKno.", "cue": "Jump to story", "href": "#make-music" },
+    { "label": "South Waterfront", "labelColor": "teal", "image": "/assets/spots/ronis_mac.png", "title": "Roni's Mac Bar", "blurb": "The viral mac-and-cheese bar has landed.", "cue": "Jump to story", "href": "#ronis" },
+    { "label": "Neighborhood", "image": "/assets/spots/rezoning.png", "title": "A rezoning on Sevier", "blurb": "2704 Sevier Ave could go commercial.", "cue": "Jump to story", "href": "#rezoning" }
   ],
   "stories": [
-    {"id":"pride","label":"Old Sevier","layout":"imageLeft","image":"/assets/spots/s1_flag.png","imageCaption":"Flags up","title":"Pride at noon on Sevier Avenue","deck":"Placeholder deck.","facts":[{"label":"When","value":"Sat noon"},{"label":"Cost","value":"Free"}],"body":[{"type":"paragraph","text":"Placeholder story body one. The image floats to the left of this text and the paragraph wraps around it nicely."},{"type":"paragraph","text":"A second paragraph to give the float something to wrap against."}]},
-    {"id":"hood","label":"Around the Neighborhood","layout":"imageRight","image":"/assets/spots/s3_perc.png","title":"What we're hearing around SoKno","deck":"Placeholder deck.","body":[{"type":"paragraph","text":"Placeholder story body two. The image floats to the right here, alternating from the previous story."},{"type":"paragraph","text":"More body text for the wrap."}]},
-    {"id":"fireflies","label":"Urban Wilderness","layout":"imageLeft","image":"/assets/spots/s5_fire.png","title":"The fireflies are back","deck":"Placeholder deck.","facts":[{"label":"Best window","value":"9:00–9:45 PM"},{"label":"Rule","value":"No flashlights"}],"body":[{"type":"paragraph","text":"Placeholder story body three."}]}
+    {
+      "id": "fireflies",
+      "label": "Urban Wilderness",
+      "labelColor": "teal",
+      "layout": "imageRight",
+      "image": "/assets/spots/s5_fire.png",
+      "imageCaption": "Dusk, the good hour",
+      "title": "The fireflies are back, and Ijams will walk you in",
+      "deck": "For a couple of perfect weeks the Ijams trails put on a show no ticket can buy — and this weekend a naturalist will walk you right into it.",
+      "facts": [
+        { "label": "When", "value": "Fri Jun 19 & Sat Jun 20 · 9–10:30 PM" },
+        { "label": "Where", "value": "Ijams, 2915 Island Home Ave" },
+        { "label": "Ages", "value": "16+" },
+        { "label": "Note", "value": "Registration required" }
+      ],
+      "body": [
+        { "type": "paragraph", "text": "The fireflies come up out of the grass around full dark, and if you stand still long enough you'll feel like you wandered into a snow globe someone forgot to shake. Ijams' Phenomenal Fireflies walk sends you out with a naturalist who knows where to look — and how to keep the magic going for the rest of us." },
+        { "type": "paragraph", "text": "A few neighborly asks the guides will echo: skip the flashlight, wear real shoes (it's up to two miles over uneven ground), and let the little glowers do their thing. The walk is sixteen and up, and you'll need to register ahead — no walk-ins on this one." }
+      ]
+    },
+    {
+      "id": "bird-banding",
+      "label": "Urban Wilderness",
+      "labelColor": "teal",
+      "layout": "imageLeft",
+      "image": "/assets/spots/bird_banding.png",
+      "imageCaption": "A warbler, up close",
+      "title": "Up early? Watch the songbirds get banded",
+      "deck": "One of the quietest little wonders in the city happens at 7:30 in the morning: migratory songbirds, safely tagged and sent on their way.",
+      "facts": [
+        { "label": "When", "value": "Sat, Jun 20 · 7:30 AM" },
+        { "label": "Where", "value": "Ijams Nature Center" },
+        { "label": "Bring", "value": "Coffee + patience" }
+      ],
+      "body": [
+        { "type": "paragraph", "text": "If you can be up and out by 7:30, the banding table is worth the early alarm. Volunteers gently catch migratory songbirds in fine nets, fit each one with a tiny numbered band, take a few quick measurements, and let it go — real data for science, and a once-in-a-while look at a warbler close enough to count its feathers." },
+        { "type": "paragraph", "text": "It's a hike out to the table and an early start, so bring coffee and a little patience. The birds set the schedule, not us." }
+      ]
+    },
+    {
+      "id": "make-music",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "layout": "imageRight",
+      "image": "/assets/spots/make_music.png",
+      "imageCaption": "Pull up a chair, or a banjo",
+      "title": "Make Music Day turns the whole neighborhood into a stage",
+      "deck": "Sunday is Make Music Day, and SoKno is doing its part — free, all day, all over, from a bluegrass jam at Ijams to live-band karaoke on Sevier.",
+      "facts": [
+        { "label": "When", "value": "Sun, Jun 21 · 2–8 PM" },
+        { "label": "Where", "value": "Ijams + Sevier Ave" },
+        { "label": "Cost", "value": "Free" }
+      ],
+      "body": [
+        { "type": "paragraph", "text": "Make Music Day is the global, free, play-anywhere celebration of the longest day of the year, and the South Knoxville lineup is exactly as charming as you'd hope. Start at Ijams, where the East Tennessee Bluegrass Association holds an open jam from 2 to 5 — pull up a chair, or bring an instrument and sit in." },
+        { "type": "paragraph", "runs": [ { "text": "Then head up to Sevier, where " }, { "text": "The Pink Cactus", "bold": true }, { "text": " hands you the mic for live-band karaoke with Tinca Tinca from 5 to 7 — yes, you, fronting an actual band. Down the street, Fly by Night runs sets from Lu Anderson and Villaphonic into the evening." } ] },
+        { "type": "paragraph", "text": "All of it is free. Wander, listen, and sing the one song you actually know." }
+      ]
+    },
+    {
+      "id": "ronis",
+      "label": "South Waterfront",
+      "labelColor": "teal",
+      "layout": "imageLeft",
+      "image": "/assets/spots/ronis_mac.png",
+      "imageCaption": "A bowl with a view",
+      "title": "Roni's Mac Bar has landed at Kern's",
+      "deck": "The mac-and-cheese spot the whole internet was talking about is in South Knoxville now — and the word on the street is it's open.",
+      "facts": [
+        { "label": "Status", "value": "Open now" },
+        { "label": "Where", "value": "Kern's Food Hall, 2201 Kern's Rising Way" },
+        { "label": "The deal", "value": "Build-your-own mac" }
+      ],
+      "body": [
+        { "type": "paragraph", "text": "Roni's Mac Bar — the viral, build-your-own bowl of elbow macaroni and cheese — set up shop inside Kern's Food Hall on the old bakery campus. We've heard from more than one neighbor that the doors are open and the cheese is flowing." },
+        { "type": "paragraph", "text": "We're getting the full scoop (and, in the name of journalism, a full bowl) and we'll report back. If you beat us to it, you know where to send your review — we're all ears." }
+      ]
+    },
+    {
+      "id": "rezoning",
+      "label": "Around the Neighborhood",
+      "labelColor": "rust",
+      "layout": "imageRight",
+      "image": "/assets/spots/rezoning.png",
+      "imageCaption": "Sevier Ave, in transition",
+      "title": "A quiet corner of Sevier Avenue could go commercial",
+      "deck": "A residential parcel near the north end of Sevier has a rezoning request in front of the Planning Commission. Here's what's actually on the table.",
+      "facts": [
+        { "label": "Where", "value": "2704 Sevier Ave" },
+        { "label": "Change", "value": "RN-2 → C-N" },
+        { "label": "Hearing", "value": "Planning Comm. · Jul 9" },
+        { "label": "Source", "value": "knoxplanning.org" }
+      ],
+      "body": [
+        { "type": "paragraph", "text": "A parcel at 2704 Sevier Avenue — up at the northeast end, near Baker — has a rezoning request working its way through the system. The owner, through Connolly Development Ventures, is asking to move it from RN-2, single-family residential, to C-N, neighborhood commercial." },
+        { "type": "paragraph", "text": "In plain terms: a lot zoned for a house could be cleared for a small neighborhood business. Nothing's decided yet — the Planning Commission takes it up on July 9, with the staff recommendation due about a week before. It's the kind of small change that quietly shapes what Sevier Avenue becomes, so we'll be watching. You can too." }
+      ]
+    }
   ],
   "sidebar": {
-    "audio": {"title":"Weekend Audio Briefing","intro":"What's happening in So-No this weekend.","description":"Your ninety-second listen for the weekend around South Knoxville.","duration":"01:30","src":"/audio/placeholder.mp3"},
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in So-No this weekend.",
+      "description": "Your ninety-second listen to the weekend around South Knoxville — Pride on Sevier, fireflies at Ijams, and Make Music Day.",
+      "duration": "01:30",
+      "src": "/audio/2026-06-20.mp3"
+    },
     "calendar": [
-      {"month":"JUN","day":"19","title":"Fireflies Night Walk","meta":"9:00 PM · Ijams","starred":true},
-      {"month":"JUN","day":"20","title":"SoKno Pride Festival","meta":"Noon · Sevier Ave","starred":true},
-      {"month":"JUN","day":"21","title":"Make Music Day","meta":"2:00 PM · Ijams"}
+      { "month": "JUN", "day": "19", "title": "Phenomenal Fireflies Walk", "meta": "9:00 PM · Ijams", "starred": true },
+      { "month": "JUN", "day": "20", "title": "SoKno Pride Festival", "meta": "Noon–6 PM · Sevier Ave", "starred": true },
+      { "month": "JUN", "day": "20", "title": "Bird Banding", "meta": "7:30 AM · Ijams" },
+      { "month": "JUN", "day": "21", "title": "Make Music Day", "meta": "2:00 PM · Ijams & Sevier Ave", "starred": true }
     ]
   }
 }
