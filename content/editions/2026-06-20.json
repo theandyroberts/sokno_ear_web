@@ -1,0 +1,34 @@
+{
+  "slug": "2026-06-20", "volume": 1, "number": 1, "edition": "Weekend Edition",
+  "date": "2026-06-20", "dateLabel": "Fri–Sun, Jun 19–21, 2026", "place": "South Knoxville, TN",
+  "feature": {
+    "id": "feature", "label": "Feature Story", "labelColor": "rust",
+    "layout": "imageTop", "image": "/assets/spots/feature_flag.png", "imageCaption": "Sevier Ave, flags up",
+    "title": "A big weekend on Sevier Avenue",
+    "deck": "Placeholder feature deck — the real Edition Zero replaces this.",
+    "facts": [{"label":"When","value":"This weekend"},{"label":"Where","value":"Sevier Ave"}],
+    "body": [
+      {"type":"paragraph","text":"This is placeholder feature copy to verify the layout and styling end to end."},
+      {"type":"paragraph","runs":[{"text":"Bold lead","bold":true},{"text":" then regular text flowing around the engraving."}]}
+    ]
+  },
+  "scanner": [
+    {"label":"Old Sevier","hot":true,"image":"/assets/spots/s1_flag.png","title":"Pride on Sevier","blurb":"Parade, vendors, community.","cue":"Jump to story","href":"#pride"},
+    {"label":"Rumor Mill","image":"/assets/spots/s3_perc.png","title":"Around the neighborhood","blurb":"What's new this week.","cue":"Jump to story","href":"#hood"},
+    {"label":"Waterfront","image":"/assets/spots/s4_bridge.png","title":"South Waterfront","blurb":"Riverfront notes.","cue":"Jump to story","href":"#waterfront"},
+    {"label":"Wilderness","image":"/assets/spots/s5_fire.png","title":"Fireflies are back","blurb":"Trail glow times.","cue":"Jump to story","href":"#fireflies"}
+  ],
+  "stories": [
+    {"id":"pride","label":"Old Sevier","layout":"imageLeft","image":"/assets/spots/s1_flag.png","imageCaption":"Flags up","title":"Pride at noon on Sevier Avenue","deck":"Placeholder deck.","facts":[{"label":"When","value":"Sat noon"},{"label":"Cost","value":"Free"}],"body":[{"type":"paragraph","text":"Placeholder story body one. The image floats to the left of this text and the paragraph wraps around it nicely."},{"type":"paragraph","text":"A second paragraph to give the float something to wrap against."}]},
+    {"id":"hood","label":"Around the Neighborhood","layout":"imageRight","image":"/assets/spots/s3_perc.png","title":"What we're hearing around SoKno","deck":"Placeholder deck.","body":[{"type":"paragraph","text":"Placeholder story body two. The image floats to the right here, alternating from the previous story."},{"type":"paragraph","text":"More body text for the wrap."}]},
+    {"id":"fireflies","label":"Urban Wilderness","layout":"imageLeft","image":"/assets/spots/s5_fire.png","title":"The fireflies are back","deck":"Placeholder deck.","facts":[{"label":"Best window","value":"9:00–9:45 PM"},{"label":"Rule","value":"No flashlights"}],"body":[{"type":"paragraph","text":"Placeholder story body three."}]}
+  ],
+  "sidebar": {
+    "audio": {"title":"Weekend Audio Briefing","intro":"What's happening in So-No this weekend.","description":"Your ninety-second listen for the weekend around South Knoxville.","duration":"01:30","src":"/audio/placeholder.mp3"},
+    "calendar": [
+      {"month":"JUN","day":"19","title":"Fireflies Night Walk","meta":"9:00 PM · Ijams","starred":true},
+      {"month":"JUN","day":"20","title":"SoKno Pride Festival","meta":"Noon · Sevier Ave","starred":true},
+      {"month":"JUN","day":"21","title":"Make Music Day","meta":"2:00 PM · Ijams"}
+    ]
+  }
+}
