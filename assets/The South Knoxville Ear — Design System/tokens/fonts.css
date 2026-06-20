@@ -1,0 +1,25 @@
+/* ============================================================
+   The South Knoxville Ear — Webfonts
+   ------------------------------------------------------------
+   The masthead is hand-drawn vintage woodtype. For live text we
+   approximate that rustic, hand-stamped, ink-dropout feel with
+   distressed Google Fonts:
+     - Rye           → distressed woodtype display (hero, rubrics)
+     - Ewert         → heavy weathered woodtype (display alternate)
+     - Special Elite → worn typewriter stamp (labels, nav, tags)
+     - PT Serif      → warm, readable newspaper body
+   Swap in licensed brand fonts if/when available.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Blackthorn (UI Creative) — licensed brand display script, user-supplied.
+   Currently wired only to the hero headline via --font-headline. */
+@font-face {
+  font-family: "Blackthorn";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/Blackthorn.otf") format("opentype"),
+       url("../assets/fonts/Blackthorn.ttf") format("truetype");
+}

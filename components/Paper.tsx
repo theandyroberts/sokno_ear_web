@@ -31,7 +31,9 @@ const Well = ({ children, title }: { children: React.ReactNode; title?: string }
 
 export function Paper({ edition }: { edition: Edition }) {
   const { feature, scanner, stories, sidebar } = edition;
-  const topline = `Vol. ${edition.volume} — No. ${edition.number} · ${edition.shortDate ?? edition.dateLabel ?? edition.date}`;
+  const volLine = `Vol. ${edition.volume} — No. ${edition.number}`;
+  const dateline = `${edition.edition} · ${edition.dateLabel ?? edition.date} · ${edition.place}`;
+  const shortDate = edition.shortDate ?? edition.dateLabel ?? edition.date;
 
   // Nav: Top + unique story labels (first occurrence) + Listen (if audio)
   const seen = new Set<string>();
@@ -47,7 +49,7 @@ export function Paper({ edition }: { edition: Edition }) {
   return (
     <main id="top">
       <JsonLd edition={edition} />
-      <Masthead topline={topline} sections={sections} />
+      <Masthead volLine={volLine} dateline={dateline} shortDate={shortDate} sections={sections} />
 
       {/* FEATURE BAND */}
       <div id="events" style={{ borderBottom: "var(--border-rule) double var(--ink-black)", padding: "28px 0 32px" }}>

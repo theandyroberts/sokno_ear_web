@@ -1,0 +1,63 @@
+<!-- @dsCard group="Components" viewport="700x620" name="Editorial — Stories, Audio, Calendar, Tipline" subtitle="Story cards, audio briefing, calendar rows, tip/subscribe" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  body { margin: 0; padding: 24px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+  .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .cap { font-family: var(--font-label); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faded); margin: 0 0 10px; }
+  .well { background: var(--paper-bright); border: var(--border-ink) solid var(--ink-black); border-radius: var(--radius-sm); padding: 6px 16px; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel">
+    const { StoryCard, AudioBriefing, CalendarItem, Tipline } = window.TheSouthKnoxvilleEarDesignSystem_0be224;
+    function Demo() {
+      return (
+        <div>
+          <p className="cap">Story cards</p>
+          <div className="cards" style={{ marginBottom: 24 }}>
+            <StoryCard label="Old Sevier" hot image="../../assets/possum_street_art.png"
+              title="Pride at Noon on Sevier Avenue"
+              blurb="Parade, performances, vendors, and community celebration all day long." cue="Jump to story" href="#" />
+            <StoryCard label="Rumor Mill" image="../../assets/gay_st_bridge_from_dt.png"
+              title="What We're Hearing This Week"
+              blurb="The whispers, the maybe-true things, and what's making waves in SoKno." cue="Jump to story" href="#" />
+          </div>
+          <div className="grid">
+            <div>
+              <p className="cap">Audio briefing</p>
+              <AudioBriefing />
+            </div>
+            <div>
+              <p className="cap">Calendar well</p>
+              <div className="well">
+                <CalendarItem month="MAY" day="17" title="SoKno Pride Day" meta="Noon · Sevier Ave" starred />
+                <CalendarItem month="MAY" day="18" title="Riverfront Cleanup" meta="9:00 AM · Volunteer Landing" />
+                <CalendarItem month="MAY" day="22" title="Old Sevier Trolley Tour" meta="6:00 PM · Island Home Park" divider={false} />
+              </div>
+            </div>
+            <div>
+              <p className="cap">Subscribe</p>
+              <Tipline mode="subscribe" />
+            </div>
+            <div>
+              <p className="cap">Tipline</p>
+              <Tipline mode="tip" />
+            </div>
+          </div>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("root")).render(<Demo />);
+  </script>
+</body>
+</html>

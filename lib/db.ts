@@ -3,6 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 export type Submission = { headline: string; details: string; url?: string; dates?: string; contact?: string };
+export type Contact = { name?: string; email: string; message: string };
 
 export function openDb(file = process.env.SQLITE_PATH || path.join(process.cwd(), "data", "ear.db")) {
   fs.mkdirSync(path.dirname(file), { recursive: true });
@@ -18,6 +19,11 @@ export function openDb(file = process.env.SQLITE_PATH || path.join(process.cwd()
     CREATE TABLE IF NOT EXISTS subscribers (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       email TEXT NOT NULL UNIQUE,
+      created_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+    CREATE TABLE IF NOT EXISTS contacts (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      name TEXT, email TEXT NOT NULL, message TEXT NOT NULL,
       created_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
   `);
@@ -36,4 +42,9 @@ export function insertSubmission(d: Database.Database, s: Submission): number {
 
 export function insertSubscriber(d: Database.Database, email: string): void {
   d.prepare("INSERT OR IGNORE INTO subscribers (email) VALUES (?)").run(email);
+}
+
+export function insertContact(d: Database.Database, c: Contact): number {
+  const r = d.prepare("INSERT INTO contacts (name, email, message) VALUES (?,?,?)").run(c.name ?? "", c.email, c.message);
+  return Number(r.lastInsertRowid);
 }

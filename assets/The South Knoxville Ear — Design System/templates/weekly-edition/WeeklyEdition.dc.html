@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Weekly Edition" description="A blank South Knoxville Ear weekly — full-width masthead, dateline, nav, and inline stories on one printed scroll. No read-more." -->
+<helmet>
+<script src="./ds-base.js"></script>
+</helmet>
+
+<div style="max-width:1100px;margin:0 auto;">
+
+  <!-- ===== Super-header dateline (soknoear.com) ===== -->
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:7px 24px;border-bottom:1px solid #171512;font-family:var(--font-label);font-size:0.8125rem;letter-spacing:0.05em;text-transform:uppercase;color:#4A4740;background:#E2D1B3;">
+    <span>Vol. 4 — No. 18 · 25¢</span>
+    <span style="color:#171512;">Weekend Edition · Saturday, ___ · South Knoxville, TN</span>
+    <a href="https://soknoear.com" style="color:#A94A34;text-decoration:none;letter-spacing:0.06em;">★ soknoear.com</a>
+  </div>
+
+  <!-- ===== Full-width masthead ===== -->
+  <div style="background:#F3E8D2;padding:18px 16px 14px;text-align:center;border-bottom:3px solid #171512;">
+    <img src="../../assets/masthead.jpg" alt="The South Knoxville Ear — We Hear Things." style="width:100%;max-width:1180px;height:auto;margin:0 auto;display:block;" />
+  </div>
+
+  <!-- ===== In-page nav ===== -->
+  <nav style="background:#E2D1B3;border-bottom:2px solid #171512;display:flex;align-items:stretch;justify-content:center;flex-wrap:wrap;font-family:var(--font-label);font-size:0.875rem;letter-spacing:0.08em;text-transform:uppercase;">
+    <span style="display:flex;align-items:center;padding:0 16px;color:#A94A34;">★</span>
+    <a href="#events" style="color:#171512;text-decoration:none;padding:12px 18px;border-left:1px solid #171512;">Events</a>
+    <a href="#rumors" style="color:#171512;text-decoration:none;padding:12px 18px;border-left:1px solid #171512;">Rumors</a>
+    <a href="#more" style="color:#171512;text-decoration:none;padding:12px 18px;border-left:1px solid #171512;">More Local</a>
+    <a href="#listen" style="color:#171512;text-decoration:none;padding:12px 18px;border-left:1px solid #171512;">Listen</a>
+    <span style="display:flex;align-items:center;padding:0 16px;color:#A94A34;">★</span>
+  </nav>
+
+  <!-- ===== FEATURE BAND: feature + sidebar ===== -->
+  <div style="padding:26px 24px 30px;border-bottom:4px double #171512;">
+    <div style="display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);gap:34px;align-items:start;">
+
+      <!-- Feature -->
+      <article id="events">
+        <div style="margin-bottom:12px;display:inline-flex;align-items:center;gap:0.4em;font-family:var(--font-label);font-size:0.8125rem;letter-spacing:0.1em;text-transform:uppercase;padding:4px 11px;border-radius:6px;border:1px solid #171512;background:#A94A34;color:#F3E8D2;">★ Feature Story</div>
+        <h1 style="font-family:var(--font-headline);font-size:clamp(2.8rem,5vw,4rem);line-height:1.1;color:#171512;margin:0 0 8px;">This Week's Headline Goes Right Here</h1>
+        <p style="font-family:var(--font-body);font-weight:700;font-size:1.1875rem;line-height:1.35;color:#171512;margin:0 0 16px;">A one- or two-sentence deck that says why the story matters — written warm, a little funny, entirely local.</p>
+        <div style="float:left;width:min(42%,330px);margin:0 24px 14px 0;border:2px solid #171512;background:#F3E8D2;padding:6px;border-radius:10px;box-shadow:0 2px 6px rgba(23,21,18,0.16);">
+          <img src="../../assets/spots/feature_flag.png" alt="" style="width:100%;display:block;border-radius:6px;" />
+        </div>
+        <p style="font-family:var(--font-body);font-size:1.0625rem;line-height:1.6;color:#171512;margin:0 0 14px;">Write the full story right here — everything's on this one page, so don't hold back for a "read more." Open with the scene, then tell folks what's happening and why they'll want to be there.</p>
+        <p style="font-family:var(--font-body);font-size:1.0625rem;line-height:1.6;color:#171512;margin:0 0 14px;">Keep it neighborly and clear. If it's a rumor, say so. If it's confirmed, say that too. End with where to go, when, and what to bring.</p>
+        <div style="clear:both;"></div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside id="listen" style="display:flex;flex-direction:column;gap:22px;">
+        <x-import component-from-global-scope="TheSouthKnoxvilleEarDesignSystem_0be224.AudioBriefing" hint-size="100%,300px"></x-import>
+        <div style="background:#FAF2E2;border:2px solid #171512;border-radius:10px;overflow:hidden;box-shadow:0 2px 6px rgba(23,21,18,0.16);">
+          <div style="background:#7FAEA3;color:#171512;border-bottom:2px solid #171512;padding:10px 16px;font-family:var(--font-label);font-size:0.875rem;letter-spacing:0.1em;text-transform:uppercase;"><span style="color:#A94A34;">★</span> What's Happening Soon</div>
+          <div style="padding:4px 16px 8px;">
+            <x-import component-from-global-scope="TheSouthKnoxvilleEarDesignSystem_0be224.CalendarItem" month="MAY" day="24" title="Your Event" meta="Time · Place" starred="true" hint-size="100%,56px"></x-import>
+            <x-import component-from-global-scope="TheSouthKnoxvilleEarDesignSystem_0be224.CalendarItem" month="MAY" day="25" title="Another Event" meta="Time · Place" divider="false" hint-size="100%,56px"></x-import>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- ===== A SECTION ===== -->
+  <div id="rumors" style="padding:32px 24px;border-bottom:1px solid #D8C4A0;">
+    <x-import component-from-global-scope="TheSouthKnoxvilleEarDesignSystem_0be224.SectionHeader" hint-size="100%,60px">What We're Hearing</x-import>
+    <article>
+      <div style="margin-bottom:10px;display:inline-flex;font-family:var(--font-label);font-size:0.8125rem;letter-spacing:0.1em;text-transform:uppercase;padding:4px 11px;border-radius:6px;border:1px solid #171512;background:#A94A34;color:#F3E8D2;">Rumor Mill</div>
+      <h2 style="font-family:var(--font-body);font-weight:700;font-size:1.75rem;line-height:1.12;color:#171512;margin:0 0 10px;">The Percolator Report</h2>
+      <p style="font-family:var(--font-body);font-size:1.0625rem;line-height:1.6;color:#171512;margin:0 0 14px;"><strong>Confirmed:</strong> what you can stand behind. <strong>Probably true:</strong> what you mostly believe. <strong>Filed under "we'll see":</strong> the good stuff.</p>
+    </article>
+  </div>
+
+  <!-- ===== MORE LOCAL + TIPLINE ===== -->
+  <div id="more" style="padding:30px 24px;">
+    <div style="display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:34px;align-items:start;">
+      <article>
+        <x-import component-from-global-scope="TheSouthKnoxvilleEarDesignSystem_0be224.SectionHeader" align="left" ornament="star" hint-size="100%,60px">More Local Stories</x-import>
+        <p style="font-family:var(--font-body);font-size:1.0625rem;line-height:1.6;color:#171512;margin:0 0 14px;">Stack as many stories as the week needs — separate them with a divider and keep scrolling.</p>
+        <x-import component-from-global-scope="TheSouthKnoxvilleEarDesignSystem_0be224.Divider" ornament="diamond" hint-size="100%,40px"></x-import>
+      </article>
+      <aside style="display:flex;flex-direction:column;gap:22px;">
+        <x-import component-from-global-scope="TheSouthKnoxvilleEarDesignSystem_0be224.Tipline" mode="tip" hint-size="100%,220px"></x-import>
+        <x-import component-from-global-scope="TheSouthKnoxvilleEarDesignSystem_0be224.Tipline" mode="subscribe" hint-size="100%,220px"></x-import>
+      </aside>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background:#171512;color:#F3E8D2;text-align:center;padding:30px 24px;">
+    <div style="font-family:var(--font-display);font-size:1.75rem;letter-spacing:0.02em;text-transform:uppercase;margin-bottom:8px;"><span style="color:#A94A34;">★</span> South Knoxville. We Hear Things. <span style="color:#A94A34;">★</span></div>
+    <a href="https://soknoear.com" style="font-family:var(--font-label);font-size:0.875rem;letter-spacing:0.1em;text-transform:uppercase;color:#7FAEA3;text-decoration:none;">soknoear.com</a>
+    <div style="font-family:var(--font-body);font-size:0.8125rem;color:#D8C4A0;margin-top:10px;">Read by locals. Loved by locals. South Knoxville, all the way.</div>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>

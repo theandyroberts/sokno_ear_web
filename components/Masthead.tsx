@@ -8,8 +8,12 @@ interface Section {
 }
 
 interface MastheadProps {
-  /** Compact super-header line, e.g. "Vol. 1 — No. 1 · Jun 19–21". */
-  topline: string;
+  /** "Vol. 1 — No. 1" */
+  volLine: string;
+  /** Full dateline: "Weekend Edition · Fri–Sun, Jun 19–21, 2026 · South Knoxville, TN" */
+  dateline: string;
+  /** Short date for the compact mobile strip: "Jun 19–21" */
+  shortDate: string;
   sections: Section[];
 }
 
@@ -19,6 +23,31 @@ const navStar: React.CSSProperties = {
   padding: "0 16px",
   color: "var(--rust)",
   fontSize: 14,
+};
+
+// Shared dateline-strip styling. NOTE: `display` is intentionally omitted here and
+// controlled by CSS classes (.ear-super-full / .ear-super-compact) so the media
+// query can swap them — inline `display` would beat the class.
+const stripStyle: React.CSSProperties = {
+  alignItems: "center",
+  justifyContent: "space-between",
+  gap: 12,
+  flexWrap: "wrap",
+  padding: "7px 16px",
+  borderBottom: "var(--border-hair) solid var(--ink-black)",
+  fontFamily: "var(--font-label)",
+  fontSize: "var(--label-sm)",
+  letterSpacing: "var(--tracking-label-tight)",
+  textTransform: "uppercase",
+  color: "var(--ink-faded)",
+  background: "var(--paper-shadow)",
+};
+
+const domainLink: React.CSSProperties = {
+  color: "var(--rust)",
+  textDecoration: "none",
+  letterSpacing: "0.06em",
+  whiteSpace: "nowrap",
 };
 
 function NavLink({ href, label }: { href: string; label: string }) {
@@ -48,34 +77,19 @@ function NavLink({ href, label }: { href: string; label: string }) {
   );
 }
 
-export function Masthead({ topline, sections }: MastheadProps) {
+export function Masthead({ volLine, dateline, shortDate, sections }: MastheadProps) {
   return (
     <header style={{ borderBottom: "var(--border-heavy) solid var(--ink-black)" }}>
-      {/* Compact dateline strip: "VOL. 1 — NO. 1 · JUN 19–21 ★ SOKNOEAR.COM" */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          gap: 12,
-          flexWrap: "wrap",
-          padding: "7px 16px",
-          borderBottom: "var(--border-hair) solid var(--ink-black)",
-          fontFamily: "var(--font-label)",
-          fontSize: "var(--label-sm)",
-          letterSpacing: "var(--tracking-label-tight)",
-          textTransform: "uppercase",
-          color: "var(--ink-faded)",
-          background: "var(--paper-shadow)",
-        }}
-      >
-        <span style={{ color: "var(--ink-black)", whiteSpace: "nowrap" }}>{topline}</span>
-        <a
-          href="https://soknoear.com"
-          style={{ color: "var(--rust)", textDecoration: "none", letterSpacing: "0.06em", whiteSpace: "nowrap" }}
-        >
-          ★ soknoear.com
-        </a>
+      {/* Full dateline — iPad & desktop */}
+      <div className="ear-super-full" style={stripStyle}>
+        <span style={{ whiteSpace: "nowrap" }}>{volLine}</span>
+        <span style={{ color: "var(--ink-black)", textAlign: "center" }}>{dateline}</span>
+        <a href="https://soknoear.com" style={domainLink}>★ soknoear.com</a>
+      </div>
+      {/* Compact dateline — phones */}
+      <div className="ear-super-compact" style={stripStyle}>
+        <span style={{ color: "var(--ink-black)", whiteSpace: "nowrap" }}>{volLine} · {shortDate}</span>
+        <a href="https://soknoear.com" style={domainLink}>★ soknoear.com</a>
       </div>
 
       <div style={{ background: "var(--paper-cream)", padding: "18px 16px 14px", textAlign: "center" }}>

@@ -1,0 +1,55 @@
+/* ============================================================
+   The South Knoxville Ear — Color System
+   Print-inspired, restrained palette. Black + cream are the
+   foundation; teal & rust are editorial accents; gold is rare.
+   ============================================================ */
+
+:root {
+  /* --- Base ink & paper --- */
+  --ink-black:        #171512;  /* Black Ink — primary text, linework */
+  --ink-faded:        #4A4740;  /* Faded Ink Gray — secondary text */
+  --paper-cream:      #F3E8D2;  /* Newsprint Cream — primary background */
+  --paper-shadow:     #E2D1B3;  /* Warm Paper Shadow — sunken panels, borders */
+
+  /* Useful derived paper tones */
+  --paper-edge:       #D8C4A0;  /* darker deckle edge / hairlines */
+  --paper-bright:     #FAF2E2;  /* lifted card paper, inputs */
+
+  /* --- Accents --- */
+  --teal:             #7FAEA3;  /* South Knoxville Teal — section bars, ribbons */
+  --green-bridge:     #315D54;  /* Deep Bridge Green — buttons, deep accents */
+  --rust:             #A94A34;  /* Rust Red — labels, stars, emphasis */
+  --rust-dark:        #743124;  /* Dark Rust — hover/press, headings accent */
+  --gold:             #D8A725;  /* Sunsphere Gold — rare, special (the mic) */
+  --eye-blue:         #7FB7D7;  /* Pale Blue Eye Accent — tiny highlights */
+
+  /* ---------- Semantic aliases ---------- */
+  --bg-page:          var(--paper-cream);
+  --bg-panel:         var(--paper-bright);   /* feature panels, story cards */
+  --bg-sunken:        var(--paper-shadow);   /* nav strip, calendar wells */
+  --bg-input:         var(--paper-bright);
+
+  --text-body:        var(--ink-black);
+  --text-muted:       var(--ink-faded);
+  --text-inverse:     var(--paper-cream);    /* on dark/teal surfaces */
+  --text-label:       var(--rust);           /* stamped rubric labels */
+
+  --rule-ink:         var(--ink-black);      /* black hairline rules */
+  --rule-soft:        var(--paper-edge);     /* faint dividing rules */
+  --border-strong:    var(--ink-black);
+  --border-soft:      var(--paper-edge);
+
+  --accent-bar:       var(--teal);           /* teal section bars / ribbons */
+  --accent-emphasis:  var(--rust);           /* rust emphasis marks, stars */
+  --accent-action:    var(--green-bridge);   /* primary button fill */
+  --accent-special:   var(--gold);           /* Sunsphere-only highlight */
+
+  --link:             var(--rust);
+  --link-hover:       var(--rust-dark);
+
+  /* On-accent contrast pairs */
+  --on-teal:          var(--ink-black);
+  --on-green:         var(--paper-cream);
+  --on-rust:          var(--paper-cream);
+  --on-gold:          var(--ink-black);
+}

@@ -1,0 +1,23 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Surfaces in Use" subtitle="How ink, paper, and accents pair on real surfaces" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 18px; }
+  .row { display: flex; gap: 12px; align-items: stretch; }
+  .tile { flex: 1; border: var(--border-ink) solid var(--ink-black); border-radius: var(--radius-sm); padding: 12px 14px; font-family: var(--font-label); font-size: 13px; letter-spacing: var(--tracking-label-tight); text-transform: uppercase; min-height: 78px; display: flex; flex-direction: column; justify-content: space-between; }
+  small { font-size: 10px; opacity: 0.7; letter-spacing: 0.06em; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="tile" style="background:var(--paper-bright); color:var(--ink-black)">Story Card<small>paper-bright on cream</small></div>
+    <div class="tile" style="background:var(--teal); color:var(--on-teal)">Section Bar<small>ink on teal</small></div>
+    <div class="tile" style="background:var(--green-bridge); color:var(--on-green)">Primary Button<small>cream on bridge green</small></div>
+    <div class="tile" style="background:var(--rust); color:var(--on-rust)">Hot Label<small>cream on rust</small></div>
+    <div class="tile" style="background:var(--gold); color:var(--on-gold)">Sunsphere<small>ink on gold</small></div>
+  </div>
+</body>
+</html>

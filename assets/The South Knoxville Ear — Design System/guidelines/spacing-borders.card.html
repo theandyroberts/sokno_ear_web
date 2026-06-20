@@ -1,0 +1,25 @@
+<!-- @dsCard group="Spacing" viewport="700x180" name="Borders, Radii & Shadows" subtitle="Inked boxes, near-square corners, dry letterpress lifts" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 22px 24px; }
+  .row { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
+  .demo { background: var(--paper-bright); width: 120px; height: 70px; display: flex; align-items: center; justify-content: center; font-family: var(--font-label); font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faded); text-align: center; padding: 6px; }
+  .b-ink { border: var(--border-ink) solid var(--ink-black); border-radius: var(--radius-sm); }
+  .b-heavy { border: var(--border-heavy) solid var(--ink-black); border-radius: var(--radius-sm); }
+  .s-press { border: var(--border-ink) solid var(--ink-black); box-shadow: var(--shadow-press); border-radius: var(--radius-sm); }
+  .s-panel { border: var(--border-ink) solid var(--ink-black); box-shadow: var(--shadow-panel); border-radius: var(--radius-md); }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="demo b-ink">2px ink<br>radius 2</div>
+    <div class="demo b-heavy">3px heavy<br>radius 2</div>
+    <div class="demo s-press">press shadow<br>2/2/0</div>
+    <div class="demo s-panel">panel lift<br>edge + blur</div>
+  </div>
+</body>
+</html>

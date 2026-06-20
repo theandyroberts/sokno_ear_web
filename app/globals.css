@@ -22,9 +22,17 @@ html { scroll-behavior: smooth; }
   .ear-twocol aside { position: static !important; }
 }
 
-/* Hide the in-page section nav below tablet — six rubrics wrap badly on phones */
+/* Super-header: full 3-section dateline on iPad + desktop, compact on phones */
+.ear-super-full { display: flex; }
+.ear-super-compact { display: none; }
+
+/* Below tablet (phones): hide the wrapping nav + the footer engravings, and swap
+   the full dateline for the compact one */
 @media (max-width: 767px) {
   .ear-nav { display: none !important; }
+  .ear-super-full { display: none; }
+  .ear-super-compact { display: flex; }
+  .ear-foot-img { display: none; }
 }
 
 @media print {

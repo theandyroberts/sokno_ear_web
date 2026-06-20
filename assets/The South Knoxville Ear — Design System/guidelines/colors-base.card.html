@@ -1,0 +1,25 @@
+<!-- @dsCard group="Colors" viewport="700x150" name="Base — Ink & Paper" subtitle="Black and cream are the foundation" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { margin: 0; padding: 18px; }
+  .row { display: flex; gap: 14px; }
+  .sw { flex: 1; }
+  .chip { height: 64px; border: var(--border-ink) solid var(--ink-black); border-radius: var(--radius-sm); }
+  .meta { font-family: var(--font-label); margin-top: 8px; }
+  .name { font-size: 12px; font-weight: 600; letter-spacing: var(--tracking-label-tight); text-transform: uppercase; color: var(--ink-black); }
+  .hex { font-size: 12px; color: var(--ink-faded); letter-spacing: 0.04em; }
+</style>
+</head>
+<body>
+  <div class="row">
+    <div class="sw"><div class="chip" style="background:var(--ink-black)"></div><div class="meta"><div class="name">Black Ink</div><div class="hex">#171512</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--ink-faded)"></div><div class="meta"><div class="name">Faded Ink</div><div class="hex">#4A4740</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--paper-shadow)"></div><div class="meta"><div class="name">Paper Shadow</div><div class="hex">#E2D1B3</div></div></div>
+    <div class="sw"><div class="chip" style="background:var(--paper-cream)"></div><div class="meta"><div class="name">Newsprint Cream</div><div class="hex">#F3E8D2</div></div></div>
+  </div>
+</body>
+</html>
