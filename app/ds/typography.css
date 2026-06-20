@@ -1,0 +1,56 @@
+/* ============================================================
+   The South Knoxville Ear — Typography System
+   Vintage print on the web: slab woodtype display, old-style
+   serif body, stamped condensed labels.
+   ============================================================ */
+
+:root {
+  /* ---------- Families ---------- */
+  /* Rye = distressed woodtype display (masthead-adjacent hero & rubrics, UPPERCASE) */
+  --font-display: "Rye", Georgia, "Times New Roman", serif;
+  /* Heavier woodtype alias (kept = Rye; swap if a brand woodtype arrives) */
+  --font-woodtype: "Rye", Georgia, serif;
+  /* PT Serif = warm, readable newspaper body & bold article titles */
+  --font-body:    "PT Serif", Georgia, "Times New Roman", serif;
+  /* Special Elite = worn typewriter stamp — labels, nav, tags, captions */
+  --font-label:   "Special Elite", "Courier New", Courier, monospace;
+  /* Blackthorn = licensed brand display script — hero headline only (trial) */
+  --font-headline: "Blackthorn", "Rye", Georgia, serif;
+
+  /* ---------- Display scale (slab woodtype headlines) ---------- */
+  --display-hero:   clamp(3rem, 6vw, 5rem);    /* @kind font */ /* 48–80px feature headline */
+  --display-1:      3rem;     /* 48px */
+  --display-2:      2.25rem;  /* 36px */
+  --display-3:      1.75rem;  /* 28px */
+
+  /* ---------- Section rubric (TOP STORIES & EVENTS) ---------- */
+  --rubric-lg:      1.75rem;  /* 28px */
+  --rubric-md:      1.375rem; /* 22px */
+
+  /* ---------- Body ---------- */
+  --text-deck:      1.1875rem; /* 19px — story decks / intros */
+  --text-base:      1.0625rem; /* 17px — article body */
+  --text-sm:        0.9375rem; /* 15px — card copy, metadata */
+  --text-xs:        0.8125rem; /* 13px — fine print */
+
+  /* ---------- Label / UI (condensed, tracked, often caps) ---------- */
+  --label-lg:       1rem;      /* 16px */
+  --label-md:       0.875rem;  /* 14px — nav, tags */
+  --label-sm:       0.75rem;   /* 12px — small stamps */
+
+  /* ---------- Weights ---------- */
+  --weight-body:    400;
+  --weight-bold:    700;
+  --weight-label:   600;
+
+  /* ---------- Line heights ---------- */
+  --leading-tight:  1.02;  /* big slab headlines */
+  --leading-snug:   1.2;   /* rubrics, decks */
+  --leading-body:   1.6;   /* article body, generous newspaper rhythm */
+
+  /* ---------- Letter spacing ---------- */
+  --tracking-display: 0.005em; /* woodtype display, near-neutral */
+  --tracking-rubric:  0.02em;
+  --tracking-label:   0.1em;   /* stamped typewriter labels */
+  --tracking-label-tight: 0.05em;
+}

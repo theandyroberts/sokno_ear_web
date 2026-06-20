@@ -1,8 +1,18 @@
-*, *::before, *::after {
-  box-sizing: border-box;
+/* DS foundations copied into app/ds. Fonts handled by next/font (see lib/fonts.ts). */
+@import "./ds/colors.css";
+@import "./ds/typography.css";
+@import "./ds/spacing.css";
+@import "./ds/base.css";
+
+/* Bind the DS family tokens to the self-hosted next/font faces so no webfont is
+   fetched from Google at runtime. This block MUST stay after the @imports. */
+:root {
+  --font-display:  var(--font-rye), Georgia, "Times New Roman", serif;
+  --font-woodtype: var(--font-rye), Georgia, serif;
+  --font-body:     var(--font-pt-serif), Georgia, "Times New Roman", serif;
+  --font-label:    var(--font-special-elite), "Courier New", Courier, monospace;
+  --font-headline: var(--font-blackthorn), var(--font-rye), Georgia, serif;
 }
 
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-}
+:target { scroll-margin-top: 24px; }
+html { scroll-behavior: smooth; }
