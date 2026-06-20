@@ -197,6 +197,22 @@
       "sources": [
         { "label": "Knox Planning — Case 7-N-26-RZ", "url": "https://knoxplanning.org/cases/7-N-26-RZ" }
       ]
+    },
+    {
+      "id": "traffic-circle",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "layout": "imageTop",
+      "image": "/assets/traffic_circle.png",
+      "imageCaption": "Years in the making",
+      "title": "For the locals",
+      "facts": [
+        { "label": "Where", "value": "East end of the Old Sevier strip" }
+      ],
+      "body": [
+        { "type": "paragraph", "text": "If you know, you know." },
+        { "type": "paragraph", "text": "It seemed like such a simple thing, years ago, when the traffic circle was first proposed. The chart above is the official update." }
+      ]
     }
   ],
   "sidebar": {
