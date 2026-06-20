@@ -32,3 +32,10 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
   invitational, e.g. "Got an event? Tell The Ear."
 - **Audio briefing** is delivered in **Andy's own voice**, first person, like a
   short neighborhood radio dispatch.
+- **Always attribute sources.** Every article ends with its source(s): an external
+  link when the info came from one (official site, @handle, agency), or plain credit
+  text like "Info from A. Roberts" when it came from a form submission/tip with no
+  link. It's bad form to run info unattributed, especially while we're getting started.
+  Schema: `Story.sources: { label, url? }[]` → renders a "Source(s):" line at the foot
+  of the article. Use the `agenda` block (time → activity rows) for event schedules
+  when the times are definitively sourced.
