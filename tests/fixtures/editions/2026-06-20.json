@@ -1,0 +1,11 @@
+{
+  "slug": "2026-06-20", "volume": 1, "number": 1, "edition": "Weekend Edition",
+  "date": "2026-06-20", "place": "South Knoxville, TN",
+  "feature": { "id": "f2", "label": "Feature", "title": "This week", "layout": "imageTop",
+    "body": [{ "type": "paragraph", "text": "Newer edition." }] },
+  "scanner": [{ "label": "Events", "image": "/assets/spots/s1_flag.png", "title": "New Thing",
+    "blurb": "b2", "cue": "Jump to story", "href": "#new-thing" }],
+  "stories": [{ "id": "new-thing", "label": "Chapman Highway", "layout": "imageLeft", "title": "A new thing",
+    "body": [{ "type": "paragraph", "text": "New body." }] }],
+  "sidebar": { "calendar": [{ "month": "JUN", "day": "20", "title": "New Event", "meta": "2pm" }] }
+}
