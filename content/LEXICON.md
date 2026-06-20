@@ -51,6 +51,9 @@ place for recognition: **Old Sevier = rust, Ijams Park = teal, Kern's = green.**
   view** (starts ~2 cross streets up from the river). Roni's Mac Bar lives here.
 - **Ijams Park** — Ijams Nature Center / Meads Quarry; its own call-out (fireflies, bird
   banding, the bluegrass jam). Say "Ijams Park," never just "nature center."
+- **Suttree Landing** — Suttree Landing Park, the riverside park down on the waterfront.
+  Reach it by turning toward the river at the Citgo on Sevier, down Claude St to Waterfront
+  Dr. Give it its own pill (not "South Waterfront").
 - **Urban Wilderness** — the trail district, anchored by a converted church that now holds
   a bar, a restaurant, and a bike shop, with miles of mountain-biking trails.
 - **Island Home** — established residential community: older homes, higher property values.

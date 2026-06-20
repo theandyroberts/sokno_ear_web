@@ -15,34 +15,37 @@
     "image": "/assets/spots/feature_flag.png",
     "imageCaption": "Sevier Ave, flags up",
     "title": "Pride takes over Sevier Avenue",
-    "deck": "It's really two parties in one: a noon-to-six street festival on Sevier Avenue, and a wave of official after-parties that scatter across SoKno once the sun goes down.",
+    "deck": "Three acts, one Saturday: a morning 5K and yoga by the river, the street festival on Sevier from noon to six, and official after-parties scattered across SoKno from eight on.",
     "facts": [
-      { "label": "Daytime", "value": "Sat noon–6 PM · Sevier Ave" },
+      { "label": "Morning", "value": "5K 7:30 + Yoga 9 · Suttree Landing" },
+      { "label": "Festival", "value": "Noon–6 PM · Sevier Ave" },
       { "label": "After-parties", "value": "8 PM · across SoKno" },
-      { "label": "Cost", "value": "Free (day); venues vary" },
-      { "label": "Source", "value": "@soknopride" }
+      { "label": "Street closed", "value": "Dixie–Davenport, 10:30 AM–7:30 PM" }
     ],
     "body": [
-      { "type": "subhead", "text": "The street festival — noon to six" },
-      { "type": "paragraph", "text": "It starts the way the best South Knoxville things start — a little homemade, a little loud, and entirely ours. At noon the barricades go up and Sevier Avenue belongs to the crowd: local vendors and makers, community booths, food and drinks from the businesses you already love, and live entertainment running straight through the afternoon." },
-      { "type": "paragraph", "runs": [ { "text": "Past years have brought drag sets, an opening ceremony, and a closing send-off — and the day stays all-ages and free. Bring a chair, bring a friend, and bring the friend who never comes out — " }, { "text": "this is the one.", "italic": true }, { "text": " The street party wraps at six." } ] },
+      { "type": "subhead", "text": "Morning — a run and yoga by the river" },
+      { "type": "paragraph", "runs": [ { "text": "Pride starts early and easy, down at Suttree Landing Park: a free, no-registration 5K fun run with the SlowKno Running Club at 7:30 (lululemon has refreshments at the finish), then community yoga with Nora Vines at nine. New to the park? Turn toward the river at the Citgo on Sevier. Details on " }, { "text": "@soknopride", "href": "https://www.instagram.com/soknopride/" }, { "text": "." } ] },
+      { "type": "subhead", "text": "Noon to six — the street festival" },
+      { "type": "paragraph", "text": "At noon the avenue belongs to the crowd: local vendors and makers, community booths, food, and a stage of live entertainment — all free and all-ages, presented by Choice Health Network. Sevier Ave closes between Dixie and Davenport from 10:30 to 7:30, so leave the car: there's a free shuttle from noon to seven out of the Dwight Kessel and Riverwalk garages, with rideshare drop-offs at Honeybee and Alliance." },
+      { "type": "paragraph", "runs": [ { "text": "Bring a chair, sunscreen, cash for tips, and the friend who never comes out — " }, { "text": "this is the one.", "italic": true } ] },
       { "type": "agenda", "title": "Saturday at a glance", "rows": [
-        { "time": "12:00 PM", "what": "Festival opens — vendors, makers, food, and live music on Sevier Ave" },
-        { "time": "6:00 PM", "what": "Street festival wraps up on Sevier" },
-        { "time": "8:00 PM", "what": "Official after-parties begin across SoKno" }
+        { "time": "7:30 AM", "what": "5K fun run, then 9 AM community yoga at Suttree Landing" },
+        { "time": "10:30 AM", "what": "Sevier Ave closes — Dixie to Davenport" },
+        { "time": "12:00 PM", "what": "Street festival opens — vendors, food, stage" },
+        { "time": "6:00 PM", "what": "Festival wraps on Sevier" },
+        { "time": "8:00 PM", "what": "After-parties: Pink Cactus, Hi-Wire, Club XYZ, Core, Fly by Night & more" }
       ] },
-      { "type": "subhead", "text": "The after-parties — 8 PM, all over SoKno" },
-      { "type": "paragraph", "text": "When the street clears, the night doesn't stop — it scatters. SoKno Pride's official after-parties kick off at eight and spread across the neighborhood, landing at The Pink Cactus, Hi-Wire Brewing, Alliance Brewing, Fly by Night, Club Core, Southside Garage, and more. Each spot runs its own show, so you can wander from one to the next." },
-      { "type": "paragraph", "runs": [ { "text": "The full stage lineup and set times live on the " }, { "text": "@soknopride", "href": "https://www.instagram.com/soknopride/" }, { "text": " feed — we'll fold them in here as they firm up." } ] }
+      { "type": "subhead", "text": "8 PM on — the after-parties" },
+      { "type": "paragraph", "runs": [ { "text": "When the street clears, the party scatters. The official after-parties start at eight, with headline spots at The Pink Cactus, Hi-Wire Brewing (closing early), Club XYZ, Core, and Fly by Night — plus more at Alliance Brewing, Honeybee Coffee, the Redbud, South Coast Pizza, and Southside Garage. Each runs its own show; the full rundown's on " }, { "text": "@soknopride", "href": "https://www.instagram.com/soknopride/" }, { "text": "." } ] }
     ],
     "sources": [
+      { "label": "@soknopride", "url": "https://www.instagram.com/soknopride/" },
       { "label": "soknopride.org", "url": "https://www.soknopride.org/" },
-      { "label": "@soknopride — after-parties", "url": "https://www.instagram.com/p/DU7_LH7DZHq/" },
       { "label": "Visit Knoxville", "url": "https://www.visitknoxville.com/event/sokno-pride-2026/34249/" }
     ]
   },
   "scanner": [
-    { "label": "Old Sevier", "hot": true, "image": "/assets/spots/s1_flag.png", "title": "Pride on Sevier Avenue", "blurb": "Street fest noon–6, then after-parties across SoKno.", "cue": "Jump to story", "href": "#pride-festival" },
+    { "label": "Old Sevier", "hot": true, "image": "/assets/spots/s1_flag.png", "title": "Pride on Sevier Avenue", "blurb": "5K & yoga at 7:30, street fest noon–6, after-parties at 8.", "cue": "Jump to story", "href": "#pride-festival" },
     { "label": "Ijams Park", "labelColor": "teal", "image": "/assets/spots/s5_fire.png", "title": "Phenomenal Fireflies", "blurb": "A guided night walk into the Ijams glow.", "cue": "Jump to story", "href": "#fireflies" },
     { "label": "Old Sevier", "image": "/assets/spots/make_music.png", "title": "Make Music Day", "blurb": "Bluegrass, karaoke, and free music all over SoKno.", "cue": "Jump to story", "href": "#make-music" },
     { "label": "Kern's", "labelColor": "green", "image": "/assets/spots/ronis_mac.png", "title": "Roni's Mac Bar", "blurb": "The build-your-own mac-and-cheese bar has landed.", "cue": "Jump to story", "href": "#ronis" },
@@ -173,10 +176,11 @@
       "src": "/audio/2026-06-20.mp3"
     },
     "calendar": [
-      { "month": "JUN", "day": "19", "title": "Phenomenal Fireflies Walk", "meta": "9:00 PM · Ijams", "starred": true },
+      { "month": "JUN", "day": "19", "title": "Phenomenal Fireflies Walk", "meta": "9:00 PM · Ijams Park", "starred": true },
+      { "month": "JUN", "day": "20", "title": "Pride 5K & Yoga", "meta": "7:30 AM · Suttree Landing" },
       { "month": "JUN", "day": "20", "title": "SoKno Pride Festival", "meta": "Noon–6 PM · Sevier Ave", "starred": true },
-      { "month": "JUN", "day": "20", "title": "Bird Banding", "meta": "7:30 AM · Ijams" },
-      { "month": "JUN", "day": "21", "title": "Make Music Day", "meta": "2:00 PM · Ijams & Sevier Ave", "starred": true }
+      { "month": "JUN", "day": "20", "title": "Bird Banding", "meta": "7:30 AM · Ijams Park" },
+      { "month": "JUN", "day": "21", "title": "Make Music Day", "meta": "2:00 PM · Ijams Park & Sevier", "starred": true }
     ]
   }
 }
