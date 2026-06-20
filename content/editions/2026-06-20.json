@@ -26,7 +26,7 @@
       { "type": "subhead", "text": "Morning — a run and yoga by the river" },
       { "type": "paragraph", "runs": [ { "text": "Pride starts early and easy, down at Suttree Landing Park: a free, no-registration 5K fun run with the SlowKno Running Club at 7:30 (lululemon has refreshments at the finish), then community yoga with Nora Vines at nine. New to the park? Turn toward the river at the Citgo on Sevier. Details on " }, { "text": "@soknopride", "href": "https://www.instagram.com/soknopride/" }, { "text": "." } ] },
       { "type": "subhead", "text": "Noon to six — the street festival" },
-      { "type": "paragraph", "text": "At noon the avenue belongs to the crowd: local vendors and makers, community booths, food, and a stage of live entertainment — all free and all-ages, presented by Choice Health Network. Sevier Ave closes between Dixie and Davenport from 10:30 to 7:30, so leave the car: there's a free shuttle from noon to seven out of the Dwight Kessel and Riverwalk garages, with rideshare drop-offs at Honeybee and Alliance." },
+      { "type": "paragraph", "text": "At noon the avenue belongs to the crowd: local vendors and makers, community booths, food, and four stages of live entertainment running drag, DJs, and live music — all free and all-ages, presented by Choice Health Network. Sevier Ave closes between Dixie and Davenport from 10:30 to 7:30, so leave the car: there's a free shuttle from noon to seven out of the Dwight Kessel and Riverwalk garages, with rideshare drop-offs at Honeybee and Alliance." },
       { "type": "paragraph", "runs": [ { "text": "Bring a chair, sunscreen, cash for tips, and the friend who never comes out — " }, { "text": "this is the one.", "italic": true } ] },
       { "type": "agenda", "title": "Saturday at a glance", "rows": [
         { "time": "7:30 AM", "what": "5K fun run, then 9 AM community yoga at Suttree Landing" },
@@ -34,6 +34,34 @@
         { "time": "12:00 PM", "what": "Street festival opens — vendors, food, stage" },
         { "time": "6:00 PM", "what": "Festival wraps on Sevier" },
         { "time": "8:00 PM", "what": "After-parties: Pink Cactus, Hi-Wire, Club XYZ, Core, Fly by Night & more" }
+      ] },
+      { "type": "subhead", "text": "On the stages — noon to six" },
+      { "type": "paragraph", "runs": [ { "text": "Four stages run drag, DJs, and live sets straight through the afternoon. Set times are subject to change — the live grid is on " }, { "text": "@soknopride", "href": "https://www.instagram.com/soknopride/" }, { "text": "." } ] },
+      { "type": "agenda", "title": "Hi-Wire stage", "rows": [
+        { "time": "12:00 PM", "what": "Opening ceremony + Appalachian Equality Chorus" },
+        { "time": "12:45 PM", "what": "Drag show: Morphine Drip, Mercedes Alexander, Annatomical, Lotza Minnailmi, Tyra Von Shade, Anne Atomic" },
+        { "time": "2:00 PM", "what": "Schrodinger's Gag" },
+        { "time": "3:00 PM", "what": "Noah Gray" },
+        { "time": "4:00 PM", "what": "Schrodinger's Gag" },
+        { "time": "4:45 PM", "what": "Honkers & Bangers (Pink Cactus → Hi-Wire)" },
+        { "time": "5:15 PM", "what": "Drag show: Morphine Drip, Jaxon Screws, Ondreah Montrose, Ace Matthews, Anastasia Alexander" }
+      ] },
+      { "type": "agenda", "title": "Honeybee Coffee", "rows": [
+        { "time": "Host", "what": "Alexandra Cartier" },
+        { "time": "1:30 PM", "what": "Drag show: Morphine Drip, Vandeja Voo, Lana Mars, Diana Hart" },
+        { "time": "3:00 PM", "what": "Drag show: Morphine Drip, Colin Butte, Johnny Deep, Vivian Valentine, The Platinum Angel, Royal Disaster" },
+        { "time": "4:30 PM", "what": "Drag show: Morphine Drip, Beebee Alexander, Twinkie, Shawn Dick" }
+      ] },
+      { "type": "agenda", "title": "Fly by Night", "rows": [
+        { "time": "12:30 PM", "what": "DJ Kasa" },
+        { "time": "2:15 PM", "what": "Jude Mauk" },
+        { "time": "3:45 PM", "what": "Drag show: Morphine Drip, Rahla Abdul, Vory Trade, Wella Butrin, Manny Hoze" },
+        { "time": "5:15 PM", "what": "DJ Kasa" }
+      ] },
+      { "type": "agenda", "title": "Redbud Kitchen", "rows": [
+        { "time": "1:00 PM", "what": "Megan Pennington" },
+        { "time": "3:00 PM", "what": "Naomi McMahan" },
+        { "time": "4:45 PM", "what": "Manstett" }
       ] },
       { "type": "subhead", "text": "8 PM on — the after-parties" },
       { "type": "paragraph", "runs": [ { "text": "When the street clears, the party scatters. The official after-parties start at eight, with headline spots at The Pink Cactus, Hi-Wire Brewing (closing early), Club XYZ, Core, and Fly by Night — plus more at Alliance Brewing, Honeybee Coffee, the Redbud, South Coast Pizza, and Southside Garage. Each runs its own show; the full rundown's on " }, { "text": "@soknopride", "href": "https://www.instagram.com/soknopride/" }, { "text": "." } ] }
