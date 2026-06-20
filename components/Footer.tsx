@@ -15,6 +15,9 @@ export function Footer() {
               <span style={{ color: "var(--rust)" }}>★</span> South Knoxville Events &amp; Rumors <span style={{ color: "var(--rust)" }}>★</span>
             </div>
             <a href="https://soknoear.com" style={{ fontFamily: "var(--font-label)", fontSize: "var(--label-md)", letterSpacing: "var(--tracking-label)", textTransform: "uppercase", color: "var(--teal)", textDecoration: "none" }}>soknoear.com</a>
+            <div style={{ marginTop: 6 }}>
+              <a href="https://www.instagram.com/soknoear" target="_blank" rel="noopener noreferrer" style={{ fontFamily: "var(--font-label)", fontSize: "var(--label-md)", letterSpacing: "var(--tracking-label)", textTransform: "uppercase", color: "var(--teal)", textDecoration: "none" }}>★ Follow @soknoear</a>
+            </div>
           </div>
           <img className="ear-foot-img" src="/assets/spots/foot_bridge.png" alt="" style={{ height: 70, width: "auto", filter: "invert(1) brightness(1.05) sepia(0.15)" }} />
         </div>

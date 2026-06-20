@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { fontVars } from "@/lib/fonts";
 import { Analytics } from "@/components/Analytics";
+import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://soknoear.com"),
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={fontVars}>
       <body>
         {children}
+        <Footer />
         <Analytics />
       </body>
     </html>

@@ -10,7 +10,6 @@ import { ArticleBody } from "@/components/ArticleBody";
 import { AudioBriefingPlayer } from "@/components/AudioBriefingPlayer";
 import { EventSubmitForm } from "@/components/EventSubmitForm";
 import { SubscribeForm } from "@/components/SubscribeForm";
-import { Footer } from "@/components/Footer";
 import { ArticleSources } from "@/components/ArticleSources";
 import { JsonLd } from "@/components/JsonLd";
 
@@ -103,7 +102,6 @@ export function Paper({ edition }: { edition: Edition }) {
         ))}
       </Page>
 
-      <Footer />
     </main>
   );
 }
