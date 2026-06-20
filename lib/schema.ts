@@ -19,9 +19,18 @@ export const Block = z.union([
     message: "paragraph needs text or runs",
   }),
   z.object({ type: z.literal("subhead"), text: z.string() }),
+  z.object({
+    type: z.literal("agenda"),
+    title: z.string().optional(),
+    rows: z.array(z.object({ time: z.string(), what: z.string() })).min(1),
+  }),
 ]);
 
 export const Fact = z.object({ label: z.string(), value: z.string() });
+
+// Attribution for the end of an article. url present -> link; url absent -> plain
+// credit text (e.g. "Info from A. Roberts" for a tip with no link).
+export const Source = z.object({ label: z.string(), url: z.string().optional() });
 
 export const StorySchema = z.object({
   id: z.string(),
@@ -34,6 +43,7 @@ export const StorySchema = z.object({
   deck: z.string().optional(),
   facts: z.array(Fact).default([]),
   body: z.array(Block).min(1),
+  sources: z.array(Source).optional(),
 });
 
 export const StoryCard = z.object({
@@ -83,3 +93,4 @@ export type Block = z.infer<typeof Block>;
 export type StoryCard = z.infer<typeof StoryCard>;
 export type CalEvent = z.infer<typeof CalEvent>;
 export type Audio = z.infer<typeof Audio>;
+export type Source = z.infer<typeof Source>;

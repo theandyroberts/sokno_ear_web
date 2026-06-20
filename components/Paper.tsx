@@ -11,6 +11,7 @@ import { AudioBriefingPlayer } from "@/components/AudioBriefingPlayer";
 import { EventSubmitForm } from "@/components/EventSubmitForm";
 import { SubscribeForm } from "@/components/SubscribeForm";
 import { Footer } from "@/components/Footer";
+import { ArticleSources } from "@/components/ArticleSources";
 
 const Page = ({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) => (
   <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", ...style }}>{children}</div>
@@ -53,6 +54,7 @@ export function Paper({ edition }: { edition: Edition }) {
           <div className="ear-twocol" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.9fr) minmax(0, 1fr)", gap: 36, alignItems: "start" }}>
             <Article id={feature.id} label={feature.label} labelColor={feature.labelColor} image={feature.image} imageCaption={feature.imageCaption} title={feature.title} deck={feature.deck} facts={feature.facts} layout={feature.layout}>
               <ArticleBody blocks={feature.body} />
+              <ArticleSources sources={feature.sources} />
             </Article>
             <aside id="listen" style={{ display: "flex", flexDirection: "column", gap: 22, position: "sticky", top: 16 }}>
               {sidebar.audio && (
@@ -91,6 +93,7 @@ export function Paper({ edition }: { edition: Edition }) {
               <SectionHeader>{s.label}</SectionHeader>
               <Article id={s.id} label={s.label} labelColor={s.labelColor} image={s.image} imageCaption={s.imageCaption} title={s.title} deck={s.deck} facts={s.facts} layout={s.layout}>
                 <ArticleBody blocks={s.body} />
+                <ArticleSources sources={s.sources} />
               </Article>
             </section>
           </React.Fragment>

@@ -53,6 +53,9 @@
       "body": [
         { "type": "paragraph", "text": "The fireflies come up out of the grass around full dark, and if you stand still long enough you'll feel like you wandered into a snow globe someone forgot to shake. Ijams' Phenomenal Fireflies walk sends you out with a naturalist who knows where to look — and how to keep the magic going for the rest of us." },
         { "type": "paragraph", "text": "A few neighborly asks the guides will echo: skip the flashlight, wear real shoes (it's up to two miles over uneven ground), and let the little glowers do their thing. The walk is sixteen and up, and you'll need to register ahead — no walk-ins on this one." }
+      ],
+      "sources": [
+        { "label": "Ijams — Phenomenal Fireflies", "url": "https://www.ijams.org/public-programs" }
       ]
     },
     {
@@ -72,6 +75,9 @@
       "body": [
         { "type": "paragraph", "text": "If you can be up and out by 7:30, the banding table is worth the early alarm. Volunteers gently catch migratory songbirds in fine nets, fit each one with a tiny numbered band, take a few quick measurements, and let it go — real data for science, and a once-in-a-while look at a warbler close enough to count its feathers." },
         { "type": "paragraph", "text": "It's a hike out to the table and an early start, so bring coffee and a little patience. The birds set the schedule, not us." }
+      ],
+      "sources": [
+        { "label": "Ijams events calendar", "url": "https://www.ijams.org/calendar-of-events" }
       ]
     },
     {
@@ -92,6 +98,9 @@
         { "type": "paragraph", "text": "Make Music Day is the global, free, play-anywhere celebration of the longest day of the year, and the South Knoxville lineup is exactly as charming as you'd hope. Start at Ijams, where the East Tennessee Bluegrass Association holds an open jam from 2 to 5 — pull up a chair, or bring an instrument and sit in." },
         { "type": "paragraph", "runs": [ { "text": "Then head up to Sevier, where " }, { "text": "The Pink Cactus", "bold": true }, { "text": " hands you the mic for live-band karaoke with Tinca Tinca from 5 to 7 — yes, you, fronting an actual band. Down the street, Fly by Night runs sets from Lu Anderson and Villaphonic into the evening." } ] },
         { "type": "paragraph", "text": "All of it is free. Wander, listen, and sing the one song you actually know." }
+      ],
+      "sources": [
+        { "label": "Make Music Knoxville", "url": "https://makemusicday.org/knoxville/listings/venues" }
       ]
     },
     {
@@ -111,6 +120,10 @@
       "body": [
         { "type": "paragraph", "text": "Roni's Mac Bar — the build-your-own bowl of elbow macaroni and cheese — has set up shop inside Kern's Food Hall on the old bakery campus. We've heard from more than one neighbor that the doors are open and the cheese is flowing." },
         { "type": "paragraph", "text": "We're getting the full scoop (and, in the name of journalism, a full bowl) and we'll report back. If you beat us to it, you know where to send your review — we're all ears." }
+      ],
+      "sources": [
+        { "label": "Kern's Food Hall", "url": "https://kernsbakery.com/ronis-mac-bar/" },
+        { "label": "Tip from A. Roberts" }
       ]
     },
     {
@@ -131,6 +144,9 @@
       "body": [
         { "type": "paragraph", "text": "A parcel at 2704 Sevier Avenue — up at the northeast end, near Baker — has a rezoning request working its way through the system. The owner, through Connolly Development Ventures, is asking to move it from RN-2, single-family residential, to C-N, neighborhood commercial." },
         { "type": "paragraph", "text": "In plain terms: a lot zoned for a house could be cleared for a small neighborhood business. Nothing's decided yet — the Planning Commission takes it up on July 9, with the staff recommendation due about a week before. It's the kind of small change that quietly shapes what Sevier Avenue becomes, so we'll be watching. You can too." }
+      ],
+      "sources": [
+        { "label": "Knox Planning — Case 7-N-26-RZ", "url": "https://knoxplanning.org/cases/7-N-26-RZ" }
       ]
     }
   ],
