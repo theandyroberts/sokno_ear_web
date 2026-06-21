@@ -59,7 +59,7 @@ export function ContactForm() {
   return (
     <section style={boxStyle}>
       <div style={headingStyle}>★ Get in touch</div>
-      <p style={copyStyle}>Questions, tips, or just want to say hi? Drop Andy a line.</p>
+      <p style={copyStyle}>Questions, story ideas, or just want to say hi? Drop Andy a line.</p>
       <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "var(--space-3, 12px)" }}>
         <input type="text" placeholder="Your name (optional)" value={name} onChange={(e) => setName(e.target.value)} style={inputStyle} />
         <input type="email" placeholder="Your email" value={email} onChange={(e) => setEmail(e.target.value)} required style={inputStyle} />
