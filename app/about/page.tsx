@@ -65,13 +65,6 @@ export default function About() {
         <a href="https://sparkpoint.studio" target="_blank" rel="noopener noreferrer">Spark Point Studio</a>.
       </p>
 
-      <Figure
-        src="/assets/spots/andy_serena_candid.jpg"
-        alt="Engraving of Serena the dog licking a laughing Andy on the couch"
-        caption="Serena, chief morale officer"
-        maxWidth={380}
-      />
-
       <p style={p}>
         The Ear is a bit of a busman&apos;s holiday: a practical-AI experiment pointed straight at his
         own neighborhood. The research, the writing, the spot art, and the weekly audio are all
