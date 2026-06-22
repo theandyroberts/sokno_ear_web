@@ -5,6 +5,8 @@ import * as React from "react";
 interface Section {
   id: string;
   label: string;
+  /** Optional absolute href; when set, the nav item links here instead of `#id`. */
+  href?: string;
 }
 
 interface MastheadProps {
@@ -114,7 +116,7 @@ export function Masthead({ volLine, dateline, shortDate, sections }: MastheadPro
       >
         <span style={navStar}>★</span>
         {sections.map((s) => (
-          <NavLink key={s.id} href={`#${s.id}`} label={s.label} />
+          <NavLink key={s.id} href={s.href ?? `#${s.id}`} label={s.label} />
         ))}
         <span style={navStar}>★</span>
       </nav>
