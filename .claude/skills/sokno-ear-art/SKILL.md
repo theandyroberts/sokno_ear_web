@@ -62,7 +62,12 @@ For profiles where the subject must be **recognizable**. Three steps.
      Nano Banana (`nano_banana_pro`) often gives a better likeness but **frequently
      fails on policy when redrawing real faces**, so run it as a parallel attempt,
      not the only one.
-   - **Reference:** `medias: [{ role:"image", value:"<bg-removed job_id>" }]`
+   - **References (two — this is the key):** pass BOTH the subject AND a real **WSJ
+     hedcut sample** as a style exemplar; the sample is what actually yields the
+     stipple/hatch (text alone tops out at smooth cross-hatch):
+     `medias: [{ role:"image", value:"<bg-removed subject job_id>" }, { role:"image", value:"<WSJ hedcut sample media_id>" }]`.
+     In the prompt, call image 2 "STYLE only — do not copy its subject." Have the user
+     upload a hedcut sample via `media_upload_widget`, or keep one on hand.
    - **Aspect:** match the source (`2:3` / `3:4` portrait)
    - **Prompt template:**
      > "Turn this reference photo into a hand-drawn vintage newspaper hedcut
@@ -80,6 +85,12 @@ true hair/skin/eye color and distinctive features explicitly (models drift towar
 generic red hair, etc.); remove background first; review at both thumbnail and full
 size. WSJ hedcuts are classically monochrome — the palette tint is the Ear's twist;
 drop the colorize sentence for a pure B&W hedcut.
+
+**Coarser, unmistakable dots (optional post-process):** generators top out at fine
+hatch. For bolder stipple, dither the engraving — PIL: grayscale → `autocontrast` →
+downscale ~560px → `.convert("1")` (Floyd–Steinberg) → upscale NEAREST →
+`ImageOps.colorize(black="#171512", white="#F3E8D2")`; blend ~15% of the colored
+engraving back for a hint of color. Trades fidelity for grain.
 
 ---
 
