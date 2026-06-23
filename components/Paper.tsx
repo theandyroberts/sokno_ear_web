@@ -46,6 +46,10 @@ export function Paper({ edition }: { edition: Edition }) {
     { id: "about", label: "About", href: "/about" },
   ];
 
+  // Scanner columns: pick a count that never strands a single card alone on the last
+  // row (orphan control). ≤5 cards → one row; 6+ → 4 wide, bumped to 5 when 4 would orphan.
+  const scannerCols = scanner.length <= 5 ? scanner.length : (scanner.length % 4 === 1 ? 5 : 4);
+
   return (
     <main id="top">
       <JsonLd edition={edition} />
@@ -79,7 +83,7 @@ export function Paper({ edition }: { edition: Edition }) {
       <div style={{ padding: "30px 0", borderBottom: "var(--border-hair) solid var(--paper-edge)" }}>
         <Page>
           <SectionHeader>Top Stories &amp; Events</SectionHeader>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(176px, 1fr))", gap: 16 }}>
+          <div className="ear-scanner" style={{ display: "grid", gap: 16, "--scanner-cols": scannerCols } as React.CSSProperties}>
             {scanner.map((c, i) => (
               <StoryCard key={i} label={c.label} labelColor={c.labelColor} hot={c.hot} image={c.image} title={c.title} blurb={c.blurb} cue={c.cue} href={c.href} />
             ))}
