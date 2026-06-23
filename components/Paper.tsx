@@ -43,6 +43,7 @@ export function Paper({ edition }: { edition: Edition }) {
     { id: "top", label: "Top" },
     ...storyNav,
     ...(sidebar.audio ? [{ id: "listen", label: "Listen" }] : []),
+    { id: "about", label: "About", href: "/about" },
   ];
 
   return (

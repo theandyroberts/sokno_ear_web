@@ -118,7 +118,7 @@ export function Masthead({ volLine, dateline, shortDate, sections }: MastheadPro
         {sections.map((s) => (
           <NavLink key={s.id} href={s.href ?? `#${s.id}`} label={s.label} />
         ))}
-        <span style={navStar}>★</span>
+        <span style={{ ...navStar, borderLeft: "var(--border-hair) solid var(--ink-black)" }}>★</span>
       </nav>
     </header>
   );
