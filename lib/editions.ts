@@ -33,3 +33,11 @@ export function getPast(dir?: string): Edition[] {
 export function getNext(): Edition | null {
   return loadEditions(DRAFTS_DIR)[0] ?? null;
 }
+
+/** Reorder an edition so `storyId` is the feature and everything else shuffles down. Null if not found. */
+export function promoteStory(edition: Edition, storyId: string): Edition | null {
+  const all = [edition.feature, ...edition.stories];
+  const promoted = all.find((s) => s.id === storyId);
+  if (!promoted) return null;
+  return { ...edition, feature: promoted, stories: all.filter((s) => s.id !== storyId) };
+}
