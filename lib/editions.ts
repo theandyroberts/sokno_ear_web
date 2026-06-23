@@ -3,6 +3,7 @@ import path from "node:path";
 import { EditionSchema, type Edition } from "./schema";
 
 const DEFAULT_DIR = path.join(process.cwd(), "content", "editions");
+const DRAFTS_DIR = path.join(process.cwd(), "content", "drafts");
 
 export function loadEditions(dir: string = DEFAULT_DIR): Edition[] {
   if (!fs.existsSync(dir)) return [];
@@ -26,4 +27,9 @@ export function getBySlug(dir: string | undefined, slug: string): Edition | null
 
 export function getPast(dir?: string): Edition[] {
   return loadEditions(dir).slice(1);
+}
+
+/** The queued, unpublished edition (content/drafts) — shown only at /next, never indexed. */
+export function getNext(): Edition | null {
+  return loadEditions(DRAFTS_DIR)[0] ?? null;
 }
