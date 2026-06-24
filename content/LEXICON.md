@@ -11,7 +11,7 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
 |---|---|---|
 | **SoKno** | **"SO-no"** (two beats: *So · No*) | NOT "sock-no." Short for South Knoxville. When generating TTS, spell it `So-No` / use a phoneme alias so the voice never says "sock-no." |
 | Sevier Ave | "suh-VEER" (like the word *severe*) | Not "SEE-vee-er" or "Sue-veer." For TTS, spell it **`Severe`**. |
-| Ijams | "EYE-ams" (rhymes with *times*; **J is silent**) | Not "EYE-jams" or "ih-JAMS." For TTS, spell it **`Eye-ams`**. |
+| Ijams | "EYE-ams" (rhymes with *times*; **J is silent**) | Not "EYE-jams" or "ih-JAMS." For TTS, spell it **`Eye-ams`**. **Always say "Ijams Park"** in scripts & copy — never bare "Ijams" (the official "Ijams Nature Center" is fine but almost no one uses it). |
 
 *(Add venue names, street names, and people as we confirm them.)*
 
@@ -50,7 +50,7 @@ place for recognition: **Old Sevier = rust, Ijams Park = teal, Kern's = green.**
 - **Kern's** — the Kern's Bakery / Food Hall pocket. Its own SoKno section, **no water
   view** (starts ~2 cross streets up from the river). Roni's Mac Bar lives here.
 - **Ijams Park** — Ijams Nature Center / Meads Quarry; its own call-out (fireflies, bird
-  banding, the bluegrass jam). Say "Ijams Park," never just "nature center."
+  banding, the bluegrass jam). Say "Ijams Park," never just "nature center" — and never bare "Ijams."
 - **Suttree Landing** — Suttree Landing Park, the riverside park down on the waterfront.
   Reach it by turning toward the river at the Citgo on Sevier, down Claude St to Waterfront
   Dr. Give it its own pill (not "South Waterfront").

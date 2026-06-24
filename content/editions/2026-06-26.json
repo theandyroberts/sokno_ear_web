@@ -53,7 +53,7 @@
     { "label": "World Cup", "hot": true, "image": "/assets/spots/wc_watch.jpg", "title": "World Cup on the screens", "blurb": "Five matches Fri–Sun, group stage into the first knockout.", "cue": "Jump to story", "href": "#world-cup" },
     { "label": "Island Home", "labelColor": "green", "image": "/assets/spots/matt_woods.jpg", "title": "Matt Woods at Trailhead", "blurb": "Free Appalachian Americana on the patio, Sat at 7.", "cue": "Jump to story", "href": "#matt-woods" },
     { "label": "Old Sevier", "image": "/assets/spots/soiree_market.jpg", "title": "Summer Soirée Market", "blurb": "A curated makers' market at the Pink Cactus, Sun 1–5.", "cue": "Jump to story", "href": "#soiree-market" },
-    { "label": "Ijams Park", "labelColor": "teal", "image": "/assets/spots/ijams_paddle.jpg", "title": "Evening Paddle at Ijams", "blurb": "Two hours on the river, boats provided. Fri at 6.", "cue": "Jump to story", "href": "#evening-paddle" },
+    { "label": "Ijams Park", "labelColor": "teal", "image": "/assets/spots/ijams_paddle.jpg", "title": "Evening Paddle at Ijams Park", "blurb": "Two hours on the river, boats provided. Fri at 6.", "cue": "Jump to story", "href": "#evening-paddle" },
     { "label": "Old Sevier", "image": "/assets/spots/pink_cactus_show.jpg", "title": "The After Brunch Special", "blurb": "Eight comics, one Pink Cactus stage. Sat, doors at 2.", "cue": "Jump to story", "href": "#after-brunch" },
     { "label": "Old Sevier", "image": "/assets/spots/hiwire_weekend.jpg", "title": "Hi-Wire's busy weekend", "blurb": "Trivia, an Afro-fusion party, and a stained-glass class.", "cue": "Jump to story", "href": "#hi-wire" }
   ],
@@ -113,14 +113,14 @@
       "image": "/assets/spots/ijams_paddle.jpg",
       "imageCaption": "Two hours on the water",
       "title": "An evening paddle on the river, kayaks provided",
-      "deck": "Friday evening, Legacy Parks puts you on the Tennessee River off Ijams — boats, paddles, and life jackets included, all skill levels welcome.",
+      "deck": "Friday evening, Legacy Parks puts you on the Tennessee River off Ijams Park — boats, paddles, and life jackets included, all skill levels welcome.",
       "facts": [
         { "label": "When", "value": "Fri, Jun 26 · 6–8 PM" },
         { "label": "Where", "value": "Ijams Nature Center, 2915 Island Home Ave" },
         { "label": "Note", "value": "Register ahead · space limited" }
       ],
       "body": [
-        { "type": "paragraph", "text": "There's no better way to end a Friday than two slow hours on the water. Legacy Parks' Evening Paddle launches from Ijams onto the Tennessee River, with kayaks, canoes, paddles, and life jackets provided and staff on hand to get first-timers comfortable. Families, couples, anybody who wants to unwind — all skill levels are welcome." },
+        { "type": "paragraph", "text": "There's no better way to end a Friday than two slow hours on the water. Legacy Parks' Evening Paddle launches from Ijams Park onto the Tennessee River, with kayaks, canoes, paddles, and life jackets provided and staff on hand to get first-timers comfortable. Families, couples, anybody who wants to unwind — all skill levels are welcome." },
         { "type": "paragraph", "text": "Space is limited, so register ahead. Then just show up and let the river do the rest." }
       ],
       "sources": [
@@ -179,11 +179,11 @@
       "title": "Weekend Audio Briefing",
       "intro": "What's happening in SoKno this weekend.",
       "description": "Your weekend listen to what's happening around South Knoxville — the World Cup on the neighborhood's screens, Matt Woods at Trailhead, and the Old Sevier Summer Soirée Market.",
-      "duration": "01:09",
+      "duration": "01:12",
       "src": "/audio/2026-06-26.mp3"
     },
     "calendar": [
-      { "month": "JUN", "day": "26", "title": "Evening Paddle at Ijams", "meta": "6:00 PM · Ijams Park", "starred": true },
+      { "month": "JUN", "day": "26", "title": "Evening Paddle at Ijams Park", "meta": "6:00 PM · Ijams Park", "starred": true },
       { "month": "JUN", "day": "26", "title": "Twilight Trivia", "meta": "7:00 PM · Hi-Wire" },
       { "month": "JUN", "day": "27", "title": "The After Brunch Special", "meta": "2:30 PM · Pink Cactus" },
       { "month": "JUN", "day": "27", "title": "Matt Woods (free)", "meta": "7:00 PM · Trailhead", "starred": true },
