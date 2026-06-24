@@ -163,10 +163,10 @@
       "facts": [
         { "label": "Fri Jun 26", "value": "Twilight Trivia · 7 PM" },
         { "label": "Sat Jun 27", "value": "Afro Fusion Party · 9 PM–midnight" },
-        { "label": "Sun Jun 28", "value": "Stained Glass Class · 11 AM" }
+        { "label": "Sun Jun 28", "value": "Stained Glass Class · 2–4 PM" }
       ],
       "body": [
-        { "type": "paragraph", "text": "Hi-Wire's taproom stays busy all weekend. Friday it's Twilight Trivia at seven — round up a team and a few pints. Saturday night turns into an Afro Fusion Party from nine to midnight. And Sunday morning a hands-on Stained Glass Class sets up at eleven, for anyone who'd rather make something." },
+        { "type": "paragraph", "text": "Hi-Wire's taproom stays busy all weekend. Friday it's Twilight Trivia at seven — round up a team and a few pints. Saturday night turns into an Afro Fusion Party from nine to midnight. And Sunday afternoon a hands-on Stained Glass Class runs from two to four, for anyone who'd rather make something." },
         { "type": "paragraph", "text": "Times and details live on Hi-Wire's Instagram — worth a look before you head over." }
       ],
       "sources": [
@@ -179,7 +179,7 @@
       "title": "Weekend Audio Briefing",
       "intro": "What's happening in SoKno this weekend.",
       "description": "Your weekend listen to what's happening around South Knoxville — the World Cup on the neighborhood's screens, Matt Woods at Trailhead, and the Old Sevier Summer Soirée Market.",
-      "duration": "01:12",
+      "duration": "01:13",
       "src": "/audio/2026-06-26.mp3"
     },
     "calendar": [
