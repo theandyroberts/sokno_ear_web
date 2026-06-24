@@ -175,6 +175,13 @@
     }
   ],
   "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen to what's happening around South Knoxville — the World Cup on the neighborhood's screens, Matt Woods at Trailhead, and the Old Sevier Summer Soirée Market.",
+      "duration": "01:09",
+      "src": "/audio/2026-06-26.mp3"
+    },
     "calendar": [
       { "month": "JUN", "day": "26", "title": "Evening Paddle at Ijams", "meta": "6:00 PM · Ijams Park", "starred": true },
       { "month": "JUN", "day": "26", "title": "Twilight Trivia", "meta": "7:00 PM · Hi-Wire" },
