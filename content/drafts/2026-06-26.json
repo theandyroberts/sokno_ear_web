@@ -21,7 +21,7 @@
       { "label": "Sat Jun 27", "value": "Panama–England 5 PM · Jordan–Argentina 10 PM" },
       { "label": "Sun Jun 28", "value": "Round of 32 opener · 3 PM" },
       { "label": "Marquee", "value": "Argentina vs Jordan · Sat 10 PM" },
-      { "label": "Where", "value": "SoKno's sports-screen bars & restaurants" }
+      { "label": "Where", "value": "Kern's, Alliance, South Coast & Southside Garage" }
     ],
     "body": [
       { "type": "paragraph", "text": "The world's biggest tournament is in our backyard this summer, and this weekend the group stage hits its final, frantic rounds before the bracket begins. You don't have to drive downtown to catch it — pull up a stool at one of South Knoxville's sports-screen spots and let the neighborhood do the cheering." },
@@ -33,7 +33,17 @@
         { "time": "Sun · 3 PM", "what": "Round of 32 — the first knockout match" }
       ] },
       { "type": "paragraph", "text": "If you post up for just one, make it Saturday night: Argentina, the reigning World Cup champions, take on Jordan at ten — the marquee match of the weekend." },
-      { "type": "paragraph", "text": "Most of the neighborhood's bars and restaurants with screens will have the big matches on. The marquee ones fill up, so it's worth calling ahead to claim a table." }
+      { "type": "subhead", "text": "Where to watch in SoKno" },
+      { "type": "paragraph", "runs": [
+        { "text": "Kern's Bakery", "bold": true },
+        { "text": " is headquarters — they're putting every game on the big outdoor screen, with a huge area to spread out. " },
+        { "text": "Alliance Brewing", "bold": true },
+        { "text": ", " },
+        { "text": "South Coast Pizza", "bold": true },
+        { "text": ", and " },
+        { "text": "Southside Garage", "bold": true },
+        { "text": " have the matches on too, so you've got your pick across the neighborhood. The big ones fill up — get there early for a good seat." }
+      ] }
     ],
     "sources": [
       { "label": "Info from A. Roberts" }
