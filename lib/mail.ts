@@ -32,3 +32,15 @@ export async function sendContactEmail(c: Contact): Promise<void> {
   });
   if (error) console.error("[mail] resend error", error);
 }
+
+export async function sendSubscriberEmail(email: string): Promise<void> {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) { console.warn("[mail] RESEND_API_KEY unset — skipping email"); return; }
+  const resend = new Resend(key);
+  const { error } = await resend.emails.send({
+    from: FROM, to: TO,
+    subject: `New Ear subscriber: ${email}`,
+    text: `${email} just signed up to be notified about The South Knoxville Ear.`,
+  });
+  if (error) console.error("[mail] resend error", error);
+}

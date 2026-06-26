@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { db, insertSubscriber } from "@/lib/db";
+import { sendSubscriberEmail } from "@/lib/mail";
 
 const EMAIL = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
@@ -10,5 +11,6 @@ export async function POST(req: Request) {
   const email = String(b.email ?? "").trim().toLowerCase();
   if (!EMAIL.test(email)) return NextResponse.json({ error: "valid email required" }, { status: 400 });
   insertSubscriber(db(), email);
+  await sendSubscriberEmail(email);
   return NextResponse.json({ ok: true });
 }

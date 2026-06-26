@@ -1,7 +1,7 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import os from "node:os"; import path from "node:path";
 
-vi.mock("@/lib/mail", () => ({ sendSubmissionEmail: vi.fn(async () => {}) }));
+vi.mock("@/lib/mail", () => ({ sendSubmissionEmail: vi.fn(async () => {}), sendSubscriberEmail: vi.fn(async () => {}) }));
 
 beforeEach(() => { process.env.SQLITE_PATH = path.join(os.tmpdir(), `api-${Math.random()}.db`); vi.resetModules(); });
 
