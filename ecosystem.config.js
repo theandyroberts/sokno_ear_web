@@ -13,7 +13,7 @@ module.exports = {
         HOSTNAME: "127.0.0.1",
         SQLITE_PATH: "/var/lib/soknoear/ear.db",
         RESEND_API_KEY: process.env.RESEND_API_KEY,
-        SUBMIT_FROM: process.env.SUBMIT_FROM || "The Ear <ear@send.note15.com>",
+        SUBMIT_FROM: process.env.SUBMIT_FROM || "The SoKno Ear <ear@send.note15.com>",
         SUBMIT_TO: process.env.SUBMIT_TO || "andy@note15.com",
       },
     },
