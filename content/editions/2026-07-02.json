@@ -120,6 +120,13 @@
     }
   ],
   "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your Fourth of July weekend in South Knoxville — the Fourth at Kern's, live music at Trailhead, and Pollinator Palooza & Sunday yoga at Ijams Park.",
+      "duration": "01:14",
+      "src": "/audio/2026-07-02.mp3"
+    },
     "calendar": [
       { "month": "JUL", "day": "2", "title": "WDVX Blue Plate: WestWend", "meta": "Noon · Trailhead" },
       { "month": "JUL", "day": "3", "title": "First Friday Live", "meta": "6:00 PM · Trailhead", "starred": true },
