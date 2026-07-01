@@ -11,6 +11,7 @@ import { Tag } from "./Tag.jsx";
 export function StoryCard({
   label,
   labelColor = "rust",
+  days,
   hot = false,
   image,
   title,
@@ -64,8 +65,11 @@ export function StoryCard({
       )}
 
       <div style={{ padding: "14px 16px 16px", display: "flex", flexDirection: "column", gap: "8px", flex: 1 }}>
-        {label && (
-          <div><Tag color={labelColor} size="sm">{label}</Tag></div>
+        {(label || (days && days.length > 0)) && (
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "5px", alignItems: "center" }}>
+            {label && <Tag color={labelColor} size="sm">{label}</Tag>}
+            {days && days.map((d, i) => <Tag key={i} color="ink" variant="outline" size="sm">{d}</Tag>)}
+          </div>
         )}
         <h3
           style={{

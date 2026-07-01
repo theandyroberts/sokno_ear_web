@@ -77,7 +77,7 @@ export function Paper({ edition, permalinks = true }: { edition: Edition; permal
       <div id="events" style={{ borderBottom: "var(--border-rule) double var(--ink-black)", padding: "28px 0 32px" }}>
         <Page>
           <div className="ear-twocol" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.9fr) minmax(0, 1fr)", gap: 36, alignItems: "start" }}>
-            <Article id={feature.id} label={feature.label} labelColor={feature.labelColor} image={feature.image} imageCaption={feature.imageCaption} title={feature.title} deck={feature.deck} facts={feature.facts} layout={feature.layout}>
+            <Article id={feature.id} label={feature.label} labelColor={feature.labelColor} days={feature.days} image={feature.image} imageCaption={feature.imageCaption} title={feature.title} deck={feature.deck} facts={feature.facts} layout={feature.layout}>
               <ArticleBody blocks={feature.body} />
               <ArticleSources sources={feature.sources} />
               {permalinks && <StoryPermalink slug={edition.slug} id={feature.id} />}
@@ -104,7 +104,7 @@ export function Paper({ edition, permalinks = true }: { edition: Edition; permal
           <SectionHeader>Top Stories &amp; Events</SectionHeader>
           <div className="ear-scanner" style={{ display: "grid", gap: 16, "--scanner-cols": scannerCols } as React.CSSProperties}>
             {scanner.map((c, i) => (
-              <StoryCard key={i} label={c.label} labelColor={c.labelColor} hot={c.hot} image={c.image} title={c.title} blurb={c.blurb} cue={c.cue} href={c.href} />
+              <StoryCard key={i} label={c.label} labelColor={c.labelColor} days={c.days} hot={c.hot} image={c.image} title={c.title} blurb={c.blurb} cue={c.cue} href={c.href} />
             ))}
           </div>
         </Page>
@@ -117,7 +117,7 @@ export function Paper({ edition, permalinks = true }: { edition: Edition; permal
             {i > 0 && <Divider ornament="star" />}
             <section id={s.id} style={{ padding: "24px 0" }}>
               <SectionHeader>{s.label}</SectionHeader>
-              <Article id={s.id} label={s.label} labelColor={s.labelColor} image={s.image} imageCaption={s.imageCaption} title={s.title} deck={s.deck} facts={s.facts} layout={s.layout}>
+              <Article id={s.id} label={s.label} labelColor={s.labelColor} days={s.days} image={s.image} imageCaption={s.imageCaption} title={s.title} deck={s.deck} facts={s.facts} layout={s.layout}>
                 <ArticleBody blocks={s.body} />
                 <ArticleSources sources={s.sources} />
                 {permalinks && <StoryPermalink slug={edition.slug} id={s.id} />}

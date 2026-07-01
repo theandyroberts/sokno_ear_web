@@ -11,6 +11,7 @@ export function Article({
   id,
   label,
   labelColor = "rust",
+  days,
   image,
   imageCaption,
   title,
@@ -69,7 +70,12 @@ export function Article({
 
   return (
     <article id={id} style={{ ...style }} {...rest}>
-      {label && <div style={{ marginBottom: "10px" }}><Tag color={labelColor}>{label}</Tag></div>}
+      {(label || (days && days.length > 0)) && (
+        <div style={{ marginBottom: "10px", display: "flex", flexWrap: "wrap", gap: "6px", alignItems: "center" }}>
+          {label && <Tag color={labelColor}>{label}</Tag>}
+          {days && days.map((d, i) => <Tag key={i} color="ink" variant="outline" size="sm">{d}</Tag>)}
+        </div>
+      )}
       <h2
         style={{
           fontFamily: "var(--font-body)",

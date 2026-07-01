@@ -5,6 +5,8 @@ export interface StoryCardProps {
   label?: string;
   /** @default "rust" */
   labelColor?: "rust" | "teal" | "green" | "ink" | "gold";
+  /** Day chips shown beside the location pill (e.g. ["Thu","Fri"]). */
+  days?: string[];
   /** Show a "HOT" star flag over the image. @default false */
   hot?: boolean;
   /** Engraving / spot-illustration thumbnail URL. */

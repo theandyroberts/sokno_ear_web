@@ -44,6 +44,7 @@ export const StorySchema = z.object({
   id: z.string(),
   label: z.string(),
   labelColor: LabelColor.default("rust"),
+  days: z.array(z.string()).optional(),
   layout: Layout.default("imageLeft"),
   image: z.string().optional(),
   imageCaption: z.string().optional(),
@@ -58,6 +59,7 @@ export const StorySchema = z.object({
 export const StoryCard = z.object({
   label: z.string(),
   labelColor: LabelColor.default("rust"),
+  days: z.array(z.string()).optional(),
   hot: z.boolean().default(false),
   image: z.string(),
   title: z.string(),

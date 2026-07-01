@@ -12,6 +12,8 @@ export interface ArticleProps {
   label?: string;
   /** @default "rust" */
   labelColor?: "rust" | "teal" | "green" | "ink" | "gold";
+  /** Day chips shown beside the location pill (e.g. ["Thu","Fri"]). */
+  days?: string[];
   /** Lead image / engraving URL, framed like a printed clipping. */
   image?: string;
   imageCaption?: string;

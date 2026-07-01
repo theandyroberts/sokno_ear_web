@@ -11,6 +11,7 @@
     "id": "kerns-fourth",
     "label": "Kern's",
     "labelColor": "green",
+    "days": ["Sat"],
     "layout": "imageTop",
     "image": "/assets/spots/kerns_fourth.jpg",
     "imageCaption": "Fireworks over the bakery",
@@ -24,7 +25,7 @@
     ],
     "body": [
       { "type": "paragraph", "text": "Independence Day lands on a Saturday this year, and Kern's Bakery is making a day of it. It's the neighborhood's big Fourth — family-friendly, dog-friendly, and running from late morning right up to the fireworks. Bring a crew, bring the pup, and settle in." },
-      { "type": "agenda", "title": "The day at Kern's", "rows": [
+      { "type": "agenda", "title": "July 4th at Kern's", "rows": [
         { "time": "11 AM–7 PM", "what": "Bounce houses for the kids" },
         { "time": "12 PM", "what": "Patriotic Pawrade — dress your dog red, white & blue to win a Kern's gift card" },
         { "time": "1–4 PM", "what": "Axe throwing" },
@@ -34,22 +35,22 @@
       { "type": "paragraph", "text": "Food, drinks, and treats are going all day inside Kern's, so you can make it dinner and stick around for the big finish." }
     ],
     "sources": [
-      { "label": "Kern's — The Fourth at Kern's", "url": "https://kernsbakery.com/the-fourth-at-kerns/" },
-      { "label": "Info from A. Roberts" }
+      { "label": "Kern's Bakery — Facebook event", "url": "https://www.facebook.com/events/kerns-bakery/july-4th-celebration-at-kerns/992876426976182/" }
     ],
     "event": { "startDate": "2026-07-04T11:00:00-04:00", "endDate": "2026-07-04T22:00:00-04:00", "locationName": "Kern's Bakery", "locationAddress": "2201 Kern's Rising Way" }
   },
   "scanner": [
-    { "label": "Kern's", "labelColor": "green", "hot": true, "image": "/assets/spots/kerns_fourth.jpg", "title": "The Fourth at Kern's", "blurb": "Fireworks, a dog pawrade, axe throwing & live music. Sat.", "cue": "Jump to story", "href": "#kerns-fourth" },
-    { "label": "Island Home", "labelColor": "gold", "image": "/assets/spots/trailhead_music.jpg", "title": "Live music at Trailhead", "blurb": "Patio sets all weekend — WDVX tapings & a First Friday show.", "cue": "Jump to story", "href": "#trailhead-music" },
-    { "label": "Ijams Park", "labelColor": "teal", "image": "/assets/spots/pollinators.jpg", "title": "Pollinator Palooza", "blurb": "A kids' bees-and-butterflies morning. Sat at 10.", "cue": "Jump to story", "href": "#pollinator-palooza" },
-    { "label": "Ijams Park", "labelColor": "teal", "image": "/assets/spots/ijams_yoga.jpg", "title": "Self Care Sunday yoga", "blurb": "Yoga in the trees to close the weekend. Sun 11:30.", "cue": "Jump to story", "href": "#sunday-yoga" }
+    { "label": "Kern's", "labelColor": "green", "days": ["Sat"], "hot": true, "image": "/assets/spots/kerns_fourth.jpg", "title": "The Fourth at Kern's", "blurb": "Fireworks, a dog pawrade, axe throwing & live music. Sat.", "cue": "Jump to story", "href": "#kerns-fourth" },
+    { "label": "Island Home", "labelColor": "gold", "days": ["Thu", "Fri"], "image": "/assets/spots/trailhead_music.jpg", "title": "Live music at Trailhead", "blurb": "Patio sets all weekend — WDVX tapings & a First Friday show.", "cue": "Jump to story", "href": "#trailhead-music" },
+    { "label": "Ijams Park", "labelColor": "teal", "days": ["Sat"], "image": "/assets/spots/pollinators.jpg", "title": "Pollinator Palooza", "blurb": "A kids' bees-and-butterflies morning. Sat at 10.", "cue": "Jump to story", "href": "#pollinator-palooza" },
+    { "label": "Ijams Park", "labelColor": "teal", "days": ["Sun"], "image": "/assets/spots/ijams_yoga.jpg", "title": "Self Care Sunday yoga", "blurb": "Yoga in the trees to close the weekend. Sun 11:30.", "cue": "Jump to story", "href": "#sunday-yoga" }
   ],
   "stories": [
     {
       "id": "trailhead-music",
       "label": "Island Home",
       "labelColor": "gold",
+      "days": ["Thu", "Fri"],
       "layout": "imageRight",
       "image": "/assets/spots/trailhead_music.jpg",
       "imageCaption": "Sets on the patio",
@@ -73,6 +74,7 @@
       "id": "pollinator-palooza",
       "label": "Ijams Park",
       "labelColor": "teal",
+      "days": ["Sat"],
       "layout": "imageLeft",
       "image": "/assets/spots/pollinators.jpg",
       "imageCaption": "Bees, butterflies, and blooms",
@@ -96,6 +98,7 @@
       "id": "sunday-yoga",
       "label": "Ijams Park",
       "labelColor": "teal",
+      "days": ["Sun"],
       "layout": "imageRight",
       "image": "/assets/spots/ijams_yoga.jpg",
       "imageCaption": "Sunday, slow",
