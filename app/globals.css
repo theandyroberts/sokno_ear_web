@@ -41,6 +41,23 @@ html { scroll-behavior: smooth; }
   .ear-foot-img { display: none; }
 }
 
+/* Day filter — pure CSS, no JS. Hidden radios in .ear-dayfilter drive :has() rules
+   that hide any [data-days] block not matching the checked day. "All" hides nothing. */
+.ear-dayfilter { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; max-width: 1100px; margin: 0 auto; padding: 12px 24px; border-bottom: var(--border-hair) solid var(--paper-edge); }
+.ear-dayfilter-label { font-family: var(--font-label); font-size: var(--label-sm); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--ink-faded); margin-right: 2px; }
+.ear-day-radio { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.ear-dayfilter label { font-family: var(--font-label); font-size: var(--label-sm); letter-spacing: var(--tracking-label); text-transform: uppercase; padding: 4px 12px; border: var(--border-hair) solid var(--ink-black); border-radius: var(--radius-sm); cursor: pointer; color: var(--ink-black); background: transparent; user-select: none; }
+.ear-day-radio:checked + label { background: var(--ink-black); color: var(--paper-cream); }
+.ear-day-radio:focus-visible + label { outline: 2px solid var(--rust); outline-offset: 2px; }
+
+main:has(#df-mon:checked) [data-days]:not([data-days~="mon"]),
+main:has(#df-tue:checked) [data-days]:not([data-days~="tue"]),
+main:has(#df-wed:checked) [data-days]:not([data-days~="wed"]),
+main:has(#df-thu:checked) [data-days]:not([data-days~="thu"]),
+main:has(#df-fri:checked) [data-days]:not([data-days~="fri"]),
+main:has(#df-sat:checked) [data-days]:not([data-days~="sat"]),
+main:has(#df-sun:checked) [data-days]:not([data-days~="sun"]) { display: none !important; }
+
 @media print {
   /* The Ear prints as one clean broadsheet */
   :root { }
