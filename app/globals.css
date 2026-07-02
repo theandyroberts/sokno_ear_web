@@ -35,18 +35,18 @@ html { scroll-behavior: smooth; }
 /* Below tablet (phones): hide the wrapping nav + the footer engravings, and swap
    the full dateline for the compact one */
 @media (max-width: 767px) {
-  .ear-nav { display: none !important; }
+  .ear-navwrap { display: none !important; }
   .ear-super-full { display: none; }
   .ear-super-compact { display: flex; }
   .ear-foot-img { display: none; }
 }
 
-/* Day filter — pure CSS, no JS. Hidden radios in .ear-dayfilter drive :has() rules
-   that hide any [data-days] block not matching the checked day. "All" hides nothing. */
-.ear-dayfilter { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; max-width: 1100px; margin: 0 auto; padding: 12px 24px; border-bottom: var(--border-hair) solid var(--paper-edge); }
-.ear-dayfilter-label { font-family: var(--font-label); font-size: var(--label-sm); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--ink-faded); margin-right: 2px; }
+/* Day filter — pure CSS, no JS. Radios live in the nav's second row (.ear-daynav);
+   :has() rules hide any [data-days] block not matching the checked day. "All" hides nothing. */
+.ear-daynav { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px; padding: 7px 12px; border-top: var(--border-hair) solid var(--ink-black); }
+.ear-daynav-label { font-family: var(--font-label); font-size: var(--label-sm); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--ink-faded); margin-right: 4px; }
 .ear-day-radio { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
-.ear-dayfilter label { font-family: var(--font-label); font-size: var(--label-sm); letter-spacing: var(--tracking-label); text-transform: uppercase; padding: 4px 12px; border: var(--border-hair) solid var(--ink-black); border-radius: var(--radius-sm); cursor: pointer; color: var(--ink-black); background: transparent; user-select: none; }
+.ear-daynav label { font-family: var(--font-label); font-size: var(--label-sm); letter-spacing: var(--tracking-label); text-transform: uppercase; padding: 3px 11px; border: var(--border-hair) solid var(--ink-black); border-radius: var(--radius-sm); cursor: pointer; color: var(--ink-black); background: transparent; user-select: none; }
 .ear-day-radio:checked + label { background: var(--ink-black); color: var(--paper-cream); }
 .ear-day-radio:focus-visible + label { outline: 2px solid var(--rust); outline-offset: 2px; }
 

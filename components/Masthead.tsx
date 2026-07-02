@@ -17,6 +17,8 @@ interface MastheadProps {
   /** Short date for the compact mobile strip: "Jun 19–21" */
   shortDate: string;
   sections: Section[];
+  /** Day-filter chips shown as a 2nd nav row (e.g. ["Thu","Fri","Sat","Sun"]). */
+  days?: string[];
 }
 
 const navStar: React.CSSProperties = {
@@ -79,7 +81,7 @@ function NavLink({ href, label }: { href: string; label: string }) {
   );
 }
 
-export function Masthead({ volLine, dateline, shortDate, sections }: MastheadProps) {
+export function Masthead({ volLine, dateline, shortDate, sections, days }: MastheadProps) {
   return (
     <header style={{ borderBottom: "var(--border-heavy) solid var(--ink-black)" }}>
       {/* Full dateline — iPad & desktop */}
@@ -102,24 +104,35 @@ export function Masthead({ volLine, dateline, shortDate, sections }: MastheadPro
         />
       </div>
 
-      <nav
-        className="ear-nav"
+      <div
+        className="ear-navwrap"
         style={{
           background: "var(--paper-shadow)",
           borderTop: "var(--border-ink) solid var(--ink-black)",
           borderBottom: "var(--border-ink) solid var(--ink-black)",
-          display: "flex",
-          alignItems: "stretch",
-          justifyContent: "center",
-          flexWrap: "wrap",
         }}
       >
-        <span style={navStar}>★</span>
-        {sections.map((s) => (
-          <NavLink key={s.id} href={s.href ?? `#${s.id}`} label={s.label} />
-        ))}
-        <span style={{ ...navStar, borderLeft: "var(--border-hair) solid var(--ink-black)" }}>★</span>
-      </nav>
+        <nav className="ear-nav" style={{ display: "flex", alignItems: "stretch", justifyContent: "center", flexWrap: "wrap" }}>
+          <span style={navStar}>★</span>
+          {sections.map((s) => (
+            <NavLink key={s.id} href={s.href ?? `#${s.id}`} label={s.label} />
+          ))}
+          <span style={{ ...navStar, borderLeft: "var(--border-hair) solid var(--ink-black)" }}>★</span>
+        </nav>
+        {days && days.length > 0 && (
+          <div className="ear-daynav">
+            <span className="ear-daynav-label">See</span>
+            <input type="radio" name="ear-day" id="df-all" className="ear-day-radio" defaultChecked />
+            <label htmlFor="df-all">All</label>
+            {days.map((d) => (
+              <React.Fragment key={d}>
+                <input type="radio" name="ear-day" id={`df-${d.toLowerCase()}`} className="ear-day-radio" />
+                <label htmlFor={`df-${d.toLowerCase()}`}>{d}</label>
+              </React.Fragment>
+            ))}
+          </div>
+        )}
+      </div>
     </header>
   );
 }

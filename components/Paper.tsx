@@ -76,21 +76,7 @@ export function Paper({ edition, permalinks = true }: { edition: Edition; permal
   return (
     <main id="top">
       <JsonLd edition={edition} />
-      <Masthead volLine={volLine} dateline={dateline} shortDate={shortDate} sections={sections} />
-
-      {editionDays.length > 0 && (
-        <div className="ear-dayfilter">
-          <span className="ear-dayfilter-label">See</span>
-          <input type="radio" name="ear-day" id="df-all" className="ear-day-radio" defaultChecked />
-          <label htmlFor="df-all">All</label>
-          {editionDays.map((d) => (
-            <React.Fragment key={d}>
-              <input type="radio" name="ear-day" id={`df-${d.toLowerCase()}`} className="ear-day-radio" />
-              <label htmlFor={`df-${d.toLowerCase()}`}>{d}</label>
-            </React.Fragment>
-          ))}
-        </div>
-      )}
+      <Masthead volLine={volLine} dateline={dateline} shortDate={shortDate} sections={sections} days={editionDays} />
 
       {/* FEATURE BAND */}
       <div id="events" data-days={daysAttr(feature.days)} style={{ borderBottom: "var(--border-rule) double var(--ink-black)", padding: "28px 0 32px" }}>
