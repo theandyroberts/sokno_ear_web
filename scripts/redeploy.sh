@@ -15,7 +15,6 @@ rm -rf .next/standalone/.next/static && cp -R .next/static .next/standalone/.nex
 # load secrets into the env so PM2 picks them up
 set -a
 [ -f .env ] && . ./.env
-[ -f .env.local ] && . ./.env.local
 set +a
 
 pm2 startOrReload ecosystem.config.js --update-env

@@ -1,6 +1,6 @@
 // PM2 process definition for soknoear.com (Next.js standalone server).
 // Secrets are NOT hard-coded here — values are read from the process env,
-// which the deploy sources from /var/www/soknoear/.env.local before pm2 start.
+// which the deploy sources from /var/www/soknoear/.env before pm2 start.
 module.exports = {
   apps: [
     {

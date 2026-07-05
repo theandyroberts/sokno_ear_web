@@ -1,7 +1,7 @@
 // Notify subscribers that a new issue of The Ear is up.
 //   node scripts/notify-subscribers.mjs preview   → sends only to PREVIEW_TO (Andy)
 //   node scripts/notify-subscribers.mjs send       → sends to every real subscriber
-// Run from /var/www/soknoear with RESEND_API_KEY in env (set -a; . ./.env.local; set +a).
+// Run from /var/www/soknoear with RESEND_API_KEY in env (set -a; . ./.env; set +a).
 import { Resend } from "resend";
 import Database from "better-sqlite3";
 
