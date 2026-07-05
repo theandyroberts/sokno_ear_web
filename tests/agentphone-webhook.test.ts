@@ -184,7 +184,7 @@ describe("POST /webhooks/general-intake", () => {
             audience: "",
             promoLine: "",
             summary: "Drink special at Hi-Wire on Sunday.",
-            sourceContact: "",
+            sourceContact: "+18652526500",
             missingFields: ["venueLocation", "audience", "sourceContact"],
             confidence: 0.83,
           }),
@@ -203,6 +203,7 @@ describe("POST /webhooks/general-intake", () => {
     expect(body.missingFields).toEqual([]);
     expect((db().prepare("SELECT COUNT(*) AS count FROM submissions").get() as { count: number }).count).toBe(1);
     expect((db().prepare("SELECT listing_status FROM agentphone_intakes").get() as { listing_status: string }).listing_status).toBe("ready");
+    expect((db().prepare("SELECT contact FROM submissions").get() as { contact: string }).contact).toContain("+13102924925");
   });
 });
 

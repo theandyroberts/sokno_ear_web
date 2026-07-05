@@ -206,7 +206,7 @@ function extractionToDraft(extraction: ListingExtraction, fallback: ListingDraft
     schedule,
     audience: extraction.audience,
     promoLine: extraction.promoLine,
-    contact: extraction.sourceContact || fallback.contact,
+    contact: fallback.contact || extraction.sourceContact,
     summary: extraction.summary || fallback.summary,
     submission,
   };
@@ -234,8 +234,8 @@ function buildSubmissionFromExtraction(
     headline: fields.title.slice(0, 300),
     details: details.slice(0, 5000),
     dates: fields.schedule.slice(0, 200),
-    contact: (extraction.sourceContact || fallback.contact)
-      ? `AgentPhone caller ${extraction.sourceContact || fallback.contact}`.slice(0, 300)
+    contact: (fallback.contact || extraction.sourceContact)
+      ? `AgentPhone caller ${fallback.contact || extraction.sourceContact}`.slice(0, 300)
       : "AgentPhone caller",
   };
 }
