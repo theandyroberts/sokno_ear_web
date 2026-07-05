@@ -12,8 +12,11 @@ rm -rf .next/standalone/public && cp -R public .next/standalone/public
 mkdir -p .next/standalone/.next
 rm -rf .next/standalone/.next/static && cp -R .next/static .next/standalone/.next/static
 
-# load secrets (RESEND_*) into the env so PM2 picks them up
-set -a; [ -f .env.local ] && . ./.env.local; set +a
+# load secrets into the env so PM2 picks them up
+set -a
+[ -f .env ] && . ./.env
+[ -f .env.local ] && . ./.env.local
+set +a
 
 pm2 startOrReload ecosystem.config.js --update-env
 pm2 save
