@@ -162,6 +162,48 @@ describe("POST /webhooks/general-intake", () => {
     expect(submission.details).not.toContain("Venue: Noon");
     expect(submission.dates).toBe("Sunday, 2026-07-05, noon to 9 PM");
   });
+
+  it("does not let optional OpenAI missingFields block an otherwise complete special", async () => {
+    process.env.OPENAI_API_KEY = "sk-test";
+    vi.stubGlobal("fetch", vi.fn(async () => new Response(JSON.stringify({
+      output: [{
+        type: "message",
+        content: [{
+          type: "output_text",
+          text: JSON.stringify({
+            listingType: "drink_special",
+            title: "Hi-Wire margaritas",
+            venueName: "Hi-Wire",
+            venueLocation: "",
+            offer: "$5 margaritas",
+            scheduleText: "Sunday, noon to 9 PM",
+            dayOfWeek: "Sunday",
+            date: "",
+            startTime: "noon",
+            endTime: "9 PM",
+            audience: "",
+            promoLine: "",
+            summary: "Drink special at Hi-Wire on Sunday.",
+            sourceContact: "",
+            missingFields: ["venueLocation", "audience", "sourceContact"],
+            confidence: 0.83,
+          }),
+        }],
+      }],
+    }), { status: 200, headers: { "content-type": "application/json" } })));
+
+    const { POST } = await import("@/app/webhooks/general-intake/route");
+    const { db } = await import("@/lib/db");
+
+    const res = await POST(signedRequest(exampleHiWireSundayPayload(), "del_optional_missing_1"));
+    const body = await res.json();
+
+    expect(res.status).toBe(200);
+    expect(body.ready).toBe(true);
+    expect(body.missingFields).toEqual([]);
+    expect((db().prepare("SELECT COUNT(*) AS count FROM submissions").get() as { count: number }).count).toBe(1);
+    expect((db().prepare("SELECT listing_status FROM agentphone_intakes").get() as { listing_status: string }).listing_status).toBe("ready");
+  });
 });
 
 function signedRequest(payload: unknown, webhookId: string): Request {

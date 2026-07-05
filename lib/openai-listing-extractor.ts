@@ -188,9 +188,7 @@ function extractionToDraft(extraction: ListingExtraction, fallback: ListingDraft
   const venue = [extraction.venueName, extraction.venueLocation].filter(Boolean).join(" on ");
   const schedule = buildSchedule(extraction);
   const title = extraction.title || extraction.promoLine || buildTitle(extraction, venue);
-  const missingFields = extraction.missingFields.length
-    ? extraction.missingFields
-    : missingListingFields(extraction, title, venue, schedule);
+  const missingFields = missingListingFields(extraction, title, venue, schedule);
   const ready = missingFields.length === 0 && extraction.listingType !== "unknown";
   const listingStatus = ready ? "ready" : "needs_review";
   const submission = ready ? buildSubmissionFromExtraction(extraction, fallback, { title, venue, schedule }) : undefined;
