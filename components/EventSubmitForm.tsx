@@ -160,6 +160,10 @@ export function EventSubmitForm() {
           </button>
         </div>
       </form>
+      <p style={{ ...copyStyle, margin: "var(--space-4) 0 0", fontSize: "var(--text-xs)", color: "var(--ink-faded)" }}>
+        Send things in often? <a href="/submitter" style={{ color: "var(--rust)" }}>Become a verified submitter</a> to
+        review drafts of your items before they run.
+      </p>
     </section>
   );
 }

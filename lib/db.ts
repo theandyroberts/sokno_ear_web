@@ -24,7 +24,25 @@ export type StoryDraftRow = {
   title: string;
   draftJson: string;
   questionsJson: string;
+  token: string;
+  contact?: string;
+  contactPhone?: string;
+  contactEmail?: string;
 };
+
+export type SubmitterProfile = { name: string; phone?: string; email: string };
+
+/** Last 10 digits of a phone-ish string; "" when it doesn't look like a phone. */
+export function normalizePhone(value: string | undefined | null): string {
+  const digits = (value ?? "").replace(/\D/g, "");
+  return digits.length >= 7 ? digits.slice(-10) : "";
+}
+
+/** First email-looking token in a free-text contact field; "" if none. */
+export function extractEmail(value: string | undefined | null): string {
+  const m = (value ?? "").match(/[^\s@,;<>]+@[^\s@,;<>]+\.[^\s@,;<>]+/);
+  return m ? m[0].toLowerCase() : "";
+}
 
 export function openDb(file = process.env.SQLITE_PATH || path.join(process.cwd(), "data", "ear.db")) {
   fs.mkdirSync(path.dirname(file), { recursive: true });
@@ -71,9 +89,33 @@ export function openDb(file = process.env.SQLITE_PATH || path.join(process.cwd()
       title TEXT NOT NULL,
       draft_json TEXT NOT NULL,
       questions_json TEXT NOT NULL,
+      token TEXT,
+      contact TEXT,
+      contact_phone TEXT,
+      contact_email TEXT,
+      link_sent_to TEXT,
+      link_sent_at TEXT,
+      created_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+    CREATE TABLE IF NOT EXISTS submitter_profiles (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      name TEXT NOT NULL,
+      phone TEXT,
+      email TEXT NOT NULL UNIQUE,
+      created_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+    CREATE TABLE IF NOT EXISTS draft_comments (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      draft_id INTEGER NOT NULL,
+      name TEXT,
+      comment TEXT NOT NULL,
       created_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
   `);
+  // Columns added after story_drafts first shipped — no-ops on fresh DBs.
+  for (const col of ["token TEXT", "contact TEXT", "contact_phone TEXT", "contact_email TEXT", "link_sent_to TEXT", "link_sent_at TEXT"]) {
+    try { db.exec(`ALTER TABLE story_drafts ADD COLUMN ${col}`); } catch { /* already present */ }
+  }
   return db;
 }
 
@@ -131,8 +173,82 @@ export function attachSubmissionToAgentPhoneIntake(d: Database.Database, intakeI
 
 export function insertStoryDraft(d: Database.Database, r: StoryDraftRow): number {
   const res = d.prepare(`
-    INSERT INTO story_drafts (submission_id, intake_id, source, title, draft_json, questions_json)
-    VALUES (?, ?, ?, ?, ?, ?)
-  `).run(r.submissionId, r.intakeId, r.source, r.title, r.draftJson, r.questionsJson);
+    INSERT INTO story_drafts (submission_id, intake_id, source, title, draft_json, questions_json, token, contact, contact_phone, contact_email)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+  `).run(
+    r.submissionId, r.intakeId, r.source, r.title, r.draftJson, r.questionsJson,
+    r.token, r.contact ?? "", r.contactPhone ?? "", r.contactEmail ?? ""
+  );
   return Number(res.lastInsertRowid);
+}
+
+export type StoryDraftRecord = {
+  id: number;
+  source: string;
+  status: string;
+  title: string;
+  draft_json: string;
+  questions_json: string;
+  token: string;
+  contact: string;
+  link_sent_to: string | null;
+  created_at: string;
+};
+
+export function getStoryDraftByToken(d: Database.Database, token: string): StoryDraftRecord | null {
+  if (!token) return null;
+  return (d.prepare("SELECT id, source, status, title, draft_json, questions_json, token, contact, link_sent_to, created_at FROM story_drafts WHERE token = ?").get(token) as StoryDraftRecord | undefined) ?? null;
+}
+
+/** Upsert by email; registering again updates name/phone. */
+export function upsertSubmitterProfile(d: Database.Database, p: SubmitterProfile): number {
+  const email = p.email.toLowerCase();
+  const phone = normalizePhone(p.phone);
+  d.prepare(`
+    INSERT INTO submitter_profiles (name, phone, email) VALUES (?, ?, ?)
+    ON CONFLICT(email) DO UPDATE SET name = excluded.name, phone = excluded.phone
+  `).run(p.name, phone, email);
+  return Number((d.prepare("SELECT id FROM submitter_profiles WHERE email = ?").get(email) as { id: number }).id);
+}
+
+/** Match a draft's contact (phone and/or email) to a registered submitter. */
+export function findSubmitterForContact(
+  d: Database.Database,
+  contact: { phone?: string; email?: string }
+): { name: string; email: string } | null {
+  const email = (contact.email ?? "").toLowerCase();
+  const phone = normalizePhone(contact.phone);
+  if (email) {
+    const byEmail = d.prepare("SELECT name, email FROM submitter_profiles WHERE email = ?").get(email) as { name: string; email: string } | undefined;
+    if (byEmail) return byEmail;
+  }
+  if (phone) {
+    const byPhone = d.prepare("SELECT name, email FROM submitter_profiles WHERE phone = ?").get(phone) as { name: string; email: string } | undefined;
+    if (byPhone) return byPhone;
+  }
+  return null;
+}
+
+/** Drafts not yet shared whose stored contact matches this profile (for retroactive matching at registration). */
+export function findPendingDraftsForProfile(
+  d: Database.Database,
+  profile: { phone?: string; email: string }
+): { id: number; title: string; token: string }[] {
+  const phone = normalizePhone(profile.phone);
+  const email = profile.email.toLowerCase();
+  return d.prepare(`
+    SELECT id, title, token FROM story_drafts
+    WHERE link_sent_at IS NULL AND token IS NOT NULL AND token != ''
+      AND (contact_email = ? OR (contact_phone != '' AND contact_phone = ?))
+  `).all(email, phone) as { id: number; title: string; token: string }[];
+}
+
+export function markDraftLinkSent(d: Database.Database, draftId: number, email: string): void {
+  d.prepare("UPDATE story_drafts SET link_sent_to = ?, link_sent_at = datetime('now') WHERE id = ?").run(email, draftId);
+}
+
+export function insertDraftComment(d: Database.Database, c: { draftId: number; name?: string; comment: string }): number {
+  const r = d.prepare("INSERT INTO draft_comments (draft_id, name, comment) VALUES (?, ?, ?)").run(c.draftId, c.name ?? "", c.comment);
+  d.prepare("UPDATE story_drafts SET status = 'commented' WHERE id = ? AND status = 'new'").run(c.draftId);
+  return Number(r.lastInsertRowid);
 }

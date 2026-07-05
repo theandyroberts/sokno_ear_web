@@ -6,6 +6,9 @@ import path from "node:path";
 vi.mock("@/lib/mail", () => ({
   sendSubmissionEmail: vi.fn(async () => {}),
   sendStoryDraftEmail: vi.fn(async () => {}),
+  sendDraftLinkEmail: vi.fn(async () => {}),
+  sendDraftCommentEmail: vi.fn(async () => {}),
+  sendSubmitterRegistrationEmail: vi.fn(async () => {}),
 }));
 
 const SECRET = "whsec_test_secret";

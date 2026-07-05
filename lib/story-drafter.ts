@@ -1,6 +1,9 @@
+import crypto from "node:crypto";
 import type Database from "better-sqlite3";
-import { insertStoryDraft } from "./db";
-import { sendStoryDraftEmail } from "./mail";
+import { extractEmail, findSubmitterForContact, insertStoryDraft, markDraftLinkSent, normalizePhone } from "./db";
+import { sendDraftLinkEmail, sendStoryDraftEmail } from "./mail";
+
+const SITE = "https://soknoear.com";
 
 // Drafts an Ear story at intake time (form submit or AgentPhone call) so follow-up
 // questions go out while the source is warm. OpenAI writes the draft; a plain
@@ -57,10 +60,14 @@ const DRAFT_SCHEMA = {
   },
 };
 
-/** Generate a draft, store it, and email Andy. Never throws — intake must not fail on drafting. */
+/** Generate a draft, store it, email Andy — and, when the contact matches a verified
+ * submitter, email them the /draft/<token> review link. Never throws. */
 export async function createAndNotifyStoryDraft(store: Database.Database, input: StoryDraftInput): Promise<number | null> {
   try {
     const draft = await generateStoryDraft(input);
+    const token = crypto.randomBytes(12).toString("hex");
+    const contactEmail = extractEmail(input.contact);
+    const contactPhone = normalizePhone(input.contact);
     const id = insertStoryDraft(store, {
       submissionId: input.submissionId ?? null,
       intakeId: input.intakeId ?? null,
@@ -68,8 +75,27 @@ export async function createAndNotifyStoryDraft(store: Database.Database, input:
       title: draft.title,
       draftJson: JSON.stringify(draft),
       questionsJson: JSON.stringify(draft.followUpQuestions),
+      token,
+      contact: input.contact,
+      contactPhone,
+      contactEmail,
     });
-    await sendStoryDraftEmail(draft, { id, source: input.source, contact: input.contact, missingFields: input.missingFields });
+    const draftUrl = `${SITE}/draft/${token}`;
+
+    // Verified-submitter match: only registered folks get the review link;
+    // otherwise the city desk follows up. Publishing is always the desk's call.
+    let sentTo: string | undefined;
+    const match = findSubmitterForContact(store, { phone: input.contact, email: contactEmail });
+    if (match) {
+      await sendDraftLinkEmail(match.email, { name: match.name, title: draft.title, draftUrl });
+      markDraftLinkSent(store, id, match.email);
+      sentTo = match.email;
+    }
+
+    await sendStoryDraftEmail(draft, {
+      id, source: input.source, contact: input.contact,
+      missingFields: input.missingFields, draftUrl, sentTo,
+    });
     return id;
   } catch (err) {
     console.error("[drafter] story draft failed", err);
