@@ -10,9 +10,12 @@ const SECRET = "whsec_test_secret";
 beforeEach(() => {
   process.env.SQLITE_PATH = path.join(os.tmpdir(), `agentphone-${Math.random()}.db`);
   process.env.AGENTPHONE_WEBHOOK_SECRET = SECRET;
+  delete process.env.OPENAI_API_KEY;
+  delete process.env.OPENAI_EXTRACTION_MODEL;
   delete process.env.AGENTPHONE_WEBHOOK_REQUIRE_SIGNATURE;
   vi.resetModules();
   vi.clearAllMocks();
+  vi.unstubAllGlobals();
 });
 
 describe("POST /webhooks/general-intake", () => {
@@ -102,6 +105,63 @@ describe("POST /webhooks/general-intake", () => {
     expect((db().prepare("SELECT COUNT(*) AS count FROM submissions").get() as { count: number }).count).toBe(0);
     expect((db().prepare("SELECT listing_status FROM agentphone_intakes").get() as { listing_status: string }).listing_status).toBe("needs_review");
   });
+
+  it("uses OpenAI structured extraction for completed calls when configured", async () => {
+    process.env.OPENAI_API_KEY = "sk-test";
+    process.env.OPENAI_EXTRACTION_MODEL = "gpt-5.4-nano";
+    vi.stubGlobal("fetch", vi.fn(async () => new Response(JSON.stringify({
+      output: [{
+        type: "message",
+        content: [{
+          type: "output_text",
+          text: JSON.stringify({
+            listingType: "drink_special",
+            title: "Hi-Wire Sunday margaritas and Bloody Marys",
+            venueName: "Hi-Wire",
+            venueLocation: "Sevier Avenue",
+            offer: "$5 margaritas and $6 Bloody Marys",
+            scheduleText: "Sunday, 2026-07-05, noon to 9 PM",
+            dayOfWeek: "Sunday",
+            date: "2026-07-05",
+            startTime: "noon",
+            endTime: "9 PM",
+            audience: "",
+            promoLine: "",
+            summary: "Drink special at Hi-Wire on Sevier Avenue on Sunday from noon to 9 PM.",
+            sourceContact: "+13102924925",
+            missingFields: [],
+            confidence: 0.94,
+          }),
+        }],
+      }],
+    }), { status: 200, headers: { "content-type": "application/json" } })));
+
+    const { POST } = await import("@/app/webhooks/general-intake/route");
+    const { db } = await import("@/lib/db");
+
+    const res = await POST(signedRequest(exampleHiWireSundayPayload(), "del_openai_1"));
+    const body = await res.json();
+
+    expect(res.status).toBe(200);
+    expect(body.ready).toBe(true);
+    expect(global.fetch).toHaveBeenCalledWith(
+      "https://api.openai.com/v1/responses",
+      expect.objectContaining({ method: "POST" })
+    );
+
+    const submission = db().prepare("SELECT headline, details, dates FROM submissions").get() as {
+      headline: string;
+      details: string;
+      dates: string;
+    };
+    expect(submission.headline).toMatch(/Hi-Wire Sunday/i);
+    expect(submission.details).toContain("Extraction: OpenAI structured output");
+    expect(submission.details).toContain("Venue: Hi-Wire on Sevier Avenue");
+    expect(submission.details).toContain("Offer: $5 margaritas and $6 Bloody Marys");
+    expect(submission.details).toContain("Schedule: Sunday, 2026-07-05, noon to 9 PM");
+    expect(submission.details).not.toContain("Venue: Noon");
+    expect(submission.dates).toBe("Sunday, 2026-07-05, noon to 9 PM");
+  });
 });
 
 function signedRequest(payload: unknown, webhookId: string): Request {
@@ -153,6 +213,33 @@ function exampleDrinkSpecialPayload() {
         { role: "user", content: "World Cup pints two fifty at the high wire." },
         { role: "agent", content: "\"World Cup pints - two dollars fifty all night at the High Wire.\"" },
         { role: "user", content: "That's perfect." },
+      ],
+    },
+  };
+}
+
+function exampleHiWireSundayPayload() {
+  return {
+    event: "agent.call_ended",
+    channel: "voice",
+    timestamp: "2026-07-05T00:31:29Z",
+    agentId: "cmqv25qba0brh13w0h5hjfx3g",
+    data: {
+      callId: "cmr721nux00vu8iruvhkwvtyh",
+      from: "+13102924925",
+      to: "+18652526500",
+      direction: "inbound",
+      status: "completed",
+      transcript: [
+        { role: "agent", content: "Hey — I’m Amber, the South Knoxville Events and Rumors specials intake agent. What're you planning? Tell me about your event and we’ll get it into The Ear!" },
+        { role: "user", content: "Okay. I've got a drink special for the High Wire. On Sunday." },
+        { role: "agent", content: "Ooh — what’s the drink special?" },
+        { role: "user", content: "It is five dollar margaritas and six dollar Bloody Mary starting at noon." },
+        { role: "agent", content: "Love that — which High Wire is this: the High Wire on Sevier Avenue or another spot?" },
+        { role: "user", content: "On Sevier Avenue." },
+        { role: "agent", content: "Got it — five dollar margaritas and six dollar Bloody Marys starting at noon on Sunday at the High Wire on Sevier Avenue. What's the end time or how long does the special run?" },
+        { role: "user", content: "Rinse till nine PM." },
+        { role: "agent", content: "Got it — we'll give it a listen and get it on the board. Keep your ears open!" },
       ],
     },
   };

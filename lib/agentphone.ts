@@ -2,6 +2,7 @@ import crypto from "node:crypto";
 import type { Submission } from "./db";
 
 type JsonRecord = Record<string, unknown>;
+type TranscriptTurn = { role: string; content: string };
 
 export type AgentPhonePayload = {
   event?: string;
@@ -33,6 +34,23 @@ export type ListingDraft = {
 };
 
 const DAY_RE = /\b(monday|tuesday|wednesday|thursday|friday|saturday|sunday)(?:\s+(?:night|morning|afternoon|evening))?\b/i;
+const WEEKDAYS = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const WORD_NUMBERS: Record<string, string> = {
+  one: "1",
+  two: "2",
+  three: "3",
+  four: "4",
+  five: "5",
+  six: "6",
+  seven: "7",
+  eight: "8",
+  nine: "9",
+  ten: "10",
+  eleven: "11",
+  twelve: "12",
+};
+const TIME_TOKEN = "(noon|midnight|\\d{1,2}(?::\\d{2})?\\s*(?:a\\.?m\\.?|p\\.?m\\.?)|(?:one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\\s*(?:a\\.?m\\.?|p\\.?m\\.?))";
 
 export function shouldRequireAgentPhoneSignature(): boolean {
   if (process.env.AGENTPHONE_WEBHOOK_REQUIRE_SIGNATURE === "true") return true;
@@ -75,7 +93,8 @@ export function buildAgentPhoneListingDraft(payload: AgentPhonePayload): Listing
   const channel = payload.channel || "";
   const callId = firstString(data, ["callId", "conversationId", "messageId", "id"]);
   const summary = firstString(data, ["summary", "analysisSummary"]) || "";
-  const transcriptText = getTranscriptText(payload);
+  const transcriptTurns = getTranscriptTurns(payload);
+  const transcriptText = getTranscriptText(payload, transcriptTurns);
   const allText = [summary, transcriptText, getRecentHistoryText(payload.recentHistory)].filter(Boolean).join("\n");
   const searchRoots = [data, asRecord(payload.conversationState)];
 
@@ -84,23 +103,21 @@ export function buildAgentPhoneListingDraft(payload: AgentPhonePayload): Listing
     (event === "agent.message" && channel === "voice" && String(data.status ?? "").toLowerCase() === "in-progress");
 
   const listingType = detectListingType(searchRoots, allText);
-  const promoLine = cleanField(
-    findStringByKeys(searchRoots, ["promoLine", "promo", "shortPromo", "flyerLine", "smsLine"]) ||
-      extractPromoLine(payload, allText)
-  );
+  const promoLine = cleanField(validPromoLine(extractPromoLine(transcriptTurns, allText)) ||
+    validPromoLine(findStringByKeys(searchRoots, ["promoLine", "promo", "shortPromo", "flyerLine", "smsLine"])));
   const venue = cleanField(
-    findStringByKeys(searchRoots, ["venue", "venueName", "locationName", "businessName", "barName", "restaurantName", "place"]) ||
-      extractVenue(allText)
+    extractVenue(allText) ||
+      validVenue(findStringByKeys(searchRoots, ["venue", "venueName", "locationName", "businessName", "barName", "restaurantName", "place"]))
   );
   const offer = cleanField(
-    findStringByKeys(searchRoots, ["offer", "special", "deal", "drinkSpecial", "foodSpecial", "price", "promotion"]) ||
-      extractOffer(allText)
+    extractOffer(allText) ||
+      validOffer(findStringByKeys(searchRoots, ["offer", "special", "deal", "drinkSpecial", "foodSpecial", "price", "promotion"]))
   );
   const schedule = cleanField(
-    findStringByKeys(searchRoots, ["schedule", "date", "dates", "day", "days", "time", "timeWindow", "startDate", "when"]) ||
-      extractSchedule(allText)
+    extractSchedule(allText, payload) ||
+      validSchedule(findStringByKeys(searchRoots, ["schedule", "date", "dates", "day", "days", "time", "timeWindow", "startDate", "when"]))
   );
-  const audience = cleanField(findStringByKeys(searchRoots, ["audience", "crowd"]) || extractAudience(allText));
+  const audience = cleanField(extractAudience(transcriptTurns) || validAudience(findStringByKeys(searchRoots, ["audience", "crowd"])));
   const title = cleanField(
     findStringByKeys(searchRoots, ["title", "headline", "eventTitle", "listingTitle"]) ||
       promoLine ||
@@ -186,11 +203,27 @@ function detectListingType(roots: JsonRecord[], text: string): ListingDraft["lis
   return "unknown";
 }
 
-function getTranscriptText(payload: AgentPhonePayload): string {
+function getTranscriptTurns(payload: AgentPhonePayload): TranscriptTurn[] {
+  const data = asRecord(payload.data);
+  const transcript = data.transcript;
+  if (!Array.isArray(transcript)) return [];
+  return transcript
+    .map((turn) => {
+      if (typeof turn === "string") return { role: "", content: turn.trim() };
+      const record = asRecord(turn);
+      return {
+        role: firstString(record, ["role", "direction", "speaker"]).toLowerCase(),
+        content: firstString(record, ["content", "message", "transcript", "text"]),
+      };
+    })
+    .filter((turn) => turn.content);
+}
+
+function getTranscriptText(payload: AgentPhonePayload, turns = getTranscriptTurns(payload)): string {
   const data = asRecord(payload.data);
   const transcript = data.transcript;
   if (typeof transcript === "string") return transcript.trim();
-  if (Array.isArray(transcript)) return transcriptTurnsToText(transcript);
+  if (turns.length) return transcriptTurnsToText(turns);
   return firstString(data, ["message"]);
 }
 
@@ -213,17 +246,13 @@ function transcriptTurnsToText(turns: unknown[]): string {
     .join("\n");
 }
 
-function extractPromoLine(payload: AgentPhonePayload, text: string): string {
-  const turns = Array.isArray(payload.data?.transcript) ? payload.data.transcript : [];
-  const userLines = turns
-    .map((turn) => {
-      const record = asRecord(turn);
-      const role = firstString(record, ["role", "direction", "speaker"]).toLowerCase();
-      const content = firstString(record, ["content", "message", "transcript", "text"]);
-      return role === "user" || role === "inbound" || role === "customer" ? content : "";
-    })
-    .filter((line) => line && !/^(yes|yeah|yep|thanks|thank you|that's perfect|that is perfect)\.?$/i.test(line.trim()));
-  if (userLines.length) return userLines[userLines.length - 1];
+function extractPromoLine(turns: TranscriptTurn[], text: string): string {
+  for (let i = 0; i < turns.length; i += 1) {
+    const turn = turns[i];
+    if (!isAgentRole(turn.role) || !/\b(promo|flyer|sms|blast|tagline|line)\b/i.test(turn.content)) continue;
+    const answer = nextUserAnswer(turns, i);
+    if (answer && !isTimeAnswer(answer)) return answer;
+  }
 
   const quoted = [...text.matchAll(/"([^"]{8,160})"/g)].map((match) => match[1].trim());
   if (quoted.length) return quoted[quoted.length - 1];
@@ -232,29 +261,37 @@ function extractPromoLine(payload: AgentPhonePayload, text: string): string {
 
 function extractVenue(text: string): string {
   const patterns = [
+    /\b(?:drink|food)?\s*special\s+for\s+(the\s+)?([A-Za-z0-9][A-Za-z0-9 '&-]{2,60})(?:[.,\n]|$)/i,
     /\b(?:bar|venue|restaurant|place|business)\s+(?:is\s+)?called\s+(the\s+)?([A-Za-z0-9][A-Za-z0-9 '&-]{2,60})(?:[.,\n]|$)/i,
     /\bcalled\s+(the\s+)?([A-Za-z0-9][A-Za-z0-9 '&-]{2,60})(?:[.,\n]|$)/i,
     /\bat\s+(the\s+)?([A-Za-z0-9][A-Za-z0-9 '&-]{2,60})(?:[.,\n]|$)/i,
+    /\bfor\s+(the\s+)?([A-Za-z0-9][A-Za-z0-9 '&-]{2,60})(?:[.,\n]|$)/i,
   ];
   for (const pattern of patterns) {
     const match = text.match(pattern);
-    const value = `${match?.[1] || ""}${match?.[2] || ""}`;
-    if (value) return titleCase(value);
+    const value = normalizeVenue(`${match?.[1] || ""}${match?.[2] || ""}`, text);
+    if (value) return value;
   }
   return "";
 }
 
 function extractOffer(text: string): string {
-  const price = text.match(/\b(?:\$?\d+(?:\.\d{2})?|two dollars?(?: and fifty cents?)?|two dollar and fifty cent|two fifty|2\.50)\b[^.\n]{0,80}/i);
-  if (price) return cleanField(price[0]);
-  const special = text.match(/\b(?:special|deal|offer|promo(?:tion)?)\b[^.\n]{0,100}/i);
-  return special ? cleanField(special[0]) : "";
+  const price = text.match(/\b(?:\$?\d+(?:\.\d{2})?|(?:one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve)\s+dollars?|two dollars?(?: and fifty cents?)?|two dollar and fifty cent|two fifty|2\.50)\b[^.\n]{0,120}/i);
+  if (price) return cleanOffer(price[0]);
+  const special = text.match(/\b(?:special|deal|offer|promo(?:tion)?)\b(?!\s+for\b)[^.\n]{0,100}/i);
+  return special ? cleanOffer(special[0]) : "";
 }
 
-function extractSchedule(text: string): string {
+function extractSchedule(text: string, payload: AgentPhonePayload): string {
   const day = text.match(DAY_RE)?.[0] || "";
   const allNight = /\ball night\b/i.test(text);
   const windowMatch = text.match(/\b(\d{1,2}(?::\d{2})?\s*(?:am|pm)\s*(?:-|to)\s*\d{1,2}(?::\d{2})?\s*(?:am|pm))\b/i)?.[1] || "";
+  const start = extractStartTime(text);
+  const end = extractEndTime(text);
+  const datedDay = day && (start || end) ? enrichDayWithDate(day, payload) : titleCase(day);
+  if (datedDay && start && end) return `${datedDay}, ${start} to ${end}`;
+  if (datedDay && start) return `${datedDay}, starting at ${start}`;
+  if (datedDay && end) return `${datedDay}, until ${end}`;
   if (day && allNight) return `${titleCase(day)} all night`;
   if (day && windowMatch) return `${titleCase(day)} ${windowMatch}`;
   if (day) return titleCase(day);
@@ -262,9 +299,15 @@ function extractSchedule(text: string): string {
   return windowMatch;
 }
 
-function extractAudience(text: string): string {
-  const match = text.match(/\b(?:for|crowd is|crowd:)\s+([A-Za-z0-9 '&.-]{3,60})(?:[.,\n]|$)/i);
-  return match?.[1] ? cleanField(match[1]) : "";
+function extractAudience(turns: TranscriptTurn[]): string {
+  for (let i = 0; i < turns.length; i += 1) {
+    const turn = turns[i];
+    if (!isAgentRole(turn.role) || !/\b(crowd|audience)\b/i.test(turn.content)) continue;
+    const answer = nextUserAnswer(turns, i);
+    const match = answer.match(/\bfor\s+([^.\n]+?)(?:\s+and\s+it'?s\b|[.,\n]|$)/i);
+    return cleanField(match?.[1] || answer);
+  }
+  return "";
 }
 
 function buildFallbackTitle(venue: string, offer: string, listingType: ListingDraft["listingType"]): string {
@@ -326,4 +369,135 @@ function cleanField(value: string): string {
 
 function titleCase(value: string): string {
   return cleanField(value).replace(/\b[a-z]/g, (char) => char.toUpperCase());
+}
+
+function isAgentRole(role: string): boolean {
+  return role === "agent" || role === "assistant" || role === "outbound";
+}
+
+function isUserRole(role: string): boolean {
+  return role === "user" || role === "inbound" || role === "customer" || role === "";
+}
+
+function nextUserAnswer(turns: TranscriptTurn[], index: number): string {
+  for (let i = index + 1; i < turns.length; i += 1) {
+    if (isUserRole(turns[i].role)) return cleanField(turns[i].content);
+    if (isAgentRole(turns[i].role)) return "";
+  }
+  return "";
+}
+
+function normalizeVenue(candidate: string, fullText: string): string {
+  const cleaned = cleanField(candidate)
+    .replace(/\b(?:on|at|starting|starts?|from|until|till|through)\b.*$/i, "")
+    .replace(/\b(?:sunday|monday|tuesday|wednesday|thursday|friday|saturday)\b.*$/i, "")
+    .trim();
+  const valid = validVenue(cleaned);
+  if (!valid) return "";
+  const base = /\bhi[-\s]?wire|high wire\b/i.test(valid)
+    ? "Hi-Wire"
+    : titleCase(valid.replace(/^the\s+/i, ""));
+  const location = extractVenueLocation(fullText);
+  return location && !base.toLowerCase().includes(location.toLowerCase()) ? `${base} on ${location}` : base;
+}
+
+function extractVenueLocation(text: string): string {
+  if (/\bon\s+sevier\s+avenue\b/i.test(text)) return "Sevier Avenue";
+  return "";
+}
+
+function validVenue(value: string): string {
+  const cleaned = cleanField(value);
+  if (!cleaned) return "";
+  if (/^(noon|midnight|\d{1,2}(?::\d{2})?\s*(?:am|pm)?|all night)$/i.test(cleaned)) return "";
+  if (DAY_RE.test(cleaned)) return "";
+  if (/\b(starting|starts?|until|till|through|special|deal|offer|margarita|bloody mary|pint|beer|cocktail)\b/i.test(cleaned)) return "";
+  return cleaned;
+}
+
+function validOffer(value: string): string {
+  const cleaned = cleanOffer(value);
+  if (!cleaned || /\bspecial\s+for\s+(the\s+)?[A-Za-z]/i.test(cleaned)) return "";
+  return cleaned;
+}
+
+function validSchedule(value: string): string {
+  const cleaned = cleanField(value);
+  if (!cleaned || /^(noon|midnight)$/i.test(cleaned)) return "";
+  return cleaned;
+}
+
+function validAudience(value: string): string {
+  const cleaned = cleanField(value);
+  if (!cleaned || /\b(high wire|hi-wire|sevier|sunday|monday|tuesday|wednesday|thursday|friday|saturday)\b/i.test(cleaned)) return "";
+  return cleaned;
+}
+
+function validPromoLine(value: string): string {
+  const cleaned = cleanField(value);
+  if (!cleaned || isTimeAnswer(cleaned)) return "";
+  return cleaned;
+}
+
+function cleanOffer(value: string): string {
+  return cleanField(value)
+    .replace(/\s+(?:starting|starts?|beginning|begins)\s+at\s+.+$/i, "")
+    .replace(/\s+(?:on|at)\s+(?:sunday|monday|tuesday|wednesday|thursday|friday|saturday)\b.*$/i, "")
+    .replace(/\s+at\s+(?:the\s+)?[A-Za-z0-9 '&-]+$/i, "")
+    .trim();
+}
+
+function extractStartTime(text: string): string {
+  const match = text.match(new RegExp(`\\b(?:starting|starts?|begin(?:s|ning)?|from)\\s+(?:at\\s+)?${TIME_TOKEN}\\b`, "i"));
+  return match?.[1] ? normalizeTime(match[1]) : "";
+}
+
+function extractEndTime(text: string): string {
+  const match = text.match(new RegExp(`\\b(?:until|till|til|through|to)\\s+${TIME_TOKEN}\\b`, "i"));
+  return match?.[1] ? normalizeTime(match[1]) : "";
+}
+
+function normalizeTime(value: string): string {
+  const cleaned = cleanField(value).toLowerCase().replace(/\./g, "");
+  if (cleaned === "noon" || cleaned === "midnight") return cleaned;
+  const word = cleaned.match(/^([a-z]+)\s*(am|pm)$/i);
+  if (word && WORD_NUMBERS[word[1]]) return `${WORD_NUMBERS[word[1]]} ${word[2].toUpperCase()}`;
+  return cleaned.replace(/\s*(am|pm)$/i, (_, meridiem: string) => ` ${meridiem.toUpperCase()}`);
+}
+
+function isTimeAnswer(value: string): boolean {
+  const cleaned = cleanField(value);
+  return new RegExp(`\\b(?:until|till|til|through|to)\\s+${TIME_TOKEN}\\b`, "i").test(cleaned) ||
+    new RegExp(`^${TIME_TOKEN}$`, "i").test(cleaned);
+}
+
+function enrichDayWithDate(day: string, payload: AgentPhonePayload): string {
+  const weekday = WEEKDAYS.findIndex((name) => day.toLowerCase().startsWith(name));
+  if (weekday < 0) return titleCase(day);
+
+  const base = payloadTimestamp(payload);
+  if (!base) return titleCase(day);
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/New_York",
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+  }).formatToParts(base).reduce<Record<string, number>>((acc, part) => {
+    if (part.type === "year" || part.type === "month" || part.type === "day") acc[part.type] = Number(part.value);
+    return acc;
+  }, {});
+
+  if (!parts.year || !parts.month || !parts.day) return titleCase(day);
+  const baseUtc = Date.UTC(parts.year, parts.month - 1, parts.day);
+  const baseWeekday = new Date(baseUtc).getUTCDay();
+  const daysUntil = (weekday - baseWeekday + 7) % 7;
+  const target = new Date(baseUtc + daysUntil * 24 * 60 * 60 * 1000);
+  return `${titleCase(WEEKDAYS[weekday])}, ${MONTHS[target.getUTCMonth()]} ${target.getUTCDate()}`;
+}
+
+function payloadTimestamp(payload: AgentPhonePayload): Date | null {
+  const data = asRecord(payload.data);
+  const value = payload.timestamp || firstString(data, ["endedAt", "startedAt", "createdAt"]);
+  const date = value ? new Date(value) : null;
+  return date && Number.isFinite(date.getTime()) ? date : null;
 }

@@ -6,7 +6,9 @@ The SoKno Ear intake webhook is:
 https://soknoear.com/webhooks/general-intake
 ```
 
-The route accepts AgentPhone webhook deliveries, verifies the HMAC signature when `AGENTPHONE_WEBHOOK_SECRET` is set, stores the raw delivery in SQLite, and creates a normal `submissions` row only when the call contains enough listing facts.
+The route accepts AgentPhone webhook deliveries, verifies the HMAC signature when `AGENTPHONE_WEBHOOK_SECRET` is set, stores the raw delivery in SQLite, extracts listing facts from completed call transcripts, and creates a normal `submissions` row only when the call contains enough listing facts.
+
+When `OPENAI_API_KEY` is configured, completed calls use OpenAI Structured Outputs to extract a strict JSON listing object from the AgentPhone transcript. If OpenAI is unavailable or the key is missing, the route falls back to the local procedural parser so intake events are still stored.
 
 ## Required Listing Facts
 
@@ -32,11 +34,13 @@ Set these on the VPS:
 
 ```sh
 AGENTPHONE_WEBHOOK_SECRET=whsec_...
+OPENAI_API_KEY=sk-proj_...
+OPENAI_EXTRACTION_MODEL=gpt-5.4-nano
 ```
 
 AgentPhone returns the signing secret when the webhook is created or updated. Production requests are rejected if this value is missing, unless `AGENTPHONE_WEBHOOK_REQUIRE_SIGNATURE=false` is set explicitly.
 
-The website does not need an AgentPhone API key to receive webhooks.
+The website does not need an AgentPhone API key to receive webhooks. The OpenAI key is only for transcript-to-listing extraction after AgentPhone sends a completed-call webhook.
 
 For local MCP use in an assistant client:
 

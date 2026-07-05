@@ -8,6 +8,7 @@ import {
 } from "@/lib/agentphone";
 import { attachSubmissionToAgentPhoneIntake, db, insertAgentPhoneIntake, insertSubmission } from "@/lib/db";
 import { sendSubmissionEmail } from "@/lib/mail";
+import { extractListingWithOpenAI } from "@/lib/openai-listing-extractor";
 
 export const runtime = "nodejs";
 
@@ -30,7 +31,8 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "bad json" }, { status: 400 });
   }
 
-  const draft = buildAgentPhoneListingDraft(payload);
+  const fallbackDraft = buildAgentPhoneListingDraft(payload);
+  const draft = await extractListingWithOpenAI(payload, fallbackDraft);
   const webhookId = req.headers.get("x-webhook-id") || deriveAgentPhoneWebhookId(payload);
   const store = db();
   const intake = insertAgentPhoneIntake(store, {
