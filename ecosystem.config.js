@@ -1,5 +1,5 @@
 // PM2 process definition for soknoear.com (Next.js standalone server).
-// Secrets are NOT hard-coded here — RESEND_* are read from the process env,
+// Secrets are NOT hard-coded here — values are read from the process env,
 // which the deploy sources from /var/www/soknoear/.env.local before pm2 start.
 module.exports = {
   apps: [
@@ -15,6 +15,7 @@ module.exports = {
         RESEND_API_KEY: process.env.RESEND_API_KEY,
         SUBMIT_FROM: process.env.SUBMIT_FROM || "The SoKno Ear <ear@send.note15.com>",
         SUBMIT_TO: process.env.SUBMIT_TO || "andy@note15.com",
+        AGENTPHONE_WEBHOOK_SECRET: process.env.AGENTPHONE_WEBHOOK_SECRET,
       },
     },
   ],
