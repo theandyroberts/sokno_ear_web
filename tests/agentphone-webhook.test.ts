@@ -3,7 +3,10 @@ import crypto from "node:crypto";
 import os from "node:os";
 import path from "node:path";
 
-vi.mock("@/lib/mail", () => ({ sendSubmissionEmail: vi.fn(async () => {}) }));
+vi.mock("@/lib/mail", () => ({
+  sendSubmissionEmail: vi.fn(async () => {}),
+  sendStoryDraftEmail: vi.fn(async () => {}),
+}));
 
 const SECRET = "whsec_test_secret";
 
@@ -104,6 +107,17 @@ describe("POST /webhooks/general-intake", () => {
     expect(body.missingFields).toContain("listing type");
     expect((db().prepare("SELECT COUNT(*) AS count FROM submissions").get() as { count: number }).count).toBe(0);
     expect((db().prepare("SELECT listing_status FROM agentphone_intakes").get() as { listing_status: string }).listing_status).toBe("needs_review");
+
+    // Incomplete calls still get a story draft (with follow-up questions) at intake time.
+    const { sendStoryDraftEmail } = await import("@/lib/mail");
+    expect(body.storyDraftId).toEqual(expect.any(Number));
+    expect(sendStoryDraftEmail).toHaveBeenCalledTimes(1);
+    const draftRow = db().prepare("SELECT source, status, intake_id, submission_id FROM story_drafts").get() as {
+      source: string; status: string; intake_id: number; submission_id: number | null;
+    };
+    expect(draftRow.source).toBe("phone");
+    expect(draftRow.status).toBe("new");
+    expect(draftRow.submission_id).toBeNull();
   });
 
   it("uses OpenAI structured extraction for completed calls when configured", async () => {

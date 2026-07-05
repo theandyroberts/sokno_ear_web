@@ -1,9 +1,17 @@
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import os from "node:os"; import path from "node:path";
 
-vi.mock("@/lib/mail", () => ({ sendSubmissionEmail: vi.fn(async () => {}), sendSubscriberEmail: vi.fn(async () => {}) }));
+vi.mock("@/lib/mail", () => ({
+  sendSubmissionEmail: vi.fn(async () => {}),
+  sendSubscriberEmail: vi.fn(async () => {}),
+  sendStoryDraftEmail: vi.fn(async () => {}),
+}));
 
-beforeEach(() => { process.env.SQLITE_PATH = path.join(os.tmpdir(), `api-${Math.random()}.db`); vi.resetModules(); });
+beforeEach(() => {
+  process.env.SQLITE_PATH = path.join(os.tmpdir(), `api-${Math.random()}.db`);
+  delete process.env.OPENAI_API_KEY; // drafter uses its offline fallback in tests
+  vi.resetModules();
+});
 
 describe("api", () => {
   it("POST /api/submit stores + emails; rejects missing headline; ignores honeypot", async () => {

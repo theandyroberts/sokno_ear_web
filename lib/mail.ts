@@ -33,6 +33,47 @@ export async function sendContactEmail(c: Contact): Promise<void> {
   if (error) console.error("[mail] resend error", error);
 }
 
+type DraftForEmail = {
+  title: string;
+  deck: string;
+  label: string;
+  days: string[];
+  facts: { label: string; value: string }[];
+  paragraphs: string[];
+  followUpQuestions: string[];
+  confidence: number;
+};
+
+export async function sendStoryDraftEmail(
+  draft: DraftForEmail,
+  meta: { id: number; source: "form" | "phone"; contact?: string; missingFields?: string[] }
+): Promise<void> {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) { console.warn("[mail] RESEND_API_KEY unset — skipping email"); return; }
+  const resend = new Resend(key);
+  const needsFollowUp = draft.followUpQuestions.length > 0;
+  const lines = [
+    `Draft #${meta.id} · from a ${meta.source === "phone" ? "phone call" : "form submission"}${meta.contact ? ` · ${meta.contact}` : ""}`,
+    "",
+    `Pill: ${draft.label}${draft.days.length ? ` · Days: ${draft.days.join(", ")}` : ""}`,
+    `Headline: ${draft.title}`,
+    draft.deck ? `Deck: ${draft.deck}` : "",
+    draft.facts.length ? ["", "Facts:", ...draft.facts.map((f) => `  ${f.label}: ${f.value}`)].join("\n") : "",
+    "",
+    ...draft.paragraphs,
+    needsFollowUp ? ["", "— Follow up before it runs —", ...draft.followUpQuestions.map((q) => `  • ${q}`)].join("\n") : "",
+    meta.missingFields?.length ? `Intake flagged missing: ${meta.missingFields.join(", ")}` : "",
+    "",
+    `The draft is stored (story_drafts #${meta.id}) and will be picked up at the next edition build.`,
+  ].filter(Boolean).join("\n");
+  const { error } = await resend.emails.send({
+    from: FROM, to: TO,
+    subject: `${needsFollowUp ? "Draft needs follow-up" : "Story draft ready"}: ${draft.title}`.slice(0, 200),
+    text: lines,
+  });
+  if (error) console.error("[mail] resend error", error);
+}
+
 export async function sendSubscriberEmail(email: string): Promise<void> {
   const key = process.env.RESEND_API_KEY;
   if (!key) { console.warn("[mail] RESEND_API_KEY unset — skipping email"); return; }

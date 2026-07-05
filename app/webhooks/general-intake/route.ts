@@ -9,6 +9,7 @@ import {
 import { attachSubmissionToAgentPhoneIntake, db, insertAgentPhoneIntake, insertSubmission } from "@/lib/db";
 import { sendSubmissionEmail } from "@/lib/mail";
 import { extractListingWithOpenAI } from "@/lib/openai-listing-extractor";
+import { createAndNotifyStoryDraft } from "@/lib/story-drafter";
 
 export const runtime = "nodejs";
 
@@ -64,10 +65,30 @@ export async function POST(req: Request) {
     await sendSubmissionEmail(draft.submission);
   }
 
+  // Draft the story at intake time — for ready calls AND needs_review ones, so
+  // follow-up questions reach Andy while the caller is still reachable.
+  let storyDraftId: number | null = null;
+  if (!draft.ignored && payload.event === "agent.call_ended") {
+    storyDraftId = await createAndNotifyStoryDraft(store, {
+      source: "phone",
+      submissionId,
+      intakeId: intake.id,
+      headline: draft.title || draft.summary || "Phone intake",
+      details: [draft.venue && `Venue: ${draft.venue}`, draft.offer && `Offer: ${draft.offer}`]
+        .filter(Boolean).join("\n"),
+      dates: draft.schedule,
+      contact: draft.contact ? `AgentPhone caller ${draft.contact}` : "AgentPhone caller",
+      summary: draft.summary,
+      transcript: draft.transcriptText,
+      missingFields: draft.missingFields,
+    });
+  }
+
   return NextResponse.json({
     ok: true,
     intakeId: intake.id,
     submissionId,
+    storyDraftId,
     ready: draft.ready,
     ignored: draft.ignored,
     missingFields: draft.missingFields,

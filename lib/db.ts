@@ -17,6 +17,15 @@ export type AgentPhoneIntake = {
   summary?: string;
 };
 
+export type StoryDraftRow = {
+  submissionId: number | null;
+  intakeId: number | null;
+  source: "form" | "phone";
+  title: string;
+  draftJson: string;
+  questionsJson: string;
+};
+
 export function openDb(file = process.env.SQLITE_PATH || path.join(process.cwd(), "data", "ear.db")) {
   fs.mkdirSync(path.dirname(file), { recursive: true });
   const db = new Database(file);
@@ -51,6 +60,17 @@ export function openDb(file = process.env.SQLITE_PATH || path.join(process.cwd()
       payload_json TEXT NOT NULL,
       transcript_text TEXT,
       summary TEXT,
+      created_at TEXT NOT NULL DEFAULT (datetime('now'))
+    );
+    CREATE TABLE IF NOT EXISTS story_drafts (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      submission_id INTEGER,
+      intake_id INTEGER,
+      source TEXT NOT NULL,
+      status TEXT NOT NULL DEFAULT 'new',
+      title TEXT NOT NULL,
+      draft_json TEXT NOT NULL,
+      questions_json TEXT NOT NULL,
       created_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
   `);
@@ -107,4 +127,12 @@ export function insertAgentPhoneIntake(
 
 export function attachSubmissionToAgentPhoneIntake(d: Database.Database, intakeId: number, submissionId: number): void {
   d.prepare("UPDATE agentphone_intakes SET submission_id = ? WHERE id = ?").run(submissionId, intakeId);
+}
+
+export function insertStoryDraft(d: Database.Database, r: StoryDraftRow): number {
+  const res = d.prepare(`
+    INSERT INTO story_drafts (submission_id, intake_id, source, title, draft_json, questions_json)
+    VALUES (?, ?, ?, ?, ?, ?)
+  `).run(r.submissionId, r.intakeId, r.source, r.title, r.draftJson, r.questionsJson);
+  return Number(res.lastInsertRowid);
 }

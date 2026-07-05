@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { db, insertSubmission } from "@/lib/db";
 import { sendSubmissionEmail } from "@/lib/mail";
+import { createAndNotifyStoryDraft } from "@/lib/story-drafter";
 
 export async function POST(req: Request) {
   let b: any;
@@ -12,7 +13,13 @@ export async function POST(req: Request) {
   const s = { headline: headline.slice(0, 300), details: details.slice(0, 5000),
     url: String(b.url ?? "").slice(0, 500), dates: String(b.dates ?? "").slice(0, 200),
     contact: String(b.contact ?? "").slice(0, 300) };
-  insertSubmission(db(), s);
+  const submissionId = insertSubmission(db(), s);
   await sendSubmissionEmail(s);
+  // Draft the story now, while the submitter is reachable — runs after the response
+  // so the form stays snappy; failures only log (createAndNotifyStoryDraft never throws).
+  void createAndNotifyStoryDraft(db(), {
+    source: "form", submissionId,
+    headline: s.headline, details: s.details, url: s.url, dates: s.dates, contact: s.contact,
+  });
   return NextResponse.json({ ok: true });
 }
