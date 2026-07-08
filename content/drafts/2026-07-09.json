@@ -193,6 +193,13 @@
     }
   ],
   "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen — Terror in the Woods at Ijams Park, two land-use fights at the Planning Commission, World Cup quarterfinals at Kern's, and Sunday Funday at Hi-Wire.",
+      "duration": "01:43",
+      "src": "/audio/2026-07-09.mp3"
+    },
     "calendar": [
       { "month": "JUL", "day": "9", "title": "Planning Comm: Sevier Ave & Kerbela", "meta": "1:30 PM · 400 Main St", "starred": true },
       { "month": "JUL", "day": "9", "title": "World Cup QF: France–Morocco", "meta": "4:00 PM · Kern's" },
