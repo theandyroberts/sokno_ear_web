@@ -34,13 +34,16 @@ Set these on the VPS:
 
 ```sh
 AGENTPHONE_WEBHOOK_SECRET=whsec_...
+AGENTPHONE_API_KEY=...
 OPENAI_API_KEY=sk-proj_...
 OPENAI_EXTRACTION_MODEL=gpt-5.4-nano
 ```
 
 AgentPhone returns the signing secret when the webhook is created or updated. Production requests are rejected if this value is missing, unless `AGENTPHONE_WEBHOOK_REQUIRE_SIGNATURE=false` is set explicitly.
 
-The website does not need an AgentPhone API key to receive webhooks. The OpenAI key is only for transcript-to-listing extraction after AgentPhone sends a completed-call webhook.
+The AgentPhone API key is not needed to receive webhooks, but it is needed to send text acknowledgements back to callers. Inbound SMS/MMS/iMessage arrives on the same webhook as `agent.message`; the site replies through AgentPhone's `POST /v1/messages` API.
+
+The OpenAI key is only for transcript-to-listing extraction after AgentPhone sends a completed-call webhook.
 
 For local MCP use in an assistant client:
 

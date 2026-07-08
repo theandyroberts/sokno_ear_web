@@ -16,6 +16,7 @@ module.exports = {
         SUBMIT_FROM: process.env.SUBMIT_FROM || "The SoKno Ear <ear@send.note15.com>",
         SUBMIT_TO: process.env.SUBMIT_TO || "andy@note15.com",
         AGENTPHONE_WEBHOOK_SECRET: process.env.AGENTPHONE_WEBHOOK_SECRET,
+        AGENTPHONE_API_KEY: process.env.AGENTPHONE_API_KEY,
         OPENAI_API_KEY: process.env.OPENAI_API_KEY,
         OPENAI_EXTRACTION_MODEL: process.env.OPENAI_EXTRACTION_MODEL || "gpt-5.4-nano",
       },

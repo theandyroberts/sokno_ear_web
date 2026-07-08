@@ -16,6 +16,7 @@ const SECRET = "whsec_test_secret";
 beforeEach(() => {
   process.env.SQLITE_PATH = path.join(os.tmpdir(), `agentphone-${Math.random()}.db`);
   process.env.AGENTPHONE_WEBHOOK_SECRET = SECRET;
+  delete process.env.AGENTPHONE_API_KEY;
   delete process.env.OPENAI_API_KEY;
   delete process.env.OPENAI_EXTRACTION_MODEL;
   delete process.env.AGENTPHONE_WEBHOOK_REQUIRE_SIGNATURE;
@@ -68,6 +69,58 @@ describe("POST /webhooks/general-intake", () => {
     expect(sendSubmissionEmail).toHaveBeenCalledTimes(1);
     expect((db().prepare("SELECT COUNT(*) AS count FROM submissions").get() as { count: number }).count).toBe(1);
     expect((db().prepare("SELECT COUNT(*) AS count FROM agentphone_intakes").get() as { count: number }).count).toBe(1);
+  });
+
+  it("sends an acknowledgement text for inbound SMS", async () => {
+    process.env.AGENTPHONE_API_KEY = "ap_test";
+    const fetchMock = vi.fn(async () => new Response(JSON.stringify({ id: "msg_ack", status: "sent" }), {
+      status: 200,
+      headers: { "content-type": "application/json" },
+    }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const { POST } = await import("@/app/webhooks/general-intake/route");
+    const { db } = await import("@/lib/db");
+
+    const res = await POST(signedRequest(exampleSmsPayload("Here is the link https://example.com/event"), "del_sms_ack_1"));
+    const body = await res.json();
+
+    expect(res.status).toBe(200);
+    expect(body.textAckSent).toBe(true);
+    expect(fetchMock).toHaveBeenCalledWith("https://api.agentphone.ai/v1/messages", expect.objectContaining({
+      method: "POST",
+      headers: expect.objectContaining({ authorization: "Bearer ap_test" }),
+    }));
+    const requestBody = JSON.parse(String((fetchMock.mock.calls as unknown as Array<[string, RequestInit]>)[0][1].body));
+    expect(requestBody).toEqual(expect.objectContaining({
+      agent_id: "cmqv25qba0brh13w0h5hjfx3g",
+      to_number: "+13102924925",
+      body: "Got it - the SoKno Ear received your link and will include it with the review.",
+    }));
+    expect((db().prepare("SELECT channel, listing_status FROM agentphone_intakes").get() as { channel: string; listing_status: string })).toEqual({
+      channel: "sms",
+      listing_status: "needs_review",
+    });
+  });
+
+  it("does not send duplicate acknowledgement texts for webhook retries", async () => {
+    process.env.AGENTPHONE_API_KEY = "ap_test";
+    const fetchMock = vi.fn(async () => new Response(JSON.stringify({ id: "msg_ack", status: "sent" }), { status: 200 }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    const { POST } = await import("@/app/webhooks/general-intake/route");
+    const payload = exampleSmsPayload("Actually, ticket prices need checking.");
+
+    const first = await POST(signedRequest(payload, "del_sms_dupe_1"));
+    const second = await POST(signedRequest(payload, "del_sms_dupe_1"));
+    const secondBody = await second.json();
+
+    expect(first.status).toBe(200);
+    expect(second.status).toBe(200);
+    expect(secondBody.duplicate).toBe(true);
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    const requestBody = JSON.parse(String((fetchMock.mock.calls as unknown as Array<[string, RequestInit]>)[0][1].body));
+    expect(requestBody.body).toBe("Got it - the SoKno Ear received that correction.");
   });
 
   it("rejects invalid signatures", async () => {
@@ -275,6 +328,26 @@ function exampleDrinkSpecialPayload() {
         { role: "user", content: "That's perfect." },
       ],
     },
+  };
+}
+
+function exampleSmsPayload(message: string) {
+  return {
+    event: "agent.message",
+    channel: "sms",
+    timestamp: "2026-07-08T13:15:00Z",
+    agentId: "cmqv25qba0brh13w0h5hjfx3g",
+    data: {
+      conversationId: "conv_sms_test",
+      messageId: "msg_inbound_test",
+      numberId: "num_soknoear",
+      from: "+13102924925",
+      to: "+18652526500",
+      message,
+      direction: "inbound",
+      receivedAt: "2026-07-08T13:15:00Z",
+    },
+    recentHistory: [],
   };
 }
 

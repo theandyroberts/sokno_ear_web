@@ -8,6 +8,7 @@ import {
 } from "@/lib/agentphone";
 import { attachSubmissionToAgentPhoneIntake, db, insertAgentPhoneIntake, insertSubmission } from "@/lib/db";
 import { sendSubmissionEmail } from "@/lib/mail";
+import { sendAgentPhoneTextAck } from "@/lib/agentphone-messaging";
 import { extractListingWithOpenAI } from "@/lib/openai-listing-extractor";
 import { createAndNotifyStoryDraft } from "@/lib/story-drafter";
 
@@ -58,6 +59,11 @@ export async function POST(req: Request) {
     });
   }
 
+  const textAck = await sendAgentPhoneTextAck(payload);
+  if (textAck.attempted && !textAck.sent) {
+    console.error("[agentphone] text acknowledgement failed", textAck.error);
+  }
+
   let submissionId: number | null = null;
   if (draft.ready && draft.submission) {
     submissionId = insertSubmission(store, draft.submission);
@@ -89,6 +95,7 @@ export async function POST(req: Request) {
     intakeId: intake.id,
     submissionId,
     storyDraftId,
+    textAckSent: textAck.sent,
     ready: draft.ready,
     ignored: draft.ignored,
     missingFields: draft.missingFields,
