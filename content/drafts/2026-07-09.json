@@ -39,6 +39,7 @@
     { "label": "Kern's", "labelColor": "green", "days": ["Thu", "Fri", "Sat"], "image": "/assets/spots/wc_watch.jpg", "title": "World Cup quarterfinals", "blurb": "The bracket tightens on the big screen, Thu–Sat.", "cue": "Jump to story", "href": "#world-cup-qf" },
     { "label": "Ijams Park", "labelColor": "teal", "days": ["Sat"], "image": "/assets/spots/sunrise_paddle.jpg", "title": "Sunrise Paddle", "blurb": "Two golden hours on the river, boats provided. Sat 6:30 AM.", "cue": "Jump to story", "href": "#sunrise-paddle" },
     { "label": "Ijams Park", "labelColor": "teal", "days": ["Sun"], "image": "/assets/spots/bird_banding.png", "title": "Bird banding, up close", "blurb": "Watch songbirds banded and released. Sun 7:30 AM.", "cue": "Jump to story", "href": "#bird-banding" },
+    { "label": "Old Sevier", "labelColor": "rust", "days": ["Sun"], "image": "/assets/spots/hiwire_sunday.jpg", "title": "Sunday Funday at Hi-Wire", "blurb": "$6 Bloody Marys & $5 mimosas, noon to 9. Phoned in by a neighbor.", "cue": "Jump to story", "href": "#hiwire-sunday" },
     { "label": "Ijams Park", "labelColor": "teal", "image": "/assets/spots/shakespeare_ijams.jpg", "title": "Shakespeare is coming", "blurb": "The Bard hits the Ijams lawn starting next Thursday.", "cue": "Jump to story", "href": "#shakespeare-preview" }
   ],
   "stories": [
@@ -144,6 +145,30 @@
       "event": { "startDate": "2026-07-12T07:30:00-04:00", "locationName": "Ijams Nature Center", "locationAddress": "2915 Island Home Ave" }
     },
     {
+      "id": "hiwire-sunday",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": ["Sun"],
+      "layout": "imageLeft",
+      "image": "/assets/spots/hiwire_sunday.jpg",
+      "imageCaption": "Sunday, properly garnished",
+      "title": "Sunday Funday at Hi-Wire: cheap mimosas, long afternoon",
+      "deck": "Hi-Wire's taproom runs its Sunday Funday special from noon to nine — $6 Bloody Marys and $5 mimosas, all day.",
+      "facts": [
+        { "label": "When", "value": "Sun, Jul 12 · noon–9 PM" },
+        { "label": "Where", "value": "Hi-Wire Brewing, Sevier Ave" },
+        { "label": "The deal", "value": "$6 Bloody Marys · $5 mimosas" }
+      ],
+      "body": [
+        { "type": "paragraph", "text": "If your Sunday needs a destination, Hi-Wire's taproom has the neighborhood's easiest answer: Sunday Funday runs noon to nine with six-dollar Bloody Marys and five-dollar mimosas — brunch prices that hold all afternoon and into the evening." },
+        { "type": "paragraph", "text": "A neighborly note on this one: it came to the Ear by phone — someone rang the intake line, the system wrote it up, and the city desk confirmed the details. That's exactly how it's supposed to work. Got a special or an event of your own? Call it in or use the form on this page." }
+      ],
+      "sources": [
+        { "label": "Phoned in by a neighbor · confirmed by the city desk" }
+      ],
+      "event": { "startDate": "2026-07-12T12:00:00-04:00", "endDate": "2026-07-12T21:00:00-04:00", "locationName": "Hi-Wire Brewing", "locationAddress": "Sevier Ave" }
+    },
+    {
       "id": "shakespeare-preview",
       "label": "Ijams Park",
       "labelColor": "teal",
@@ -175,6 +200,7 @@
       { "month": "JUL", "day": "11", "title": "Sunrise Paddle", "meta": "6:30 AM · Ijams River Landing" },
       { "month": "JUL", "day": "11", "title": "WC QF: Argentina–Switzerland", "meta": "9:00 PM · Kern's", "starred": true },
       { "month": "JUL", "day": "12", "title": "Bird Banding", "meta": "7:30 AM · Ijams Park" },
+      { "month": "JUL", "day": "12", "title": "Sunday Funday", "meta": "Noon–9 PM · Hi-Wire" },
       { "month": "JUL", "day": "16", "title": "Shakespeare opens at Ijams Park", "meta": "7:30 PM · next Thursday", "starred": true }
     ]
   }
