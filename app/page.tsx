@@ -2,6 +2,9 @@ import { getLatest } from "@/lib/editions";
 import { Paper } from "@/components/Paper";
 import type { Metadata } from "next";
 
+// Editions render at request time so publishing a new issue is a file sync — no rebuild.
+export const dynamic = "force-dynamic";
+
 export function generateMetadata(): Metadata {
   const e = getLatest();
   const title = `The South Knoxville Ear — ${e.dateLabel ?? e.date}`;

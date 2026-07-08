@@ -1,4 +1,4 @@
-import { getBySlug, getDraftBySlug, loadEditions, promoteStory } from "@/lib/editions";
+import { getBySlug, getDraftBySlug, promoteStory } from "@/lib/editions";
 import { Paper } from "@/components/Paper";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -6,11 +6,8 @@ import type { Metadata } from "next";
 // One page per story per edition: /{slug}/{storyId} renders the week with that
 // story promoted to the feature and the rest shuffled down — a shareable deep link.
 // Draft editions resolve too (noindex) so links shared from /next survive publish.
-export function generateStaticParams() {
-  return loadEditions().flatMap((e) =>
-    [e.feature, ...e.stories].map((s) => ({ slug: e.slug, story: s.id })),
-  );
-}
+// Rendered at request time so publishing is a file sync — no rebuild.
+export const dynamic = "force-dynamic";
 
 function resolveEdition(slug: string): { edition: ReturnType<typeof getBySlug>; isDraft: boolean } {
   const published = getBySlug(undefined, slug);

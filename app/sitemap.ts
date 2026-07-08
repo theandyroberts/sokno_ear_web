@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { loadEditions } from "@/lib/editions";
 
+export const dynamic = "force-dynamic";
+
 const BASE = "https://soknoear.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {

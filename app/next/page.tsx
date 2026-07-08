@@ -3,6 +3,9 @@ import { Paper } from "@/components/Paper";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
+// Reads the drafts folder per request — new drafts appear without a rebuild.
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Preview · The South Knoxville Ear",
   description: "Preview of the upcoming edition — not yet published.",

@@ -1,24 +1,48 @@
 #!/usr/bin/env bash
-# Publish a new build/edition on the VPS. Run from /var/www/soknoear.
+# Publish on the VPS — does only the work the change requires. Run from /var/www/soknoear.
+#   content/public-only change  → sync files            (~5s, no restart needed: pages read fs per request)
+#   app code change             → npm build + reload    (~1-2 min)
+#   package-lock change         → npm ci + build + reload
 set -euo pipefail
 cd /var/www/soknoear
 
+OLD=$(git rev-parse HEAD)
 git pull --ff-only
-npm ci
-npm run build
+NEW=$(git rev-parse HEAD)
+CHANGED=$(git diff --name-only "$OLD" "$NEW" || true)
 
-# standalone build does not include public/ or .next/static — copy them in
-rm -rf .next/standalone/public && cp -R public .next/standalone/public
-mkdir -p .next/standalone/.next
-rm -rf .next/standalone/.next/static && cp -R .next/static .next/standalone/.next/static
-# content/ is read at request time for draft story deep links — keep it fresh too
-rm -rf .next/standalone/content && cp -R content .next/standalone/content
+needs_deps=false
+needs_build=false
+[ -d node_modules ] || needs_deps=true
+[ -d .next/standalone ] || needs_build=true
+if [ "$OLD" != "$NEW" ]; then
+  if echo "$CHANGED" | grep -qE "^(package-lock\.json|package\.json)$"; then needs_deps=true; fi
+  # anything outside content/assets/docs/scripts means app code changed → rebuild
+  if echo "$CHANGED" | grep -vE "^(content/|public/|docs/|scripts/|\.claude/)" | grep -vE "\.md$" | grep -q .; then
+    needs_build=true
+  fi
+fi
+if $needs_deps; then needs_build=true; fi
 
-# load secrets into the env so PM2 picks them up
-set -a
-[ -f .env ] && . ./.env
-set +a
+if $needs_deps; then
+  echo "→ dependencies changed: npm ci"
+  npm ci
+fi
 
-pm2 startOrReload ecosystem.config.js --update-env
-pm2 save
-echo "deployed $(git rev-parse --short HEAD)"
+if $needs_build; then
+  echo "→ app code changed: full build"
+  npm run build
+  rm -rf .next/standalone/public && cp -R public .next/standalone/public
+  mkdir -p .next/standalone/.next
+  rm -rf .next/standalone/.next/static && cp -R .next/static .next/standalone/.next/static
+  rm -rf .next/standalone/content && cp -R content .next/standalone/content
+  set -a; [ -f .env ] && . ./.env; set +a
+  pm2 startOrReload ecosystem.config.js --update-env
+  pm2 save
+else
+  echo "→ content/assets only: fast sync (no build, no restart)"
+  rm -rf .next/standalone/public && cp -R public .next/standalone/public
+  rm -rf .next/standalone/content && cp -R content .next/standalone/content
+fi
+
+echo "deployed $NEW (deps=$needs_deps build=$needs_build)"

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getPast } from "@/lib/editions";
 
+export const dynamic = "force-dynamic";
 export const metadata = { title: "The South Knoxville Ear — Past Issues" };
 
 export default function Archive() {

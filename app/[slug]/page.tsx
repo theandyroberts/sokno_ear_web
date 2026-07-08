@@ -1,11 +1,10 @@
-import { getBySlug, loadEditions } from "@/lib/editions";
+import { getBySlug } from "@/lib/editions";
 import { Paper } from "@/components/Paper";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
-export function generateStaticParams() {
-  return loadEditions().map((e) => ({ slug: e.slug }));
-}
+// Editions render at request time so publishing a new issue is a file sync — no rebuild.
+export const dynamic = "force-dynamic";
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const e = getBySlug(undefined, slug);
