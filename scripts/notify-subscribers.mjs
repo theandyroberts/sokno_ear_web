@@ -1,6 +1,7 @@
 // Notify subscribers that a new issue of The Ear is up.
-//   node scripts/notify-subscribers.mjs preview   → sends only to PREVIEW_TO (Andy)
-//   node scripts/notify-subscribers.mjs send       → sends to every real subscriber
+//   node scripts/notify-subscribers.mjs preview            → sends only to PREVIEW_TO (Andy)
+//   node scripts/notify-subscribers.mjs send               → sends to every real subscriber (+ recap)
+//   node scripts/notify-subscribers.mjs send-one <email>   → sends to one late signup (no recap)
 // Run from /var/www/soknoear with RESEND_API_KEY in env (set -a; . ./.env; set +a).
 import { Resend } from "resend";
 import Database from "better-sqlite3";
@@ -51,14 +52,21 @@ Read this weekend's Ear: ${HOME}
 You're getting this because you signed up at soknoear.com. Not for you? Just reply and I'll take you off the list. — Andy`;
 
 const mode = process.argv[2];
-if (mode !== "preview" && mode !== "send") {
-  console.error("usage: node scripts/notify-subscribers.mjs <preview|send>");
+if (mode !== "preview" && mode !== "send" && mode !== "send-one") {
+  console.error("usage: node scripts/notify-subscribers.mjs <preview|send|send-one <email>>");
   process.exit(1);
 }
 
 let recipients;
 if (mode === "preview") {
   recipients = [PREVIEW_TO];
+} else if (mode === "send-one") {
+  const one = (process.argv[3] ?? "").trim().toLowerCase();
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(one)) {
+    console.error("send-one requires a valid email argument");
+    process.exit(1);
+  }
+  recipients = [one];
 } else {
   const db = new Database(process.env.SQLITE_PATH || "/var/lib/soknoear/ear.db", { readonly: true });
   const subs = db.prepare("SELECT email FROM subscribers").all()
