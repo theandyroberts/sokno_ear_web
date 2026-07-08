@@ -86,8 +86,26 @@ export function CallTheEarCard() {
         >
           Know something before it happens?
         </h3>
+        <div
+          style={{
+            background: "rgba(255, 209, 102, 0.09)",
+            border: "1px solid rgba(255, 209, 102, 0.55)",
+            borderRadius: 10,
+            padding: "10px 14px",
+            margin: "0 0 14px",
+            fontFamily: "var(--font-body)",
+            fontSize: "var(--text-sm)",
+            lineHeight: 1.5,
+          }}
+        >
+          <strong style={{ color: "#ffd166", display: "block", marginBottom: 2 }}>SoKnoEar.com has a phone number!</strong>
+          <span style={{ color: "#ffffff" }}>
+            Call <a href={PHONE_TEL} style={{ color: "#ffd166", fontWeight: 700, textDecoration: "none" }}>865-252-6500</a> with
+            your event, news, or food/drink special.
+          </span>
+        </div>
         <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", lineHeight: 1.55, color: "#cfc2ef", margin: "0 0 16px" }}>
-          A show, a pop-up, a grand opening, a drink special — call or text it in. A realtime AI
+          Know about a show, a pop-up, a grand opening, a drink special? Call or text it in. A realtime AI
           assistant answers <strong style={{ color: "#ffd166" }}>24/7</strong>, takes the details in
           one quick conversation, and the city desk takes it from there. No forms, no waiting.
         </p>
