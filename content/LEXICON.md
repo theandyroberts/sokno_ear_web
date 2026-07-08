@@ -33,8 +33,10 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
 - **Audio briefing** is delivered in **Andy's own voice**, first person, like a
   short neighborhood radio dispatch. **Greeting must be time-of-day neutral**
   (no "evening/morning" — we don't know when they'll listen). **Standing sign-off:
-  "see you around SoKno!"** — emphasize the community, not the paper. Vary the
-  opening line week to week; never reuse the previous week's open.
+  "see you around SoKno!"** — emphasize the community, not the publication. Vary the
+  opening line week to week; never reuse the previous week's open. **In audio, never
+  call it a "paper"** — say **"the Ear"** or **"the SoKno Ear"** (we're not pretending
+  to run a newspaper).
 - **Always attribute sources.** Every article ends with its source(s): an external
   link when the info came from one (official site, @handle, agency), or plain credit
   text like "Info from A. Roberts" when it came from a form submission/tip with no
