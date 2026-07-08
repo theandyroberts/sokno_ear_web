@@ -34,6 +34,11 @@ export function getNext(): Edition | null {
   return loadEditions(DRAFTS_DIR)[0] ?? null;
 }
 
+/** A draft edition by slug — lets story deep links resolve before publish (noindex). */
+export function getDraftBySlug(slug: string): Edition | null {
+  return loadEditions(DRAFTS_DIR).find((e) => e.slug === slug) ?? null;
+}
+
 /** Reorder an edition so `storyId` is the feature and everything else shuffles down. Null if not found. */
 export function promoteStory(edition: Edition, storyId: string): Edition | null {
   const all = [edition.feature, ...edition.stories];

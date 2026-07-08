@@ -11,6 +11,8 @@ npm run build
 rm -rf .next/standalone/public && cp -R public .next/standalone/public
 mkdir -p .next/standalone/.next
 rm -rf .next/standalone/.next/static && cp -R .next/static .next/standalone/.next/static
+# content/ is read at request time for draft story deep links — keep it fresh too
+rm -rf .next/standalone/content && cp -R content .next/standalone/content
 
 # load secrets into the env so PM2 picks them up
 set -a

@@ -23,7 +23,7 @@ export default function NextPreview() {
       >
         ★ Preview — publishes Wednesday · not the live edition
       </div>
-      <Paper edition={edition} permalinks={false} />
+      <Paper edition={edition} />
     </>
   );
 }
