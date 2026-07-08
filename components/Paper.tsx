@@ -96,7 +96,6 @@ export function Paper({ edition, permalinks = true }: { edition: Edition; permal
                   <CalendarItem key={i} month={c.month} day={c.day} title={c.title} meta={c.meta} starred={c.starred} divider={i < sidebar.calendar.length - 1} />
                 ))}
               </Well>
-              <EventSubmitForm />
               <SubscribeForm />
             </aside>
           </div>
@@ -131,6 +130,15 @@ export function Paper({ edition, permalinks = true }: { edition: Edition; permal
           </div>
         ))}
       </Page>
+
+      {/* TELL THE EAR — bottom of the read, just above the footer */}
+      <div style={{ borderTop: "var(--border-rule) double var(--ink-black)", padding: "32px 0 40px", marginTop: 8 }}>
+        <Page>
+          <div style={{ maxWidth: 680, margin: "0 auto" }}>
+            <EventSubmitForm />
+          </div>
+        </Page>
+      </div>
 
     </main>
   );
