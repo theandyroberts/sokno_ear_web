@@ -9,6 +9,7 @@ import { Divider } from "@/components/ds/Divider.jsx";
 import { ArticleBody } from "@/components/ArticleBody";
 import { AudioBriefingPlayer } from "@/components/AudioBriefingPlayer";
 import { EventSubmitForm } from "@/components/EventSubmitForm";
+import { CallTheEarCard } from "@/components/CallTheEarCard";
 import { SubscribeForm } from "@/components/SubscribeForm";
 import { ArticleSources } from "@/components/ArticleSources";
 import { JsonLd } from "@/components/JsonLd";
@@ -134,8 +135,9 @@ export function Paper({ edition, permalinks = true }: { edition: Edition; permal
       {/* TELL THE EAR — bottom of the read, just above the footer */}
       <div style={{ borderTop: "var(--border-rule) double var(--ink-black)", padding: "32px 0 40px", marginTop: 8 }}>
         <Page>
-          <div style={{ maxWidth: 680, margin: "0 auto" }}>
+          <div className="ear-twocol" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.6fr) minmax(0, 1fr)", gap: 28, alignItems: "start", maxWidth: 980, margin: "0 auto" }}>
             <EventSubmitForm />
+            <CallTheEarCard />
           </div>
         </Page>
       </div>
