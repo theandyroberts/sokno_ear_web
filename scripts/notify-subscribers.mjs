@@ -12,7 +12,7 @@ const PREVIEW_TO = "andy@note15.com";
 const HOME = "https://soknoear.com";
 const EXCLUDE = new Set(["test@note15.com"]); // obvious test rows
 
-const SUBJECT = "Your Fourth of July weekend in SoKno — a new Ear is up";
+const SUBJECT = "This week's Ear is up — scary movies, city hall, and cheap mimosas";
 
 const HTML = `<!doctype html><html><body style="margin:0;padding:0;background:#e9dcc4;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#e9dcc4;"><tr><td align="center" style="padding:24px 12px;">
@@ -24,12 +24,12 @@ const HTML = `<!doctype html><html><body style="margin:0;padding:0;background:#e
     </a>
   </td></tr>
   <tr><td style="padding:0 24px;"><div style="border-top:2px solid #171512;font-size:0;line-height:0;height:0;">&nbsp;</div></td></tr>
-  <tr><td style="padding:18px 24px 2px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.5;color:#171512;">Happy Fourth, neighbor —</td></tr>
+  <tr><td style="padding:18px 24px 2px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.5;color:#171512;">Hey neighbor —</td></tr>
   <tr><td style="padding:2px 24px 8px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.55;color:#171512;">A fresh issue of <strong>The South Knoxville Ear</strong> is up, and this one's a good time.</td></tr>
   <tr><td align="center" style="padding:8px 24px;">
-    <a href="${HOME}" target="_blank"><img src="${HOME}/assets/spots/kerns_fourth.jpg" alt="The Fourth at Kern's — fireworks over the bakery" width="512" style="display:block;width:100%;max-width:512px;height:auto;border:2px solid #171512;border-radius:8px;"></a>
+    <a href="${HOME}" target="_blank"><img src="${HOME}/assets/spots/terror_woods.jpg" alt="Terror in the Woods — movies under the stars at Ijams Park" width="512" style="display:block;width:100%;max-width:512px;height:auto;border:2px solid #171512;border-radius:8px;"></a>
   </td></tr>
-  <tr><td style="padding:10px 24px 4px;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.6;color:#171512;">It's the Fourth of July weekend, and <strong>Kern's Bakery</strong> is throwing the neighborhood's party — a patriotic dog pawrade, axe throwing, live music, and fireworks at 9:30. Plus live music all weekend at Trailhead, a kids' Pollinator Palooza at Ijams Park, and a Self Care Sunday yoga class to close it out.</td></tr>
+  <tr><td style="padding:10px 24px 4px;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.6;color:#171512;">Friday night <strong>Ijams Park goes spooky</strong> — Terror in the Woods brings a horror double feature, a haunted trail, and a beer garden to the lawn. Plus: the Sevier Avenue rezoning gets its hearing Thursday, the World Cup quarterfinals hit the screens at Kern's, a sunrise paddle and bird banding round out the mornings, and Hi-Wire's Sunday Funday pours $6 Bloody Marys and $5 mimosas. That last one was phoned in by a neighbor — the Ear now answers <strong>865-252-6500</strong>, 24/7.</td></tr>
   <tr><td align="center" style="padding:18px 24px 6px;">
     <a href="${HOME}" target="_blank" style="display:inline-block;background:#A94A34;color:#F3E8D2;text-decoration:none;font-family:Georgia,serif;font-weight:bold;font-size:15px;letter-spacing:0.06em;text-transform:uppercase;padding:13px 28px;border-radius:6px;">★ Read this weekend's Ear</a>
   </td></tr>
@@ -38,11 +38,11 @@ const HTML = `<!doctype html><html><body style="margin:0;padding:0;background:#e
   <tr><td style="padding:14px 24px 20px;font-family:Georgia,serif;font-size:12px;line-height:1.5;color:#7a7060;">You're getting this because you signed up for The South Knoxville Ear at soknoear.com. Not for you? Just reply and I'll take you off the list. — Andy</td></tr>
 </table></td></tr></table></body></html>`;
 
-const TEXT = `Happy Fourth, neighbor —
+const TEXT = `Hey neighbor —
 
 A fresh issue of The South Knoxville Ear is up, and this one's a good time.
 
-It's the Fourth of July weekend, and Kern's Bakery is throwing the neighborhood's party — a patriotic dog pawrade, axe throwing, live music, and fireworks at 9:30. Plus live music all weekend at Trailhead, a kids' Pollinator Palooza at Ijams Park, and a Self Care Sunday yoga class to close it out.
+Friday night Ijams Park goes spooky — Terror in the Woods brings a horror double feature, a haunted trail, and a beer garden to the lawn. Plus: the Sevier Avenue rezoning gets its hearing Thursday, the World Cup quarterfinals hit the screens at Kern's, a sunrise paddle and bird banding round out the mornings, and Hi-Wire's Sunday Funday pours $6 Bloody Marys and $5 mimosas. That last one was phoned in by a neighbor — the Ear now answers 865-252-6500, 24/7.
 
 Read this weekend's Ear: ${HOME}
 
