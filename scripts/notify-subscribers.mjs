@@ -4,6 +4,8 @@
 // Run from /var/www/soknoear with RESEND_API_KEY in env (set -a; . ./.env; set +a).
 import { Resend } from "resend";
 import Database from "better-sqlite3";
+import fs from "node:fs";
+import path from "node:path";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const FROM = process.env.SUBMIT_FROM || "The SoKno Ear <ear@send.note15.com>";
@@ -65,9 +67,48 @@ if (mode === "preview") {
 }
 
 console.log(`mode=${mode} → ${recipients.length} recipient(s):`, recipients.join(", "));
+const results = [];
 for (const to of recipients) {
   const { data, error } = await resend.emails.send({
     from: FROM, to, replyTo: REPLY_TO, subject: SUBJECT, html: HTML, text: TEXT,
   });
-  console.log(`  ${to}: ${error ? "ERROR " + JSON.stringify(error) : "sent " + (data?.id ?? "")}`);
+  results.push({ to, ok: !error, id: data?.id ?? "", error: error ? JSON.stringify(error) : "" });
+  console.log(`  ${to}: ${error ? "ERROR " + results.at(-1).error : "sent " + results.at(-1).id}`);
+}
+
+// ── Publish-run recap to the city desk (send mode only) ─────────────────────
+if (mode === "send") {
+  let edition = null;
+  try {
+    const dir = path.join(process.cwd(), "content", "editions");
+    const latest = fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort().at(-1);
+    edition = JSON.parse(fs.readFileSync(path.join(dir, latest), "utf8"));
+  } catch (e) {
+    console.error("recap: could not load latest edition:", e.message);
+  }
+  const sent = results.filter((r) => r.ok);
+  const failed = results.filter((r) => !r.ok);
+  const storyLines = edition
+    ? [edition.feature, ...edition.stories].map((s, i) => `  ${i === 0 ? "★" : "·"} ${s.title}${s.days?.length ? ` (${s.days.join("/")})` : ""}`)
+    : ["  (edition not readable)"];
+  const recap = [
+    edition ? `Vol. ${edition.volume} — No. ${edition.number} · ${edition.dateLabel ?? edition.date} is live at https://soknoear.com` : "New issue is live at https://soknoear.com",
+    "",
+    "IN THIS ISSUE",
+    ...storyLines,
+    edition?.sidebar?.audio ? `  ♫ Audio briefing · ${edition.sidebar.audio.duration}` : "",
+    "",
+    "SUBSCRIBER NOTICES",
+    `  Sent: ${sent.length} of ${results.length}`,
+    ...sent.map((r) => `  ✓ ${r.to}`),
+    ...failed.map((r) => `  ✗ ${r.to} — ${r.error}`),
+    "",
+    `Subject line: ${SUBJECT}`,
+  ].filter((l) => l !== "").join("\n");
+  const { error } = await resend.emails.send({
+    from: FROM, to: REPLY_TO,
+    subject: `Publish recap — ${edition ? `Vol. ${edition.volume} No. ${edition.number} (${edition.shortDate ?? edition.date})` : "new issue"} · ${sent.length}/${results.length} notices sent`,
+    text: recap,
+  });
+  console.log(error ? `recap: ERROR ${JSON.stringify(error)}` : "recap: sent to " + REPLY_TO);
 }
