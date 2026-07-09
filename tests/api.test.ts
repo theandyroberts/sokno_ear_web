@@ -4,6 +4,7 @@ import os from "node:os"; import path from "node:path";
 vi.mock("@/lib/mail", () => ({
   sendSubmissionEmail: vi.fn(async () => {}),
   sendSubscriberEmail: vi.fn(async () => {}),
+  sendWelcomeEmail: vi.fn(async () => {}),
   sendStoryDraftEmail: vi.fn(async () => {}),
   sendDraftLinkEmail: vi.fn(async () => {}),
   sendDraftCommentEmail: vi.fn(async () => {}),
@@ -31,11 +32,21 @@ describe("api", () => {
       body: JSON.stringify({ headline: "H", details: "D", company: "spam" }) }));
     expect(bot.status).toBe(200); // silently accepted, not stored
   });
-  it("POST /api/subscribe stores a valid email; rejects junk", async () => {
+  it("POST /api/subscribe stores a valid email; rejects junk; welcomes once, not on repeat signup", async () => {
     const { POST } = await import("@/app/api/subscribe/route");
-    expect((await POST(new Request("http://x", { method: "POST",
-      headers: { "content-type": "application/json" }, body: JSON.stringify({ email: "a@b.com" }) }))).status).toBe(200);
+    const { sendWelcomeEmail, sendSubscriberEmail } = await import("@/lib/mail");
+    const sub = (email: string) => POST(new Request("http://x", { method: "POST",
+      headers: { "content-type": "application/json" }, body: JSON.stringify({ email }) }));
+    expect((await sub("a@b.com")).status).toBe(200);
+    expect(sendWelcomeEmail).toHaveBeenCalledTimes(1);
+    expect(sendWelcomeEmail).toHaveBeenCalledWith("a@b.com");
+    expect(sendSubscriberEmail).toHaveBeenCalledTimes(1);
+    // repeat signup: still 200, but no second welcome / desk notice
+    expect((await sub("a@b.com")).status).toBe(200);
+    expect(sendWelcomeEmail).toHaveBeenCalledTimes(1);
+    expect(sendSubscriberEmail).toHaveBeenCalledTimes(1);
     expect((await POST(new Request("http://x", { method: "POST",
       headers: { "content-type": "application/json" }, body: JSON.stringify({ email: "nope" }) }))).status).toBe(400);
+    expect(sendWelcomeEmail).toHaveBeenCalledTimes(1);
   });
 });

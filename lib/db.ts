@@ -129,8 +129,10 @@ export function insertSubmission(d: Database.Database, s: Submission): number {
   return Number(r.lastInsertRowid);
 }
 
-export function insertSubscriber(d: Database.Database, email: string): void {
-  d.prepare("INSERT OR IGNORE INTO subscribers (email) VALUES (?)").run(email);
+/** Returns true when this is a brand-new subscriber (false on repeat signups). */
+export function insertSubscriber(d: Database.Database, email: string): boolean {
+  const r = d.prepare("INSERT OR IGNORE INTO subscribers (email) VALUES (?)").run(email);
+  return r.changes > 0;
 }
 
 export function insertContact(d: Database.Database, c: Contact): number {

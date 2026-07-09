@@ -149,6 +149,56 @@ export async function sendSubmitterRegistrationEmail(
   if (error) console.error("[mail] resend error", error);
 }
 
+/** To a brand-new subscriber, immediately on signup. */
+export async function sendWelcomeEmail(to: string): Promise<void> {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) { console.warn("[mail] RESEND_API_KEY unset — skipping email"); return; }
+  const resend = new Resend(key);
+  const HOME = "https://soknoear.com";
+  const html = `<!doctype html><html><body style="margin:0;padding:0;background:#e9dcc4;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#e9dcc4;"><tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" width="560" cellpadding="0" cellspacing="0" style="width:100%;max-width:560px;background:#F3E8D2;border:1px solid #171512;">
+  <tr><td align="center" style="padding:22px 24px 8px;">
+    <a href="${HOME}" target="_blank" style="text-decoration:none;color:#171512;">
+      <div style="font-family:Georgia,'Times New Roman',serif;font-size:23px;font-weight:bold;letter-spacing:0.02em;text-transform:uppercase;color:#171512;">★ The South Knoxville Ear ★</div>
+      <div style="font-family:Georgia,serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#A94A34;margin-top:5px;">South Knoxville Events &amp; Rumors</div>
+    </a>
+  </td></tr>
+  <tr><td style="padding:0 24px;"><div style="border-top:2px solid #171512;font-size:0;line-height:0;height:0;">&nbsp;</div></td></tr>
+  <tr><td style="padding:18px 24px 2px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.5;color:#171512;">Hey neighbor — welcome aboard.</td></tr>
+  <tr><td style="padding:6px 24px 8px;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.6;color:#171512;">
+    The SoKno Ear is South Knoxville&rsquo;s weekly read on what&rsquo;s happening close to home — events, openings,
+    and neighborhood news from Sevier Avenue to Kern&rsquo;s to Ijams Park. Once a week, when a fresh issue is up,
+    you&rsquo;ll get one short email like this. That&rsquo;s it — no spam, ever.
+  </td></tr>
+  <tr><td align="center" style="padding:14px 24px 6px;">
+    <a href="${HOME}" target="_blank" style="display:inline-block;background:#A94A34;color:#F3E8D2;text-decoration:none;font-family:Georgia,serif;font-weight:bold;font-size:15px;letter-spacing:0.06em;text-transform:uppercase;padding:13px 28px;border-radius:6px;">★ Read this week's Ear</a>
+  </td></tr>
+  <tr><td style="padding:14px 24px 8px;font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.6;color:#171512;">
+    And one neighborly favor: if you know about something coming up — a show, a pop-up, a grand opening, a
+    food or drink special — <strong>call or text it in to ${""}865-252-6500</strong>. An assistant answers 24/7,
+    and the good stuff ends up in the Ear.
+  </td></tr>
+  <tr><td style="padding:0 24px;"><div style="border-top:1px solid #c9b896;font-size:0;line-height:0;height:0;">&nbsp;</div></td></tr>
+  <tr><td style="padding:14px 24px 20px;font-family:Georgia,serif;font-size:12px;line-height:1.5;color:#7a7060;">You're getting this because you signed up at soknoear.com. Change your mind? Just reply and I'll take you off the list. — Andy</td></tr>
+</table></td></tr></table></body></html>`;
+  const text = `Hey neighbor — welcome aboard.
+
+The SoKno Ear is South Knoxville's weekly read on what's happening close to home — events, openings, and neighborhood news from Sevier Avenue to Kern's to Ijams Park. Once a week, when a fresh issue is up, you'll get one short email like this. That's it — no spam, ever.
+
+Read this week's Ear: ${HOME}
+
+And one neighborly favor: if you know about something coming up — a show, a pop-up, a grand opening, a food or drink special — call or text it in to 865-252-6500. An assistant answers 24/7, and the good stuff ends up in the Ear.
+
+You're getting this because you signed up at soknoear.com. Change your mind? Just reply and I'll take you off the list. — Andy`;
+  const { error } = await resend.emails.send({
+    from: FROM, to, replyTo: TO,
+    subject: "Welcome to the SoKno Ear — you're on the list",
+    html, text,
+  });
+  if (error) console.error("[mail] resend error", error);
+}
+
 export async function sendSubscriberEmail(email: string): Promise<void> {
   const key = process.env.RESEND_API_KEY;
   if (!key) { console.warn("[mail] RESEND_API_KEY unset — skipping email"); return; }
