@@ -23,17 +23,21 @@
       { "label": "Sat / Sun", "value": "Merry Wives Sat · Henry V Sun" },
       { "label": "Curtain", "value": "7:30 PM nightly · doors at 7" },
       { "label": "Where", "value": "Visitor Center lawn, Ijams Park, 2915 Island Home Ave" },
-      { "label": "Tickets", "value": "$15 — but Thursdays are pay-what-you-can" }
+      { "label": "Tickets", "value": "$15 · Thursdays pay-what-you-can · under 15 free" },
+      { "label": "Bring", "value": "A lawn chair or a blanket — the lawn is the seating" },
+      { "label": "Parking", "value": "Free starting 30 minutes before showtime" }
     ],
     "body": [
       { "type": "paragraph", "text": "We told you your picnic blanket had plans. Here they are: the Tennessee Stage Company's Shakespeare festival — its thirty-sixth — opens Thursday night on the lawn at Ijams Park, and it opens twice. The Merry Wives of Windsor goes up Thursday, King Henry V follows Friday, and from there the two trade nights straight through early August." },
       { "type": "paragraph", "text": "Here's the part worth knowing before you plan the week: tickets are fifteen dollars, but every Thursday performance is pay-what-you-can. So opening night — the comedy, the one with Falstaff getting dumped in a laundry basket — costs whatever you decide it costs. That's a rare thing for professional theater under the stars, and it's five minutes from most of South Knoxville." },
-      { "type": "paragraph", "text": "Curtain is 7:30 nightly with doors at 7. If the sky opens up, the Visitor Center serves as the rain space, so a forecast isn't automatically a cancellation. Ijams and the company haven't posted anything about chairs, blankets, or coolers — if that's your make-or-break, the box office is 865-546-4280." },
+      { "type": "paragraph", "text": "Curtain is 7:30 nightly, doors at 7. Bring a lawn chair or a blanket — the lawn is the seating, and nothing is provided. Parking is free starting thirty minutes before showtime, and kids under fifteen get in free through Penny for the Arts. Add that up on a Thursday and a family can see professional Shakespeare outdoors for close to nothing." },
+      { "type": "paragraph", "text": "If the sky opens up, the Visitor Center serves as the rain space, so a forecast isn't automatically a cancellation. Questions the box office can settle: 865-546-4280." },
       { "type": "paragraph", "text": "The weekend rotation: Merry Wives Thursday and Saturday, Henry V Friday and Sunday. Comedy or history — or, if you're ambitious, both." }
     ],
     "sources": [
       { "label": "Ijams — Shakespeare at Ijams", "url": "https://www.ijams.org/shakespeare" },
       { "label": "Tennessee Stage Company — Knoxville Shakespeare", "url": "https://tennesseestage.com/knoxville-shakespeare/" },
+      { "label": "Ijams — Knoxville Shakespeare event details", "url": "https://www.ijams.org/event-details/knoxville-shakespeare-king-henry-v-july-31" },
       { "label": "Ijams events calendar", "url": "https://www.ijams.org/calendar-of-events" }
     ],
     "event": { "startDate": "2026-07-16T19:30:00-04:00", "locationName": "Ijams Nature Center", "locationAddress": "2915 Island Home Ave" }
