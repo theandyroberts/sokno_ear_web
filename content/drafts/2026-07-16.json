@@ -43,6 +43,7 @@
     { "label": "Kern's", "labelColor": "green", "days": ["Sun"], "hot": true, "image": "/assets/spots/wc_final.jpg", "title": "The World Cup final", "blurb": "Spain's in. Sunday at 3. Tickets start at $7,253 — or walk to Kern's.", "cue": "Jump to story", "href": "#world-cup-final" },
     { "label": "Old Sevier", "labelColor": "rust", "image": "/assets/spots/planning_hearing.jpg", "title": "The rezoning is dead", "blurb": "Denied, all three actions. And Kerbela got sent back to committee.", "cue": "Jump to story", "href": "#planning-denied" },
     { "label": "Kern's", "labelColor": "green", "days": ["Sat"], "image": "/assets/spots/disco_chicken.jpg", "title": "Disco Chicken turns one", "blurb": "A gluten-free festival all day, a silent disco at nine.", "cue": "Jump to story", "href": "#disco-chicken" },
+    { "label": "Suttree Landing", "labelColor": "gold", "days": ["Fri"], "image": "/assets/spots/earls_rita.jpg", "title": "Spicy Rita Friday at Earl's", "blurb": "$9 spicy pineapple margaritas, 4 to 6 on the waterfront.", "cue": "Jump to story", "href": "#earls-rita" },
     { "label": "Ijams Park", "labelColor": "teal", "days": ["Fri"], "image": "/assets/spots/evening_paddle.jpg", "title": "Evening paddle", "blurb": "Dusk on the water, 7:30 Friday — opposite Henry V. Choose.", "cue": "Jump to story", "href": "#evening-paddle" },
     { "label": "Ijams Park", "labelColor": "teal", "days": ["Sat", "Sun"], "image": "/assets/spots/ijams_storytelling.jpg", "title": "Storytelling & Sunday yoga", "blurb": "Two gentle ones: books Saturday, yoga Sunday.", "cue": "Jump to story", "href": "#ijams-mornings" },
     { "label": "Old Sevier", "labelColor": "rust", "days": ["Sun"], "image": "/assets/spots/hiwire_sunday.jpg", "title": "Sunday Funday, still pouring", "blurb": "$6 Bloody Marys, $5 mimosas, noon to nine.", "cue": "Jump to story", "href": "#hiwire-sunday" }
@@ -132,6 +133,31 @@
       "event": { "startDate": "2026-07-18T09:30:00-04:00", "locationName": "Kern's Food Hall", "locationAddress": "2201 Kern's Rising Way" }
     },
     {
+      "id": "earls-rita",
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": ["Fri"],
+      "layout": "imageRight",
+      "image": "/assets/spots/earls_rita.jpg",
+      "imageCaption": "Four o'clock, with a kick",
+      "title": "Spicy Rita Friday at Earl's — and you'll still make curtain",
+      "deck": "Nine-dollar spicy pineapple margaritas from 4 to 6 on Waterfront Drive, plus a dollar off liquor, beer, and wine.",
+      "facts": [
+        { "label": "When", "value": "Fri, Jul 17 · 4–6 PM" },
+        { "label": "Where", "value": "Earl's, 610 Waterfront Dr" },
+        { "label": "The deal", "value": "$9 Spicy Ritas · $1 off liquor, beer & wine" },
+        { "label": "Fine print", "value": "Excludes daily specials" }
+      ],
+      "body": [
+        { "type": "paragraph", "text": "Earl's runs Spicy Pineapple Margarita Friday from four to six down on Waterfront Drive: nine-dollar spicy ritas, and a dollar off liquor, beer, and wine across the board — daily specials excepted, as ever." },
+        { "type": "paragraph", "text": "Note the clock on this one. Happy hour lets out at six. Curtain at Ijams Park is 7:30. That's ninety minutes to get from a pineapple margarita to King Henry V, which is not a coincidence so much as an invitation. Friday in South Knoxville, fully scheduled." }
+      ],
+      "sources": [
+        { "label": "Earl's, 610 Waterfront Dr · confirmed by the city desk" }
+      ],
+      "event": { "startDate": "2026-07-17T16:00:00-04:00", "endDate": "2026-07-17T18:00:00-04:00", "locationName": "Earl's", "locationAddress": "610 Waterfront Dr" }
+    },
+    {
       "id": "evening-paddle",
       "label": "Ijams Park",
       "labelColor": "teal",
@@ -207,6 +233,7 @@
   "sidebar": {
     "calendar": [
       { "month": "JUL", "day": "16", "title": "Merry Wives of Windsor opens", "meta": "7:30 PM · Ijams Park · pay-what-you-can", "starred": true },
+      { "month": "JUL", "day": "17", "title": "Spicy Rita Friday", "meta": "4–6 PM · Earl's, 610 Waterfront Dr" },
       { "month": "JUL", "day": "17", "title": "King Henry V opens", "meta": "7:30 PM · Ijams Park" },
       { "month": "JUL", "day": "17", "title": "Evening Paddle", "meta": "7:30 PM · Ijams River Club" },
       { "month": "JUL", "day": "18", "title": "Storytelling at the Playscape", "meta": "10 AM · Ijams Park" },
