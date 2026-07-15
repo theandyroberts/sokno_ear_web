@@ -15,7 +15,7 @@ const PREVIEW_TO = "andy@note15.com";
 const HOME = "https://soknoear.com";
 const EXCLUDE = new Set(["test@note15.com"]); // obvious test rows
 
-const SUBJECT = "This week's Ear is up — scary movies, city hall, and cheap mimosas";
+const SUBJECT = "Shakespeare, a World Cup final, and a chicken's birthday — this week's Ear";
 
 const HTML = `<!doctype html><html><body style="margin:0;padding:0;background:#e9dcc4;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#e9dcc4;"><tr><td align="center" style="padding:24px 12px;">
@@ -30,9 +30,9 @@ const HTML = `<!doctype html><html><body style="margin:0;padding:0;background:#e
   <tr><td style="padding:18px 24px 2px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.5;color:#171512;">Hey neighbor —</td></tr>
   <tr><td style="padding:2px 24px 8px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.55;color:#171512;">A fresh issue of <strong>The South Knoxville Ear</strong> is up, and this one's a good time.</td></tr>
   <tr><td align="center" style="padding:8px 24px;">
-    <a href="${HOME}" target="_blank"><img src="${HOME}/assets/spots/terror_woods.jpg" alt="Terror in the Woods — movies under the stars at Ijams Park" width="512" style="display:block;width:100%;max-width:512px;height:auto;border:2px solid #171512;border-radius:8px;"></a>
+    <a href="${HOME}" target="_blank"><img src="${HOME}/assets/spots/shakespeare_feature.jpg" alt="Shakespeare on the lawn at Ijams Park" width="512" style="display:block;width:100%;max-width:512px;height:auto;border:2px solid #171512;border-radius:8px;"></a>
   </td></tr>
-  <tr><td style="padding:10px 24px 4px;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.6;color:#171512;">Friday night <strong>Ijams Park goes spooky</strong> — Terror in the Woods brings a horror double feature, a haunted trail, and a beer garden to the lawn. Plus: the Sevier Avenue rezoning gets its hearing Thursday, the World Cup quarterfinals hit the screens at Kern's, a sunrise paddle and bird banding round out the mornings, and Hi-Wire's Sunday Funday pours $6 Bloody Marys and $5 mimosas. That last one was phoned in by a neighbor — the Ear now answers <strong>865-252-6500</strong>, 24/7.</td></tr>
+  <tr><td style="padding:10px 24px 4px;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.6;color:#171512;"><strong>Shakespeare opens on the Ijams Park lawn Thursday</strong> — and every Thursday show is pay-what-you-can, kids under 15 are free, and parking's free 30 minutes before curtain. Bring a chair. Then Sunday at 3 the <strong>World Cup final</strong> lands: tickets start at $7,253 if you want to be in the building, or you could just walk to Kern's. Also inside: the Sevier Ave rezoning is <strong>dead</strong> (denied, all three actions), Disco Chicken turns one with a silent disco, and $9 spicy ritas at Earl's on Friday.</td></tr>
   <tr><td align="center" style="padding:18px 24px 6px;">
     <a href="${HOME}" target="_blank" style="display:inline-block;background:#A94A34;color:#F3E8D2;text-decoration:none;font-family:Georgia,serif;font-weight:bold;font-size:15px;letter-spacing:0.06em;text-transform:uppercase;padding:13px 28px;border-radius:6px;">★ Read this weekend's Ear</a>
   </td></tr>
@@ -45,7 +45,7 @@ const TEXT = `Hey neighbor —
 
 A fresh issue of The South Knoxville Ear is up, and this one's a good time.
 
-Friday night Ijams Park goes spooky — Terror in the Woods brings a horror double feature, a haunted trail, and a beer garden to the lawn. Plus: the Sevier Avenue rezoning gets its hearing Thursday, the World Cup quarterfinals hit the screens at Kern's, a sunrise paddle and bird banding round out the mornings, and Hi-Wire's Sunday Funday pours $6 Bloody Marys and $5 mimosas. That last one was phoned in by a neighbor — the Ear now answers 865-252-6500, 24/7.
+Shakespeare opens on the Ijams Park lawn Thursday — and every Thursday show is pay-what-you-can, kids under 15 are free, and parking's free 30 minutes before curtain. Bring a chair. Then Sunday at 3 the World Cup final lands: tickets start at $7,253 if you want to be in the building, or you could just walk to Kern's. Also inside: the Sevier Ave rezoning is dead (denied, all three actions), Disco Chicken turns one with a silent disco, and $9 spicy ritas at Earl's on Friday.
 
 Read this weekend's Ear: ${HOME}
 
