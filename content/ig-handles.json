@@ -1,4 +1,96 @@
 {
-  "_comment": "Verified Instagram handles for venues the Ear tags. A wrong handle @s a stranger, so ONLY add a handle confirmed from the venue's own site or official socials. Stories reference these by key (or handle) via social.igTags; ig-queue.mjs silently drops anything not listed here and warns.",
-  "handles": {}
+  "_comment": "Verified Instagram handles the Ear tags in posts. A wrong handle @s a stranger, so ONLY add one confirmed from the venue's own website or official socials — never inferred from a naming pattern. Stories reference these by key (or by handle) via social.igTags; scripts/ig-queue.mjs drops anything not listed here and warns. Each entry records HOW it was verified so nobody has to redo the work.",
+  "_traps": [
+    "One Knoxville SC is @oneknoxville on Instagram — it is OneKnoxSC on X, YouTube, TikTok and Facebook. The consistent-looking guess is the WRONG one. Do not 'fix' this.",
+    "@tnshakespeare is Tennessee Shakespeare Company of MEMPHIS — a different organization. Knoxville Shakespeare is run by Tennessee Stage Company: @tennesseestage.",
+    "@knoxcountyparks is Knox COUNTY. Suttree Landing and the South Waterfront are CITY parks: @knoxvillerecreation.",
+    "Kern's is @kernsknox on Instagram but /kernsfoodhall on Facebook and @kernsbakery on TikTok. Do not normalize them.",
+    "Hi-Wire: tag the Knoxville taproom @hiwirebrewing_knx, not Asheville corporate @hiwirebrewing."
+  ],
+  "handles": {
+    "ijams": {
+      "handle": "@ijamsnaturecenter",
+      "name": "Ijams Nature Center",
+      "verified": "linked from the ijams.org footer; live profile 'Ijams Nature Center'",
+      "confidence": "high"
+    },
+    "kerns": {
+      "handle": "@kernsknox",
+      "name": "Kern's",
+      "verified": "linked directly from kernsbakery.com; live profile \"Kern's - Knoxville, TN\"",
+      "confidence": "high"
+    },
+    "hiwire": {
+      "handle": "@hiwirebrewing_knx",
+      "name": "Hi-Wire Brewing Knoxville",
+      "verified": "linked from the official location page hiwirebrewing.com/knoxville/",
+      "confidence": "high"
+    },
+    "hiwire-corporate": {
+      "handle": "@hiwirebrewing",
+      "name": "Hi-Wire Brewing (Asheville corporate)",
+      "verified": "hiwirebrewing.com footer — NOT the Knoxville taproom; prefer the 'hiwire' key",
+      "confidence": "high"
+    },
+    "earls": {
+      "handle": "@earlsknoxville",
+      "name": "Earl's Knoxville",
+      "verified": "linked from earlsknox.com; live profile 'Earl's Knoxville', 610 Waterfront Drive",
+      "confidence": "high"
+    },
+    "disco-chicken": {
+      "handle": "@discochickenanddonuts",
+      "name": "Disco Chicken & Donuts",
+      "verified": "linked from Kern's own vendor page kernsbakery.com/savor/disco-chicken-donuts/",
+      "confidence": "high"
+    },
+    "tennessee-stage": {
+      "handle": "@tennesseestage",
+      "name": "Tennessee Stage Company (Knoxville Shakespeare)",
+      "verified": "linked from tennesseestage.com; bio reads 'Knoxville Shakespeare'. No separate Shakespeare account exists.",
+      "confidence": "high"
+    },
+    "one-knoxville": {
+      "handle": "@oneknoxville",
+      "name": "One Knoxville Sporting Club",
+      "verified": "linked from oneknoxsc.com; live profile 'One Knoxville Sporting Club'. See _traps.",
+      "confidence": "high"
+    },
+    "trailhead": {
+      "handle": "@trailheadbeer",
+      "name": "Trailhead Beer Market",
+      "verified": "NO official link exists (no website; their FB page lists no IG). Circumstantial only: exact display name, South Knoxville content, sole candidate account, shares fb.me events from the confirmed official FB page. Eyeball before first use.",
+      "confidence": "medium-high"
+    },
+    "alliance": {
+      "handle": "@alliancebrewing",
+      "name": "Alliance Brewing",
+      "verified": "linked from alliancebrewing.com (1130 Sevier Ave)",
+      "confidence": "high"
+    },
+    "legacy-parks": {
+      "handle": "@legacyparks",
+      "name": "Legacy Parks Foundation",
+      "verified": "linked from legacyparks.org",
+      "confidence": "high"
+    },
+    "wdvx": {
+      "handle": "@wdvx",
+      "name": "WDVX",
+      "verified": "linked from the wdvx.com footer",
+      "confidence": "high"
+    },
+    "knox-parks": {
+      "handle": "@knoxvillerecreation",
+      "name": "City of Knoxville Parks & Recreation",
+      "verified": "listed on the City of Knoxville's own official social-media registry (knoxvilletn.gov). See _traps re: county vs city.",
+      "confidence": "high"
+    },
+    "knoxville-city": {
+      "handle": "@knoxvillecity",
+      "name": "City of Knoxville",
+      "verified": "City of Knoxville official social-media registry",
+      "confidence": "high"
+    }
+  }
 }

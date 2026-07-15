@@ -100,6 +100,12 @@
       "startDate": "2026-07-16T19:30:00-04:00",
       "locationName": "Ijams Nature Center",
       "locationAddress": "2915 Island Home Ave"
+    },
+    "social": {
+      "igTags": [
+        "ijams",
+        "tennessee-stage"
+      ]
     }
   },
   "scanner": [
@@ -274,6 +280,12 @@
         "startDate": "2026-07-19T15:00:00-04:00",
         "locationName": "Kern's Food Hall",
         "locationAddress": "2201 Kern's Rising Way"
+      },
+      "social": {
+        "igTags": [
+          "kerns",
+          "one-knoxville"
+        ]
       }
     },
     {
@@ -390,6 +402,12 @@
         "startDate": "2026-07-18T09:30:00-04:00",
         "locationName": "Kern's Food Hall",
         "locationAddress": "2201 Kern's Rising Way"
+      },
+      "social": {
+        "igTags": [
+          "disco-chicken",
+          "kerns"
+        ]
       }
     },
     {
@@ -442,6 +460,11 @@
         "endDate": "2026-07-17T18:00:00-04:00",
         "locationName": "Earl's",
         "locationAddress": "610 Waterfront Dr"
+      },
+      "social": {
+        "igTags": [
+          "earls"
+        ]
       }
     },
     {
@@ -491,6 +514,11 @@
         "endDate": "2026-07-17T21:30:00-04:00",
         "locationName": "Ijams River Club",
         "locationAddress": "3507 Island Home Pike"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ]
       }
     },
     {
@@ -540,6 +568,11 @@
         "startDate": "2026-07-18T10:00:00-04:00",
         "locationName": "Ijams Nature Playscape",
         "locationAddress": "3518 Island Home Ave"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ]
       }
     },
     {
@@ -561,7 +594,7 @@
         },
         {
           "label": "Where",
-          "value": "Hi-Wire Brewing, Sevier Ave"
+          "value": "Hi-Wire Brewing, 2020 Barber St (just off Sevier)"
         },
         {
           "label": "The deal",
@@ -587,7 +620,12 @@
         "startDate": "2026-07-19T12:00:00-04:00",
         "endDate": "2026-07-19T21:00:00-04:00",
         "locationName": "Hi-Wire Brewing",
-        "locationAddress": "Sevier Ave"
+        "locationAddress": "2020 Barber St"
+      },
+      "social": {
+        "igTags": [
+          "hiwire"
+        ]
       }
     }
   ],
