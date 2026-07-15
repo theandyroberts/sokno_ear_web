@@ -8,8 +8,17 @@ cd /var/www/soknoear
 
 PORT="${PORT:-3007}"
 
-OLD=$(git rev-parse HEAD)
-git pull --ff-only
+# Stage 1: pull, then hand off to the freshly-pulled copy of this script.
+# Bash reads a script lazily, so letting `git pull` rewrite this file mid-run means
+# the rest of the run comes from the new bytes at the old offset — in practice it
+# silently executed the PREVIOUS version. Pull first, then exec the new one.
+if [ "${REDEPLOY_STAGE:-}" != "run" ]; then
+  OLD=$(git rev-parse HEAD)
+  git pull --ff-only
+  REDEPLOY_STAGE=run REDEPLOY_OLD="$OLD" exec bash scripts/redeploy.sh "$@"
+fi
+
+OLD="${REDEPLOY_OLD:-$(git rev-parse HEAD)}"
 NEW=$(git rev-parse HEAD)
 CHANGED=$(git diff --name-only "$OLD" "$NEW" || true)
 
@@ -56,8 +65,8 @@ pm2 save >/dev/null
 # reference must actually serve. A publish that ships a broken asset fails HERE,
 # loudly, instead of in a reader's browser.
 echo "→ verifying referenced assets…"
-for i in $(seq 1 15); do
-  curl -sfS -o /dev/null "http://127.0.0.1:$PORT/" && break
+for _ in $(seq 1 15); do
+  curl -sf -o /dev/null "http://127.0.0.1:$PORT/" 2>/dev/null && break
   sleep 1
 done
 missing=0
