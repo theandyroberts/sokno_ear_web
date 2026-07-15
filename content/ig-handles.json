@@ -1,0 +1,4 @@
+{
+  "_comment": "Verified Instagram handles for venues the Ear tags. A wrong handle @s a stranger, so ONLY add a handle confirmed from the venue's own site or official socials. Stories reference these by key (or handle) via social.igTags; ig-queue.mjs silently drops anything not listed here and warns.",
+  "handles": {}
+}

@@ -40,6 +40,16 @@ export const EventDetails = z.object({
   locationAddress: z.string().optional(),
 });
 
+// Social promo for this story. `igTags` are the accounts to @-mention when the
+// story's engraving goes up on Instagram — only handles VERIFIED against the
+// venue's own site/socials belong here (a wrong tag @s a stranger). Keys into
+// content/ig-handles.json. `igPromo` overrides the auto-built caption lede.
+export const Social = z.object({
+  igTags: z.array(z.string()).optional(),
+  igPromo: z.string().optional(),
+  igSkip: z.boolean().optional(),
+});
+
 export const StorySchema = z.object({
   id: z.string(),
   label: z.string(),
@@ -54,6 +64,7 @@ export const StorySchema = z.object({
   body: z.array(Block).min(1),
   sources: z.array(Source).optional(),
   event: EventDetails.optional(),
+  social: Social.optional(),
 });
 
 export const StoryCard = z.object({
@@ -107,3 +118,4 @@ export type CalEvent = z.infer<typeof CalEvent>;
 export type Audio = z.infer<typeof Audio>;
 export type Source = z.infer<typeof Source>;
 export type EventDetails = z.infer<typeof EventDetails>;
+export type Social = z.infer<typeof Social>;
