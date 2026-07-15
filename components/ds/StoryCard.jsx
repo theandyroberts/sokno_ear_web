@@ -7,6 +7,11 @@ import { Tag } from "./Tag.jsx";
  * a short blurb. Built for the "Top Stories & Events" scanner grid. On the
  * one-page paper it can jump to a section (href="#anchor") instead of a new
  * page — keep everything on the same scroll.
+ *
+ * The ENTIRE card is one link: readers tap the engraving, not the little cue
+ * text. That means the card itself is the <a> (no nested anchors) and any
+ * spread props — notably `data-days`, which the CSS day filter keys on — land
+ * on it, so it stays the grid item.
  */
 export function StoryCard({
   label,
@@ -24,7 +29,9 @@ export function StoryCard({
   const [hover, setHover] = React.useState(false);
 
   return (
-    <article
+    <a
+      href={href || "#"}
+      aria-label={typeof title === "string" ? title : undefined}
       style={{
         display: "flex",
         flexDirection: "column",
@@ -35,6 +42,9 @@ export function StoryCard({
         transform: hover ? "translate(-1px,-1px)" : "none",
         transition: "transform 120ms ease, box-shadow 120ms ease",
         overflow: "hidden",
+        textDecoration: "none",
+        color: "inherit",
+        cursor: "pointer",
         ...style,
       }}
       onMouseEnter={() => setHover(true)}
@@ -90,8 +100,7 @@ export function StoryCard({
         )}
         {cue && (
           <div style={{ marginTop: "auto" }}>
-            <a
-              href={href || "#"}
+            <span
               style={{
                 fontFamily: "var(--font-label)",
                 fontWeight: "var(--weight-label)",
@@ -102,13 +111,14 @@ export function StoryCard({
                 display: "inline-flex",
                 gap: "0.4em",
                 alignItems: "center",
+                textDecoration: hover ? "underline" : "none",
               }}
             >
               {cue} <span aria-hidden="true">→</span>
-            </a>
+            </span>
           </div>
         )}
       </div>
-    </article>
+    </a>
   );
 }
