@@ -3,9 +3,13 @@ import { Tag } from "./Tag.jsx";
 
 /**
  * Article — a full inline story for the one-page weekly paper. Everything is
- * right there: section rubric, engraving, headline, deck, optional event facts,
- * and the full body. No "read more", no new page. Lay images and body in a
- * two-column print measure on wide screens.
+ * right there: section rubric, headline, deck, engraving, optional event facts,
+ * and the full body. No "read more", no new page.
+ *
+ * Image placement depends on layout:
+ * - imageTop  → hero directly under the headline/deck, ABOVE the facts strip.
+ *   (A long facts strip otherwise buries the art halfway down the story.)
+ * - imageLeft / imageRight → float inside the body so the copy wraps around it.
  */
 export function Article({
   id,
@@ -24,6 +28,7 @@ export function Article({
 }) {
   const floatVal = layout === "imageLeft" ? "left" : layout === "imageRight" ? "right" : "none";
   const isFloat = floatVal !== "none";
+  const isHero = layout === "imageTop";
   const figure = image && layout !== "textOnly" && (
     <figure
       style={{
@@ -105,6 +110,8 @@ export function Article({
         </p>
       )}
 
+      {isHero && figure}
+
       {facts.length > 0 && (
         <dl
           style={{
@@ -147,7 +154,7 @@ export function Article({
           color: "var(--ink-black)",
         }}
       >
-        {figure}
+        {!isHero && figure}
         {children}
         <div style={{ clear: "both" }} />
       </div>
