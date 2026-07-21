@@ -91,6 +91,12 @@
       "name": "City of Knoxville",
       "verified": "City of Knoxville official social-media registry",
       "confidence": "high"
+    },
+    "mimosas": {
+      "handle": "@mimosasknoxville",
+      "name": "Mimosas (Kennedy Concepts)",
+      "verified": "matches official domain mimosasknoxville.com; handle referenced in research but not yet link-confirmed from the site — eyeball before first use",
+      "confidence": "medium"
     }
   }
 }
