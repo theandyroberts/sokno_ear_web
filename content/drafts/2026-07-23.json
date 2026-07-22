@@ -58,17 +58,17 @@
       "layout": "imageRight",
       "image": "/assets/spots/sevier_roadway.jpg",
       "imageCaption": "The date on the contract: this week",
-      "title": "Sevier Avenue's roadway was due this week. It won't make it.",
+      "title": "Sevier Avenue's roadway was due this week. It didn't make it.",
       "deck": "The contract to rebuild the corridor and its new roundabout carried a completion date of July 21. The city has quietly extended it — and the Kerbela apartments, meanwhile, are still stuck in committee.",
       "facts": [
         { "label": "Roadway contract", "value": "Due Jul 21 · extended" },
         { "label": "Roundabout", "value": "Sevier / Foggy Bottom / Island Home" },
         { "label": "Utility work", "value": "A separate contract runs to Sept 30" },
-        { "label": "City contact", "value": "Amanda Koenig, PE · 865-215-6100" }
+        { "label": "City estimate", "value": "Roundabout open ~early 2027" }
       ],
       "body": [
         { "type": "paragraph", "text": "Here is a date worth marking: July 21, this past Tuesday, was the contract completion date for the Sevier Avenue roadway project — the big rebuild that includes the new roundabout at Sevier, Foggy Bottom, and Island Home. If you've driven it lately, you already know it isn't finished. The city's own July status report confirms it: crews are still working the drainage system on the south side and making their way west, and, in the report's quiet phrasing, \"the contract time was extended.\"" },
-        { "type": "paragraph", "text": "That's not a scandal — big streetscape jobs slip, and this one has to hand off between a roadway contractor and a separate utility-undergrounding crew whose own work runs into the fall. But it's worth saying plainly, because the city has floated \"early 2027\" for the roundabout, and a deadline that arrives and passes without much fanfare is exactly the kind of thing a neighborhood paper is for. If you want the official picture, the city's project engineer is Amanda Koenig, at 865-215-6100." },
+        { "type": "paragraph", "text": "That's not a scandal — big streetscape jobs slip, and this one has to hand off between a roadway contractor and a separate utility-undergrounding crew whose own work runs into the fall. But it's worth saying plainly, because the city has floated \"early 2027\" for the roundabout, and a deadline that arrives and passes without much fanfare is exactly the kind of thing the Ear is here to notice." },
         { "type": "paragraph", "text": "And a mile up the hill, the other South Knoxville land-use story we've been tracking hasn't moved either. The roughly 220-unit apartment plan for the old Kerbela Shriners Temple site was remanded back to the Administrative Review Committee two weeks ago — and it still hasn't been rescheduled. It's not on the Planning Commission's next agenda, August 13. For now, the bluff waits." }
       ],
       "sources": [
@@ -94,7 +94,7 @@
         { "label": "Call ahead", "value": "(865) 357-7020" }
       ],
       "body": [
-        { "type": "paragraph", "text": "Not everything in this paper is happening for the first time this weekend — some of it has just been waiting for us to catch up. Mimosas opened last November on the ground floor of The Davy, the apartment high-rise at Blount Avenue and Chapman Highway, and somehow we haven't sent you there yet. Fixing that now." },
+        { "type": "paragraph", "text": "Not everything in this week's Ear is happening for the first time this weekend — some of it has just been waiting for us to catch up. Mimosas opened last November on the ground floor of The Davy, the apartment high-rise at Blount Avenue and Chapman Highway, and somehow we haven't sent you there yet. Fixing that now." },
         { "type": "paragraph", "text": "It's an all-day brunch-and-cocktails room from Kennedy Concepts — the group behind Cafe 4 and The Kennedy downtown — built around exactly what the name promises. Bottomless mimosas on the weekend, five-dollar mimosas and six-dollar Bloody Marys any day, and a proper brunch menu Saturday and Sunday from nine to three. There's a happy hour on weekdays, three to six, if a Tuesday needs saving." },
         { "type": "paragraph", "text": "One housekeeping note, because we like to get these right: the address turns up two ways online — 222 East Blount Avenue in most listings, a Mimosa Avenue number on a couple of others. It's the ground floor of The Davy at Blount and Chapman; you'll find it. A quick call to 865-357-7020 confirms a table." }
       ],

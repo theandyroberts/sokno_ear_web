@@ -1,7 +1,7 @@
 import * as React from "react";
 
 // Synth-wave "call the future in" CTA — deliberately off-palette (neon on ink)
-// but framed like the paper's other wells so it sits in the layout.
+// but framed like the Ear's other wells so it sits in the layout.
 const PHONE_DISPLAY = "865-252-6500";
 const PHONE_TEL = "tel:+18652526500";
 const PHONE_SMS = "sms:+18652526500";

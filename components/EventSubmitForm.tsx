@@ -103,7 +103,7 @@ export function EventSubmitForm() {
     <section style={boxStyle}>
       <div style={headingStyle}>★ Got an event? Tell The Ear</div>
       <p style={copyStyle}>
-        Know about something happening around SoKno — an event, an opening, neighborhood news? Send it our way and we&apos;ll put it in the paper.
+        Know about something happening around SoKno — an event, an opening, neighborhood news? Send it our way and we&apos;ll put it in the Ear.
       </p>
       <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "var(--space-3, 12px)" }}>
         <input

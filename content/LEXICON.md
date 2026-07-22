@@ -19,7 +19,13 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
 
 ## Style & usage
 
-- **"The Ear" = the paper.** "South Knoxville **Events And Rumors**" → **E.A.R.** is a
+- **Never call the Ear a "paper" or "newspaper."** In *all* content — stories, audio,
+  emails, on-page UI — say **"the Ear," "the SoKno Ear,"** or **"this week's Ear."** It
+  wears the look of a community newspaper but isn't one; calling it a paper misrepresents
+  it. (Exceptions: "vintage **newspaper** engraving" in art prompts describes the art
+  style, not the Ear; and `--paper-*` CSS tokens are internal names.) Grep new drafts for
+  `\bpaper\b` before publishing.
+- **What "E.A.R." means.** "South Knoxville **Events And Rumors**" → **E.A.R.** is a
   backronym for the name. Treat **"rumors" as *real local stories*** — events,
   openings, civic/zoning news, things to plan your weekend around. **Not gossip.**
 - **No certainty labels.** Do *not* use "Confirmed / Probably true / We'll see."
@@ -28,15 +34,14 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
 - **Casing:** headlines & section rubrics ALL CAPS; body sentence case; labels/tags
   condensed caps. **No emoji** — print ornaments only (★ ◆ ❧).
 - **Community submission form** collects **future events and news** the neighborhood
-  wants in the paper. Never call it a "tip line" or ask for "rumors." Copy is
+  wants in the Ear. Never call it a "tip line" or ask for "rumors." Copy is
   invitational, e.g. "Got an event? Tell The Ear."
 - **Audio briefing** is delivered in **Andy's own voice**, first person, like a
   short neighborhood radio dispatch. **Greeting must be time-of-day neutral**
   (no "evening/morning" — we don't know when they'll listen). **Standing sign-off:
   "see you around SoKno!"** — emphasize the community, not the publication. Vary the
-  opening line week to week; never reuse the previous week's open. **In audio, never
-  call it a "paper"** — say **"the Ear"** or **"the SoKno Ear"** (we're not pretending
-  to run a newspaper).
+  opening line week to week; never reuse the previous week's open. (The never-a-"paper"
+  rule above applies here too.)
 - **Always attribute sources.** Every article ends with its source(s): an external
   link when the info came from one (official site, @handle, agency), or plain credit
   text like "Info from A. Roberts" when it came from a form submission/tip with no

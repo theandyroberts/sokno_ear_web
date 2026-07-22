@@ -95,7 +95,7 @@ export async function sendDraftLinkEmail(
     `  ${d.draftUrl}`,
     "",
     "Take a look and use the comment box on that page to correct anything or fill in what we're missing.",
-    "The city desk reviews every item and decides what runs in the paper.",
+    "The city desk reviews every item and decides what runs in the Ear.",
     "",
     "— The SoKno Ear",
   ].join("\n");

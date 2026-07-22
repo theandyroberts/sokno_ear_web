@@ -32,7 +32,7 @@ export default async function DraftReviewPage({ params }: { params: Promise<{ to
         ★ The South Knoxville Ear · Draft for review
       </p>
       <p style={{ fontFamily: "var(--font-label)", fontSize: "var(--text-xs)", letterSpacing: "var(--tracking-label-tight)", textTransform: "uppercase", color: "var(--ink-faded)", margin: "0 0 var(--space-6)", textAlign: "center" }}>
-        Not published — the city desk decides what runs in the paper
+        Not published — the city desk decides what runs in the Ear
       </p>
 
       <article style={{ background: "var(--paper-bright)", border: "var(--border-ink) solid var(--ink-black)", borderRadius: "var(--radius-md)", boxShadow: "var(--shadow-lift)", padding: "var(--space-6)" }}>
