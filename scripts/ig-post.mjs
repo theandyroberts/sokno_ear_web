@@ -10,6 +10,7 @@
 // Facebook Page involved. Meta fetches the image FROM A PUBLIC URL (it will not
 // accept bytes), which is why every engraving already living at soknoear.com/assets/
 // is the whole ballgame. Two-step publish: create a media container, then publish it.
+process.env.TZ = "America/New_York"; // all slot math is SoKno-local
 import fs from "node:fs";
 import path from "node:path";
 

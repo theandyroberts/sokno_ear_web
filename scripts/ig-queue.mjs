@@ -6,6 +6,7 @@
 // One post per story, scheduled on the day the thing actually happens (stories
 // carry `days` already). The feature and any undated news post on publish day.
 // Nothing is sent from here — this only stages. Approve with ig-approve.mjs.
+process.env.TZ = "America/New_York"; // all slot math is SoKno-local
 import fs from "node:fs";
 import path from "node:path";
 
