@@ -45,7 +45,7 @@
     { "label": "Ijams Park", "labelColor": "teal", "days": ["Thu", "Fri", "Sat", "Sun"], "hot": true, "image": "/assets/spots/shakespeare_feature.jpg", "title": "Shakespeare's last weekend", "blurb": "Four final nights, a free Thursday, a Sunday double-header.", "cue": "Jump to story", "href": "#shakespeare-closing" },
     { "label": "Old Sevier", "labelColor": "rust", "hot": true, "image": "/assets/spots/sevier_roadway.jpg", "title": "Sevier Ave's deadline came and went", "blurb": "The roadway was due this week. It's been quietly extended. And Kerbela's still stuck.", "cue": "Jump to story", "href": "#sevier-roadway" },
     { "label": "Suttree Landing", "labelColor": "gold", "days": ["Sat", "Sun"], "image": "/assets/spots/mimosas.jpg", "title": "Mimosas, the new brunch room", "blurb": "Bottomless mimosas by the river at Blount & Chapman. New to the Ear.", "cue": "Jump to story", "href": "#mimosas" },
-    { "label": "Kern's", "labelColor": "green", "days": ["Fri", "Sat", "Sun"], "image": "/assets/spots/kerns_hoedown.jpg", "title": "Kern's trades the World Cup for a hoedown", "blurb": "A Ho'Down Social Friday, live music all weekend.", "cue": "Jump to story", "href": "#kerns-weekend" },
+    { "label": "Kern's", "labelColor": "green", "days": ["Fri", "Sat", "Sun"], "image": "/assets/spots/kerns_hoedown.jpg", "title": "Kern's trades the World Cup for a hoedown", "blurb": "Country line dancing inside the hall Friday night, live music all weekend.", "cue": "Jump to story", "href": "#kerns-weekend" },
     { "label": "Old Sevier", "labelColor": "rust", "days": ["Sat", "Sun"], "image": "/assets/spots/brewery_night.jpg", "title": "Emo drag, bluegrass & stained glass", "blurb": "Hi-Wire and Alliance carry the weekend nightlife.", "cue": "Jump to story", "href": "#brewery-weekend" },
     { "label": "Ijams Park", "labelColor": "teal", "days": ["Fri", "Sat", "Sun"], "image": "/assets/spots/evening_paddle.jpg", "title": "Paddles, stories & the banders", "blurb": "Evening paddles, Saturday storytelling, Sunday's banding table is back.", "cue": "Jump to story", "href": "#ijams-weekend" },
     { "label": "Suttree Landing", "labelColor": "gold", "days": ["Thu", "Fri"], "image": "/assets/spots/earls_rita.jpg", "title": "Earl's happy hours", "blurb": "$10 Patrón ritas Thursday, $9 spicy ritas Friday, 4 to 6.", "cue": "Jump to story", "href": "#earls" }
@@ -121,14 +121,15 @@
       "title": "Kern's trades the World Cup big screen for a hoedown",
       "deck": "With the tournament over, the food hall fills the weekend the old-fashioned way: a Friday-night Ho'Down Social and live music straight through Sunday.",
       "facts": [
-        { "label": "Fri Jul 24", "value": "Corey Clifton Band 5 PM · Ho'Down Social 8–11 PM" },
+        { "label": "Fri Jul 24", "value": "Corey Clifton Band 5 PM · Ho'Down: country dancing 8–11 PM" },
         { "label": "Sat Jul 25", "value": "Candle-making 1 PM · Rossdafareye 6 PM" },
         { "label": "Sun Jul 26", "value": "Kaylee Brooks & Levi Ouimet 1–4 PM" },
         { "label": "Where", "value": "Kern's, 2201 Kern's Rising Way" }
       ],
       "body": [
         { "type": "paragraph", "text": "For a month, the big outdoor screen at Kern's was the neighborhood's World Cup living room. The tournament wrapped Sunday, and rather than go quiet, the food hall leaned into what it does the rest of the year — a weekend of live music with a barn dance bolted on." },
-        { "type": "paragraph", "text": "Friday's the anchor: the Corey Clifton Band plays a rock set from five to a quarter of eight, timed to hand straight off to the Kern's Ho'Down Social at eight — line dancing, boots, the works, on the Scruff stage till eleven. Saturday brings a candle-making class in the afternoon and Rossdafareye's loopy \"Appalachian space funk\" at six. And Sunday winds down easy with the Chattanooga duo Kaylee Brooks and Levi Ouimet, country covers and originals, one to four." },
+        { "type": "paragraph", "text": "Friday's the anchor. The Corey Clifton Band plays a rock set from five to a quarter of eight, timed to hand the night straight off to the main event — the Kern's Ho'Down Social, eight to eleven, moved indoors right inside the hall. This is the one to clear your Friday for: honest-to-goodness country dancing, two-steps and line dances, boots encouraged and no partner required. Never done it? That's the whole point — dust off your boots and come find out." },
+        { "type": "paragraph", "text": "The rest of the weekend keeps the music going. Saturday afternoon brings a candle-making class, then Rossdafareye's loopy \"Appalachian space funk\" at six. And Sunday winds down easy with the Chattanooga duo Kaylee Brooks and Levi Ouimet, country covers and originals, one to four." },
         { "type": "paragraph", "text": "And it's not all music: Friday still brings half-price bottles of wine at Eggspectation, the sit-down spot inside the hall, from three o'clock on. Call it proof the party didn't stop when the World Cup trophy got handed out — Kern's just swapped the big screen for a band and a bottle." }
       ],
       "sources": [
