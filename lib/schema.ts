@@ -48,6 +48,9 @@ export const Social = z.object({
   igTags: z.array(z.string()).optional(),
   igPromo: z.string().optional(),
   igSkip: z.boolean().optional(),
+  /** Two banner lines composited onto the IG image: ["Earl's Happy Hour!", "Two ritas, two nights"].
+   *  Line 2 renders ALL CAPS. scripts/ig-banners.py rasterizes real type — never AI-generated text. */
+  igBanner: z.array(z.string()).optional(),
 });
 
 export const StorySchema = z.object({

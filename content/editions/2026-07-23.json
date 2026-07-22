@@ -97,6 +97,10 @@
       "igTags": [
         "ijams",
         "tennessee-stage"
+      ],
+      "igBanner": [
+        "Shakespeare at Ijams Park",
+        "The closing weekend"
       ]
     }
   },
@@ -258,7 +262,13 @@
           "label": "City of Knoxville — BZA agenda, July 21 (case BZA-26-0042)",
           "url": "https://www.knoxvilletn.gov/UserFiles/Servers/Server_109478/File/Boards/zoningappeals/agendas/07-21-2026%20Agenda%20V3%20(FINAL).pdf"
         }
-      ]
+      ],
+      "social": {
+        "igBanner": [
+          "Sevier Ave Streetscape",
+          "The deadline came and went"
+        ]
+      }
     },
     {
       "id": "mimosas",
@@ -329,6 +339,10 @@
       "social": {
         "igTags": [
           "mimosas"
+        ],
+        "igBanner": [
+          "Mimosas on the River",
+          "SoKno's new brunch room"
         ]
       }
     },
@@ -396,6 +410,10 @@
       "social": {
         "igTags": [
           "kerns"
+        ],
+        "igBanner": [
+          "Ho'Down at Kern's!",
+          "Country dancing Friday night"
         ]
       }
     },
@@ -467,6 +485,10 @@
         "igTags": [
           "hiwire",
           "alliance"
+        ],
+        "igBanner": [
+          "Hi-Wire & Alliance",
+          "Emo drag, bluegrass & stained glass"
         ]
       }
     },
@@ -526,6 +548,10 @@
       "social": {
         "igTags": [
           "earls"
+        ],
+        "igBanner": [
+          "Earl's Happy Hour!",
+          "Two ritas, two nights"
         ]
       }
     },
@@ -585,6 +611,10 @@
       "social": {
         "igTags": [
           "ijams"
+        ],
+        "igBanner": [
+          "The Weekend at Ijams Park",
+          "Paddles, stories & bird banding"
         ]
       }
     }

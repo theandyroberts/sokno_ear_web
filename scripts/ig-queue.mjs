@@ -135,11 +135,15 @@ for (const s of stories) {
   if (unknown.length) warnings.push(`${s.id}: no verified handle for ${unknown.join(", ")} — tag dropped`);
   if (!s.social?.igTags?.length) warnings.push(`${s.id}: no igTags set — posting untagged`);
 
+  // Prefer the titled banner version (scripts/ig-banners.py) when it exists.
+  const bannerRel = `/assets/ig/${edition.slug}/${s.id}.jpg`;
+  const hasBanner = fs.existsSync(path.join(process.cwd(), "public", bannerRel));
+
   posts.push({
     id: s.id,
     title: s.title,
     postAt: iso(date, hour),
-    imageUrl: `${SITE}${s.image}`,
+    imageUrl: `${SITE}${hasBanner ? bannerRel : s.image}`,
     permalink: `${SITE}/${edition.slug}/${s.id}`,
     caption: buildCaption(s, tags),
     tags,
