@@ -12,6 +12,7 @@ import { EventSubmitForm } from "@/components/EventSubmitForm";
 import { CallTheEarCard } from "@/components/CallTheEarCard";
 import { SubscribeForm } from "@/components/SubscribeForm";
 import { ArticleSources } from "@/components/ArticleSources";
+import { ShareStory } from "@/components/ShareStory";
 import { JsonLd } from "@/components/JsonLd";
 
 const Page = ({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) => (
@@ -28,24 +29,6 @@ const Well = ({ children, title }: { children: React.ReactNode; title?: string }
     <div style={{ padding: "4px 16px 8px" }}>{children}</div>
   </section>
 );
-
-function StoryPermalink({ slug, id }: { slug: string; id: string }) {
-  return (
-    <div style={{ marginTop: "var(--space-3, 12px)" }}>
-      <a
-        href={`/${slug}/${id}`}
-        style={{
-          display: "inline-flex", alignItems: "center", gap: 6,
-          fontFamily: "var(--font-label)", fontSize: "var(--text-xs)",
-          letterSpacing: "var(--tracking-label)", textTransform: "uppercase",
-          color: "var(--rust)", textDecoration: "none",
-        }}
-      >
-        <span aria-hidden>★</span> Link to this story
-      </a>
-    </div>
-  );
-}
 
 export function Paper({ edition, permalinks = true }: { edition: Edition; permalinks?: boolean }) {
   const { feature, scanner, stories, sidebar } = edition;
@@ -86,7 +69,7 @@ export function Paper({ edition, permalinks = true }: { edition: Edition; permal
             <Article id={feature.id} label={feature.label} labelColor={feature.labelColor} days={feature.days} image={feature.image} imageCaption={feature.imageCaption} title={feature.title} deck={feature.deck} facts={feature.facts} layout={feature.layout}>
               <ArticleBody blocks={feature.body} />
               <ArticleSources sources={feature.sources} />
-              {permalinks && <StoryPermalink slug={edition.slug} id={feature.id} />}
+              {permalinks && <ShareStory slug={edition.slug} id={feature.id} title={feature.title} />}
             </Article>
             <aside id="listen" style={{ display: "flex", flexDirection: "column", gap: 22, position: "sticky", top: 16 }}>
               {sidebar.audio && (
@@ -125,7 +108,7 @@ export function Paper({ edition, permalinks = true }: { edition: Edition; permal
               <Article id={s.id} label={s.label} labelColor={s.labelColor} days={s.days} image={s.image} imageCaption={s.imageCaption} title={s.title} deck={s.deck} facts={s.facts} layout={s.layout}>
                 <ArticleBody blocks={s.body} />
                 <ArticleSources sources={s.sources} />
-                {permalinks && <StoryPermalink slug={edition.slug} id={s.id} />}
+                {permalinks && <ShareStory slug={edition.slug} id={s.id} title={s.title} />}
               </Article>
             </section>
           </div>
