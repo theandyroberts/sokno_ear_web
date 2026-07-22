@@ -1,0 +1,653 @@
+{
+  "slug": "2026-07-23",
+  "volume": 1,
+  "number": 6,
+  "edition": "Weekend Edition",
+  "date": "2026-07-23",
+  "dateLabel": "Thu–Sun, Jul 23–26, 2026",
+  "shortDate": "Jul 23–26",
+  "place": "South Knoxville, TN",
+  "feature": {
+    "id": "shakespeare-closing",
+    "label": "Ijams Park",
+    "labelColor": "teal",
+    "days": [
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    "layout": "imageTop",
+    "image": "/assets/spots/shakespeare_feature.jpg",
+    "imageCaption": "Last call on the lawn",
+    "title": "Shakespeare's closing weekend at Ijams Park — last chances, and a free Thursday",
+    "deck": "Both plays trade nights one more time, Thursday's Henry V is pay-what-you-can, and Sunday moves indoors for a Merry Wives double-header before the festival packs up.",
+    "facts": [
+      {
+        "label": "Thu Jul 23",
+        "value": "King Henry V — pay-what-you-can"
+      },
+      {
+        "label": "Fri Jul 24",
+        "value": "The Merry Wives of Windsor"
+      },
+      {
+        "label": "Sat Jul 25",
+        "value": "King Henry V"
+      },
+      {
+        "label": "Sun Jul 26",
+        "value": "Merry Wives — 2 PM matinee & 7:30 PM, both indoors"
+      },
+      {
+        "label": "Curtain",
+        "value": "7:30 PM · doors 7 (Sun matinee 2 PM · doors 1:30)"
+      },
+      {
+        "label": "Where",
+        "value": "Visitor Center lawn, Ijams Park, 2915 Island Home Ave"
+      },
+      {
+        "label": "Tickets",
+        "value": "$20 · Thursday pay-what-you-can · under 15 free"
+      },
+      {
+        "label": "Bring",
+        "value": "A lawn chair or blanket · parking free 30 min before"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "If you kept meaning to get out to Shakespeare at Ijams Park and never did, this is the weekend the window closes. The Tennessee Stage Company's thirty-sixth festival plays its final four nights on the lawn, with King Henry V and The Merry Wives of Windsor trading places one last time."
+      },
+      {
+        "type": "paragraph",
+        "text": "The move to make is Thursday. Henry V — the big, rousing one, Agincourt and the St. Crispin's Day speech — is the week's pay-what-you-can night, so it costs whatever you decide. Bring a chair or a blanket, because the lawn is the seating, and parking's free starting thirty minutes before the 7:30 curtain. Kids under fifteen get in free through Penny for the Arts. Everyone else, twenty dollars."
+      },
+      {
+        "type": "paragraph",
+        "text": "Friday brings the comedy, Merry Wives, and Saturday swings back to Henry V. Then Sunday the whole thing moves indoors to the Visitor Center for a proper send-off: a two o'clock matinee and a 7:30 evening show, both of them Merry Wives — Falstaff getting his comeuppance twice in one day. If it rains any night, the Visitor Center is the backup, so weather isn't automatically a washout."
+      },
+      {
+        "type": "paragraph",
+        "text": "One small heads-up from the box office of experience: the online ticket page has been a little inconsistent on price from night to night. If a screen quotes you something odd, twenty is the number, and 865-546-4280 settles anything else."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ijams — Shakespeare at Ijams",
+        "url": "https://www.ijams.org/shakespeare"
+      },
+      {
+        "label": "Tennessee Stage Company — Knoxville Shakespeare",
+        "url": "https://tennesseestage.com/knoxville-shakespeare/"
+      },
+      {
+        "label": "Ijams — Henry V, July 23 (event details)",
+        "url": "https://www.ijams.org/event-details/knoxville-shakespeare-king-henry-v-july-23"
+      }
+    ],
+    "event": {
+      "startDate": "2026-07-23T19:30:00-04:00",
+      "locationName": "Ijams Nature Center",
+      "locationAddress": "2915 Island Home Ave"
+    },
+    "social": {
+      "igTags": [
+        "ijams",
+        "tennessee-stage"
+      ]
+    }
+  },
+  "scanner": [
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "hot": true,
+      "image": "/assets/spots/shakespeare_feature.jpg",
+      "title": "Shakespeare's last weekend",
+      "blurb": "Four final nights, a free Thursday, a Sunday double-header.",
+      "cue": "Jump to story",
+      "href": "#shakespeare-closing"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "hot": true,
+      "image": "/assets/spots/sevier_roadway.jpg",
+      "title": "Sevier Ave's deadline came and went",
+      "blurb": "The roadway was due this week. It's been quietly extended. And Kerbela's still stuck.",
+      "cue": "Jump to story",
+      "href": "#sevier-roadway"
+    },
+    {
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Sat",
+        "Sun"
+      ],
+      "image": "/assets/spots/mimosas.jpg",
+      "title": "Mimosas, the new brunch room",
+      "blurb": "Bottomless mimosas by the river at Blount & Chapman. New to the Ear.",
+      "cue": "Jump to story",
+      "href": "#mimosas"
+    },
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "image": "/assets/spots/kerns_hoedown.jpg",
+      "title": "Kern's trades the World Cup for a hoedown",
+      "blurb": "Country line dancing inside the hall Friday night, live music all weekend.",
+      "cue": "Jump to story",
+      "href": "#kerns-weekend"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat",
+        "Sun"
+      ],
+      "image": "/assets/spots/brewery_night.jpg",
+      "title": "Emo drag, bluegrass & stained glass",
+      "blurb": "Hi-Wire and Alliance carry the weekend nightlife.",
+      "cue": "Jump to story",
+      "href": "#brewery-weekend"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "image": "/assets/spots/evening_paddle.jpg",
+      "title": "Paddles, stories & the banders",
+      "blurb": "Evening paddles, Saturday storytelling, Sunday's banding table is back.",
+      "cue": "Jump to story",
+      "href": "#ijams-weekend"
+    },
+    {
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri"
+      ],
+      "image": "/assets/spots/earls_rita.jpg",
+      "title": "Earl's happy hours",
+      "blurb": "$10 Patrón ritas Thursday, $9 spicy ritas Friday, 4 to 6.",
+      "cue": "Jump to story",
+      "href": "#earls"
+    }
+  ],
+  "stories": [
+    {
+      "id": "sevier-roadway",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "layout": "imageRight",
+      "image": "/assets/spots/sevier_roadway.jpg",
+      "imageCaption": "The date on the contract: this week",
+      "title": "Sevier Avenue's roadway was due this week. It didn't make it.",
+      "deck": "The contract to rebuild the corridor and its new roundabout carried a completion date of July 21. The city has quietly extended it — and the Kerbela apartments, meanwhile, are still stuck in committee.",
+      "facts": [
+        {
+          "label": "Roadway contract",
+          "value": "Due Jul 21 · extended"
+        },
+        {
+          "label": "Roundabout",
+          "value": "Sevier / Foggy Bottom / Island Home"
+        },
+        {
+          "label": "Utility work",
+          "value": "A separate contract runs to Sept 30"
+        },
+        {
+          "label": "City estimate",
+          "value": "Roundabout open ~early 2027"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Here is a date worth marking: July 21, this past Tuesday, was the contract completion date for the Sevier Avenue roadway project — the big rebuild that includes the new roundabout at Sevier, Foggy Bottom, and Island Home. If you've driven it lately, you already know it isn't finished. The city's own July status report confirms it: crews are still working the drainage system on the south side and making their way west, and, in the report's quiet phrasing, \"the contract time was extended.\""
+        },
+        {
+          "type": "paragraph",
+          "text": "That's not a scandal — big streetscape jobs slip, and this one has to hand off between a roadway contractor and a separate utility-undergrounding crew whose own work runs into the fall. But it's worth saying plainly, because the city has floated \"early 2027\" for the roundabout, and a deadline that arrives and passes without much fanfare is exactly the kind of thing the Ear is here to notice."
+        },
+        {
+          "type": "paragraph",
+          "text": "And a mile up the hill, the other South Knoxville land-use story we've been tracking hasn't moved either. The roughly 220-unit apartment plan for the old Kerbela Shriners Temple site was remanded back to the Administrative Review Committee two weeks ago — and it still hasn't been rescheduled. It's not on the Planning Commission's next agenda, August 13. For now, the bluff waits."
+        },
+        {
+          "type": "paragraph",
+          "text": "One more, on a scale you might actually walk past. If you've noticed a little \"VARIANCE\" sign staked in the grass over on Jonathan Avenue and wondered what it meant, here's the answer: a homeowner asked the city's Board of Zoning Appeals — a separate board from the Planning Commission, the one that hears requests to bend a single rule for a single property — to build three feet closer to the corner than the setback normally allows, twelve feet instead of fifteen. It went before the board Tuesday afternoon. Not a development, not a fight — a corner lot and three feet. But it's exactly what those roadside signs are usually about, and now you know."
+        }
+      ],
+      "sources": [
+        {
+          "label": "City of Knoxville — Sevier Ave streetscape status",
+          "url": "https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_109478/File/Engineering/Projects/SevierAvenue.pdf"
+        },
+        {
+          "label": "City of Knoxville — project update #11",
+          "url": "https://www.knoxvilletn.gov/government/city_departments_offices/urban_design_and_development/strategic_projects/sevier_ave_streetscapes_project/project_news/update__11__project_completion_in_1_year"
+        },
+        {
+          "label": "Knox Planning — case 4-A-26-OB (Kerbela)",
+          "url": "https://knoxplanning.org/cases/4-a-26-ob"
+        },
+        {
+          "label": "City of Knoxville — BZA agenda, July 21 (case BZA-26-0042)",
+          "url": "https://www.knoxvilletn.gov/UserFiles/Servers/Server_109478/File/Boards/zoningappeals/agendas/07-21-2026%20Agenda%20V3%20(FINAL).pdf"
+        }
+      ]
+    },
+    {
+      "id": "mimosas",
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/mimosas.jpg",
+      "imageCaption": "Brunch, by the river",
+      "title": "There's a new brunch room on the river: Mimosas",
+      "deck": "At the corner of Blount and Chapman, on the ground floor of The Davy, Mimosas has been quietly pouring bottomless brunch since the fall. Consider this your introduction.",
+      "facts": [
+        {
+          "label": "Where",
+          "value": "222 E. Blount Ave — ground floor of The Davy, at Blount & Chapman"
+        },
+        {
+          "label": "Weekend brunch",
+          "value": "Sat & Sun · 9 AM–3 PM"
+        },
+        {
+          "label": "The draw",
+          "value": "Bottomless mimosas · $5 mimosas & $6 Bloody Marys"
+        },
+        {
+          "label": "Getting in",
+          "value": "Walk in, or reserve on Resy"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Not everything in this week's Ear is happening for the first time this weekend — some of it has just been waiting for us to catch up. Mimosas opened last November on the ground floor of The Davy, the apartment high-rise at Blount Avenue and Chapman Highway, and somehow we haven't sent you there yet. Fixing that now."
+        },
+        {
+          "type": "paragraph",
+          "text": "It's an all-day brunch-and-cocktails room from Kennedy Concepts — the group behind Cafe 4 and The Kennedy downtown — built around exactly what the name promises. Bottomless mimosas on the weekend, five-dollar mimosas and six-dollar Bloody Marys any day, and a proper brunch menu Saturday and Sunday from nine to three. There's a happy hour on weekdays, three to six, if a Tuesday needs saving."
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "One housekeeping note, because we like to get these right: the address turns up two ways online — 222 East Blount Avenue in most listings, a Mimosa Avenue number on a couple of others. It's the ground floor of The Davy at Blount and Chapman; you'll find it. Brunch is a walk-in kind of morning, so you can just show up — but if you'd rather lock in a table, "
+            },
+            {
+              "text": "reserve on Resy",
+              "href": "https://resy.com/cities/knoxville-tn/venues/mimosas?seats=2"
+            },
+            {
+              "text": "."
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Mimosas — about",
+          "url": "https://mimosasknoxville.com/about/"
+        },
+        {
+          "label": "Inside of Knoxville — Mimosas opening",
+          "url": "https://insideofknoxville.com/2025/11/kennedy-concepts-announces-gay-street-projects-former-babalu-mimosas-grand-opening/"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "mimosas"
+        ]
+      }
+    },
+    {
+      "id": "kerns-weekend",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/kerns_hoedown.jpg",
+      "imageCaption": "The screen comes down, the band plugs in",
+      "title": "Kern's trades the World Cup big screen for a hoedown",
+      "deck": "With the tournament over, the food hall fills the weekend the old-fashioned way: a Friday-night Ho'Down Social and live music straight through Sunday.",
+      "facts": [
+        {
+          "label": "Fri Jul 24",
+          "value": "Corey Clifton Band 5 PM · Ho'Down: country dancing 8–11 PM"
+        },
+        {
+          "label": "Sat Jul 25",
+          "value": "Candle-making 1 PM · Rossdafareye 6 PM"
+        },
+        {
+          "label": "Sun Jul 26",
+          "value": "Kaylee Brooks & Levi Ouimet 1–4 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Kern's, 2201 Kern's Rising Way"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "For a month, the big outdoor screen at Kern's was the neighborhood's World Cup living room. The tournament wrapped Sunday, and rather than go quiet, the food hall leaned into what it does the rest of the year — a weekend of live music with a barn dance bolted on."
+        },
+        {
+          "type": "paragraph",
+          "text": "Friday's the anchor. The Corey Clifton Band plays a rock set from five to a quarter of eight, timed to hand the night straight off to the main event — the Kern's Ho'Down Social, eight to eleven, moved indoors right inside the hall. This is the one to clear your Friday for: honest-to-goodness country dancing, two-steps and line dances, boots encouraged and no partner required. Never done it? That's the whole point — dust off your boots and come find out."
+        },
+        {
+          "type": "paragraph",
+          "text": "The rest of the weekend keeps the music going. Saturday afternoon brings a candle-making class, then Rossdafareye's loopy \"Appalachian space funk\" at six. And Sunday winds down easy with the Chattanooga duo Kaylee Brooks and Levi Ouimet, country covers and originals, one to four."
+        },
+        {
+          "type": "paragraph",
+          "text": "And it's not all music: Friday still brings half-price bottles of wine at Eggspectation, the sit-down spot inside the hall, from three o'clock on. Call it proof the party didn't stop when the World Cup trophy got handed out — Kern's just swapped the big screen for a band and a bottle."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Kern's — calendar",
+          "url": "https://kernsbakery.com/calendar/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-07-24T17:00:00-04:00",
+        "locationName": "Kern's Food Hall",
+        "locationAddress": "2201 Kern's Rising Way"
+      },
+      "social": {
+        "igTags": [
+          "kerns"
+        ]
+      }
+    },
+    {
+      "id": "brewery-weekend",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/brewery_night.jpg",
+      "imageCaption": "Sevier Avenue after dark",
+      "title": "Emo drag, Sunday bluegrass, and a stained-glass class",
+      "deck": "The Sevier Avenue breweries carry the weekend's nightlife: Hi-Wire goes emo on Saturday, Alliance goes bluegrass on Sunday, and there's a suncatcher to make in between.",
+      "facts": [
+        {
+          "label": "Sat Jul 25",
+          "value": "Hi-Wire — Panic! At the Drag Show (emo drag night) · 9 PM · 18+"
+        },
+        {
+          "label": "Sun Jul 26",
+          "value": "Hi-Wire — Intro to Stained Glass · 2–4 PM · $80"
+        },
+        {
+          "label": "Sun Jul 26",
+          "value": "Alliance — The Breadlosers (bluegrass) · 4 PM · free"
+        },
+        {
+          "label": "Where",
+          "value": "Hi-Wire 2020 Barber St · Alliance 1130 Sevier Ave"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Saturday night, Hi-Wire on Barber Street throws \"Panic! At the Drag Show\" — an emo-themed drag night, nine to close, eighteen and up, eight bucks in advance. It is exactly as much fun as it sounds, and precisely the kind of thing that makes a brewery district a neighborhood."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sunday slows the tempo way down. Hi-Wire hosts an Intro to Stained Glass workshop from two to four — eighty dollars for the class, materials included, and you leave with a copper-foil suncatcher of your own; ages fourteen and up. And around the corner, Alliance Brewing on Sevier Avenue has the Breadlosers playing free bluegrass at four, all ages, the kind of easy Sunday-afternoon set you can bring the porch energy to."
+        },
+        {
+          "type": "paragraph",
+          "text": "Between the two rooms that's a full weekend of Old Sevier nightlife without repeating yourself once."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Hi-Wire — Panic! At the Drag Show (tickets)",
+          "url": "https://www.simpletix.com/e/panic-at-the-drag-show-a-drag-emo-night-hi-tickets-278277"
+        },
+        {
+          "label": "Visit Knoxville — Stained Glass at Hi-Wire",
+          "url": "https://www.visitknoxville.com/event/stained-glass-workshop-at-hi-wire-brewing/32975/"
+        },
+        {
+          "label": "Knox Ooze — live music calendar (Alliance)",
+          "url": "https://www.knoxooze.com/post/knoxville-live-music-calendar-07-20-07-26"
+        }
+      ],
+      "event": {
+        "startDate": "2026-07-25T21:00:00-04:00",
+        "locationName": "Hi-Wire Brewing Knoxville",
+        "locationAddress": "2020 Barber St"
+      },
+      "social": {
+        "igTags": [
+          "hiwire",
+          "alliance"
+        ]
+      }
+    },
+    {
+      "id": "earls",
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/earls_rita.jpg",
+      "imageCaption": "Two ritas, two nights",
+      "title": "Earl's runs the margarita clock again",
+      "deck": "The waterfront happy hour holds: Patrón mango margaritas Thursday, the spicy pineapple ritas back Friday, both 4 to 6.",
+      "facts": [
+        {
+          "label": "Thu Jul 23",
+          "value": "$10 Patrón Mango Margaritas"
+        },
+        {
+          "label": "Fri Jul 24",
+          "value": "$9 Spicy Pineapple Margaritas"
+        },
+        {
+          "label": "Both",
+          "value": "4–6 PM · $1 off liquor, beer & wine (excludes daily specials)"
+        },
+        {
+          "label": "Where",
+          "value": "Earl's, 610 Waterfront Dr"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Earl's keeps its weekday happy-hour rhythm on the waterfront. Thursday it's ten-dollar Patrón mango margaritas; Friday the spicy pineapple ritas we told you about last week are back at nine, both in the four-to-six window, both with a dollar off liquor, beer, and wine on the side. Daily specials excepted, as always."
+        },
+        {
+          "type": "paragraph",
+          "text": "And the same handy fact still applies: Friday's happy hour lets out at six, ninety minutes before Shakespeare's curtain up the road. Some plans just build themselves."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Earl's — specials",
+          "url": "https://earlsknox.com/specials"
+        }
+      ],
+      "event": {
+        "startDate": "2026-07-23T16:00:00-04:00",
+        "endDate": "2026-07-23T18:00:00-04:00",
+        "locationName": "Earl's",
+        "locationAddress": "610 Waterfront Dr"
+      },
+      "social": {
+        "igTags": [
+          "earls"
+        ]
+      }
+    },
+    {
+      "id": "ijams-weekend",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/evening_paddle.jpg",
+      "imageCaption": "The quiet half of the park's weekend",
+      "title": "Beyond the stage: paddles, storytelling, and the banders are back",
+      "deck": "The rest of Ijams Park keeps its own weekend — two evening paddles, a Saturday of stories and skills, and Sunday's bird-banding table returning at dawn.",
+      "facts": [
+        {
+          "label": "Fri & Sat",
+          "value": "Evening Paddle · 7:30–9:30 PM"
+        },
+        {
+          "label": "Sat Jul 25",
+          "value": "Storytelling 10 AM · Wilderness Basics 3 PM"
+        },
+        {
+          "label": "Sun Jul 26",
+          "value": "Bird Banding 7:30 AM · Self Care Sunday yoga 11:30 AM"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "While the Bard has the lawn, the rest of Ijams Park runs its usual gentle slate. Friday and Saturday both offer a guided Evening Paddle at 7:30, sunset on the Tennessee River with boats provided — register ahead. Saturday fills in around it: free storytelling at the Nature Playscape from ten to noon, and a three-hour Wilderness Basics class in the afternoon for anyone who wants to be a little more capable outdoors."
+        },
+        {
+          "type": "paragraph",
+          "text": "But the one to circle is Sunday at 7:30 in the morning, when the bird-banding table is back after a couple of weeks off. Researchers net, measure, band, and release wild songbirds close enough to count the feathers — real science, all ages, coffee encouraged. And if you'd rather ease in, Self Care Sunday yoga is in the trees at 11:30."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams events calendar",
+          "url": "https://www.ijams.org/calendar-of-events"
+        },
+        {
+          "label": "Ijams — Bird Banding, July 26",
+          "url": "https://www.ijams.org/event-details/bird-banding-at-ijams-nature-center-2026-07-26-07-30"
+        }
+      ],
+      "event": {
+        "startDate": "2026-07-26T07:30:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ]
+      }
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen — Shakespeare's closing weekend at Ijams Park, Kern's Ho'Down, a new brunch room, and Sunday's bird banders.",
+      "duration": "01:45",
+      "src": "/audio/2026-07-23.mp3"
+    },
+    "calendar": [
+      {
+        "month": "JUL",
+        "day": "23",
+        "title": "Henry V — pay-what-you-can",
+        "meta": "7:30 PM · Ijams Park",
+        "starred": true
+      },
+      {
+        "month": "JUL",
+        "day": "24",
+        "title": "Kern's Ho'Down Social",
+        "meta": "8 PM · Kern's"
+      },
+      {
+        "month": "JUL",
+        "day": "24",
+        "title": "Merry Wives of Windsor",
+        "meta": "7:30 PM · Ijams Park"
+      },
+      {
+        "month": "JUL",
+        "day": "25",
+        "title": "Panic! At the Drag Show",
+        "meta": "9 PM · Hi-Wire"
+      },
+      {
+        "month": "JUL",
+        "day": "25",
+        "title": "Henry V",
+        "meta": "7:30 PM · Ijams Park"
+      },
+      {
+        "month": "JUL",
+        "day": "26",
+        "title": "Bird Banding returns",
+        "meta": "7:30 AM · Ijams Park",
+        "starred": true
+      },
+      {
+        "month": "JUL",
+        "day": "26",
+        "title": "Merry Wives — matinee & evening",
+        "meta": "2 PM & 7:30 PM · indoors"
+      },
+      {
+        "month": "JUL",
+        "day": "26",
+        "title": "The Breadlosers (bluegrass)",
+        "meta": "4 PM · Alliance"
+      }
+    ]
+  }
+}
