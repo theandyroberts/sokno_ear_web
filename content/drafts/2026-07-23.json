@@ -69,12 +69,14 @@
       "body": [
         { "type": "paragraph", "text": "Here is a date worth marking: July 21, this past Tuesday, was the contract completion date for the Sevier Avenue roadway project — the big rebuild that includes the new roundabout at Sevier, Foggy Bottom, and Island Home. If you've driven it lately, you already know it isn't finished. The city's own July status report confirms it: crews are still working the drainage system on the south side and making their way west, and, in the report's quiet phrasing, \"the contract time was extended.\"" },
         { "type": "paragraph", "text": "That's not a scandal — big streetscape jobs slip, and this one has to hand off between a roadway contractor and a separate utility-undergrounding crew whose own work runs into the fall. But it's worth saying plainly, because the city has floated \"early 2027\" for the roundabout, and a deadline that arrives and passes without much fanfare is exactly the kind of thing the Ear is here to notice." },
-        { "type": "paragraph", "text": "And a mile up the hill, the other South Knoxville land-use story we've been tracking hasn't moved either. The roughly 220-unit apartment plan for the old Kerbela Shriners Temple site was remanded back to the Administrative Review Committee two weeks ago — and it still hasn't been rescheduled. It's not on the Planning Commission's next agenda, August 13. For now, the bluff waits." }
+        { "type": "paragraph", "text": "And a mile up the hill, the other South Knoxville land-use story we've been tracking hasn't moved either. The roughly 220-unit apartment plan for the old Kerbela Shriners Temple site was remanded back to the Administrative Review Committee two weeks ago — and it still hasn't been rescheduled. It's not on the Planning Commission's next agenda, August 13. For now, the bluff waits." },
+        { "type": "paragraph", "text": "One more, on a scale you might actually walk past. If you've noticed a little \"VARIANCE\" sign staked in the grass over on Jonathan Avenue and wondered what it meant, here's the answer: a homeowner asked the city's Board of Zoning Appeals — a separate board from the Planning Commission, the one that hears requests to bend a single rule for a single property — to build three feet closer to the corner than the setback normally allows, twelve feet instead of fifteen. It went before the board Tuesday afternoon. Not a development, not a fight — a corner lot and three feet. But it's exactly what those roadside signs are usually about, and now you know." }
       ],
       "sources": [
         { "label": "City of Knoxville — Sevier Ave streetscape status", "url": "https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_109478/File/Engineering/Projects/SevierAvenue.pdf" },
         { "label": "City of Knoxville — project update #11", "url": "https://www.knoxvilletn.gov/government/city_departments_offices/urban_design_and_development/strategic_projects/sevier_ave_streetscapes_project/project_news/update__11__project_completion_in_1_year" },
-        { "label": "Knox Planning — case 4-A-26-OB (Kerbela)", "url": "https://knoxplanning.org/cases/4-a-26-ob" }
+        { "label": "Knox Planning — case 4-A-26-OB (Kerbela)", "url": "https://knoxplanning.org/cases/4-a-26-ob" },
+        { "label": "City of Knoxville — BZA agenda, July 21 (case BZA-26-0042)", "url": "https://www.knoxvilletn.gov/UserFiles/Servers/Server_109478/File/Boards/zoningappeals/agendas/07-21-2026%20Agenda%20V3%20(FINAL).pdf" }
       ]
     },
     {
@@ -127,7 +129,7 @@
       "body": [
         { "type": "paragraph", "text": "For a month, the big outdoor screen at Kern's was the neighborhood's World Cup living room. The tournament wrapped Sunday, and rather than go quiet, the food hall leaned into what it does the rest of the year — a weekend of live music with a barn dance bolted on." },
         { "type": "paragraph", "text": "Friday's the anchor: the Corey Clifton Band plays a rock set from five to a quarter of eight, timed to hand straight off to the Kern's Ho'Down Social at eight — line dancing, boots, the works, on the Scruff stage till eleven. Saturday brings a candle-making class in the afternoon and Rossdafareye's loopy \"Appalachian space funk\" at six. And Sunday winds down easy with the Chattanooga duo Kaylee Brooks and Levi Ouimet, country covers and originals, one to four." },
-        { "type": "paragraph", "text": "A quick correction to your muscle memory, since Kern's runs a lot of weekly specials: several of the summer standbys have rolled off the calendar, so don't count on the tournament-season lineup. The music, though, is on." }
+        { "type": "paragraph", "text": "And it's not all music: Friday still brings half-price bottles of wine at Eggspectation, the sit-down spot inside the hall, from three o'clock on. Call it proof the party didn't stop when the World Cup trophy got handed out — Kern's just swapped the big screen for a band and a bottle." }
       ],
       "sources": [
         { "label": "Kern's — calendar", "url": "https://kernsbakery.com/calendar/" }
