@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 import type { Submission, Contact } from "./db";
 
-const FROM = process.env.SUBMIT_FROM || "The SoKno Ear <ear@send.note15.com>";
+const FROM = process.env.SUBMIT_FROM || "The SoKno Ear <ear@updates.note15.com>";
 const TO = process.env.SUBMIT_TO || "andy@note15.com";
 
 export async function sendSubmissionEmail(s: Submission): Promise<void> {

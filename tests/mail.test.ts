@@ -6,12 +6,13 @@ vi.mock("resend", () => ({ Resend: vi.fn(function () { return { emails: { send }
 import { sendSubmissionEmail } from "@/lib/mail";
 
 describe("mail", () => {
-  it("sends from send.note15.com to andy@note15.com with the headline in the subject", async () => {
+  it("sends from the verified note15 domain to andy@note15.com with the headline in the subject", async () => {
     process.env.RESEND_API_KEY = "test";
+    delete process.env.SUBMIT_FROM; // exercise the code default
     await sendSubmissionEmail({ headline: "Block party", details: "Sat noon", url: "", dates: "", contact: "" });
     expect(send).toHaveBeenCalledTimes(1);
     const arg = (send.mock.calls as any[][])[0][0];
-    expect(arg.from).toContain("send.note15.com");
+    expect(arg.from).toContain("updates.note15.com");
     expect(arg.to).toContain("andy@note15.com");
     expect(arg.subject).toContain("Block party");
   });

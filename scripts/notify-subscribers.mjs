@@ -9,7 +9,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const FROM = process.env.SUBMIT_FROM || "The SoKno Ear <ear@send.note15.com>";
+const FROM = process.env.SUBMIT_FROM || "The SoKno Ear <ear@updates.note15.com>";
 const REPLY_TO = process.env.SUBMIT_TO || "andy@note15.com";
 const PREVIEW_TO = "andy@note15.com";
 const HOME = "https://soknoear.com";
