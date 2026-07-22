@@ -91,12 +91,16 @@
         { "label": "Where", "value": "222 E. Blount Ave — ground floor of The Davy, at Blount & Chapman" },
         { "label": "Weekend brunch", "value": "Sat & Sun · 9 AM–3 PM" },
         { "label": "The draw", "value": "Bottomless mimosas · $5 mimosas & $6 Bloody Marys" },
-        { "label": "Call ahead", "value": "(865) 357-7020" }
+        { "label": "Getting in", "value": "Walk in, or reserve on Resy" }
       ],
       "body": [
         { "type": "paragraph", "text": "Not everything in this week's Ear is happening for the first time this weekend — some of it has just been waiting for us to catch up. Mimosas opened last November on the ground floor of The Davy, the apartment high-rise at Blount Avenue and Chapman Highway, and somehow we haven't sent you there yet. Fixing that now." },
         { "type": "paragraph", "text": "It's an all-day brunch-and-cocktails room from Kennedy Concepts — the group behind Cafe 4 and The Kennedy downtown — built around exactly what the name promises. Bottomless mimosas on the weekend, five-dollar mimosas and six-dollar Bloody Marys any day, and a proper brunch menu Saturday and Sunday from nine to three. There's a happy hour on weekdays, three to six, if a Tuesday needs saving." },
-        { "type": "paragraph", "text": "One housekeeping note, because we like to get these right: the address turns up two ways online — 222 East Blount Avenue in most listings, a Mimosa Avenue number on a couple of others. It's the ground floor of The Davy at Blount and Chapman; you'll find it. A quick call to 865-357-7020 confirms a table." }
+        { "type": "paragraph", "runs": [
+          { "text": "One housekeeping note, because we like to get these right: the address turns up two ways online — 222 East Blount Avenue in most listings, a Mimosa Avenue number on a couple of others. It's the ground floor of The Davy at Blount and Chapman; you'll find it. Brunch is a walk-in kind of morning, so you can just show up — but if you'd rather lock in a table, " },
+          { "text": "reserve on Resy", "href": "https://resy.com/cities/knoxville-tn/venues/mimosas?seats=2" },
+          { "text": "." }
+        ] }
       ],
       "sources": [
         { "label": "Mimosas — about", "url": "https://mimosasknoxville.com/about/" },
