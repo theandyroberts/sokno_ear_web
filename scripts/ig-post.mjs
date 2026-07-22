@@ -3,16 +3,17 @@
 //   node scripts/ig-post.mjs               → post due items
 //   node scripts/ig-post.mjs --force=<id>  → post one item now regardless of schedule
 //
-// Requires in .env:  IG_USER_ID=<numeric ig business account id>
-//                    IG_ACCESS_TOKEN=<long-lived token, refresh every ~60 days>
+// Requires in .env:  IG_USER_ID=<numeric ig professional account id>
+//                    IG_ACCESS_TOKEN=<long-lived token; ig-refresh-token.mjs renews it via cron>
 //
-// Meta fetches the image FROM A PUBLIC URL (it will not accept bytes), which is why
-// every engraving already living at soknoear.com/assets/... is the whole ballgame.
-// Two-step publish: create a media container, then publish it.
+// Uses the "Instagram API with Instagram Login" flavor (graph.instagram.com) — no
+// Facebook Page involved. Meta fetches the image FROM A PUBLIC URL (it will not
+// accept bytes), which is why every engraving already living at soknoear.com/assets/
+// is the whole ballgame. Two-step publish: create a media container, then publish it.
 import fs from "node:fs";
 import path from "node:path";
 
-const GRAPH = "https://graph.facebook.com/v21.0";
+const GRAPH = process.env.IG_GRAPH_BASE || "https://graph.instagram.com/v22.0";
 const args = process.argv.slice(2);
 const dryRun = args.includes("--dry-run");
 const forceId = args.find((a) => a.startsWith("--force="))?.split("=")[1];
@@ -54,11 +55,10 @@ for (const file of files) {
     }
 
     try {
-      // 1. container
+      // 1. container  (form-encoded — the Graph endpoints accept this universally)
       const createRes = await fetch(`${GRAPH}/${IG_USER_ID}/media`, {
         method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({
+        body: new URLSearchParams({
           image_url: post.imageUrl,
           caption: post.caption,
           access_token: IG_ACCESS_TOKEN,
@@ -70,8 +70,7 @@ for (const file of files) {
       // 2. publish
       const pubRes = await fetch(`${GRAPH}/${IG_USER_ID}/media_publish`, {
         method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({ creation_id: created.id, access_token: IG_ACCESS_TOKEN }),
+        body: new URLSearchParams({ creation_id: created.id, access_token: IG_ACCESS_TOKEN }),
       });
       const published = await pubRes.json();
       if (!pubRes.ok || !published.id) throw new Error(`publish: ${JSON.stringify(published).slice(0, 300)}`);
