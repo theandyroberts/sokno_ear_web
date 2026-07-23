@@ -68,6 +68,18 @@ for (const file of files) {
       const created = await createRes.json();
       if (!createRes.ok || !created.id) throw new Error(`container: ${JSON.stringify(created).slice(0, 300)}`);
 
+      // 1b. wait for Meta to fetch + process the image — publishing immediately
+      // races the processing and fails with code 9007 "media not ready".
+      let ready = false;
+      for (let i = 0; i < 10; i++) {
+        const stRes = await fetch(`${GRAPH}/${created.id}?fields=status_code&access_token=${encodeURIComponent(IG_ACCESS_TOKEN)}`);
+        const st = await stRes.json().catch(() => ({}));
+        if (st.status_code === "FINISHED") { ready = true; break; }
+        if (st.status_code === "ERROR") throw new Error(`container processing ERROR: ${JSON.stringify(st).slice(0, 200)}`);
+        await new Promise((r) => setTimeout(r, 4000));
+      }
+      if (!ready) throw new Error("container never reached FINISHED after 40s");
+
       // 2. publish
       const pubRes = await fetch(`${GRAPH}/${IG_USER_ID}/media_publish`, {
         method: "POST",
