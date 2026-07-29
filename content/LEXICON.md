@@ -42,6 +42,10 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
   "see you around SoKno!"** — emphasize the community, not the publication. Vary the
   opening line week to week; never reuse the previous week's open. (The never-a-"paper"
   rule above applies here too.)
+- **Crossheads in compendium stories.** Venue/location roundups covering multiple
+  events MUST use `subhead` blocks (★ Special Elite crossheads) at each topic shift —
+  never before the lede (the opening paragraph belongs to the headline). A topic
+  splits into its own story only when it can carry its own headline AND its own art.
 - **Always attribute sources.** Every article ends with its source(s): an external
   link when the info came from one (official site, @handle, agency), or plain credit
   text like "Info from A. Roberts" when it came from a form submission/tip with no
