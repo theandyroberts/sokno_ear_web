@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getLatest } from "@/lib/editions";
+import { getLatest } from "@/lib/episodes";
 import { Masthead } from "@/components/Masthead";
 import { ContactForm } from "@/components/ContactForm";
 
@@ -41,7 +41,7 @@ function Figure({ src, alt, caption, maxWidth }: { src: string; alt: string; cap
 export default function About() {
   const e = getLatest();
   const volLine = `Vol. ${e.volume} — No. ${e.number}`;
-  const dateline = `${e.edition} · ${e.dateLabel ?? e.date} · ${e.place}`;
+  const dateline = `${e.episode} · ${e.dateLabel ?? e.date} · ${e.place}`;
   const shortDate = e.shortDate ?? e.dateLabel ?? e.date;
 
   return (
@@ -74,7 +74,7 @@ export default function About() {
             <p style={p}>
               It&apos;s built to be useful, not endless — one page you can read in a sitting, with a
               short audio briefing for the porch or the car, a &ldquo;what&apos;s happening soon&rdquo;
-              calendar, and a Past Issues archive when you want to look back. It&apos;s free,
+              calendar, and a Past Episodes archive when you want to look back. It&apos;s free,
               there&apos;s nothing to sign up for, and anyone can send in an event or a piece of news
               for a future issue.
             </p>

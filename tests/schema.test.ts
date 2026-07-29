@@ -1,8 +1,8 @@
 import { describe, it, expect } from "vitest";
-import { EditionSchema } from "@/lib/schema";
+import { EpisodeSchema } from "@/lib/schema";
 
 const minimal = {
-  slug: "2026-06-20", volume: 1, number: 1, edition: "Weekend Edition",
+  slug: "2026-06-20", volume: 1, number: 1, episode: "Weekend Episode",
   date: "2026-06-20", place: "South Knoxville, TN",
   feature: {
     id: "pride", label: "Feature", title: "Pride weekend",
@@ -22,22 +22,22 @@ const minimal = {
   sidebar: { calendar: [{ month: "JUN", day: "20", title: "Pride", meta: "Noon" }] },
 };
 
-describe("EditionSchema", () => {
-  it("accepts a valid edition", () => {
-    expect(() => EditionSchema.parse(minimal)).not.toThrow();
+describe("EpisodeSchema", () => {
+  it("accepts a valid episode", () => {
+    expect(() => EpisodeSchema.parse(minimal)).not.toThrow();
   });
   it("rejects an unknown layout", () => {
     const bad = structuredClone(minimal);
     (bad.stories[0] as any).layout = "diagonal";
-    expect(() => EditionSchema.parse(bad)).toThrow();
+    expect(() => EpisodeSchema.parse(bad)).toThrow();
   });
   it("rejects a story with neither text nor runs in a paragraph", () => {
     const bad = structuredClone(minimal);
     (bad.stories[0].body[0] as any) = { type: "paragraph" };
-    expect(() => EditionSchema.parse(bad)).toThrow();
+    expect(() => EpisodeSchema.parse(bad)).toThrow();
   });
   it("defaults labelColor to rust", () => {
-    const e = EditionSchema.parse(minimal);
+    const e = EpisodeSchema.parse(minimal);
     expect(e.stories[0].labelColor).toBe("rust");
   });
 });

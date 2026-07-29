@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Composite titled banners onto the week's engravings for Instagram.
 
-    python3 scripts/ig-banners.py <edition-slug>
+    python3 scripts/ig-banners.py <episode-slug>
 
-Reads content/editions/<slug>.json; for every story with social.igBanner
+Reads content/episodes/<slug>.json; for every story with social.igBanner
 (["Line one", "line two"]) it takes the story's engraving from public/ and
 writes public/assets/ig/<slug>/<id>.jpg. scripts/ig-queue.mjs prefers these
 automatically.
@@ -124,9 +124,9 @@ def banner(src, dst, line1, line2, label_color):
 
 def main():
     slug = sys.argv[1]
-    edition = json.loads((ROOT / "content" / "editions" / f"{slug}.json").read_text())
+    episode = json.loads((ROOT / "content" / "episodes" / f"{slug}.json").read_text())
     made = 0
-    for s in [edition["feature"], *edition["stories"]]:
+    for s in [episode["feature"], *episode["stories"]]:
         lines = (s.get("social") or {}).get("igBanner")
         if not lines or not s.get("image"):
             continue

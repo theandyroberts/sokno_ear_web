@@ -18,7 +18,7 @@ Three generation modes. All use the **Higgsfield MCP** (`generate_image`,
   photograph, not flat vector. No text or letters anywhere."
 - **Optimize before committing:** `scripts/optimize-image.sh <in> <out.jpg> 900 88`
 - **Place under:** `public/assets/spots/<name>.jpg` (art) or
-  `public/assets/diagrams/<name>` (diagrams); reference in the edition JSON
+  `public/assets/diagrams/<name>` (diagrams); reference in the episode JSON
   `image` / `imageTop` field, or in a page `<Figure>`.
 - After viewing each result with the Read tool, only ship it if it reads at small size.
 
@@ -103,7 +103,7 @@ When the user supplies a **finished** diagram/chart, do **not** restyle it.
    Use `.png` output for flat/line art (crisp edges), `.jpg` for anything with
    gradients/photos. Bump `maxEdge` (e.g. 1200–1400) if the diagram has fine text.
 3. **Place as-is** under `public/assets/diagrams/` (or `spots/`); reference in the
-   edition JSON. An old-timey rounded frame is optional (see the traffic-circle
+   episode JSON. An old-timey rounded frame is optional (see the traffic-circle
    "for the locals" story for the pattern) — but keep the original artwork untouched.
 
 Goal: minimal page weight, original look preserved.

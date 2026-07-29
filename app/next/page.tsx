@@ -1,4 +1,4 @@
-import { getNext } from "@/lib/editions";
+import { getNext } from "@/lib/episodes";
 import { Paper } from "@/components/Paper";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -8,13 +8,13 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Preview · The South Knoxville Ear",
-  description: "Preview of the upcoming edition — not yet published.",
+  description: "Preview of the upcoming episode — not yet published.",
   robots: { index: false, follow: false },
 };
 
 export default function NextPreview() {
-  const edition = getNext();
-  if (!edition) notFound();
+  const episode = getNext();
+  if (!episode) notFound();
   return (
     <>
       <div
@@ -24,9 +24,9 @@ export default function NextPreview() {
           letterSpacing: "var(--tracking-label)", textTransform: "uppercase",
         }}
       >
-        ★ Preview — publishes Wednesday · not the live edition
+        ★ Preview — publishes Wednesday · not the live episode
       </div>
-      <Paper edition={edition} />
+      <Paper episode={episode} />
     </>
   );
 }

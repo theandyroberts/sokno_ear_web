@@ -1,8 +1,8 @@
-import { getLatest } from "@/lib/editions";
+import { getLatest } from "@/lib/episodes";
 import { Paper } from "@/components/Paper";
 import type { Metadata } from "next";
 
-// Editions render at request time so publishing a new issue is a file sync — no rebuild.
+// Episodes render at request time so publishing a new issue is a file sync — no rebuild.
 export const dynamic = "force-dynamic";
 
 export function generateMetadata(): Metadata {
@@ -20,5 +20,5 @@ export function generateMetadata(): Metadata {
   };
 }
 export default function Home() {
-  return <Paper edition={getLatest()} />;
+  return <Paper episode={getLatest()} />;
 }

@@ -7,12 +7,12 @@ describe("Masthead", () => {
     render(
       <Masthead
         volLine="Vol. 1 — No. 1"
-        dateline="Weekend Edition · Fri–Sun, Jun 19–21, 2026 · South Knoxville, TN"
+        dateline="Weekend Episode · Fri–Sun, Jun 19–21, 2026 · South Knoxville, TN"
         shortDate="Jun 19–21"
         sections={[{ id: "events", label: "Events" }]}
       />
     );
-    expect(screen.getByText(/Weekend Edition/)).toBeInTheDocument();
+    expect(screen.getByText(/Weekend Episode/)).toBeInTheDocument();
     const link = screen.getByRole("link", { name: "Events" });
     expect(link.getAttribute("href")).toBe("#events");
   });

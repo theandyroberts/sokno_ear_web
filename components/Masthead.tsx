@@ -12,7 +12,7 @@ interface Section {
 interface MastheadProps {
   /** "Vol. 1 — No. 1" */
   volLine: string;
-  /** Full dateline: "Weekend Edition · Fri–Sun, Jun 19–21, 2026 · South Knoxville, TN" */
+  /** Full dateline: "Weekend Episode · Fri–Sun, Jun 19–21, 2026 · South Knoxville, TN" */
   dateline: string;
   /** Short date for the compact mobile strip: "Jun 19–21" */
   shortDate: string;

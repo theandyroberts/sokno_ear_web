@@ -1,0 +1,523 @@
+{
+  "slug": "2026-07-09",
+  "volume": 1,
+  "number": 4,
+  "episode": "Weekend Episode",
+  "date": "2026-07-09",
+  "dateLabel": "Thu–Sun, Jul 9–12, 2026",
+  "shortDate": "Jul 9–12",
+  "place": "South Knoxville, TN",
+  "feature": {
+    "id": "terror-woods",
+    "label": "Ijams Park",
+    "labelColor": "teal",
+    "days": [
+      "Fri"
+    ],
+    "layout": "imageTop",
+    "image": "/assets/spots/terror_woods.jpg",
+    "imageCaption": "Bring a blanket. And a buddy.",
+    "title": "Terror in the Woods: scary movies under the Ijams Park stars",
+    "deck": "Friday night the Movies Under the Stars series goes horror — a Texas Chainsaw Massacre and Wrong Turn double feature on the lawn, with a haunted trail, food trucks, and a beer garden.",
+    "facts": [
+      {
+        "label": "When",
+        "value": "Fri, Jul 10 · doors 7 PM, films at dark"
+      },
+      {
+        "label": "Where",
+        "value": "Ijams Park, 2915 Island Home Ave"
+      },
+      {
+        "label": "Extras",
+        "value": "Haunted trail · food trucks · beer garden"
+      },
+      {
+        "label": "Note",
+        "value": "Advance tickets urged — it sells out"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "For one night a year, the friendliest lawn in South Knoxville gets deliberately creepy. Ijams Park and Central Cinema's Movies Under the Stars — now in its fourteenth year — trades family fare for a horror double feature: The Texas Chainsaw Massacre and Wrong Turn, back to back under the trees, which is exactly where those movies want you watching them."
+      },
+      {
+        "type": "paragraph",
+        "text": "Doors open at seven; the films roll at dark, around nine. Between them you've got a FrightWorks haunted trail through the woods, food trucks, and a beer garden for steadying the nerves. Fair warning on both counts: this one's not for the littles, and past Terror nights have sold out — grab tickets ahead."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ijams — Movies Under the Stars",
+        "url": "https://www.ijams.org/movies-under-the-stars"
+      },
+      {
+        "label": "Ijams events calendar",
+        "url": "https://www.ijams.org/calendar-of-events"
+      }
+    ],
+    "event": {
+      "startDate": "2026-07-10T19:00:00-04:00",
+      "locationName": "Ijams Nature Center",
+      "locationAddress": "2915 Island Home Ave"
+    }
+  },
+  "scanner": [
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "hot": true,
+      "image": "/assets/spots/terror_woods.jpg",
+      "title": "Terror in the Woods",
+      "blurb": "A horror double feature, haunted trail & beer garden. Fri at dark.",
+      "cue": "Jump to story",
+      "href": "#terror-woods"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "image": "/assets/spots/planning_hearing.jpg",
+      "title": "Two land-use fights, one afternoon",
+      "blurb": "The Sevier Ave rezoning and the Kerbela apartments both get heard Thursday.",
+      "cue": "Jump to story",
+      "href": "#planning-hearing"
+    },
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "image": "/assets/spots/wc_watch.jpg",
+      "title": "World Cup quarterfinals",
+      "blurb": "The bracket tightens on the big screen, Thu–Sat.",
+      "cue": "Jump to story",
+      "href": "#world-cup-qf"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "image": "/assets/spots/sunrise_paddle.jpg",
+      "title": "Sunrise Paddle",
+      "blurb": "Two golden hours on the river, boats provided. Sat 6:30 AM.",
+      "cue": "Jump to story",
+      "href": "#sunrise-paddle"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "image": "/assets/spots/bird_banding.png",
+      "title": "Bird banding, up close",
+      "blurb": "Watch songbirds banded and released. Sun 7:30 AM.",
+      "cue": "Jump to story",
+      "href": "#bird-banding"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "image": "/assets/spots/hiwire_sunday.jpg",
+      "title": "Sunday Funday at Hi-Wire",
+      "blurb": "$6 Bloody Marys & $5 mimosas, noon to 9. Phoned in by a neighbor.",
+      "cue": "Jump to story",
+      "href": "#hiwire-sunday"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "image": "/assets/spots/shakespeare_ijams.jpg",
+      "title": "Shakespeare is coming",
+      "blurb": "The Bard hits the Ijams lawn starting next Thursday.",
+      "cue": "Jump to story",
+      "href": "#shakespeare-preview"
+    }
+  ],
+  "stories": [
+    {
+      "id": "planning-hearing",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/planning_hearing.jpg",
+      "imageCaption": "Thursday, 1:30, downtown",
+      "title": "The Sevier Ave rezoning gets its hearing — and staff says no",
+      "deck": "Thursday afternoon the Planning Commission takes up two South Knoxville land-use fights: the 2704 Sevier Ave rezoning we flagged in June, and the Kerbela-site apartments on the bluff.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu, Jul 9 · 1:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Main Assembly Room, City-County Building, 400 Main St"
+        },
+        {
+          "label": "Items",
+          "value": "2704 Sevier Ave (No. 9) · 315 Kerbela Ave (No. 22)"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Back in June we flagged a quiet request to take 2704 Sevier Avenue from single-family residential to neighborhood commercial. Thursday it finally gets its hearing — and Planning staff is recommending denial, writing that it would push commercial use into an established residential block that already has commercial nodes within six hundred feet in both directions. No public comments had been filed as of Tuesday."
+        },
+        {
+          "type": "paragraph",
+          "text": "Later on the same agenda comes a bigger one: the roughly 220-unit, 55-and-up apartment project proposed for the old Kerbela Shriners Temple site at 315 Kerbela Avenue, postponed since April. That one has drawn nine public comments — seven opposed, including formal denial requests from the Knox Community Planning Alliance and City Church — over public access, design, and fit with the South Waterfront Vision Plan."
+        },
+        {
+          "type": "paragraph",
+          "text": "Both are the kind of afternoon decisions that shape the neighborhood for decades. The meeting's open to the public if you want to watch it happen."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Planning Commission agenda (Jul 9)",
+          "url": "https://agenda.knoxplanning.org/Jul26.pdf"
+        },
+        {
+          "label": "Case 7-N-26-RZ — 2704 Sevier Ave",
+          "url": "https://knoxplanning.org/cases/7-n-26-rz"
+        },
+        {
+          "label": "Inside of Knoxville — Kerbela site",
+          "url": "https://insideofknoxville.com/2026/04/kerbela-site-at-a-crossroads-as-developer-revises-plan/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-07-09T13:30:00-04:00",
+        "locationName": "City-County Building, Main Assembly Room",
+        "locationAddress": "400 Main St"
+      }
+    },
+    {
+      "id": "world-cup-qf",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/wc_watch.jpg",
+      "imageCaption": "Quarterfinal stakes",
+      "title": "The World Cup hits the quarterfinals — Kern's keeps the screen warm",
+      "deck": "Eight teams left. The quarterfinals run Thursday through Saturday, and the neighborhood's World Cup headquarters has watch parties going all tournament.",
+      "facts": [
+        {
+          "label": "Thu Jul 9",
+          "value": "France–Morocco · 4 PM"
+        },
+        {
+          "label": "Fri Jul 10",
+          "value": "Spain–Belgium · 3 PM"
+        },
+        {
+          "label": "Sat Jul 11",
+          "value": "Norway–England 5 PM · Argentina–Switzerland 9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Kern's, 2201 Kern's Rising Way"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The bracket is down to eight, and the quarterfinal slate is a good one: France–Morocco on Thursday, Spain–Belgium on Friday, then a Saturday double of Norway–England and the reigning champs Argentina against Switzerland at night."
+        },
+        {
+          "type": "paragraph",
+          "text": "Kern's has been running World Cup watch parties all summer — featured matchdays with OneKnox — and the big outdoor screen has been the neighborhood's tournament HQ since the group stage. Check with Kern's for which matches make the big screen this week, and get there early for the Saturday night one."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Kern's — public events",
+          "url": "https://kernsbakery.com/public-events/"
+        },
+        {
+          "label": "FIFA World Cup 2026 quarterfinal schedule",
+          "url": "https://www.olympics.com/en/news/fifa-world-cup-2026-bracket-quarter-finals-full-schedule-live-updates"
+        }
+      ]
+    },
+    {
+      "id": "sunrise-paddle",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/sunrise_paddle.jpg",
+      "imageCaption": "The river before breakfast",
+      "title": "A sunrise paddle for the early risers",
+      "deck": "Saturday at 6:30 AM, Ijams Park puts you on the Tennessee River for two golden hours — kayaks, paddles, and life jackets provided.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat, Jul 11 · 6:30 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Boat dock at Ijams River Landing"
+        },
+        {
+          "label": "Ages",
+          "value": "14+ (under 18 with an adult)"
+        },
+        {
+          "label": "Note",
+          "value": "Register ahead · park at River Landing"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The river is at its best before the neighborhood wakes up, and Saturday's naturalist-guided Sunrise Paddle catches it right at the golden hour — two easy hours on the water with kayaks, paddles, and life jackets all provided."
+        },
+        {
+          "type": "paragraph",
+          "text": "It launches from the boat dock at Ijams River Landing at 6:30 sharp, so park at River Landing itself — not Meads Quarry or the visitor center. Fourteen and up, and register ahead on the Ijams Park calendar."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — events calendar",
+          "url": "https://www.ijams.org/calendar-of-events"
+        }
+      ],
+      "event": {
+        "startDate": "2026-07-11T06:30:00-04:00",
+        "endDate": "2026-07-11T08:30:00-04:00",
+        "locationName": "Ijams River Landing",
+        "locationAddress": "2915 Island Home Ave"
+      }
+    },
+    {
+      "id": "bird-banding",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/bird_banding.png",
+      "imageCaption": "A warbler, up close",
+      "title": "Sunday morning with the bird banders",
+      "deck": "The banding table is back Sunday at 7:30 AM — researchers netting, measuring, and releasing songbirds close enough to count the feathers.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun, Jul 12 · 7:30 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Park, 2915 Island Home Ave"
+        },
+        {
+          "label": "Bring",
+          "value": "Coffee + patience"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "One of the quietest wonders in the city is back on the calendar: Sunday morning, researchers at Ijams Park gently net wild songbirds, fit each with a tiny numbered band, take a few measurements, and let them go — real science, and a once-in-a-while chance to see a warbler from two feet away."
+        },
+        {
+          "type": "paragraph",
+          "text": "It starts at 7:30 and the birds set the schedule, so bring coffee and a little patience. All ages welcome."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — events calendar",
+          "url": "https://www.ijams.org/calendar-of-events"
+        }
+      ],
+      "event": {
+        "startDate": "2026-07-12T07:30:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave"
+      }
+    },
+    {
+      "id": "hiwire-sunday",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/hiwire_sunday.jpg",
+      "imageCaption": "Sunday, properly garnished",
+      "title": "Sunday Funday at Hi-Wire: cheap mimosas, long afternoon",
+      "deck": "Hi-Wire's taproom runs its Sunday Funday special from noon to nine — $6 Bloody Marys and $5 mimosas, all day.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun, Jul 12 · noon–9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Hi-Wire Brewing, Sevier Ave"
+        },
+        {
+          "label": "The deal",
+          "value": "$6 Bloody Marys · $5 mimosas"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "If your Sunday needs a destination, Hi-Wire's taproom has the neighborhood's easiest answer: Sunday Funday runs noon to nine with six-dollar Bloody Marys and five-dollar mimosas — brunch prices that hold all afternoon and into the evening."
+        },
+        {
+          "type": "paragraph",
+          "text": "A neighborly note on this one: it came to the Ear by phone — someone rang the intake line, the system wrote it up, and the city desk confirmed the details. That's exactly how it's supposed to work. Got a special or an event of your own? Call it in or use the form on this page."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Phoned in by a neighbor · confirmed by the city desk"
+        }
+      ],
+      "event": {
+        "startDate": "2026-07-12T12:00:00-04:00",
+        "endDate": "2026-07-12T21:00:00-04:00",
+        "locationName": "Hi-Wire Brewing",
+        "locationAddress": "Sevier Ave"
+      }
+    },
+    {
+      "id": "shakespeare-preview",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "layout": "imageRight",
+      "image": "/assets/spots/shakespeare_ijams.jpg",
+      "imageCaption": "The lawn becomes a stage",
+      "title": "Heads up: Shakespeare takes the Ijams Park lawn next week",
+      "deck": "Not this weekend — but starting next Thursday, the Tennessee Stage Company brings a full summer of outdoor Shakespeare to Ijams Park.",
+      "facts": [
+        {
+          "label": "Opens",
+          "value": "Thu, Jul 16 · 7:30 PM"
+        },
+        {
+          "label": "The plays",
+          "value": "The Merry Wives of Windsor · King Henry V"
+        },
+        {
+          "label": "Runs",
+          "value": "Through early August"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Consider this your one-week warning: Knoxville Shakespeare opens on the Ijams Park lawn next Thursday, July 16, with The Merry Wives of Windsor, and King Henry V joins the rotation the night after. Evening shows run at 7:30 through early August."
+        },
+        {
+          "type": "paragraph",
+          "text": "We'll have the full rundown in next week's Ear — for now, just know your picnic blanket has plans."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams — Shakespeare",
+          "url": "https://www.ijams.org/shakespeare"
+        },
+        {
+          "label": "Tennessee Stage Company",
+          "url": "https://tennesseestage.com/knoxville-shakespeare/"
+        }
+      ]
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen — Terror in the Woods at Ijams Park, two land-use fights at the Planning Commission, World Cup quarterfinals at Kern's, and Sunday Funday at Hi-Wire.",
+      "duration": "01:46",
+      "src": "/audio/2026-07-09.mp3"
+    },
+    "calendar": [
+      {
+        "month": "JUL",
+        "day": "9",
+        "title": "Planning Comm: Sevier Ave & Kerbela",
+        "meta": "1:30 PM · 400 Main St",
+        "starred": true
+      },
+      {
+        "month": "JUL",
+        "day": "9",
+        "title": "World Cup QF: France–Morocco",
+        "meta": "4:00 PM · Kern's"
+      },
+      {
+        "month": "JUL",
+        "day": "10",
+        "title": "Terror in the Woods",
+        "meta": "Doors 7 PM · Ijams Park",
+        "starred": true
+      },
+      {
+        "month": "JUL",
+        "day": "11",
+        "title": "Sunrise Paddle",
+        "meta": "6:30 AM · Ijams River Landing"
+      },
+      {
+        "month": "JUL",
+        "day": "11",
+        "title": "WC QF: Argentina–Switzerland",
+        "meta": "9:00 PM · Kern's",
+        "starred": true
+      },
+      {
+        "month": "JUL",
+        "day": "12",
+        "title": "Bird Banding",
+        "meta": "7:30 AM · Ijams Park"
+      },
+      {
+        "month": "JUL",
+        "day": "12",
+        "title": "Sunday Funday",
+        "meta": "Noon–9 PM · Hi-Wire"
+      },
+      {
+        "month": "JUL",
+        "day": "16",
+        "title": "Shakespeare opens at Ijams Park",
+        "meta": "7:30 PM · next Thursday",
+        "starred": true
+      }
+    ]
+  }
+}

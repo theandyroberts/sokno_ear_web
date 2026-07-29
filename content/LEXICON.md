@@ -19,6 +19,10 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
 
 ## Style & usage
 
+- **Weekly releases are EPISODES.** Never "editions" or "issues" — the Ear is an
+  episodic media thing (site now; podcast/YouTube later), not a print run. Say
+  "this week's episode," "Past Episodes," "a fresh episode is up." Code, file
+  names, and the schema use `episode`/`content/episodes/` to match.
 - **Never call the Ear a "paper" or "newspaper."** In *all* content — stories, audio,
   emails, on-page UI — say **"the Ear," "the SoKno Ear,"** or **"this week's Ear."** It
   wears the look of a community newspaper but isn't one; calling it a paper misrepresents

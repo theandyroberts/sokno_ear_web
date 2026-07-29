@@ -97,11 +97,11 @@ export const Audio = z.object({
   src: z.string(),
 });
 
-export const EditionSchema = z.object({
+export const EpisodeSchema = z.object({
   slug: z.string(),
   volume: z.number(),
   number: z.number(),
-  edition: z.string(),
+  episode: z.string(),
   date: z.string(),
   dateLabel: z.string().optional(),
   shortDate: z.string().optional(),
@@ -115,7 +115,7 @@ export const EditionSchema = z.object({
   }),
 });
 
-export type Edition = z.infer<typeof EditionSchema>;
+export type Episode = z.infer<typeof EpisodeSchema>;
 export type Story = z.infer<typeof StorySchema>;
 export type Block = z.infer<typeof Block>;
 export type StoryCard = z.infer<typeof StoryCard>;

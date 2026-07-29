@@ -61,7 +61,7 @@ set -a; [ -f .env ] && . ./.env; set +a
 pm2 startOrReload ecosystem.config.js --update-env
 pm2 save >/dev/null
 
-# Verify before declaring success: every image/audio file the editions and drafts
+# Verify before declaring success: every image/audio file the episodes and drafts
 # reference must actually serve. A publish that ships a broken asset fails HERE,
 # loudly, instead of in a reader's browser.
 echo "→ verifying referenced assets…"
@@ -71,7 +71,7 @@ for _ in $(seq 1 15); do
 done
 missing=0
 checked=0
-for asset in $(grep -ohE '"/(assets|audio)/[A-Za-z0-9/_.-]+"' content/editions/*.json content/drafts/*.json 2>/dev/null | tr -d '"' | sort -u); do
+for asset in $(grep -ohE '"/(assets|audio)/[A-Za-z0-9/_.-]+"' content/episodes/*.json content/drafts/*.json 2>/dev/null | tr -d '"' | sort -u); do
   checked=$((checked + 1))
   code=$(curl -sS -o /dev/null -w '%{http_code}' "http://127.0.0.1:$PORT$asset" || echo 000)
   if [ "$code" != "200" ]; then

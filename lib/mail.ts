@@ -68,7 +68,7 @@ export async function sendStoryDraftEmail(
     needsFollowUp ? ["", "— Follow up before it runs —", ...draft.followUpQuestions.map((q) => `  • ${q}`)].join("\n") : "",
     meta.missingFields?.length ? `Intake flagged missing: ${meta.missingFields.join(", ")}` : "",
     "",
-    `The draft is stored (story_drafts #${meta.id}) and will be picked up at the next edition build.`,
+    `The draft is stored (story_drafts #${meta.id}) and will be picked up at the next episode build.`,
   ].filter(Boolean).join("\n");
   const { error } = await resend.emails.send({
     from: FROM, to: TO,
@@ -168,7 +168,7 @@ export async function sendWelcomeEmail(to: string): Promise<void> {
   <tr><td style="padding:18px 24px 2px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.5;color:#171512;">Hey neighbor — welcome aboard.</td></tr>
   <tr><td style="padding:6px 24px 8px;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.6;color:#171512;">
     The SoKno Ear is South Knoxville&rsquo;s weekly read on what&rsquo;s happening close to home — events, openings,
-    and neighborhood news from Sevier Avenue to Kern&rsquo;s to Ijams Park. Once a week, when a fresh issue is up,
+    and neighborhood news from Sevier Avenue to Kern&rsquo;s to Ijams Park. Once a week, when a fresh episode is up,
     you&rsquo;ll get one short email like this. That&rsquo;s it — no spam, ever.
   </td></tr>
   <tr><td align="center" style="padding:14px 24px 6px;">
@@ -184,7 +184,7 @@ export async function sendWelcomeEmail(to: string): Promise<void> {
 </table></td></tr></table></body></html>`;
   const text = `Hey neighbor — welcome aboard.
 
-The SoKno Ear is South Knoxville's weekly read on what's happening close to home — events, openings, and neighborhood news from Sevier Avenue to Kern's to Ijams Park. Once a week, when a fresh issue is up, you'll get one short email like this. That's it — no spam, ever.
+The SoKno Ear is South Knoxville's weekly read on what's happening close to home — events, openings, and neighborhood news from Sevier Avenue to Kern's to Ijams Park. Once a week, when a fresh episode is up, you'll get one short email like this. That's it — no spam, ever.
 
 Read this week's Ear: ${HOME}
 

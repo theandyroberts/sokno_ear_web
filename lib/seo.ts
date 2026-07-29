@@ -1,13 +1,13 @@
-import type { Edition } from "./schema";
+import type { Episode } from "./schema";
 
 const BASE = "https://soknoear.com";
 const PUB = "The South Knoxville Ear";
 
-// Build a schema.org JSON-LD @graph for an edition: the publication identity plus
+// Build a schema.org JSON-LD @graph for an episode: the publication identity plus
 // an Event for every story that carries structured event data (great for Google's
 // event rich results on a hyperlocal happenings paper).
-export function editionJsonLd(edition: Edition) {
-  const stories = [edition.feature, ...edition.stories];
+export function episodeJsonLd(episode: Episode) {
+  const stories = [episode.feature, ...episode.stories];
   const events = stories.flatMap((s) => {
     if (!s.event) return [];
     return [
@@ -35,7 +35,7 @@ export function editionJsonLd(edition: Edition) {
         },
         ...(s.deck ? { description: s.deck } : {}),
         ...(s.image ? { image: [`${BASE}${s.image}`] } : {}),
-        url: `${BASE}/${edition.slug}#${s.id}`,
+        url: `${BASE}/${episode.slug}#${s.id}`,
       },
     ];
   });

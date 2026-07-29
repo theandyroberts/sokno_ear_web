@@ -1,12 +1,12 @@
 import { describe, it, expect } from "vitest";
-import { loadEditions, getLatest, getBySlug, getPast } from "@/lib/editions";
+import { loadEpisodes, getLatest, getBySlug, getPast } from "@/lib/episodes";
 import path from "node:path";
 
-const dir = path.resolve(__dirname, "fixtures/editions");
+const dir = path.resolve(__dirname, "fixtures/episodes");
 
-describe("editions loader", () => {
+describe("episodes loader", () => {
   it("loads + sorts newest first", () => {
-    const all = loadEditions(dir);
+    const all = loadEpisodes(dir);
     expect(all.map((e) => e.slug)).toEqual(["2026-06-20", "2026-06-13"]);
   });
   it("getLatest returns newest", () => {

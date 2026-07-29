@@ -1,0 +1,338 @@
+{
+  "slug": "2026-07-02",
+  "volume": 1,
+  "number": 3,
+  "episode": "Weekend Episode",
+  "date": "2026-07-02",
+  "dateLabel": "Thu–Sun, Jul 2–5, 2026",
+  "shortDate": "Jul 2–5",
+  "place": "South Knoxville, TN",
+  "feature": {
+    "id": "kerns-fourth",
+    "label": "Kern's",
+    "labelColor": "green",
+    "days": [
+      "Sat"
+    ],
+    "layout": "imageTop",
+    "image": "/assets/spots/kerns_fourth.jpg",
+    "imageCaption": "Fireworks over the bakery",
+    "title": "The Fourth at Kern's: fireworks, a dog pawrade, and a full day of fun",
+    "deck": "Kern's Bakery throws South Knoxville's big Independence Day party on Saturday — bounce houses and axe throwing by day, live music into the evening, and a fireworks show to send everyone home.",
+    "facts": [
+      {
+        "label": "When",
+        "value": "Sat, Jul 4 · 11 AM on"
+      },
+      {
+        "label": "Where",
+        "value": "Kern's Bakery, 2201 Kern's Rising Way"
+      },
+      {
+        "label": "Fireworks",
+        "value": "9:30 PM"
+      },
+      {
+        "label": "Bring",
+        "value": "The family — and the dog"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Independence Day lands on a Saturday this year, and Kern's Bakery is making a day of it. It's the neighborhood's big Fourth — family-friendly, dog-friendly, and running from late morning right up to the fireworks. Bring a crew, bring the pup, and settle in."
+      },
+      {
+        "type": "agenda",
+        "title": "July 4th at Kern's",
+        "rows": [
+          {
+            "time": "11 AM–7 PM",
+            "what": "Bounce houses for the kids"
+          },
+          {
+            "time": "12 PM",
+            "what": "Patriotic Pawrade — dress your dog red, white & blue to win a Kern's gift card"
+          },
+          {
+            "time": "1–4 PM",
+            "what": "Axe throwing"
+          },
+          {
+            "time": "2:30–5 PM",
+            "what": "Live music"
+          },
+          {
+            "time": "9:30 PM",
+            "what": "Fireworks show"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Food, drinks, and treats are going all day inside Kern's, so you can make it dinner and stick around for the big finish."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Kern's Bakery — Facebook event",
+        "url": "https://www.facebook.com/events/kerns-bakery/july-4th-celebration-at-kerns/992876426976182/"
+      }
+    ],
+    "event": {
+      "startDate": "2026-07-04T11:00:00-04:00",
+      "endDate": "2026-07-04T22:00:00-04:00",
+      "locationName": "Kern's Bakery",
+      "locationAddress": "2201 Kern's Rising Way"
+    }
+  },
+  "scanner": [
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/kerns_fourth.jpg",
+      "title": "The Fourth at Kern's",
+      "blurb": "Fireworks, a dog pawrade, axe throwing & live music. Sat.",
+      "cue": "Jump to story",
+      "href": "#kerns-fourth"
+    },
+    {
+      "label": "Island Home",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri"
+      ],
+      "image": "/assets/spots/trailhead_music.jpg",
+      "title": "Live music at Trailhead",
+      "blurb": "Patio sets all weekend — WDVX tapings & a First Friday show.",
+      "cue": "Jump to story",
+      "href": "#trailhead-music"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "image": "/assets/spots/pollinators.jpg",
+      "title": "Pollinator Palooza",
+      "blurb": "A kids' bees-and-butterflies morning. Sat at 10.",
+      "cue": "Jump to story",
+      "href": "#pollinator-palooza"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "image": "/assets/spots/ijams_yoga.jpg",
+      "title": "Self Care Sunday yoga",
+      "blurb": "Yoga in the trees to close the weekend. Sun 11:30.",
+      "cue": "Jump to story",
+      "href": "#sunday-yoga"
+    }
+  ],
+  "stories": [
+    {
+      "id": "trailhead-music",
+      "label": "Island Home",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/trailhead_music.jpg",
+      "imageCaption": "Sets on the patio",
+      "title": "Live music runs all weekend at Trailhead",
+      "deck": "The Trailhead patio on Island Home has a full slate of sets to kick off the holiday weekend — WDVX radio tapings by day and a First Friday show in the evening.",
+      "facts": [
+        {
+          "label": "Thu Jul 2",
+          "value": "WDVX Blue Plate: WestWend · noon"
+        },
+        {
+          "label": "Fri Jul 3",
+          "value": "Robinella noon · Travis Bigwood & Hollye B, 6 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Trailhead Beer Market, 1317 Island Home Ave"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Before the fireworks, Trailhead Beer Market strings together a run of live music on the patio. Thursday kicks off with a WDVX Blue Plate Special session from WestWend at noon; Friday brings Robinella for a midday WDVX set, then the monthly First Friday Live show in the evening with Travis Bigwood and Hollye B."
+        },
+        {
+          "type": "paragraph",
+          "text": "It's out on Island Home Avenue at the edge of the Urban Wilderness — pull up on the patio with a pint and let the long weekend start easy."
+        }
+      ],
+      "sources": [
+        {
+          "label": "WDVX — Trailhead Beer Market",
+          "url": "https://wdvx.com/venue/trailhead-beer-market/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-07-03T18:00:00-04:00",
+        "locationName": "Trailhead Beer Market",
+        "locationAddress": "1317 Island Home Ave"
+      }
+    },
+    {
+      "id": "pollinator-palooza",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/pollinators.jpg",
+      "imageCaption": "Bees, butterflies, and blooms",
+      "title": "A pollinator morning for the kids at Ijams Park",
+      "deck": "Saturday morning at Ijams Park, the Ecosystem Explorers series turns to bees and butterflies — a calm, kid-friendly way to spend the Fourth before the crowds.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat, Jul 4 · 10 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Park, 2915 Island Home Ave"
+        },
+        {
+          "label": "Best for",
+          "value": "Kids & families"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "If the Fourth with little ones calls for something gentler than fireworks, Ijams Park has a morning for it. Pollinator Palooza is part of the Ecosystem Explorers series — a hands-on look at the bees, butterflies, and blooms that keep the place humming, geared to curious kids."
+        },
+        {
+          "type": "paragraph",
+          "text": "It's at ten on Saturday morning. Details and space can move, so check the Ijams Park calendar to register before you head out."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — events calendar",
+          "url": "https://www.ijams.org/calendar-of-events"
+        }
+      ],
+      "event": {
+        "startDate": "2026-07-04T10:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave"
+      }
+    },
+    {
+      "id": "sunday-yoga",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/ijams_yoga.jpg",
+      "imageCaption": "Sunday, slow",
+      "title": "Ease into Sunday with yoga at Ijams Park",
+      "deck": "Close out the long weekend with a Self Care Sunday yoga class in the trees at Ijams Park, led by Hope Irwin.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun, Jul 5 · 11:30 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Park, 2915 Island Home Ave"
+        },
+        {
+          "label": "Bring",
+          "value": "A mat"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "After a big Fourth, Sunday at Ijams Park is for slowing down. Self Care Sunday brings a yoga class with Hope Irwin out among the trees — a quiet reset before the week starts back up."
+        },
+        {
+          "type": "paragraph",
+          "text": "It's at 11:30 in the morning. Check the Ijams Park calendar for cost and to save a spot."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — events calendar",
+          "url": "https://www.ijams.org/calendar-of-events"
+        }
+      ],
+      "event": {
+        "startDate": "2026-07-05T11:30:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave"
+      }
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your Fourth of July weekend in South Knoxville — the Fourth at Kern's, live music at Trailhead, and Pollinator Palooza & Sunday yoga at Ijams Park.",
+      "duration": "01:14",
+      "src": "/audio/2026-07-02.mp3"
+    },
+    "calendar": [
+      {
+        "month": "JUL",
+        "day": "2",
+        "title": "WDVX Blue Plate: WestWend",
+        "meta": "Noon · Trailhead"
+      },
+      {
+        "month": "JUL",
+        "day": "3",
+        "title": "First Friday Live",
+        "meta": "6:00 PM · Trailhead",
+        "starred": true
+      },
+      {
+        "month": "JUL",
+        "day": "4",
+        "title": "Pollinator Palooza",
+        "meta": "10:00 AM · Ijams Park"
+      },
+      {
+        "month": "JUL",
+        "day": "4",
+        "title": "The Fourth at Kern's",
+        "meta": "11:00 AM · Kern's",
+        "starred": true
+      },
+      {
+        "month": "JUL",
+        "day": "4",
+        "title": "Kern's Fireworks",
+        "meta": "9:30 PM · Kern's",
+        "starred": true
+      },
+      {
+        "month": "JUL",
+        "day": "5",
+        "title": "Self Care Sunday Yoga",
+        "meta": "11:30 AM · Ijams Park"
+      }
+    ]
+  }
+}

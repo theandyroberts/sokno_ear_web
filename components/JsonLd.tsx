@@ -1,11 +1,11 @@
-import type { Edition } from "@/lib/schema";
-import { editionJsonLd, jsonLdString } from "@/lib/seo";
+import type { Episode } from "@/lib/schema";
+import { episodeJsonLd, jsonLdString } from "@/lib/seo";
 
-export function JsonLd({ edition }: { edition: Edition }) {
+export function JsonLd({ episode }: { episode: Episode }) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: jsonLdString(editionJsonLd(edition)) }}
+      dangerouslySetInnerHTML={{ __html: jsonLdString(episodeJsonLd(episode)) }}
     />
   );
 }

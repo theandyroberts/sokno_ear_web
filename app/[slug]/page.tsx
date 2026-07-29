@@ -1,9 +1,9 @@
-import { getBySlug } from "@/lib/editions";
+import { getBySlug } from "@/lib/episodes";
 import { Paper } from "@/components/Paper";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
-// Editions render at request time so publishing a new issue is a file sync — no rebuild.
+// Episodes render at request time so publishing a new issue is a file sync — no rebuild.
 export const dynamic = "force-dynamic";
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
@@ -21,9 +21,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     twitter: { card: "summary_large_image", title, description, images: ["/assets/masthead.jpg"] },
   };
 }
-export default async function EditionPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function EpisodePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const edition = getBySlug(undefined, slug);
-  if (!edition) notFound();
-  return <Paper edition={edition} />;
+  const episode = getBySlug(undefined, slug);
+  if (!episode) notFound();
+  return <Paper episode={episode} />;
 }

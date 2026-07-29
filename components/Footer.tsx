@@ -23,7 +23,7 @@ export function Footer() {
         </div>
         <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap", fontFamily: "var(--font-label)", fontSize: "var(--label-md)", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--paper-shadow)", marginTop: 22, paddingTop: 18, borderTop: "var(--border-hair) solid #4A4740" }}>
           <a href="/about" style={{ color: "var(--paper-shadow)", textDecoration: "none" }}>About the Ear</a><span style={{ color: "var(--rust)" }}>·</span>
-          <a href="/archive" style={{ color: "var(--paper-shadow)", textDecoration: "none" }}>Past Issues</a>
+          <a href="/archive" style={{ color: "var(--paper-shadow)", textDecoration: "none" }}>Past Episodes</a>
         </div>
         <div style={{ textAlign: "center", marginTop: 14, fontFamily: "var(--font-body)", fontSize: "var(--text-xs)", color: "var(--paper-edge)" }}>
           Read by locals. Loved by locals. South Knoxville, all the way.

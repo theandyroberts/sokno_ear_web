@@ -1,5 +1,5 @@
 import * as React from "react";
-import type { Edition } from "@/lib/schema";
+import type { Episode } from "@/lib/schema";
 import { Masthead } from "@/components/Masthead";
 import { Article } from "@/components/ds/Article.jsx";
 import { StoryCard } from "@/components/ds/StoryCard.jsx";
@@ -30,11 +30,11 @@ const Well = ({ children, title }: { children: React.ReactNode; title?: string }
   </section>
 );
 
-export function Paper({ edition, permalinks = true }: { edition: Edition; permalinks?: boolean }) {
-  const { feature, scanner, stories, sidebar } = edition;
-  const volLine = `Vol. ${edition.volume} — No. ${edition.number}`;
-  const dateline = `${edition.edition} · ${edition.dateLabel ?? edition.date} · ${edition.place}`;
-  const shortDate = edition.shortDate ?? edition.dateLabel ?? edition.date;
+export function Paper({ episode, permalinks = true }: { episode: Episode; permalinks?: boolean }) {
+  const { feature, scanner, stories, sidebar } = episode;
+  const volLine = `Vol. ${episode.volume} — No. ${episode.number}`;
+  const dateline = `${episode.episode} · ${episode.dateLabel ?? episode.date} · ${episode.place}`;
+  const shortDate = episode.shortDate ?? episode.dateLabel ?? episode.date;
 
   // Nav: Top + unique story labels (first occurrence) + Listen (if audio)
   const seen = new Set<string>();
@@ -52,15 +52,15 @@ export function Paper({ edition, permalinks = true }: { edition: Edition; permal
   // row (orphan control). ≤5 cards → one row; 6+ → 4 wide, bumped to 5 when 4 would orphan.
   const scannerCols = scanner.length <= 5 ? scanner.length : (scanner.length % 4 === 1 ? 5 : 4);
 
-  // Day filter: distinct days across the edition (ordered), rendered as a CSS-only filter bar.
+  // Day filter: distinct days across the episode (ordered), rendered as a CSS-only filter bar.
   const DAY_ORDER = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
   const daysAttr = (ds?: string[]) => (ds && ds.length ? ds.map((d) => d.toLowerCase()).join(" ") : undefined);
-  const editionDays = DAY_ORDER.filter((d) => [feature, ...stories].some((s) => s.days?.includes(d)));
+  const episodeDays = DAY_ORDER.filter((d) => [feature, ...stories].some((s) => s.days?.includes(d)));
 
   return (
     <main id="top">
-      <JsonLd edition={edition} />
-      <Masthead volLine={volLine} dateline={dateline} shortDate={shortDate} sections={sections} days={editionDays} />
+      <JsonLd episode={episode} />
+      <Masthead volLine={volLine} dateline={dateline} shortDate={shortDate} sections={sections} days={episodeDays} />
 
       {/* FEATURE BAND */}
       <div id="events" data-days={daysAttr(feature.days)} style={{ borderBottom: "var(--border-rule) double var(--ink-black)", padding: "28px 0 32px" }}>
@@ -69,7 +69,7 @@ export function Paper({ edition, permalinks = true }: { edition: Edition; permal
             <Article id={feature.id} label={feature.label} labelColor={feature.labelColor} days={feature.days} image={feature.image} imageCaption={feature.imageCaption} title={feature.title} deck={feature.deck} facts={feature.facts} layout={feature.layout}>
               <ArticleBody blocks={feature.body} />
               <ArticleSources sources={feature.sources} />
-              {permalinks && <ShareStory slug={edition.slug} id={feature.id} title={feature.title} />}
+              {permalinks && <ShareStory slug={episode.slug} id={feature.id} title={feature.title} />}
             </Article>
             <aside id="listen" style={{ display: "flex", flexDirection: "column", gap: 22, position: "sticky", top: 16 }}>
               {sidebar.audio && (
@@ -113,7 +113,7 @@ export function Paper({ edition, permalinks = true }: { edition: Edition; permal
               <Article id={s.id} label={s.label} labelColor={s.labelColor} days={s.days} image={s.image} imageCaption={s.imageCaption} title={s.title} deck={s.deck} facts={s.facts} layout={s.layout}>
                 <ArticleBody blocks={s.body} />
                 <ArticleSources sources={s.sources} />
-                {permalinks && <ShareStory slug={edition.slug} id={s.id} title={s.title} />}
+                {permalinks && <ShareStory slug={episode.slug} id={s.id} title={s.title} />}
               </Article>
             </section>
           </div>

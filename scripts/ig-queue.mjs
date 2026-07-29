@@ -1,6 +1,6 @@
-// Build the week's Instagram drip queue from the published edition.
-//   node scripts/ig-queue.mjs            → build queue for the latest edition, print for review
-//   node scripts/ig-queue.mjs <slug>     → build for a specific edition
+// Build the week's Instagram drip queue from the published episode.
+//   node scripts/ig-queue.mjs            → build queue for the latest episode, print for review
+//   node scripts/ig-queue.mjs <slug>     → build for a specific episode
 //   node scripts/ig-queue.mjs --json     → machine-readable only
 //
 // One post per story, scheduled on the day the thing actually happens (stories
@@ -19,16 +19,16 @@ const args = process.argv.slice(2);
 const jsonOnly = args.includes("--json");
 const slugArg = args.find((a) => !a.startsWith("--"));
 
-const editionsDir = path.join(process.cwd(), "content", "editions");
-const slug = slugArg || fs.readdirSync(editionsDir).filter((f) => f.endsWith(".json")).sort().at(-1).replace(".json", "");
-const edition = JSON.parse(fs.readFileSync(path.join(editionsDir, `${slug}.json`), "utf8"));
+const episodesDir = path.join(process.cwd(), "content", "episodes");
+const slug = slugArg || fs.readdirSync(episodesDir).filter((f) => f.endsWith(".json")).sort().at(-1).replace(".json", "");
+const episode = JSON.parse(fs.readFileSync(path.join(episodesDir, `${slug}.json`), "utf8"));
 
 const handlesPath = path.join(process.cwd(), "content", "ig-handles.json");
 const registry = fs.existsSync(handlesPath) ? JSON.parse(fs.readFileSync(handlesPath, "utf8")) : { handles: {} };
 
-/** Map a day abbreviation ("Fri") to the real date inside this edition's week. */
-function dateForDay(editionDate, dayAbbr) {
-  const start = new Date(`${editionDate}T12:00:00-04:00`);
+/** Map a day abbreviation ("Fri") to the real date inside this episode's week. */
+function dateForDay(episodeDate, dayAbbr) {
+  const start = new Date(`${episodeDate}T12:00:00-04:00`);
   for (let i = 0; i < 7; i++) {
     const d = new Date(start);
     d.setDate(start.getDate() + i);
@@ -111,7 +111,7 @@ function slotFor(story, dayDate, taken) {
   return { date, hour };
 }
 
-const stories = [{ ...edition.feature, __isFeature: true }, ...edition.stories];
+const stories = [{ ...episode.feature, __isFeature: true }, ...episode.stories];
 const taken = new Set();
 const posts = [];
 const warnings = [];
@@ -124,8 +124,8 @@ for (const s of stories) {
   const firstDay = s.days?.[0];
   const dated = !s.__isFeature && firstDay;
   const dayDate = dated
-    ? dateForDay(edition.date, firstDay)
-    : (() => { const d = new Date(`${edition.date}T12:00:00-04:00`); d.setDate(d.getDate() - 1); return d; })();
+    ? dateForDay(episode.date, firstDay)
+    : (() => { const d = new Date(`${episode.date}T12:00:00-04:00`); d.setDate(d.getDate() - 1); return d; })();
 
   const { date, hour } = dated
     ? slotFor(s, dayDate, taken)
@@ -136,7 +136,7 @@ for (const s of stories) {
   if (!s.social?.igTags?.length) warnings.push(`${s.id}: no igTags set — posting untagged`);
 
   // Prefer the titled banner version (scripts/ig-banners.py) when it exists.
-  const bannerRel = `/assets/ig/${edition.slug}/${s.id}.jpg`;
+  const bannerRel = `/assets/ig/${episode.slug}/${s.id}.jpg`;
   const hasBanner = fs.existsSync(path.join(process.cwd(), "public", bannerRel));
 
   posts.push({
@@ -144,7 +144,7 @@ for (const s of stories) {
     title: s.title,
     postAt: iso(date, hour),
     imageUrl: `${SITE}${hasBanner ? bannerRel : s.image}`,
-    permalink: `${SITE}/${edition.slug}/${s.id}`,
+    permalink: `${SITE}/${episode.slug}/${s.id}`,
     caption: buildCaption(s, tags),
     tags,
     status: "pending",
@@ -154,21 +154,21 @@ for (const s of stories) {
 posts.sort((a, b) => a.postAt.localeCompare(b.postAt));
 
 const queue = {
-  slug: edition.slug,
-  edition: `Vol. ${edition.volume} — No. ${edition.number}`,
+  slug: episode.slug,
+  episode: `Vol. ${episode.volume} — No. ${episode.number}`,
   approved: false,
   posts,
 };
 
 const outDir = path.join(process.cwd(), "content", "ig-queue");
 fs.mkdirSync(outDir, { recursive: true });
-const outPath = path.join(outDir, `${edition.slug}.json`);
+const outPath = path.join(outDir, `${episode.slug}.json`);
 fs.writeFileSync(outPath, JSON.stringify(queue, null, 2) + "\n");
 
 if (jsonOnly) {
   console.log(JSON.stringify(queue, null, 2));
 } else {
-  console.log(`\n★ Instagram queue — ${queue.edition} (${posts.length} posts)`);
+  console.log(`\n★ Instagram queue — ${queue.episode} (${posts.length} posts)`);
   console.log(`  staged at ${path.relative(process.cwd(), outPath)} · approved: ${queue.approved}\n`);
   for (const p of posts) {
     const when = new Date(p.postAt);
@@ -185,5 +185,5 @@ if (jsonOnly) {
     console.log("\n⚠ warnings:");
     for (const w of warnings) console.log(`  · ${w}`);
   }
-  console.log(`\nApprove with:  node scripts/ig-approve.mjs ${edition.slug}\n`);
+  console.log(`\nApprove with:  node scripts/ig-approve.mjs ${episode.slug}\n`);
 }

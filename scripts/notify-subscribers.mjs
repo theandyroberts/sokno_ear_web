@@ -28,7 +28,7 @@ const HTML = `<!doctype html><html><body style="margin:0;padding:0;background:#e
   </td></tr>
   <tr><td style="padding:0 24px;"><div style="border-top:2px solid #171512;font-size:0;line-height:0;height:0;">&nbsp;</div></td></tr>
   <tr><td style="padding:18px 24px 2px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.5;color:#171512;">Hey neighbor —</td></tr>
-  <tr><td style="padding:2px 24px 8px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.55;color:#171512;">A fresh issue of <strong>The South Knoxville Ear</strong> is up, and this one's a good time.</td></tr>
+  <tr><td style="padding:2px 24px 8px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.55;color:#171512;">A fresh episode of <strong>The South Knoxville Ear</strong> is up, and this one's a good time.</td></tr>
   <tr><td align="center" style="padding:8px 24px;">
     <a href="${HOME}" target="_blank"><img src="${HOME}/assets/spots/uw_trails.jpg" alt="A rider on the Urban Wilderness trails" width="512" style="display:block;width:100%;max-width:512px;height:auto;border:2px solid #171512;border-radius:8px;"></a>
   </td></tr>
@@ -43,7 +43,7 @@ const HTML = `<!doctype html><html><body style="margin:0;padding:0;background:#e
 
 const TEXT = `Hey neighbor —
 
-A fresh issue of The South Knoxville Ear is up, and this one's a good time.
+A fresh episode of The South Knoxville Ear is up, and this one's a good time.
 
 This week the Ear goes into the woods: a trail report for the Urban Wilderness, checked the morning we published — what's riding well, what's muddy, and the porch waiting at the trail's edge. Also: a happy correction (Shakespeare is NOT over — the run goes through Aug 9, and Thursday is still pay-what-you-can), the Jonathan Ave variance passed 4–0, Kern's throws a Back to School Bash Friday with a school-supply drive, and the bird banders are back Sunday at dawn.
 
@@ -86,25 +86,25 @@ for (const to of recipients) {
 
 // ── Publish-run recap to the city desk (send mode only) ─────────────────────
 if (mode === "send") {
-  let edition = null;
+  let episode = null;
   try {
-    const dir = path.join(process.cwd(), "content", "editions");
+    const dir = path.join(process.cwd(), "content", "episodes");
     const latest = fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort().at(-1);
-    edition = JSON.parse(fs.readFileSync(path.join(dir, latest), "utf8"));
+    episode = JSON.parse(fs.readFileSync(path.join(dir, latest), "utf8"));
   } catch (e) {
-    console.error("recap: could not load latest edition:", e.message);
+    console.error("recap: could not load latest episode:", e.message);
   }
   const sent = results.filter((r) => r.ok);
   const failed = results.filter((r) => !r.ok);
-  const storyLines = edition
-    ? [edition.feature, ...edition.stories].map((s, i) => `  ${i === 0 ? "★" : "·"} ${s.title}${s.days?.length ? ` (${s.days.join("/")})` : ""}`)
-    : ["  (edition not readable)"];
+  const storyLines = episode
+    ? [episode.feature, ...episode.stories].map((s, i) => `  ${i === 0 ? "★" : "·"} ${s.title}${s.days?.length ? ` (${s.days.join("/")})` : ""}`)
+    : ["  (episode not readable)"];
   const recap = [
-    edition ? `Vol. ${edition.volume} — No. ${edition.number} · ${edition.dateLabel ?? edition.date} is live at https://soknoear.com` : "New issue is live at https://soknoear.com",
+    episode ? `Vol. ${episode.volume} — No. ${episode.number} · ${episode.dateLabel ?? episode.date} is live at https://soknoear.com` : "New issue is live at https://soknoear.com",
     "",
-    "IN THIS ISSUE",
+    "IN THIS EPISODE",
     ...storyLines,
-    edition?.sidebar?.audio ? `  ♫ Audio briefing · ${edition.sidebar.audio.duration}` : "",
+    episode?.sidebar?.audio ? `  ♫ Audio briefing · ${episode.sidebar.audio.duration}` : "",
     "",
     "SUBSCRIBER NOTICES",
     `  Sent: ${sent.length} of ${results.length}`,
@@ -115,7 +115,7 @@ if (mode === "send") {
   ].filter((l) => l !== "").join("\n");
   const { error } = await resend.emails.send({
     from: FROM, to: REPLY_TO,
-    subject: `Publish recap — ${edition ? `Vol. ${edition.volume} No. ${edition.number} (${edition.shortDate ?? edition.date})` : "new issue"} · ${sent.length}/${results.length} notices sent`,
+    subject: `Publish recap — ${episode ? `Vol. ${episode.volume} No. ${episode.number} (${episode.shortDate ?? episode.date})` : "new issue"} · ${sent.length}/${results.length} notices sent`,
     text: recap,
   });
   console.log(error ? `recap: ERROR ${JSON.stringify(error)}` : "recap: sent to " + REPLY_TO);

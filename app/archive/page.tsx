@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { getPast } from "@/lib/editions";
+import { getPast } from "@/lib/episodes";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "The South Knoxville Ear — Past Issues" };
+export const metadata = { title: "The South Knoxville Ear — Past Episodes" };
 
 export default function Archive() {
   const past = getPast();
@@ -21,7 +21,7 @@ export default function Archive() {
   }
   return (
     <main style={{ maxWidth: 1100, margin: "0 auto", padding: "48px 24px" }}>
-      <h1 style={{ fontFamily: "var(--font-display)", textTransform: "uppercase" }}>Past Issues</h1>
+      <h1 style={{ fontFamily: "var(--font-display)", textTransform: "uppercase" }}>Past Episodes</h1>
       <ul style={{ listStyle: "none", padding: 0 }}>
         {past.map((e) => (
           <li key={e.slug} style={{ padding: "12px 0", borderBottom: "1px solid var(--paper-edge)" }}>

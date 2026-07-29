@@ -3,7 +3,7 @@ import * as React from "react";
 
 /**
  * Share affordance for a single story. The whole point is to hand the reader a
- * shareable permalink — /{slug}/{id}, which opens the edition with THIS story
+ * shareable permalink — /{slug}/{id}, which opens the episode with THIS story
  * promoted to the top for whoever receives it.
  *
  * Progressive enhancement, mid-2026 best practice:

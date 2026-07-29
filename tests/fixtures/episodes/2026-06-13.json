@@ -1,0 +1,54 @@
+{
+  "slug": "2026-06-13",
+  "volume": 1,
+  "number": 0,
+  "episode": "Weekend Episode",
+  "date": "2026-06-13",
+  "place": "South Knoxville, TN",
+  "feature": {
+    "id": "f",
+    "label": "Feature",
+    "title": "Last week",
+    "layout": "imageTop",
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Older episode."
+      }
+    ]
+  },
+  "scanner": [
+    {
+      "label": "Events",
+      "image": "/assets/spots/s1_flag.png",
+      "title": "Thing",
+      "blurb": "b",
+      "cue": "Jump to story",
+      "href": "#thing"
+    }
+  ],
+  "stories": [
+    {
+      "id": "thing",
+      "label": "Old Sevier",
+      "layout": "imageLeft",
+      "title": "A thing",
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Body."
+        }
+      ]
+    }
+  ],
+  "sidebar": {
+    "calendar": [
+      {
+        "month": "JUN",
+        "day": "13",
+        "title": "Thing",
+        "meta": "Noon"
+      }
+    ]
+  }
+}
