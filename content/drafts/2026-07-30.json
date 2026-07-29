@@ -11,70 +11,264 @@
     "id": "urban-wilderness",
     "label": "Urban Wilderness",
     "labelColor": "green",
-    "days": ["Thu", "Fri", "Sat", "Sun"],
+    "days": [
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
     "layout": "imageTop",
     "image": "/assets/spots/uw_trails.jpg",
     "imageCaption": "Sixty miles, out the back door",
     "title": "Your Urban Wilderness weekend — trail report checked this morning",
     "deck": "Baker Creek Bike Park is riding well, the Preserve needs a day to dry, and the club that builds it all just hired its first full-time trail crew. Plus: where the beer is when you roll out of the woods.",
     "facts": [
-      { "label": "Go ride", "value": "Baker Creek Bike Park · Marie Myers (Year Round Get Down)" },
-      { "label": "Muddy", "value": "Baker Creek Preserve — give it a dry day" },
-      { "label": "Heads up", "value": "Campground Connector at Marie Myers partially closed" },
-      { "label": "Afterwards", "value": "Trailhead Beer Market, 1317 Island Home Ave" },
-      { "label": "In the river", "value": "Open-water swim · Thu 6 PM · Suttree Landing Park" }
+      {
+        "label": "Go ride",
+        "value": "Baker Creek Bike Park · Marie Myers (Year Round Get Down)"
+      },
+      {
+        "label": "Muddy",
+        "value": "Baker Creek Preserve — give it a dry day"
+      },
+      {
+        "label": "Heads up",
+        "value": "Campground Connector at Marie Myers partially closed"
+      },
+      {
+        "label": "Afterwards",
+        "value": "Trailhead Beer Market, 1317 Island Home Ave"
+      },
+      {
+        "label": "In the river",
+        "value": "Open-water swim · Thu 6 PM · Suttree Landing Park"
+      }
     ],
     "body": [
-      { "type": "paragraph", "text": "Seven issues in, it's time we gave the woods themselves the front page. The Urban Wilderness — roughly sixty miles of trail strung through South Knoxville's back yard — is having a good week, and we checked the conditions board the morning this published so you don't ride into a mudhole." },
-      { "type": "paragraph", "text": "The report, per the Appalachian Mountain Bike Club: Baker Creek Bike Park is riding well, and Marie Myers Park's Year Round Get Down trails are open — with one caveat, a temporary partial closure of the Campground Connector, though every trail on that side is still reachable. Baker Creek Preserve is the one to skip until it dries; riding muddy trail is how good berms die, and somebody hand-built every one of them." },
-      { "type": "paragraph", "text": "About that somebody: the club just hired its first full-time trail crew member, which means the singletrack you ride free of charge now has a professional looking after it — and registration is open for the fall Trail Blazers program, which puts third-through-fifth graders on bikes in these same woods." },
-      { "type": "paragraph", "text": "And when you do roll out of the trees, dusty and pleased with yourself, the neighborhood has thought of that too. Trailhead Beer Market sits at 1317 Island Home Ave — self-described as the beer market in the back yard of the Urban Wilderness — and there are worse ways to end a ride than a cold one on that porch while the legs stop humming. They generally open at three on weekdays and one on weekends; their Facebook is the source of truth, or ring 865-409-4058. If you'd rather be in the water than on the dirt, the open-water swimmers meet Thursday at six at Suttree Landing Park for their weekly river swim. Sixty miles of trail, a river, and a front porch at the end of it. That's the whole pitch for living here." }
+      {
+        "type": "paragraph",
+        "text": "Seven issues in, it's time we gave the woods themselves the front page. The Urban Wilderness — roughly sixty miles of trail strung through South Knoxville's back yard — is having a good week, and we checked the conditions board the morning this published so you don't ride into a mudhole."
+      },
+      {
+        "type": "subhead",
+        "text": "The trail report"
+      },
+      {
+        "type": "paragraph",
+        "text": "The report, per the Appalachian Mountain Bike Club: Baker Creek Bike Park is riding well, and Marie Myers Park's Year Round Get Down trails are open — with one caveat, a temporary partial closure of the Campground Connector, though every trail on that side is still reachable. Baker Creek Preserve is the one to skip until it dries; riding muddy trail is how good berms die, and somebody hand-built every one of them."
+      },
+      {
+        "type": "subhead",
+        "text": "The people who build it"
+      },
+      {
+        "type": "paragraph",
+        "text": "About that somebody: the club just hired its first full-time trail crew member, which means the singletrack you ride free of charge now has a professional looking after it — and registration is open for the fall Trail Blazers program, which puts third-through-fifth graders on bikes in these same woods."
+      },
+      {
+        "type": "subhead",
+        "text": "After the ride"
+      },
+      {
+        "type": "paragraph",
+        "text": "And when you do roll out of the trees, dusty and pleased with yourself, the neighborhood has thought of that too. Trailhead Beer Market sits at 1317 Island Home Ave — self-described as the beer market in the back yard of the Urban Wilderness — and there are worse ways to end a ride than a cold one on that porch while the legs stop humming. They generally open at three on weekdays and one on weekends; their Facebook is the source of truth, or ring 865-409-4058. If you'd rather be in the water than on the dirt, the open-water swimmers meet Thursday at six at Suttree Landing Park for their weekly river swim. Sixty miles of trail, a river, and a front porch at the end of it. That's the whole pitch for living here."
+      }
     ],
     "sources": [
-      { "label": "AMBC — trail conditions & club news", "url": "https://ambcknox.org/" },
-      { "label": "Legacy Parks — Outdoor Knoxville calendar", "url": "https://legacyparks.org/outdoor-knoxville-guide/calendar/" },
-      { "label": "Trailhead Beer Market — listing", "url": "https://www.visitknoxville.com/listing/trailhead-beer-market/1966/" }
+      {
+        "label": "AMBC — trail conditions & club news",
+        "url": "https://ambcknox.org/"
+      },
+      {
+        "label": "Legacy Parks — Outdoor Knoxville calendar",
+        "url": "https://legacyparks.org/outdoor-knoxville-guide/calendar/"
+      },
+      {
+        "label": "Trailhead Beer Market — listing",
+        "url": "https://www.visitknoxville.com/listing/trailhead-beer-market/1966/"
+      }
     ],
-    "social": { "igTags": ["trailhead"], "igBanner": ["The Urban Wilderness", "This weekend's trail report"] }
+    "social": {
+      "igTags": [
+        "trailhead"
+      ],
+      "igBanner": [
+        "The Urban Wilderness",
+        "This weekend's trail report"
+      ]
+    }
   },
   "scanner": [
-    { "label": "Urban Wilderness", "labelColor": "green", "days": ["Thu", "Fri", "Sat", "Sun"], "hot": true, "image": "/assets/spots/uw_trails.jpg", "title": "The weekend trail report", "blurb": "What's riding well, what's muddy, and where the beer is after.", "cue": "Jump to story", "href": "#urban-wilderness" },
-    { "label": "Ijams Park", "labelColor": "teal", "days": ["Thu", "Fri", "Sat", "Sun"], "hot": true, "image": "/assets/spots/shakespeare_feature.jpg", "title": "Shakespeare: still on (our mistake)", "blurb": "We called it the closing weekend. It wasn't — the run goes through Aug 9.", "cue": "Jump to story", "href": "#shakespeare-correction" },
-    { "label": "Old Sevier", "labelColor": "rust", "image": "/assets/spots/planning_hearing.jpg", "title": "The variance passed", "blurb": "Jonathan Ave: approved 4–0, no opposition. And Kerbela gets its date.", "cue": "Jump to story", "href": "#variance-approved" },
-    { "label": "Kern's", "labelColor": "green", "days": ["Fri", "Sat", "Sun"], "image": "/assets/spots/kerns_school.jpg", "title": "Back to school at Kern's", "blurb": "A Friday bash with a supply drive, then jazz all weekend.", "cue": "Jump to story", "href": "#kerns-weekend" },
-    { "label": "Ijams Park", "labelColor": "teal", "days": ["Fri", "Sat", "Sun"], "image": "/assets/spots/ijams_storytelling.jpg", "title": "Trees, stories & banders", "blurb": "Tree ID, EcoArt for the kids, paddles, and Sunday's banding table.", "cue": "Jump to story", "href": "#ijams-weekend" },
-    { "label": "Suttree Landing", "labelColor": "gold", "days": ["Thu", "Fri", "Sat", "Sun"], "image": "/assets/spots/specials_board.jpg", "title": "The specials board", "blurb": "Ritas at Earl's, $4 pints at Hi-Wire, Singo, bottomless brunch.", "cue": "Jump to story", "href": "#specials-board" }
+    {
+      "label": "Urban Wilderness",
+      "labelColor": "green",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "hot": true,
+      "image": "/assets/spots/uw_trails.jpg",
+      "title": "The weekend trail report",
+      "blurb": "What's riding well, what's muddy, and where the beer is after.",
+      "cue": "Jump to story",
+      "href": "#urban-wilderness"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "hot": true,
+      "image": "/assets/spots/shakespeare_feature.jpg",
+      "title": "Shakespeare: still on (our mistake)",
+      "blurb": "We called it the closing weekend. It wasn't — the run goes through Aug 9.",
+      "cue": "Jump to story",
+      "href": "#shakespeare-correction"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "image": "/assets/spots/planning_hearing.jpg",
+      "title": "The variance passed",
+      "blurb": "Jonathan Ave: approved 4–0, no opposition. And Kerbela gets its date.",
+      "cue": "Jump to story",
+      "href": "#variance-approved"
+    },
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "image": "/assets/spots/kerns_school.jpg",
+      "title": "Back to school at Kern's",
+      "blurb": "A Friday bash with a supply drive, then jazz all weekend.",
+      "cue": "Jump to story",
+      "href": "#kerns-weekend"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "image": "/assets/spots/ijams_storytelling.jpg",
+      "title": "Trees, stories & banders",
+      "blurb": "Tree ID, EcoArt for the kids, paddles, and Sunday's banding table.",
+      "cue": "Jump to story",
+      "href": "#ijams-weekend"
+    },
+    {
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "image": "/assets/spots/specials_board.jpg",
+      "title": "The specials board",
+      "blurb": "Ritas at Earl's, $4 pints at Hi-Wire, Singo, bottomless brunch.",
+      "cue": "Jump to story",
+      "href": "#specials-board"
+    }
   ],
   "stories": [
     {
       "id": "shakespeare-correction",
       "label": "Ijams Park",
       "labelColor": "teal",
-      "days": ["Thu", "Fri", "Sat", "Sun"],
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
       "layout": "imageRight",
       "image": "/assets/spots/shakespeare_feature.jpg",
       "imageCaption": "Not done yet — happily",
       "title": "A correction, and a gift: Shakespeare is still on at Ijams Park",
       "deck": "Last week we called it the closing weekend. The calendar disagrees — performances run through August 9, including all four nights this weekend and a Sunday matinee.",
       "facts": [
-        { "label": "Thu Jul 30", "value": "The Merry Wives of Windsor — pay-what-you-can" },
-        { "label": "Fri Jul 31", "value": "King Henry V" },
-        { "label": "Sat Aug 1", "value": "The Merry Wives of Windsor" },
-        { "label": "Sun Aug 2", "value": "Henry V — 2 PM matinee & 7:30 PM" },
-        { "label": "Curtain", "value": "7:30 PM · doors 7 · runs through Aug 9" },
-        { "label": "Tickets", "value": "$20 · Thursdays pay-what-you-can · under 15 free" }
+        {
+          "label": "Thu Jul 30",
+          "value": "The Merry Wives of Windsor — pay-what-you-can"
+        },
+        {
+          "label": "Fri Jul 31",
+          "value": "King Henry V"
+        },
+        {
+          "label": "Sat Aug 1",
+          "value": "The Merry Wives of Windsor"
+        },
+        {
+          "label": "Sun Aug 2",
+          "value": "Henry V — 2 PM matinee & 7:30 PM"
+        },
+        {
+          "label": "Curtain",
+          "value": "7:30 PM · doors 7 · runs through Aug 9"
+        },
+        {
+          "label": "Tickets",
+          "value": "$20 · Thursdays pay-what-you-can · under 15 free"
+        }
       ],
       "body": [
-        { "type": "paragraph", "text": "First, the correction, because we'd rather eat it plainly than quietly: last week this page called it Shakespeare's closing weekend at Ijams Park. It wasn't. The Tennessee Stage Company's festival runs through August 9, and both companies of players are on the lawn all four nights of this weekend. The error was ours, and if it nudged you off the couch a week early — well, there are worse mistakes." },
-        { "type": "paragraph", "text": "So here's what's actually on: The Merry Wives of Windsor Thursday and Saturday, King Henry V Friday — and Sunday, Henry V does a two o'clock matinee and a 7:30 evening show. Thursday remains pay-what-you-can, kids under fifteen are free, parking's free thirty minutes before curtain, and the lawn is still the seating, so bring the chair." },
-        { "type": "paragraph", "text": "And you now have two more weekends beyond this one. Consider the record corrected and the bar lowered for your excuses." }
+        {
+          "type": "paragraph",
+          "text": "First, the correction, because we'd rather eat it plainly than quietly: last week this page called it Shakespeare's closing weekend at Ijams Park. It wasn't. The Tennessee Stage Company's festival runs through August 9, and both companies of players are on the lawn all four nights of this weekend. The error was ours, and if it nudged you off the couch a week early — well, there are worse mistakes."
+        },
+        {
+          "type": "subhead",
+          "text": "What's actually on"
+        },
+        {
+          "type": "paragraph",
+          "text": "So here's what's actually on: The Merry Wives of Windsor Thursday and Saturday, King Henry V Friday — and Sunday, Henry V does a two o'clock matinee and a 7:30 evening show. Thursday remains pay-what-you-can, kids under fifteen are free, parking's free thirty minutes before curtain, and the lawn is still the seating, so bring the chair."
+        },
+        {
+          "type": "paragraph",
+          "text": "And you now have two more weekends beyond this one. Consider the record corrected and the bar lowered for your excuses."
+        }
       ],
       "sources": [
-        { "label": "Ijams — Shakespeare at Ijams", "url": "https://www.ijams.org/shakespeare" },
-        { "label": "Tennessee Stage Company", "url": "https://tennesseestage.com/knoxville-shakespeare/" }
+        {
+          "label": "Ijams — Shakespeare at Ijams",
+          "url": "https://www.ijams.org/shakespeare"
+        },
+        {
+          "label": "Tennessee Stage Company",
+          "url": "https://tennesseestage.com/knoxville-shakespeare/"
+        }
       ],
-      "event": { "startDate": "2026-07-30T19:30:00-04:00", "locationName": "Ijams Nature Center", "locationAddress": "2915 Island Home Ave" },
-      "social": { "igTags": ["ijams", "tennessee-stage"], "igBanner": ["Shakespeare at Ijams Park", "Still on — through August 9"] }
+      "event": {
+        "startDate": "2026-07-30T19:30:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave"
+      },
+      "social": {
+        "igTags": [
+          "ijams",
+          "tennessee-stage"
+        ],
+        "igBanner": [
+          "Shakespeare at Ijams Park",
+          "Still on — through August 9"
+        ]
+      }
     },
     {
       "id": "variance-approved",
@@ -86,110 +280,312 @@
       "title": "That variance sign on Jonathan Avenue? Approved, 4–0.",
       "deck": "The corner-setback request we decoded two weeks ago sailed through the Board of Zoning Appeals with no opposition. And the Kerbela apartments finally have their committee date: August 13.",
       "facts": [
-        { "label": "BZA-26-0042", "value": "Approved 4–0 · Jul 21" },
-        { "label": "The ask", "value": "Corner setback 15 ft → 12 ft" },
-        { "label": "Kerbela apartments", "value": "Back before the ARC · Aug 13" }
+        {
+          "label": "BZA-26-0042",
+          "value": "Approved 4–0 · Jul 21"
+        },
+        {
+          "label": "The ask",
+          "value": "Corner setback 15 ft → 12 ft"
+        },
+        {
+          "label": "Kerbela apartments",
+          "value": "Back before the ARC · Aug 13"
+        }
       ],
       "body": [
-        { "type": "paragraph", "text": "Closure for anyone who's been following the little \"VARIANCE\" sign in the grass on Jonathan Avenue: the Board of Zoning Appeals took it up on July 21 and approved it four to nothing. The homeowner asked to build three feet closer to the corner than the setback allows — twelve feet instead of fifteen — nobody showed up to object, and the board's motion pointed to the lot's irregular topography, which is a polite way of saying corner lots on a South Knoxville hillside are shaped like nothing in the zoning manual. The board meets next on August 18, if you've got a sign of your own to wonder about." },
-        { "type": "paragraph", "text": "The bigger file finally moved too. The roughly 220-unit apartment plan for the old Kerbela Shriners Temple site — remanded to the Administrative Review Committee back on July 9 and left hanging since — now has its date: August 13. That's the hearing where the project's seven requests to bend the South Waterfront code get another look. The bluff has waited a month; it can wait two more weeks." }
+        {
+          "type": "paragraph",
+          "text": "Closure for anyone who's been following the little \"VARIANCE\" sign in the grass on Jonathan Avenue: the Board of Zoning Appeals took it up on July 21 and approved it four to nothing. The homeowner asked to build three feet closer to the corner than the setback allows — twelve feet instead of fifteen — nobody showed up to object, and the board's motion pointed to the lot's irregular topography, which is a polite way of saying corner lots on a South Knoxville hillside are shaped like nothing in the zoning manual. The board meets next on August 18, if you've got a sign of your own to wonder about."
+        },
+        {
+          "type": "subhead",
+          "text": "Meanwhile, on the bluff"
+        },
+        {
+          "type": "paragraph",
+          "text": "The bigger file finally moved too. The roughly 220-unit apartment plan for the old Kerbela Shriners Temple site — remanded to the Administrative Review Committee back on July 9 and left hanging since — now has its date: August 13. That's the hearing where the project's seven requests to bend the South Waterfront code get another look. The bluff has waited a month; it can wait two more weeks."
+        }
       ],
       "sources": [
-        { "label": "BZA minutes — July 21, 2026", "url": "https://www.knoxvilletn.gov/UserFiles/Servers/Server_109478/File/Boards/zoningappeals/minutes/07.21.2026%20BZA%20Minutes(FINAL).pdf" },
-        { "label": "Knox Planning — case 4-A-26-OB (Kerbela)", "url": "https://knoxplanning.org/cases/4-a-26-ob" }
+        {
+          "label": "BZA minutes — July 21, 2026",
+          "url": "https://www.knoxvilletn.gov/UserFiles/Servers/Server_109478/File/Boards/zoningappeals/minutes/07.21.2026%20BZA%20Minutes(FINAL).pdf"
+        },
+        {
+          "label": "Knox Planning — case 4-A-26-OB (Kerbela)",
+          "url": "https://knoxplanning.org/cases/4-a-26-ob"
+        }
       ],
-      "social": { "igBanner": ["The Jonathan Ave Variance", "Approved, four to nothing"] }
+      "social": {
+        "igBanner": [
+          "The Jonathan Ave Variance",
+          "Approved, four to nothing"
+        ]
+      }
     },
     {
       "id": "kerns-weekend",
       "label": "Kern's",
       "labelColor": "green",
-      "days": ["Fri", "Sat", "Sun"],
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
       "layout": "imageRight",
       "image": "/assets/spots/kerns_school.jpg",
       "imageCaption": "Summer's last inflatable",
       "title": "Back to school at Kern's — a bash, a supply drive, and jazz all weekend",
       "deck": "Friday the food hall throws summer a send-off with inflatables and a school-supply drive, then hands the weekend to the jazz players.",
       "facts": [
-        { "label": "Fri Jul 31", "value": "Back to School Bash · 11 AM–3 PM" },
-        { "label": "Bring", "value": "School supplies — drive benefits Feed the Children" },
-        { "label": "Music", "value": "Brian Clay Gruuv Fri 7 PM · Sky Hatcher Trio Sat 6 PM · Jason Ellis Sun 1 PM" },
-        { "label": "Where", "value": "Kern's, 2201 Kern's Rising Way" }
+        {
+          "label": "Fri Jul 31",
+          "value": "Back to School Bash · 11 AM–3 PM"
+        },
+        {
+          "label": "Bring",
+          "value": "School supplies — drive benefits Feed the Children"
+        },
+        {
+          "label": "Music",
+          "value": "Brian Clay Gruuv Fri 7 PM · Sky Hatcher Trio Sat 6 PM · Jason Ellis Sun 1 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Kern's, 2201 Kern's Rising Way"
+        }
       ],
       "body": [
-        { "type": "paragraph", "text": "School starts back soon, and Kern's is marking the occasion the right way: a Back to School Bash on Friday from eleven to three, with inflatables, an activity table, face painting — and a school-supply drive with Feed the Children, so toss a pack of pencils or a box of crayons in the car and send a kid into August properly armed." },
-        { "type": "paragraph", "text": "Then the weekend turns to jazz. Brian Clay's high-energy Gruuv Series takes the stage Friday from seven to ten, the Sky Hatcher Jazz Trio — out of UT's jazz program — plays Saturday at six, and Jason Ellis winds it down easy Sunday afternoon, one to four. Bounce house by day, jazz by night: the food hall contains multitudes." }
+        {
+          "type": "paragraph",
+          "text": "School starts back soon, and Kern's is marking the occasion the right way: a Back to School Bash on Friday from eleven to three, with inflatables, an activity table, face painting — and a school-supply drive with Feed the Children, so toss a pack of pencils or a box of crayons in the car and send a kid into August properly armed."
+        },
+        {
+          "type": "subhead",
+          "text": "Then, the jazz"
+        },
+        {
+          "type": "paragraph",
+          "text": "Then the weekend turns to jazz. Brian Clay's high-energy Gruuv Series takes the stage Friday from seven to ten, the Sky Hatcher Jazz Trio — out of UT's jazz program — plays Saturday at six, and Jason Ellis winds it down easy Sunday afternoon, one to four. Bounce house by day, jazz by night: the food hall contains multitudes."
+        }
       ],
       "sources": [
-        { "label": "Kern's — calendar", "url": "https://kernsbakery.com/calendar/" }
+        {
+          "label": "Kern's — calendar",
+          "url": "https://kernsbakery.com/calendar/"
+        }
       ],
-      "event": { "startDate": "2026-07-31T11:00:00-04:00", "locationName": "Kern's Food Hall", "locationAddress": "2201 Kern's Rising Way" },
-      "social": { "igTags": ["kerns"], "igBanner": ["Back to School at Kern's!", "Bash Friday · jazz all weekend"] }
+      "event": {
+        "startDate": "2026-07-31T11:00:00-04:00",
+        "locationName": "Kern's Food Hall",
+        "locationAddress": "2201 Kern's Rising Way"
+      },
+      "social": {
+        "igTags": [
+          "kerns"
+        ],
+        "igBanner": [
+          "Back to School at Kern's!",
+          "Bash Friday · jazz all weekend"
+        ]
+      }
     },
     {
       "id": "ijams-weekend",
       "label": "Ijams Park",
       "labelColor": "teal",
-      "days": ["Fri", "Sat", "Sun"],
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
       "layout": "imageLeft",
       "image": "/assets/spots/ijams_storytelling.jpg",
       "imageCaption": "Saturday belongs to the kids",
       "title": "Beyond the stage at Ijams Park: tree school, EcoArt, and the banders",
       "deck": "Saturday stacks up for families — learn your oaks from your hickories at 9:30, stories at 10, EcoArt for the 6-to-12 crowd at 3 — and Sunday morning the banding table returns.",
       "facts": [
-        { "label": "Sat Aug 1", "value": "Tree ID workshop 9:30 · Storytelling 10 AM · EcoArt (ages 6–12) 3 PM" },
-        { "label": "Fri & Sat", "value": "Evening Paddle · 7:30–9:30 PM" },
-        { "label": "Sun Aug 2", "value": "Bird Banding 7:30 AM · Self Care yoga 11:30 AM" }
+        {
+          "label": "Sat Aug 1",
+          "value": "Tree ID workshop 9:30 · Storytelling 10 AM · EcoArt (ages 6–12) 3 PM"
+        },
+        {
+          "label": "Fri & Sat",
+          "value": "Evening Paddle · 7:30–9:30 PM"
+        },
+        {
+          "label": "Sun Aug 2",
+          "value": "Bird Banding 7:30 AM · Self Care yoga 11:30 AM"
+        }
       ],
       "body": [
-        { "type": "paragraph", "text": "Saturday at Ijams Park is a full curriculum. The beginner Tree ID workshop at 9:30 teaches you to tell an oak from a hickory before lunch; free storytelling runs at the Nature Playscape from ten; and the EcoArt Adventure puts the six-to-twelve crowd to work making art out of the ecosystem from three to five. Evening paddles go out both Friday and Saturday at 7:30 — register ahead, boats provided." },
-        { "type": "paragraph", "text": "Sunday belongs to the early birds: the banding table is back at 7:30 AM, researchers netting and releasing songbirds close enough to count the feathers, followed by Self Care Sunday yoga in the trees at 11:30. Coffee first; the birds set the schedule." }
+        {
+          "type": "paragraph",
+          "text": "Saturday at Ijams Park is a full curriculum. The beginner Tree ID workshop at 9:30 teaches you to tell an oak from a hickory before lunch; free storytelling runs at the Nature Playscape from ten; and the EcoArt Adventure puts the six-to-twelve crowd to work making art out of the ecosystem from three to five. Evening paddles go out both Friday and Saturday at 7:30 — register ahead, boats provided."
+        },
+        {
+          "type": "subhead",
+          "text": "Sunday morning"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sunday belongs to the early birds: the banding table is back at 7:30 AM, researchers netting and releasing songbirds close enough to count the feathers, followed by Self Care Sunday yoga in the trees at 11:30. Coffee first; the birds set the schedule."
+        }
       ],
       "sources": [
-        { "label": "Ijams events calendar", "url": "https://www.ijams.org/calendar-of-events" }
+        {
+          "label": "Ijams events calendar",
+          "url": "https://www.ijams.org/calendar-of-events"
+        }
       ],
-      "event": { "startDate": "2026-08-01T09:30:00-04:00", "locationName": "Ijams Nature Center", "locationAddress": "2915 Island Home Ave" },
-      "social": { "igTags": ["ijams"], "igBanner": ["The Weekend at Ijams Park", "Tree school, EcoArt & the banders"] }
+      "event": {
+        "startDate": "2026-08-01T09:30:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "The Weekend at Ijams Park",
+          "Tree school, EcoArt & the banders"
+        ]
+      }
     },
     {
       "id": "specials-board",
       "label": "Suttree Landing",
       "labelColor": "gold",
-      "days": ["Thu", "Fri", "Sat", "Sun"],
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
       "layout": "imageRight",
       "image": "/assets/spots/specials_board.jpg",
       "imageCaption": "The week, in chalk",
       "title": "The specials board: ritas, $4 pints, Singo, and bottomless brunch",
       "deck": "The standing orders across the neighborhood, all four days, so you can plan the weekend by wallet.",
       "facts": [
-        { "label": "Thu", "value": "Earl's $10 Patrón ritas 4–6 · Hi-Wire $4 drafts all day · Singo at SoKno Taco 7 PM" },
-        { "label": "Fri", "value": "Earl's $9 spicy ritas 4–6 · Frozen Fridays at SoKno Taco" },
-        { "label": "Sat", "value": "Earl's $8 house margs all day · Mimosas bottomless brunch 9–3" },
-        { "label": "Sun", "value": "Earl's $7 mimosas & bloodys · SoKno Taco all-day happy hour · Mimosas brunch 9–3" }
+        {
+          "label": "Thu",
+          "value": "Earl's $10 Patrón ritas 4–6 · Hi-Wire $4 drafts all day · Singo at SoKno Taco 7 PM"
+        },
+        {
+          "label": "Fri",
+          "value": "Earl's $9 spicy ritas 4–6 · Frozen Fridays at SoKno Taco"
+        },
+        {
+          "label": "Sat",
+          "value": "Earl's $8 house margs all day · Mimosas bottomless brunch 9–3"
+        },
+        {
+          "label": "Sun",
+          "value": "Earl's $7 mimosas & bloodys · SoKno Taco all-day happy hour · Mimosas brunch 9–3"
+        }
       ],
       "body": [
-        { "type": "paragraph", "text": "Thursday is the cheap-drink capital of the week: ten-dollar Patrón mango margaritas at Earl's from four to six, four-dollar drafts at Hi-Wire from open to close, and Singo — bingo, but the numbers are songs — at SoKno Taco Cantina at seven. Friday brings Earl's nine-dollar spicy pineapple ritas back to the waterfront, plus SoKno Taco's Frozen Fridays for the after-trail crowd." },
-        { "type": "paragraph", "text": "The weekend proper: Earl's pours eight-dollar house margaritas all day Saturday and seven-dollar mimosas and Bloody Marys all day Sunday, Mimosas runs its bottomless brunch both mornings from nine to three, and SoKno Taco's Sunday happy hour lasts all day. Nobody in this neighborhood should ever pay full price for a drink on a weekend. Consider this your clip-and-save." }
+        {
+          "type": "paragraph",
+          "text": "Thursday is the cheap-drink capital of the week: ten-dollar Patrón mango margaritas at Earl's from four to six, four-dollar drafts at Hi-Wire from open to close, and Singo — bingo, but the numbers are songs — at SoKno Taco Cantina at seven. Friday brings Earl's nine-dollar spicy pineapple ritas back to the waterfront, plus SoKno Taco's Frozen Fridays for the after-trail crowd."
+        },
+        {
+          "type": "subhead",
+          "text": "The weekend proper"
+        },
+        {
+          "type": "paragraph",
+          "text": "The weekend proper: Earl's pours eight-dollar house margaritas all day Saturday and seven-dollar mimosas and Bloody Marys all day Sunday, Mimosas runs its bottomless brunch both mornings from nine to three, and SoKno Taco's Sunday happy hour lasts all day. Nobody in this neighborhood should ever pay full price for a drink on a weekend. Consider this your clip-and-save."
+        }
       ],
       "sources": [
-        { "label": "Earl's — specials", "url": "https://earlsknox.com/specials" },
-        { "label": "SoKno Taco Cantina", "url": "http://soknota.co/" },
-        { "label": "Mimosas", "url": "https://mimosasknoxville.com/" },
-        { "label": "Visit Knoxville — Hi-Wire Pint Night", "url": "https://www.visitknoxville.com/event/thursday-pint-night-@-hi-wire-brewing-knoxville/27266/" }
+        {
+          "label": "Earl's — specials",
+          "url": "https://earlsknox.com/specials"
+        },
+        {
+          "label": "SoKno Taco Cantina",
+          "url": "http://soknota.co/"
+        },
+        {
+          "label": "Mimosas",
+          "url": "https://mimosasknoxville.com/"
+        },
+        {
+          "label": "Visit Knoxville — Hi-Wire Pint Night",
+          "url": "https://www.visitknoxville.com/event/thursday-pint-night-@-hi-wire-brewing-knoxville/27266/"
+        }
       ],
-      "social": { "igTags": ["earls", "hiwire", "mimosas"], "igBanner": ["The SoKno Specials Board", "Ritas, pints & bottomless brunch"] }
+      "social": {
+        "igTags": [
+          "earls",
+          "hiwire",
+          "mimosas"
+        ],
+        "igBanner": [
+          "The SoKno Specials Board",
+          "Ritas, pints & bottomless brunch"
+        ]
+      }
     }
   ],
   "sidebar": {
     "calendar": [
-      { "month": "JUL", "day": "30", "title": "Open-water river swim", "meta": "6 PM · Suttree Landing Park", "starred": true },
-      { "month": "JUL", "day": "30", "title": "Merry Wives — pay-what-you-can", "meta": "7:30 PM · Ijams Park" },
-      { "month": "JUL", "day": "31", "title": "Back to School Bash", "meta": "11 AM–3 PM · Kern's", "starred": true },
-      { "month": "JUL", "day": "31", "title": "Brian Clay Gruuv Series", "meta": "7 PM · Kern's" },
-      { "month": "AUG", "day": "1", "title": "Tree ID workshop", "meta": "9:30 AM · Ijams Park" },
-      { "month": "AUG", "day": "1", "title": "EcoArt: Ecosystem Explorers", "meta": "3 PM · Ijams Park" },
-      { "month": "AUG", "day": "2", "title": "Bird Banding", "meta": "7:30 AM · Ijams Park", "starred": true },
-      { "month": "AUG", "day": "13", "title": "Kerbela hearing (ARC)", "meta": "The bluff gets its date", "starred": true }
+      {
+        "month": "JUL",
+        "day": "30",
+        "title": "Open-water river swim",
+        "meta": "6 PM · Suttree Landing Park",
+        "starred": true
+      },
+      {
+        "month": "JUL",
+        "day": "30",
+        "title": "Merry Wives — pay-what-you-can",
+        "meta": "7:30 PM · Ijams Park"
+      },
+      {
+        "month": "JUL",
+        "day": "31",
+        "title": "Back to School Bash",
+        "meta": "11 AM–3 PM · Kern's",
+        "starred": true
+      },
+      {
+        "month": "JUL",
+        "day": "31",
+        "title": "Brian Clay Gruuv Series",
+        "meta": "7 PM · Kern's"
+      },
+      {
+        "month": "AUG",
+        "day": "1",
+        "title": "Tree ID workshop",
+        "meta": "9:30 AM · Ijams Park"
+      },
+      {
+        "month": "AUG",
+        "day": "1",
+        "title": "EcoArt: Ecosystem Explorers",
+        "meta": "3 PM · Ijams Park"
+      },
+      {
+        "month": "AUG",
+        "day": "2",
+        "title": "Bird Banding",
+        "meta": "7:30 AM · Ijams Park",
+        "starred": true
+      },
+      {
+        "month": "AUG",
+        "day": "13",
+        "title": "Kerbela hearing (ARC)",
+        "meta": "The bluff gets its date",
+        "starred": true
+      }
     ]
   }
 }
