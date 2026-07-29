@@ -533,6 +533,13 @@
     }
   ],
   "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen — the Urban Wilderness trail report, a happy Shakespeare correction, the Jonathan Ave variance verdict, and Kern's Back to School Bash.",
+      "duration": "02:05",
+      "src": "/audio/2026-07-30.mp3"
+    },
     "calendar": [
       {
         "month": "JUL",

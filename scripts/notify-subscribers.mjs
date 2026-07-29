@@ -15,7 +15,7 @@ const PREVIEW_TO = "andy@note15.com";
 const HOME = "https://soknoear.com";
 const EXCLUDE = new Set(["test@note15.com"]); // obvious test rows
 
-const SUBJECT = "A Kern's hoedown, Shakespeare's last weekend, and a new brunch room — this week's Ear";
+const SUBJECT = "The Urban Wilderness trail report — and a happy Shakespeare correction";
 
 const HTML = `<!doctype html><html><body style="margin:0;padding:0;background:#e9dcc4;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#e9dcc4;"><tr><td align="center" style="padding:24px 12px;">
@@ -30,9 +30,9 @@ const HTML = `<!doctype html><html><body style="margin:0;padding:0;background:#e
   <tr><td style="padding:18px 24px 2px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.5;color:#171512;">Hey neighbor —</td></tr>
   <tr><td style="padding:2px 24px 8px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.55;color:#171512;">A fresh issue of <strong>The South Knoxville Ear</strong> is up, and this one's a good time.</td></tr>
   <tr><td align="center" style="padding:8px 24px;">
-    <a href="${HOME}" target="_blank"><img src="${HOME}/assets/spots/kerns_hoedown.jpg" alt="Country dancing at the Kern's Ho'Down Social" width="512" style="display:block;width:100%;max-width:512px;height:auto;border:2px solid #171512;border-radius:8px;"></a>
+    <a href="${HOME}" target="_blank"><img src="${HOME}/assets/spots/uw_trails.jpg" alt="A rider on the Urban Wilderness trails" width="512" style="display:block;width:100%;max-width:512px;height:auto;border:2px solid #171512;border-radius:8px;"></a>
   </td></tr>
-  <tr><td style="padding:10px 24px 4px;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.6;color:#171512;">Big, busy weekend in SoKno. At <strong>Kern's</strong>, the World Cup screen comes down and the boots come out — a Ho'Down Social Friday night, country dancing right inside the hall, no partner required. It's also <strong>Shakespeare's last weekend</strong> on the Ijams Park lawn (Thursday's Henry V is pay-what-you-can, Sunday moves indoors for a double-header). Plus a new riverfront brunch room, <strong>Mimosas</strong>; an emo drag night and free Sunday bluegrass in Old Sevier; and the bird banders back at dawn Sunday.</td></tr>
+  <tr><td style="padding:10px 24px 4px;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.6;color:#171512;">This week the Ear goes into the woods: a <strong>trail report for the Urban Wilderness</strong>, checked the morning we published — what's riding well, what's muddy, and the porch waiting at the trail's edge. Also: a happy correction (<strong>Shakespeare is NOT over</strong> — the run goes through Aug 9, and Thursday is still pay-what-you-can), the Jonathan Ave variance passed 4–0, Kern's throws a <strong>Back to School Bash</strong> Friday with a school-supply drive, and the bird banders are back Sunday at dawn.</td></tr>
   <tr><td align="center" style="padding:18px 24px 6px;">
     <a href="${HOME}" target="_blank" style="display:inline-block;background:#A94A34;color:#F3E8D2;text-decoration:none;font-family:Georgia,serif;font-weight:bold;font-size:15px;letter-spacing:0.06em;text-transform:uppercase;padding:13px 28px;border-radius:6px;">★ Read this weekend's Ear</a>
   </td></tr>
@@ -45,7 +45,7 @@ const TEXT = `Hey neighbor —
 
 A fresh issue of The South Knoxville Ear is up, and this one's a good time.
 
-Big, busy weekend in SoKno. At Kern's, the World Cup screen comes down and the boots come out — a Ho'Down Social Friday night, country dancing right inside the hall, no partner required. It's also Shakespeare's last weekend on the Ijams Park lawn (Thursday's Henry V is pay-what-you-can, Sunday moves indoors for a double-header). Plus a new riverfront brunch room, Mimosas; an emo drag night and free Sunday bluegrass in Old Sevier; and the bird banders back at dawn Sunday.
+This week the Ear goes into the woods: a trail report for the Urban Wilderness, checked the morning we published — what's riding well, what's muddy, and the porch waiting at the trail's edge. Also: a happy correction (Shakespeare is NOT over — the run goes through Aug 9, and Thursday is still pay-what-you-can), the Jonathan Ave variance passed 4–0, Kern's throws a Back to School Bash Friday with a school-supply drive, and the bird banders are back Sunday at dawn.
 
 Read this weekend's Ear: ${HOME}
 
