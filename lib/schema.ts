@@ -85,6 +85,8 @@ export const StoryCard = z.object({
 export const CalEvent = z.object({
   month: z.string(), day: z.string(), title: z.string(),
   meta: z.string().optional(), starred: z.boolean().default(false),
+  /** Jump target — usually "#story-id" of the story covering this event. */
+  href: z.string().optional(),
 });
 
 export const Audio = z.object({

@@ -539,52 +539,60 @@
         "day": "30",
         "title": "Open-water river swim",
         "meta": "6 PM · Suttree Landing Park",
-        "starred": true
+        "starred": true,
+        "href": "#urban-wilderness"
       },
       {
         "month": "JUL",
         "day": "30",
         "title": "Merry Wives — pay-what-you-can",
-        "meta": "7:30 PM · Ijams Park"
+        "meta": "7:30 PM · Ijams Park",
+        "href": "#shakespeare-correction"
       },
       {
         "month": "JUL",
         "day": "31",
         "title": "Back to School Bash",
         "meta": "11 AM–3 PM · Kern's",
-        "starred": true
+        "starred": true,
+        "href": "#kerns-weekend"
       },
       {
         "month": "JUL",
         "day": "31",
         "title": "Brian Clay Gruuv Series",
-        "meta": "7 PM · Kern's"
+        "meta": "7 PM · Kern's",
+        "href": "#kerns-weekend"
       },
       {
         "month": "AUG",
         "day": "1",
         "title": "Tree ID workshop",
-        "meta": "9:30 AM · Ijams Park"
+        "meta": "9:30 AM · Ijams Park",
+        "href": "#ijams-weekend"
       },
       {
         "month": "AUG",
         "day": "1",
         "title": "EcoArt: Ecosystem Explorers",
-        "meta": "3 PM · Ijams Park"
+        "meta": "3 PM · Ijams Park",
+        "href": "#ijams-weekend"
       },
       {
         "month": "AUG",
         "day": "2",
         "title": "Bird Banding",
         "meta": "7:30 AM · Ijams Park",
-        "starred": true
+        "starred": true,
+        "href": "#ijams-weekend"
       },
       {
         "month": "AUG",
         "day": "13",
         "title": "Kerbela hearing (ARC)",
         "meta": "The bluff gets its date",
-        "starred": true
+        "starred": true,
+        "href": "#variance-approved"
       }
     ]
   }

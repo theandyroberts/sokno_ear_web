@@ -77,8 +77,13 @@ export function Paper({ edition, permalinks = true }: { edition: Edition; permal
               )}
               <Well title="What's Happening Soon">
                 {sidebar.calendar.map((c, i) => (
-                  <CalendarItem key={i} month={c.month} day={c.day} title={c.title} meta={c.meta} starred={c.starred} divider={i < sidebar.calendar.length - 1} />
+                  <CalendarItem key={i} month={c.month} day={c.day} title={c.title} meta={c.meta} starred={c.starred} href={c.href} divider={i < sidebar.calendar.length - 1} />
                 ))}
+                {sidebar.calendar.some((c) => c.starred) && (
+                  <div style={{ padding: "8px 4px 4px", fontFamily: "var(--font-label)", fontSize: "var(--label-sm)", letterSpacing: "var(--tracking-label)", textTransform: "uppercase", color: "var(--ink-faded)", textAlign: "right" }}>
+                    <span aria-hidden style={{ color: "var(--rust)" }}>★</span> don&rsquo;t miss it
+                  </div>
+                )}
               </Well>
               <SubscribeForm />
             </aside>

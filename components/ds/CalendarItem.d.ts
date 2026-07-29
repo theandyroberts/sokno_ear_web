@@ -12,6 +12,8 @@ export interface CalendarItemProps {
   starred?: boolean;
   /** Hairline divider under the row. @default true */
   divider?: boolean;
+  /** Make the whole row a link (usually "#story-id" to jump to coverage). */
+  href?: string;
   style?: React.CSSProperties;
 }
 
