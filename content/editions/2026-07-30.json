@@ -40,6 +40,10 @@
         "value": "Trailhead Beer Market, 1317 Island Home Ave"
       },
       {
+        "label": "Fri Jul 31",
+        "value": "Andrew Broschart live at Trailhead"
+      },
+      {
         "label": "In the river",
         "value": "Open-water swim · Thu 6 PM · Suttree Landing Park"
       }
@@ -71,7 +75,7 @@
       },
       {
         "type": "paragraph",
-        "text": "And when you do roll out of the trees, dusty and pleased with yourself, the neighborhood has thought of that too. Trailhead Beer Market sits at 1317 Island Home Ave — self-described as the beer market in the back yard of the Urban Wilderness — and there are worse ways to end a ride than a cold one on that porch while the legs stop humming. They generally open at three on weekdays and one on weekends; their Facebook is the source of truth, or ring 865-409-4058. If you'd rather be in the water than on the dirt, the open-water swimmers meet Thursday at six at Suttree Landing Park for their weekly river swim. Sixty miles of trail, a river, and a front porch at the end of it. That's the whole pitch for living here."
+        "text": "And when you do roll out of the trees, dusty and pleased with yourself, the neighborhood has thought of that too. Trailhead Beer Market sits at 1317 Island Home Ave — self-described as the beer market in the back yard of the Urban Wilderness — and there are worse ways to end a ride than a cold one on that porch while the legs stop humming. They generally open at three on weekdays and one on weekends; their Facebook is the source of truth, or ring 865-409-4058. And this Friday the porch comes with a soundtrack — Andrew Broschart plays Trailhead on the 31st, per the market's own feed. If you'd rather be in the water than on the dirt, the open-water swimmers meet Thursday at six at Suttree Landing Park for their weekly river swim. Sixty miles of trail, a river, and a front porch at the end of it. That's the whole pitch for living here."
       }
     ],
     "sources": [
@@ -86,6 +90,10 @@
       {
         "label": "Trailhead Beer Market — listing",
         "url": "https://www.visitknoxville.com/listing/trailhead-beer-market/1966/"
+      },
+      {
+        "label": "Trailhead Beer Market — Instagram",
+        "url": "https://www.instagram.com/trailheadbeer/"
       }
     ],
     "social": {
@@ -570,6 +578,14 @@
         "title": "Brian Clay Gruuv Series",
         "meta": "7 PM · Kern's",
         "href": "#kerns-weekend"
+      },
+      {
+        "month": "JUL",
+        "day": "31",
+        "title": "Andrew Broschart at Trailhead",
+        "meta": "Trailhead Beer Market · 1317 Island Home Ave",
+        "starred": false,
+        "href": "#urban-wilderness"
       },
       {
         "month": "AUG",
