@@ -151,6 +151,60 @@ for (const s of stories) {
   });
 }
 
+// ── Weekly promo pair (scripts/ig-promos.py), posted AT the drop as feed dividers.
+// call-the-ear first, episode-drop a minute later so the episode card lands newest.
+function isoNowPlus(min) {
+  const d = new Date(Date.now() + min * 60000);
+  const p = (n) => String(n).padStart(2, "0");
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}:00-04:00`;
+}
+const promoDir = path.join(process.cwd(), "public", "assets", "ig", episode.slug);
+const storyTitles = episode.stories.slice(0, 3).map((s) => s.title.split(" — ")[0].split(":")[0]);
+const PROMOS = [
+  {
+    id: "call-the-ear",
+    title: "Call the Ear (weekly ad)",
+    offset: 0,
+    caption: [
+      "Know about a show, a pop-up, a grand opening, a food or drink special?",
+      "",
+      "Call or text the SoKno Ear: 865-252-6500",
+      "",
+      "A realtime AI assistant answers 24/7, takes the details in one quick conversation, and the city desk takes it from there. No forms, no waiting.",
+      "",
+      BASE_HASHTAGS,
+    ].join("\n"),
+  },
+  {
+    id: "episode-drop",
+    title: `New episode (No. ${episode.number})`,
+    offset: 1,
+    caption: [
+      `Episode No. ${episode.number} of The South Knoxville Ear is up — your ${episode.shortDate ?? ""} weekend, all in one place.`,
+      "",
+      `This week: ${episode.feature.title}. Plus ${storyTitles.join(", ")}, and more.`,
+      "",
+      "Read it — and hear the audio briefing — at soknoear.com",
+      "",
+      BASE_HASHTAGS,
+    ].join("\n"),
+  },
+];
+for (const pr of PROMOS) {
+  const rel = `/assets/ig/${episode.slug}/${pr.id}.jpg`;
+  if (!fs.existsSync(path.join(process.cwd(), "public", rel))) continue;
+  posts.push({
+    id: pr.id,
+    title: pr.title,
+    postAt: isoNowPlus(pr.offset),
+    imageUrl: `${SITE}${rel}`,
+    permalink: SITE,
+    caption: pr.caption,
+    tags: [],
+    status: "pending",
+  });
+}
+
 posts.sort((a, b) => a.postAt.localeCompare(b.postAt));
 
 const queue = {
@@ -163,6 +217,28 @@ const queue = {
 const outDir = path.join(process.cwd(), "content", "ig-queue");
 fs.mkdirSync(outDir, { recursive: true });
 const outPath = path.join(outDir, `${episode.slug}.json`);
+
+// Restage-safe merge: NEVER reset what already happened. If a queue exists for this
+// slug, carry forward approval + the status of any post that isn't still pending —
+// without this, restaging after edits would re-post the whole week.
+if (fs.existsSync(outPath)) {
+  try {
+    const prev = JSON.parse(fs.readFileSync(outPath, "utf8"));
+    queue.approved = prev.approved ?? false;
+    let kept = 0;
+    for (const p of queue.posts) {
+      const old = (prev.posts ?? []).find((o) => o.id === p.id);
+      if (old && old.status && old.status !== "pending") {
+        p.status = old.status;
+        if (old.igMediaId) p.igMediaId = old.igMediaId;
+        if (old.postedAt) p.postedAt = old.postedAt;
+        if (old.error) p.error = old.error;
+        kept++;
+      }
+    }
+    if (kept) console.log(`  (merge: preserved ${kept} already-posted/skipped status(es); approved=${queue.approved})`);
+  } catch { /* unreadable previous queue — stage fresh */ }
+}
 fs.writeFileSync(outPath, JSON.stringify(queue, null, 2) + "\n");
 
 if (jsonOnly) {
