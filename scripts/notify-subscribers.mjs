@@ -15,7 +15,7 @@ const PREVIEW_TO = "andy@note15.com";
 const HOME = "https://soknoear.com";
 const EXCLUDE = new Set(["test@note15.com"]); // obvious test rows
 
-const SUBJECT = "The Urban Wilderness trail report — and a happy Shakespeare correction";
+const SUBJECT = "The final bow — Shakespeare's last four nights, a ho'down, and dog bingo";
 
 const HTML = `<!doctype html><html><body style="margin:0;padding:0;background:#e9dcc4;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#e9dcc4;"><tr><td align="center" style="padding:24px 12px;">
@@ -30,9 +30,9 @@ const HTML = `<!doctype html><html><body style="margin:0;padding:0;background:#e
   <tr><td style="padding:18px 24px 2px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.5;color:#171512;">Hey neighbor —</td></tr>
   <tr><td style="padding:2px 24px 8px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.55;color:#171512;">A fresh episode of <strong>The South Knoxville Ear</strong> is up, and this one's a good time.</td></tr>
   <tr><td align="center" style="padding:8px 24px;">
-    <a href="${HOME}" target="_blank"><img src="${HOME}/assets/spots/uw_trails.jpg" alt="A rider on the Urban Wilderness trails" width="512" style="display:block;width:100%;max-width:512px;height:auto;border:2px solid #171512;border-radius:8px;"></a>
+    <a href="${HOME}" target="_blank"><img src="${HOME}/assets/spots/shakespeare_finale.jpg" alt="The final bow at Ijams Park" width="512" style="display:block;width:100%;max-width:512px;height:auto;border:2px solid #171512;border-radius:8px;"></a>
   </td></tr>
-  <tr><td style="padding:10px 24px 4px;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.6;color:#171512;">This week the Ear goes into the woods: a <strong>trail report for the Urban Wilderness</strong>, checked the morning we published — what's riding well, what's muddy, and the porch waiting at the trail's edge. Also: a happy correction (<strong>Shakespeare is NOT over</strong> — the run goes through Aug 9, and Thursday is still pay-what-you-can), the Jonathan Ave variance passed 4–0, Kern's throws a <strong>Back to School Bash</strong> Friday with a school-supply drive, and the bird banders are back Sunday at dawn.</td></tr>
+  <tr><td style="padding:10px 24px 4px;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.6;color:#171512;">This weekend the neighborhood says a proper goodbye: <strong>the 36th Knoxville Shakespeare festival plays its final four nights at Ijams Park</strong> — Thursday's Henry V is pay-what-you-can, and Sunday night Merry Wives takes the festival's last bow. Also inside: <strong>Thursday is Election Day</strong> (polls 8–8); the Ho'down Social at Kern's is now every other Friday, with The Band covered live before the dancing; a sound bath, stained glass, and yoga make Sunday at Ijams Park the softest morning of the year; Earl's runs a different margarita deal every day; and Alliance hosts Bow Wow Bingo Sunday — beer and bingo, for the dogs.</td></tr>
   <tr><td align="center" style="padding:18px 24px 6px;">
     <a href="${HOME}" target="_blank" style="display:inline-block;background:#A94A34;color:#F3E8D2;text-decoration:none;font-family:Georgia,serif;font-weight:bold;font-size:15px;letter-spacing:0.06em;text-transform:uppercase;padding:13px 28px;border-radius:6px;">★ Read this weekend's Ear</a>
   </td></tr>
@@ -45,7 +45,7 @@ const TEXT = `Hey neighbor —
 
 A fresh episode of The South Knoxville Ear is up, and this one's a good time.
 
-This week the Ear goes into the woods: a trail report for the Urban Wilderness, checked the morning we published — what's riding well, what's muddy, and the porch waiting at the trail's edge. Also: a happy correction (Shakespeare is NOT over — the run goes through Aug 9, and Thursday is still pay-what-you-can), the Jonathan Ave variance passed 4–0, Kern's throws a Back to School Bash Friday with a school-supply drive, and the bird banders are back Sunday at dawn.
+This weekend the neighborhood says a proper goodbye: the 36th Knoxville Shakespeare festival plays its final four nights at Ijams Park — Thursday's Henry V is pay-what-you-can, and Sunday night Merry Wives takes the festival's last bow. Also inside: Thursday is Election Day (polls 8–8); the Ho'down Social at Kern's is now every other Friday, with The Band covered live before the dancing; a sound bath, stained glass, and yoga make Sunday at Ijams Park the softest morning of the year; Earl's runs a different margarita deal every day; and Alliance hosts Bow Wow Bingo Sunday — beer and bingo, for the dogs.
 
 Read this weekend's Ear: ${HOME}
 
