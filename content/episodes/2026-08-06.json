@@ -438,6 +438,13 @@
     }
   ],
   "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen — Shakespeare's final bow at Ijams Park, Election Day, the Ho'down goes biweekly, and the gentlest Sunday of the year.",
+      "duration": "02:20",
+      "src": "/audio/2026-08-06.mp3"
+    },
     "calendar": [
       {
         "month": "AUG",
