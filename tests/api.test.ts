@@ -37,12 +37,16 @@ describe("api", () => {
     const { sendWelcomeEmail, sendSubscriberEmail } = await import("@/lib/mail");
     const sub = (email: string) => POST(new Request("http://x", { method: "POST",
       headers: { "content-type": "application/json" }, body: JSON.stringify({ email }) }));
-    expect((await sub("a@b.com")).status).toBe(200);
+    const first = await sub("a@b.com");
+    expect(first.status).toBe(200);
+    expect((await first.json()).welcomed).toBe(true); // UI shows the welcome state
     expect(sendWelcomeEmail).toHaveBeenCalledTimes(1);
     expect(sendWelcomeEmail).toHaveBeenCalledWith("a@b.com");
     expect(sendSubscriberEmail).toHaveBeenCalledTimes(1);
     // repeat signup: still 200, but no second welcome / desk notice
-    expect((await sub("a@b.com")).status).toBe(200);
+    const again = await sub("a@b.com");
+    expect(again.status).toBe(200);
+    expect((await again.json()).welcomed).toBe(false); // UI shows "already on the list"
     expect(sendWelcomeEmail).toHaveBeenCalledTimes(1);
     expect(sendSubscriberEmail).toHaveBeenCalledTimes(1);
     expect((await POST(new Request("http://x", { method: "POST",

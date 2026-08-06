@@ -25,10 +25,29 @@ describe("forms", () => {
     fireEvent.click(screen.getByRole("button", { name: /tell the ear|submit/i }));
     await waitFor(() => expect(screen.getByText(/thank|got it|we'?re all ears/i)).toBeInTheDocument());
   });
-  it("SubscribeForm posts email to /api/subscribe", async () => {
+  it("SubscribeForm posts email to /api/subscribe and shows the welcome state", async () => {
+    global.fetch = vi.fn(async () => new Response(JSON.stringify({ ok: true, welcomed: true }), { status: 200 })) as any;
     render(<SubscribeForm />);
     fireEvent.change(screen.getByPlaceholderText(/email/i), { target: { value: "a@b.com" } });
     fireEvent.click(screen.getByRole("button", { name: /subscribe/i }));
     await waitFor(() => expect(global.fetch).toHaveBeenCalledWith("/api/subscribe", expect.anything()));
+    await waitFor(() => expect(screen.getByText(/welcome to the ear, neighbor/i)).toBeInTheDocument());
+    expect(screen.getByText(/hello note just left for your inbox/i)).toBeInTheDocument();
+  });
+  it("SubscribeForm tells a repeat subscriber they're already on the list", async () => {
+    global.fetch = vi.fn(async () => new Response(JSON.stringify({ ok: true, welcomed: false }), { status: 200 })) as any;
+    render(<SubscribeForm />);
+    fireEvent.change(screen.getByPlaceholderText(/email/i), { target: { value: "a@b.com" } });
+    fireEvent.click(screen.getByRole("button", { name: /subscribe/i }));
+    await waitFor(() => expect(screen.getByText(/already on the list/i)).toBeInTheDocument());
+    expect(screen.getByText(/you'?re all set/i)).toBeInTheDocument();
+  });
+  it("SubscribeForm shows an error and keeps the form when the request fails", async () => {
+    global.fetch = vi.fn(async () => new Response("nope", { status: 500 })) as any;
+    render(<SubscribeForm />);
+    fireEvent.change(screen.getByPlaceholderText(/email/i), { target: { value: "a@b.com" } });
+    fireEvent.click(screen.getByRole("button", { name: /subscribe/i }));
+    await waitFor(() => expect(screen.getByRole("alert")).toHaveTextContent(/didn'?t go through/i));
+    expect(screen.getByRole("button", { name: /subscribe/i })).toBeInTheDocument(); // can retry
   });
 });

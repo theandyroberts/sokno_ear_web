@@ -70,26 +70,54 @@ const submitBtnStyle: React.CSSProperties = {
   boxShadow: "var(--shadow-press)",
 };
 
+type SubscribeState = "idle" | "busy" | "error" | "welcomed" | "already";
+
 export function SubscribeForm() {
   const [email, setEmail] = React.useState("");
   const [company, setCompany] = React.useState(""); // honeypot
-  const [sent, setSent] = React.useState(false);
+  const [state, setState] = React.useState<SubscribeState>("idle");
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    const res = await fetch("/api/subscribe", {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ email, company }),
-    });
-    if (res.ok) setSent(true);
+    setState("busy");
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ email, company }),
+      });
+      if (!res.ok) { setState("error"); return; }
+      const body = await res.json().catch(() => ({}));
+      setState(body.welcomed === false ? "already" : "welcomed");
+    } catch {
+      setState("error");
+    }
   }
 
-  if (sent) {
+  if (state === "welcomed") {
     return (
       <section style={boxStyle}>
-        <div style={headingStyle}>★ Get the Ear Delivered</div>
-        <p style={copyStyle}>Thanks — you&apos;re on the list.</p>
+        <div style={headingStyle}>★ You&apos;re on the list — welcome!</div>
+        <p style={copyStyle}>
+          Welcome to the Ear, neighbor. A hello note just left for your inbox — give it a
+          minute, and a peek at spam if it hides.
+        </p>
+        <p style={{ ...copyStyle, margin: 0 }}>
+          From here on out: one short email each week when a fresh episode drops, with the
+          weekend&apos;s good stuff. That&apos;s it — no spam, ever. See you around SoKno!
+        </p>
+      </section>
+    );
+  }
+
+  if (state === "already") {
+    return (
+      <section style={boxStyle}>
+        <div style={headingStyle}>★ You&apos;re already on the list</div>
+        <p style={{ ...copyStyle, margin: 0 }}>
+          Good news — this email was signed up already, so you&apos;re all set. One short
+          email lands each week when a fresh episode drops. See you around SoKno!
+        </p>
       </section>
     );
   }
@@ -120,10 +148,15 @@ export function SubscribeForm() {
           />
         </div>
         <div>
-          <button type="submit" style={submitBtnStyle}>
-            Subscribe
+          <button type="submit" disabled={state === "busy"} style={{ ...submitBtnStyle, opacity: state === "busy" ? 0.6 : 1 }}>
+            {state === "busy" ? "Signing you up…" : "Subscribe"}
           </button>
         </div>
+        {state === "error" && (
+          <p style={{ ...copyStyle, margin: 0, color: "var(--rust)" }} role="alert">
+            Hmm — that didn&apos;t go through. Mind giving it another try in a moment?
+          </p>
+        )}
       </form>
     </section>
   );

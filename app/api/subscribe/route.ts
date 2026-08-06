@@ -7,7 +7,7 @@ const EMAIL = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 export async function POST(req: Request) {
   let b: any;
   try { b = await req.json(); } catch { return NextResponse.json({ error: "bad json" }, { status: 400 }); }
-  if (b.company) return NextResponse.json({ ok: true });
+  if (b.company) return NextResponse.json({ ok: true, welcomed: true });
   const email = String(b.email ?? "").trim().toLowerCase();
   if (!EMAIL.test(email)) return NextResponse.json({ error: "valid email required" }, { status: 400 });
   const isNew = insertSubscriber(db(), email);
@@ -15,5 +15,5 @@ export async function POST(req: Request) {
     await sendWelcomeEmail(email);     // greet the neighbor right away
     await sendSubscriberEmail(email);  // and tell the city desk
   }
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({ ok: true, welcomed: isNew });
 }
