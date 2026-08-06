@@ -101,6 +101,7 @@ export function SubscribeForm() {
       <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "var(--space-3, 12px)" }}>
         <input
           type="email"
+          id="subscribe-email" name="subscribe-email" autoComplete="email"
           placeholder="Your email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}

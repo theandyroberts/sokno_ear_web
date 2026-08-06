@@ -75,9 +75,9 @@ export function SubmitterForm() {
         The city desk still decides what gets published.
       </p>
       <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "var(--space-3, 12px)" }}>
-        <input type="text" placeholder="Your name" value={name} onChange={(e) => setName(e.target.value)} required style={inputStyle} />
-        <input type="tel" placeholder="Your phone (the one you call from)" value={phone} onChange={(e) => setPhone(e.target.value)} style={inputStyle} />
-        <input type="email" placeholder="Your email (where review links go)" value={email} onChange={(e) => setEmail(e.target.value)} required style={inputStyle} />
+        <input type="text" placeholder="Your name" id="submitter-name" name="submitter-name" autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} required style={inputStyle} />
+        <input type="tel" placeholder="Your phone (the one you call from)" id="submitter-phone" name="submitter-phone" autoComplete="tel" value={phone} onChange={(e) => setPhone(e.target.value)} style={inputStyle} />
+        <input type="email" placeholder="Your email (where review links go)" id="submitter-email" name="submitter-email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} required style={inputStyle} />
         <div style={honeypotStyle} aria-hidden="true">
           <input type="text" name="company" value={company} onChange={(e) => setCompany(e.target.value)} tabIndex={-1} autoComplete="off" />
         </div>

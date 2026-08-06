@@ -61,9 +61,9 @@ export function ContactForm() {
       <div style={headingStyle}>★ Get in touch</div>
       <p style={copyStyle}>Questions, story ideas, or just want to say hi? Drop Andy a line.</p>
       <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "var(--space-3, 12px)" }}>
-        <input type="text" placeholder="Your name (optional)" value={name} onChange={(e) => setName(e.target.value)} style={inputStyle} />
-        <input type="email" placeholder="Your email" value={email} onChange={(e) => setEmail(e.target.value)} required style={inputStyle} />
-        <textarea rows={4} placeholder="Your message" value={message} onChange={(e) => setMessage(e.target.value)} required style={inputStyle} />
+        <input type="text" placeholder="Your name (optional)" id="contact-name" name="contact-name" autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} style={inputStyle} />
+        <input type="email" placeholder="Your email" id="contact-email" name="contact-email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} required style={inputStyle} />
+        <textarea rows={4} placeholder="Your message" id="contact-message" name="contact-message" value={message} onChange={(e) => setMessage(e.target.value)} required style={inputStyle} />
         <div style={honeypotStyle} aria-hidden="true">
           <input type="text" name="company" value={company} onChange={(e) => setCompany(e.target.value)} tabIndex={-1} autoComplete="off" />
         </div>

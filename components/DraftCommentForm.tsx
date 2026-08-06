@@ -63,8 +63,8 @@ export function DraftCommentForm({ token }: { token: string }) {
         corrections, missing details, better wording, all welcome.
       </p>
       <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "var(--space-3, 12px)" }}>
-        <input type="text" placeholder="Your name (optional)" value={name} onChange={(e) => setName(e.target.value)} style={inputStyle} />
-        <textarea rows={5} placeholder="Your corrections, answers, or notes…" value={comment} onChange={(e) => setComment(e.target.value)} required style={inputStyle} />
+        <input type="text" placeholder="Your name (optional)" id="comment-name" name="comment-name" autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} style={inputStyle} />
+        <textarea rows={5} placeholder="Your corrections, answers, or notes…" id="comment-text" name="comment-text" value={comment} onChange={(e) => setComment(e.target.value)} required style={inputStyle} />
         <div style={honeypotStyle} aria-hidden="true">
           <input type="text" name="company" value={company} onChange={(e) => setCompany(e.target.value)} tabIndex={-1} autoComplete="off" />
         </div>

@@ -108,7 +108,7 @@ export function EventSubmitForm() {
       <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "var(--space-3, 12px)" }}>
         <input
           type="text"
-          placeholder="Event or news headline"
+          placeholder="Event or news headline" id="submit-headline" name="submit-headline"
           value={headline}
           onChange={(e) => setHeadline(e.target.value)}
           required
@@ -116,7 +116,7 @@ export function EventSubmitForm() {
         />
         <textarea
           rows={3}
-          placeholder="What's happening? Day, time, place…"
+          placeholder="What's happening? Day, time, place…" id="submit-details" name="submit-details"
           value={details}
           onChange={(e) => setDetails(e.target.value)}
           required
@@ -124,21 +124,21 @@ export function EventSubmitForm() {
         />
         <input
           type="text"
-          placeholder="When? (date or range)"
+          placeholder="When? (date or range)" id="submit-dates" name="submit-dates"
           value={dates}
           onChange={(e) => setDates(e.target.value)}
           style={inputStyle}
         />
         <input
           type="text"
-          placeholder="Link (optional)"
+          placeholder="Link (optional)" id="submit-url" name="submit-url" autoComplete="url"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
           style={inputStyle}
         />
         <input
           type="text"
-          placeholder="Your contact (optional, for follow-up)"
+          placeholder="Your contact (optional, for follow-up)" id="submit-contact" name="submit-contact"
           value={contact}
           onChange={(e) => setContact(e.target.value)}
           style={inputStyle}
