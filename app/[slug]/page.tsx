@@ -1,4 +1,4 @@
-import { getBySlug } from "@/lib/episodes";
+import { getBySlug, getLatest } from "@/lib/episodes";
 import { Paper } from "@/components/Paper";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -11,9 +11,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!e) return {};
   const title = `The South Knoxville Ear — ${e.dateLabel ?? e.date}`;
   const description = e.feature.deck ?? e.feature.title;
+  // The latest episode is a byte-for-byte twin of the homepage; pointing its canonical
+  // at "/" keeps Google from seeing two pages claiming the same content. Once the next
+  // episode publishes, this page's content is unique and the canonical returns to itself.
+  const isLatest = getLatest().slug === e.slug;
   return {
     title, description,
-    alternates: { canonical: `/${e.slug}` },
+    alternates: { canonical: isLatest ? "/" : `/${e.slug}` },
     openGraph: {
       title, description, type: "website", url: `https://soknoear.com/${e.slug}`,
       siteName: "The South Knoxville Ear", images: ["/assets/masthead.jpg"],

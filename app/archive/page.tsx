@@ -2,7 +2,11 @@ import Link from "next/link";
 import { getPast } from "@/lib/episodes";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "The South Knoxville Ear — Past Episodes" };
+export const metadata = {
+  title: "The South Knoxville Ear — Past Episodes",
+  description: "Every past weekend episode of The South Knoxville Ear — events and stories from around SoKno.",
+  alternates: { canonical: "/archive" },
+};
 
 export default function Archive() {
   const past = getPast();
