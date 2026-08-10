@@ -3,8 +3,8 @@ import { Paper } from "@/components/Paper";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
-// One page per story per episode: /{slug}/{storyId} renders the week with that
-// story promoted to the feature and the rest shuffled down — a shareable deep link.
+// One page per story per episode: /{slug}/{storyId} is the story's own article
+// permalink — the story runs full as the lead, siblings render as teaser cards.
 // Draft episodes resolve too (noindex) so links shared from /next survive publish.
 // Rendered at request time so publishing is a file sync — no rebuild.
 export const dynamic = "force-dynamic";
@@ -24,11 +24,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const title = `${f.title} — The South Knoxville Ear`;
   const description = f.deck ?? f.title;
   const image = f.image ?? "/assets/masthead.jpg";
+  // Stories rank on their own: self-canonical article permalinks. The feature's own
+  // permalink is the episode page's lead story, so it still credits the episode.
+  const isFeature = episode!.feature.id === story;
   return {
     title,
     description,
-    // Consolidate SEO to the episode; these are shareable alternate orderings of it.
-    alternates: { canonical: `/${slug}` },
+    alternates: { canonical: isFeature ? `/${slug}` : `/${slug}/${story}` },
     ...(isDraft ? { robots: { index: false, follow: false } } : {}),
     openGraph: {
       title, description, type: "article",
@@ -44,5 +46,5 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const { episode } = resolveEpisode(slug);
   const promoted = episode ? promoteStory(episode, story) : null;
   if (!promoted) notFound();
-  return <Paper episode={promoted} />;
+  return <Paper episode={promoted} storyView />;
 }

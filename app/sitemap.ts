@@ -17,5 +17,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
+    // Story permalinks rank on their own (the feature's permalink canonicalizes to
+    // the episode page, so it stays out of the map).
+    ...episodes.flatMap((e) =>
+      e.stories.map((s) => ({
+        url: `${BASE}/${e.slug}/${s.id}`,
+        lastModified: e.date,
+        changeFrequency: "monthly" as const,
+        priority: 0.6,
+      }))
+    ),
   ];
 }
