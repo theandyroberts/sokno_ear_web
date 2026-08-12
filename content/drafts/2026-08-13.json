@@ -171,15 +171,27 @@
       "label": "Kern's",
       "labelColor": "green",
       "days": [
+        "Sat"
+      ],
+      "image": "/assets/spots/kerns_school.jpg",
+      "title": "Parents versus kids",
+      "blurb": "All Play Live puts the grown-ups on the floor Saturday morning. Listed free.",
+      "cue": "Jump to story",
+      "href": "#kerns-allplay"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
         "Fri",
         "Sat",
         "Sun"
       ],
-      "image": "/assets/spots/kerns_school.jpg",
-      "title": "Play Saturday, trivia Friday",
-      "blurb": "A family play morning at Kern's, Ted Lasso trivia at Hi-Wire, yoga both mornings.",
+      "image": "/assets/spots/hiwire_weekend.jpg",
+      "title": "Believe, then breathe",
+      "blurb": "Ted Lasso trivia Friday at Hi-Wire, yoga at eleven both weekend mornings.",
       "cue": "Jump to story",
-      "href": "#kerns-hiwire"
+      "href": "#hiwire-weekend"
     },
     {
       "label": "Suttree Landing",
@@ -450,57 +462,119 @@
       }
     },
     {
-      "id": "kerns-hiwire",
+      "id": "kerns-allplay",
       "label": "Kern's",
       "labelColor": "green",
       "days": [
-        "Fri",
-        "Sat",
-        "Sun"
+        "Sat"
       ],
       "layout": "imageLeft",
       "image": "/assets/spots/kerns_school.jpg",
-      "imageCaption": "The 10:30 crowd",
-      "title": "A play morning at Kern's, and a Friday night of believing at Hi-Wire",
-      "deck": "Knoxville Family Experience brings All Play Live to the food hall Saturday morning; over on Barber Street, Hi-Wire runs Ted Lasso trivia Friday and yoga both weekend mornings.",
+      "imageCaption": "Nobody gets a seat",
+      "title": "Parents versus kids: All Play Live turns Kern's into a game show Saturday morning",
+      "deck": "Ninety minutes of team challenges and parent-against-child competitions at the food hall, built on the premise that families are tired of watching things. Listed free, all ages.",
       "facts": [
         {
-          "label": "Fri Aug 14",
-          "value": "Ted Lasso Trivia, Hi-Wire · 7–9 PM"
-        },
-        {
           "label": "Sat Aug 15",
-          "value": "All Play Live at Kern's · 10:30 AM – noon"
-        },
-        {
-          "label": "Sat & Sun",
-          "value": "Weekly yoga, Hi-Wire · 11 AM – noon"
+          "value": "10:30 AM – noon · 90 minutes"
         },
         {
           "label": "Where",
-          "value": "Kern's, 2201 Kern's Rising Way · Hi-Wire, 2020 Barber St"
+          "value": "Kern's, 2201 Kern's Rising Way"
+        },
+        {
+          "label": "Who",
+          "value": "All ages · run by FanXP Events"
+        },
+        {
+          "label": "Cost",
+          "value": "Listed free · register through Eventbrite"
         }
       ],
       "body": [
         {
           "type": "paragraph",
-          "text": "Saturday morning at Kern's belongs to the short people: Knoxville Family Experience brings All Play Live into the food hall from 10:30 to noon, which is the rare hour when a room full of kids is the plan rather than the risk. Coffee is twenty feet away. So is everything else."
+          "text": "Here is the pitch, and it's a fair one: most things you take the kids to, you watch. You watch the movie, you watch the show, you watch them play. All Play Live comes to Kern's Saturday morning to put the grown-ups on the floor instead — 10:30 to noon, ninety minutes of family team games and parent-versus-child challenges run by FanXP Events."
         },
         {
           "type": "subhead",
-          "text": "Friday night, believe"
+          "text": "What you're signing up for"
         },
         {
           "type": "paragraph",
-          "text": "Down on Barber Street, Hi-Wire's Knoxville taproom runs Ted Lasso trivia Friday from seven to nine. Fair warning to the casual fan: this is the crowd that knows which biscuit tin, and in what episode. Come with someone who's watched it twice."
+          "text": "Expect competitions, twists, and the specific indignity of losing to a nine-year-old in front of a food hall. It's listed as free and all ages, with registration through Eventbrite — worth grabbing a spot rather than walking up. And the practical advantage of Kern's for this: when it's over, breakfast, coffee, and twenty vendors are already in the building."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Eventbrite — Knoxville Family Experience: ALL PLAY LIVE",
+          "url": "https://www.eventbrite.com/e/knoxville-family-experience-all-play-live-tickets-1991000929376"
+        },
+        {
+          "label": "Inside of Knoxville — 10-day planner (Aug 9–18)",
+          "url": "https://insideofknoxville.com/2026/08/10-day-downtown-ish-planner-august-9-18/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-08-15T10:30:00-04:00",
+        "endDate": "2026-08-15T12:00:00-04:00",
+        "locationName": "Kern's Food Hall",
+        "locationAddress": "2201 Kern's Rising Way"
+      },
+      "social": {
+        "igTags": [
+          "kerns"
+        ],
+        "igBanner": [
+          "All Play Live at Kern's",
+          "Parents vs. kids, Saturday 10:30"
+        ]
+      }
+    },
+    {
+      "id": "hiwire-weekend",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/hiwire_weekend.jpg",
+      "imageCaption": "Barber Street, all weekend",
+      "title": "Ted Lasso trivia Friday at Hi-Wire, then yoga both mornings",
+      "deck": "The Barber Street taproom runs a themed trivia night to open the weekend, and its standing yoga class holds down eleven o'clock on Saturday and Sunday.",
+      "facts": [
+        {
+          "label": "Fri Aug 14",
+          "value": "Ted Lasso Trivia · 7–9 PM"
+        },
+        {
+          "label": "Sat Aug 15",
+          "value": "Weekly yoga · 11 AM – noon"
+        },
+        {
+          "label": "Sun Aug 16",
+          "value": "Weekly yoga · 11 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Hi-Wire Knoxville, 2020 Barber St"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Hi-Wire's Knoxville taproom opens the weekend Friday night with Ted Lasso trivia, seven to nine. Fair warning to the casual fan: this is a crowd that knows which biscuit, in which tin, in which episode. Bring somebody who's watched it twice."
         },
         {
           "type": "subhead",
-          "text": "Both mornings, a soft landing"
+          "text": "Then both mornings, the soft landing"
         },
         {
           "type": "paragraph",
-          "text": "Hi-Wire's weekly yoga runs 11 to noon Saturday and Sunday — the standing version of the SoKno weekend, where the mat comes first and the pint is optional and afterward."
+          "text": "The taproom's weekly yoga class runs 11 to noon Saturday and Sunday — the standing version of a SoKno weekend, where the mat comes first and the pint is optional and afterward. It's a short hop from the Urban Wilderness trailheads if you'd rather earn it first."
         }
       ],
       "sources": [
@@ -514,19 +588,18 @@
         }
       ],
       "event": {
-        "startDate": "2026-08-15T10:30:00-04:00",
-        "endDate": "2026-08-15T12:00:00-04:00",
-        "locationName": "Kern's Food Hall",
-        "locationAddress": "2201 Kern's Rising Way"
+        "startDate": "2026-08-14T19:00:00-04:00",
+        "endDate": "2026-08-14T21:00:00-04:00",
+        "locationName": "Hi-Wire Brewing Knoxville",
+        "locationAddress": "2020 Barber St"
       },
       "social": {
         "igTags": [
-          "kerns",
           "hiwire"
         ],
         "igBanner": [
-          "Kern's & Hi-Wire weekend",
-          "Play Saturday, trivia Friday"
+          "Ted Lasso trivia at Hi-Wire",
+          "Friday 7 — then yoga both mornings"
         ]
       }
     },
@@ -636,7 +709,7 @@
         "day": "14",
         "title": "Ted Lasso Trivia",
         "meta": "7–9 PM · Hi-Wire, Barber St",
-        "href": "#kerns-hiwire"
+        "href": "#hiwire-weekend"
       },
       {
         "month": "AUG",
@@ -657,15 +730,15 @@
         "month": "AUG",
         "day": "15",
         "title": "All Play Live at Kern's",
-        "meta": "10:30 AM – noon · family morning",
-        "href": "#kerns-hiwire"
+        "meta": "10:30 AM – noon · parents vs. kids · free",
+        "href": "#kerns-allplay"
       },
       {
         "month": "AUG",
         "day": "15",
         "title": "Weekly yoga at Hi-Wire",
         "meta": "11 AM – noon · also Sunday",
-        "href": "#kerns-hiwire"
+        "href": "#hiwire-weekend"
       },
       {
         "month": "AUG",
