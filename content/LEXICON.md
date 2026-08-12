@@ -11,7 +11,7 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
 |---|---|---|
 | **SoKno** | **"SO-no"** (two beats: *So · No*) | NOT "sock-no." Short for South Knoxville. When generating TTS, spell it `So-No` / use a phoneme alias so the voice never says "sock-no." |
 | Sevier Ave | "suh-VEER" (like the word *severe*) | Not "SEE-vee-er" or "Sue-veer." For TTS, spell it **`Severe`**. |
-| **Ijams** | **ONE syllable** — *times* without the T. Think the plural of "I'm": **I'ms**. "I'ms Park," "I'ms Nature Center." | Not "EYE-ams," not "EYE-jams," not "ih-JAMS." The J is silent **and there is no second syllable** — that's the part everyone gets wrong, including us. For TTS, spell it **`Imes`**. The old `Eye-ams` spelling gave a two-beat read and shipped in every briefing Jul–Aug 2026; Andy caught it 2026-08-12. Check this one by ear on every render. **Always say "Ijams Park"** in scripts & copy — never bare "Ijams" (the official "Ijams Nature Center" is fine but almost no one uses it). |
+| **Ijams** | **ONE syllable** — *times* without the T. Think the plural of "I'm": **I'ms**. "I'ms Park," "I'ms Nature Center." | Not "EYE-ams," not "EYE-jams," not "ih-JAMS." The J is silent **and there is no second syllable** — that's the part everyone gets wrong, including us. For TTS, spell it **`Imes`** — confirmed by Andy 2026-08-12 (he judged `Imes` and `I'ms` both correct and very close; `Imes` wins for having no apostrophe to trip the engine). The old `Eye-ams` spelling gave a two-beat read and shipped in every briefing Jul–Aug 2026. **Always say "Ijams Park"** in scripts & copy — never bare "Ijams" (the official "Ijams Nature Center" is fine but almost no one uses it). |
 
 *(Add venue names, street names, and people as we confirm them.)*
 
