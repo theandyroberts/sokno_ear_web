@@ -1,0 +1,701 @@
+{
+  "slug": "2026-08-13",
+  "volume": 1,
+  "number": 9,
+  "episode": "Weekend Episode",
+  "date": "2026-08-13",
+  "dateLabel": "Thu–Sun, Aug 13–16, 2026",
+  "shortDate": "Aug 13–16",
+  "place": "South Knoxville, TN",
+  "feature": {
+    "id": "hummingbird-weekend",
+    "label": "Ijams Park",
+    "labelColor": "teal",
+    "days": [
+      "Thu",
+      "Fri",
+      "Sat"
+    ],
+    "layout": "imageTop",
+    "image": "/assets/spots/bird_banding.png",
+    "imageCaption": "A bird that weighs less than a nickel",
+    "title": "Three nights of hummingbirds: a projected light walk, then the whole festival",
+    "deck": "Ijams Park gives its smallest resident a three-day send-off. Thursday and Friday, eight larger-than-life hummingbirds are projected onto the trails after dark. Saturday, the festival takes the homesite from seven in the morning.",
+    "facts": [
+      {
+        "label": "Thu Aug 13",
+        "value": "Communion — timed entry 8–10 PM · $5"
+      },
+      {
+        "label": "Fri Aug 14",
+        "value": "Communion — second and final night · $5"
+      },
+      {
+        "label": "Sat Aug 15",
+        "value": "Hummingbird Festival · 7 AM – 1 PM"
+      },
+      {
+        "label": "Festival tickets",
+        "value": "$12 adults (13+) · $9 kids 5–12 · under 5 free · members 10% off"
+      },
+      {
+        "label": "Bird banding",
+        "value": "$6 · separate ticket · 25-minute small-group sessions"
+      },
+      {
+        "label": "Where",
+        "value": "Ijams Homesite, 2915 Island Home Ave"
+      },
+      {
+        "label": "Plan on",
+        "value": "45 minutes to an hour to walk Communion"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "A ruby-throated hummingbird weighs about as much as a nickel and beats its wings somewhere north of fifty times a second, which is exactly why almost nobody has ever gotten a good look at one. This weekend Ijams Park fixes that twice over — first by making the bird enormous and slow, then by putting a real one in a researcher's hand a few feet from your face."
+      },
+      {
+        "type": "subhead",
+        "text": "Communion: eight hummingbirds, larger than life"
+      },
+      {
+        "type": "paragraph",
+        "text": "Thursday and Friday nights only, Knoxville artist Lauren Strohacker turns the Serendipity and Discovery Trails into an outdoor gallery. Eight large-scale animated hummingbirds are projected into the woods, and you walk through them. Timed entry runs 8 to 10 PM, tickets are five dollars, and the park suggests giving it 45 minutes to an hour. Two nights, then it's gone."
+      },
+      {
+        "type": "subhead",
+        "text": "Saturday: the festival, and the banding station"
+      },
+      {
+        "type": "paragraph",
+        "text": "The Hummingbird Festival takes the homesite Saturday from 7 AM to 1 PM — an early start on purpose. Banders from East Tennessee Avian Research and Seven Islands State Birding Park run a live research station in 25-minute small-group sessions, and hummingbirds are busiest right at first light, so the earliest sessions are the ones to want. New this year: the station is banding every bird it catches, not just the hummingbirds. Around it there's a marketplace of 50-plus artists and vendors, live animal encounters, guided walks, speakers, and hands-on art and science tables for all ages."
+      },
+      {
+        "type": "subhead",
+        "text": "Before you go"
+      },
+      {
+        "type": "paragraph",
+        "text": "Festival admission is $12 for anyone 13 and up, $9 for kids 5 to 12, free under 5, with 10 percent off for Ijams Park members. Bird banding is a separate $6 ticket — buy it with your admission rather than hoping at the gate. Parking is at the Visitor Center, the overflow lot, and Meads Quarry; there's a parking fee, waived for members."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ijams — Hummingbird Festival (tickets & Communion details)",
+        "url": "https://www.ijams.org/ijams-hummingbird-festival"
+      },
+      {
+        "label": "Ijams — 2026 Hummingbird Festival event page",
+        "url": "https://www.ijams.org/event-details/special-event-2026-ijams-hummingbird-festival-a-celebration-of-wings"
+      },
+      {
+        "label": "Inside of Knoxville — 10-day planner (Aug 9–18)",
+        "url": "https://insideofknoxville.com/2026/08/10-day-downtown-ish-planner-august-9-18/"
+      }
+    ],
+    "event": {
+      "startDate": "2026-08-15T07:00:00-04:00",
+      "endDate": "2026-08-15T13:00:00-04:00",
+      "locationName": "Ijams Nature Center",
+      "locationAddress": "2915 Island Home Ave"
+    },
+    "social": {
+      "igTags": [
+        "ijams"
+      ],
+      "igBanner": [
+        "Hummingbirds at Ijams Park",
+        "Two nights of light, one big festival"
+      ]
+    }
+  },
+  "scanner": [
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/bird_banding.png",
+      "title": "Three nights of hummingbirds",
+      "blurb": "Projections in the woods Thursday and Friday, the whole festival Saturday at seven.",
+      "cue": "Jump to story",
+      "href": "#hummingbird-weekend"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "hot": true,
+      "image": "/assets/spots/planning_hearing.jpg",
+      "title": "Kerbela, decision day",
+      "blurb": "The 55-plus apartment plan for the Shriners site is item 44 Thursday at 1:30.",
+      "cue": "Jump to story",
+      "href": "#kerbela-hearing"
+    },
+    {
+      "label": "SoKno",
+      "labelColor": "ink",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "image": "/assets/spots/mimosas.jpg",
+      "title": "Before the sign changes",
+      "blurb": "Two weekends left of Mimosas on Blount — it reopens as Puckers on the 26th.",
+      "cue": "Jump to story",
+      "href": "#mimosas-puckers"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "image": "/assets/spots/trailhead_music.jpg",
+      "title": "Bluegrass on the plaza",
+      "blurb": "Third-Sunday jam, free, bring an acoustic instrument. Storytellers at two.",
+      "cue": "Jump to story",
+      "href": "#ijams-sunday"
+    },
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "image": "/assets/spots/kerns_school.jpg",
+      "title": "Play Saturday, trivia Friday",
+      "blurb": "A family play morning at Kern's, Ted Lasso trivia at Hi-Wire, yoga both mornings.",
+      "cue": "Jump to story",
+      "href": "#kerns-hiwire"
+    },
+    {
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "image": "/assets/spots/earls_rita.jpg",
+      "title": "The specials board",
+      "blurb": "Earl's runs a different deal every day of the weekend, out on the waterfront.",
+      "cue": "Jump to story",
+      "href": "#specials-board"
+    }
+  ],
+  "stories": [
+    {
+      "id": "kerbela-hearing",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/planning_hearing.jpg",
+      "imageCaption": "Item 44, Thursday afternoon",
+      "title": "The Kerbela plan comes back Thursday — and this time it's on the agenda for a decision",
+      "deck": "Five and a half acres at Sevier and Dawson, a 55-plus apartment community, and a request for relief from seven South Waterfront design standards. It goes before the Planning Commission at 1:30 as item 44.",
+      "facts": [
+        {
+          "label": "Thu Aug 13",
+          "value": "Planning Commission · 1:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Main Assembly Room, City County Building, 400 Main St"
+        },
+        {
+          "label": "Case",
+          "value": "4-A-26-OB · agenda item 44"
+        },
+        {
+          "label": "Site",
+          "value": "315 Kerbela Ave · 5.70 acres · zoned MU-SD/SC-1"
+        },
+        {
+          "label": "Applicant",
+          "value": "Ryan Robertson, CR Endeavors"
+        },
+        {
+          "label": "To weigh in",
+          "value": "Submit comments or request to speak at knoxplanning.org"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The old Kerbela Shriners temple sits on 5.7 acres at the south side of Sevier Avenue, out at Dawson Street — one of the largest single pieces of land left on the corridor. Thursday afternoon, the plan to turn it into a 55-plus apartment community goes back before the Knoxville-Knox County Planning Commission as agenda item 44."
+        },
+        {
+          "type": "subhead",
+          "text": "What's actually being asked"
+        },
+        {
+          "type": "paragraph",
+          "text": "This is a Level III alternative compliance request, which is planning-speak for: the design doesn't meet the rulebook, and the applicant is asking the commission to allow it anyway. Specifically, it seeks relief from seven South Waterfront Form-Based Code standards, including maximum lot size, building footprint, setbacks, and transparency — the requirements that govern how big a block can get and how much of a ground floor has to be windows rather than wall. Planning staff didn't publish a thumbs up or down; the recommendation points commissioners to the approval criteria in Article 7.0.2.G and the Zoning Administrator's report."
+        },
+        {
+          "type": "subhead",
+          "text": "How it got to a fifth agenda"
+        },
+        {
+          "type": "paragraph",
+          "text": "The case was filed in February, automatically postponed 30 days in April, postponed again in May, then heard in June and again on July 9. At the July meeting, commissioners pressed on how public the finished site would actually feel — including whether a pedestrian tunnel drawn into the plan would be open to the neighborhood or reserved for residents — and sent the applicant back to revise. Revised material came in through August 5."
+        },
+        {
+          "type": "subhead",
+          "text": "If you want a say"
+        },
+        {
+          "type": "paragraph",
+          "text": "The meeting starts at 1:30 PM Thursday in the Main Assembly Room at the City County Building, 400 Main Street, and it's open to the public. Comments and requests to speak go through knoxplanning.org; the staff planner on the case is Mike Reynolds. Whatever happens Thursday, it's the biggest decision on Sevier Avenue this year."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Knox Planning — case 4-A-26-OB",
+          "url": "https://knoxplanning.org/cases/4-a-26-ob"
+        },
+        {
+          "label": "Knox Planning — Planning Commission meeting info",
+          "url": "https://knoxplanning.org/commission"
+        },
+        {
+          "label": "WBIR — Planning Commission plans next steps for 2 major developments",
+          "url": "https://www.wbir.com/article/news/local/knoxville/planning-commission-plans-next-steps-2-major-developments/51-566bee41-e893-4364-98df-74f5f703d515"
+        },
+        {
+          "label": "WVLT — Kerbela development delayed for community input",
+          "url": "https://www.wvlt.tv/2026/04/01/development-proposal-kerbela-shriner-temple-knoxville-delayed-community-input/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-08-13T13:30:00-04:00",
+        "locationName": "City County Building — Main Assembly Room",
+        "locationAddress": "400 Main St"
+      },
+      "social": {
+        "igBanner": [
+          "Kerbela: decision day",
+          "Thursday 1:30 — agenda item 44"
+        ]
+      }
+    },
+    {
+      "id": "mimosas-puckers",
+      "label": "SoKno",
+      "labelColor": "ink",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/mimosas.jpg",
+      "imageCaption": "Brunch on Blount, for now",
+      "title": "Two more weekends of Mimosas before the sign changes",
+      "deck": "The Blount Avenue brunch room reopens August 26 as Puckers Sports Grill Knoxville. The brunch dishes are staying on the menu — the name is the part that's changing.",
+      "facts": [
+        {
+          "label": "Now",
+          "value": "Mimosas, 115 Mimosa Ave"
+        },
+        {
+          "label": "Wed Aug 26",
+          "value": "Reopens as Puckers Sports Grill Knoxville"
+        },
+        {
+          "label": "Brunch",
+          "value": "Sat & Sun 9 AM – 3 PM · weekdays 10 AM – 3 PM"
+        },
+        {
+          "label": "This weekend",
+          "value": "Sat 9 AM – 10 PM · Sun 9 AM – 9 PM"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "If \"we should try that brunch place on Blount\" has been on your list since it opened, the list just got a deadline. Mimosas has announced it will reopen on August 26 as Puckers Sports Grill Knoxville — which leaves two more weekends of it being Mimosas."
+        },
+        {
+          "type": "subhead",
+          "text": "What's changing, and what isn't"
+        },
+        {
+          "type": "paragraph",
+          "text": "Puckers is the Gatlinburg sports grill, and the Knoxville version is pitched as a bigger-swing take on it: game-day room, wall of televisions, chef-driven food and cocktails, a few hundred yards of river between it and Neyland Stadium. The company says the Mimosas brunch favorites keep a place on the new menu, and that the Mimosas concept itself is expected to come back at some point."
+        },
+        {
+          "type": "subhead",
+          "text": "Which means this weekend"
+        },
+        {
+          "type": "paragraph",
+          "text": "Brunch runs 9 to 3 Saturday and Sunday, and the room stays open until 10 Saturday and 9 Sunday. It's a short walk from the greenway and a shorter one from the bridge, and for two more Sundays the bottomless-mimosa version of South Knoxville is still on the board."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Mimosas Knoxville — announcement & hours",
+          "url": "https://mimosasknoxville.com/"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "mimosas"
+        ],
+        "igBanner": [
+          "Mimosas, before the change",
+          "Brunch on Blount through August"
+        ]
+      }
+    },
+    {
+      "id": "ijams-sunday",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/trailhead_music.jpg",
+      "imageCaption": "Third Sunday, on the plaza",
+      "title": "Sunday at Ijams Park: bluegrass on the plaza, stories under the trees",
+      "deck": "The third-Sunday jam is free and open to anyone who brings an acoustic instrument, the Smoky Mountain Storytellers take the trails at two, and yoga opens the afternoon at 11:30.",
+      "facts": [
+        {
+          "label": "Sun Aug 16",
+          "value": "Self Care Sunday Yoga with Hope Irwin · 11:30 AM · Visitor Center"
+        },
+        {
+          "label": "Sun Aug 16",
+          "value": "Stories from Nature, Smoky Mountain Storytellers · 2–3:30 PM"
+        },
+        {
+          "label": "Sun Aug 16",
+          "value": "East TN Bluegrass Association jam · 2–5 PM · free"
+        },
+        {
+          "label": "Bring",
+          "value": "Any acoustic bluegrass instrument — no harmonicas, no spoons"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "After a weekend of festival crowds, Ijams Park turns the volume back down on Sunday — but not all the way off. Two o'clock is the good hour: an open bluegrass jam on one side of the property, an afternoon of storytelling on the other."
+        },
+        {
+          "type": "subhead",
+          "text": "The jam, which anyone can join"
+        },
+        {
+          "type": "paragraph",
+          "text": "The East Tennessee Bluegrass Association's monthly jam runs 2 to 5 on the third Sunday, and August 16 is the third Sunday. It's free, it's open to the public, and every skill level is welcome — you don't audition, you just find a spot in the circle. All acoustic bluegrass instruments are invited, though the association is on record drawing the line at harmonicas and spoons. Warm weather puts it outside on the plaza. If you don't play, come sit and listen; that's a role too."
+        },
+        {
+          "type": "subhead",
+          "text": "And the rest of the afternoon"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hope Irwin's Self Care Sunday yoga starts at 11:30 at the Visitor Center, and at two the Smoky Mountain Storytellers Association brings Stories from Nature out to the trails until 3:30 — registration requested. Yoga, then pick your two o'clock: banjos or bedtime stories for grown-ups."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams events calendar",
+          "url": "https://www.ijams.org/calendar-of-events"
+        },
+        {
+          "label": "Ijams — East Tennessee Bluegrass Association Monthly Jam",
+          "url": "https://www.ijams.org/event-details/special-event-east-tennessee-bluegrass-association-monthly-jam-13"
+        },
+        {
+          "label": "Inside of Knoxville — 10-day planner (Aug 9–18)",
+          "url": "https://insideofknoxville.com/2026/08/10-day-downtown-ish-planner-august-9-18/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-08-16T14:00:00-04:00",
+        "endDate": "2026-08-16T17:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Sunday at Ijams Park",
+          "Free bluegrass jam, 2 to 5"
+        ]
+      }
+    },
+    {
+      "id": "kerns-hiwire",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/kerns_school.jpg",
+      "imageCaption": "The 10:30 crowd",
+      "title": "A play morning at Kern's, and a Friday night of believing at Hi-Wire",
+      "deck": "Knoxville Family Experience brings All Play Live to the food hall Saturday morning; over on Barber Street, Hi-Wire runs Ted Lasso trivia Friday and yoga both weekend mornings.",
+      "facts": [
+        {
+          "label": "Fri Aug 14",
+          "value": "Ted Lasso Trivia, Hi-Wire · 7–9 PM"
+        },
+        {
+          "label": "Sat Aug 15",
+          "value": "All Play Live at Kern's · 10:30 AM – noon"
+        },
+        {
+          "label": "Sat & Sun",
+          "value": "Weekly yoga, Hi-Wire · 11 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Kern's, 2201 Kern's Rising Way · Hi-Wire, 2020 Barber St"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Saturday morning at Kern's belongs to the short people: Knoxville Family Experience brings All Play Live into the food hall from 10:30 to noon, which is the rare hour when a room full of kids is the plan rather than the risk. Coffee is twenty feet away. So is everything else."
+        },
+        {
+          "type": "subhead",
+          "text": "Friday night, believe"
+        },
+        {
+          "type": "paragraph",
+          "text": "Down on Barber Street, Hi-Wire's Knoxville taproom runs Ted Lasso trivia Friday from seven to nine. Fair warning to the casual fan: this is the crowd that knows which biscuit tin, and in what episode. Come with someone who's watched it twice."
+        },
+        {
+          "type": "subhead",
+          "text": "Both mornings, a soft landing"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hi-Wire's weekly yoga runs 11 to noon Saturday and Sunday — the standing version of the SoKno weekend, where the mat comes first and the pint is optional and afterward."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Inside of Knoxville — 10-day planner (Aug 9–18)",
+          "url": "https://insideofknoxville.com/2026/08/10-day-downtown-ish-planner-august-9-18/"
+        },
+        {
+          "label": "Hi-Wire Brewing — Knoxville taproom",
+          "url": "https://hiwirebrewing.com/knoxville/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-08-15T10:30:00-04:00",
+        "endDate": "2026-08-15T12:00:00-04:00",
+        "locationName": "Kern's Food Hall",
+        "locationAddress": "2201 Kern's Rising Way"
+      },
+      "social": {
+        "igTags": [
+          "kerns",
+          "hiwire"
+        ],
+        "igBanner": [
+          "Kern's & Hi-Wire weekend",
+          "Play Saturday, trivia Friday"
+        ]
+      }
+    },
+    {
+      "id": "specials-board",
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/earls_rita.jpg",
+      "imageCaption": "The week, in chalk",
+      "title": "The specials board: a different deal every day at Earl's",
+      "deck": "Out on Waterfront Drive, Earl's runs its own weekly ladder — a new special each afternoon, and two all-day ones once the weekend lands.",
+      "facts": [
+        {
+          "label": "Thu",
+          "value": "$10 Patrón mango ritas · 4–6 PM · $1 off liquor, beer & wine"
+        },
+        {
+          "label": "Fri",
+          "value": "$9 spicy pineapple ritas · 4–6 PM · $1 off liquor, beer & wine"
+        },
+        {
+          "label": "Sat",
+          "value": "$8 house margaritas · all day"
+        },
+        {
+          "label": "Sun",
+          "value": "$7 mimosas & Bloody Marys · all day"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Earl's sits at 610 Waterfront Drive, down where Suttree Landing meets the river, and it runs a different special every single day — which turns the weekend into a small planning exercise. Thursday it's ten-dollar Patrón mango margaritas from four to six, Friday nine-dollar spicy pineapple ones on the same window, both with a dollar off liquor, beer, and wine."
+        },
+        {
+          "type": "subhead",
+          "text": "Then the all-day rungs"
+        },
+        {
+          "type": "paragraph",
+          "text": "Saturday the clock goes away: eight-dollar house margaritas all day, doors 10:30 to 11. Sunday is seven-dollar mimosas and Bloody Marys, also all day, until nine. Walk down from Sevier Avenue, sit where you can see the water, and let the river do the entertaining."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Earl's Knoxville — specials",
+          "url": "https://earlsknox.com/specials"
+        }
+      ],
+      "event": {
+        "startDate": "2026-08-13T16:00:00-04:00",
+        "endDate": "2026-08-13T18:00:00-04:00",
+        "locationName": "Earl's",
+        "locationAddress": "610 Waterfront Dr"
+      },
+      "social": {
+        "igTags": [
+          "earls"
+        ],
+        "igBanner": [
+          "The SoKno Specials Board",
+          "A different deal every day"
+        ]
+      }
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen — three nights of hummingbirds at Ijams Park, the Kerbela decision Thursday, last call for Mimosas, and a free bluegrass jam Sunday.",
+      "duration": "02:20",
+      "src": "/audio/2026-08-13.mp3"
+    },
+    "calendar": [
+      {
+        "month": "AUG",
+        "day": "13",
+        "title": "Kerbela hearing — Planning Commission",
+        "meta": "1:30 PM · item 44 · City County Building",
+        "starred": true,
+        "href": "#kerbela-hearing"
+      },
+      {
+        "month": "AUG",
+        "day": "13",
+        "title": "Earl's — $10 Patrón ritas",
+        "meta": "4–6 PM · 610 Waterfront Dr",
+        "href": "#specials-board"
+      },
+      {
+        "month": "AUG",
+        "day": "13",
+        "title": "Communion — projected hummingbirds",
+        "meta": "8–10 PM · $5 · Ijams Park",
+        "href": "#hummingbird-weekend"
+      },
+      {
+        "month": "AUG",
+        "day": "14",
+        "title": "Ted Lasso Trivia",
+        "meta": "7–9 PM · Hi-Wire, Barber St",
+        "href": "#kerns-hiwire"
+      },
+      {
+        "month": "AUG",
+        "day": "14",
+        "title": "Communion — final night",
+        "meta": "8–10 PM · $5 · Ijams Park",
+        "href": "#hummingbird-weekend"
+      },
+      {
+        "month": "AUG",
+        "day": "15",
+        "title": "HUMMINGBIRD FESTIVAL",
+        "meta": "7 AM – 1 PM · banding from 7 · Ijams Park",
+        "starred": true,
+        "href": "#hummingbird-weekend"
+      },
+      {
+        "month": "AUG",
+        "day": "15",
+        "title": "All Play Live at Kern's",
+        "meta": "10:30 AM – noon · family morning",
+        "href": "#kerns-hiwire"
+      },
+      {
+        "month": "AUG",
+        "day": "15",
+        "title": "Weekly yoga at Hi-Wire",
+        "meta": "11 AM – noon · also Sunday",
+        "href": "#kerns-hiwire"
+      },
+      {
+        "month": "AUG",
+        "day": "16",
+        "title": "Self Care Sunday Yoga",
+        "meta": "11:30 AM · Ijams Park Visitor Center",
+        "href": "#ijams-sunday"
+      },
+      {
+        "month": "AUG",
+        "day": "16",
+        "title": "Bluegrass jam on the plaza",
+        "meta": "2–5 PM · free · Ijams Park",
+        "starred": true,
+        "href": "#ijams-sunday"
+      },
+      {
+        "month": "AUG",
+        "day": "16",
+        "title": "Stories from Nature",
+        "meta": "2–3:30 PM · Ijams Park trails",
+        "href": "#ijams-sunday"
+      },
+      {
+        "month": "AUG",
+        "day": "26",
+        "title": "Mimosas reopens as Puckers",
+        "meta": "115 Mimosa Ave · Blount Ave",
+        "href": "#mimosas-puckers"
+      }
+    ]
+  }
+}
