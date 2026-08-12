@@ -61,28 +61,65 @@ set -a; [ -f .env ] && . ./.env; set +a
 pm2 startOrReload ecosystem.config.js --update-env
 pm2 save >/dev/null
 
-# Verify before declaring success: every image/audio file the episodes and drafts
-# reference must actually serve. A publish that ships a broken asset fails HERE,
-# loudly, instead of in a reader's browser.
+# Verify before declaring success: every image/audio file the episodes reference
+# must actually serve. A publish that ships a broken asset fails HERE, loudly,
+# instead of in a reader's browser.
+#
+# Drafts are checked too, but only WARN. A draft always references audio that
+# won't exist until Andy records it Wednesday, so hard-failing on drafts made
+# every research-day deploy exit 1 — and a check that cries wolf weekly is a
+# check nobody reads. Published assets still hard-fail. Keep it that way.
 echo "→ verifying referenced assets…"
 for _ in $(seq 1 15); do
   curl -sf -o /dev/null "http://127.0.0.1:$PORT/" 2>/dev/null && break
   sleep 1
 done
+
+# `|| true` because grep exits 1 on no matches, and pipefail would abort the run.
+asset_refs() {
+  grep -ohE '"/(assets|audio)/[A-Za-z0-9/_.-]+"' "$@" 2>/dev/null | tr -d '"' | sort -u || true
+}
+published=$(asset_refs content/episodes/*.json)
+draft_refs=$(asset_refs content/drafts/*.json)
+# An asset referenced by BOTH is published — a live episode depends on it, so it
+# must hard-fail. -Fx keeps an empty `published` from matching every draft line.
+draft_only=$(printf '%s\n' "$draft_refs" | grep -v '^$' \
+  | grep -Fxv -f <(printf '%s\n' "$published") || true)
+
+serve_code() { curl -sS -o /dev/null -w '%{http_code}' "http://127.0.0.1:$PORT$1" || echo 000; }
+
 missing=0
 checked=0
-for asset in $(grep -ohE '"/(assets|audio)/[A-Za-z0-9/_.-]+"' content/episodes/*.json content/drafts/*.json 2>/dev/null | tr -d '"' | sort -u); do
+while IFS= read -r asset; do
+  [ -n "$asset" ] || continue
   checked=$((checked + 1))
-  code=$(curl -sS -o /dev/null -w '%{http_code}' "http://127.0.0.1:$PORT$asset" || echo 000)
+  code=$(serve_code "$asset")
   if [ "$code" != "200" ]; then
     echo "  !! $asset → $code"
     missing=$((missing + 1))
   fi
-done
+done <<< "$published"
+
+pending=0
+pending_list=""
+while IFS= read -r asset; do
+  [ -n "$asset" ] || continue
+  code=$(serve_code "$asset")
+  if [ "$code" != "200" ]; then
+    echo "  ~~ draft asset not ready: $asset → $code (warning only)"
+    pending=$((pending + 1))
+    pending_list="${pending_list:+$pending_list, }$asset"
+  fi
+done <<< "$draft_only"
+
 if [ "$missing" -gt 0 ]; then
-  echo "DEPLOY FAILED VERIFICATION: $missing of $checked referenced asset(s) not served"
+  echo "DEPLOY FAILED VERIFICATION: $missing of $checked published asset(s) not served"
   exit 1
 fi
-echo "✓ $checked referenced assets all serve"
+if [ "$pending" -gt 0 ]; then
+  echo "✓ $checked published assets all serve · $pending draft asset(s) pending ($pending_list)"
+else
+  echo "✓ $checked published assets all serve"
+fi
 
 echo "deployed $NEW (deps=$needs_deps build=$needs_build)"
