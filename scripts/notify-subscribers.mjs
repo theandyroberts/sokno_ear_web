@@ -1,4 +1,4 @@
-// Notify subscribers that a new issue of The Ear is up.
+// Notify subscribers that a fresh episode of The Ear is up.
 //   node scripts/notify-subscribers.mjs preview            → sends only to PREVIEW_TO (Andy)
 //   node scripts/notify-subscribers.mjs send               → sends to every real subscriber (+ recap)
 //   node scripts/notify-subscribers.mjs send-one <email>   → sends to one late signup (no recap)
@@ -15,7 +15,7 @@ const PREVIEW_TO = "andy@note15.com";
 const HOME = "https://soknoear.com";
 const EXCLUDE = new Set(["test@note15.com"]); // obvious test rows
 
-const SUBJECT = "The final bow — Shakespeare's last four nights, a ho'down, and dog bingo";
+const SUBJECT = "Three nights of hummingbirds — and a decision on Sevier Avenue";
 
 const HTML = `<!doctype html><html><body style="margin:0;padding:0;background:#e9dcc4;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#e9dcc4;"><tr><td align="center" style="padding:24px 12px;">
@@ -30,9 +30,9 @@ const HTML = `<!doctype html><html><body style="margin:0;padding:0;background:#e
   <tr><td style="padding:18px 24px 2px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.5;color:#171512;">Hey neighbor —</td></tr>
   <tr><td style="padding:2px 24px 8px;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:1.55;color:#171512;">A fresh episode of <strong>The South Knoxville Ear</strong> is up, and this one's a good time.</td></tr>
   <tr><td align="center" style="padding:8px 24px;">
-    <a href="${HOME}" target="_blank"><img src="${HOME}/assets/spots/shakespeare_finale.jpg" alt="The final bow at Ijams Park" width="512" style="display:block;width:100%;max-width:512px;height:auto;border:2px solid #171512;border-radius:8px;"></a>
+    <a href="${HOME}" target="_blank"><img src="${HOME}/assets/spots/bird_banding_email.jpg" alt="Bird banding at Ijams Park" width="512" style="display:block;width:100%;max-width:512px;height:auto;border:2px solid #171512;border-radius:8px;"></a>
   </td></tr>
-  <tr><td style="padding:10px 24px 4px;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.6;color:#171512;">This weekend the neighborhood says a proper goodbye: <strong>the 36th Knoxville Shakespeare festival plays its final four nights at Ijams Park</strong> — Thursday's Henry V is pay-what-you-can, and Sunday night Merry Wives takes the festival's last bow. Also inside: <strong>Thursday is Election Day</strong> (polls 8–8); the Ho'down Social at Kern's is now every other Friday, with The Band covered live before the dancing; a sound bath, stained glass, and yoga make Sunday at Ijams Park the softest morning of the year; Earl's runs a different margarita deal every day; and Alliance hosts Bow Wow Bingo Sunday — beer and bingo, for the dogs.</td></tr>
+  <tr><td style="padding:10px 24px 4px;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.6;color:#171512;">Ijams Park gives its smallest resident a three-day send-off. Thursday and Friday nights only, <strong>eight enormous animated projections take over the Serendipity and Discovery Trails</strong> — an after-dark art walk called Communion, five dollars, timed entry 8 to 10. Then Saturday the <strong>Hummingbird Festival</strong> takes the homesite from 7 AM to 1, and this year the live banding station is tagging every bird it catches, not just the hummingbirds. Also inside: the <strong>Kerbela</strong> 55-plus apartment plan goes before the Planning Commission Thursday at 1:30 as item 44; <strong>Mimosas</strong> on Blount has two weekends left before it reopens as Puckers; Sunday brings a <strong>free bluegrass jam</strong> on the plaza at Ijams Park, 2 to 5, bring any acoustic instrument; All Play Live turns Kern's into a parents-versus-kids game show Saturday morning; Ted Lasso trivia lands at Hi-Wire on Friday; and Earl's runs a different deal every single day. There's a 2:52 audio briefing too, if you'd rather listen than read.</td></tr>
   <tr><td align="center" style="padding:18px 24px 6px;">
     <a href="${HOME}" target="_blank" style="display:inline-block;background:#A94A34;color:#F3E8D2;text-decoration:none;font-family:Georgia,serif;font-weight:bold;font-size:15px;letter-spacing:0.06em;text-transform:uppercase;padding:13px 28px;border-radius:6px;">★ Read this weekend's Ear</a>
   </td></tr>
@@ -45,7 +45,9 @@ const TEXT = `Hey neighbor —
 
 A fresh episode of The South Knoxville Ear is up, and this one's a good time.
 
-This weekend the neighborhood says a proper goodbye: the 36th Knoxville Shakespeare festival plays its final four nights at Ijams Park — Thursday's Henry V is pay-what-you-can, and Sunday night Merry Wives takes the festival's last bow. Also inside: Thursday is Election Day (polls 8–8); the Ho'down Social at Kern's is now every other Friday, with The Band covered live before the dancing; a sound bath, stained glass, and yoga make Sunday at Ijams Park the softest morning of the year; Earl's runs a different margarita deal every day; and Alliance hosts Bow Wow Bingo Sunday — beer and bingo, for the dogs.
+Ijams Park gives its smallest resident a three-day send-off. Thursday and Friday nights only, eight enormous animated projections take over the Serendipity and Discovery Trails — an after-dark art walk called Communion, five dollars, timed entry 8 to 10. Then Saturday the Hummingbird Festival takes the homesite from 7 AM to 1, and this year the live banding station is tagging every bird it catches, not just the hummingbirds.
+
+Also inside: the Kerbela 55-plus apartment plan goes before the Planning Commission Thursday at 1:30 as item 44; Mimosas on Blount has two weekends left before it reopens as Puckers; Sunday brings a free bluegrass jam on the plaza at Ijams Park, 2 to 5, bring any acoustic instrument; All Play Live turns Kern's into a parents-versus-kids game show Saturday morning; Ted Lasso trivia lands at Hi-Wire on Friday; and Earl's runs a different deal every single day. There's a 2:52 audio briefing too, if you'd rather listen than read.
 
 Read this weekend's Ear: ${HOME}
 
@@ -100,7 +102,7 @@ if (mode === "send") {
     ? [episode.feature, ...episode.stories].map((s, i) => `  ${i === 0 ? "★" : "·"} ${s.title}${s.days?.length ? ` (${s.days.join("/")})` : ""}`)
     : ["  (episode not readable)"];
   const recap = [
-    episode ? `Vol. ${episode.volume} — No. ${episode.number} · ${episode.dateLabel ?? episode.date} is live at https://soknoear.com` : "New issue is live at https://soknoear.com",
+    episode ? `Vol. ${episode.volume} — No. ${episode.number} · ${episode.dateLabel ?? episode.date} is live at https://soknoear.com` : "A fresh episode is live at https://soknoear.com",
     "",
     "IN THIS EPISODE",
     ...storyLines,
