@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://soknoear.com"),
   title: "The South Knoxville Ear",
   description:
-    "South Knoxville's weekly paper — events, openings, and neighborhood news for Sevier Avenue, Ijams Park, Kern's, and the river.",
+    "South Knoxville's weekly roundup — events, openings, and neighborhood news for Sevier Avenue, Ijams Park, Kern's, and the river.",
   applicationName: "The South Knoxville Ear",
   keywords: [
     "South Knoxville", "SoKno", "Sevier Avenue", "Old Sevier", "Ijams Park",

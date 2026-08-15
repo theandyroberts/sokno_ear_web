@@ -7,7 +7,7 @@ import { ContactForm } from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "About · The South Knoxville Ear",
   description:
-    "What The South Knoxville Ear is — a free weekly paper of events and neighborhood news for South Knoxville — and how to send in news for a future issue.",
+    "What The South Knoxville Ear is — a free weekly roundup of events and neighborhood news for South Knoxville — and how to send in news for a future episode.",
   alternates: { canonical: "/about" },
 };
 
@@ -65,7 +65,7 @@ export default function About() {
         <div className="ear-twocol" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.65fr) minmax(0, 1fr)", gap: 40, alignItems: "start", marginBottom: "var(--space-6)" }}>
           <div>
             <p style={p}>
-              The South Knoxville Ear is a free weekly paper for one stretch of Knoxville — Sevier
+              The South Knoxville Ear is free, weekly, and made for one stretch of Knoxville — Sevier
               Avenue and Old Sevier, Kern&apos;s, Ijams, Island Home, the South Waterfront, and the
               Urban Wilderness. Every weekend it gathers what&apos;s actually happening close to home:
               festivals and grand openings, trail walks and porch concerts, road closures and the
@@ -76,7 +76,7 @@ export default function About() {
               short audio briefing for the porch or the car, a &ldquo;what&apos;s happening soon&rdquo;
               calendar, and a Past Episodes archive when you want to look back. It&apos;s free,
               there&apos;s nothing to sign up for, and anyone can send in an event or a piece of news
-              for a future issue.
+              for a future episode.
             </p>
             <p style={p}>
               The whole point is simple: help neighbors run into the good stuff on purpose instead of
@@ -113,7 +113,7 @@ export default function About() {
             </p>
             <p style={p}>
               And he doesn&apos;t do it alone. Serena — chief morale officer, four legs, zero bylines —
-              supervises every issue from the couch. The best tips come from neighbors, though: if you
+              supervises every episode from the couch. The best tips come from neighbors, though: if you
               know about a grand opening, a fundraiser, a road closure, or a porch show the rest of us
               would want in on, that&apos;s exactly what the Ear is for. Send it along.
             </p>

@@ -127,7 +127,7 @@ async function requestDraft(apiKey: string, input: StoryDraftInput): Promise<Sto
         {
           role: "system",
           content: [
-            "Draft a short article for The South Knoxville Ear, a weekly neighborhood paper for South Knoxville, TN.",
+            "Draft a short article for The South Knoxville Ear, a weekly neighborhood roundup for South Knoxville, TN.",
             "Voice: neighborly, curious, lightly funny, useful, locally fluent — never mean. Sentence-case headline. No emoji.",
             "Use ONLY facts present in the input. Never invent venues, dates, times, prices, or names.",
             "Anything unknown, unverified, or ambiguous goes in followUpQuestions as a concrete question to ask the submitter.",
