@@ -24,7 +24,11 @@ function toIso(ms) {
 }
 
 /**
- * @param {Array<{postAt: string}>} posts  chronologically sorted
+ * Posts flagged `lead` always open the run — the weekly promo pair announces the
+ * episode and the tip line, so they have to land before the stories they introduce.
+ * Ties among them break on `leadOrder`. Everything else follows in time order.
+ *
+ * @param {Array<{postAt: string, lead?: boolean, leadOrder?: number}>} posts
  * @param {number} nowMs
  * @returns {{posts: Array, moved: number}} new array; `moved` counts rescheduled posts
  */
@@ -35,9 +39,11 @@ export function spaceOutPosts(posts, nowMs = Date.now(), opts = {}) {
   let earliest = nowMs + lead;
   let moved = 0;
 
-  const out = posts
-    .slice()
-    .sort((a, b) => a.postAt.localeCompare(b.postAt))
+  const byTime = (a, b) => a.postAt.localeCompare(b.postAt);
+  const leaders = posts.filter((p) => p.lead).sort((a, b) => (a.leadOrder ?? 0) - (b.leadOrder ?? 0) || byTime(a, b));
+  const rest = posts.filter((p) => !p.lead).sort(byTime);
+
+  const out = [...leaders, ...rest]
     .map((p) => {
       const wanted = new Date(p.postAt).getTime();
       const when = Math.max(wanted, earliest);

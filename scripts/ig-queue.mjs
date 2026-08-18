@@ -152,8 +152,9 @@ for (const s of stories) {
   });
 }
 
-// ── Weekly promo pair (scripts/ig-promos.py), posted AT the drop as feed dividers.
-// call-the-ear first, episode-drop a minute later so the episode card lands newest.
+// ── Weekly promo pair (scripts/ig-promos.py). These OPEN the drip — they announce the
+// episode and the tip line, so they must land before the stories they introduce.
+// spaceOutPosts honours `lead`/`leadOrder` regardless of the clock times below.
 function isoNowPlus(min) {
   const d = new Date(Date.now() + min * 60000);
   const p = (n) => String(n).padStart(2, "0");
@@ -202,6 +203,8 @@ for (const pr of PROMOS) {
     permalink: SITE,
     caption: pr.caption,
     tags: [],
+    lead: true,
+    leadOrder: pr.offset,
     status: "pending",
   });
 }

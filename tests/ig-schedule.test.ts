@@ -59,3 +59,42 @@ describe("spaceOutPosts", () => {
     ]);
   });
 });
+
+describe("the promo pair opens the drip", () => {
+  const lead = (id: string, order: number, postAt: string) => ({ id, lead: true, leadOrder: order, postAt });
+
+  it("puts call-the-ear then episode-drop ahead of every story", () => {
+    const posts = [
+      at("2026-08-18T09:00:00-04:00"), // feature, already past due
+      at("2026-08-18T10:00:00-04:00"),
+      lead("call-the-ear", 0, "2026-08-18T11:52:00-04:00"),
+      lead("episode-drop", 1, "2026-08-18T11:53:00-04:00"),
+      at("2026-08-20T09:00:00-04:00"),
+    ];
+    const { posts: out } = spaceOutPosts(posts, now);
+    expect(out.slice(0, 2).map((p) => p.id)).toEqual(["call-the-ear", "episode-drop"]);
+    for (let i = 1; i < out.length; i++) {
+      expect(new Date(out[i].postAt).getTime()).toBeGreaterThan(new Date(out[i - 1].postAt).getTime());
+    }
+  });
+
+  it("leads even when every story slot is in the future", () => {
+    const posts = [
+      at("2026-08-20T09:00:00-04:00"),
+      lead("call-the-ear", 0, "2026-08-18T11:52:00-04:00"),
+      lead("episode-drop", 1, "2026-08-18T11:53:00-04:00"),
+    ];
+    const { posts: out } = spaceOutPosts(posts, now);
+    expect(out.map((p) => p.id)).toEqual([
+      "call-the-ear",
+      "episode-drop",
+      "2026-08-20T09:00:00-04:00",
+    ]);
+  });
+
+  it("still spaces the pair a full gap apart", () => {
+    const posts = [lead("call-the-ear", 0, "2026-08-18T11:52:00-04:00"), lead("episode-drop", 1, "2026-08-18T11:53:00-04:00")];
+    const { posts: out } = spaceOutPosts(posts, now);
+    expect(minsApart(out[0].postAt, out[1].postAt)).toBeGreaterThanOrEqual(MIN_GAP_MIN);
+  });
+});
