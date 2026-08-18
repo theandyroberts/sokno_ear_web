@@ -1,0 +1,760 @@
+{
+  "slug": "2026-08-19",
+  "volume": 1,
+  "number": 10,
+  "episode": "Weekend Episode",
+  "date": "2026-08-19",
+  "dateLabel": "Thu–Sun, Aug 20–23, 2026",
+  "shortDate": "Aug 20–23",
+  "place": "South Knoxville, TN",
+  "feature": {
+    "id": "mimosas-last-call",
+    "label": "SoKno",
+    "labelColor": "ink",
+    "days": [
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    "layout": "imageTop",
+    "image": "/assets/spots/mimosas.jpg",
+    "imageCaption": "The last brunch service on Blount",
+    "title": "The last weekend of Mimosas: one more brunch before the sign comes down",
+    "deck": "The brunch room on Blount Avenue serves its final Saturday and Sunday this weekend. It closes August 25 and reopens the next morning as Puckers Sports Grill Knoxville — which makes these the last two brunches under the old name.",
+    "facts": [
+      {
+        "label": "Where",
+        "value": "Mimosas, 115 Mimosa Ave, off Blount"
+      },
+      {
+        "label": "Sat Aug 22",
+        "value": "9 AM – 10 PM · brunch 9 AM – 3 PM"
+      },
+      {
+        "label": "Sun Aug 23",
+        "value": "9 AM – 9 PM · brunch 9 AM – 3 PM"
+      },
+      {
+        "label": "Last day",
+        "value": "Tue Aug 25"
+      },
+      {
+        "label": "Then",
+        "value": "Reopens Wed Aug 26 as Puckers Sports Grill Knoxville"
+      },
+      {
+        "label": "Staying",
+        "value": "The Mimosas brunch favorites keep a place on the new menu"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "There is a particular kind of South Knoxville morning that happens a few hundred yards off Blount Avenue: eggs, a tall glass of something citrus, and no particular plan for the rest of the day. Mimosas has been the room for that morning. This weekend is the last one it gets under that name — the restaurant closes Tuesday, August 25, and opens the next morning as Puckers Sports Grill Knoxville."
+      },
+      {
+        "type": "subhead",
+        "text": "What's actually changing"
+      },
+      {
+        "type": "paragraph",
+        "text": "Puckers is a Gatlinburg institution — Chad Kennedy opened the original in 1999, and his daughter Hannah, who now runs Kennedy Concepts, is bringing it over the mountain. The Knoxville version is pitched bigger: chef-driven food, a proper cocktail list, and the kind of game-day room that a spot this close to Neyland Stadium can fill on a fall Saturday. The company has also said the Mimosas brunch favorites keep a place on the new menu, and that the Mimosas concept itself is expected to come back somewhere down the line."
+      },
+      {
+        "type": "subhead",
+        "text": "So: this weekend"
+      },
+      {
+        "type": "paragraph",
+        "text": "Brunch runs 9 to 3 both Saturday and Sunday, and the room stays open past it — until 10 Saturday, until 9 Sunday. It's a short walk up from the river and a shorter one from the bridge. If you have been meaning to go, this is not a nudge; it's the last call. And if you have never been, that's the better reason to go — you get to see the room the way the neighborhood knew it, once, before it becomes something else."
+      },
+      {
+        "type": "agenda",
+        "title": "The final weekend",
+        "rows": [
+          {
+            "time": "Sat 9 AM – 3 PM",
+            "what": "Brunch service"
+          },
+          {
+            "time": "Sat until 10 PM",
+            "what": "Dinner and the bar"
+          },
+          {
+            "time": "Sun 9 AM – 3 PM",
+            "what": "The last brunch"
+          },
+          {
+            "time": "Sun until 9 PM",
+            "what": "Last night of the weekend"
+          },
+          {
+            "time": "Tue Aug 25",
+            "what": "Final day as Mimosas"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Mimosas Knoxville — closing announcement & hours",
+        "url": "https://mimosasknoxville.com/"
+      }
+    ],
+    "event": {
+      "startDate": "2026-08-22T09:00:00-04:00",
+      "endDate": "2026-08-23T21:00:00-04:00",
+      "locationName": "Mimosas",
+      "locationAddress": "115 Mimosa Ave"
+    },
+    "social": {
+      "igTags": [
+        "mimosas"
+      ],
+      "igBanner": [
+        "Last brunch at Mimosas",
+        "Saturday and Sunday, then it's Puckers"
+      ]
+    }
+  },
+  "scanner": [
+    {
+      "label": "SoKno",
+      "labelColor": "ink",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "hot": true,
+      "image": "/assets/spots/mimosas.jpg",
+      "title": "The last weekend of Mimosas",
+      "blurb": "Two final brunches on Blount before it reopens August 26 as Puckers.",
+      "cue": "Jump to story",
+      "href": "#mimosas-last-call"
+    },
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "hot": true,
+      "image": "/assets/spots/kerns_hoedown.jpg",
+      "title": "Soul, boots, and 150 kids with guitars",
+      "blurb": "A funk band Friday at six, free line dancing at eight, then two days of School of Rock.",
+      "cue": "Jump to story",
+      "href": "#kerns-weekend"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "image": "/assets/spots/ijams_paddle.jpg",
+      "title": "Summer camp, for grown-ups",
+      "blurb": "Caving, kayaking and a tent under the trees — three days, eighteen and over.",
+      "cue": "Jump to story",
+      "href": "#ijams-rediscovery"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu",
+        "Sat",
+        "Sun"
+      ],
+      "image": "/assets/spots/hiwire_weekend.jpg",
+      "title": "Books, dogs, and stained glass",
+      "blurb": "Hi-Wire fills the weekend: yoga both mornings, adoptable pets Saturday, glass on Sunday.",
+      "cue": "Jump to story",
+      "href": "#old-sevier-weekend"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "image": "/assets/spots/planning_hearing.jpg",
+      "title": "Kerbela gets its answer",
+      "blurb": "The Shriners site is approved — 225 apartments, a public plaza, and a path to the river.",
+      "cue": "Jump to story",
+      "href": "#kerbela-approved"
+    },
+    {
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "image": "/assets/spots/specials_board.jpg",
+      "title": "The specials board",
+      "blurb": "Earl's runs a different deal every day of the weekend, out on the waterfront.",
+      "cue": "Jump to story",
+      "href": "#specials-board"
+    }
+  ],
+  "stories": [
+    {
+      "id": "kerns-weekend",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/kerns_hoedown.jpg",
+      "imageCaption": "Friday night, on the floor",
+      "title": "A soul band, a free line dance, and 150 kids playing rock: Kern's takes the whole weekend",
+      "deck": "Friday belongs to grown-ups — Motown covers at six, boots on the floor at eight, both free. Then Saturday and Sunday the stage goes to the students, and that's free too.",
+      "facts": [
+        {
+          "label": "Fri Aug 21",
+          "value": "Scruffy City Soul Machine · 6 PM"
+        },
+        {
+          "label": "Fri Aug 21",
+          "value": "Ho'Down Social — line & country dancing · 8–11 PM · free"
+        },
+        {
+          "label": "Sat Aug 22",
+          "value": "School of Rock · from 11:30 AM · free"
+        },
+        {
+          "label": "Sun Aug 23",
+          "value": "School of Rock continues · through 7 PM · free"
+        },
+        {
+          "label": "Where",
+          "value": "Kern's, 2201 Kern's Rising Way"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The old bakery on Kern's Rising Way has three nights of music booked and is charging for exactly none of it. It is the rare weekend where the plan can just be \"go to Kern's\" and the building sorts out the rest."
+        },
+        {
+          "type": "subhead",
+          "text": "Friday: Stax first, then boots"
+        },
+        {
+          "type": "paragraph",
+          "text": "Scruffy City Soul Machine opens the evening at six — a Knoxville soul and funk outfit built on the golden run of the sixties and seventies, which in practice means Aretha, Stevie, Otis, and a horn section that does not need a microphone to reach the back of the hall. At eight the floor changes hands: the Ho'Down Social, line and country dancing run by Cowtown Studio, goes until eleven. It's free, it's for every skill level, and there is no dress code — which is a polite way of saying nobody is checking your boots."
+        },
+        {
+          "type": "subhead",
+          "text": "Saturday and Sunday: the kids take the stage"
+        },
+        {
+          "type": "paragraph",
+          "text": "Then the weekend hands the microphone over. School of Rock brings more than 150 students — kids of all ages — to play across two full days, starting 11:30 Saturday morning and running through seven o'clock Sunday evening. Admission is free. It is loud, it is unpolished in the specific way that makes live music worth leaving the house for, and somewhere in there a nine-year-old is going to land a guitar solo in front of a room full of strangers."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kern's advantage for a weekend like this is the building itself: the food hall vendors, the coffee, and the bar are all already there, so you can arrive without a plan and stay as long as the set list holds. Park on campus and walk in."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Eventbrite — School of Rock at Kern's Bakery",
+          "url": "https://www.eventbrite.com/e/school-of-rock-tickets-1997060606032"
+        },
+        {
+          "label": "Eventbrite — Ho'Down Social | Line & Country Dancing",
+          "url": "https://www.eventbrite.com/e/hodown-social-line-country-dancing-tickets-1997059717374"
+        },
+        {
+          "label": "Inside of Knoxville — 10-day planner (Aug 16–25)",
+          "url": "https://insideofknoxville.com/2026/08/10-day-downtown-ish-planner-august-16-25/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-08-22T11:30:00-04:00",
+        "endDate": "2026-08-23T19:00:00-04:00",
+        "locationName": "Kern's Food Hall",
+        "locationAddress": "2201 Kern's Rising Way"
+      },
+      "social": {
+        "igTags": [
+          "kerns"
+        ],
+        "igBanner": [
+          "Three free nights at Kern's",
+          "Soul Friday, School of Rock all weekend"
+        ]
+      }
+    },
+    {
+      "id": "ijams-rediscovery",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/ijams_paddle.jpg",
+      "imageCaption": "Caving, kayaking, s'mores — no permission slip",
+      "title": "Ijams Park is running a summer camp for adults, and Saturday night you sleep in a tent",
+      "deck": "Re-Discovery Camp is three days of caving, kayaking, naturalist hikes and campfire s'mores for anyone eighteen and up. If that's a bigger commitment than your weekend allows, the park's free Saturday storytelling is still on.",
+      "facts": [
+        {
+          "label": "Fri–Sun Aug 21–23",
+          "value": "Re-Discovery Camp · 18 and over"
+        },
+        {
+          "label": "Full weekend",
+          "value": "$300 · Friday evening through Sunday"
+        },
+        {
+          "label": "Saturday–Sunday only",
+          "value": "$210 · Navitat treetop add-on +$35"
+        },
+        {
+          "label": "Bring",
+          "value": "A tent and sleeping pad — the park can lend gear"
+        },
+        {
+          "label": "Sat Aug 22",
+          "value": "Storytelling at the Nature Playscape · 10 AM – noon · free"
+        },
+        {
+          "label": "Sun Aug 23",
+          "value": "Self Care Sunday Yoga with Hope Irwin · 11:30 AM"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Somewhere along the way, summer camp became a thing that only happens to people under twelve. Ijams Park has decided that was an oversight. Re-Discovery Camp runs Friday evening through Sunday afternoon and is open to anyone eighteen and older — bring a partner, bring a friend, or come alone and meet the rest of the cabin."
+        },
+        {
+          "type": "subhead",
+          "text": "What three days actually looks like"
+        },
+        {
+          "type": "paragraph",
+          "text": "Friday opens with dinner and an evening choice of caving or a herping hike — that's going out after dark to find frogs and snakes, and it is exactly as good as it sounds. Saturday stacks welcome games, animal ambassador visits, arts and crafts, wilderness skills, and kayaking, then puts everyone around a campfire with s'mores. Saturday night you sleep on the grounds under the trees; bring a tent and a sleeping pad, or ask and the park will sort out gear. Sunday is breakfast, then yoga or a swim in the quarry, a naturalist hike, lunch, and an optional run through the treetops on the Navitat course."
+        },
+        {
+          "type": "subhead",
+          "text": "The cost, plainly"
+        },
+        {
+          "type": "paragraph",
+          "text": "The full weekend is $300 a person and the Saturday-to-Sunday version is $210, with the treetop add-on another $35. That covers Friday dinner, Saturday dinner and s'mores, and Sunday breakfast and lunch — Saturday's breakfast and lunch are on you. Registration runs through the park's camp registration site, and questions go to publicprograms@ijams.org."
+        },
+        {
+          "type": "subhead",
+          "text": "If a whole weekend is too much weekend"
+        },
+        {
+          "type": "paragraph",
+          "text": "The park's standing Saturday storytelling runs 10 to noon at the Nature Playscape out at Mead's Quarry, and it's free — small kids, blankets, and somebody reading out loud under the trees. Sunday, Hope Irwin's Self Care Sunday yoga starts at 11:30. Neither one asks anything of you but showing up."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams — Re-Discovery Camp (dates, pricing, schedule)",
+          "url": "https://www.ijams.org/rediscoverycamp"
+        },
+        {
+          "label": "Ijams events calendar",
+          "url": "https://www.ijams.org/calendar-of-events"
+        },
+        {
+          "label": "Inside of Knoxville — 10-day planner (Aug 16–25)",
+          "url": "https://insideofknoxville.com/2026/08/10-day-downtown-ish-planner-august-16-25/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-08-21T17:00:00-04:00",
+        "endDate": "2026-08-23T15:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Adult summer camp at Ijams Park",
+          "Caving, kayaking, and a tent Saturday night"
+        ]
+      }
+    },
+    {
+      "id": "old-sevier-weekend",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/hiwire_weekend.jpg",
+      "imageCaption": "Barber Street, most of the weekend",
+      "title": "Old Sevier's weekend: a book night Thursday, adoptable dogs Saturday, stained glass Sunday",
+      "deck": "The corridor runs a quiet, generous weekend — cheap pints and a reading night to open it, a grown-up book fair with rescue animals in the middle, and a craft workshop to land it.",
+      "facts": [
+        {
+          "label": "Thu Aug 20",
+          "value": "Pages & Pours at Fly by Night · 5:30–9 PM · RSVP"
+        },
+        {
+          "label": "Thu Aug 20",
+          "value": "Pint night at Hi-Wire · $4 drafts"
+        },
+        {
+          "label": "Sat & Sun",
+          "value": "Weekly yoga at Hi-Wire · 11 AM – noon"
+        },
+        {
+          "label": "Sat Aug 22",
+          "value": "Fairy Tales & Fuzzy Tails — books & adoptable pets · 2–6 PM"
+        },
+        {
+          "label": "Sun Aug 23",
+          "value": "Stained glass workshop · 2–4 PM · RSVP"
+        },
+        {
+          "label": "Where",
+          "value": "Hi-Wire, 2020 Barber St · Fly by Night, Sevier Ave"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Sevier Avenue and the streets hanging off it are having the sort of weekend that doesn't announce itself — no festival, no headliner, just four days of small things worth walking to."
+        },
+        {
+          "type": "subhead",
+          "text": "Thursday: read something, drink something cheap"
+        },
+        {
+          "type": "paragraph",
+          "text": "Fly by Night hosts Pages & Pours from 5:30 to 9 — bring whatever you're reading and share a room with people doing the same, which is a lower-stakes proposition than a book club and about twice as pleasant. They ask that you RSVP. A few blocks over, Hi-Wire's standing Thursday pint night puts drafts at four dollars."
+        },
+        {
+          "type": "subhead",
+          "text": "Saturday: a book fair with a foster program attached"
+        },
+        {
+          "type": "paragraph",
+          "text": "Then the weekend's best idea. Fairy Tales & Fuzzy Tails runs 2 to 6 at Hi-Wire on Barber Street — a grown-up book fair crossed with a pet adoption event, which is to say tables of books, adoptable animals in the room, and a genuine risk of going home with more than you planned. Yoga holds down eleven o'clock that morning if you want to earn the afternoon."
+        },
+        {
+          "type": "subhead",
+          "text": "Sunday: yoga, then glass"
+        },
+        {
+          "type": "paragraph",
+          "text": "Yoga runs 11 to noon again Sunday, and at two the taproom turns into a workshop — a two-hour stained glass class, registration required, ending at four with something you made yourself. It is a good closing move for a weekend, and a better one than scrolling."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Inside of Knoxville — 10-day planner (Aug 16–25)",
+          "url": "https://insideofknoxville.com/2026/08/10-day-downtown-ish-planner-august-16-25/"
+        },
+        {
+          "label": "Visit Knoxville — Thursday Pint Night at Hi-Wire Brewing Knoxville",
+          "url": "https://www.visitknoxville.com/event/thursday-pint-night-@-hi-wire-brewing-knoxville/27266/"
+        },
+        {
+          "label": "Hi-Wire Brewing — Knoxville taproom",
+          "url": "https://hiwirebrewing.com/knoxville/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-08-22T14:00:00-04:00",
+        "endDate": "2026-08-22T18:00:00-04:00",
+        "locationName": "Hi-Wire Brewing Knoxville",
+        "locationAddress": "2020 Barber St"
+      },
+      "social": {
+        "igTags": [
+          "hiwire"
+        ],
+        "igBanner": [
+          "Books and adoptable dogs",
+          "Saturday 2 to 6 at Hi-Wire"
+        ]
+      }
+    },
+    {
+      "id": "kerbela-approved",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "layout": "imageLeft",
+      "image": "/assets/spots/planning_hearing.jpg",
+      "imageCaption": "Approved, after five agendas",
+      "title": "The Kerbela plan is approved: 225 apartments, a public plaza, and a walkway to the river",
+      "deck": "The Planning Commission signed off last Thursday on a 55-and-over community for the old Shriners site at Sevier and Dawson. The version that passed carries public space the earlier drafts didn't.",
+      "facts": [
+        {
+          "label": "Decided",
+          "value": "Thu Aug 13 · Knoxville-Knox County Planning Commission"
+        },
+        {
+          "label": "Site",
+          "value": "315 Kerbela Ave · 5.7 acres at Sevier Ave & Dawson St"
+        },
+        {
+          "label": "What's coming",
+          "value": "225 apartments · 55-and-over community"
+        },
+        {
+          "label": "Developer",
+          "value": "CR Endeavors"
+        },
+        {
+          "label": "Next",
+          "value": "Design, permitting and city review"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "One of the largest undeveloped pieces of land left on Sevier Avenue now has a decision attached to it. Last Thursday the Knoxville-Knox County Planning Commission approved a revised plan to turn the old Kerbela Shriners temple site — 5.7 acres where Sevier meets Dawson Street, right up against the Kern's campus — into a 225-apartment community for residents 55 and over."
+        },
+        {
+          "type": "subhead",
+          "text": "What the neighborhood got in the final draft"
+        },
+        {
+          "type": "paragraph",
+          "text": "The plan had been through five agendas since February, with commissioners pressing repeatedly on a single question: how much of the finished site would actually belong to the public. The approved version answers it in concrete terms. There's a public plaza at the corner of Dawson and Sevier, landscaped and built to hold food trucks. There's an east-west public path across the property connecting toward the South Waterfront, and a north-south breezeway through it. Because the ground drops away at grades reaching 40 percent, the plan adds an accessible elevator alongside exterior stairs. And a piece of the land goes to the City of Knoxville outright."
+        },
+        {
+          "type": "subhead",
+          "text": "What happens now"
+        },
+        {
+          "type": "paragraph",
+          "text": "CR Endeavors moves into design, permitting and the regulatory work that follows, in coordination with the city — so nothing changes on the ground this month. Developer Ryan Robertson said the team had spent \"a lot of time listening\" over the months of revisions. For a corridor that has spent a decade arguing about what it wants to become, this is the biggest single answer it has given yet."
+        }
+      ],
+      "sources": [
+        {
+          "label": "WVLT — Planning Commission approves revised Kerbela development plan",
+          "url": "https://www.wvlt.tv/2026/08/13/knox-county-planning-commission-approves-revised-development-plan-former-kerbela-shriners-site/"
+        },
+        {
+          "label": "WATE — Planning Commission okays plan to redevelop Kerbela Shriners building",
+          "url": "https://www.wate.com/news/knox-county-news/planning-commission-okays-plan-to-redevelop-kerbela-shriners-building-in-south-knoxville/"
+        }
+      ],
+      "social": {
+        "igBanner": [
+          "Kerbela: approved",
+          "225 apartments and a public plaza"
+        ]
+      }
+    },
+    {
+      "id": "specials-board",
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/specials_board.jpg",
+      "imageCaption": "The week, in chalk",
+      "title": "The specials board: a different deal every day at Earl's",
+      "deck": "Down where Suttree Landing meets the river, Earl's runs its own weekly ladder — a new special each afternoon, then two all-day ones once the weekend lands.",
+      "facts": [
+        {
+          "label": "Thu",
+          "value": "$10 Patrón mango ritas · 4–6 PM · $1 off liquor, beer & wine"
+        },
+        {
+          "label": "Fri",
+          "value": "$9 spicy pineapple ritas · 4–6 PM · $1 off liquor, beer & wine"
+        },
+        {
+          "label": "Sat",
+          "value": "$8 house margaritas · all day · 10:30 AM – 11 PM"
+        },
+        {
+          "label": "Sun",
+          "value": "$7 mimosas & Bloody Marys · all day · 10:30 AM – 10 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Earl's, 610 Waterfront Dr"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Earl's sits at 610 Waterfront Drive, down where Suttree Landing meets the water, and it runs a different special every single day — which turns a weekend into a small planning exercise. Thursday it's ten-dollar Patrón mango margaritas from four to six; Friday the same window gets nine-dollar spicy pineapple ones. Both days carry a dollar off liquor, beer, and wine."
+        },
+        {
+          "type": "subhead",
+          "text": "Then the all-day rungs"
+        },
+        {
+          "type": "paragraph",
+          "text": "Saturday the clock goes away: eight-dollar house margaritas all day, doors 10:30 to 11. Sunday is seven-dollar mimosas and Bloody Marys, also all day, until ten. Walk down from Sevier Avenue, take a table where you can see the water, and let the river handle the entertainment."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Earl's Knoxville — specials",
+          "url": "https://earlsknox.com/specials"
+        }
+      ],
+      "event": {
+        "startDate": "2026-08-20T16:00:00-04:00",
+        "endDate": "2026-08-20T18:00:00-04:00",
+        "locationName": "Earl's",
+        "locationAddress": "610 Waterfront Dr"
+      },
+      "social": {
+        "igTags": [
+          "earls"
+        ],
+        "igBanner": [
+          "The SoKno Specials Board",
+          "A different deal every day"
+        ]
+      }
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen — the last brunch at Mimosas, three free nights of music at Kern's, adult summer camp at Ijams Park, and adoptable dogs at a book fair.",
+      "duration": "02:55",
+      "src": "/audio/2026-08-19.mp3"
+    },
+    "calendar": [
+      {
+        "month": "AUG",
+        "day": "20",
+        "title": "Pages & Pours at Fly by Night",
+        "meta": "5:30–9 PM · RSVP · Sevier Ave",
+        "href": "#old-sevier-weekend"
+      },
+      {
+        "month": "AUG",
+        "day": "20",
+        "title": "Pint night at Hi-Wire",
+        "meta": "$4 drafts · 2020 Barber St",
+        "href": "#old-sevier-weekend"
+      },
+      {
+        "month": "AUG",
+        "day": "20",
+        "title": "Earl's — $10 Patrón ritas",
+        "meta": "4–6 PM · 610 Waterfront Dr",
+        "href": "#specials-board"
+      },
+      {
+        "month": "AUG",
+        "day": "21",
+        "title": "Scruffy City Soul Machine",
+        "meta": "6 PM · Kern's",
+        "href": "#kerns-weekend"
+      },
+      {
+        "month": "AUG",
+        "day": "21",
+        "title": "Re-Discovery Camp opens",
+        "meta": "Evening · 18+ · Ijams Park",
+        "href": "#ijams-rediscovery"
+      },
+      {
+        "month": "AUG",
+        "day": "21",
+        "title": "Ho'Down Social — line dancing",
+        "meta": "8–11 PM · free · Kern's",
+        "starred": true,
+        "href": "#kerns-weekend"
+      },
+      {
+        "month": "AUG",
+        "day": "22",
+        "title": "Storytelling at the Nature Playscape",
+        "meta": "10 AM – noon · free · Ijams Park",
+        "href": "#ijams-rediscovery"
+      },
+      {
+        "month": "AUG",
+        "day": "22",
+        "title": "SCHOOL OF ROCK AT KERN'S",
+        "meta": "From 11:30 AM · free · runs through Sunday",
+        "starred": true,
+        "href": "#kerns-weekend"
+      },
+      {
+        "month": "AUG",
+        "day": "22",
+        "title": "Weekly yoga at Hi-Wire",
+        "meta": "11 AM – noon · also Sunday",
+        "href": "#old-sevier-weekend"
+      },
+      {
+        "month": "AUG",
+        "day": "22",
+        "title": "Fairy Tales & Fuzzy Tails",
+        "meta": "2–6 PM · books & adoptable pets · Hi-Wire",
+        "starred": true,
+        "href": "#old-sevier-weekend"
+      },
+      {
+        "month": "AUG",
+        "day": "23",
+        "title": "Self Care Sunday Yoga",
+        "meta": "11:30 AM · Ijams Park",
+        "href": "#ijams-rediscovery"
+      },
+      {
+        "month": "AUG",
+        "day": "23",
+        "title": "Stained glass workshop",
+        "meta": "2–4 PM · RSVP · Hi-Wire",
+        "href": "#old-sevier-weekend"
+      },
+      {
+        "month": "AUG",
+        "day": "23",
+        "title": "Earl's — $7 mimosas & Bloody Marys",
+        "meta": "All day · 610 Waterfront Dr",
+        "href": "#specials-board"
+      },
+      {
+        "month": "AUG",
+        "day": "25",
+        "title": "Last day for Mimosas on Blount",
+        "meta": "Reopens Aug 26 as Puckers Sports Grill",
+        "starred": true,
+        "href": "#mimosas-last-call"
+      }
+    ]
+  }
+}
