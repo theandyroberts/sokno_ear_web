@@ -14,6 +14,7 @@ import { SubscribeForm } from "@/components/SubscribeForm";
 import { ArticleSources } from "@/components/ArticleSources";
 import { ShareStory } from "@/components/ShareStory";
 import { JsonLd } from "@/components/JsonLd";
+import { calendarRowDay } from "@/lib/episodes";
 
 const Page = ({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) => (
   <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", ...style }}>{children}</div>
@@ -59,13 +60,59 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
 
   // Day filter: distinct days across the episode (ordered), rendered as a CSS-only filter bar.
   const DAY_ORDER = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  const DAY_FULL: Record<string, string> = {
+    Mon: "Monday", Tue: "Tuesday", Wed: "Wednesday", Thu: "Thursday",
+    Fri: "Friday", Sat: "Saturday", Sun: "Sunday",
+  };
   const daysAttr = (ds?: string[]) => (ds && ds.length ? ds.map((d) => d.toLowerCase()).join(" ") : undefined);
   const episodeDays = DAY_ORDER.filter((d) => [feature, ...stories].some((s) => s.days?.includes(d)));
+
+  // Calendar rows carry a stamped date, not a weekday — derive one so the day board can
+  // filter them. Undatable rows get "none" so they hide under every day rather than
+  // showing under all of them.
+  const calendarRows = sidebar.calendar.map((c) => ({
+    ...c,
+    dayAttr: calendarRowDay(c.month, c.day, episode.date)?.toLowerCase() ?? "none",
+  }));
+
+  const dayPills = (
+    <div className="ear-daynav ear-daynav--board">
+      <span className="ear-daynav-label">See</span>
+      <label htmlFor="df-all">All</label>
+      {episodeDays.map((d) => (
+        <label key={d} htmlFor={`df-${d.toLowerCase()}`}>{d}</label>
+      ))}
+    </div>
+  );
 
   return (
     <main id="top">
       <JsonLd episode={episode} storyUrl={storyView ? `https://soknoear.com/${episode.slug}/${feature.id}` : undefined} />
       <Masthead volLine={volLine} dateline={dateline} shortDate={shortDate} sections={sections} days={episodeDays} />
+
+      {/* DAY BOARD — when a single day is picked, the calendar steps out of the sidebar and
+          runs full width directly under the nav, so the chosen day always has something
+          above the fold even if the feature isn't on that day. Hidden on "All". */}
+      {episodeDays.length > 0 && (
+        <div className="ear-dayboard" style={{ background: "var(--paper-shadow)", borderBottom: "var(--border-rule) double var(--ink-black)", padding: "20px 0 24px" }}>
+          <Page>
+            <section style={{ background: "var(--paper-bright)", border: "var(--border-ink) solid var(--ink-black)", borderRadius: "var(--radius-md)", overflow: "hidden", boxShadow: "var(--shadow-lift)" }}>
+              <div style={{ background: "var(--teal)", color: "var(--on-teal)", borderBottom: "var(--border-ink) solid var(--ink-black)", padding: "10px 16px", fontFamily: "var(--font-label)", fontSize: "var(--label-md)", letterSpacing: "var(--tracking-label)", textTransform: "uppercase", display: "flex", alignItems: "center", gap: 8 }}>
+                <span aria-hidden style={{ color: "var(--rust)" }}>★</span>
+                {episodeDays.map((d) => (
+                  <span key={d} data-days={d.toLowerCase()}>What&rsquo;s Happening {DAY_FULL[d] ?? d}</span>
+                ))}
+              </div>
+              {dayPills}
+              <div style={{ padding: "4px 16px 8px" }}>
+                {calendarRows.map((c, i) => (
+                  <CalendarItem key={i} data-days={c.dayAttr} month={c.month} day={c.day} title={c.title} meta={c.meta} starred={c.starred} href={resolveHref(c.href)} divider={i < calendarRows.length - 1} />
+                ))}
+              </div>
+            </section>
+          </Page>
+        </div>
+      )}
 
       {/* FEATURE BAND */}
       <div id="events" data-days={daysAttr(feature.days)} style={{ borderBottom: "var(--border-rule) double var(--ink-black)", padding: "28px 0 32px" }}>
@@ -80,6 +127,7 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
               {sidebar.audio && (
                 <AudioBriefingPlayer title={sidebar.audio.title} intro={sidebar.audio.intro} description={sidebar.audio.description} duration={sidebar.audio.duration} src={sidebar.audio.src} />
               )}
+              <div className="ear-soon-aside">
               <Well title="What's Happening Soon">
                 {sidebar.calendar.map((c, i) => (
                   <CalendarItem key={i} month={c.month} day={c.day} title={c.title} meta={c.meta} starred={c.starred} href={resolveHref(c.href)} divider={i < sidebar.calendar.length - 1} />
@@ -90,6 +138,7 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
                   </div>
                 )}
               </Well>
+              </div>
               <SubscribeForm />
             </aside>
           </div>
