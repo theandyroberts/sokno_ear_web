@@ -1,0 +1,311 @@
+{
+  "updated": "2026-08-18",
+  "weekend": "Aug 20–23",
+  "days": {
+    "Thu": [
+      {
+        "id": "thu-earls",
+        "time": "4:00 PM",
+        "venue": "Earl's · 610 Waterfront Dr",
+        "headline": "$10 Patrón mango margaritas",
+        "sub": "Happy hour ends at 6 · $1 off liquor, beer & wine all night",
+        "href": "https://earlsknox.com/specials",
+        "cat": "drink"
+      },
+      {
+        "id": "thu-hiwire",
+        "time": "4:00 PM",
+        "venue": "Hi-Wire · Barber St",
+        "headline": "Thursday pint night — $4 drafts",
+        "sub": "All evening in the taproom",
+        "href": "https://hiwirebrewing.com/knoxville/",
+        "cat": "drink"
+      },
+      {
+        "id": "thu-kerns",
+        "time": "5:00 PM",
+        "venue": "Kern's Food Hall",
+        "headline": "Pre-party at the old bakery",
+        "sub": "Pick a vendor, post up — food hall + bar into the evening",
+        "href": "https://kernsfoodhall.com/",
+        "cat": "food"
+      },
+      {
+        "id": "thu-flybynight",
+        "time": "5:30 PM",
+        "venue": "Fly by Night · Sevier Ave",
+        "headline": "Pages & Pours book night",
+        "sub": "Bring what you're reading · runs till 9 · RSVP asked",
+        "href": "/2026-08-19/old-sevier-weekend",
+        "cat": "star"
+      },
+      {
+        "id": "thu-soknotaco",
+        "time": "6:00 PM",
+        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
+        "headline": "Tacos & house ritas on tap",
+        "sub": "24 taps · kitchen till 10 tonight",
+        "href": "https://soknota.co/",
+        "cat": "food"
+      },
+      {
+        "id": "thu-dumplings",
+        "time": "6:00 PM",
+        "venue": "Angry Dumplings · 1119 Sevier Ave",
+        "headline": "Dumpling dinner",
+        "sub": "Noodles, buns & tea · kitchen till 9",
+        "href": "https://www.toasttab.com/local/angry-dumpling-and-sweet-tea-1119-sevier-avenue-suite-a/r-9f107372-6885-42c9-8d45-6f92af96f2c2",
+        "cat": "food"
+      },
+      {
+        "id": "thu-southcoast",
+        "time": "6:00 PM",
+        "venue": "South Coast Pizza · 1103 Sevier Ave",
+        "headline": "Or pizza before the night gets going",
+        "sub": "Kitchen till 10 tonight",
+        "href": "https://southcoastpizza.com/",
+        "cat": "food"
+      },
+      {
+        "id": "thu-pinkcactus",
+        "time": "8:00 PM",
+        "venue": "The Pink Cactus · 1147 Sevier Ave",
+        "headline": "Private-room karaoke",
+        "sub": "Rooms from $30/hr, walk-ins ok · 21+ after 9 · till 11 tonight",
+        "href": "https://www.thepinkcactusknox.com/",
+        "cat": "mic"
+      },
+      {
+        "id": "thu-trailhead",
+        "time": "9:00 PM",
+        "venue": "Trailhead Beer Market · 1317 Island Home Ave",
+        "headline": "A pour in the Urban Wilderness backyard",
+        "sub": "On the river by the trailheads · till 11",
+        "href": "https://www.instagram.com/trailheadbeermarket/",
+        "cat": "drink"
+      },
+      {
+        "id": "thu-southside",
+        "time": "9:30 PM",
+        "venue": "SouthSide Garage · 1014 Sevier Ave",
+        "headline": "Beer garden + food trucks to land at",
+        "sub": "Patio games & local taps till 11 · Alliance pours till 11 too",
+        "href": "https://southsidegarageknox.com/",
+        "cat": "drink"
+      }
+    ],
+    "Fri": [
+      {
+        "id": "fri-earls",
+        "time": "4:00 PM",
+        "venue": "Earl's · 610 Waterfront Dr",
+        "headline": "$9 spicy pineapple margaritas",
+        "sub": "Happy hour ends at 6 · $1 off liquor, beer & wine",
+        "href": "https://earlsknox.com/specials",
+        "cat": "drink"
+      },
+      {
+        "id": "fri-soknotaco",
+        "time": "5:00 PM",
+        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
+        "headline": "Taco base layer before the music",
+        "sub": "Kitchen till 11 Fridays",
+        "href": "https://soknota.co/",
+        "cat": "food"
+      },
+      {
+        "id": "fri-kerns-soul",
+        "time": "6:00 PM",
+        "venue": "Kern's Food Hall",
+        "headline": "Scruffy City Soul Machine — free",
+        "sub": "Soul & funk with a horn section · vendors + bar all night",
+        "href": "/2026-08-19/kerns-weekend",
+        "cat": "music"
+      },
+      {
+        "id": "fri-hodown",
+        "time": "8:00 PM",
+        "venue": "Kern's Food Hall",
+        "headline": "Ho'Down Social — free line dancing",
+        "sub": "Line & country dancing with Cowtown Studio · till 11",
+        "href": "/2026-08-19/kerns-weekend",
+        "cat": "dance"
+      },
+      {
+        "id": "fri-trailhead",
+        "time": "9:00 PM",
+        "venue": "Trailhead Beer Market · 1317 Island Home Ave",
+        "headline": "Live music on the river",
+        "sub": "Urban Wilderness backyard · till midnight Fridays",
+        "href": "https://www.instagram.com/trailheadbeermarket/",
+        "cat": "music"
+      },
+      {
+        "id": "fri-pinkcactus",
+        "time": "10:00 PM",
+        "venue": "The Pink Cactus · 1147 Sevier Ave",
+        "headline": "Karaoke rooms till 1 AM",
+        "sub": "Book online — Friday rooms fill · 21+ after 9",
+        "href": "https://www.thepinkcactusknox.com/",
+        "cat": "mic"
+      },
+      {
+        "id": "fri-southside",
+        "time": "11:00 PM",
+        "venue": "SouthSide Garage · 1014 Sevier Ave",
+        "headline": "The late hang",
+        "sub": "Taps & trucks till midnight · Alliance till 12 too",
+        "href": "https://southsidegarageknox.com/",
+        "cat": "drink"
+      }
+    ],
+    "Sat": [
+      {
+        "id": "sat-earls",
+        "time": "ALL DAY",
+        "venue": "Earl's · 610 Waterfront Dr",
+        "headline": "$8 house margaritas, no clock",
+        "sub": "Doors 10:30 AM to 11 PM · river seats go first",
+        "href": "https://earlsknox.com/specials",
+        "cat": "drink"
+      },
+      {
+        "id": "sat-schoolofrock",
+        "time": "11:30 AM",
+        "venue": "Kern's Food Hall",
+        "headline": "School of Rock: 150 kids, two days, free",
+        "sub": "Live sets straight through the evening — runs into Sunday",
+        "href": "/2026-08-19/kerns-weekend",
+        "cat": "music"
+      },
+      {
+        "id": "sat-fuzzytails",
+        "time": "2:00 PM",
+        "venue": "Hi-Wire · Barber St",
+        "headline": "Fairy Tales & Fuzzy Tails book fair",
+        "sub": "Books + adoptable dogs in a taproom · till 6",
+        "href": "/2026-08-19/old-sevier-weekend",
+        "cat": "star"
+      },
+      {
+        "id": "sat-soknotaco",
+        "time": "5:00 PM",
+        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
+        "headline": "Tacos before the night shift",
+        "sub": "Kitchen till 11 Saturdays",
+        "href": "https://soknota.co/",
+        "cat": "food"
+      },
+      {
+        "id": "sat-mimosas",
+        "time": "6:00 PM",
+        "venue": "Mimosas · Blount Ave",
+        "headline": "The LAST Saturday of Mimosas",
+        "sub": "Puckers takes the sign Aug 26 · open till 10 tonight",
+        "href": "https://mimosasknoxville.com/",
+        "cat": "drink"
+      },
+      {
+        "id": "sat-southcoast",
+        "time": "7:00 PM",
+        "venue": "South Coast Pizza · 1103 Sevier Ave",
+        "headline": "Pizza till midnight",
+        "sub": "Late kitchen Fridays & Saturdays",
+        "href": "https://southcoastpizza.com/",
+        "cat": "food"
+      },
+      {
+        "id": "sat-trailhead",
+        "time": "8:30 PM",
+        "venue": "Trailhead Beer Market · 1317 Island Home Ave",
+        "headline": "Live music on the river",
+        "sub": "Urban Wilderness backyard · till midnight",
+        "href": "https://www.instagram.com/trailheadbeermarket/",
+        "cat": "music"
+      },
+      {
+        "id": "sat-pinkcactus",
+        "time": "9:00 PM",
+        "venue": "The Pink Cactus · 1147 Sevier Ave",
+        "headline": "Karaoke rooms till 1 AM",
+        "sub": "Reserve online — Saturday fills first · 21+ after 9",
+        "href": "https://www.thepinkcactusknox.com/",
+        "cat": "mic"
+      },
+      {
+        "id": "sat-southside",
+        "time": "10:30 PM",
+        "venue": "SouthSide Garage · 1014 Sevier Ave",
+        "headline": "Land here after",
+        "sub": "Till midnight · Alliance pours till 12 too",
+        "href": "https://southsidegarageknox.com/",
+        "cat": "drink"
+      }
+    ],
+    "Sun": [
+      {
+        "id": "sun-mimosas",
+        "time": "9:00 AM",
+        "venue": "Mimosas · Blount Ave",
+        "headline": "The last brunch — ever",
+        "sub": "Bottomless mimosas 9 to 3 · room open till 9 · then it's Puckers",
+        "href": "https://mimosasknoxville.com/",
+        "cat": "drink"
+      },
+      {
+        "id": "sun-earls",
+        "time": "ALL DAY",
+        "venue": "Earl's · 610 Waterfront Dr",
+        "headline": "$7 mimosas & Bloody Marys",
+        "sub": "All day until 10 · take a water table",
+        "href": "https://earlsknox.com/specials",
+        "cat": "drink"
+      },
+      {
+        "id": "sun-schoolofrock",
+        "time": "12:00 PM",
+        "venue": "Kern's Food Hall",
+        "headline": "School of Rock, day two — free",
+        "sub": "Kids on stage till 7 tonight",
+        "href": "/2026-08-19/kerns-weekend",
+        "cat": "music"
+      },
+      {
+        "id": "sun-stainedglass",
+        "time": "2:00 PM",
+        "venue": "Hi-Wire · Barber St",
+        "headline": "Stained glass workshop in the taproom",
+        "sub": "Two hours, leave with something you made · registration required",
+        "href": "/2026-08-19/old-sevier-weekend",
+        "cat": "star"
+      },
+      {
+        "id": "sun-soknotaco",
+        "time": "6:00 PM",
+        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
+        "headline": "Tacos to close the weekend",
+        "sub": "Kitchen till 10",
+        "href": "https://soknota.co/",
+        "cat": "food"
+      },
+      {
+        "id": "sun-pinkcactus",
+        "time": "7:00 PM",
+        "venue": "The Pink Cactus · 1147 Sevier Ave",
+        "headline": "Sunday karaoke, easy mode",
+        "sub": "Rooms till 11 · all ages until 9",
+        "href": "https://www.thepinkcactusknox.com/",
+        "cat": "mic"
+      },
+      {
+        "id": "sun-trailhead",
+        "time": "8:00 PM",
+        "venue": "Trailhead Beer Market · 1317 Island Home Ave",
+        "headline": "Sundown pour by the trailheads",
+        "sub": "Till 10 · SouthSide Garage & Alliance till 10 too",
+        "href": "https://www.instagram.com/trailheadbeermarket/",
+        "cat": "drink"
+      }
+    ]
+  }
+}

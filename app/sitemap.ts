@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const episodes = loadEpisodes();
   return [
     { url: BASE, lastModified: episodes[0]?.date, changeFrequency: "weekly", priority: 1 },
+    { url: `${BASE}/dirtysouthparty`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE}/archive`, changeFrequency: "weekly", priority: 0.5 },
     { url: `${BASE}/about`, changeFrequency: "yearly", priority: 0.4 },
     ...episodes.map((e) => ({

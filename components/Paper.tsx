@@ -11,6 +11,7 @@ import { AudioBriefingPlayer } from "@/components/AudioBriefingPlayer";
 import { EventSubmitForm } from "@/components/EventSubmitForm";
 import { CallTheEarCard } from "@/components/CallTheEarCard";
 import { SubscribeForm } from "@/components/SubscribeForm";
+import { DirtySouthCard } from "@/components/DirtySouthCard";
 import { ArticleSources } from "@/components/ArticleSources";
 import { ShareStory } from "@/components/ShareStory";
 import { JsonLd } from "@/components/JsonLd";
@@ -124,6 +125,7 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
               {permalinks && <ShareStory slug={episode.slug} id={feature.id} title={feature.title} />}
             </Article>
             <aside id="listen" style={{ display: "flex", flexDirection: "column", gap: 22, position: "sticky", top: 16 }}>
+              <DirtySouthCard />
               {sidebar.audio && (
                 <AudioBriefingPlayer title={sidebar.audio.title} intro={sidebar.audio.intro} description={sidebar.audio.description} duration={sidebar.audio.duration} src={sidebar.audio.src} />
               )}
