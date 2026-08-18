@@ -181,6 +181,21 @@
     {
       "label": "Old Sevier",
       "labelColor": "rust",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "image": "/assets/spots/pink_cactus_show.jpg",
+      "title": "Sing where nobody's watching",
+      "blurb": "Private karaoke rooms by the hour at the Pink Cactus — all ages till nine, no ticket needed.",
+      "cue": "Jump to story",
+      "href": "#pink-cactus"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
       "image": "/assets/spots/planning_hearing.jpg",
       "title": "Kerbela gets its answer",
       "blurb": "The Shriners site is approved — 225 apartments, a public plaza, and a path to the river.",
@@ -501,6 +516,93 @@
       }
     },
     {
+      "id": "pink-cactus",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/pink_cactus_show.jpg",
+      "imageCaption": "Upstairs in the big pink house",
+      "title": "No band, no ticket, no crowd to sing in front of: the Pink Cactus just opens the door",
+      "deck": "The big pink house at 1147 Sevier has private karaoke rooms upstairs, a bar and Latin-inspired food downstairs, and a patio with yard games. Nothing is scheduled this weekend — that's rather the point.",
+      "facts": [
+        {
+          "label": "Where",
+          "value": "The Pink Cactus, 1147 Sevier Ave"
+        },
+        {
+          "label": "Karaoke",
+          "value": "Private rooms · one-hour slots · groups of 2 to 20"
+        },
+        {
+          "label": "Booking",
+          "value": "Reserve online · walk-ins accepted"
+        },
+        {
+          "label": "Ages",
+          "value": "All ages until 9 PM · 21+ after"
+        },
+        {
+          "label": "Parking",
+          "value": "Free at the Suttree Landing Park pavilion lot — a block and a half"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Most of what's worth doing in South Knoxville this weekend has a start time attached to it. The Pink Cactus doesn't, and that turns out to be its whole appeal — a big pink house on Sevier Avenue that you can simply walk into when the rest of the plan falls through."
+        },
+        {
+          "type": "subhead",
+          "text": "The rooms upstairs"
+        },
+        {
+          "type": "paragraph",
+          "text": "The draw is private karaoke — actual closed rooms, booked by the hour, sized for anywhere from two people to twenty. The house claims to be the only place in Knoxville doing it, and the pitch is straightforward: you get the playlist and the microphone without the part where a stranger at the bar watches you attempt Whitney. Walk-ins are taken, but weekends fill, so reserving online is the safer move."
+        },
+        {
+          "type": "subhead",
+          "text": "And the rest of the house"
+        },
+        {
+          "type": "paragraph",
+          "text": "Downstairs is a bar with Latin-inspired food and a lounge that doesn't require you to sing for your supper. Out front there's a covered patio with yard games. It's all ages until nine o'clock, which makes the early evening a real option for families, and 21-and-up after that when the room changes character."
+        },
+        {
+          "type": "subhead",
+          "text": "Where to leave the car"
+        },
+        {
+          "type": "paragraph",
+          "text": "There's no lot of its own. The house points people to the free parking at Suttree Landing Park — search the \"Suttree Landing Park Pavilion and Restroom\" lot and walk the block and a half, or find a spot on the street nearby. Which means you can park at the river, take the walk up, and let the evening decide itself."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The Pink Cactus — FAQs (rooms, ages, parking)",
+          "url": "https://www.thepinkcactusknox.com/faqs"
+        },
+        {
+          "label": "The Pink Cactus — karaoke room reservations",
+          "url": "https://www.thepinkcactusknox.com/"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "pink-cactus"
+        ],
+        "igBanner": [
+          "Private karaoke on Sevier Ave",
+          "Book the room, skip the crowd"
+        ]
+      }
+    },
+    {
       "id": "kerbela-approved",
       "label": "Old Sevier",
       "labelColor": "rust",
@@ -725,6 +827,13 @@
         "meta": "2–6 PM · books & adoptable pets · Hi-Wire",
         "starred": true,
         "href": "#old-sevier-weekend"
+      },
+      {
+        "month": "AUG",
+        "day": "22",
+        "title": "Karaoke rooms at the Pink Cactus",
+        "meta": "By the hour · 1147 Sevier Ave · all ages till 9",
+        "href": "#pink-cactus"
       },
       {
         "month": "AUG",

@@ -92,6 +92,12 @@
       "verified": "City of Knoxville official social-media registry",
       "confidence": "high"
     },
+    "pink-cactus": {
+      "handle": "@thepinkcactusknox",
+      "name": "The Pink Cactus",
+      "verified": "linked directly from the thepinkcactusknox.com header social icons (1147 Sevier Ave)",
+      "confidence": "high"
+    },
     "mimosas": {
       "handle": "@mimosasknoxville",
       "name": "Mimosas (Kennedy Concepts)",
