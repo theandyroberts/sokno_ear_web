@@ -483,6 +483,14 @@
         {
           "type": "paragraph",
           "text": "Yoga runs 11 to noon again Sunday, and at two the taproom turns into a workshop — a two-hour stained glass class, registration required, ending at four with something you made yourself. It is a good closing move for a weekend, and a better one than scrolling."
+        },
+        {
+          "type": "subhead",
+          "text": "And two rooms that need no plan at all"
+        },
+        {
+          "type": "paragraph",
+          "text": "The students are back this week, so it's worth saying plainly: SouthSide Garage, the food truck park at 1014 Sevier Ave, and Trailhead Beer Market over on Island Home Avenue are both open all weekend with nothing scheduled at either — which is exactly the point when you just need somewhere to land."
         }
       ],
       "sources": [
@@ -751,7 +759,7 @@
       "title": "Weekend Audio Briefing",
       "intro": "What's happening in SoKno this weekend.",
       "description": "Your weekend listen — the last brunch at Mimosas, three free nights of music at Kern's, adult summer camp at Ijams Park, and adoptable dogs at a book fair.",
-      "duration": "02:55",
+      "duration": "03:45",
       "src": "/audio/2026-08-19.mp3"
     },
     "calendar": [
