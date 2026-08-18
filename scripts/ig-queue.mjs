@@ -9,6 +9,7 @@
 process.env.TZ = "America/New_York"; // all slot math is SoKno-local
 import fs from "node:fs";
 import path from "node:path";
+import { spaceOutPosts, MIN_GAP_MIN } from "./ig-schedule.mjs";
 
 const SITE = "https://soknoear.com";
 const BASE_HASHTAGS = "#SoKno #SouthKnoxville #Knoxville #SouthKnoxvilleEar";
@@ -205,13 +206,16 @@ for (const pr of PROMOS) {
   });
 }
 
-posts.sort((a, b) => a.postAt.localeCompare(b.postAt));
+// Never let a burst out the door: past-due and tightly-packed slots get walked
+// forward so at most one post fires per cron tick. See scripts/ig-schedule.mjs.
+const { posts: spacedPosts, moved } = spaceOutPosts(posts, Date.now());
+if (moved) warnings.push(`${moved} post(s) were past due or too tightly packed — rescheduled to keep ${MIN_GAP_MIN} min between posts`);
 
 const queue = {
   slug: episode.slug,
   episode: `Vol. ${episode.volume} — No. ${episode.number}`,
   approved: false,
-  posts,
+  posts: spacedPosts,
 };
 
 const outDir = path.join(process.cwd(), "content", "ig-queue");
