@@ -53,4 +53,21 @@ describe("api", () => {
       headers: { "content-type": "application/json" }, body: JSON.stringify({ email: "nope" }) }))).status).toBe(400);
     expect(sendWelcomeEmail).toHaveBeenCalledTimes(1);
   });
+  it("POST /api/subscribe list=dsparty: separate membership, no welcome email, desk notice tagged", async () => {
+    const { POST } = await import("@/app/api/subscribe/route");
+    const { sendWelcomeEmail, sendSubscriberEmail } = await import("@/lib/mail");
+    const welcomeCallsBefore = (sendWelcomeEmail as any).mock.calls.length;
+    const sub = (body: object) => POST(new Request("http://x", { method: "POST",
+      headers: { "content-type": "application/json" }, body: JSON.stringify(body) }));
+    // an existing Ear subscriber (a@b.com from the test above) joins the party list
+    const r1 = await sub({ email: "a@b.com", list: "dsparty" });
+    expect((await r1.json()).welcomed).toBe(true);                        // new to THIS list
+    expect((sendWelcomeEmail as any).mock.calls.length).toBe(welcomeCallsBefore); // no Ear welcome for party signups
+    expect(sendSubscriberEmail).toHaveBeenLastCalledWith("a@b.com", "dsparty");
+    // repeat party signup: already on the list
+    const r2 = await sub({ email: "a@b.com", list: "dsparty" });
+    expect((await r2.json()).welcomed).toBe(false);
+    // unknown list rejected
+    expect((await sub({ email: "a@b.com", list: "nope" })).status).toBe(400);
+  });
 });

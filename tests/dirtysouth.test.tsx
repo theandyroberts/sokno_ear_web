@@ -53,6 +53,18 @@ describe("DirtySouth checklist", () => {
     fireEvent.click(screen.getByRole("button", { name: /close map/i }));
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
   });
+  it("notify form posts to the dsparty list and confirms", async () => {
+    const { waitFor } = await import("@testing-library/react");
+    (global as any).fetch = (await import("vitest")).vi.fn(async () =>
+      new Response(JSON.stringify({ ok: true, welcomed: true }), { status: 200 })) as any;
+    render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" />);
+    fireEvent.change(screen.getByPlaceholderText(/your email/i), { target: { value: "doer@b.com" } });
+    fireEvent.click(screen.getByRole("button", { name: /notify me/i }));
+    await waitFor(() => expect((global as any).fetch).toHaveBeenCalledWith("/api/subscribe", expect.anything()));
+    const body = JSON.parse(((global as any).fetch as any).mock.calls[0][1].body);
+    expect(body.list).toBe("dsparty");
+    await waitFor(() => expect(screen.getByText(/you're on the party list/i)).toBeInTheDocument());
+  });
   it("escape hatches back to the Ear exist top and bottom", () => {
     render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" />);
     const home = screen.getAllByRole("link", { name: /read this week's episode/i });

@@ -199,14 +199,17 @@ You're getting this because you signed up at soknoear.com. Change your mind? Jus
   if (error) console.error("[mail] resend error", error);
 }
 
-export async function sendSubscriberEmail(email: string): Promise<void> {
+export async function sendSubscriberEmail(email: string, list: string = "ear"): Promise<void> {
   const key = process.env.RESEND_API_KEY;
   if (!key) { console.warn("[mail] RESEND_API_KEY unset — skipping email"); return; }
   const resend = new Resend(key);
+  const label = list === "dsparty" ? "DSParty" : "Ear";
   const { error } = await resend.emails.send({
     from: FROM, to: TO,
-    subject: `New Ear subscriber: ${email}`,
-    text: `${email} just signed up to be notified about The South Knoxville Ear.`,
+    subject: `New ${label} subscriber: ${email}`,
+    text: list === "dsparty"
+      ? `${email} signed up on the /party page to hear when next week's Dirty South page drops.`
+      : `${email} just signed up to be notified about The South Knoxville Ear.`,
   });
   if (error) console.error("[mail] resend error", error);
 }

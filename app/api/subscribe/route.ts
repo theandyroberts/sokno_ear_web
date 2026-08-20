@@ -1,8 +1,17 @@
 import { NextResponse } from "next/server";
-import { db, insertSubscriber } from "@/lib/db";
+import { db, subscribeToList, type SubscriberList } from "@/lib/db";
 import { sendSubscriberEmail, sendWelcomeEmail } from "@/lib/mail";
 
 const EMAIL = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+// Two lists share this endpoint: 'ear' (the weekly episode email — the default,
+// used by the homepage sidebar form) and 'dsparty' (the /party page's
+// notify-me form). The form names itself via `list`; `source` in the DB records
+// which door they came through. One email can hold both memberships.
+const LISTS: Record<string, { list: SubscriberList; source: string }> = {
+  ear: { list: "ear", source: "ear-sidebar" },
+  dsparty: { list: "dsparty", source: "dsparty-page" },
+};
 
 export async function POST(req: Request) {
   let b: any;
@@ -10,10 +19,15 @@ export async function POST(req: Request) {
   if (b.company) return NextResponse.json({ ok: true, welcomed: true });
   const email = String(b.email ?? "").trim().toLowerCase();
   if (!EMAIL.test(email)) return NextResponse.json({ error: "valid email required" }, { status: 400 });
-  const isNew = insertSubscriber(db(), email);
-  if (isNew) {
-    await sendWelcomeEmail(email);     // greet the neighbor right away
-    await sendSubscriberEmail(email);  // and tell the city desk
+  const target = LISTS[String(b.list ?? "ear")];
+  if (!target) return NextResponse.json({ error: "unknown list" }, { status: 400 });
+
+  const { newToList } = subscribeToList(db(), email, target.list, target.source);
+  if (newToList) {
+    // The welcome email promises the weekly episode note, so it belongs to the
+    // Ear list only; party signups get their confirmation on the page.
+    if (target.list === "ear") await sendWelcomeEmail(email);
+    await sendSubscriberEmail(email, target.list); // tell the city desk either way
   }
-  return NextResponse.json({ ok: true, welcomed: isNew });
+  return NextResponse.json({ ok: true, welcomed: newToList });
 }

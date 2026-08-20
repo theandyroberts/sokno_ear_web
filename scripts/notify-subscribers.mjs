@@ -68,8 +68,17 @@ if (mode === "preview") {
   recipients = [one];
 } else {
   const db = new Database(process.env.SQLITE_PATH || "/var/lib/soknoear/ear.db", { readonly: true });
-  const subs = db.prepare("SELECT email FROM subscribers").all()
-    .map((r) => r.email).filter((e) => !EXCLUDE.has(e));
+  // The weekly episode email goes to the 'ear' list only — 'dsparty' members
+  // signed up for party-page notices, not this. (Falls back to the old
+  // whole-table read if the lists table hasn't been created yet.)
+  let subs;
+  try {
+    subs = db.prepare("SELECT email FROM subscriber_lists WHERE list = 'ear'").all()
+      .map((r) => r.email).filter((e) => !EXCLUDE.has(e));
+  } catch {
+    subs = db.prepare("SELECT email FROM subscribers").all()
+      .map((r) => r.email).filter((e) => !EXCLUDE.has(e));
+  }
   recipients = [...new Set([...subs, "andy@note15.com"])]; // subscribers + copy Andy
 }
 

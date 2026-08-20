@@ -111,13 +111,31 @@ export function openDb(file = process.env.SQLITE_PATH || path.join(process.cwd()
       comment TEXT NOT NULL,
       created_at TEXT NOT NULL DEFAULT (datetime('now'))
     );
+    CREATE TABLE IF NOT EXISTS subscriber_lists (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      email TEXT NOT NULL,
+      list TEXT NOT NULL,
+      source TEXT NOT NULL DEFAULT '',
+      created_at TEXT NOT NULL DEFAULT (datetime('now')),
+      UNIQUE(email, list)
+    );
   `);
   // Columns added after story_drafts first shipped — no-ops on fresh DBs.
   for (const col of ["token TEXT", "contact TEXT", "contact_phone TEXT", "contact_email TEXT", "link_sent_to TEXT", "link_sent_at TEXT"]) {
     try { db.exec(`ALTER TABLE story_drafts ADD COLUMN ${col}`); } catch { /* already present */ }
   }
+  // One-time list backfill: everyone who subscribed before lists existed is Ear.
+  // Guarded by NOT EXISTS so later dsparty-only members are never swept into 'ear'.
+  db.exec(`
+    INSERT OR IGNORE INTO subscriber_lists (email, list, source)
+    SELECT s.email, 'ear', 'backfill'
+    FROM subscribers s
+    WHERE NOT EXISTS (SELECT 1 FROM subscriber_lists l WHERE l.email = s.email)
+  `);
   return db;
 }
+
+export type SubscriberList = "ear" | "dsparty";
 
 let _db: Database.Database | null = null;
 export function db() { return (_db ??= openDb()); }
@@ -133,6 +151,25 @@ export function insertSubmission(d: Database.Database, s: Submission): number {
 export function insertSubscriber(d: Database.Database, email: string): boolean {
   const r = d.prepare("INSERT OR IGNORE INTO subscribers (email) VALUES (?)").run(email);
   return r.changes > 0;
+}
+
+/** Join a list (creating the master subscriber row if needed). `source` records
+ *  which form did it — e.g. 'ear-sidebar', 'dsparty-page'. One person can hold
+ *  both 'ear' and 'dsparty' memberships; each is its own row. */
+export function subscribeToList(
+  d: Database.Database,
+  email: string,
+  list: SubscriberList,
+  source: string
+): { newSubscriber: boolean; newToList: boolean } {
+  const newSubscriber = insertSubscriber(d, email);
+  const r = d.prepare("INSERT OR IGNORE INTO subscriber_lists (email, list, source) VALUES (?, ?, ?)").run(email, list, source);
+  return { newSubscriber, newToList: r.changes > 0 };
+}
+
+/** Emails on a given list (the weekly blast reads 'ear'; party notices read 'dsparty'). */
+export function listMembers(d: Database.Database, list: SubscriberList): string[] {
+  return (d.prepare("SELECT email FROM subscriber_lists WHERE list = ? ORDER BY created_at").all(list) as { email: string }[]).map((r) => r.email);
 }
 
 export function insertContact(d: Database.Database, c: Contact): number {

@@ -32,6 +32,73 @@ function saveChecked(s: Set<string>) {
   }
 }
 
+/** One-line signup for the 'dsparty' list — separate membership from the Ear's
+ *  weekly email; the API records which form was used. */
+function NotifyForm({ fontClass }: { fontClass: string }) {
+  const [email, setEmail] = React.useState("");
+  const [state, setState] = React.useState<"idle" | "busy" | "done" | "already" | "error">("idle");
+
+  async function submit(e: React.FormEvent) {
+    e.preventDefault();
+    setState("busy");
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ email, list: "dsparty", company: "" }),
+      });
+      if (!res.ok) { setState("error"); return; }
+      const body = await res.json().catch(() => ({}));
+      setState(body.welcomed === false ? "already" : "done");
+    } catch {
+      setState("error");
+    }
+  }
+
+  if (state === "done" || state === "already") {
+    return (
+      <p className={fontClass} style={{ margin: 0, fontSize: "1.15rem", textTransform: "uppercase", transform: "rotate(-0.5deg)" }}>
+        {state === "done" ? "✓ You're on the party list — see you next week." : "✓ Already on the party list. See you out there."}
+      </p>
+    );
+  }
+  return (
+    <form onSubmit={submit} style={{ display: "flex", flexWrap: "wrap", gap: 10, alignItems: "center" }}>
+      <label htmlFor="ds-notify" className={fontClass} style={{ fontSize: "1.05rem", textTransform: "uppercase" }}>
+        Want next week&apos;s party page?
+      </label>
+      <input
+        id="ds-notify" name="ds-notify" type="email" required autoComplete="email"
+        placeholder="your email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        style={{
+          flex: "1 1 180px", minWidth: 160, padding: "10px 12px", fontSize: "0.95rem",
+          fontFamily: "var(--font-label)", background: "transparent",
+          border: `3px solid ${INK}`, color: INK, outline: "none",
+        }}
+      />
+      <button
+        type="submit"
+        disabled={state === "busy"}
+        className={fontClass}
+        style={{
+          padding: "10px 16px", fontSize: "1.05rem", textTransform: "uppercase", cursor: "pointer",
+          background: INK, color: GREEN, border: `3px solid ${INK}`,
+          opacity: state === "busy" ? 0.6 : 1, transform: "rotate(-0.8deg)",
+        }}
+      >
+        {state === "busy" ? "Signing…" : "Notify me"}
+      </button>
+      {state === "error" && (
+        <span role="alert" style={{ fontFamily: "var(--font-label)", fontSize: "0.75rem", textTransform: "uppercase" }}>
+          Didn&apos;t go through — try again?
+        </span>
+      )}
+    </form>
+  );
+}
+
 export function DirtySouth({
   days,
   defaultDay,
@@ -198,7 +265,12 @@ export function DirtySouth({
           })}
         </ol>
 
-        <div style={{ borderTop: `3px solid ${INK}`, marginTop: 4, paddingTop: 22, textAlign: "center" }}>
+        {/* one-line notify-me: joins the 'dsparty' list, separate from the Ear list */}
+        <div style={{ borderTop: `3px solid ${INK}`, marginTop: 4, paddingTop: 20 }}>
+          <NotifyForm fontClass={fontClass} />
+        </div>
+
+        <div style={{ borderTop: `3px solid ${INK}`, marginTop: 20, paddingTop: 22, textAlign: "center" }}>
           <a
             href="/"
             className={fontClass}
