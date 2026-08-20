@@ -35,11 +35,17 @@ if (!["preview", "send", "skip"].includes(newsletterMode)) {
   console.error(`--newsletter must be preview|send|skip (got ${newsletterMode})`);
   process.exit(1);
 }
+const dspartyMode = val("--dsparty") ?? "preview";
+if (!["preview", "send", "skip"].includes(dspartyMode)) {
+  console.error(`--dsparty must be preview|send|skip (got ${dspartyMode})`);
+  process.exit(1);
+}
 // With no channel flags, do all three (newsletter defaults to the safe preview).
-const explicit = has("--site") || has("--instagram") || has("--newsletter");
+const explicit = has("--site") || has("--instagram") || has("--newsletter") || has("--dsparty");
 const doSite = !explicit || has("--site");
 const doIg = !explicit || has("--instagram");
 const doMail = (!explicit || has("--newsletter")) && newsletterMode !== "skip";
+const doParty = (!explicit || has("--dsparty")) && dspartyMode !== "skip";
 
 const DRAFTS = path.join(process.cwd(), "content", "drafts");
 const EPISODES = path.join(process.cwd(), "content", "episodes");
@@ -79,7 +85,7 @@ console.log(`episode:    ${slug}  (${isDraft ? "DRAFT" : "published"})`);
 console.log(`ig assets:  ${igAssets ? `${igAssets} images in public/assets/ig/${slug}` : "MISSING — none built"}`);
 console.log(`ig queue:   ${queueState}`);
 if (STATUS_ONLY) process.exit(0);
-console.log(`plan:       site=${doSite} instagram=${doIg} newsletter=${doMail ? newsletterMode : "skip"}${DRY ? "  (dry run)" : ""}`);
+console.log(`plan:       site=${doSite} instagram=${doIg} newsletter=${doMail ? newsletterMode : "skip"} dsparty=${doParty ? dspartyMode : "skip"}${DRY ? "  (dry run)" : ""}`);
 
 // ── 1. Promote the draft ────────────────────────────────────────────────────
 if (doSite && isDraft) {
@@ -123,6 +129,12 @@ if (doIg) {
 if (doMail) {
   step(`Newsletter — ${newsletterMode}`);
   ssh(`cd ${REMOTE} && set -a; . ./.env; set +a; node scripts/notify-subscribers.mjs ${newsletterMode} --slug ${slug}`);
+}
+
+// ── 7. DSParty notice ───────────────────────────────────────────────────────
+if (doParty) {
+  step(`DSParty notice — ${dspartyMode}`);
+  ssh(`cd ${REMOTE} && set -a; . ./.env; set +a; node scripts/notify-dsparty.mjs ${dspartyMode}`);
 }
 
 console.log(`\n✓ ${slug} done — ${SITE}`);

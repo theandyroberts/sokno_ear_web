@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { db, subscribeToList, type SubscriberList } from "@/lib/db";
-import { sendSubscriberEmail, sendWelcomeEmail } from "@/lib/mail";
+import { sendSubscriberEmail, sendWelcomeEmail, sendDsPartyWelcomeEmail } from "@/lib/mail";
 
 const EMAIL = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
@@ -24,10 +24,11 @@ export async function POST(req: Request) {
 
   const { newToList } = subscribeToList(db(), email, target.list, target.source);
   if (newToList) {
-    // The welcome email promises the weekly episode note, so it belongs to the
-    // Ear list only; party signups get their confirmation on the page.
+    // Each list has its own welcome: the Ear's newsprint note, or the party
+    // list's acid-green one. The city desk hears about both.
     if (target.list === "ear") await sendWelcomeEmail(email);
-    await sendSubscriberEmail(email, target.list); // tell the city desk either way
+    else await sendDsPartyWelcomeEmail(email);
+    await sendSubscriberEmail(email, target.list);
   }
   return NextResponse.json({ ok: true, welcomed: newToList });
 }

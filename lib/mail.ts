@@ -199,6 +199,56 @@ You're getting this because you signed up at soknoear.com. Change your mind? Jus
   if (error) console.error("[mail] resend error", error);
 }
 
+/** To a brand-new DSParty list member, immediately on signup — flyer colors,
+ *  night-side voice. Email-safe: no webfonts, so Arial Black carries the poster weight. */
+export async function sendDsPartyWelcomeEmail(to: string): Promise<void> {
+  const key = process.env.RESEND_API_KEY;
+  if (!key) { console.warn("[mail] RESEND_API_KEY unset — skipping email"); return; }
+  const resend = new Resend(key);
+  const GREEN = "#CDE24A";
+  const INK = "#131309";
+  const PARTY = "https://soknoear.com/party?src=email-welcome";
+  const html = `<!doctype html><html><body style="margin:0;padding:0;background:${GREEN};">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${GREEN};"><tr><td align="center" style="padding:0 0 28px;">
+<table role="presentation" width="560" cellpadding="0" cellspacing="0" style="width:100%;max-width:560px;">
+  <tr><td style="background:${INK};color:${GREEN};padding:10px 18px;font-family:'Courier New',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;">&#9733; The South Knoxville Ear &mdash; night side</td></tr>
+  <tr><td style="padding:30px 22px 6px;font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:44px;line-height:0.95;text-transform:uppercase;color:${INK};">Party<br>in the<br>Dirty South</td></tr>
+  <tr><td style="padding:16px 22px 6px;font-family:'Courier New',monospace;font-size:14px;line-height:1.6;color:${INK};">
+    You&rsquo;re on the party list, neighbor. Once a week, midweek, the fresh weekend
+    plan goes up &mdash; happy hours, dinner, live music, karaoke, the late hang &mdash;
+    and you&rsquo;ll get one short note like this when it does. That&rsquo;s the whole deal.
+  </td></tr>
+  <tr><td style="padding:6px 22px 10px;font-family:'Courier New',monospace;font-size:14px;line-height:1.6;color:${INK};">
+    The Dirty South is everything you reach by crossing the bridge: Old Sevier, the
+    South Waterfront, Island Home, the Urban Wilderness, the old Kern&rsquo;s Bakery.
+    Come on over &mdash; if you dare.
+  </td></tr>
+  <tr><td align="center" style="padding:16px 22px 8px;">
+    <a href="${PARTY}" style="display:inline-block;background:${INK};color:${GREEN};text-decoration:none;font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:17px;letter-spacing:0.05em;text-transform:uppercase;padding:14px 26px;">See this week&rsquo;s plan &rarr;</a>
+  </td></tr>
+  <tr><td style="padding:18px 22px 14px;font-family:'Courier New',monospace;font-size:11px;line-height:1.5;color:${INK};">
+    You&rsquo;re getting this because you signed up at soknoear.com/party. Change your
+    mind? Reply and we&rsquo;ll take you off the list. &mdash; The SoKno Ear
+  </td></tr>
+  <tr><td style="background:${INK};color:${GREEN};padding:12px 18px;text-align:center;font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:18px;letter-spacing:0.08em;">SOKNOEAR.COM</td></tr>
+</table></td></tr></table></body></html>`;
+  const text = `PARTY IN THE DIRTY SOUTH
+
+You're on the party list, neighbor. Once a week, midweek, the fresh weekend plan goes up — happy hours, dinner, live music, karaoke, the late hang — and you'll get one short note like this when it does. That's the whole deal.
+
+The Dirty South is everything you reach by crossing the bridge: Old Sevier, the South Waterfront, Island Home, the Urban Wilderness, the old Kern's Bakery. Come on over — if you dare.
+
+See this week's plan: ${PARTY}
+
+You're getting this because you signed up at soknoear.com/party. Change your mind? Reply and we'll take you off the list. — The SoKno Ear`;
+  const { error } = await resend.emails.send({
+    from: FROM, to, replyTo: TO,
+    subject: "You're on the party list — Party in the Dirty South",
+    html, text,
+  });
+  if (error) console.error("[mail] resend error", error);
+}
+
 export async function sendSubscriberEmail(email: string, list: string = "ear"): Promise<void> {
   const key = process.env.RESEND_API_KEY;
   if (!key) { console.warn("[mail] RESEND_API_KEY unset — skipping email"); return; }

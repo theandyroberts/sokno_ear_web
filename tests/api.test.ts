@@ -5,6 +5,7 @@ vi.mock("@/lib/mail", () => ({
   sendSubmissionEmail: vi.fn(async () => {}),
   sendSubscriberEmail: vi.fn(async () => {}),
   sendWelcomeEmail: vi.fn(async () => {}),
+  sendDsPartyWelcomeEmail: vi.fn(async () => {}),
   sendStoryDraftEmail: vi.fn(async () => {}),
   sendDraftLinkEmail: vi.fn(async () => {}),
   sendDraftCommentEmail: vi.fn(async () => {}),
@@ -63,6 +64,8 @@ describe("api", () => {
     const r1 = await sub({ email: "a@b.com", list: "dsparty" });
     expect((await r1.json()).welcomed).toBe(true);                        // new to THIS list
     expect((sendWelcomeEmail as any).mock.calls.length).toBe(welcomeCallsBefore); // no Ear welcome for party signups
+    const { sendDsPartyWelcomeEmail } = await import("@/lib/mail");
+    expect(sendDsPartyWelcomeEmail).toHaveBeenCalledWith("a@b.com"); // acid-green welcome instead
     expect(sendSubscriberEmail).toHaveBeenLastCalledWith("a@b.com", "dsparty");
     // repeat party signup: already on the list
     const r2 = await sub({ email: "a@b.com", list: "dsparty" });
