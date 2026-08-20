@@ -91,6 +91,13 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
       <JsonLd episode={episode} storyUrl={storyView ? `https://soknoear.com/${episode.slug}/${feature.id}` : undefined} />
       <Masthead volLine={volLine} dateline={dateline} shortDate={shortDate} sections={sections} days={episodeDays} />
 
+      {/* Phones: the Dirty South doorway rides directly under the header (see globals.css) */}
+      <div className="ds-card-mobile">
+        <Page style={{ padding: "14px 24px 2px" }}>
+          <DirtySouthCard />
+        </Page>
+      </div>
+
       {/* DAY BOARD — when a single day is picked, the calendar steps out of the sidebar and
           runs full width directly under the nav, so the chosen day always has something
           above the fold even if the feature isn't on that day. Hidden on "All". */}
@@ -125,7 +132,9 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
               {permalinks && <ShareStory slug={episode.slug} id={feature.id} title={feature.title} />}
             </Article>
             <aside id="listen" style={{ display: "flex", flexDirection: "column", gap: 22, position: "sticky", top: 16 }}>
-              <DirtySouthCard />
+              <div className="ds-card-desktop">
+                <DirtySouthCard />
+              </div>
               {sidebar.audio && (
                 <AudioBriefingPlayer title={sidebar.audio.title} intro={sidebar.audio.intro} description={sidebar.audio.description} duration={sidebar.audio.duration} src={sidebar.audio.src} />
               )}
