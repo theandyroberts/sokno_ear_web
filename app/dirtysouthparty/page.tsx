@@ -27,10 +27,10 @@ export const metadata: Metadata = {
 
 const anton = localFont({ src: "./Anton-Regular.woff2", display: "swap" });
 
-// The territory map link appears as soon as the image lands in public/assets —
-// no code change needed when Andy drops the file.
+// The territory map link appears as soon as the image lands in public/assets.
+// The optimized .jpg is preferred; the .png is Andy's full-quality source.
 function findMap(): string | null {
-  for (const name of ["dirtysouth_map.jpg", "dirtysouth_map.png", "dirtysouth_map.webp"]) {
+  for (const name of ["dirty_south_festive_map.jpg", "dirty_south_festive_map.png"]) {
     if (fs.existsSync(path.join(process.cwd(), "public", "assets", name))) return `/assets/${name}`;
   }
   return null;
