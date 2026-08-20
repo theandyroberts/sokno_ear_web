@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import localFont from "next/font/local";
 import { loadNightlife, pickDefaultDay } from "@/lib/nightlife";
 import { DirtySouth } from "@/components/DirtySouth";
@@ -25,6 +27,15 @@ export const metadata: Metadata = {
 
 const anton = localFont({ src: "./Anton-Regular.woff2", display: "swap" });
 
+// The territory map link appears as soon as the image lands in public/assets —
+// no code change needed when Andy drops the file.
+function findMap(): string | null {
+  for (const name of ["dirtysouth_map.jpg", "dirtysouth_map.png", "dirtysouth_map.webp"]) {
+    if (fs.existsSync(path.join(process.cwd(), "public", "assets", name))) return `/assets/${name}`;
+  }
+  return null;
+}
+
 export default function DirtySouthParty() {
   const nightlife = loadNightlife();
   return (
@@ -33,6 +44,7 @@ export default function DirtySouthParty() {
       defaultDay={pickDefaultDay()}
       weekend={nightlife.weekend}
       fontClass={anton.className}
+      mapSrc={findMap()}
     />
   );
 }

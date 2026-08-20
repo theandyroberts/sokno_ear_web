@@ -37,15 +37,25 @@ export function DirtySouth({
   defaultDay,
   weekend,
   fontClass,
+  mapSrc,
 }: {
   days: Record<NightDay, NightItem[]>;
   defaultDay: NightDay;
   weekend: string;
   fontClass: string;
+  /** Path to the territory map image; the map link renders only when set. */
+  mapSrc?: string | null;
 }) {
   const [day, setDay] = React.useState<NightDay>(defaultDay);
   const [checked, setChecked] = React.useState<Set<string>>(new Set());
+  const [mapOpen, setMapOpen] = React.useState(false);
   React.useEffect(() => setChecked(loadChecked()), []);
+  React.useEffect(() => {
+    if (!mapOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setMapOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [mapOpen]);
 
   function mark(id: string, on?: boolean) {
     setChecked((prev) => {
@@ -85,9 +95,32 @@ export function DirtySouth({
           <span style={{ display: "block", transform: "rotate(-1.2deg)" }}>Party in the</span>
           <span style={{ display: "block", transform: "rotate(0.9deg)" }}>Dirty South</span>
         </h1>
-        <p style={{ fontFamily: "var(--font-label)", fontSize: "0.78rem", letterSpacing: "0.14em", textTransform: "uppercase", margin: "14px 0 22px" }}>
+        <p style={{ fontFamily: "var(--font-label)", fontSize: "0.78rem", letterSpacing: "0.14em", textTransform: "uppercase", margin: "14px 0 16px" }}>
           SoKno&apos;s plan for the night · {weekend}
         </p>
+
+        {/* why this page exists */}
+        <p style={{ fontFamily: "var(--font-label)", fontSize: "0.86rem", lineHeight: 1.65, letterSpacing: "0.03em", margin: "0 0 10px", borderLeft: `4px solid ${INK}`, paddingLeft: 12 }}>
+          Every week, midweek, a fresh episode of soknoear.com drops — that&apos;s the
+          plan-ahead side. This is the night side. The Dirty South is everything you
+          reach by crossing the bridge: Old Sevier, the South Waterfront, Island Home,
+          the Urban Wilderness, the old Kern&apos;s Bakery. Come on over — if you dare.
+        </p>
+        {mapSrc && (
+          <button
+            onClick={() => setMapOpen(true)}
+            className={fontClass}
+            style={{
+              display: "inline-block", margin: "4px 0 10px", padding: "8px 14px",
+              fontSize: "1rem", textTransform: "uppercase", cursor: "pointer",
+              border: `3px solid ${INK}`, background: "transparent", color: INK,
+              transform: "rotate(-0.8deg)",
+            }}
+          >
+            ☛ Map of the territory
+          </button>
+        )}
+        <div style={{ height: 12 }} />
 
         {/* day tabs */}
         <div role="tablist" aria-label="Pick your night" style={{ display: "flex", gap: 8, marginBottom: 26 }}>
@@ -180,6 +213,38 @@ export function DirtySouth({
       <div className={fontClass} style={{ background: INK, color: GREEN, textAlign: "center", padding: "14px 0", fontSize: "1.5rem", letterSpacing: "0.08em" }}>
         SOKNOEAR.COM
       </div>
+
+      {/* territory map lightbox */}
+      {mapSrc && mapOpen && (
+        <div
+          role="dialog"
+          aria-label="Map of the Dirty South"
+          onClick={() => setMapOpen(false)}
+          style={{
+            position: "fixed", inset: 0, zIndex: 60, background: "rgba(19,19,9,0.92)",
+            display: "grid", placeItems: "center", padding: 18, cursor: "zoom-out",
+          }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={mapSrc}
+            alt="Map of the Dirty South — Old Sevier, South Waterfront, Island Home, Urban Wilderness, and Kern's"
+            style={{ maxWidth: "94vw", maxHeight: "86vh", border: `4px solid ${GREEN}` }}
+          />
+          <button
+            aria-label="Close map"
+            onClick={() => setMapOpen(false)}
+            className={fontClass}
+            style={{
+              position: "absolute", top: 14, right: 14, padding: "6px 14px", fontSize: "1.1rem",
+              background: GREEN, color: INK, border: `3px solid ${GREEN}`, cursor: "pointer",
+              textTransform: "uppercase",
+            }}
+          >
+            ✕ Close
+          </button>
+        </div>
+      )}
     </div>
   );
 }

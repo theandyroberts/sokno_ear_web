@@ -43,6 +43,16 @@ describe("DirtySouth checklist", () => {
     // and it renders checked
     expect(screen.getByRole("button", { name: `Uncheck ${first.headline}` })).toHaveAttribute("aria-pressed", "true");
   });
+  it("intro explains the page; map button only renders when a map image exists", () => {
+    const { rerender } = render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" />);
+    expect(screen.getByText(/everything you reach by crossing the bridge/i)).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /map of the territory/i })).not.toBeInTheDocument();
+    rerender(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" mapSrc="/assets/dirtysouth_map.jpg" />);
+    fireEvent.click(screen.getByRole("button", { name: /map of the territory/i }));
+    expect(screen.getByRole("dialog", { name: /map of the dirty south/i })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: /close map/i }));
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  });
   it("escape hatches back to the Ear exist top and bottom", () => {
     render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" />);
     const home = screen.getAllByRole("link", { name: /read this week's episode/i });
