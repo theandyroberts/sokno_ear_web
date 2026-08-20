@@ -9,9 +9,9 @@ import type { Metadata } from "next";
 // for attribution — same page). Day tabs default to tonight, Thu–Sun.
 export const dynamic = "force-dynamic";
 
-const TITLE = "Party in the Dirty South — SoKno's plan for the night";
+const TITLE = "Party in the Dirty South — South Knoxville Nightlife, Night by Night";
 const DESCRIPTION =
-  "Happy hours, dinner, live music, karaoke, and the late hang — South Knoxville's nightlife checklist, night by night, from The South Knoxville Ear.";
+  "South Knoxville nightlife tonight: happy hours, dinner, live music, karaoke, and the late hang across Old Sevier, the South Waterfront, and the Urban Wilderness — the Dirty South checklist from The South Knoxville Ear.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -38,13 +38,40 @@ function findMap(): string | null {
 
 export default function DirtySouthParty() {
   const nightlife = loadNightlife();
+  // ItemList of the unique venues on this week's plan — structured data so
+  // Google understands this page as a curated nightlife list, not a wall of links.
+  const seen = new Set<string>();
+  const venues = Object.values(nightlife.days).flat().filter((i) => {
+    const name = i.venue.split(" · ")[0];
+    return seen.has(name) ? false : (seen.add(name), true);
+  });
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Party in the Dirty South — South Knoxville nightlife",
+    description: DESCRIPTION,
+    url: "https://soknoear.com/dirtysouthparty",
+    numberOfItems: venues.length,
+    itemListElement: venues.map((v, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: v.venue.split(" · ")[0],
+      url: v.href.startsWith("http") ? v.href : `https://soknoear.com${v.href}`,
+    })),
+  };
   return (
-    <DirtySouth
-      days={nightlife.days}
-      defaultDay={pickDefaultDay()}
-      weekend={nightlife.weekend}
-      fontClass={anton.className}
-      mapSrc={findMap()}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+      />
+      <DirtySouth
+        days={nightlife.days}
+        defaultDay={pickDefaultDay()}
+        weekend={nightlife.weekend}
+        fontClass={anton.className}
+        mapSrc={findMap()}
+      />
+    </>
   );
 }
