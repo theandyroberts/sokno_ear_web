@@ -24,12 +24,29 @@ export default function Archive() {
     );
   }
   return (
-    <main style={{ maxWidth: 1100, margin: "0 auto", padding: "48px 24px" }}>
+    <main style={{ maxWidth: 860, margin: "0 auto", padding: "48px 24px" }}>
       <h1 style={{ fontFamily: "var(--font-display)", textTransform: "uppercase" }}>Past Episodes</h1>
-      <ul style={{ listStyle: "none", padding: 0 }}>
+      <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-md)", lineHeight: 1.6, color: "var(--ink-black)", maxWidth: 640 }}>
+        Every weekend episode of The South Knoxville Ear, back to the first one — the
+        events, openings, and neighborhood stories of SoKno, one weekend at a time.
+      </p>
+      <ul style={{ listStyle: "none", padding: 0, marginTop: 24 }}>
         {past.map((e) => (
-          <li key={e.slug} style={{ padding: "12px 0", borderBottom: "1px solid var(--paper-edge)" }}>
-            <Link href={`/${e.slug}`}>{e.dateLabel ?? e.date} &mdash; Vol. {e.volume} No. {e.number}</Link>
+          <li key={e.slug} style={{ padding: "20px 0", borderBottom: "1px solid var(--paper-edge)" }}>
+            <div style={{ fontFamily: "var(--font-label)", fontSize: "var(--label-sm)", letterSpacing: "var(--tracking-label)", textTransform: "uppercase", color: "var(--rust)" }}>
+              {e.dateLabel ?? e.date} · Vol. {e.volume} — No. {e.number}
+            </div>
+            <Link href={`/${e.slug}`} style={{ display: "inline-block", marginTop: 6, fontFamily: "var(--font-display)", fontSize: "var(--text-xl)", lineHeight: 1.2, color: "var(--ink-black)", textDecoration: "none" }}>
+              {e.feature.title}
+            </Link>
+            {e.feature.deck && (
+              <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", lineHeight: 1.55, color: "var(--ink-black)", margin: "6px 0 0", maxWidth: 640 }}>
+                {e.feature.deck}
+              </p>
+            )}
+            <p style={{ fontFamily: "var(--font-label)", fontSize: "var(--label-sm)", letterSpacing: "var(--tracking-label-tight)", textTransform: "uppercase", color: "var(--ink-faded)", margin: "8px 0 0" }}>
+              Also in this episode: {e.stories.map((s) => s.title).join(" · ")}
+            </p>
           </li>
         ))}
       </ul>
