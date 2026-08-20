@@ -63,7 +63,7 @@ describe("DirtySouth checklist", () => {
     await waitFor(() => expect((global as any).fetch).toHaveBeenCalledWith("/api/subscribe", expect.anything()));
     const body = JSON.parse(((global as any).fetch as any).mock.calls[0][1].body);
     expect(body.list).toBe("dsparty");
-    await waitFor(() => expect(screen.getByText(/you're on the party list/i)).toBeInTheDocument());
+    await waitFor(() => expect(screen.getByText(/green hello headed to your inbox/i)).toBeInTheDocument());
   });
   it("escape hatches back to the Ear exist top and bottom", () => {
     render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" />);

@@ -49,10 +49,10 @@ const HTML = `<!doctype html><html><body style="margin:0;padding:0;background:${
     <a href="${PARTY}" style="display:inline-block;background:${INK};color:${GREEN};text-decoration:none;font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:17px;letter-spacing:0.05em;text-transform:uppercase;padding:14px 26px;">Open the party page &rarr;</a>
   </td></tr>
   <tr><td style="padding:18px 22px 14px;font-family:'Courier New',monospace;font-size:11px;line-height:1.5;color:${INK};">
-    You&rsquo;re getting this because you joined the party list at soknoear.com/party.
+    You&rsquo;re getting this because you joined the party list at <a href="https://soknoear.com/party" style="color:${INK};">soknoear.com/party</a>.
     Reply and we&rsquo;ll take you off. &mdash; The SoKno Ear
   </td></tr>
-  <tr><td style="background:${INK};color:${GREEN};padding:12px 18px;text-align:center;font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:18px;letter-spacing:0.08em;">SOKNOEAR.COM</td></tr>
+  <tr><td style="background:${INK};padding:12px 18px;text-align:center;font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:18px;letter-spacing:0.08em;"><a href="https://soknoear.com" style="color:${GREEN};text-decoration:none;">SOKNOEAR.COM</a></td></tr>
 </table></td></tr></table></body></html>`;
 
 const TEXT = `THE PLAN IS UP — Party in the Dirty South, ${nightlife.weekend}

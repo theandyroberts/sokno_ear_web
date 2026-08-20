@@ -57,9 +57,22 @@ function NotifyForm({ fontClass }: { fontClass: string }) {
 
   if (state === "done" || state === "already") {
     return (
-      <p className={fontClass} style={{ margin: 0, fontSize: "1.15rem", textTransform: "uppercase", transform: "rotate(-0.5deg)" }}>
-        {state === "done" ? "✓ You're on the party list — see you next week." : "✓ Already on the party list. See you out there."}
-      </p>
+      <div
+        className={fontClass}
+        style={{
+          display: "inline-block", background: INK, color: GREEN,
+          padding: "16px 22px", transform: "rotate(-1.2deg)",
+          fontSize: "clamp(1.5rem, 6vw, 2.2rem)", lineHeight: 1.05,
+          textTransform: "uppercase", letterSpacing: "0.01em",
+        }}
+      >
+        ✓ You&apos;re on
+        <br />
+        the party list.
+        <span style={{ display: "block", fontSize: "0.5em", marginTop: 8, letterSpacing: "0.06em" }}>
+          {state === "done" ? "Green hello headed to your inbox — see you next week." : "You were already in. See you out there."}
+        </span>
+      </div>
     );
   }
   return (
