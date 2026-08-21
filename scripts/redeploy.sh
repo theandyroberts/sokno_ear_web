@@ -7,6 +7,11 @@ set -euo pipefail
 cd /var/www/soknoear
 
 PORT="${PORT:-3007}"
+# `--force-build`: rebuild even with no code change (e.g. a NEXT_PUBLIC_* env edit).
+# This is the ONLY sanctioned way to rebuild — a by-hand `npm run build` skips the
+# static sync below and ships a page whose every CSS/JS/font chunk 404s (Aug 21).
+FORCE_BUILD=false
+for _arg in "$@"; do [ "$_arg" = "--force-build" ] && FORCE_BUILD=true; done
 
 # Stage 1: pull, then hand off to the freshly-pulled copy of this script.
 # Bash reads a script lazily, so letting `git pull` rewrite this file mid-run means
@@ -34,6 +39,7 @@ if [ "$OLD" != "$NEW" ]; then
   fi
 fi
 if $needs_deps; then needs_build=true; fi
+if $FORCE_BUILD; then needs_build=true; echo "→ --force-build requested"; fi
 
 if $needs_deps; then
   echo "→ dependencies changed: npm ci"
@@ -43,9 +49,13 @@ fi
 if $needs_build; then
   echo "→ app code changed: full build"
   npm run build
-  mkdir -p .next/standalone/.next/static
-  rsync -a --delete .next/static/ .next/standalone/.next/static/
 fi
+
+# Sync Next's static bundle into the standalone dir on EVERY deploy (cheap, idempotent).
+# Used to live only inside the build branch, so a build done outside this script left
+# the standalone dir serving stale chunk hashes — HTML rendered, every asset 404'd.
+mkdir -p .next/standalone/.next/static
+rsync -a --delete .next/static/ .next/standalone/.next/static/
 
 # Sync assets + content into the standalone bundle.
 # rsync updates in place. The old `rm -rf public && cp -R` briefly deleted every
@@ -121,5 +131,23 @@ if [ "$pending" -gt 0 ]; then
 else
   echo "✓ $checked published assets all serve"
 fi
+
+# Next's own bundle must serve too. Sample the homepage + party page and curl every
+# /_next/static chunk they reference — catches a standalone dir out of sync with the
+# build before a reader's console fills with 404s (Aug 21 incident).
+echo "→ verifying Next static bundle…"
+bundle_missing=0; bundle_checked=0
+for page in / /dirtysouthparty; do
+  for ref in $(curl -s "http://127.0.0.1:$PORT$page" | grep -oE '/_next/static/[A-Za-z0-9/_.-]+\.(js|css|woff2)' | sort -u); do
+    bundle_checked=$((bundle_checked + 1))
+    code=$(serve_code "$ref")
+    if [ "$code" != "200" ]; then echo "  !! $ref → $code"; bundle_missing=$((bundle_missing + 1)); fi
+  done
+done
+if [ "$bundle_missing" -gt 0 ]; then
+  echo "DEPLOY FAILED VERIFICATION: $bundle_missing of $bundle_checked Next static file(s) not served — standalone bundle out of sync"
+  exit 1
+fi
+echo "✓ $bundle_checked Next static files serve"
 
 echo "deployed $NEW (deps=$needs_deps build=$needs_build)"
