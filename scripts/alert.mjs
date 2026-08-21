@@ -10,7 +10,7 @@ const resend = new Resend(key);
 const { error } = await resend.emails.send({
   from: process.env.SUBMIT_FROM || "The SoKno Ear <ear@updates.note15.com>",
   to: process.env.ALERT_TO || process.env.SUBMIT_TO || "andy@note15.com",
-  subject: `[soknoear watchdog] ${subject}`,
+  subject: `[SYSTEM_ALERT] [soknoear watchdog] ${subject}`,
   text: (text ?? "").replace(/\\n/g, "\n"),
 });
 if (error) { console.error("alert: resend error", error); process.exit(1); }
