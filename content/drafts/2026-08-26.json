@@ -741,6 +741,13 @@
     }
   ],
   "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen — opera in a quarry and a 93% lunar eclipse Thursday night, a full-moon hike at Ijams Park, goat yoga at Kern's, and a new name on the old Mimosas room.",
+      "duration": "04:37",
+      "src": "/audio/2026-08-26.mp3"
+    },
     "calendar": [
       {
         "month": "AUG",
