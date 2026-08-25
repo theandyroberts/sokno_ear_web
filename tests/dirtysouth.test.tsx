@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { DirtySouth } from "@/components/DirtySouth";
-import { loadNightlife, pickDefaultDay } from "@/lib/nightlife";
+import { loadNightlife, pickDefaultDay, isSponsorDay } from "@/lib/nightlife";
 
 const nightlife = loadNightlife();
 
@@ -52,6 +52,23 @@ describe("DirtySouth checklist", () => {
     expect(screen.getByRole("dialog", { name: /map of the dirty south/i })).toBeInTheDocument();
     fireEvent.click(screen.getByRole("button", { name: /close map/i }));
     expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+  });
+  it("isSponsorDay: Mon-Wed true, Thu-Sun false (America/New_York)", () => {
+    expect(isSponsorDay(new Date("2026-08-24T12:00:00Z"))).toBe(true);  // Monday
+    expect(isSponsorDay(new Date("2026-08-25T12:00:00Z"))).toBe(true);  // Tuesday
+    expect(isSponsorDay(new Date("2026-08-26T12:00:00Z"))).toBe(true);  // Wednesday
+    expect(isSponsorDay(new Date("2026-08-27T12:00:00Z"))).toBe(false); // Thursday
+    expect(isSponsorDay(new Date("2026-08-29T12:00:00Z"))).toBe(false); // Saturday
+  });
+  it("sponsor card renders name, address, phone, art when passed; absent otherwise", () => {
+    const { rerender } = render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" sponsor={nightlife.sponsor!} />);
+    expect(screen.getByText(/brought to you by/i)).toBeInTheDocument();
+    expect(screen.getByText("Angry Dumplings")).toBeInTheDocument(); // sponsor headline (checklist renders the venue with address attached)
+    expect(screen.getAllByText(/1119 Sevier Ave/).length).toBeGreaterThanOrEqual(2); // sponsor card + checklist entry
+    expect(screen.getByRole("link", { name: /760\) 899-4121/ })).toHaveAttribute("href", "tel:7608994121");
+    expect(screen.getByAltText(/from the Dirty South map/i)).toBeInTheDocument();
+    rerender(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" sponsor={null} />);
+    expect(screen.queryByText(/brought to you by/i)).not.toBeInTheDocument();
   });
   it("notify form posts to the dsparty list and confirms", async () => {
     const { waitFor } = await import("@testing-library/react");

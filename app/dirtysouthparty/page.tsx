@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import localFont from "next/font/local";
-import { loadNightlife, pickDefaultDay } from "@/lib/nightlife";
+import { loadNightlife, pickDefaultDay, isSponsorDay } from "@/lib/nightlife";
 import { DirtySouth } from "@/components/DirtySouth";
 import type { Metadata } from "next";
 
@@ -36,8 +36,11 @@ function findMap(): string | null {
   return null;
 }
 
-export default function DirtySouthParty() {
+export default async function DirtySouthParty({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const nightlife = loadNightlife();
+  const params = await searchParams;
+  // Sponsor holds the page Mon–Wed; ?preview=sponsor shows it any day (for Andy + sponsors).
+  const showSponsor = (isSponsorDay() || params.preview === "sponsor") && nightlife.sponsor ? nightlife.sponsor : null;
   // ItemList of the unique venues on this week's plan — structured data so
   // Google understands this page as a curated nightlife list, not a wall of links.
   const seen = new Set<string>();
@@ -71,6 +74,7 @@ export default function DirtySouthParty() {
         weekend={nightlife.weekend}
         fontClass={anton.className}
         mapSrc={findMap()}
+        sponsor={showSponsor}
       />
     </>
   );

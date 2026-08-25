@@ -14,10 +14,22 @@ export type NightItem = {
   cat?: string;
 };
 
+export type Sponsor = {
+  name: string;
+  kicker: string;
+  blurb?: string;
+  address: string;
+  phone: string;
+  hours: string;
+  image: string;
+  href?: string;
+};
+
 export type Nightlife = {
   updated: string;
   weekend: string;
   days: Record<NightDay, NightItem[]>;
+  sponsor?: Sponsor;
 };
 
 const FILE = path.join(process.cwd(), "content", "nightlife.json");
@@ -36,4 +48,14 @@ export function pickDefaultDay(now: Date = new Date()): NightDay {
   return (["Thu", "Fri", "Sat", "Sun"] as const).includes(weekday as NightDay)
     ? (weekday as NightDay)
     : "Thu";
+}
+
+/** The sponsor card runs on the off-days — Monday through Wednesday in SoKno's
+ *  timezone — when the page has no "tonight" of its own. */
+export function isSponsorDay(now: Date = new Date()): boolean {
+  const weekday = new Intl.DateTimeFormat("en-US", {
+    weekday: "short",
+    timeZone: "America/New_York",
+  }).format(now);
+  return ["Mon", "Tue", "Wed"].includes(weekday);
 }

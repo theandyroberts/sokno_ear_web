@@ -307,5 +307,15 @@
         "cat": "drink"
       }
     ]
+  },
+  "sponsor": {
+    "name": "Angry Dumplings",
+    "kicker": "Mon–Wed brought to you by",
+    "blurb": "Noodles, buns & tea on Sevier Ave",
+    "address": "1119 Sevier Ave",
+    "phone": "(760) 899-4121",
+    "hours": "Open till 9 nightly · Mon–Thu from 11 AM, Fri–Sun from noon",
+    "image": "/assets/dirty_south_sponsor_angrydumplings.jpg",
+    "href": "https://www.toasttab.com/local/angry-dumpling-and-sweet-tea-1119-sevier-avenue-suite-a/r-9f107372-6885-42c9-8d45-6f92af96f2c2"
   }
 }

@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import type { NightDay, NightItem } from "@/lib/nightlife";
+import type { NightDay, NightItem, Sponsor } from "@/lib/nightlife";
 import { NightIcon, type NightCat } from "@/components/DirtySouthIcons";
 
 // The night side of the Ear: acid green, brush-black, a checklist that IS the
@@ -30,6 +30,40 @@ function saveChecked(s: Set<string>) {
   } catch {
     /* private mode — checks just don't persist */
   }
+}
+
+/** Mon–Wed sponsor card — the week's sponsor holds the page on the off-days. */
+function SponsorCard({ sponsor, fontClass }: { sponsor: Sponsor; fontClass: string }) {
+  return (
+    <div style={{ border: `3px solid ${INK}`, marginBottom: 26, padding: 16, display: "flex", gap: 18, flexWrap: "wrap", alignItems: "center" }}>
+      <a href={sponsor.href ?? "#"} target="_blank" rel="noopener noreferrer" style={{ flex: "0 0 150px" }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={sponsor.image}
+          alt={`${sponsor.name} — from the Dirty South map`}
+          style={{ width: 150, height: "auto", border: `3px solid ${INK}`, transform: "rotate(-1.2deg)", display: "block" }}
+        />
+      </a>
+      <div style={{ flex: "1 1 260px", minWidth: 220 }}>
+        <div style={{ fontFamily: "var(--font-label)", fontSize: "0.72rem", letterSpacing: "0.14em", textTransform: "uppercase" }}>
+          ★ {sponsor.kicker}
+        </div>
+        <a href={sponsor.href ?? "#"} target="_blank" rel="noopener noreferrer" style={{ color: INK, textDecoration: "none" }}>
+          <div className={fontClass} style={{ fontSize: "clamp(1.8rem, 7vw, 2.8rem)", lineHeight: 0.95, textTransform: "uppercase", margin: "6px 0 8px", transform: "rotate(-0.6deg)" }}>
+            {sponsor.name}
+          </div>
+        </a>
+        <div style={{ fontFamily: "var(--font-label)", fontSize: "0.78rem", letterSpacing: "0.06em", textTransform: "uppercase", lineHeight: 1.7 }}>
+          {sponsor.blurb ? <>{sponsor.blurb}<br /></> : null}
+          <strong style={{ fontWeight: 800 }}>{sponsor.address}</strong> · {sponsor.hours}
+          <br />
+          <a href={`tel:${sponsor.phone.replace(/[^0-9+]/g, "")}`} className={fontClass} style={{ color: INK, textDecoration: "none", fontSize: "1.25rem", letterSpacing: "0.04em", display: "inline-block", marginTop: 4 }}>
+            ☎ {sponsor.phone}
+          </a>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 /** One-line signup for the 'dsparty' list — separate membership from the Ear's
@@ -118,6 +152,7 @@ export function DirtySouth({
   weekend,
   fontClass,
   mapSrc,
+  sponsor,
 }: {
   days: Record<NightDay, NightItem[]>;
   defaultDay: NightDay;
@@ -125,6 +160,8 @@ export function DirtySouth({
   fontClass: string;
   /** Path to the territory map image; the map link renders only when set. */
   mapSrc?: string | null;
+  /** The week's sponsor — rendered above the listings on Mon–Wed only. */
+  sponsor?: Sponsor | null;
 }) {
   const [day, setDay] = React.useState<NightDay>(defaultDay);
   const [checked, setChecked] = React.useState<Set<string>>(new Set());
@@ -201,6 +238,8 @@ export function DirtySouth({
           </button>
         )}
         <div style={{ height: 12 }} />
+
+        {sponsor && <SponsorCard sponsor={sponsor} fontClass={fontClass} />}
 
         {/* day tabs */}
         <div role="tablist" aria-label="Pick your night" style={{ display: "flex", gap: 8, marginBottom: 26 }}>
