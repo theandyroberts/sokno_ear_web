@@ -8,33 +8,25 @@
   "shortDate": "Aug 27–30",
   "place": "South Knoxville, TN",
   "feature": {
-    "id": "thursday-night-sky",
+    "id": "lunar-eclipse",
     "label": "SoKno",
     "labelColor": "gold",
     "days": [
       "Thu"
     ],
     "layout": "imageTop",
-    "image": "/assets/spots/uw_trails.jpg",
-    "imageCaption": "Thursday night, looking up",
-    "title": "Opera at the quarry, then the moon goes dark: Thursday night belongs to the sky",
-    "deck": "Knoxville Opera closes its summer series at Augusta Quarry at 7. Ninety minutes later the Earth's shadow starts crossing the full Sturgeon Moon, and by midnight 93 percent of it is gone. Both are visible from South Knoxville. One of them is free.",
+    "image": "/assets/spots/eclipse_porch.jpg",
+    "imageCaption": "Thursday night, from the porch rail",
+    "title": "Thursday night the Earth's shadow swallows 93 percent of the moon over South Knoxville",
+    "deck": "It starts at 9:23 and peaks at 12:12 Friday morning, with the moon high in the south-southeast and the covered part gone the color of an old penny. No ticket, no drive, no equipment — a driveway will do it.",
     "facts": [
       {
-        "label": "Thu Aug 27 · 7 PM",
-        "value": "Opera Under the Stars: Heroes & Adventures · Augusta Quarry, Fort Dickerson Park"
-      },
-      {
-        "label": "Admission",
-        "value": "Listed at $5 · all ages"
-      },
-      {
         "label": "Thu Aug 27 · 9:23 PM",
-        "value": "Eclipse begins — the outer shadow touches the moon"
+        "value": "The outer shadow touches the moon — subtle"
       },
       {
         "label": "Thu Aug 27 · 10:33 PM",
-        "value": "The dark shadow arrives; the moon starts turning"
+        "value": "The dark shadow arrives and the color starts to turn"
       },
       {
         "label": "Fri Aug 28 · 12:12 AM",
@@ -42,41 +34,41 @@
       },
       {
         "label": "Fri Aug 28 · 1:51 AM",
-        "value": "The moon comes back out"
+        "value": "The dark shadow lets go"
+      },
+      {
+        "label": "Fri Aug 28 · 3:01 AM",
+        "value": "Over"
+      },
+      {
+        "label": "What you need",
+        "value": "Nothing. No glasses, no filter — binoculars help"
       },
       {
         "label": "Cost",
-        "value": "The eclipse is free from any driveway in SoKno"
+        "value": "Free, from anywhere in SoKno"
       }
     ],
     "body": [
       {
         "type": "paragraph",
-        "text": "South Knoxville has a quarry with an opera in it and a moon that is about to disappear, and both of those things happen on the same Thursday night, about ninety minutes apart. You can do the first, drive home, and still be outside for the second."
+        "text": "Thursday is the full moon, and Thursday night the Earth gets between it and the sun. Not all the way — this is a partial eclipse — but very nearly: at maximum, 93 percent of the moon sits inside the dark shadow, with one thin bright rind left along an edge and everything else gone the color of an old penny."
       },
       {
         "type": "subhead",
-        "text": "Seven o'clock: the last concert at Augusta Quarry"
+        "text": "The timing, in Knoxville time"
       },
       {
         "type": "paragraph",
-        "text": "Knoxville Opera has spent the summer singing at the bottom of a rock wall. Augusta Quarry sits inside Fort Dickerson Park off Chapman Highway — the swimming-hole quarry with the green water, the one people drive past for years before they finally pull in. Thursday is the third and last concert of the series, an hour called Heroes & Adventures: opera, musical theatre, and the songs that everyone already half knows, aimed squarely at all ages. Pirates, princesses, rogues, and dreamers, which is a fair description of a Thursday night in a quarry. It runs 7 to 8, and Visit Knoxville lists admission at five dollars."
-      },
-      {
-        "type": "subhead",
-        "text": "Then the part nobody has to buy a ticket for"
-      },
-      {
-        "type": "paragraph",
-        "text": "August's full moon — the Sturgeon Moon — comes to full at 12:18 Friday morning, and it does it while sitting inside the Earth's shadow. At 9:23 Thursday night the faint outer shadow touches the moon's face; most people won't notice. At 10:33 the real one arrives, and from there it is unmistakable: a dark bite that keeps growing, and the covered part going the color of a penny. Maximum comes at 12:12 Friday morning, with 93 percent of the moon swallowed and only a thin bright rind left along one edge. It holds there for a while, then reverses — clear of the dark shadow at 1:51, done entirely by 3:01."
+        "text": "At 9:23 the faint outer shadow touches the moon's face. Most people won't notice; it just looks like the moon has gone slightly grubby. The part worth staying up for starts at 10:33, when the real shadow arrives — from there a dark bite grows across the disk for an hour and a half straight. Maximum is 12:12 Friday morning. Then it reverses: clear of the dark shadow at 1:51, finished entirely at 3:01."
       },
       {
         "type": "agenda",
-        "title": "The eclipse, in Knoxville time",
+        "title": "The whole eclipse",
         "rows": [
           {
             "time": "Thu 9:23 PM",
-            "what": "Outer shadow first touches the moon — subtle"
+            "what": "Outer shadow first touches the moon"
           },
           {
             "time": "Thu 10:33 PM",
@@ -102,7 +94,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Nowhere special, and that's the good news. At maximum the moon is forty degrees up — a little under halfway between the horizon and straight overhead — so you don't need a ridge or a clearing or a boat. A driveway with a view to the south-southeast will do it. No glasses, no filter, no equipment; a lunar eclipse is the safe kind, and binoculars only make it better. If you want to make an evening of it, the riverfront gives you open sky and no streetlight in your eyes, but check posted park hours before you plan to be out there at midnight."
+        "text": "Nowhere special, and that's exactly why this is at the top of the page. At maximum the moon sits forty degrees up — a little under halfway between the horizon and straight overhead — so you don't need a ridge, a clearing, a boat, or a plan. Any patch of open sky to the south-southeast works: a driveway, a back step, the middle of your own street. A lunar eclipse is the safe kind, so there is nothing to wear over your eyes. Binoculars make the color better if you have a pair in a drawer."
       },
       {
         "type": "subhead",
@@ -110,18 +102,10 @@
       },
       {
         "type": "paragraph",
-        "text": "As of Tuesday the forecast for Thursday night is mostly cloudy with light showers and a low around 72. Historically this date in Knoxville has been cloudy a little over half the time. So: go outside, look up, and if there's nothing to see, the next one visible from here is a penumbral in February 2027 and the next partial like this one is January 2028. Worth the five minutes on the porch."
+        "text": "As of Tuesday the forecast for Thursday night is mostly cloudy with light showers and a low near 72, and historically this date in Knoxville has been cloudy a little more than half the time. So no promises. But it costs five minutes on the porch to find out, and the next eclipse anything like this one from here is January 2028."
       }
     ],
     "sources": [
-      {
-        "label": "Knoxville Opera — Opera Under the Stars: A Summer Series at Augusta Quarry",
-        "url": "https://www.knoxvilleopera.org/events/opera-under-the-stars-heroes-and-adventures"
-      },
-      {
-        "label": "Visit Knoxville — event listing (admission)",
-        "url": "https://www.visitknoxville.com/events/"
-      },
       {
         "label": "timeanddate.com — Aug 27–28, 2026 partial lunar eclipse in Knoxville",
         "url": "https://www.timeanddate.com/eclipse/in/usa/knoxville?iso=20260828"
@@ -132,15 +116,12 @@
       }
     ],
     "event": {
-      "startDate": "2026-08-27T19:00:00-04:00",
-      "endDate": "2026-08-27T20:00:00-04:00",
-      "locationName": "Augusta Quarry at Fort Dickerson Park",
-      "locationAddress": "550 Augusta Ave"
+      "startDate": "2026-08-27T21:23:00-04:00",
+      "endDate": "2026-08-28T03:01:00-04:00",
+      "locationName": "South Knoxville",
+      "locationAddress": "Anywhere with open sky to the south-southeast"
     },
     "social": {
-      "igTags": [
-        "knox-parks"
-      ],
       "igBanner": [
         "The moon goes dark Thursday",
         "93 percent covered at 12:12 AM"
@@ -155,26 +136,24 @@
         "Thu"
       ],
       "hot": true,
-      "image": "/assets/spots/uw_trails.jpg",
-      "title": "Opera at the quarry, then an eclipse",
-      "blurb": "A five-dollar concert at Fort Dickerson at seven, and the moon 93 percent gone by midnight.",
+      "image": "/assets/spots/eclipse_porch.jpg",
+      "title": "The moon goes 93 percent dark",
+      "blurb": "Starts 9:23 Thursday night, peaks at 12:12. Free, and your own driveway is a fine seat.",
       "cue": "Jump to story",
-      "href": "#thursday-night-sky"
+      "href": "#lunar-eclipse"
     },
     {
-      "label": "Ijams Park",
-      "labelColor": "teal",
+      "label": "Urban Wilderness",
+      "labelColor": "ink",
       "days": [
-        "Fri",
-        "Sat",
-        "Sun"
+        "Thu"
       ],
       "hot": true,
-      "image": "/assets/spots/evening_paddle.jpg",
-      "title": "A full-moon hike and a cult classic on the lawn",
-      "blurb": "Napoleon Dynamite Friday, a guided moonlight hike Saturday, comedy on the patio after dark.",
+      "image": "/assets/spots/opera_quarry.jpg",
+      "title": "Opera at the bottom of a quarry",
+      "blurb": "Knoxville Opera's last summer night at Augusta Quarry — one hour, five dollars, all ages.",
       "cue": "Jump to story",
-      "href": "#ijams-moon-weekend"
+      "href": "#opera-quarry"
     },
     {
       "label": "SoKno",
@@ -185,9 +164,9 @@
         "Sat",
         "Sun"
       ],
-      "image": "/assets/spots/mimosas.jpg",
-      "title": "The room on Blount has a new name",
-      "blurb": "Puckers opened Wednesday where Mimosas was — and this is its first weekend.",
+      "image": "/assets/spots/puckers_football.jpg",
+      "title": "Puckers opens on Blount Avenue",
+      "blurb": "The Gatlinburg sports grill took the old Mimosas room on Wednesday. This is weekend one.",
       "cue": "Jump to story",
       "href": "#puckers-opens"
     },
@@ -195,14 +174,14 @@
       "label": "Kern's",
       "labelColor": "green",
       "days": [
-        "Thu",
         "Sat"
       ],
-      "image": "/assets/spots/kerns_fourth.jpg",
-      "title": "Goats on the mat, bourbon on the roof",
-      "blurb": "A rooftop tasting Thursday night, then Saturday morning yoga with actual goats.",
+      "hot": true,
+      "image": "/assets/spots/goat_yoga.jpg",
+      "title": "Goat yoga at Kern's",
+      "blurb": "Saturday, 8:30 AM. Small goats, rolled-out mats, and no serious practice after minute four.",
       "cue": "Jump to story",
-      "href": "#kerns-weekend"
+      "href": "#goat-yoga"
     },
     {
       "label": "Ijams Park",
@@ -210,26 +189,83 @@
       "days": [
         "Sat"
       ],
-      "image": "/assets/spots/ijams_storytelling.jpg",
-      "title": "Free stories under the trees",
-      "blurb": "Saturday morning at the Playscape by Mead's Quarry — blankets, books, no ticket.",
+      "image": "/assets/spots/moon_hike.jpg",
+      "title": "A hike under the full moon",
+      "blurb": "Saturday at 8:30, naturalists take a group out on the trails in the dark. Headlamps provided.",
       "cue": "Jump to story",
-      "href": "#ijams-moon-weekend"
+      "href": "#full-moon-hike"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "image": "/assets/spots/movie_lawn.jpg",
+      "title": "Napoleon Dynamite on the lawn",
+      "blurb": "Friday, doors at seven, film when it's dark. Food trucks, blankets, leashed dogs welcome.",
+      "cue": "Jump to story",
+      "href": "#napoleon-dynamite"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "image": "/assets/spots/playscape_story.jpg",
+      "title": "Free stories under the trees",
+      "blurb": "Saturday morning at the Playscape by Mead's Quarry — a blanket, a book, no ticket.",
+      "cue": "Jump to story",
+      "href": "#playscape-storytelling"
+    },
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Thu"
+      ],
+      "image": "/assets/spots/rooftop_bourbon.jpg",
+      "title": "Bourbon and cigars on the roof",
+      "blurb": "Thursday, seven to nine, on top of the old bakery — and yes, there's a dress code.",
+      "cue": "Jump to story",
+      "href": "#kerns-rooftop"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "image": "/assets/spots/patio_comedy.jpg",
+      "title": "Stand-up on the back patio",
+      "blurb": "Six local comics and a poetry set, Saturday at half past seven, beer garden open.",
+      "cue": "Jump to story",
+      "href": "#tiny-stage-comedy"
     },
     {
       "label": "Old Sevier",
       "labelColor": "rust",
       "days": [
-        "Thu",
-        "Fri",
-        "Sat",
+        "Thu"
+      ],
+      "image": "/assets/spots/hiwire_pints.jpg",
+      "title": "Pint night on Barber Street",
+      "blurb": "Hi-Wire stacks its Thursday pint night on top of an all-day happy hour.",
+      "cue": "Jump to story",
+      "href": "#hiwire-thursday"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
         "Sun"
       ],
-      "image": "/assets/spots/hiwire_weekend.jpg",
-      "title": "Thursday does the heavy lifting",
-      "blurb": "Pint night and all-day happy hour at Hi-Wire, free trivia at Trailhead, then a quiet weekend.",
+      "image": "/assets/spots/resin_flowers.jpg",
+      "title": "Flowers set in resin",
+      "blurb": "Sunday afternoon: three hours, pressed wildflowers, and jewelry you take home.",
       "cue": "Jump to story",
-      "href": "#old-sevier-weekend"
+      "href": "#resin-workshop"
     },
     {
       "label": "Suttree Landing",
@@ -240,7 +276,7 @@
         "Sat",
         "Sun"
       ],
-      "image": "/assets/spots/specials_board.jpg",
+      "image": "/assets/spots/specials_chalk.jpg",
       "title": "The specials board",
       "blurb": "Earl's runs a different deal every day of the weekend, down on the waterfront.",
       "cue": "Jump to story",
@@ -248,6 +284,92 @@
     }
   ],
   "stories": [
+    {
+      "id": "opera-quarry",
+      "label": "Urban Wilderness",
+      "labelColor": "ink",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/opera_quarry.jpg",
+      "imageCaption": "The last one of the summer",
+      "title": "Knoxville Opera sings at the bottom of Augusta Quarry on Thursday, and it's the last night of the series",
+      "deck": "Three concerts, one rock wall, and this is the third. An hour of opera, musical theatre and songs you already half know, staged inside Fort Dickerson Park and built for every age.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Aug 27 · 7–8 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Augusta Quarry, Fort Dickerson Park · 550 Augusta Ave"
+        },
+        {
+          "label": "Program",
+          "value": "Opera Under the Stars: Heroes & Adventures"
+        },
+        {
+          "label": "Admission",
+          "value": "Listed at $5"
+        },
+        {
+          "label": "Ages",
+          "value": "All — it's built as a family concert"
+        },
+        {
+          "label": "Bring",
+          "value": "A lawn chair or a blanket"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Augusta Quarry is the swimming-hole quarry — the one off Chapman Highway inside Fort Dickerson Park, with the green water and the sheer rock wall that people drive past for years before they finally pull in. For three nights this summer Knoxville Opera has put a stage at the bottom of it. Thursday is the last of the three."
+        },
+        {
+          "type": "subhead",
+          "text": "What an hour of it sounds like"
+        },
+        {
+          "type": "paragraph",
+          "text": "The program is called Heroes & Adventures, and the pitch is deliberately unfussy: opera, musical theatre, and audience favorites, sung by working professionals against a hundred feet of limestone. Pirates, princesses, rogues and dreamers. If your entire experience of opera is a cartoon Viking helmet, this is the version designed to fix that — one hour, outdoors, in a park, with nobody checking whether you know the words."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "Seven to eight, admission listed at five dollars, all ages. Bring a lawn chair or a blanket; the ground out there is grass and gravel. And it finishes early enough that you can be home with your head tipped back by half past nine, which is when the other thing on Thursday's schedule starts."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Knoxville Opera — Opera Under the Stars: A Summer Series at Augusta Quarry",
+          "url": "https://www.knoxvilleopera.org/events/opera-under-the-stars-heroes-and-adventures"
+        },
+        {
+          "label": "Visit Knoxville — event listing (admission)",
+          "url": "https://www.visitknoxville.com/events/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-08-27T19:00:00-04:00",
+        "endDate": "2026-08-27T20:00:00-04:00",
+        "locationName": "Augusta Quarry at Fort Dickerson Park",
+        "locationAddress": "550 Augusta Ave"
+      },
+      "social": {
+        "igTags": [
+          "knox-parks"
+        ],
+        "igBanner": [
+          "Opera in the quarry Thursday",
+          "One hour, five dollars, all ages"
+        ]
+      }
+    },
     {
       "id": "puckers-opens",
       "label": "SoKno",
@@ -258,11 +380,11 @@
         "Sat",
         "Sun"
       ],
-      "layout": "imageRight",
-      "image": "/assets/spots/mimosas.jpg",
-      "imageCaption": "Same room, new name",
-      "title": "The brunch room on Blount opened Wednesday as Puckers — and this is its first weekend",
-      "deck": "Mimosas served its last plate Tuesday. The next morning the same building at 115 Mimosa Ave opened as Puckers Sports Grill Knoxville, nine days before the Vols play their first home game of the year.",
+      "layout": "imageLeft",
+      "image": "/assets/spots/puckers_football.jpg",
+      "imageCaption": "A sports grill, nine days before kickoff",
+      "title": "Puckers Sports Grill opened on Blount Avenue Wednesday, and this is its first weekend",
+      "deck": "The Gatlinburg sports bar came over the mountain and took the room that was Mimosas until Tuesday night. Same owners, same brunch dishes, a wall of televisions — and nine days to get ready for football.",
       "facts": [
         {
           "label": "Where",
@@ -273,7 +395,7 @@
           "value": "Wed Aug 26 · as Puckers Sports Grill Knoxville"
         },
         {
-          "label": "Behind it",
+          "label": "Who",
           "value": "Kennedy Concepts — Puckers has run in Gatlinburg since 1999"
         },
         {
@@ -286,42 +408,42 @@
         },
         {
           "label": "Hours",
-          "value": "Knoxville hours not published yet — Gatlinburg runs 11 AM to 1 AM daily"
+          "value": "Knoxville hours not posted yet — Gatlinburg runs 11 AM to 1 AM daily"
         }
       ],
       "body": [
         {
           "type": "paragraph",
-          "text": "A restaurant changing names is usually a small thing that only the regulars notice. This one is worth a paragraph because of where the building sits: a few hundred yards off Blount Avenue, on the South Knoxville side of the river, close enough to Neyland Stadium that on a fall Saturday you can hear it."
+          "text": "Puckers Sports Grill Knoxville opened its doors Wednesday morning at 115 Mimosa Ave, a few hundred yards off Blount Avenue, in the room that was Mimosas right up until Tuesday night. This weekend is its first."
         },
         {
           "type": "subhead",
-          "text": "What happened, briefly"
+          "text": "Where it came from"
         },
         {
           "type": "paragraph",
-          "text": "Mimosas — the brunch-and-late-night room that opened in November 2025 — served its last day Tuesday, August 25. Wednesday morning the doors opened again as Puckers Sports Grill Knoxville. Both belong to Kennedy Concepts, and Puckers is the family's older concept: a Gatlinburg sports bar that has been on the Parkway since 1999, known for wings and a wall of televisions. The Knoxville version is pitched as the grown-up take on that — chef-driven food, a real cocktail list, and a room built to hold a crowd on a game day."
+          "text": "Puckers isn't new — it's just new here. Kennedy Concepts has run the original on the Parkway in Gatlinburg since 1999, and it's the kind of place people describe by its television count before they describe the food. The Knoxville version is pitched as the grown-up take on that: chef-driven plates, a real cocktail list, and a room built to hold a crowd that has somewhere to be at 3:30 on a Saturday."
         },
         {
           "type": "subhead",
-          "text": "If you liked the old room"
+          "text": "If you came for the brunch"
         },
         {
           "type": "paragraph",
-          "text": "The brunch dishes people actually came for are staying on the menu, and the company has said the Mimosas concept is expected to return somewhere down the line. So this is less a closing than a swap — the same kitchen, pointed at a different Saturday."
+          "text": "It's still there. The Mimosas dishes people actually turned up for kept their place on the new menu, and the company has said the Mimosas concept itself is expected to come back somewhere down the line. So this reads less like a closing than a swap — the same kitchen, pointed at a different kind of Saturday."
         },
         {
           "type": "subhead",
-          "text": "The timing is not an accident"
+          "text": "Why this weekend, specifically"
         },
         {
           "type": "paragraph",
-          "text": "Tennessee opens at home against Furman on September 5 at 3:30. That makes this weekend the last quiet one this side of the river before sixty-odd thousand people start showing up across it every other Saturday. If you want to see the new room before it has to prove itself, go now. Posted hours for the Knoxville location weren't up as of Tuesday, so call ahead if you're making a plan around it."
+          "text": "Tennessee opens at home against Furman on September 5 at 3:30, and this building sits close enough to Neyland that you can hear the stadium from the parking lot. That makes these four days the last quiet ones the room gets. If you want to see it before it has to prove itself on a game day, go now. Posted hours for the Knoxville location weren't up as of Tuesday, so call ahead if you're building a plan around it."
         }
       ],
       "sources": [
         {
-          "label": "Mimosas Knoxville — the announcement",
+          "label": "Mimosas Knoxville — the changeover announcement",
           "url": "https://mimosasknoxville.com/"
         },
         {
@@ -341,124 +463,254 @@
       }
     },
     {
-      "id": "ijams-moon-weekend",
-      "label": "Ijams Park",
-      "labelColor": "teal",
+      "id": "kerns-rooftop",
+      "label": "Kern's",
+      "labelColor": "green",
       "days": [
-        "Fri",
-        "Sat",
-        "Sun"
+        "Thu"
       ],
-      "layout": "imageLeft",
-      "image": "/assets/spots/evening_paddle.jpg",
-      "imageCaption": "The river, after the sun quits",
-      "title": "Ijams Park spends the whole weekend outdoors after dark — a movie, a comedy show, and a hike by moonlight",
-      "deck": "The full-moon paddles sold out, but the Saturday night hike hasn't. Add a cult classic on the lawn Friday, free storytelling Saturday morning, and a Sunday that starts with yoga and ends in resin and dried flowers.",
+      "layout": "imageRight",
+      "image": "/assets/spots/rooftop_bourbon.jpg",
+      "imageCaption": "Seven to nine, on the roof",
+      "title": "Bourbon, cigars and a seersucker dress code on the Kern's rooftop Thursday night",
+      "deck": "Alchemy Cigar Lounge takes the roof of the old bakery for two hours: an Angel's Envy tasting, a welcome cocktail, a cigar paired to it, and a theme you're expected to dress for.",
       "facts": [
         {
-          "label": "Fri Aug 28",
-          "value": "Movies Under the Stars: \"Napoleon Dynamite\" · doors 7 PM, film ~8:45 · $12 / $10 members"
+          "label": "When",
+          "value": "Thu Aug 27 · 7–9 PM"
         },
         {
-          "label": "Sat Aug 29",
-          "value": "Storytelling at the Nature Playscape · 10 AM – noon · free"
+          "label": "Where",
+          "value": "The rooftop at Kern's, 2201 Kern's Rising Way"
         },
         {
-          "label": "Sat Aug 29",
-          "value": "Tiny Stage Comedy: The Sunflower Comedy Show · 7:30 PM · Visitor Center patio"
+          "label": "Ticket",
+          "value": "$40"
         },
         {
-          "label": "Sat Aug 29",
-          "value": "Full Moon Hike · 8:30 PM · ages 10+ · registration open"
+          "label": "Included",
+          "value": "Angel's Envy tasting, welcome cocktail, cigar pairing, light bites"
         },
         {
-          "label": "Fri & Sat",
-          "value": "Full Moon Paddle · 8:30–10:30 PM · $45 · SOLD OUT both nights"
+          "label": "Host",
+          "value": "Alchemy Cigar Lounge"
         },
         {
-          "label": "Sun Aug 30",
-          "value": "Self Care Sunday Yoga with Hope Irwin · 11:30 AM"
-        },
-        {
-          "label": "Sun Aug 30",
-          "value": "Resin Flower Jewelry Making Workshop · 2–5 PM · registration open"
+          "label": "Dress",
+          "value": "Sundresses and seersucker — it's in the name"
         }
       ],
       "body": [
         {
           "type": "paragraph",
-          "text": "Ijams Park has read the calendar and noticed the same thing the astronomers did: the moon is full this weekend. Nearly everything the park has scheduled happens either under it or in the last hour of daylight before it comes up."
+          "text": "Kern's has a roof, and Thursday night somebody is finally doing the obvious thing with it. Alchemy Cigar Lounge is running an evening called Sundresses and Seersuckers up there, seven to nine, forty dollars a ticket."
         },
         {
           "type": "subhead",
-          "text": "Friday: a movie on the lawn"
+          "text": "What forty dollars buys"
         },
         {
           "type": "paragraph",
-          "text": "Movies Under the Stars is in its fourteenth year, and Friday's pick is Napoleon Dynamite — which is either a cult classic or a documentary about your cousin, depending on where you grew up. Doors open at seven on the Visitor Center lawn and the film starts when it's actually dark, around 8:45. Tickets are $12, or $10 if you're an Ijams Park or Central Cinema member. Food trucks and the Ijams Park beer garden handle dinner; no coolers and no outside alcohol. Dogs are welcome on a leash. Bring a blanket or a lawn chair, and buy ahead — space per screening is limited and walk-up tickets aren't guaranteed."
+          "text": "An Angel's Envy tasting, a welcome cocktail on arrival, a cigar paired to what you're drinking, light bites and a menu built for the night. It is unapologetically a dress-up occasion — the name is also the instruction — which is a rarer invitation in South Knoxville than you'd think."
         },
         {
           "type": "subhead",
-          "text": "Saturday morning: the free one"
+          "text": "The nice absurdity of it"
         },
         {
           "type": "paragraph",
-          "text": "Every Saturday from 10 to noon there's storytime at the Ijams Nature Playscape — that's the Grayson Subaru Preserve at Mead's Quarry, 3518 Island Home Pike. Somebody reads out loud in a shady spot, there's sometimes a hands-on nature project, and otherwise small kids are free to roam. It costs nothing and asks nothing, which makes it the easiest good idea on this page."
-        },
-        {
-          "type": "subhead",
-          "text": "Saturday night: comedy, then the trail"
-        },
-        {
-          "type": "paragraph",
-          "text": "At 7:30 the back patio at the Visitor Center turns into a stage. The Sunflower Comedy Show is Tiny Stage Comedy's end-of-summer outing for the Ijams Sunset Series — an hour of stand-up and poetry from local performers, with the beer garden open. A heads-up: as of Tuesday the park's page listed the show but hadn't put tickets on sale yet, so check before you drive out."
-        },
-        {
-          "type": "paragraph",
-          "text": "Then at 8:30, the Full Moon Hike. Naturalists take a group out on the trails for about an hour and a half of walking in the dark — night-sky talk, whatever plants and animals turn up, blacklights and headlamps provided. It's built for ages 10 and up, meets at the Nature Center on Island Home Avenue, and registration was still open Tuesday."
-        },
-        {
-          "type": "subhead",
-          "text": "About those paddles"
-        },
-        {
-          "type": "paragraph",
-          "text": "Ijams Park runs guided Full Moon Paddles out of the River Landing on Island Home Pike both Friday and Saturday, 8:30 to 10:30, kayaks and life jackets and headlamps included, $45 a seat. Both nights are sold out. Consider that a warning shot for September's — the next one is on the calendar for the 26th."
-        },
-        {
-          "type": "subhead",
-          "text": "Sunday, gently"
-        },
-        {
-          "type": "paragraph",
-          "text": "Hope Irwin's Self Care Sunday yoga starts at 11:30. At two, the Creative Series runs a three-hour workshop on setting dried flowers in resin and turning them into jewelry, which is a very pleasant way to spend the last afternoon before a week starts. Both take registration through the park."
+          "text": "Worth pausing on the setting. This is a bourbon-and-cigar evening held on top of a building that spent most of the last century making sandwich bread for East Tennessee. The ovens are gone, the brick isn't, and now there's a bar where the roofline used to just be a roofline. Tickets go through the host."
         }
       ],
       "sources": [
         {
-          "label": "Ijams — calendar of events",
-          "url": "https://www.ijams.org/calendar-of-events"
+          "label": "Alchemy Cigar Lounge — Sundresses and Seersuckers",
+          "url": "https://alchemyloungeandcigar.com/our-event/sundresses-and-seersuckers-event/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-08-27T19:00:00-04:00",
+        "endDate": "2026-08-27T21:00:00-04:00",
+        "locationName": "Kern's Food Hall rooftop",
+        "locationAddress": "2201 Kern's Rising Way"
+      },
+      "social": {
+        "igTags": [
+          "kerns"
+        ],
+        "igBanner": [
+          "Bourbon on the Kern's roof",
+          "Thursday, seersucker encouraged"
+        ]
+      }
+    },
+    {
+      "id": "hiwire-thursday",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/hiwire_pints.jpg",
+      "imageCaption": "Barber Street, second floor",
+      "title": "Hi-Wire stacks pint night on top of an all-day happy hour every Thursday",
+      "deck": "Two standing deals on the same day at 2020 Barber Street, in a taproom that takes up an entire second floor and has a roof deck attached.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Every Thursday · pint night + all-day happy hour"
         },
         {
-          "label": "Ijams — Movies Under the Stars (2026 lineup & pricing)",
+          "label": "Where",
+          "value": "Hi-Wire Brewing, 2020 Barber St"
+        },
+        {
+          "label": "Thursday hours",
+          "value": "3–10 PM"
+        },
+        {
+          "label": "On tap",
+          "value": "20 Hi-Wire taps, draft cocktails, slushies, wine, cider, non-alcoholic"
+        },
+        {
+          "label": "Food",
+          "value": "Order from Redbud Kitchen downstairs and carry it up"
+        },
+        {
+          "label": "Also",
+          "value": "Ping pong, foosball, pinball, and two decks — one on the roof"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Hi-Wire's Knoxville taproom occupies the whole second floor of the building at 2020 Barber Street, a block off Sevier Avenue, and Thursday is the day it makes its strongest case: the standing pint night runs on top of an all-day happy hour, so the discount doesn't wait for an evening window."
+        },
+        {
+          "type": "subhead",
+          "text": "What's up there"
+        },
+        {
+          "type": "paragraph",
+          "text": "Twenty Hi-Wire taps — flagships through sour and wild ales — plus draft cocktails, liquor slushies, wine, cider, and non-alcoholic options for whoever drove. Ping pong, foosball, and a Stern pinball machine. Ten thousand square feet of room, murals on every wall, and two outdoor decks, one covered and one on the roof with the view."
+        },
+        {
+          "type": "subhead",
+          "text": "Dinner solves itself"
+        },
+        {
+          "type": "paragraph",
+          "text": "There's no kitchen upstairs and there doesn't need to be: you order from Redbud Kitchen on the ground floor, they text you, you carry it back up. Outside food is welcome too, just not outside drinks. Doors at three, last call at ten."
+        },
+        {
+          "type": "subhead",
+          "text": "One caveat"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hi-Wire's own Knoxville events page was failing to load all week, so if the taproom has added a one-off to its calendar it may not be showing publicly. The hours and the standing Thursday deals above come from the taproom's own page and Visit Knoxville's listing."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Hi-Wire Brewing — Knoxville taproom",
+          "url": "https://hiwirebrewing.com/knoxville/"
+        },
+        {
+          "label": "Visit Knoxville — Thursday Pint Night & Thursday All Day Happy Hour",
+          "url": "https://www.visitknoxville.com/events/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-08-27T15:00:00-04:00",
+        "endDate": "2026-08-27T22:00:00-04:00",
+        "locationName": "Hi-Wire Brewing Knoxville",
+        "locationAddress": "2020 Barber St"
+      },
+      "social": {
+        "igTags": [
+          "hiwire"
+        ],
+        "igBanner": [
+          "Pint night at Hi-Wire",
+          "Thursday, all-day happy hour too"
+        ]
+      }
+    },
+    {
+      "id": "napoleon-dynamite",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/movie_lawn.jpg",
+      "imageCaption": "Doors at seven, film when it's dark",
+      "title": "\"Napoleon Dynamite\" plays on the Visitor Center lawn at Ijams Park on Friday night",
+      "deck": "Movies Under the Stars is in its fourteenth year. Bring a blanket, a lawn chair and a dog on a leash; the food trucks and the beer garden handle the rest.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Aug 28 · doors 7 PM, film at dark (~8:45)"
+        },
+        {
+          "label": "Where",
+          "value": "Visitor Center lawn, Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Tickets",
+          "value": "$12 · $10 for Ijams Park and Central Cinema members"
+        },
+        {
+          "label": "Bring",
+          "value": "A blanket or lawn chair · leashed dogs welcome"
+        },
+        {
+          "label": "Don't bring",
+          "value": "Coolers or outside alcohol"
+        },
+        {
+          "label": "Note",
+          "value": "Space is limited per screening — buy ahead"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Friday's pick on the lawn is Napoleon Dynamite, which is either a cult classic or a documentary about somebody in your family, depending on where you grew up. Ijams Park and Central Cinema have been running Movies Under the Stars for fourteen summers now, and the format has never needed improving: a screen on the grass, trees on three sides, and the film starting whenever it actually gets dark — around 8:45 this time of year."
+        },
+        {
+          "type": "subhead",
+          "text": "How the evening runs"
+        },
+        {
+          "type": "paragraph",
+          "text": "Doors open at seven on the Visitor Center lawn, which gives you an hour and change to eat before anything starts. Food trucks and the Ijams Park beer garden handle dinner, snacks and drinks. No coolers and no outside alcohol. Dogs are welcome as long as they stay leashed."
+        },
+        {
+          "type": "subhead",
+          "text": "Tickets and the fine print"
+        },
+        {
+          "type": "paragraph",
+          "text": "Twelve dollars a head, ten if you're an Ijams Park or Central Cinema member. Space per screening is limited and walk-up tickets aren't guaranteed, so buying ahead is the safer move. If the weather turns, the park posts a rain plan on the event page and its socials rather than cancelling outright."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams — Movies Under the Stars (2026 lineup, pricing, rules)",
           "url": "https://www.ijams.org/movies-under-the-stars"
         },
         {
-          "label": "Ijams — Full Moon Paddle, Aug 28",
-          "url": "https://www.ijams.org/event-details/full-moon-paddle-2026-08-28-20-30"
-        },
-        {
-          "label": "Ijams — public programs (Full Moon Hike, paddles)",
-          "url": "https://www.ijams.org/public-programs"
-        },
-        {
-          "label": "Ijams — Sunset Socials series",
-          "url": "https://www.ijams.org/ijams-sunset-socials"
+          "label": "Ijams — \"Napoleon Dynamite,\" Aug 28",
+          "url": "https://www.ijams.org/event-details/movies-under-the-stars-napoleon-dynamite"
         }
       ],
       "event": {
         "startDate": "2026-08-28T19:00:00-04:00",
-        "endDate": "2026-08-30T17:00:00-04:00",
+        "endDate": "2026-08-28T23:00:00-04:00",
         "locationName": "Ijams Nature Center",
         "locationAddress": "2915 Island Home Ave"
       },
@@ -467,81 +719,68 @@
           "ijams"
         ],
         "igBanner": [
-          "A weekend after dark at Ijams Park",
-          "Movie Friday, moonlight hike Saturday"
+          "Napoleon Dynamite on the lawn",
+          "Friday night at Ijams Park"
         ]
       }
     },
     {
-      "id": "kerns-weekend",
+      "id": "goat-yoga",
       "label": "Kern's",
       "labelColor": "green",
       "days": [
-        "Thu",
         "Sat"
       ],
-      "layout": "imageRight",
-      "image": "/assets/spots/kerns_fourth.jpg",
-      "imageCaption": "The old bakery, before football season",
-      "title": "Bourbon and cigars on the roof Thursday, goats on the yoga mat Saturday: Kern's has a strange, good week",
-      "deck": "A ticketed tasting on the rooftop to open it, a Saturday-morning class involving actual livestock to close it, and a food hall underneath both that doesn't need you to have a plan.",
+      "layout": "imageLeft",
+      "image": "/assets/spots/goat_yoga.jpg",
+      "imageCaption": "The class, about four minutes in",
+      "title": "Goat yoga comes to Kern's on Saturday morning",
+      "deck": "Two hours, an all-levels class, and a small herd of goats with no respect for anybody's downward dog. Thirty-five dollars for adults, twenty-five for kids.",
       "facts": [
         {
-          "label": "Thu Aug 27",
-          "value": "Sundresses and Seersuckers · 7–9 PM · rooftop · $40"
-        },
-        {
-          "label": "Included",
-          "value": "Angel's Envy tasting, welcome cocktail, cigar pairing, light bites"
-        },
-        {
-          "label": "Sat Aug 29",
-          "value": "Goat Yoga · 8:30–10:30 AM · $35 adults, $25 ages 5–12"
+          "label": "When",
+          "value": "Sat Aug 29 · 8:30–10:30 AM"
         },
         {
           "label": "Where",
           "value": "Kern's, 2201 Kern's Rising Way"
         },
         {
-          "label": "Hours",
-          "value": "Thu to 10 PM · Fri to 11 PM · Sat 8 AM–11 PM · Sun 9 AM–9 PM"
+          "label": "Cost",
+          "value": "$35 adults · $25 ages 5–12"
+        },
+        {
+          "label": "Bring",
+          "value": "A mat, and low expectations"
+        },
+        {
+          "label": "Good for",
+          "value": "Families — the kid pricing means it's built for them"
         }
       ],
       "body": [
         {
           "type": "paragraph",
-          "text": "The old bakery on Kern's Rising Way has two ticketed things on the books this weekend, and they could not be less alike."
+          "text": "The premise of goat yoga has not changed since the first person thought of it, and it does not need to: you lay out a mat, you begin an all-levels class, and then small goats walk across you. Whatever you were going to accomplish spiritually is gone by minute four, and that turns out to be the point."
         },
         {
           "type": "subhead",
-          "text": "Thursday: the roof, dressed up"
+          "text": "Saturday morning at the bakery"
         },
         {
           "type": "paragraph",
-          "text": "Alchemy Cigar Lounge is running an evening called Sundresses and Seersuckers on the Kern's rooftop, 7 to 9. Forty dollars gets you an Angel's Envy tasting, a welcome cocktail, a cigar paired to it, light bites and a signature menu — and, per the name, a dress code that is really more of a suggestion with a theme. It is the most deliberately old-fashioned thing happening in South Knoxville this week, and it's happening on top of a building that used to make sandwich bread."
+          "text": "It runs 8:30 to 10:30 at Kern's, which is a genuinely good setting for it — the old bakery campus has the room, and when the class is over the food hall, the coffee and the bar are all right there, so brunch requires no second decision. Thirty-five dollars for adults and twenty-five for kids five to twelve, priced like something a family does together rather than a novelty for one person."
         },
         {
           "type": "subhead",
-          "text": "Saturday: goats"
+          "text": "One thing to check first"
         },
         {
           "type": "paragraph",
-          "text": "Then Saturday morning, 8:30 to 10:30, goat yoga. The premise has not changed since the first person thought of it: you do an all-levels class, small goats wander across your mat, and any pretense of a serious practice is gone inside four minutes. It's $35 for adults and $25 for kids 5 to 12, so it works as a family outing. Bring a mat and low expectations."
-        },
-        {
-          "type": "subhead",
-          "text": "And the building itself"
-        },
-        {
-          "type": "paragraph",
-          "text": "Outside those two, Kern's this weekend is just Kern's — fifteen-odd vendors, the coffee, the bar, the lawn, open late Thursday through Saturday. The other thing worth knowing: the food hall has opened bookings for football watch parties, and the season starts September 5. If your fall plan involves a room with a screen and somebody else doing the cooking, that line has started forming."
+          "text": "The listing for this comes through Visit Knoxville, and Kern's own online events calendar has been coming up empty all week. If you're driving in specifically for it, a quick call or a look at Kern's socials before you leave is worth the thirty seconds."
         }
       ],
       "sources": [
-        {
-          "label": "Alchemy Cigar Lounge — Sundresses and Seersuckers",
-          "url": "https://alchemyloungeandcigar.com/our-event/sundresses-and-seersuckers-event/"
-        },
         {
           "label": "Visit Knoxville — Goat Yoga at Kern's Bakery Food Hall",
           "url": "https://www.visitknoxville.com/events/"
@@ -562,107 +801,344 @@
           "kerns"
         ],
         "igBanner": [
-          "Goat yoga Saturday at Kern's",
-          "And bourbon on the roof Thursday"
+          "Goat yoga at Kern's",
+          "Saturday morning, bring a mat"
         ]
       }
     },
     {
-      "id": "old-sevier-weekend",
-      "label": "Old Sevier",
-      "labelColor": "rust",
+      "id": "playscape-storytelling",
+      "label": "Ijams Park",
+      "labelColor": "teal",
       "days": [
-        "Thu",
-        "Fri",
-        "Sat",
-        "Sun"
+        "Sat"
       ],
-      "layout": "imageLeft",
-      "image": "/assets/spots/hiwire_weekend.jpg",
-      "imageCaption": "Barber Street on a Thursday",
-      "title": "Old Sevier puts everything on Thursday, then lets the weekend be a weekend",
-      "deck": "Pint night and an all-day happy hour at Hi-Wire, free trivia at Trailhead, and after that the corridor has nothing scheduled at all — which, at the end of August, reads less like a gap than a mercy.",
+      "layout": "imageRight",
+      "image": "/assets/spots/playscape_story.jpg",
+      "imageCaption": "Ten to noon, out at the quarry",
+      "title": "Somebody reads out loud under the trees at the Ijams Nature Playscape on Saturday morning, and it's free",
+      "deck": "Two hours at the Playscape out by Mead's Quarry: a story in a shady spot, sometimes a hands-on nature project, and otherwise small kids left to roam.",
       "facts": [
         {
-          "label": "Thu Aug 27",
-          "value": "Pint Night + all-day happy hour · Hi-Wire, 2020 Barber St"
+          "label": "When",
+          "value": "Sat Aug 29 · 10 AM – noon"
         },
         {
-          "label": "Thu Aug 27",
-          "value": "Trivia with The Trivia Guys · 7 PM · free · Trailhead Beer Market"
+          "label": "Where",
+          "value": "Ijams Nature Playscape at Grayson Subaru Preserve · 3518 Island Home Pike"
         },
         {
-          "label": "Hi-Wire hours",
-          "value": "Thu 3–10 · Fri 3–11 · Sat noon–11 · Sun noon–9"
+          "label": "Cost",
+          "value": "Free"
         },
         {
-          "label": "Alliance hours",
-          "value": "Tue–Sat noon–10 · Sun–Mon noon–8 · 1130 Sevier Ave"
+          "label": "Ages",
+          "value": "Small children and whoever brought them"
         },
         {
-          "label": "Also open",
-          "value": "SouthSide Garage food trucks, 1014 Sevier Ave"
+          "label": "How often",
+          "value": "Every Saturday morning"
         }
       ],
       "body": [
         {
           "type": "paragraph",
-          "text": "Sevier Avenue and the streets running off it front-load the week. Thursday carries almost everything, and then the corridor spends three days doing what it does best, which is nothing in particular, well."
+          "text": "The Ijams Nature Playscape sits out at Mead's Quarry — logs and stumps and dirt arranged so that a four-year-old can climb the whole thing without anybody having to use the word playground. Every Saturday from ten to noon, somebody sits down out there in a shady spot and reads a story out loud."
         },
         {
           "type": "subhead",
-          "text": "Thursday: two cheap, easy nights"
+          "text": "What actually happens"
         },
         {
           "type": "paragraph",
-          "text": "Hi-Wire's taproom takes up the whole second floor of the building at 2020 Barber Street — twenty taps, two decks, one of them on the roof — and Thursday is its standing pint night, stacked on top of an all-day happy hour. Downstairs, Redbud Kitchen will feed you and you carry it up. A few minutes east on Island Home Avenue, Trailhead Beer Market runs Trivia with The Trivia Guys at seven, free to play, which is the entire pitch and a good one."
+          "text": "Some weeks there's a hands-on, nature-inspired project attached. Other weeks the story ends and the kids just go — roam, dig, climb, meet somebody. Both versions work. Bring a blanket if you want to sit; bring nothing if you don't."
         },
         {
           "type": "subhead",
-          "text": "Friday through Sunday: no plans, on purpose"
+          "text": "Why it's on this page"
         },
         {
           "type": "paragraph",
-          "text": "Nothing else on the corridor is on a schedule this weekend. Alliance Brewing at 1130 Sevier — ten years in the neighborhood now, and the closest taproom to the Urban Wilderness trailheads — is open noon to ten Friday and Saturday and noon to eight Sunday, with a dozen taps and nobody hurrying you. SouthSide Garage keeps the food trucks running at 1014 Sevier. Hi-Wire holds the weekend down until eleven Friday and Saturday."
-        },
-        {
-          "type": "paragraph",
-          "text": "One note for planners: both Hi-Wire's and Kern's own online event calendars were failing to load this week, so if either venue has added something late, it may not be showing publicly. The hours above are from the venues' own pages."
+          "text": "Most of what's worth doing this weekend has a ticket price and a start time you have to plan around. This one costs nothing, repeats every week, and asks only that you show up before noon. If you have small kids and a Saturday to fill, it's the easiest good decision available."
         }
       ],
       "sources": [
         {
-          "label": "Hi-Wire Brewing — Knoxville taproom (hours)",
-          "url": "https://hiwirebrewing.com/knoxville/"
-        },
-        {
-          "label": "Visit Knoxville — Thursday Pint Night & Thursday All Day Happy Hour",
-          "url": "https://www.visitknoxville.com/events/"
-        },
-        {
-          "label": "Trailhead Beer Market — weekly trivia",
-          "url": "https://www.facebook.com/trailheadbeermarket"
-        },
-        {
-          "label": "Alliance Brewing Company — taproom hours",
-          "url": "https://alliancebrewing.com/"
+          "label": "Ijams — Storytelling at the Ijams Nature Playscape",
+          "url": "https://www.ijams.org/event-details/storytelling-at-the-ijams-nature-playscape-2026-08-29-10-00"
         }
       ],
       "event": {
-        "startDate": "2026-08-27T19:00:00-04:00",
-        "endDate": "2026-08-27T22:00:00-04:00",
-        "locationName": "Hi-Wire Brewing Knoxville",
-        "locationAddress": "2020 Barber St"
+        "startDate": "2026-08-29T10:00:00-04:00",
+        "endDate": "2026-08-29T12:00:00-04:00",
+        "locationName": "Ijams Nature Playscape at Grayson Subaru Preserve",
+        "locationAddress": "3518 Island Home Pike"
       },
       "social": {
         "igTags": [
-          "hiwire",
-          "trailhead",
-          "alliance"
+          "ijams"
         ],
         "igBanner": [
-          "Thursday on Sevier Ave",
-          "Pint night, then free trivia"
+          "Free storytime Saturday",
+          "Ten to noon at the Playscape"
+        ]
+      }
+    },
+    {
+      "id": "tiny-stage-comedy",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/patio_comedy.jpg",
+      "imageCaption": "The back patio, half past seven",
+      "title": "Tiny Stage Comedy brings stand-up and poetry to the Ijams Park patio on Saturday night",
+      "deck": "The Sunflower Comedy Show closes out the summer run of the Ijams Sunset Series — an hour of local comics and poets on the Visitor Center's back patio, with the beer garden open.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Aug 29 · 7:30–8:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Visitor Center back patio, Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Lineup",
+          "value": "Savannah Wolfgram, Rowan Young, Ali Shrektor, Gail Grantham, Clinton Ricks, Katelyn Hillen — plus a poetry set"
+        },
+        {
+          "label": "Series",
+          "value": "Ijams Sunset Series · beer garden and food truck open for most dates"
+        },
+        {
+          "label": "Weather",
+          "value": "Moves indoors if it turns"
+        },
+        {
+          "label": "Heads up",
+          "value": "Tickets weren't on sale yet as of Tuesday — check before you drive out"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The Sunset Series is the thing Ijams Park does on its stone patio when the light goes long — small, close-up evenings of music, comedy, storytelling and spoken word, with maybe fifty people and no real barrier between the performer and the front row. Saturday's is comedy."
+        },
+        {
+          "type": "subhead",
+          "text": "Who's on"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tiny Stage Comedy is running The Sunflower Comedy Show as its end-of-summer date: an hour of stand-up and poetry from Savannah Wolfgram, Rowan Young, Ali Shrektor, Gail Grantham, Clinton Ricks and Katelyn Hillen, with a poetry set worked in. It's a mix of Knoxville comics who have been at it a while and people newer to a microphone, which is generally when this format is at its best."
+        },
+        {
+          "type": "subhead",
+          "text": "Before you go"
+        },
+        {
+          "type": "paragraph",
+          "text": "Half past seven to half past eight, on the back patio, beer garden open. If the weather turns it moves inside rather than cancelling. One genuine caution: as of Tuesday the park's page listed the show but had not yet put tickets on sale, so check the event page before you make the drive out Island Home."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams — Tiny Stage Comedy: The Sunflower Comedy Show",
+          "url": "https://www.ijams.org/event-details/ijams-sunset-series-tiny-stage-comedy-the-sunflower-comedy-show-at-ijams"
+        },
+        {
+          "label": "Ijams — Sunset Socials series",
+          "url": "https://www.ijams.org/ijams-sunset-socials"
+        }
+      ],
+      "event": {
+        "startDate": "2026-08-29T19:30:00-04:00",
+        "endDate": "2026-08-29T20:30:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Comedy on the Ijams Park patio",
+          "Saturday at half past seven"
+        ]
+      }
+    },
+    {
+      "id": "full-moon-hike",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/moon_hike.jpg",
+      "imageCaption": "Headlamps provided",
+      "title": "Naturalists take a group out on the trails under the full moon on Saturday night",
+      "deck": "Ninety minutes of walking in the dark at Ijams Park, with blacklights and headlamps handed out at the start. Registration was still open Tuesday — which is more than the paddles can say.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Aug 29 · 8:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Meets at the Nature Center, Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Ages",
+          "value": "10 and up"
+        },
+        {
+          "label": "Provided",
+          "value": "Blacklights and headlamps"
+        },
+        {
+          "label": "Expect",
+          "value": "Up to two miles over uneven ground · registration required"
+        },
+        {
+          "label": "Waiver",
+          "value": "One assumption-of-risk form per calendar year"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The moon that goes dark on Thursday is full and back to itself by Saturday, and Ijams Park has a guided walk booked underneath it. It's about an hour and a half on the trails after sunset with a naturalist doing the talking — the night sky, the animals that only come out for it, and the plants and rock formations that read completely differently in the dark."
+        },
+        {
+          "type": "subhead",
+          "text": "What they hand you at the trailhead"
+        },
+        {
+          "type": "paragraph",
+          "text": "Blacklights and headlamps, which is more interesting than it sounds — a blacklight on the right patch of forest floor turns up scorpions and lichens and a whole layer of things that are simply invisible at noon. The program is built for ages ten and up, and you should expect up to two miles over uneven ground, so wear real shoes. Everyone fills out an assumption-of-risk form once a calendar year; if you've done one for another Ijams Park program in 2026, you're covered."
+        },
+        {
+          "type": "subhead",
+          "text": "Book it, because the water version is gone"
+        },
+        {
+          "type": "paragraph",
+          "text": "The park also runs guided Full Moon Paddles out of Ijams River Landing on Island Home Pike, 8:30 to 10:30 both Friday and Saturday, kayaks and life jackets included at $45 a seat — and both nights are sold out. The hike was still taking registrations as of Tuesday. If the paddle was the one you wanted, the next is on the calendar for September 26, and this weekend is your argument for booking it early."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams — public programs (Full Moon Hike details)",
+          "url": "https://www.ijams.org/public-programs"
+        },
+        {
+          "label": "Ijams — calendar of events",
+          "url": "https://www.ijams.org/calendar-of-events"
+        },
+        {
+          "label": "Ijams — Full Moon Paddle, Aug 28 (sold out)",
+          "url": "https://www.ijams.org/event-details/full-moon-paddle-2026-08-28-20-30"
+        }
+      ],
+      "event": {
+        "startDate": "2026-08-29T20:30:00-04:00",
+        "endDate": "2026-08-29T22:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "A hike under the full moon",
+          "Saturday 8:30 at Ijams Park"
+        ]
+      }
+    },
+    {
+      "id": "resin-workshop",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/resin_flowers.jpg",
+      "imageCaption": "Sunday afternoon, three hours",
+      "title": "Set dried flowers in resin and go home with jewelry: a Sunday workshop at Ijams Park",
+      "deck": "Three hours on Sunday afternoon in the park's Creative Series — pressed wildflowers, clear resin, a mold, and something on a chain by five o'clock.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Aug 30 · 2–5 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "What",
+          "value": "Creative Series: Resin Flower Jewelry Making Workshop"
+        },
+        {
+          "label": "You leave with",
+          "value": "The jewelry you made"
+        },
+        {
+          "label": "Sign up",
+          "value": "Registration required · open as of Tuesday"
+        },
+        {
+          "label": "Also that morning",
+          "value": "Self Care Sunday Yoga with Hope Irwin · 11:30 AM"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Sunday afternoon at Ijams Park, the Creative Series runs a three-hour workshop on setting dried flowers in resin and turning the result into jewelry. Two to five, registration required, and you walk out with the thing you made."
+        },
+        {
+          "type": "subhead",
+          "text": "Why it's a good closing move for a weekend"
+        },
+        {
+          "type": "paragraph",
+          "text": "It's a craft that looks harder than it is and produces something durable — pressed wildflowers and fern suspended clear, a pendant that keeps one specific August inside it. Three hours is enough time to do it badly once and then well, which is the correct length for a workshop of this kind."
+        },
+        {
+          "type": "subhead",
+          "text": "If you want the whole day out there"
+        },
+        {
+          "type": "paragraph",
+          "text": "Hope Irwin's Self Care Sunday yoga runs at 11:30 the same morning at the park, which makes a full Sunday on Island Home Avenue available to anyone who wants to build one."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams — calendar of events",
+          "url": "https://www.ijams.org/calendar-of-events"
+        }
+      ],
+      "event": {
+        "startDate": "2026-08-30T14:00:00-04:00",
+        "endDate": "2026-08-30T17:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Flowers set in resin",
+          "Sunday afternoon at Ijams Park"
         ]
       }
     },
@@ -677,7 +1153,7 @@
         "Sun"
       ],
       "layout": "imageRight",
-      "image": "/assets/spots/specials_board.jpg",
+      "image": "/assets/spots/specials_chalk.jpg",
       "imageCaption": "The week, in chalk",
       "title": "The specials board: a different deal every day at Earl's",
       "deck": "Down where Suttree Landing meets the river, Earl's runs its own weekly ladder — a new special each afternoon, then two all-day ones once the weekend lands.",
@@ -714,7 +1190,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Saturday the clock goes away: eight-dollar house margaritas all day, doors 10:30 to 11. Sunday is seven-dollar mimosas and Bloody Marys, also all day, until ten. Worth knowing this week for a different reason than usual — it's a straight shot down from Sevier Avenue, the tables face open water, and Thursday night the sky above that water has something on."
+          "text": "Saturday the clock goes away: eight-dollar house margaritas all day, doors 10:30 to 11. Sunday is seven-dollar mimosas and Bloody Marys, also all day, until ten. It's a straight walk down from Sevier Avenue, the tables face open water, and the river handles the entertainment."
         }
       ],
       "sources": [
@@ -744,7 +1220,7 @@
     "audio": {
       "title": "Weekend Audio Briefing",
       "intro": "What's happening in SoKno this weekend.",
-      "description": "Your weekend listen — opera in a quarry and a 93% lunar eclipse Thursday night, a full-moon hike at Ijams Park, goat yoga at Kern's, and a new name on the old Mimosas room.",
+      "description": "Your weekend listen — a 93% lunar eclipse Thursday night, opera at the bottom of a quarry, goat yoga at Kern's, a hike by moonlight, and a new name on the old Mimosas room.",
       "duration": "04:37",
       "src": "/audio/2026-08-26.mp3"
     },
@@ -753,30 +1229,30 @@
         "month": "AUG",
         "day": "27",
         "title": "Opera Under the Stars — Augusta Quarry",
-        "meta": "7–8 PM · Fort Dickerson Park · all ages",
+        "meta": "7–8 PM · $5 · Fort Dickerson Park · all ages",
         "starred": true,
-        "href": "#thursday-night-sky"
+        "href": "#opera-quarry"
       },
       {
         "month": "AUG",
         "day": "27",
         "title": "Sundresses and Seersuckers",
-        "meta": "7–9 PM · $40 · Kern's rooftop",
-        "href": "#kerns-weekend"
-      },
-      {
-        "month": "AUG",
-        "day": "27",
-        "title": "Trivia with The Trivia Guys",
-        "meta": "7 PM · free · Trailhead Beer Market",
-        "href": "#old-sevier-weekend"
+        "meta": "7–9 PM · $40 · the Kern's rooftop",
+        "href": "#kerns-rooftop"
       },
       {
         "month": "AUG",
         "day": "27",
         "title": "Pint night at Hi-Wire",
-        "meta": "All-day happy hour · 2020 Barber St",
-        "href": "#old-sevier-weekend"
+        "meta": "All-day happy hour too · 2020 Barber St",
+        "href": "#hiwire-thursday"
+      },
+      {
+        "month": "AUG",
+        "day": "27",
+        "title": "Trivia at Trailhead Beer Market",
+        "meta": "7 PM · free · 1317 Island Home Ave",
+        "href": "#hiwire-thursday"
       },
       {
         "month": "AUG",
@@ -791,65 +1267,66 @@
         "title": "LUNAR ECLIPSE BEGINS",
         "meta": "9:23 PM · maximum 12:12 AM · free, from anywhere",
         "starred": true,
-        "href": "#thursday-night-sky"
+        "href": "#lunar-eclipse"
       },
       {
         "month": "AUG",
         "day": "28",
         "title": "Movies Under the Stars: Napoleon Dynamite",
         "meta": "Doors 7 PM · film ~8:45 · $12 · Ijams Park",
-        "href": "#ijams-moon-weekend"
+        "starred": true,
+        "href": "#napoleon-dynamite"
       },
       {
         "month": "AUG",
         "day": "28",
         "title": "Full Moon Paddle — sold out",
         "meta": "8:30 PM · Ijams River Landing",
-        "href": "#ijams-moon-weekend"
+        "href": "#full-moon-hike"
       },
       {
         "month": "AUG",
         "day": "29",
-        "title": "Goat Yoga at Kern's",
-        "meta": "8:30–10:30 AM · $35 / $25 kids",
+        "title": "GOAT YOGA AT KERN'S",
+        "meta": "8:30–10:30 AM · $35 · $25 ages 5–12",
         "starred": true,
-        "href": "#kerns-weekend"
+        "href": "#goat-yoga"
       },
       {
         "month": "AUG",
         "day": "29",
         "title": "Storytelling at the Nature Playscape",
-        "meta": "10 AM – noon · free · Ijams Park",
-        "href": "#ijams-moon-weekend"
+        "meta": "10 AM – noon · free · Mead's Quarry",
+        "href": "#playscape-storytelling"
       },
       {
         "month": "AUG",
         "day": "29",
         "title": "Tiny Stage Comedy — Sunflower Show",
         "meta": "7:30 PM · Visitor Center patio · Ijams Park",
-        "href": "#ijams-moon-weekend"
+        "href": "#tiny-stage-comedy"
       },
       {
         "month": "AUG",
         "day": "29",
-        "title": "FULL MOON HIKE",
+        "title": "Full Moon Hike",
         "meta": "8:30 PM · ages 10+ · registration open",
         "starred": true,
-        "href": "#ijams-moon-weekend"
+        "href": "#full-moon-hike"
       },
       {
         "month": "AUG",
         "day": "30",
         "title": "Self Care Sunday Yoga",
         "meta": "11:30 AM · Ijams Park",
-        "href": "#ijams-moon-weekend"
+        "href": "#resin-workshop"
       },
       {
         "month": "AUG",
         "day": "30",
         "title": "Resin Flower Jewelry Workshop",
         "meta": "2–5 PM · registration · Ijams Park",
-        "href": "#ijams-moon-weekend"
+        "href": "#resin-workshop"
       },
       {
         "month": "AUG",

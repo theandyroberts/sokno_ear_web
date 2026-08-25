@@ -46,10 +46,28 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
   "see you around SoKno!"** — emphasize the community, not the publication. Vary the
   opening line week to week; never reuse the previous week's open. (The never-a-"paper"
   rule above applies here too.)
-- **Crossheads in compendium stories.** Venue/location roundups covering multiple
-  events MUST use `subhead` blocks (★ Special Elite crossheads) at each topic shift —
-  never before the lede (the opening paragraph belongs to the headline). A topic
-  splits into its own story only when it can carry its own headline AND its own art.
+- **ONE HEADLINE = ONE STORY.** Never put two events under a single headline, and never
+  write a venue/location roundup. Each subject is its own `Story` with its own headline,
+  its own art, its own scanner card and its own anchor. If a venue has two events that
+  weekend, that is two stories. (Andy, 2026-08-25 — a feature headlined "Opera at the
+  quarry, then the moon goes dark" and a five-event "Ijams Park after dark" roundup were
+  the offense.) **There is no cap on story count** — twelve single-subject stories beat
+  five combined ones.
+  - **The test:** an event earns an article when it can carry **its own headline AND its
+    own art**. If it can't, it belongs in the sidebar calendar (and maybe a scanner card) —
+    it never gets bolted onto a neighboring story as an extra paragraph.
+  - **Related ≠ combined.** One sentence of context inside a story ("the paddles that same
+    weekend sold out") is fine. A crosshead that changes the subject is not.
+  - **Headlines name the thing.** Say "Puckers opens on Blount Avenue," not "The room on
+    Blount has a new name." No coy withholding of the subject.
+- **Crossheads structure ONE subject.** `subhead` blocks (★ Special Elite crossheads) mark
+  movement *within* a single story — background → detail → the practical part — never a
+  change of topic. Never before the lede (the opening paragraph belongs to the headline).
+- **Art is generated per story, and it must depict that story.** Never reuse an existing
+  file from `public/assets/spots/` as filler and never repeat art across episodes. Prompt
+  the literal subject of the headline (goats on yoga mats; lips puckered at a football; a
+  chalkboard with specials actually written on it). See the `sokno-ear-art` skill; check
+  each result at thumbnail size and ask whether it would let you guess the headline.
 - **Always attribute sources.** Every article ends with its source(s): an external
   link when the info came from one (official site, @handle, agency), or plain credit
   text like "Info from A. Roberts" when it came from a form submission/tip with no
