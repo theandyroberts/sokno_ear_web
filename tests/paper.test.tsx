@@ -24,4 +24,17 @@ describe("Paper", () => {
     const featureBody = (fixture as any).feature.body[0].text;
     expect(screen.queryByText(featureBody)).not.toBeInTheDocument();
   });
+  it("storyView shows exactly one set of cards — the scanner grid is episode-page only", () => {
+    const episode = EpisodeSchema.parse(fixture);
+    const promoted = promoteStory(episode, episode.stories[0].id)!;
+    render(<Paper episode={promoted} storyView />);
+    // A shared story link used to render BOTH the full scanner (every card, including
+    // one for the story you're already reading) and the sibling teasers below it.
+    expect(screen.queryByText("Top Stories & Events")).not.toBeInTheDocument();
+    expect(screen.getByText("More From This Weekend")).toBeInTheDocument();
+    // and no card links back to the story this page already is
+    const selfLinks = screen.queryAllByRole("link", { name: new RegExp(promoted.feature.title.slice(0, 20), "i") })
+      .filter((a) => a.getAttribute("href")?.endsWith(`/${promoted.feature.id}`));
+    expect(selfLinks).toHaveLength(0);
+  });
 });

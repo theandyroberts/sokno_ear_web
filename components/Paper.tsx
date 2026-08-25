@@ -156,17 +156,21 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
         </Page>
       </div>
 
-      {/* SCANNER GRID */}
-      <div style={{ padding: "30px 0", borderBottom: "var(--border-hair) solid var(--paper-edge)" }}>
-        <Page>
-          <SectionHeader>Top Stories &amp; Events</SectionHeader>
-          <div className="ear-scanner" style={{ display: "grid", gap: 16, "--scanner-cols": scannerCols } as React.CSSProperties}>
-            {scanner.map((c, i) => (
-              <StoryCard key={i} label={c.label} labelColor={c.labelColor} days={c.days} data-days={daysAttr(c.days)} hot={c.hot} image={c.image} title={c.title} blurb={c.blurb} cue={c.cue} href={resolveHref(c.href)} />
-            ))}
-          </div>
-        </Page>
-      </div>
+      {/* SCANNER GRID — episode page only. On a story permalink this would repeat the
+          whole weekend a second time (including a card for the story you're already
+          reading); "More From This Weekend" below is the story page's version of it. */}
+      {!storyView && (
+        <div style={{ padding: "30px 0", borderBottom: "var(--border-hair) solid var(--paper-edge)" }}>
+          <Page>
+            <SectionHeader>Top Stories &amp; Events</SectionHeader>
+            <div className="ear-scanner" style={{ display: "grid", gap: 16, "--scanner-cols": scannerCols } as React.CSSProperties}>
+              {scanner.map((c, i) => (
+                <StoryCard key={i} label={c.label} labelColor={c.labelColor} days={c.days} data-days={daysAttr(c.days)} hot={c.hot} image={c.image} title={c.title} blurb={c.blurb} cue={c.cue} href={resolveHref(c.href)} />
+              ))}
+            </div>
+          </Page>
+        </div>
+      )}
 
       {/* INLINE STORIES — full articles on the episode page; on a story permalink the
           siblings render as teaser cards linking to their own pages, so each story

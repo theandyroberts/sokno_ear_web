@@ -13,6 +13,7 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
 | Sevier Ave | "suh-VEER" (like the word *severe*) | Not "SEE-vee-er" or "Sue-veer." For TTS, spell it **`Severe`**. |
 | **Ijams** | **ONE syllable** — *times* without the T. Think the plural of "I'm": **I'ms**. "I'ms Park," "I'ms Nature Center." | Not "EYE-ams," not "EYE-jams," not "ih-JAMS." The J is silent **and there is no second syllable** — that's the part everyone gets wrong, including us. For TTS, spell it **`Imes`** — confirmed by Andy 2026-08-12 (he judged `Imes` and `I'ms` both correct and very close; `Imes` wins for having no apostrophe to trip the engine). The old `Eye-ams` spelling gave a two-beat read and shipped in every briefing Jul–Aug 2026. **Always say "Ijams Park"** in scripts & copy — never bare "Ijams" (the official "Ijams Nature Center" is fine but almost no one uses it). |
 
+| **Patrón** | **"puh-TRONE"** — rhymes with *drone* | Andy's own pronunciation, 2026-08-25: *"I always say Patrón to rhyme with drone… it's what I'd say and I get my order."* Not "pa-TRON," not "PAT-ron," not three beats. For TTS spell it **`puh-trone`** — the earlier `Pa-trone` spelling read a little off in the No. 11 take. |
 *(Add venue names, street names, and people as we confirm them.)*
 
 ---
