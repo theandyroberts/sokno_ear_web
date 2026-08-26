@@ -11,6 +11,7 @@ import { AudioBriefingPlayer } from "@/components/AudioBriefingPlayer";
 import { EventSubmitForm } from "@/components/EventSubmitForm";
 import { CallTheEarCard } from "@/components/CallTheEarCard";
 import { SubscribeForm } from "@/components/SubscribeForm";
+import { PartyMapCard } from "@/components/PartyMapCard";
 import { DirtySouthCard } from "@/components/DirtySouthCard";
 import { ArticleSources } from "@/components/ArticleSources";
 import { ShareStory } from "@/components/ShareStory";
@@ -150,6 +151,7 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
                 )}
               </Well>
               </div>
+              <PartyMapCard />
               <SubscribeForm />
             </aside>
           </div>
