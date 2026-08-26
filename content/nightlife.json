@@ -31,15 +31,6 @@
         "cat": "food"
       },
       {
-        "id": "thu-opera",
-        "time": "7:00 PM",
-        "venue": "Augusta Quarry · Fort Dickerson Park",
-        "headline": "Opera at the bottom of the quarry — $5",
-        "sub": "Heroes & Adventures · 7–8 PM · last night of the series · all ages",
-        "href": "/2026-08-26/opera-quarry",
-        "cat": "music"
-      },
-      {
         "id": "thu-trailhead",
         "time": "7:00 PM",
         "venue": "Trailhead Beer Market · 1317 Island Home Ave",
@@ -65,15 +56,6 @@
         "sub": "Rooms from $30/hr · 21+ after 9 · till 11 tonight",
         "href": "https://www.thepinkcactusknox.com/",
         "cat": "mic"
-      },
-      {
-        "id": "thu-eclipse",
-        "time": "9:23 PM",
-        "venue": "The sky over SoKno — free, from anywhere",
-        "headline": "LUNAR ECLIPSE — the shadow takes 93% of the moon",
-        "sub": "Starts 9:23 · maximum 12:12 AM · step outside wherever the night has you",
-        "href": "/2026-08-26/lunar-eclipse",
-        "cat": "star"
       },
       {
         "id": "thu-southside",
@@ -114,15 +96,6 @@
         "cat": "food"
       },
       {
-        "id": "fri-napoleon",
-        "time": "7:00 PM",
-        "venue": "Ijams Park Visitor Center lawn",
-        "headline": "Napoleon Dynamite under the stars — $12",
-        "sub": "Doors 7 · film ~8:45 · bring a chair, vote for Pedro",
-        "href": "/2026-08-26/napoleon-dynamite",
-        "cat": "star"
-      },
-      {
         "id": "fri-trailhead",
         "time": "9:00 PM",
         "venue": "Trailhead Beer Market · 1317 Island Home Ave",
@@ -151,15 +124,6 @@
       }
     ],
     "Sat": [
-      {
-        "id": "sat-goatyoga",
-        "time": "8:30 AM",
-        "venue": "Kern's Food Hall",
-        "headline": "Goat yoga — start the day getting climbed on",
-        "sub": "8:30–10:30 AM · $35, $25 ages 5–12",
-        "href": "/2026-08-26/goat-yoga",
-        "cat": "star"
-      },
       {
         "id": "sat-earls",
         "time": "ALL DAY",
@@ -197,24 +161,6 @@
         "cat": "food"
       },
       {
-        "id": "sat-comedy",
-        "time": "7:30 PM",
-        "venue": "Ijams Park Visitor Center patio",
-        "headline": "Tiny Stage Comedy — stand-up & poetry",
-        "sub": "The Sunflower Show, outside on the patio",
-        "href": "/2026-08-26/tiny-stage-comedy",
-        "cat": "mic"
-      },
-      {
-        "id": "sat-moonhike",
-        "time": "8:30 PM",
-        "venue": "Ijams Park",
-        "headline": "Full moon hike on the trails",
-        "sub": "Ages 10+ · registration open (the paddles are sold out)",
-        "href": "/2026-08-26/full-moon-hike",
-        "cat": "star"
-      },
-      {
         "id": "sat-trailhead",
         "time": "9:30 PM",
         "venue": "Trailhead Beer Market · 1317 Island Home Ave",
@@ -231,6 +177,15 @@
         "sub": "Reserve online — Saturday fills first · 21+ after 9",
         "href": "https://www.thepinkcactusknox.com/",
         "cat": "mic"
+      },
+      {
+        "id": "sat-southside",
+        "time": "10:30 PM",
+        "venue": "SouthSide Garage · 1014 Sevier Ave",
+        "headline": "Land here after",
+        "sub": "Taps & trucks till midnight · Alliance pours till 12 too",
+        "href": "https://southsidegarageknox.com/",
+        "cat": "drink"
       }
     ],
     "Sun": [
@@ -251,15 +206,6 @@
         "sub": "The game-day room, broken in properly",
         "href": "/2026-08-26/puckers-opens",
         "cat": "food"
-      },
-      {
-        "id": "sun-resin",
-        "time": "2:00 PM",
-        "venue": "Ijams Park",
-        "headline": "Resin flower jewelry workshop",
-        "sub": "2–5 PM · set dried flowers, leave with jewelry · registration",
-        "href": "/2026-08-26/resin-workshop",
-        "cat": "star"
       },
       {
         "id": "sun-dumplings",
