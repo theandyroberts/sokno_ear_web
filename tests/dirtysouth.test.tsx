@@ -35,13 +35,26 @@ describe("DirtySouth checklist", () => {
     fireEvent.click(screen.getByRole("tab", { name: "Sun" }));
     expect(screen.getByText("Sunday night")).toBeInTheDocument();
   });
-  it("checking a box persists to localStorage; tapping a link marks it done", () => {
+  it("checking a box persists to localStorage scoped to this weekend; tapping a link marks it done", () => {
     render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" />);
     const first = nightlife.days.Thu[0];
     fireEvent.click(screen.getByRole("button", { name: `Check off ${first.headline}` }));
-    expect(JSON.parse(window.localStorage.getItem("dirtysouth-checked-v1")!)).toContain(first.id);
+    const stored = JSON.parse(window.localStorage.getItem("dirtysouth-checked-v2")!);
+    expect(stored.weekend).toBe(nightlife.weekend);
+    expect(stored.ids).toContain(first.id);
     // and it renders checked
     expect(screen.getByRole("button", { name: `Uncheck ${first.headline}` })).toHaveAttribute("aria-pressed", "true");
+  });
+  it("checks from a previous weekend don't carry into a fresh week", async () => {
+    const { waitFor } = await import("@testing-library/react");
+    const first = nightlife.days.Thu[0];
+    // same item id, but stored under LAST week's label — must render unchecked
+    window.localStorage.setItem("dirtysouth-checked-v2", JSON.stringify({ weekend: "Aug 20–23", ids: [first.id] }));
+    window.localStorage.setItem("dirtysouth-checked-v1", JSON.stringify([first.id])); // pre-scope leftovers too
+    render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" />);
+    await waitFor(() =>
+      expect(screen.getByRole("button", { name: `Check off ${first.headline}` })).toHaveAttribute("aria-pressed", "false"));
+    expect(window.localStorage.getItem("dirtysouth-checked-v1")).toBeNull(); // old format cleaned up
   });
   it("intro explains the page; map button only renders when a map image exists", () => {
     const { rerender } = render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" />);

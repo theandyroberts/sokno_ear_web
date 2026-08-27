@@ -11,22 +11,28 @@ import { NightIcon, type NightCat } from "@/components/DirtySouthIcons";
 
 const GREEN = "#CDE24A";
 const INK = "#131309";
-const STORAGE_KEY = "dirtysouth-checked-v1";
+const STORAGE_KEY = "dirtysouth-checked-v2";
 
 const DAY_ORDER: NightDay[] = ["Thu", "Fri", "Sat", "Sun"];
 const DAY_NAMES: Record<NightDay, string> = { Thu: "Thursday", Fri: "Friday", Sat: "Saturday", Sun: "Sunday" };
 
-function loadChecked(): Set<string> {
+// Checked state is scoped to the current weekend: item ids repeat week to week
+// (same venues, same slots), so without the scope last week's checks would show
+// up already ticked on a fresh week. A weekend mismatch starts the list clean.
+function loadChecked(weekend: string): Set<string> {
   try {
-    return new Set(JSON.parse(window.localStorage.getItem(STORAGE_KEY) ?? "[]"));
+    window.localStorage.removeItem("dirtysouth-checked-v1"); // pre-scope format
+    const stored = JSON.parse(window.localStorage.getItem(STORAGE_KEY) ?? "null");
+    if (stored && stored.weekend === weekend && Array.isArray(stored.ids)) return new Set(stored.ids);
+    return new Set();
   } catch {
     return new Set();
   }
 }
 
-function saveChecked(s: Set<string>) {
+function saveChecked(weekend: string, s: Set<string>) {
   try {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify([...s]));
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify({ weekend, ids: [...s] }));
   } catch {
     /* private mode — checks just don't persist */
   }
@@ -166,7 +172,7 @@ export function DirtySouth({
   const [day, setDay] = React.useState<NightDay>(defaultDay);
   const [checked, setChecked] = React.useState<Set<string>>(new Set());
   const [mapOpen, setMapOpen] = React.useState(false);
-  React.useEffect(() => setChecked(loadChecked()), []);
+  React.useEffect(() => setChecked(loadChecked(weekend)), [weekend]);
   React.useEffect(() => {
     if (!mapOpen) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setMapOpen(false);
@@ -180,7 +186,7 @@ export function DirtySouth({
       const turnOn = on ?? !next.has(id);
       if (turnOn) next.add(id);
       else next.delete(id);
-      saveChecked(next);
+      saveChecked(weekend, next);
       return next;
     });
   }
