@@ -1,7 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import localFont from "next/font/local";
-import { loadNightlife, pickDefaultDay, isSponsorDay } from "@/lib/nightlife";
+import { loadNightlife, pickDefaultDay, isSponsorDay, withVenueLogos } from "@/lib/nightlife";
+import { loadVenues } from "@/lib/venues";
 import { DirtySouth } from "@/components/DirtySouth";
 import type { Metadata } from "next";
 
@@ -38,6 +39,9 @@ function findMap(): string | null {
 
 export default async function DirtySouthParty({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const nightlife = loadNightlife();
+  // Logos come from content/venues.json, not the nightlife file — one registry,
+  // reused wherever a venue shows up.
+  const days = withVenueLogos(nightlife.days, loadVenues());
   const params = await searchParams;
   // Sponsor holds the page Mon–Wed; ?preview=sponsor shows it any day (for Andy + sponsors).
   const showSponsor = (isSponsorDay() || params.preview === "sponsor") && nightlife.sponsor ? nightlife.sponsor : null;
@@ -69,7 +73,7 @@ export default async function DirtySouthParty({ searchParams }: { searchParams: 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
       <DirtySouth
-        days={nightlife.days}
+        days={days}
         defaultDay={pickDefaultDay()}
         weekend={nightlife.weekend}
         fontClass={anton.className}

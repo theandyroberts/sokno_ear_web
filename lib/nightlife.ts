@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { matchVenue, type VenueRegistry } from "@/lib/venues";
 
 export type NightDay = "Thu" | "Fri" | "Sat" | "Sun";
 
@@ -12,6 +13,11 @@ export type NightItem = {
   href: string;
   /** Icon anchor: food | drink | music | dance | mic | star */
   cat?: string;
+  /** Filled in at render time from content/venues.json — never stored in the
+   *  nightlife file, so a logo swap is one edit in the registry. */
+  logo?: string | null;
+  /** The venue's canonical name from the registry, for the logo chip. */
+  brand?: string;
 };
 
 export type Sponsor = {
@@ -36,6 +42,19 @@ const FILE = path.join(process.cwd(), "content", "nightlife.json");
 
 export function loadNightlife(file: string = FILE): Nightlife {
   return JSON.parse(fs.readFileSync(file, "utf8")) as Nightlife;
+}
+
+/** Attach each item's venue logo from the registry. Unregistered venues keep
+ *  logo: null — the party page draws a wordmark chip for those, so a new bar
+ *  can go on the list before anyone has chased down its logo. */
+export function withVenueLogos(days: Record<NightDay, NightItem[]>, registry: VenueRegistry): Record<NightDay, NightItem[]> {
+  const decorate = (item: NightItem): NightItem => {
+    const venue = matchVenue(item.venue, registry);
+    return { ...item, logo: venue?.logo ?? null, brand: venue?.name ?? item.venue.split(" · ")[0] };
+  };
+  return Object.fromEntries(
+    Object.entries(days).map(([day, items]) => [day, items.map(decorate)]),
+  ) as Record<NightDay, NightItem[]>;
 }
 
 /** The night to show by default: today if it's a weekend night (Thu–Sun in

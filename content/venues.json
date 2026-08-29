@@ -1,0 +1,148 @@
+{
+  "_comment": "The Ear's venue-logo registry. One entry per business we put on a page, so the same mark gets reused everywhere instead of being re-sourced each week. Every logo here came from the business's OWN site or official profile — never a stock/clip-art lookalike — and `source` records exactly where, so anyone can re-fetch or check it. `match` is how a nightlife.json `venue` string resolves to this entry: the venue field is compared case-insensitively against each string, and the LONGEST match wins (that's how 'Kern's Food Hall rooftop' still lands on kerns). Entries with no `logo` fall back to a typeset wordmark tile on the party page — the layout stays identical, so a missing file is never a hole.",
+  "_treatments": {
+    "as-is": "the venue's file, trimmed to its bounding box and scaled down; colors untouched",
+    "ink-recolor": "the mark was drawn light-on-dark (invisible on cream), so near-white strokes were repainted brand ink #171512 and the accent colors were left alone",
+    "cropped": "a sub-line irrelevant to us (another town, a tagline) was cropped off the bottom"
+  },
+  "venues": {
+    "angry-dumplings": {
+      "name": "Angry Dumplings",
+      "match": ["Angry Dumplings", "Angry Dumpling"],
+      "site": "https://www.angrydumplingtn.com/",
+      "logo": "/assets/venues/angry-dumplings.png",
+      "source": "https://www.angrydumplingtn.com/assets/angry-dumplings-logo-B_9ifeA1.png",
+      "sourceNote": "the logo asset their own site loads (found in the site's JS bundle)",
+      "treatment": "as-is",
+      "fetched": "2026-08-29",
+      "confidence": "high",
+      "note": "Not the same art as the Mon–Wed sponsor card — that's the Ear's own commissioned mascot engraving at /assets/spots/angry_dumpling_mascot.jpg. This is the restaurant's real logo."
+    },
+    "earls": {
+      "name": "Earl's",
+      "match": ["Earl's"],
+      "site": "https://earlsknox.com/",
+      "logo": "/assets/venues/earls.png",
+      "source": "https://static.spotapps.co/website_images/ab_websites/620499_website_v1/logo_new_2.png",
+      "sourceNote": "header logo on earlsknox.com (SpotHopper CDN, their site's own asset)",
+      "treatment": "as-is",
+      "fetched": "2026-08-29",
+      "confidence": "high"
+    },
+    "hi-wire": {
+      "name": "Hi-Wire Brewing",
+      "match": ["Hi-Wire"],
+      "site": "https://hiwirebrewing.com/knoxville/",
+      "logo": "/assets/venues/hi-wire.svg",
+      "source": "inline <svg aria-label=\"weblogo\"> in the hiwirebrewing.com page header",
+      "sourceNote": "vector, straight out of their site header — the tightrope walker plus the wordmark",
+      "treatment": "ink-recolor",
+      "fetched": "2026-08-29",
+      "confidence": "high",
+      "note": "Their file paints the wordmark #fff9e8 for a dark header; that was swapped to #171512. The blue #00b5f0 accent is theirs, untouched."
+    },
+    "kerns": {
+      "name": "Kern's",
+      "match": ["Kern's", "Kern's Food Hall", "Kern's Food Hall rooftop"],
+      "site": "https://kernsbakery.com/",
+      "logo": "/assets/venues/kerns.png",
+      "source": "https://kernsbakery.com/wp-content/uploads/2025/10/KERNS-FINAL-LOGO-Black.png",
+      "sourceNote": "the black lockup from their own media library — wordmark, bakery building, EST. 1931",
+      "treatment": "as-is",
+      "fetched": "2026-08-29",
+      "confidence": "high"
+    },
+    "the-pink-cactus": {
+      "name": "The Pink Cactus",
+      "match": ["The Pink Cactus", "Pink Cactus"],
+      "site": "https://www.thepinkcactusknox.com/",
+      "logo": "/assets/venues/the-pink-cactus.svg",
+      "source": "inline 631×334 <svg> in the thepinkcactusknox.com header",
+      "sourceNote": "vector, from their own site header",
+      "treatment": "as-is",
+      "fetched": "2026-08-29",
+      "confidence": "high"
+    },
+    "southside-garage": {
+      "name": "SouthSide Garage",
+      "match": ["SouthSide Garage", "Southside Garage"],
+      "site": "https://southsidegarageknox.com/",
+      "logo": "/assets/venues/southside-garage.png",
+      "source": "https://static.spotapps.co/website_images/ab_websites/127050_website_v1/logo_new.png",
+      "sourceNote": "header logo on southsidegarageknox.com — the neon-sign mark",
+      "treatment": "as-is",
+      "fetched": "2026-08-29",
+      "confidence": "high"
+    },
+    "sokno-taco": {
+      "name": "SoKno Taco Cantina",
+      "match": ["SoKno Taco Cantina", "SoKno Taco"],
+      "site": "https://soknota.co/",
+      "logo": "/assets/venues/sokno-taco.png",
+      "source": "https://soknota.co/wp-content/uploads/2019/03/sokno-taco-cantina-logo.png",
+      "sourceNote": "header logo on soknota.co",
+      "treatment": "ink-recolor",
+      "fetched": "2026-08-29",
+      "confidence": "high",
+      "note": "Their file is white-on-dark. The white type became ink; the gold 'So' is theirs and stayed gold."
+    },
+    "south-coast-pizza": {
+      "name": "South Coast Pizza",
+      "match": ["South Coast Pizza"],
+      "site": "https://southcoastpizza.com/",
+      "logo": "/assets/venues/south-coast-pizza.png",
+      "source": "https://static.spotapps.co/website_images/ab_websites/120402_website_v1/logo.png",
+      "sourceNote": "header logo on southcoastpizza.com",
+      "treatment": "ink-recolor",
+      "fetched": "2026-08-29",
+      "confidence": "high",
+      "note": "White-on-dark original; repainted ink so it reads on the cream tile."
+    },
+    "puckers": {
+      "name": "Puckers Sports Grill",
+      "match": ["Puckers Sports Grill", "Puckers"],
+      "site": "https://puckersgatlinburg.com/",
+      "logo": "/assets/venues/puckers.png",
+      "source": "https://puckersgatlinburg.com/wp-content/uploads/2024/07/Puckers-Full-Logo-2.19.25.png",
+      "sourceNote": "full logo from the Puckers company site",
+      "treatment": "cropped",
+      "fetched": "2026-08-29",
+      "confidence": "medium",
+      "note": "The company file ends with a 'Gatlinburg, Tennessee' line; that band was cropped off since this is the Knoxville room at 115 Mimosa Ave. Swap in a Knoxville-specific file if they publish one."
+    },
+    "alliance-brewing": {
+      "name": "Alliance Brewing Company",
+      "match": ["Alliance Brewing", "Alliance"],
+      "site": "https://alliancebrewing.com/",
+      "logo": "/assets/venues/alliance-brewing.png",
+      "source": "https://alliancebrewing.com/wp-content/themes/alliancebrewing/images/abc--race--HOT.png",
+      "sourceNote": "the badge mark shipped inside their own WordPress theme",
+      "treatment": "as-is",
+      "fetched": "2026-08-29",
+      "confidence": "high",
+      "note": "Not on the listings yet — Alliance only shows up in 'sub' lines so far. Kept here so it's ready the week it gets its own row."
+    },
+    "trailhead": {
+      "name": "Trailhead Beer Market",
+      "match": ["Trailhead Beer Market", "Trailhead"],
+      "site": "https://www.instagram.com/trailheadbeer/",
+      "logo": null,
+      "source": null,
+      "sourceNote": "NO CLEAN SOURCE YET. trailheadbeermarket.com is a parked GoDaddy lander; Untappd shows a generic placeholder; Toast and Yelp block fetching. The only real mark found is the @trailheadbeer Instagram avatar — their bottle-cap sign shot against a wood wall, and Instagram caps it at 150×150, too small and too busy to sit on a cream tile. Falls back to the wordmark tile until Andy can get a file from the bar.",
+      "treatment": null,
+      "fetched": "2026-08-29",
+      "confidence": "none"
+    },
+    "mimosas": {
+      "name": "Mimosas",
+      "match": ["Mimosas"],
+      "site": "https://mimosasknoxville.com/",
+      "logo": null,
+      "source": null,
+      "sourceNote": "Closed Aug 2026 — the Blount Ave room is Puckers now. Kept as a tombstone so the name resolves in archived episodes instead of looking unregistered.",
+      "treatment": null,
+      "fetched": "2026-08-29",
+      "confidence": "none"
+    }
+  }
+}

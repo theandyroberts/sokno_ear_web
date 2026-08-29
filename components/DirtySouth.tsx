@@ -11,6 +11,10 @@ import { NightIcon, type NightCat } from "@/components/DirtySouthIcons";
 
 const GREEN = "#CDE24A";
 const INK = "#131309";
+// The off-white the Angry Dumplings sponsor engraving is drawn on. Every logo
+// chip sits on this same paper so a dozen different brand palettes still read
+// as one row of stamps against the acid green.
+const CREAM = "#FDFAEB";
 const STORAGE_KEY = "dirtysouth-checked-v2";
 
 const DAY_ORDER: NightDay[] = ["Thu", "Fri", "Sat", "Sun"];
@@ -36,6 +40,51 @@ function saveChecked(weekend: string, s: Set<string>) {
   } catch {
     /* private mode — checks just don't persist */
   }
+}
+
+/** The right-hand chip on a listing row: the venue's own logo on cream paper,
+ *  ink-framed and nudged off-square like everything else on this flyer. When a
+ *  venue has no logo in the registry yet, the same chip holds its name set in
+ *  Anton — the row's shape never changes, so a missing file reads as a design
+ *  choice instead of a hole. Marked aria-hidden: the venue name is already in
+ *  the row's own text, so a screen reader would just hear it twice. */
+function LogoTile({ logo, brand, fontClass, tilt, dimmed }: {
+  logo?: string | null;
+  brand: string;
+  fontClass: string;
+  tilt: number;
+  dimmed: boolean;
+}) {
+  return (
+    <span
+      aria-hidden="true"
+      className="ds-logo"
+      style={{
+        flex: "0 0 auto", alignSelf: "center", display: "grid", placeItems: "center",
+        background: CREAM, border: `3px solid ${INK}`, padding: 7, overflow: "hidden",
+        transform: `rotate(${tilt}deg)`, opacity: dimmed ? 0.5 : 1,
+      }}
+    >
+      {logo ? (
+        /* eslint-disable-next-line @next/next/no-img-element */
+        <img
+          src={logo}
+          alt=""
+          style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", display: "block" }}
+        />
+      ) : (
+        <span
+          className={fontClass}
+          style={{
+            fontSize: "0.62rem", lineHeight: 1.05, textAlign: "center",
+            textTransform: "uppercase", letterSpacing: "0.02em", color: INK,
+          }}
+        >
+          {brand}
+        </span>
+      )}
+    </span>
+  );
 }
 
 /** Mon–Wed sponsor card — the week's sponsor holds the page on the off-days. */
@@ -299,7 +348,7 @@ export function DirtySouth({
                   >
                     {done ? "✓" : ""}
                   </button>
-                  <span style={{ marginTop: 3, opacity: done ? 0.55 : 1 }}>
+                  <span className="ds-cat" style={{ marginTop: 3, opacity: done ? 0.55 : 1 }}>
                     <NightIcon cat={(item.cat ?? "star") as NightCat} size={30} rotate={idx % 2 ? 4 : -4} />
                   </span>
                   <a
@@ -317,6 +366,13 @@ export function DirtySouth({
                       {item.sub ? <span style={{ opacity: 0.75 }}> · {item.sub}</span> : null}
                     </div>
                   </a>
+                  <LogoTile
+                    logo={item.logo}
+                    brand={item.brand ?? item.venue.split(" · ")[0]}
+                    fontClass={fontClass}
+                    tilt={idx % 2 ? 1.1 : -1.1}
+                    dimmed={done}
+                  />
                 </div>
               </li>
             );

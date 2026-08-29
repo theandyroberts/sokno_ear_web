@@ -76,7 +76,9 @@ describe("DirtySouth checklist", () => {
   it("sponsor card renders name, address, phone, art when passed; absent otherwise", () => {
     const { rerender } = render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" sponsor={nightlife.sponsor!} />);
     expect(screen.getByText(/brought to you by/i)).toBeInTheDocument();
-    expect(screen.getByText("Angry Dumplings")).toBeInTheDocument(); // sponsor headline (checklist renders the venue with address attached)
+    // The name appears in the sponsor headline AND in the Thursday row's logo chip
+    // (this render passes no resolved logos, so the chip falls back to the wordmark).
+    expect(screen.getAllByText("Angry Dumplings").length).toBeGreaterThanOrEqual(1);
     expect(screen.getAllByText(/1119 Sevier Ave/).length).toBeGreaterThanOrEqual(2); // sponsor card + checklist entry
     expect(screen.getByRole("link", { name: /760\) 899-4121/ })).toHaveAttribute("href", "tel:7608994121");
     expect(screen.getByAltText(/from the Dirty South map/i)).toBeInTheDocument();

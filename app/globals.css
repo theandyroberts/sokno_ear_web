@@ -113,3 +113,15 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
   a { color: inherit; text-decoration: none; }
   aside { position: static !important; }
 }
+
+/* Dirty South listing logos: a cream chip right-justified on every row. Fixed
+   size so a dozen brand marks line up in one column down the page; the phone
+   size gives the headline back the width it needs at 375px. */
+.ds-logo { width: 112px; height: 74px; }
+@media (max-width: 560px) {
+  .ds-logo { width: 72px; height: 50px; padding: 5px !important; }
+  /* A phone can't carry the checkbox, the category stamp, the headline AND a
+     logo across 375px. The stamp is the one that goes: the venue's own mark
+     says more about the stop than a generic fork-and-knife does. */
+  .ds-cat { display: none; }
+}
