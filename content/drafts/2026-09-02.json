@@ -17,8 +17,8 @@
     "layout": "imageTop",
     "image": "/assets/spots/gameday_bridge.jpg",
     "imageCaption": "Saturday afternoon, looking north from our side",
-    "title": "Tennessee's home opener kicks off Saturday at 3:30, and the new traffic plan leaves Neyland Drive one lane going east",
-    "deck": "The Vols host Furman in the first home game of the season under a traffic pattern that debuts that day. The good news for this side of the river: it aims the crowd away from our bridges. The catch is the single eastbound lane, and what it feeds.",
+    "title": "Tennessee's home opener kicks off Saturday at 3:30, and from this side of the river you can walk to the shuttle",
+    "deck": "The Vols host Furman in the first home game of the season, in the mid-90s. Most of what you have read about the new traffic plan is not actually new — but the shuttle that starts a short walk over the Gay Street Bridge is the best thing on offer, and it costs ten dollars.",
     "facts": [
       {
         "label": "Kickoff",
@@ -29,20 +29,20 @@
         "value": "SEC Network+ / ESPN+"
       },
       {
-        "label": "Vol Walk",
-        "value": "About 1:15 PM — roughly two and a quarter hours before kickoff"
+        "label": "The shuttle",
+        "value": "Krutch Park, on Clinch Ave · $10 round trip · Transit app"
       },
       {
-        "label": "New this year",
-        "value": "Three of Neyland Drive's lanes go westbound, debuting with this game"
+        "label": "Shuttle runs",
+        "value": "From 12:30 PM · returns from Walters Life Sciences, 4th quarter to ~1 hr after"
       },
       {
-        "label": "To Kern's, Puckers, west Old Sevier",
-        "value": "Henley Street Bridge, then Chapman Highway — untouched by the plan"
+        "label": "Driving instead",
+        "value": "Civic Coliseum park and ride, $30 per vehicle, garages open noon"
       },
       {
-        "label": "To the east end of Old Sevier",
-        "value": "The one eastbound Neyland lane, then the James White bridge"
+        "label": "Actually new",
+        "value": "A Kingston Pike Express Lane in Neyland Drive's far-left lane; gates open 30 min earlier"
       },
       {
         "label": "Heat",
@@ -56,27 +56,31 @@
     "body": [
       {
         "type": "paragraph",
-        "text": "Tennessee plays its first home game of the season on Saturday, hosting Furman at 3:30 in the afternoon. If you have no interest in football whatsoever, this is still worth five minutes of your attention, because a hundred thousand people are coming to a stadium you can see from the end of several South Knoxville streets — and the rules for how they all leave are new this year."
+        "text": "Tennessee plays its first home game of the season on Saturday, hosting Furman at 3:30 in the afternoon. A hundred thousand people are coming to a stadium you can see from the end of several South Knoxville streets, and the useful thing to know from over here is that you do not have to drive into any of it."
       },
       {
         "type": "subhead",
-        "text": "What actually changed"
+        "text": "The shuttle you can walk to"
       },
       {
         "type": "paragraph",
-        "text": "The university spent the offseason redesigning how cars move around Neyland on game days, tested the pattern at a concert and a baseball game in May, and turns it on for real Saturday. The headline change is that Neyland Drive gives three of its lanes to westbound traffic, pointed at Alcoa Highway, I-40 and Kingston Pike, with the far-left one running as a Kingston Pike express lane. Gates open half an hour earlier than they used to."
+        "text": "KAT runs a game day shuttle out of Krutch Park, on Clinch Avenue downtown. Ten dollars round trip per person, bought through the Transit app, no parking fee attached because you did not park. Buses start three hours before kickoff — so from about 12:30 — and run continuously until game time, dropping at the Walters Life Sciences Building on campus. Coming back, you board at Walters from the start of the fourth quarter until roughly an hour after the final whistle."
       },
       {
         "type": "paragraph",
-        "text": "Read from this side of the river, that is mostly good news. The routing advice the planners published — go east to go west, or go south to head west — is aimed at fans trying to reach westbound I-40, and “south” there means Alcoa Highway and then Pellissippi Parkway. That crossing sits well west of us, out past the medical center, and it does not touch Sevier Avenue, Blount Avenue or Chapman Highway at any point. The plan pulls the bulk of the departing crowd away from our bridges rather than through them."
+        "text": "From the north end of the neighborhood that is a walk, not a drive: over the Gay Street Bridge and up Gay Street to Clinch Avenue, and the park is right there. If you would rather drive, the Civic Coliseum park and ride is thirty dollars per vehicle including the round trip, and those garages open at noon. One thing to note before you plan around it: the Old City shuttle runs for SEC opponents only — Texas, Auburn, Alabama, Kentucky and LSU — so it is not an option this Saturday."
       },
       {
         "type": "subhead",
-        "text": "The catch is the other direction"
+        "text": "What is actually new, and what isn't"
       },
       {
         "type": "paragraph",
-        "text": "Three westbound lanes on a four-lane road leaves one lane going east. That single lane is the feed to the James White Parkway bridge — which is the way into the east end of Old Sevier, and therefore the one genuine pinch point on the map for anybody over here. If that is your route, time it around the game rather than into it. Everything at the other end of the neighborhood is reached the way it always is: Kern's, Puckers on Blount, and the west end of Sevier Avenue all sit off Chapman Highway, over the Henley Street Bridge, which the stadium plan leaves alone entirely."
+        "text": "The university has been talking up a redesigned game day traffic pattern that goes live with this game, and it is worth being precise about how much of it is a change. Neyland Drive running three lanes westbound and one eastbound is not new — anyone who has driven it on a Saturday has seen that before, and the eastbound side is set up that way because those lanes were typically sitting empty. One lane going east is plenty, and it will be fine on Saturday too."
+      },
+      {
+        "type": "paragraph",
+        "text": "The genuinely new piece is smaller and more specific: the far-left of those westbound lanes now runs as a Kingston Pike Express Lane, meant to move that traffic out without it getting caught behind everything else. If you are headed for the near west side after the game, it might be worth a try. Gates also open half an hour earlier than they used to."
       },
       {
         "type": "subhead",
@@ -84,7 +88,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Kickoff is 3:30, so the inbound wave builds through late morning and peaks in the early afternoon; the Vol Walk pulls fans toward campus around a quarter past one. The game should end somewhere near 6:45, and the twenty minutes after that are the ones to avoid being on a bridge for. Practically: mornings are clear, the late evening is clear, and the middle of Saturday belongs to the stadium."
+        "text": "Kickoff is 3:30, so the inbound wave builds through late morning and peaks in the early afternoon; the Vol Walk pulls fans toward campus around a quarter past one. The game should end somewhere near 6:45. Mornings are clear, the late evening is clear, and the middle of Saturday belongs to the stadium."
       },
       {
         "type": "agenda",
@@ -95,8 +99,8 @@
             "what": "Normal. The best window for anything across the river"
           },
           {
-            "time": "12–2 PM",
-            "what": "Inbound traffic builds; tailgates fill in"
+            "time": "12:30 PM",
+            "what": "First shuttles leave Krutch Park"
           },
           {
             "time": "~1:15 PM",
@@ -107,8 +111,12 @@
             "what": "Kickoff, near 95 degrees"
           },
           {
+            "time": "4th quarter",
+            "what": "Return shuttles start boarding at Walters Life Sciences"
+          },
+          {
             "time": "~6:45 PM",
-            "what": "Game ends; the outbound hour begins"
+            "what": "Game ends"
           },
           {
             "time": "After 8 PM",
@@ -118,19 +126,11 @@
       },
       {
         "type": "subhead",
-        "text": "If you are going"
-      },
-      {
-        "type": "paragraph",
-        "text": "Without a parking pass, the university's own recommendation is to skip the campus corridor entirely: park downtown and ride a KAT game day shuttle from the Civic Coliseum or Market Square garages. From the north end of the neighborhood there is a version of that which involves no parking at all — walk the Gay Street Bridge into downtown and pick the shuttle up there. It is a longer walk than people expect once you are across, so leave early, but it beats sitting in the outbound lane afterwards."
-      },
-      {
-        "type": "subhead",
         "text": "The part nobody is advertising"
       },
       {
         "type": "paragraph",
-        "text": "It is going to be brutally hot. The forecast has Thursday near 97, Friday near 96, and Saturday near 95, with heat index values running higher and the National Weather Service already telling people to take breaks and drink water. A 3:30 kickoff means the first half is played in the worst of the afternoon. Shade, water, and a hat are not optional accessories this weekend, and that goes double for anyone standing on a sidewalk waiting for a shuttle."
+        "text": "It is going to be brutally hot. The forecast has Thursday near 97, Friday near 96, and Saturday near 95, with heat index values running higher and the National Weather Service already telling people to take breaks and drink water. A 3:30 kickoff means the first half is played in the worst of the afternoon. Shade, water and a hat are not optional accessories this weekend, and that goes double for anyone standing on a sidewalk waiting for a bus."
       }
     ],
     "sources": [
@@ -139,8 +139,8 @@
         "url": "https://www.rockytopinsider.com/2026/05/27/kickoff-time-announced-for-tennessee-football-season-opener-against-furman/"
       },
       {
-        "label": "WVLT — how parking will work on UT game days this season",
-        "url": "https://www.wvlt.tv/2026/08/25/how-will-parking-work-ut-game-days-this-season-university-outlines-plan/"
+        "label": "Knoxville Area Transit — football service options (routes, fares, pickup points)",
+        "url": "https://katbus.com/schedules-maps/football-service-options/"
       },
       {
         "label": "WATE — new traffic pattern unveiled for Tennessee home games",
@@ -151,7 +151,7 @@
         "url": "https://forecast.weather.gov/MapClick.php?lat=35.9457&lon=-83.9174"
       },
       {
-        "label": "Local bridge routing confirmed by A. Roberts"
+        "label": "Which parts of the Neyland Drive plan are actually new — A. Roberts"
       }
     ],
     "event": {
@@ -163,7 +163,7 @@
     "social": {
       "igBanner": [
         "Home opener Saturday at 3:30",
-        "One lane east, and what it feeds"
+        "Walk the bridge, ride for ten dollars"
       ]
     }
   },
@@ -176,8 +176,8 @@
       ],
       "hot": true,
       "image": "/assets/spots/gameday_bridge.jpg",
-      "title": "One lane going east",
-      "blurb": "Kickoff 3:30 Saturday under a brand-new traffic plan. It aims the crowd away from our bridges — except for the one lane that feeds James White.",
+      "title": "Walk to the game day shuttle",
+      "blurb": "Kickoff 3:30 Saturday. Ten dollars and a walk over the Gay Street Bridge beats anything involving a parking space.",
       "cue": "Jump to story",
       "href": "#gameday-south"
     },
@@ -1018,8 +1018,8 @@
     "audio": {
       "title": "Weekend Audio Briefing",
       "intro": "What's happening in SoKno this weekend.",
-      "description": "Your weekend listen — the Vols' home opener and the one lane left going east, a hundred thousand bats at Ijams Park, All Dogs Go to Heaven on the lawn, free trivia at Trailhead, and three days near a hundred degrees.",
-      "duration": "06:02",
+      "description": "Your weekend listen — the Vols' home opener and the ten-dollar shuttle you can walk to, a hundred thousand bats at Ijams Park, All Dogs Go to Heaven on the lawn, free trivia at Trailhead, and three days near a hundred degrees.",
+      "duration": "06:07",
       "src": "/audio/2026-09-02.mp3"
     },
     "calendar": [
@@ -1078,7 +1078,7 @@
         "month": "SEP",
         "day": "5",
         "title": "VOLS HOME OPENER vs. FURMAN",
-        "meta": "3:30 PM · Neyland · new traffic pattern debuts",
+        "meta": "3:30 PM · Neyland · shuttles from Krutch Park from 12:30",
         "starred": true,
         "href": "#gameday-south"
       },
