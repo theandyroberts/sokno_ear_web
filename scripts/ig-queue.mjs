@@ -83,7 +83,7 @@ function buildCaption(story, tags) {
   if (when) bullets.push(`★ ${when}`);
   if (where) bullets.push(`★ ${where}`);
   if (bullets.length) lines.push("", ...bullets);
-  lines.push("", "Full story in this week's Ear → soknoear.com");
+  lines.push("", "Full story at soknoear.com — link in bio");
   if (tags.length) lines.push("", tags.join(" "));
   lines.push("", BASE_HASHTAGS);
   return lines.join("\n");
@@ -186,7 +186,7 @@ const PROMOS = [
       "",
       `This week: ${episode.feature.title}. Plus ${storyTitles.join(", ")}, and more.`,
       "",
-      "Read it — and hear the audio briefing — at soknoear.com",
+      "Read it and hear the audio briefing — link in bio",
       "",
       BASE_HASHTAGS,
     ].join("\n"),
