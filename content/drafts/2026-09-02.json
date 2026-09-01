@@ -267,8 +267,8 @@
       ],
       "hot": false,
       "image": "/assets/spots/trailhead_trivia.jpg",
-      "title": "Free trivia on Island Home",
-      "blurb": "Seven o'clock Thursday at Trailhead Beer Market, no cover and no team required.",
+      "title": "Free trivia at Trailhead",
+      "blurb": "Seven o'clock Thursday, one block past the new traffic circle. No cover, no team required.",
       "cue": "Jump to story",
       "href": "#trailhead-trivia"
     },
@@ -851,9 +851,9 @@
       ],
       "layout": "imageRight",
       "image": "/assets/spots/trailhead_trivia.jpg",
-      "imageCaption": "Seven o'clock, Island Home Avenue",
+      "imageCaption": "Seven o'clock, past the traffic circle",
       "title": "Free trivia every Thursday at Trailhead Beer Market, at the edge of the Urban Wilderness",
-      "deck": "The Knox Trivia Guys run the game at seven on Island Home Avenue, in a beer market that sits between the river and seventy miles of trail. No cover, no team required, and the air conditioning is free too.",
+      "deck": "The Knox Trivia Guys run the game at seven, one block past the new traffic circle at the far end of Sevier Avenue. No cover, no team required, and the air conditioning is free too.",
       "facts": [
         {
           "label": "When",
@@ -862,6 +862,10 @@
         {
           "label": "Where",
           "value": "Trailhead Beer Market · 1317 Island Home Ave"
+        },
+        {
+          "label": "Getting there",
+          "value": "Straight through the new traffic circle on Sevier Ave, one more block"
         },
         {
           "label": "Cost",
@@ -874,16 +878,12 @@
         {
           "label": "Food",
           "value": "The Gato Peligroso truck is the standby"
-        },
-        {
-          "label": "Setting",
-          "value": "On the river, in the back yard of the Urban Wilderness and Ijams Park"
         }
       ],
       "body": [
         {
           "type": "paragraph",
-          "text": "Trailhead Beer Market was South Knoxville's first beer market, and its whole identity is in the name: it sits on the bank of the Tennessee River at 1317 Island Home Avenue, in the back yard of both Ijams Park and the roughly seventy miles of trail that make up the Urban Wilderness. People arrive on bikes still wearing the dust."
+          "text": "Trailhead Beer Market is further along the same street as Alliance Brewing and the Pink Cactus — you keep straight through the new traffic circle at the end of Sevier Avenue and it is one block down, on the bank of the Tennessee River. South Knoxville's first beer market, and its whole identity is in the name: it sits in the back yard of both Ijams Park and the roughly seventy miles of trail that make up the Urban Wilderness. People arrive on bikes still wearing the dust."
         },
         {
           "type": "subhead",
@@ -899,7 +899,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Thursday's high is forecast near 97, which rules out most of what this end of South Knoxville is good for until the sun goes down. A free, indoor, seven-o'clock reason to leave the house is worth more than usual on a day like that — and if the heat does break for an hour, the water is right there."
+          "text": "Thursday's high is forecast near 97, which rules out most of what this end of Sevier Avenue is good for until the sun goes down. A free, indoor, seven-o'clock reason to leave the house is worth more than usual on a day like that — and if the heat does break for an hour, the water is right there."
         }
       ],
       "sources": [
@@ -1018,8 +1018,8 @@
     "audio": {
       "title": "Weekend Audio Briefing",
       "intro": "What's happening in SoKno this weekend.",
-      "description": "Your weekend listen — the Vols' home opener and the one lane left going east, a hundred thousand bats at Ijams Park, All Dogs Go to Heaven on the lawn, free trivia on Island Home, and three days near a hundred degrees.",
-      "duration": "05:51",
+      "description": "Your weekend listen — the Vols' home opener and the one lane left going east, a hundred thousand bats at Ijams Park, All Dogs Go to Heaven on the lawn, free trivia at Trailhead, and three days near a hundred degrees.",
+      "duration": "06:02",
       "src": "/audio/2026-09-02.mp3"
     },
     "calendar": [
@@ -1042,7 +1042,7 @@
         "month": "SEP",
         "day": "3",
         "title": "Trivia at Trailhead Beer Market",
-        "meta": "7 PM · free · 1317 Island Home Ave",
+        "meta": "7 PM · free · straight past the traffic circle, one block",
         "href": "#trailhead-trivia"
       },
       {
