@@ -103,6 +103,12 @@
       "name": "Mimosas (Kennedy Concepts)",
       "verified": "confirmed by Andy (local) as the new South Knoxville Mimosas at Blount & Chapman; matches official domain mimosasknoxville.com",
       "confidence": "high"
+    },
+    "puckers": {
+      "handle": "@puckersknoxville",
+      "name": "Puckers Sports Grill Knoxville",
+      "verified": "live profile 'Puckers Sports Grill | Knoxville' — bio reads 'NOW OPEN in South Knoxville, TN / Your Game Day Headquarters' and links the official Kennedy Concepts domain mimosasknoxville.com/coming-soon-puckers; checked 2026-09-01",
+      "confidence": "high"
     }
   }
 }

@@ -1,0 +1,1107 @@
+{
+  "slug": "2026-09-02",
+  "volume": 1,
+  "number": 12,
+  "episode": "Weekend Episode",
+  "date": "2026-09-02",
+  "dateLabel": "Thu–Sun, Sep 3–6, 2026",
+  "shortDate": "Sep 3–6",
+  "place": "South Knoxville, TN",
+  "feature": {
+    "id": "gameday-south",
+    "label": "SoKno",
+    "labelColor": "gold",
+    "days": [
+      "Sat"
+    ],
+    "layout": "imageTop",
+    "image": "/assets/spots/gameday_bridge.jpg",
+    "imageCaption": "Saturday afternoon, looking north from our side",
+    "title": "Tennessee's home opener kicks off Saturday at 3:30, and the new traffic plan sends the stadium's traffic our way",
+    "deck": "The Vols host Furman in the first home game of the season, and the university is debuting a traffic pattern whose central instruction is \"go south to head west.\" South Knoxville is the south. Here is when the crunch arrives, and how to spend the afternoon on the right side of it.",
+    "facts": [
+      {
+        "label": "Kickoff",
+        "value": "Sat Sep 5 · 3:30 PM · Tennessee vs. Furman"
+      },
+      {
+        "label": "Watch",
+        "value": "SEC Network+ / ESPN+"
+      },
+      {
+        "label": "Vol Walk",
+        "value": "About 1:15 PM — roughly two and a quarter hours before kickoff"
+      },
+      {
+        "label": "New this year",
+        "value": "A redesigned traffic pattern, debuting with this game"
+      },
+      {
+        "label": "The official advice",
+        "value": "Without a parking pass, stay downtown and take a KAT shuttle"
+      },
+      {
+        "label": "Heat",
+        "value": "Near 95 at kickoff — the fourth straight day in the mid-90s"
+      },
+      {
+        "label": "Quiet hours in SoKno",
+        "value": "Before noon, and after about 8 PM"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Tennessee plays its first home game of the season on Saturday, hosting Furman at 3:30 in the afternoon. If you have no interest in football whatsoever, this is still the most important thing on your weekend calendar, because a hundred thousand people are coming to a stadium you can see from the end of several South Knoxville streets — and this year the route they take to get out of town runs through here."
+      },
+      {
+        "type": "subhead",
+        "text": "What actually changed"
+      },
+      {
+        "type": "paragraph",
+        "text": "The university spent the offseason redesigning how cars move around Neyland on game days, tested the new pattern at a concert and a baseball game in May, and turns it on for real this Saturday. Neyland Drive gets three westbound lanes pointed at Alcoa Highway, I-40 and Kingston Pike, with the far-left one running as an express lane. Gates open half an hour earlier than they used to."
+      },
+      {
+        "type": "paragraph",
+        "text": "But the line that matters on this side of the river is the routing advice itself, which the planners summarized as going east to go west, or going south to head west. Going south means Alcoa Highway. Alcoa Highway means our bridges, our ramps, and the Chapman Highway corridor absorbing a share of a stadium emptying out."
+      },
+      {
+        "type": "subhead",
+        "text": "When it lands"
+      },
+      {
+        "type": "paragraph",
+        "text": "Kickoff is 3:30, so the inbound wave builds through late morning and peaks in the early afternoon; the Vol Walk pulls fans toward campus around a quarter past one. The game should end somewhere near 6:45, and the twenty minutes after that are the ones to avoid being on a bridge for. Practically: mornings are clear, the late evening is clear, and the middle of Saturday belongs to the stadium."
+      },
+      {
+        "type": "agenda",
+        "title": "Saturday, roughly",
+        "rows": [
+          {
+            "time": "Before noon",
+            "what": "Normal. The best window for anything across the river"
+          },
+          {
+            "time": "12–2 PM",
+            "what": "Inbound traffic builds; tailgates fill in"
+          },
+          {
+            "time": "~1:15 PM",
+            "what": "Vol Walk — players walk in down Peyton Manning Pass"
+          },
+          {
+            "time": "3:30 PM",
+            "what": "Kickoff, near 95 degrees"
+          },
+          {
+            "time": "~6:45 PM",
+            "what": "Game ends; the outbound hour begins"
+          },
+          {
+            "time": "After 8 PM",
+            "what": "The roads give up and hand themselves back"
+          }
+        ]
+      },
+      {
+        "type": "subhead",
+        "text": "If you are going"
+      },
+      {
+        "type": "paragraph",
+        "text": "Without a parking pass, the university's own recommendation is to skip the campus corridor entirely: park downtown and ride a KAT game day shuttle from the Civic Coliseum or Market Square garages. From much of South Knoxville that is genuinely the better plan anyway — you are already close, and the bridge crossing on foot is a fifteen-minute walk rather than a forty-minute idle."
+      },
+      {
+        "type": "subhead",
+        "text": "The part nobody is advertising"
+      },
+      {
+        "type": "paragraph",
+        "text": "It is going to be brutally hot. The forecast has Thursday near 97, Friday near 96, and Saturday near 95, with heat index values running higher and the National Weather Service already telling people to take breaks and drink water. A 3:30 kickoff means the first half is played in the worst of the afternoon. Shade, water, and a hat are not optional accessories this weekend, and that goes double for anyone standing on a sidewalk waiting for a shuttle."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Rocky Top Insider — kickoff time announced for the Furman opener",
+        "url": "https://www.rockytopinsider.com/2026/05/27/kickoff-time-announced-for-tennessee-football-season-opener-against-furman/"
+      },
+      {
+        "label": "WVLT — how parking will work on UT game days this season",
+        "url": "https://www.wvlt.tv/2026/08/25/how-will-parking-work-ut-game-days-this-season-university-outlines-plan/"
+      },
+      {
+        "label": "WATE — new traffic pattern unveiled for Tennessee home games",
+        "url": "https://www.wate.com/sports/orange-and-white-nation/tennessee-football/new-traffic-pattern-unveiled-for-university-of-tennessee-home-games/"
+      },
+      {
+        "label": "National Weather Service Morristown — Knoxville forecast",
+        "url": "https://forecast.weather.gov/MapClick.php?lat=35.9457&lon=-83.9174"
+      }
+    ],
+    "event": {
+      "startDate": "2026-09-05T15:30:00-04:00",
+      "endDate": "2026-09-05T18:45:00-04:00",
+      "locationName": "Neyland Stadium",
+      "locationAddress": "1235 Phillip Fulmer Way"
+    },
+    "social": {
+      "igBanner": [
+        "Home opener Saturday at 3:30",
+        "The traffic plan points south"
+      ]
+    }
+  },
+  "scanner": [
+    {
+      "label": "SoKno",
+      "labelColor": "gold",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/gameday_bridge.jpg",
+      "title": "The home opener points traffic south",
+      "blurb": "Kickoff 3:30 Saturday, a brand-new traffic plan, and the official advice is to go south to head west.",
+      "cue": "Jump to story",
+      "href": "#gameday-south"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Thu"
+      ],
+      "hot": true,
+      "image": "/assets/spots/ijams_bats.jpg",
+      "title": "A hundred thousand bats, after dark",
+      "blurb": "Thursday at eight: a naturalist, blacklight stations, and a bat house the size of a small room.",
+      "cue": "Jump to story",
+      "href": "#ijams-bats"
+    },
+    {
+      "label": "SoKno",
+      "labelColor": "ink",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/puckers_gameday.jpg",
+      "title": "Puckers' first game day",
+      "blurb": "Ten days open on Blount Avenue, and Saturday at 3:30 is the test it opened for.",
+      "cue": "Jump to story",
+      "href": "#puckers-first-gameday"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "hot": false,
+      "image": "/assets/spots/all_dogs_lawn.jpg",
+      "title": "All Dogs Go to Heaven on the lawn",
+      "blurb": "Friday, doors at seven, film when it's dark. Leashed dogs welcome — which lands differently this week.",
+      "cue": "Jump to story",
+      "href": "#all-dogs-movie"
+    },
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/kerns_watchparty.jpg",
+      "title": "A game day room, priced in public",
+      "blurb": "$300 puts twenty people on the lawn with a TV and a parking spot. Walking in is still free.",
+      "cue": "Jump to story",
+      "href": "#kerns-watch-parties"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/playscape_september.jpg",
+      "title": "Free stories in the shade",
+      "blurb": "Saturday morning at the Playscape by Mead's Quarry — done by noon, before the roads fill.",
+      "cue": "Jump to story",
+      "href": "#playscape-storytelling"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "hot": false,
+      "image": "/assets/spots/hiwire_taps.jpg",
+      "title": "Pint night on Barber Street",
+      "blurb": "Hi-Wire stacks its Thursday pint night on top of an all-day happy hour.",
+      "cue": "Jump to story",
+      "href": "#hiwire-thursday"
+    },
+    {
+      "label": "Urban Wilderness",
+      "labelColor": "ink",
+      "days": [
+        "Thu"
+      ],
+      "hot": false,
+      "image": "/assets/spots/trailhead_trivia.jpg",
+      "title": "Free trivia on Island Home",
+      "blurb": "Seven o'clock Thursday at Trailhead Beer Market, no cover and no team required.",
+      "cue": "Jump to story",
+      "href": "#trailhead-trivia"
+    },
+    {
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "hot": false,
+      "image": "/assets/spots/specials_chalk_sept.jpg",
+      "title": "The specials board",
+      "blurb": "Earl's runs a different deal every day of the weekend — and Labor Day Monday too.",
+      "cue": "Jump to story",
+      "href": "#specials-board"
+    }
+  ],
+  "stories": [
+    {
+      "id": "ijams-bats",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/ijams_bats.jpg",
+      "imageCaption": "Eight o'clock, and the blacklights come on",
+      "title": "Ijams Park walks you out into the dark on Thursday to meet a hundred thousand bats",
+      "deck": "Ijams After Dark: All About Bats runs 8 to 9:30 Thursday night — a naturalist, a mile and a half of trail, blacklight stations, and a purpose-built bat house standing where the lime kilns used to be.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Sep 3 · 8–9:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$15"
+        },
+        {
+          "label": "Ages",
+          "value": "10 and up"
+        },
+        {
+          "label": "Expect",
+          "value": "Up to 1.5 miles over rocks, roots and gravel · registration required"
+        },
+        {
+          "label": "Waiver",
+          "value": "One assumption-of-risk form per calendar year"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Thursday night at eight, an Ijams Park naturalist takes a group out onto the trails to look up. The program is called Ijams After Dark: All About Bats, it runs an hour and a half, and the premise is that the animals doing the most work over South Knoxville after sunset are the ones almost nobody has ever knowingly looked at."
+        },
+        {
+          "type": "subhead",
+          "text": "The bat house is the real headliner"
+        },
+        {
+          "type": "paragraph",
+          "text": "Out on the property there is a structure ten feet by twelve, fitted inside with vertical plywood slats and a walkway for the people who monitor it. It was built to hold up to a hundred thousand Brazilian free-tailed bats while they roost, rest and raise their young. It stands on ground that held industrial lime kilns until the early 1970s, which is the whole story of this park in one sentence: a place that was used hard, then handed back."
+        },
+        {
+          "type": "subhead",
+          "text": "What the night actually involves"
+        },
+        {
+          "type": "paragraph",
+          "text": "You learn to tell species apart as they pass overhead, and you stop at blacklight stations, where a violet lamp on a patch of forest turns up an entire layer of insects and lichens that simply is not visible at noon. Expect up to a mile and a half of walking over rocks, roots and gravel, with stops along the way — real shoes, not sandals. Fifteen dollars, ages ten and up, and registration is required in advance."
+        },
+        {
+          "type": "subhead",
+          "text": "One rule, stated plainly"
+        },
+        {
+          "type": "paragraph",
+          "text": "Never touch a bat. The park is blunt about it and so are we; these are protected wild animals and the reason for the rule is rabies. Watch from behind the fence at the observation area, keep your distance, and let the naturalist do the pointing."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams — Ijams After Dark: All About Bats (Sep 3)",
+          "url": "https://www.ijams.org/event-details/ijams-after-dark-all-about-bats-2026-09-03-20-00"
+        },
+        {
+          "label": "Ijams — the Ijams Bat House",
+          "url": "https://www.ijams.org/ijams-bat-house"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-03T20:00:00-04:00",
+        "endDate": "2026-09-03T21:30:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Bats after dark Thursday",
+          "Ijams Park, eight o'clock"
+        ]
+      }
+    },
+    {
+      "id": "all-dogs-movie",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/all_dogs_lawn.jpg",
+      "imageCaption": "Doors at seven, film when it's dark",
+      "title": "\"All Dogs Go to Heaven\" plays on the Visitor Center lawn at Ijams Park on Friday night",
+      "deck": "Movies Under the Stars has one more September date after this one. Doors at seven, film around half past eight, twelve dollars — and dogs are welcome, which for this particular film is either very sweet or slightly pointed.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Sep 4 · doors 7 PM, film at dark (~8:30)"
+        },
+        {
+          "label": "Where",
+          "value": "Visitor Center lawn, Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Tickets",
+          "value": "$12 · $10 for Ijams Park and Central Cinema members"
+        },
+        {
+          "label": "Bring",
+          "value": "A blanket or lawn chair · leashed dogs welcome"
+        },
+        {
+          "label": "Don't bring",
+          "value": "Coolers or outside alcohol"
+        },
+        {
+          "label": "Note",
+          "value": "Space is limited per screening — buy ahead"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Friday's film on the lawn is All Dogs Go to Heaven, Don Bluth's 1989 cartoon about a German shepherd running a casino, which is remembered by most people who saw it young as being considerably heavier than they were promised. Bring the kids anyway. Bring the dog, too — leashed dogs are welcome at these, and the sight of a lawn full of them watching this particular movie is worth the ticket on its own."
+        },
+        {
+          "type": "subhead",
+          "text": "How the evening runs"
+        },
+        {
+          "type": "paragraph",
+          "text": "Doors open at seven on the Visitor Center lawn and the film starts when it actually gets dark, which by early September is closer to half past eight than the nine o'clock of midsummer. That first hour is for eating: food trucks and the park's beer garden handle dinner and drinks. No coolers, no outside alcohol."
+        },
+        {
+          "type": "subhead",
+          "text": "Tickets, and the heat"
+        },
+        {
+          "type": "paragraph",
+          "text": "Twelve dollars a head, ten if you're a member of Ijams Park or Central Cinema, and space per screening is limited enough that buying ahead is the safer move. Friday's high is forecast near 96, so the lawn at seven will still be warm — bring more water than you think you need, and the sunset will do the rest of the work."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams — Movies Under the Stars (2026 lineup, pricing, rules)",
+          "url": "https://www.ijams.org/movies-under-the-stars"
+        },
+        {
+          "label": "Ijams — \"All Dogs Go To Heaven,\" Sep 4",
+          "url": "https://www.ijams.org/event-details/movies-under-the-stars-all-dogs-go-to-heaven"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-04T19:00:00-04:00",
+        "endDate": "2026-09-04T23:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "All Dogs Go to Heaven",
+          "Friday on the Ijams Park lawn"
+        ]
+      }
+    },
+    {
+      "id": "puckers-first-gameday",
+      "label": "SoKno",
+      "labelColor": "ink",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/puckers_gameday.jpg",
+      "imageCaption": "Ten days open, and here comes the first one",
+      "title": "Puckers gets its first Vols Saturday, ten days after opening on Blount Avenue",
+      "deck": "The sports grill that took the old Mimosas room calls itself the game day headquarters in its own profile. Saturday at 3:30 is the first time anyone gets to find out whether the room can do it.",
+      "facts": [
+        {
+          "label": "Where",
+          "value": "115 Mimosa Ave, off Blount"
+        },
+        {
+          "label": "The game",
+          "value": "Tennessee vs. Furman · Sat Sep 5 · 3:30 PM"
+        },
+        {
+          "label": "Opened",
+          "value": "Wed Aug 26 — this is weekend two"
+        },
+        {
+          "label": "Who",
+          "value": "Kennedy Concepts, who have run Puckers in Gatlinburg since 1999"
+        },
+        {
+          "label": "Still on the menu",
+          "value": "The Mimosas brunch dishes"
+        },
+        {
+          "label": "Before you go",
+          "value": "Knoxville hours still aren't posted — call ahead"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Ten days ago the room at 115 Mimosa Ave, a few hundred yards off Blount Avenue, stopped being Mimosas and became Puckers Sports Grill. We wrote then that the four quiet days that followed were the last ones the building would get before it had to prove itself on a game day. That game day is Saturday."
+        },
+        {
+          "type": "subhead",
+          "text": "The claim they are making"
+        },
+        {
+          "type": "paragraph",
+          "text": "Their own Instagram profile describes the place, without hedging, as your game day headquarters — chef-driven food and cold drinks, now open in South Knoxville. That is a large thing to put in a bio nine days after unlocking the doors, and Saturday at 3:30 is when the sentence gets tested."
+        },
+        {
+          "type": "subhead",
+          "text": "Why this address, specifically"
+        },
+        {
+          "type": "paragraph",
+          "text": "Geography is doing a lot of the work here. The building sits close enough to Neyland that the stadium is audible from the parking lot, on the near side of the river from a hundred thousand people who all need somewhere to be. A first home game against Furman is the friendliest possible trial run: a full house, a 3:30 start, and very little chance of the room going quiet and tense in the fourth quarter."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical caveat"
+        },
+        {
+          "type": "paragraph",
+          "text": "Posted hours for the Knoxville location still weren't up as of Tuesday, and the Gatlinburg original runs 11 AM to 1 AM daily, which may or may not be the plan here. If you are building a Saturday around getting a table before kickoff, call first — and assume everyone else had the same idea."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Puckers Sports Grill Knoxville — @puckersknoxville",
+          "url": "https://www.instagram.com/puckersknoxville/"
+        },
+        {
+          "label": "Puckers Sports Grill (Gatlinburg) — the original",
+          "url": "https://puckersgatlinburg.com/about/"
+        },
+        {
+          "label": "Rocky Top Insider — kickoff time for the Furman opener",
+          "url": "https://www.rockytopinsider.com/2026/05/27/kickoff-time-announced-for-tennessee-football-season-opener-against-furman/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-05T15:30:00-04:00",
+        "endDate": "2026-09-05T18:45:00-04:00",
+        "locationName": "Puckers Sports Grill Knoxville",
+        "locationAddress": "115 Mimosa Ave"
+      },
+      "social": {
+        "igTags": [
+          "puckers"
+        ],
+        "igBanner": [
+          "Puckers' first game day",
+          "Saturday at 3:30 on Blount"
+        ]
+      }
+    },
+    {
+      "id": "kerns-watch-parties",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/kerns_watchparty.jpg",
+      "imageCaption": "The lawn patio, sectioned off",
+      "title": "Kern's will rent you a private game day section on Saturday, and it has published the price",
+      "deck": "Three hundred dollars gets twenty people a canopy, a television, two couches and a parking spot on the lawn. Twenty-five hundred takes the small rooftop for seventy-five. The rest of the food hall is still free to walk into.",
+      "facts": [
+        {
+          "label": "Where",
+          "value": "Kern's, 2201 Kern's Rising Way"
+        },
+        {
+          "label": "The Ultimate Tailgate",
+          "value": "$300 per game · up to 20 guests · lawn patio section"
+        },
+        {
+          "label": "Includes",
+          "value": "TV, two couches, two cocktail tables, canopy, signage, a parking spot"
+        },
+        {
+          "label": "The Fan Zone",
+          "value": "$2,500 · up to 75 guests · the UpTop small rooftop patio"
+        },
+        {
+          "label": "Booking",
+          "value": "Signed agreement, 25% deposit, final count 14 days out"
+        },
+        {
+          "label": "Saturday hours",
+          "value": "8 AM – 11 PM"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Kern's has decided what it wants to be on a Tennessee Saturday, and unusually for this kind of thing, it has put the numbers on its own website rather than making you email somebody."
+        },
+        {
+          "type": "subhead",
+          "text": "What the money buys"
+        },
+        {
+          "type": "paragraph",
+          "text": "Three hundred dollars a game reserves a private section of the lawn patio for up to twenty people: a television, two couches, two cocktail tables, a canopy over the top, a sign with your name on it, and — the detail that will actually decide it for some families — a parking spot. Twenty-five hundred takes the small rooftop patio upstairs for as many as seventy-five, with the boundaries and signage handled. Catering and drink packages are added on top, redeemable at the bar."
+        },
+        {
+          "type": "subhead",
+          "text": "Who this is honestly for"
+        },
+        {
+          "type": "paragraph",
+          "text": "Not the couple looking for a table. These are group packages with a signed agreement, a quarter of it down at booking, and a final headcount due two weeks ahead, which puts Saturday's game past the deadline already. It's built for the birthday, the reunion, the office. If that's the autumn you're planning, the prices being public is a real kindness."
+        },
+        {
+          "type": "subhead",
+          "text": "And if you just want to turn up"
+        },
+        {
+          "type": "paragraph",
+          "text": "You still can. The hall is open eight in the morning to eleven at night on Saturday, the vendors are all running, and nobody charges you to walk in and find a screen. The packages are the upgrade, not the price of admission."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Kern's Bakery — football watch parties (packages and pricing)",
+          "url": "https://kernsbakery.com/football-watch-parties/"
+        },
+        {
+          "label": "Kern's Bakery — public events and hall hours",
+          "url": "https://kernsbakery.com/public-events/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-05T08:00:00-04:00",
+        "endDate": "2026-09-05T23:00:00-04:00",
+        "locationName": "Kern's Food Hall",
+        "locationAddress": "2201 Kern's Rising Way"
+      },
+      "social": {
+        "igTags": [
+          "kerns"
+        ],
+        "igBanner": [
+          "Game day rooms at Kern's",
+          "Three hundred dollars, twenty people"
+        ]
+      }
+    },
+    {
+      "id": "playscape-storytelling",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/playscape_september.jpg",
+      "imageCaption": "Ten to noon, in the shade",
+      "title": "Somebody reads out loud under the trees at the Ijams Nature Playscape on Saturday morning, and it's free",
+      "deck": "Two hours at the Playscape out by Mead's Quarry — a story in a shady spot, sometimes a hands-on nature project, and small kids otherwise left to roam. On a 95-degree Saturday, the morning shade is the point.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Sep 5 · 10 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Playscape at Grayson Subaru Preserve · 3518 Island Home Pike"
+        },
+        {
+          "label": "Cost",
+          "value": "Free"
+        },
+        {
+          "label": "Ages",
+          "value": "Small children and whoever brought them"
+        },
+        {
+          "label": "How often",
+          "value": "Every Saturday morning"
+        },
+        {
+          "label": "Why this Saturday",
+          "value": "It's done by noon — hours before kickoff scrambles the roads"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The Ijams Nature Playscape is out at Mead's Quarry: logs and stumps and dirt arranged so a four-year-old can climb the entire thing without anybody having to say the word playground. Every Saturday from ten to noon somebody sits down in a shady spot out there and reads a story out loud."
+        },
+        {
+          "type": "subhead",
+          "text": "What actually happens"
+        },
+        {
+          "type": "paragraph",
+          "text": "Some weeks a hands-on, nature-inspired project comes with it. Other weeks the story finishes and the kids simply go — dig, climb, roam, meet somebody. Both versions work. Bring a blanket if you want to sit down; bring nothing if you don't."
+        },
+        {
+          "type": "subhead",
+          "text": "The timing is the gift this week"
+        },
+        {
+          "type": "paragraph",
+          "text": "Saturday is forecast near 95 and the roads start filling around midday. This runs in the shade, in the cool half of the day, costs nothing, and hands your morning back to you at noon with the whole afternoon still unspent. If you have small kids and a Saturday to fill, it is the easiest good decision on the page."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams — calendar of events (Storytelling at the Playscape, Sep 5)",
+          "url": "https://www.ijams.org/calendar-of-events"
+        },
+        {
+          "label": "National Weather Service Morristown — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.9457&lon=-83.9174"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-05T10:00:00-04:00",
+        "endDate": "2026-09-05T12:00:00-04:00",
+        "locationName": "Ijams Nature Playscape at Grayson Subaru Preserve",
+        "locationAddress": "3518 Island Home Pike"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Free storytime Saturday",
+          "Ten to noon, in the shade"
+        ]
+      }
+    },
+    {
+      "id": "hiwire-thursday",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/hiwire_taps.jpg",
+      "imageCaption": "Second floor, Barber Street",
+      "title": "Hi-Wire runs pint night on top of an all-day happy hour every Thursday",
+      "deck": "Two standing deals landing on the same day at 2020 Barber Street, in a taproom that takes the entire second floor — and, on a 97-degree Thursday, has air conditioning and a pinball machine.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Every Thursday · pint night + all-day happy hour"
+        },
+        {
+          "label": "Where",
+          "value": "Hi-Wire Brewing, 2020 Barber St"
+        },
+        {
+          "label": "Thursday hours",
+          "value": "3–10 PM"
+        },
+        {
+          "label": "On tap",
+          "value": "20 Hi-Wire taps, draft cocktails, slushies, wine, cider, non-alcoholic"
+        },
+        {
+          "label": "Food",
+          "value": "Order from Redbud Kitchen downstairs and carry it up"
+        },
+        {
+          "label": "Also",
+          "value": "Ping pong, foosball, Stern pinball, and two decks — one on the roof"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Hi-Wire's Knoxville taproom takes up the whole second floor of the building at 2020 Barber Street, a block off Sevier Avenue, and Thursday is the day it makes its strongest case: the standing pint night sits on top of an all-day happy hour, so the discount doesn't wait for an evening window."
+        },
+        {
+          "type": "subhead",
+          "text": "What's up there"
+        },
+        {
+          "type": "paragraph",
+          "text": "Twenty Hi-Wire taps, from flagships through sour and wild ales, plus draft cocktails, liquor slushies, wine, cider, and non-alcoholic options for whoever drove. Ping pong, foosball, and a Stern pinball machine. Ten thousand square feet, murals on every wall, and two outdoor decks — one covered, one on the roof with the view."
+        },
+        {
+          "type": "subhead",
+          "text": "Dinner solves itself"
+        },
+        {
+          "type": "paragraph",
+          "text": "There's no kitchen upstairs and there doesn't need to be. You order from Redbud Kitchen on the ground floor, they text you, you carry it back up. Outside food is welcome too, just not outside drinks. Doors at three, last call at ten."
+        },
+        {
+          "type": "subhead",
+          "text": "A note on the roof deck"
+        },
+        {
+          "type": "paragraph",
+          "text": "Thursday's forecast high is near 97. The rooftop is the best seat in the building for about eleven months of the year, and this is not one of those days until the sun is well down — the indoor floor is enormous, and that is where the pinball is anyway. Hi-Wire's Knoxville events page still wasn't loading anything publicly as of Tuesday, so a one-off on their calendar may not be visible; the hours and the standing Thursday deals above come from the taproom's own page."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Hi-Wire Brewing — Knoxville taproom (hours, taps, features)",
+          "url": "https://hiwirebrewing.com/knoxville/"
+        },
+        {
+          "label": "Visit Knoxville — Thursday Pint Night at Hi-Wire Brewing Knoxville",
+          "url": "https://www.visitknoxville.com/event/thursday-pint-night-@-hi-wire-brewing-knoxville/27266/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-03T15:00:00-04:00",
+        "endDate": "2026-09-03T22:00:00-04:00",
+        "locationName": "Hi-Wire Brewing Knoxville",
+        "locationAddress": "2020 Barber St"
+      },
+      "social": {
+        "igTags": [
+          "hiwire"
+        ],
+        "igBanner": [
+          "Pint night at Hi-Wire",
+          "Thursday, all-day happy hour too"
+        ]
+      }
+    },
+    {
+      "id": "trailhead-trivia",
+      "label": "Urban Wilderness",
+      "labelColor": "ink",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/trailhead_trivia.jpg",
+      "imageCaption": "Seven o'clock, Island Home Avenue",
+      "title": "Free trivia every Thursday at Trailhead Beer Market, at the edge of the Urban Wilderness",
+      "deck": "The Knox Trivia Guys run the game at seven on Island Home Avenue, in a beer market that sits between the river and seventy miles of trail. No cover, no team required, and the air conditioning is free too.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Every Thursday · 7 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Trailhead Beer Market · 1317 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "Free to play"
+        },
+        {
+          "label": "Host",
+          "value": "The Knox Trivia Guys"
+        },
+        {
+          "label": "Food",
+          "value": "The Gato Peligroso truck is the standby"
+        },
+        {
+          "label": "Setting",
+          "value": "On the river, in the back yard of the Urban Wilderness and Ijams Park"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Trailhead Beer Market was South Knoxville's first beer market, and its whole identity is in the name: it sits on the bank of the Tennessee River at 1317 Island Home Avenue, in the back yard of both Ijams Park and the roughly seventy miles of trail that make up the Urban Wilderness. People arrive on bikes still wearing the dust."
+        },
+        {
+          "type": "subhead",
+          "text": "The Thursday game"
+        },
+        {
+          "type": "paragraph",
+          "text": "Every Thursday at seven the Knox Trivia Guys set up and run a round. It costs nothing to play, you do not need to arrive with a full team, and the format rewards the person who knows one strange thing very well over the person who knows everything a little. Communal tables, a full bar, and the Gato Peligroso truck handling food."
+        },
+        {
+          "type": "subhead",
+          "text": "Why we're putting it here this week"
+        },
+        {
+          "type": "paragraph",
+          "text": "Thursday's high is forecast near 97, which rules out most of what this end of South Knoxville is good for until the sun goes down. A free, indoor, seven-o'clock reason to leave the house is worth more than usual on a day like that — and if the heat does break for an hour, the water is right there."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Knox Trivia Guys — Thursday trivia at Trailhead Beer Market, 7 PM",
+          "url": "https://www.facebook.com/knoxtriviaguys/"
+        },
+        {
+          "label": "Visit Knoxville — Trailhead Beer Market",
+          "url": "https://www.visitknoxville.com/listing/trailhead-beer-market/1966/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-03T19:00:00-04:00",
+        "endDate": "2026-09-03T21:00:00-04:00",
+        "locationName": "Trailhead Beer Market",
+        "locationAddress": "1317 Island Home Ave"
+      },
+      "social": {
+        "igTags": [
+          "trailhead"
+        ],
+        "igBanner": [
+          "Free trivia Thursday",
+          "Seven o'clock at Trailhead"
+        ]
+      }
+    },
+    {
+      "id": "specials-board",
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/specials_chalk_sept.jpg",
+      "imageCaption": "The week, in chalk",
+      "title": "The specials board: a different deal every day at Earl's",
+      "deck": "Down where Suttree Landing meets the river, Earl's runs its own weekly ladder — a new special every afternoon, two all-day ones once the weekend lands, and a fifth rung this week because Monday is a holiday.",
+      "facts": [
+        {
+          "label": "Thu",
+          "value": "$10 Patrón mango ritas · 4–6 PM · $1 off liquor, beer & wine"
+        },
+        {
+          "label": "Fri",
+          "value": "$9 spicy pineapple ritas · 4–6 PM · $1 off liquor, beer & wine"
+        },
+        {
+          "label": "Sat",
+          "value": "$8 house margaritas · all day · 10:30 AM – 11 PM"
+        },
+        {
+          "label": "Sun",
+          "value": "$7 mimosas & Bloody Marys · all day · 10:30 AM – 10 PM"
+        },
+        {
+          "label": "Mon (Labor Day)",
+          "value": "$8 house margaritas · all day · $1 off liquor, beer & wine 4–6 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Earl's, 610 Waterfront Dr"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Earl's sits at 610 Waterfront Drive, down where Suttree Landing meets the water, and it runs a different special every single day. Thursday it's ten-dollar Patrón mango margaritas from four to six; Friday the same window gets nine-dollar spicy pineapple ones. Both days carry a dollar off liquor, beer and wine."
+        },
+        {
+          "type": "subhead",
+          "text": "Then the all-day rungs"
+        },
+        {
+          "type": "paragraph",
+          "text": "Saturday the clock goes away: eight-dollar house margaritas all day, doors 10:30 to 11. Sunday is seven-dollar mimosas and Bloody Marys, also all day, until ten. It's a straight walk down from Sevier Avenue, the tables face open water, and the river handles the entertainment."
+        },
+        {
+          "type": "subhead",
+          "text": "The extra day"
+        },
+        {
+          "type": "paragraph",
+          "text": "Labor Day falls on Monday the 7th, and Margarita Monday is a standing fixture rather than a holiday special — eight-dollar house margaritas all day, with the dollar-off window from four to six. If the weekend gets eaten by the traffic on Saturday, the deal is still there when everyone has gone home."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Earl's Knoxville — specials",
+          "url": "https://earlsknox.com/specials"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-03T16:00:00-04:00",
+        "endDate": "2026-09-03T18:00:00-04:00",
+        "locationName": "Earl's",
+        "locationAddress": "610 Waterfront Dr"
+      },
+      "social": {
+        "igTags": [
+          "earls"
+        ],
+        "igBanner": [
+          "The SoKno Specials Board",
+          "A different deal every day"
+        ]
+      }
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen — the Vols' home opener and the traffic plan that points south, a hundred thousand bats at Ijams Park, All Dogs Go to Heaven on the lawn, free trivia on Island Home, and three days near a hundred degrees.",
+      "duration": "05:20",
+      "src": "/audio/2026-09-02.mp3"
+    },
+    "calendar": [
+      {
+        "month": "SEP",
+        "day": "3",
+        "title": "Ijams After Dark: All About Bats",
+        "meta": "8–9:30 PM · $15 · ages 10+ · registration required",
+        "starred": true,
+        "href": "#ijams-bats"
+      },
+      {
+        "month": "SEP",
+        "day": "3",
+        "title": "Pint night at Hi-Wire",
+        "meta": "All-day happy hour too · 2020 Barber St",
+        "href": "#hiwire-thursday"
+      },
+      {
+        "month": "SEP",
+        "day": "3",
+        "title": "Trivia at Trailhead Beer Market",
+        "meta": "7 PM · free · 1317 Island Home Ave",
+        "href": "#trailhead-trivia"
+      },
+      {
+        "month": "SEP",
+        "day": "3",
+        "title": "Earl's — $10 Patrón ritas",
+        "meta": "4–6 PM · 610 Waterfront Dr",
+        "href": "#specials-board"
+      },
+      {
+        "month": "SEP",
+        "day": "4",
+        "title": "Movies Under the Stars: All Dogs Go to Heaven",
+        "meta": "Doors 7 PM · film ~8:30 · $12 · Ijams Park",
+        "starred": true,
+        "href": "#all-dogs-movie"
+      },
+      {
+        "month": "SEP",
+        "day": "4",
+        "title": "Earl's — $9 spicy pineapple ritas",
+        "meta": "4–6 PM · 610 Waterfront Dr",
+        "href": "#specials-board"
+      },
+      {
+        "month": "SEP",
+        "day": "5",
+        "title": "Storytelling at the Nature Playscape",
+        "meta": "10 AM – noon · free · Mead's Quarry",
+        "href": "#playscape-storytelling"
+      },
+      {
+        "month": "SEP",
+        "day": "5",
+        "title": "VOLS HOME OPENER vs. FURMAN",
+        "meta": "3:30 PM · Neyland · new traffic pattern debuts",
+        "starred": true,
+        "href": "#gameday-south"
+      },
+      {
+        "month": "SEP",
+        "day": "5",
+        "title": "Game day sections at Kern's",
+        "meta": "$300 lawn · $2,500 rooftop · hall open 8 AM–11 PM",
+        "href": "#kerns-watch-parties"
+      },
+      {
+        "month": "SEP",
+        "day": "5",
+        "title": "Puckers' first Vols Saturday",
+        "meta": "115 Mimosa Ave · call ahead, hours unposted",
+        "href": "#puckers-first-gameday"
+      },
+      {
+        "month": "SEP",
+        "day": "5",
+        "title": "Earl's — $8 house margaritas",
+        "meta": "All day · 610 Waterfront Dr",
+        "href": "#specials-board"
+      },
+      {
+        "month": "SEP",
+        "day": "6",
+        "title": "Earl's — $7 mimosas & Bloody Marys",
+        "meta": "All day · 610 Waterfront Dr",
+        "href": "#specials-board"
+      },
+      {
+        "month": "SEP",
+        "day": "7",
+        "title": "Labor Day — Earl's $8 house margaritas",
+        "meta": "All day · 610 Waterfront Dr",
+        "href": "#specials-board"
+      }
+    ]
+  }
+}
