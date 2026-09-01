@@ -202,8 +202,8 @@
       ],
       "hot": true,
       "image": "/assets/spots/puckers_gameday.jpg",
-      "title": "Puckers' first game day",
-      "blurb": "Ten days open on Blount Avenue, and Saturday at 3:30 is the test it opened for. Doors at nine.",
+      "title": "A patio pointed at the stadium",
+      "blurb": "Puckers' first Vols Saturday. Neyland across the water, the walking crowd out front, and brunch from nine — book on Resy.",
       "cue": "Jump to story",
       "href": "#puckers-first-gameday"
     },
@@ -480,8 +480,8 @@
       "layout": "imageRight",
       "image": "/assets/spots/puckers_gameday.jpg",
       "imageCaption": "Ten days open, and here comes the first one",
-      "title": "Puckers gets its first Vols Saturday, ten days after opening on Blount Avenue",
-      "deck": "The sports grill that took the old Mimosas room calls itself the game day headquarters in its own profile. Saturday at 3:30 is the first time anyone gets to find out whether the room can do it.",
+      "title": "Puckers gets its first Vols Saturday, and the patio looks straight across at the stadium",
+      "deck": "The sports grill that took the old Mimosas room calls itself a game day headquarters, and the geography backs it up: from the patio you can see Neyland across the river, and the walking crowd goes right past. Reservations are open on Resy.",
       "facts": [
         {
           "label": "Where",
@@ -500,42 +500,50 @@
           "value": "Kennedy Concepts, who have run Puckers in Gatlinburg since 1999"
         },
         {
-          "label": "Still on the menu",
-          "value": "The Mimosas brunch dishes"
-        },
-        {
           "label": "Hours",
           "value": "Mon–Fri 11 AM–9 PM · Sat 9 AM–10 PM · Sun 9 AM–9 PM"
+        },
+        {
+          "label": "Parking",
+          "value": "Decks on the far side of the building"
+        },
+        {
+          "label": "Reservations",
+          "value": "On Resy — worth it for Saturday brunch"
+        },
+        {
+          "label": "Still on the menu",
+          "value": "The Mimosas brunch dishes"
         }
       ],
       "body": [
         {
           "type": "paragraph",
-          "text": "Ten days ago the room at 115 Mimosa Ave, a few hundred yards off Blount Avenue, stopped being Mimosas and became Puckers Sports Grill. We wrote then that the four quiet days that followed were the last ones the building would get before it had to prove itself on a game day. That game day is Saturday."
+          "text": "Ten days ago the room at 115 Mimosa Ave, a few hundred yards off Blount Avenue, stopped being Mimosas and became Puckers Sports Grill. We wrote then that the quiet days after it opened were the last ones the building would get before a game day. That game day is Saturday, and the room is better positioned for it than a new arrival has any right to be."
         },
         {
           "type": "subhead",
-          "text": "The claim they are making"
+          "text": "They have done this a long time"
         },
         {
           "type": "paragraph",
-          "text": "Their own Instagram profile describes the place, without hedging, as your game day headquarters — chef-driven food and cold drinks, now open in South Knoxville. That is a large thing to put in a bio ten days after unlocking the doors, and Saturday at 3:30 is when the sentence gets tested."
+          "text": "Puckers isn't a new idea being tried out on us. Kennedy Concepts has run the original on the Parkway in Gatlinburg since 1999, and it is a genuinely good version of the form — the wings are worth ordering, the screens are placed so you can actually watch from anywhere, and the service is quick and friendly in a way sports bars often are not. It is a room dressed to be noticed. The Knoxville version is pitched as the grown-up edit of that: chef-driven plates and a real cocktail list attached to the same instincts."
         },
         {
           "type": "subhead",
-          "text": "Why this address, specifically"
+          "text": "The patio is the argument"
         },
         {
           "type": "paragraph",
-          "text": "Geography is doing a lot of the work here. The building sits close enough to Neyland that the stadium is audible from the parking lot, on the near side of the river from a hundred thousand people who all need somewhere to be. A first home game against Furman is the friendliest possible trial run: a full house, a 3:30 start, and very little chance of the room going quiet and tense in the fourth quarter."
+          "text": "Stand up on the patio and Neyland is right there across the water — close enough that the stadium is part of the view rather than a landmark you go looking for. Better than that, this is on the path. The crowd on foot comes up Chapman Highway and over the Henley Street Bridge, so the whole procession passes in front of you: the orange, the coolers, the slow drift toward kickoff. Watching a hundred thousand people walk to a game, from a chair, with a drink, is its own afternoon — and it is available whether or not you have a ticket."
         },
         {
           "type": "subhead",
-          "text": "The practical caveat"
+          "text": "Saturday morning is the move"
         },
         {
           "type": "paragraph",
-          "text": "They open at nine on Saturday and run to ten, so there is a long morning available before kickoff and no rush to clear out afterwards — the weekend hours start early enough for brunch, which is the part of the old room that carried over. Weekdays are eleven to nine, and Sunday is nine to nine. Assume everyone else has also worked out that the building is walking distance from the noise."
+          "text": "Doors open at nine on Saturday and stay open until ten at night, which puts a long, unhurried brunch in front of a 3:30 kickoff. The Mimosas brunch dishes people actually turned up for kept their place on the menu, so that part of the old room survives intact. They are taking reservations through Resy, and for a first home game with a nine o'clock open, booking one is the obvious move rather than an optional refinement. Weekdays are eleven to nine, Sunday nine to nine."
         }
       ],
       "sources": [
@@ -544,15 +552,15 @@
           "url": "https://www.instagram.com/puckersknoxville/"
         },
         {
+          "label": "Reservations — Puckers Knoxville on Resy",
+          "url": "https://resy.com/cities/knoxville-tn/venues/puckers-knoxville"
+        },
+        {
           "label": "Puckers Sports Grill (Gatlinburg) — the original",
           "url": "https://puckersgatlinburg.com/about/"
         },
         {
-          "label": "Rocky Top Insider — kickoff time for the Furman opener",
-          "url": "https://www.rockytopinsider.com/2026/05/27/kickoff-time-announced-for-tennessee-football-season-opener-against-furman/"
-        },
-        {
-          "label": "Knoxville hours confirmed by A. Roberts"
+          "label": "Knoxville hours, and firsthand notes on both rooms — A. Roberts"
         }
       ],
       "event": {
@@ -567,7 +575,7 @@
         ],
         "igBanner": [
           "Puckers' first game day",
-          "Saturday at 3:30 on Blount"
+          "The patio looks at the stadium"
         ]
       }
     },
@@ -1022,7 +1030,7 @@
       "title": "Weekend Audio Briefing",
       "intro": "What's happening in SoKno this weekend.",
       "description": "Your weekend listen — a hundred thousand bats at Ijams Park, All Dogs Go to Heaven on the lawn, free storytime in the shade, free trivia at Trailhead, and three days near a hundred degrees. The home opener is in the written piece.",
-      "duration": "03:28",
+      "duration": "03:59",
       "src": "/audio/2026-09-02.mp3"
     },
     "calendar": [
@@ -1096,7 +1104,7 @@
         "month": "SEP",
         "day": "5",
         "title": "Puckers' first Vols Saturday",
-        "meta": "115 Mimosa Ave · open 9 AM–10 PM Saturday",
+        "meta": "115 Mimosa Ave · open 9 AM · Resy reservations",
         "href": "#puckers-first-gameday"
       },
       {
