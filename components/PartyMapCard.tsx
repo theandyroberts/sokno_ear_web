@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import { createPortal } from "react-dom";
 
 // Sidebar card + lightbox for Andy's "Party in the Dirty South" festive map.
 // The /dirtysouthparty page frames the same map in acid green; here on the main
@@ -19,6 +20,8 @@ const bandStyle: React.CSSProperties = {
 
 export function PartyMapCard() {
   const [open, setOpen] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
+  React.useEffect(() => setMounted(true), []);
 
   React.useEffect(() => {
     if (!open) return;
@@ -47,7 +50,10 @@ export function PartyMapCard() {
         Tap the map to zoom, or see <a href="/party" style={{ color: "var(--rust)", fontWeight: 700 }}>the night-by-night plan</a>.
       </p>
 
-      {open && (
+      {/* Portaled to <body>: the sidebar holding this card is position:sticky, which
+          creates a stacking context and would trap a fixed overlay beneath the scanner
+          cards no matter how high its z-index went. */}
+      {open && mounted && createPortal(
         <div
           role="dialog"
           aria-modal="true"
@@ -89,7 +95,8 @@ export function PartyMapCard() {
           >
             ✕ Close
           </button>
-        </div>
+        </div>,
+        document.body,
       )}
     </section>
   );
