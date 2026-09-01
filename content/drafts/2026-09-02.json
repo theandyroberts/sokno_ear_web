@@ -203,7 +203,7 @@
       "hot": true,
       "image": "/assets/spots/puckers_gameday.jpg",
       "title": "Puckers' first game day",
-      "blurb": "Ten days open on Blount Avenue, and Saturday at 3:30 is the test it opened for.",
+      "blurb": "Ten days open on Blount Avenue, and Saturday at 3:30 is the test it opened for. Doors at nine.",
       "cue": "Jump to story",
       "href": "#puckers-first-gameday"
     },
@@ -229,7 +229,7 @@
       "hot": false,
       "image": "/assets/spots/kerns_watchparty.jpg",
       "title": "A game day room, priced in public",
-      "blurb": "$300 puts twenty people on the lawn with a TV and a parking spot. Walking in is still free.",
+      "blurb": "$300 puts twenty people on the lawn with a TV and a canopy. Walking in is still free.",
       "cue": "Jump to story",
       "href": "#kerns-watch-parties"
     },
@@ -504,8 +504,8 @@
           "value": "The Mimosas brunch dishes"
         },
         {
-          "label": "Before you go",
-          "value": "Knoxville hours still aren't posted — call ahead"
+          "label": "Hours",
+          "value": "Mon–Fri 11 AM–9 PM · Sat 9 AM–10 PM · Sun 9 AM–9 PM"
         }
       ],
       "body": [
@@ -519,7 +519,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Their own Instagram profile describes the place, without hedging, as your game day headquarters — chef-driven food and cold drinks, now open in South Knoxville. That is a large thing to put in a bio nine days after unlocking the doors, and Saturday at 3:30 is when the sentence gets tested."
+          "text": "Their own Instagram profile describes the place, without hedging, as your game day headquarters — chef-driven food and cold drinks, now open in South Knoxville. That is a large thing to put in a bio ten days after unlocking the doors, and Saturday at 3:30 is when the sentence gets tested."
         },
         {
           "type": "subhead",
@@ -535,7 +535,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Posted hours for the Knoxville location still weren't up as of Tuesday, and the Gatlinburg original runs 11 AM to 1 AM daily, which may or may not be the plan here. If you are building a Saturday around getting a table before kickoff, call first — and assume everyone else had the same idea."
+          "text": "They open at nine on Saturday and run to ten, so there is a long morning available before kickoff and no rush to clear out afterwards — the weekend hours start early enough for brunch, which is the part of the old room that carried over. Weekdays are eleven to nine, and Sunday is nine to nine. Assume everyone else has also worked out that the building is walking distance from the noise."
         }
       ],
       "sources": [
@@ -550,6 +550,9 @@
         {
           "label": "Rocky Top Insider — kickoff time for the Furman opener",
           "url": "https://www.rockytopinsider.com/2026/05/27/kickoff-time-announced-for-tennessee-football-season-opener-against-furman/"
+        },
+        {
+          "label": "Knoxville hours confirmed by A. Roberts"
         }
       ],
       "event": {
@@ -579,7 +582,7 @@
       "image": "/assets/spots/kerns_watchparty.jpg",
       "imageCaption": "The lawn patio, sectioned off",
       "title": "Kern's will rent you a private game day section on Saturday, and it has published the price",
-      "deck": "Three hundred dollars gets twenty people a canopy, a television, two couches and a parking spot on the lawn. Twenty-five hundred takes the small rooftop for seventy-five. The rest of the food hall is still free to walk into.",
+      "deck": "Three hundred dollars gets twenty people a canopy, a television and two couches on the lawn. Twenty-five hundred takes the small rooftop for seventy-five. The rest of the food hall is still free to walk into.",
       "facts": [
         {
           "label": "Where",
@@ -591,7 +594,7 @@
         },
         {
           "label": "Includes",
-          "value": "TV, two couches, two cocktail tables, canopy, signage, a parking spot"
+          "value": "TV, two couches, two cocktail tables, canopy, signage, one reserved space in the Kern's lot"
         },
         {
           "label": "The Fan Zone",
@@ -617,7 +620,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Three hundred dollars a game reserves a private section of the lawn patio for up to twenty people: a television, two couches, two cocktail tables, a canopy over the top, a sign with your name on it, and — the detail that will actually decide it for some families — a parking spot. Twenty-five hundred takes the small rooftop patio upstairs for as many as seventy-five, with the boundaries and signage handled. Catering and drink packages are added on top, redeemable at the bar."
+          "text": "Three hundred dollars a game reserves a private section of the lawn patio for up to twenty people: a television, two couches, two cocktail tables, a canopy over the top, a sign with your name on it, and one reserved space in the Kern's lot — that is a space at Kern's, for getting to Kern's, and has nothing to do with parking at the stadium. Twenty-five hundred takes the small rooftop patio upstairs for as many as seventy-five, with the boundaries and signage handled. Catering and drink packages are added on top, redeemable at the bar."
         },
         {
           "type": "subhead",
@@ -1018,8 +1021,8 @@
     "audio": {
       "title": "Weekend Audio Briefing",
       "intro": "What's happening in SoKno this weekend.",
-      "description": "Your weekend listen — the Vols' home opener and the ten-dollar shuttle you can walk to, a hundred thousand bats at Ijams Park, All Dogs Go to Heaven on the lawn, free trivia at Trailhead, and three days near a hundred degrees.",
-      "duration": "06:07",
+      "description": "Your weekend listen — a hundred thousand bats at Ijams Park, All Dogs Go to Heaven on the lawn, free storytime in the shade, free trivia at Trailhead, and three days near a hundred degrees. The home opener is in the written piece.",
+      "duration": "03:28",
       "src": "/audio/2026-09-02.mp3"
     },
     "calendar": [
@@ -1093,7 +1096,7 @@
         "month": "SEP",
         "day": "5",
         "title": "Puckers' first Vols Saturday",
-        "meta": "115 Mimosa Ave · call ahead, hours unposted",
+        "meta": "115 Mimosa Ave · open 9 AM–10 PM Saturday",
         "href": "#puckers-first-gameday"
       },
       {
