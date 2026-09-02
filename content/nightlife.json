@@ -1,7 +1,7 @@
 {
   "_flow": "Each day reads as the night's arc: happy hour → dinner → events/concerts/comedy/drink specials → the closing-time hang. Bars, restaurants, music venues only.",
-  "updated": "2026-08-26",
-  "weekend": "Aug 27–30",
+  "updated": "2026-09-02",
+  "weekend": "Sep 3–6",
   "days": {
     "Thu": [
       {
@@ -10,7 +10,7 @@
         "venue": "Hi-Wire · Barber St",
         "headline": "All-day happy hour, then $4 pint night",
         "sub": "The Thursday stack — happy hour till close",
-        "href": "/2026-08-26/hiwire-thursday",
+        "href": "/2026-09-02/hiwire-thursday",
         "cat": "drink"
       },
       {
@@ -26,7 +26,7 @@
         "id": "thu-dumplings",
         "time": "6:00 PM",
         "venue": "Angry Dumplings · 1119 Sevier Ave",
-        "headline": "Dumpling dinner before the show",
+        "headline": "Dumpling dinner",
         "sub": "Noodles, buns & tea · kitchen till 9",
         "href": "https://www.toasttab.com/local/angry-dumpling-and-sweet-tea-1119-sevier-avenue-suite-a/r-9f107372-6885-42c9-8d45-6f92af96f2c2",
         "cat": "food"
@@ -36,17 +36,8 @@
         "time": "7:00 PM",
         "venue": "Trailhead Beer Market · 1317 Island Home Ave",
         "headline": "Free trivia on the river",
-        "sub": "Urban Wilderness backyard · beers till 11",
-        "href": "https://www.instagram.com/trailheadbeermarket/",
-        "cat": "star"
-      },
-      {
-        "id": "thu-rooftop",
-        "time": "7:00 PM",
-        "venue": "Kern's Food Hall rooftop",
-        "headline": "Bourbon, cigars & seersucker",
-        "sub": "Sundresses & Seersuckers · $40 · till 9 · dress the part",
-        "href": "/2026-08-26/kerns-rooftop",
+        "sub": "Past the traffic circle, one block · beers till 11",
+        "href": "/2026-09-02/trailhead-trivia",
         "cat": "star"
       },
       {
@@ -62,7 +53,7 @@
         "id": "thu-southside",
         "time": "9:30 PM",
         "venue": "SouthSide Garage · 1014 Sevier Ave",
-        "headline": "Watch the moon from the beer garden",
+        "headline": "Beer garden + food trucks to land at",
         "sub": "Patio games & local taps till 11 · Alliance till 11 too",
         "href": "https://southsidegarageknox.com/",
         "cat": "drink"
@@ -91,9 +82,9 @@
         "id": "fri-puckers",
         "time": "6:00 PM",
         "venue": "Puckers Sports Grill · 115 Mimosa Ave",
-        "headline": "First weekend of Puckers",
-        "sub": "The Mimosas room reborn — wall of TVs, chef-driven grill",
-        "href": "/2026-08-26/puckers-opens",
+        "headline": "Eve of gameday at Puckers",
+        "sub": "Kickoff tomorrow 3:30 — the wall of TVs warms up tonight",
+        "href": "/2026-09-02/puckers-first-gameday",
         "cat": "food"
       },
       {
@@ -126,30 +117,39 @@
     ],
     "Sat": [
       {
+        "id": "sat-puckers",
+        "time": "9:00 AM",
+        "venue": "Puckers Sports Grill · 115 Mimosa Ave",
+        "headline": "Brunch and football — doors at 9",
+        "sub": "First Vols Saturday · patio faces the stadium · Resy or walk in · kickoff 3:30",
+        "href": "/2026-09-02/puckers-first-gameday",
+        "cat": "food"
+      },
+      {
         "id": "sat-earls",
         "time": "ALL DAY",
         "venue": "Earl's · 610 Waterfront Dr",
         "headline": "$8 house margaritas, no clock",
-        "sub": "Doors 10:30 AM to 11 PM · river seats go first",
+        "sub": "Doors 10:30 AM to 11 PM · river seats through the game",
         "href": "https://earlsknox.com/specials",
         "cat": "drink"
+      },
+      {
+        "id": "sat-kerns",
+        "time": "11:00 AM",
+        "venue": "Kern's Food Hall",
+        "headline": "Game day at the old bakery",
+        "sub": "Watch parties all day · rentable sections $300 lawn, $2,500 rooftop · hall 8 AM–11 PM",
+        "href": "/2026-09-02/kerns-watch-parties",
+        "cat": "star"
       },
       {
         "id": "sat-soknotaco",
         "time": "5:00 PM",
         "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
-        "headline": "Tacos before the night shift",
+        "headline": "Post-game tacos & ritas",
         "sub": "Kitchen till 11 Saturdays",
         "href": "https://soknota.co/",
-        "cat": "food"
-      },
-      {
-        "id": "sat-puckers",
-        "time": "6:00 PM",
-        "venue": "Puckers Sports Grill · 115 Mimosa Ave",
-        "headline": "First Saturday in the game-day room",
-        "sub": "Every screen on · a few hundred yards off Blount Ave",
-        "href": "/2026-08-26/puckers-opens",
         "cat": "food"
       },
       {
@@ -174,7 +174,7 @@
         "id": "sat-pinkcactus",
         "time": "10:30 PM",
         "venue": "The Pink Cactus · 1147 Sevier Ave",
-        "headline": "Karaoke rooms till 1 AM",
+        "headline": "Victory karaoke till 1 AM",
         "sub": "Reserve online — Saturday fills first · 21+ after 9",
         "href": "https://www.thepinkcactusknox.com/",
         "cat": "mic"
@@ -203,9 +203,9 @@
         "id": "sun-puckers",
         "time": "12:00 PM",
         "venue": "Puckers Sports Grill · 115 Mimosa Ave",
-        "headline": "First Sunday on the screens",
-        "sub": "The game-day room, broken in properly",
-        "href": "/2026-08-26/puckers-opens",
+        "headline": "Sunday on the screens",
+        "sub": "The game-day room, day two of the habit",
+        "href": "/2026-09-02/puckers-first-gameday",
         "cat": "food"
       },
       {
