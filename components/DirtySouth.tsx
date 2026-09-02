@@ -283,13 +283,28 @@ export function DirtySouth({
             onClick={() => setMapOpen(true)}
             className={fontClass}
             style={{
-              display: "inline-block", margin: "4px 0 10px", padding: "8px 14px",
+              display: "inline-flex", alignItems: "center", gap: 12,
+              margin: "4px 0 10px", padding: 6, paddingRight: 16,
               fontSize: "1rem", textTransform: "uppercase", cursor: "pointer",
               border: `3px solid ${INK}`, background: "transparent", color: INK,
-              transform: "rotate(-0.8deg)",
+              transform: "rotate(-0.8deg)", textAlign: "left",
             }}
           >
-            ☛ Map of the territory
+            <img
+              src={mapSrc}
+              alt=""
+              aria-hidden="true"
+              style={{
+                width: 92, height: 60, objectFit: "cover", display: "block",
+                border: `2px solid ${INK}`, transform: "rotate(1.2deg)",
+              }}
+            />
+            <span style={{ display: "block" }}>
+              ☛ Map of the territory
+              <span style={{ display: "block", fontFamily: "var(--font-label)", fontSize: "0.64rem", letterSpacing: "0.12em", textTransform: "uppercase", marginTop: 2 }}>
+                Tap for the full map
+              </span>
+            </span>
           </button>
         )}
         <div style={{ height: 12 }} />
