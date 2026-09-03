@@ -103,19 +103,26 @@ if (doIg) {
 }
 
 // ── 3. Commit + push whatever changed ───────────────────────────────────────
-step("Committing");
-const dirty = DRY ? "dry" : run("git", ["status", "--porcelain"], { capture: true, stdio: "pipe" }).trim();
-if (dirty) {
+// Only the site and Instagram steps touch tracked files, so a newsletter- or
+// dsparty-only run has nothing to commit and nothing new to deploy.
+const doDeploy = doSite || doIg;
+if (doDeploy) {
+  step("Committing");
   run("git", ["add", "-A", "content", "public/assets/ig"]);
-  run("git", ["commit", "-m", `publish ${slug}${doIg ? " + Instagram assets" : ""}`]);
-  run("git", ["push", "origin", "main"]);
-} else {
-  console.log("  nothing to commit");
-}
+  // Judge dirtiness by what we actually staged — an untracked file elsewhere in
+  // the tree used to look like a change here and then fail on an empty commit.
+  const staged = DRY ? "dry" : run("git", ["diff", "--cached", "--name-only"], { capture: true, stdio: "pipe" }).trim();
+  if (staged) {
+    run("git", ["commit", "-m", `publish ${slug}${doIg ? " + Instagram assets" : ""}`]);
+    run("git", ["push", "origin", "main"]);
+  } else {
+    console.log("  nothing to commit");
+  }
 
-// ── 4. Deploy ───────────────────────────────────────────────────────────────
-step("Deploying");
-ssh(`bash ${REMOTE}/scripts/redeploy.sh`);
+  // ── 4. Deploy ─────────────────────────────────────────────────────────────
+  step("Deploying");
+  ssh(`bash ${REMOTE}/scripts/redeploy.sh`);
+}
 
 // ── 5. Queue + approve the Instagram drip ───────────────────────────────────
 if (doIg) {
