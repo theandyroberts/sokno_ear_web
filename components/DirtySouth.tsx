@@ -279,33 +279,37 @@ export function DirtySouth({
           the Urban Wilderness, the old Kern&apos;s Bakery. Come on over — if you dare.
         </p>
         {mapSrc && (
-          <button
-            onClick={() => setMapOpen(true)}
-            className={fontClass}
-            style={{
-              display: "inline-flex", alignItems: "center", gap: 12,
-              margin: "4px 0 10px", padding: 6, paddingRight: 16,
-              fontSize: "1rem", textTransform: "uppercase", cursor: "pointer",
-              border: `3px solid ${INK}`, background: "transparent", color: INK,
-              transform: "rotate(-0.8deg)", textAlign: "left",
-            }}
-          >
+          <div style={{ margin: "10px 0 12px", maxWidth: 440 }}>
+            {/* The snapshot itself opens the lightbox too. It's a duplicate of the
+                button below, so it stays out of the tab order and the a11y tree —
+                the labeled button is the one control screen readers see. */}
             <img
               src={mapSrc}
               alt=""
               aria-hidden="true"
+              onClick={() => setMapOpen(true)}
               style={{
-                width: 92, height: 60, objectFit: "cover", display: "block",
-                border: `2px solid ${INK}`, transform: "rotate(1.2deg)",
+                width: "100%", display: "block", cursor: "pointer",
+                border: `3px solid ${INK}`, boxShadow: `7px 7px 0 ${INK}`,
+                transform: "rotate(-1deg)",
               }}
             />
-            <span style={{ display: "block" }}>
+            <button
+              onClick={() => setMapOpen(true)}
+              className={fontClass}
+              style={{
+                display: "inline-block", margin: "16px 0 0", padding: "8px 14px",
+                fontSize: "1rem", textTransform: "uppercase", cursor: "pointer",
+                border: `3px solid ${INK}`, background: "transparent", color: INK,
+                transform: "rotate(0.6deg)", textAlign: "left",
+              }}
+            >
               ☛ Map of the territory
               <span style={{ display: "block", fontFamily: "var(--font-label)", fontSize: "0.64rem", letterSpacing: "0.12em", textTransform: "uppercase", marginTop: 2 }}>
                 Tap for the full map
               </span>
-            </span>
-          </button>
+            </button>
+          </div>
         )}
         <div style={{ height: 12 }} />
 
