@@ -79,6 +79,39 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
   of the article. Use the `agenda` block (time → activity rows) for event schedules
   when the times are definitively sourced.
 
+## Instagram banners — the card has to travel alone
+
+When a venue reshares one of our posts to their story, **Instagram carries the image
+and drops the caption.** So an @-tag in the caption earns us nothing on a reshare —
+every fact that makes the card worth resharing has to be in the band. Of the first
+52 banners, 11 tagged a venue the artwork never named; the specials board did it on
+all six runs.
+
+Two lines, `social.igBanner`:
+
+- **Line 1** (PT Serif) — the event. **Name the venue here** wherever the sentence
+  will carry it: *"Pint night at Hi-Wire," "Game day rooms at Kern's," "Free
+  storytime at Ijams Park."*
+- **Line 2** (Special Elite caps) — **the day, and the time.** *"Saturday, ten to
+  noon." "Thursday, all-day happy hour too."*
+
+The venue may sit on line 2 instead when line 1 reads better without it (*"Free
+trivia Thursday" / "Seven o'clock at Trailhead"*) — the card travels whole, so
+either line counts. What must never happen is neither line naming it.
+
+House style still applies inside the band: **"Ijams Park," never bare "Ijams."**
+
+`scripts/ig-queue.mjs` warns at approval time when a banner names no tagged venue,
+or when a dated item carries no day or time. Genuine exceptions — a multi-venue
+roundup like the specials board, or an org co-presenter tagged beside the real
+venue — opt out with `social.igBannerSkipCheck: true`.
+
+**No venue logos on banners.** The mark stays in `content/venues.json` for page use.
+Every logo in that registry carries at least one off-palette brand color (Puckers is
+bright green and fire-engine red; even the ink-recolored Hi-Wire SVG keeps `#00b5f0`),
+and a card carrying a venue's brand mark reads as an ad *made for* them rather than
+coverage *about* them. The venue's name in our own type does the same job.
+
 ## SoKno locations (the pill vocabulary)
 
 Story **labels are geographic location pills** — make them accurate. Keep one color per
