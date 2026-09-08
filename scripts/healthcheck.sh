@@ -39,12 +39,16 @@ if out=$(check 2>&1); then
 fi
 
 echo "$(ts) FAIL: $out" >> "$LOG"
-bash scripts/sync-standalone.sh >/dev/null 2>&1 || true
+# Self-heal is a reload onto the `current` release, which is immutable and was
+# preflighted before it went live — so a reload always lands on a complete app.
+# (The old heal re-synced .next/standalone and reloaded; fired mid-build on Sep 8,
+# it restarted PM2 into a half-deleted directory and turned a blip into a crash
+# loop. Never point the heal at a directory a build can be rewriting.)
 pm2 reload soknoear --update-env >/dev/null 2>&1 || true
 sleep 4
 if out2=$(check 2>&1); then
   echo "$(ts) SELF-HEALED (was: $out)" >> "$LOG"
-  alert "soknoear.com self-healed" "Health check failed:\n$out\n\nRe-synced the standalone bundle and reloaded — passing again at $(ts). No action needed, but worth knowing something rebuilt outside redeploy.sh."
+  alert "soknoear.com self-healed" "Health check failed:\n$out\n\nReloaded onto the current release — passing again at $(ts). No action needed."
   exit 0
 fi
 

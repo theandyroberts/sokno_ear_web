@@ -5,7 +5,10 @@ module.exports = {
   apps: [
     {
       name: "soknoear",
-      script: ".next/standalone/server.js",
+      // `current` is the atomic-release symlink managed by scripts/redeploy.sh.
+      // Node resolves the symlink at process start, so the running server keeps
+      // its release's files until the next reload — builds can't touch it.
+      script: "/var/www/soknoear/current/server.js",
       cwd: "/var/www/soknoear",
       env: {
         NODE_ENV: "production",

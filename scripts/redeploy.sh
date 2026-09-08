@@ -1,15 +1,26 @@
 #!/usr/bin/env bash
-# Publish on the VPS — does only the work the change requires. Run from /var/www/soknoear.
-#   content/asset-only change → sync + reload         (~5s)
-#   app code change           → build + sync + reload (~1-2 min)
-#   package-lock change       → npm ci + build + reload
+# Publish on the VPS — atomic release flip, so a deploy can never take the site down.
+#   content/asset-only change → assemble release + flip (~10s)
+#   app code change           → build + assemble release + flip (~1-2 min, site up throughout)
+#   package-lock change       → npm ci + build + assemble + flip
+#
+# How it stays non-destructive (Sep 8 incident: an in-place build deleted the very
+# server.js PM2 was running, and the watchdog's mid-build reload turned that into a
+# crash loop):
+#   1. build runs in the repo; the live site serves from releases/<id>/, untouched
+#   2. the new release is booted on a spare port and probed BEFORE anything flips
+#   3. `current` symlink swaps via mv -T (atomic rename); pm2 reload picks it up
+#   4. if post-flip verification fails, the symlink flips straight back
 set -euo pipefail
 cd /var/www/soknoear
 
 PORT="${PORT:-3007}"
+PREFLIGHT_PORT=3017
+RELEASES=/var/www/soknoear/releases
+CURRENT=/var/www/soknoear/current
 # `--force-build`: rebuild even with no code change (e.g. a NEXT_PUBLIC_* env edit).
-# This is the ONLY sanctioned way to rebuild — a by-hand `npm run build` skips the
-# static sync below and ships a page whose every CSS/JS/font chunk 404s (Aug 21).
+# This is the ONLY sanctioned way to rebuild — a by-hand `npm run build` never
+# reaches the flip, so nothing it breaks can go live, but it also publishes nothing.
 FORCE_BUILD=false
 for _arg in "$@"; do [ "$_arg" = "--force-build" ] && FORCE_BUILD=true; done
 
@@ -47,33 +58,71 @@ if $needs_deps; then
 fi
 
 if $needs_build; then
-  echo "→ app code changed: full build"
+  echo "→ app code changed: full build (live site keeps serving the old release)"
   npm run build
 fi
 
-# Sync Next's static bundle into the standalone dir on EVERY deploy (cheap, idempotent).
-# Used to live only inside the build branch, so a build done outside this script left
-# the standalone dir serving stale chunk hashes — HTML rendered, every asset 404'd.
+# Staging dir: .next/standalone assembled by the build (postbuild hook) or by the
+# rsyncs below for content-only publishes. It is never served — releases are.
 mkdir -p .next/standalone/.next/static
 rsync -a --delete .next/static/ .next/standalone/.next/static/
-
-# Sync assets + content into the standalone bundle.
-# rsync updates in place. The old `rm -rf public && cp -R` briefly deleted every
-# image while the site was live — load a page mid-deploy and you'd see broken art.
 rsync -a --delete public/ .next/standalone/public/
 rsync -a --delete content/ .next/standalone/content/
 
-# ALWAYS reload, even for a content-only publish.
-# Next's standalone server indexes public/ ONCE at boot and caches the list, so a
-# newly synced image 404s until the process restarts. Skipping this reload is what
-# shipped broken images. Costs ~2s — do not "optimize" it away again.
+# Cut an immutable release from staging. cp -a of ~135M costs ~1s.
+mkdir -p "$RELEASES"
+RELEASE="$RELEASES/$(date +%Y%m%d-%H%M%S)-${NEW:0:8}"
+cp -a .next/standalone "$RELEASE"
+
+# Preflight: boot the release on a spare port and make sure both pages actually
+# render before it can touch production. Same env the real process gets.
 set -a; [ -f .env ] && . ./.env; set +a
+echo "→ preflight: booting release on :$PREFLIGHT_PORT"
+NODE_ENV=production PORT=$PREFLIGHT_PORT HOSTNAME=127.0.0.1 \
+  SQLITE_PATH="${SQLITE_PATH:-/var/lib/soknoear/ear.db}" \
+  node "$RELEASE/server.js" >/tmp/soknoear-preflight.log 2>&1 &
+PREFLIGHT_PID=$!
+preflight_ok=false
+for _ in $(seq 1 20); do
+  if curl -sf -o /dev/null "http://127.0.0.1:$PREFLIGHT_PORT/" \
+     && curl -sf -o /dev/null "http://127.0.0.1:$PREFLIGHT_PORT/dirtysouthparty"; then
+    preflight_ok=true; break
+  fi
+  sleep 1
+done
+kill "$PREFLIGHT_PID" >/dev/null 2>&1 || true
+wait "$PREFLIGHT_PID" 2>/dev/null || true
+if ! $preflight_ok; then
+  rm -rf "$RELEASE"
+  echo "DEPLOY ABORTED: release failed preflight — production untouched. /tmp/soknoear-preflight.log:"
+  tail -20 /tmp/soknoear-preflight.log
+  exit 1
+fi
+echo "✓ preflight passed"
+
+# Atomic flip. mv -T is a rename(2) — readers see the old release or the new one,
+# never a half-state. Remember the old target so verification failure can roll back.
+PREV=$(readlink "$CURRENT" 2>/dev/null || true)
+ln -s "$RELEASE" "$CURRENT.new.$$"
+mv -T "$CURRENT.new.$$" "$CURRENT"
+
+# Reload onto the new release. The server chdirs to its own realpath, so until this
+# reload the old process keeps serving the old release's files — no gap but the
+# ~1s process restart itself.
 pm2 startOrReload ecosystem.config.js --update-env
 pm2 save >/dev/null
 
+rollback() {
+  if [ -n "$PREV" ] && [ -d "$PREV" ]; then
+    echo "!! rolling back to $PREV"
+    ln -s "$PREV" "$CURRENT.new.$$" && mv -T "$CURRENT.new.$$" "$CURRENT"
+    pm2 reload soknoear --update-env >/dev/null 2>&1 || true
+  fi
+}
+
 # Verify before declaring success: every image/audio file the episodes reference
 # must actually serve. A publish that ships a broken asset fails HERE, loudly,
-# instead of in a reader's browser.
+# instead of in a reader's browser — and now also rolls the flip back.
 #
 # Drafts are checked too, but only WARN. A draft always references audio that
 # won't exist until Andy records it Wednesday, so hard-failing on drafts made
@@ -124,6 +173,7 @@ done <<< "$draft_only"
 
 if [ "$missing" -gt 0 ]; then
   echo "DEPLOY FAILED VERIFICATION: $missing of $checked published asset(s) not served"
+  rollback
   exit 1
 fi
 if [ "$pending" -gt 0 ]; then
@@ -133,8 +183,8 @@ else
 fi
 
 # Next's own bundle must serve too. Sample the homepage + party page and curl every
-# /_next/static chunk they reference — catches a standalone dir out of sync with the
-# build before a reader's console fills with 404s (Aug 21 incident).
+# /_next/static chunk they reference — catches a release out of sync with its build
+# before a reader's console fills with 404s (Aug 21 incident).
 echo "→ verifying Next static bundle…"
 bundle_missing=0; bundle_checked=0
 for page in / /dirtysouthparty; do
@@ -145,9 +195,14 @@ for page in / /dirtysouthparty; do
   done
 done
 if [ "$bundle_missing" -gt 0 ]; then
-  echo "DEPLOY FAILED VERIFICATION: $bundle_missing of $bundle_checked Next static file(s) not served — standalone bundle out of sync"
+  echo "DEPLOY FAILED VERIFICATION: $bundle_missing of $bundle_checked Next static file(s) not served — release out of sync"
+  rollback
   exit 1
 fi
 echo "✓ $bundle_checked Next static files serve"
 
-echo "deployed $NEW (deps=$needs_deps build=$needs_build)"
+# Keep the 5 newest releases (~135M each) so any of the last few deploys can be
+# flipped back to by hand: ln -sfn <release> current && pm2 reload soknoear
+ls -1dt "$RELEASES"/*/ 2>/dev/null | tail -n +6 | xargs -r rm -rf
+
+echo "deployed $NEW → $RELEASE (deps=$needs_deps build=$needs_build)"
