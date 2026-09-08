@@ -14,6 +14,10 @@
 export const MIN_GAP_MIN = 20;
 /** Don't post the instant the queue is approved — leave room to revoke. */
 export const LEAD_MIN = 5;
+/** Earliest hour a rescheduled post may land on (ET). */
+export const DAY_START_HOUR = 9;
+/** First hour a rescheduled post may NOT land on (ET) — 20:00 is the worst slot on record. */
+export const DAY_END_HOUR = 20;
 
 const OFFSET = "-04:00";
 
@@ -21,6 +25,21 @@ function toIso(ms) {
   const d = new Date(ms);
   const p = (n) => String(n).padStart(2, "0");
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}:00${OFFSET}`;
+}
+
+/**
+ * Nudge a timestamp forward into the daytime posting window, leaving it alone if
+ * it is already inside one. Publishing after midnight used to drag the whole
+ * past-due half of the queue along with it: the No. 12 drip opened at 01:45,
+ * 02:00 and 02:30 because "walk it forward from now" had no floor but `now`.
+ * Only ever moves forward.
+ */
+export function nextDaylightSlot(ms) {
+  const d = new Date(ms);
+  if (d.getHours() >= DAY_END_HOUR) d.setDate(d.getDate() + 1);
+  else if (d.getHours() >= DAY_START_HOUR) return ms;
+  d.setHours(DAY_START_HOUR, 0, 0, 0);
+  return d.getTime();
 }
 
 /**
@@ -46,7 +65,10 @@ export function spaceOutPosts(posts, nowMs = Date.now(), opts = {}) {
   const out = [...leaders, ...rest]
     .map((p) => {
       const wanted = new Date(p.postAt).getTime();
-      const when = Math.max(wanted, earliest);
+      // A slot the editor chose is left exactly as written, whatever hour it names.
+      // Only a post we are already moving gets pulled into the daytime window.
+      let when = Math.max(wanted, earliest);
+      if (when !== wanted) when = nextDaylightSlot(when);
       earliest = when + gap;
       if (when === wanted) return p;
       moved += 1;

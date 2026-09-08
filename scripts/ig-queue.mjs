@@ -9,7 +9,8 @@
 process.env.TZ = "America/New_York"; // all slot math is SoKno-local
 import fs from "node:fs";
 import path from "node:path";
-import { spaceOutPosts, MIN_GAP_MIN } from "./ig-schedule.mjs";
+import { spaceOutPosts, MIN_GAP_MIN, nextDaylightSlot, DAY_START_HOUR } from "./ig-schedule.mjs";
+import { priorRunsById, pickRepeatsToDrop, MAX_REPEATS_PER_EPISODE } from "./ig-repeats.mjs";
 
 const SITE = "https://soknoear.com";
 const BASE_HASHTAGS = "#SoKno #SouthKnoxville #Knoxville #SouthKnoxvilleEar";
@@ -124,9 +125,11 @@ for (const s of stories) {
   // Feature + undated news announce on publish day; dated items post around their event.
   const firstDay = s.days?.[0];
   const dated = !s.__isFeature && firstDay;
+  // Publish day itself — never the day before. Stamping these a day early is what
+  // opened four consecutive drips on a Tuesday for a Thursday–Sunday episode.
   const dayDate = dated
     ? dateForDay(episode.date, firstDay)
-    : (() => { const d = new Date(`${episode.date}T12:00:00-04:00`); d.setDate(d.getDate() - 1); return d; })();
+    : new Date(`${episode.date}T12:00:00-04:00`);
 
   const { date, hour } = dated
     ? slotFor(s, dayDate, taken)
@@ -152,11 +155,38 @@ for (const s of stories) {
   });
 }
 
+// ── Standing-item cap. A story whose id has already run in an earlier episode is a
+// repeat; at most one rides the drip per week, rotating so the same banner does not
+// go out with the same caption four weeks running. The episode still carries all of
+// them — this only thins the Instagram queue. See scripts/ig-repeats.mjs.
+const archive = fs
+  .readdirSync(episodesDir)
+  .filter((f) => f.endsWith(".json"))
+  .map((f) => {
+    const ep = JSON.parse(fs.readFileSync(path.join(episodesDir, f), "utf8"));
+    return { date: ep.date, ids: [ep.feature, ...(ep.stories ?? [])].filter(Boolean).map((s) => s.id) };
+  });
+const history = priorRunsById(archive, episode.date);
+const dropped = pickRepeatsToDrop(posts.map((p) => p.id), history);
+if (dropped.length) {
+  for (const id of dropped) {
+    const h = history.get(id);
+    warnings.push(`${id}: standing item, ran ${h.runs}× (last ${h.lastRun}) — held out of the drip (cap ${MAX_REPEATS_PER_EPISODE}/week)`);
+  }
+  for (let i = posts.length - 1; i >= 0; i--) if (dropped.includes(posts[i].id)) posts.splice(i, 1);
+}
+
 // ── Weekly promo pair (scripts/ig-promos.py). These OPEN the drip — they announce the
 // episode and the tip line, so they must land before the stories they introduce.
 // spaceOutPosts honours `lead`/`leadOrder` regardless of the clock times below.
-function isoNowPlus(min) {
-  const d = new Date(Date.now() + min * 60000);
+// The promo pair used to be stamped with the clock at build time, so a publish that
+// ran after midnight opened the whole drip at 01:45 in the morning. Floor it to the
+// episode's own publish day and the daytime window instead; `lead`/`leadOrder` still
+// decide the order, so the minute here only has to be sane.
+function isoPromoSlot(min) {
+  const openAt = new Date(`${episode.date}T12:00:00-04:00`);
+  openAt.setHours(DAY_START_HOUR, 0, 0, 0);
+  const d = new Date(nextDaylightSlot(Math.max(Date.now(), openAt.getTime())) + min * 60000);
   const p = (n) => String(n).padStart(2, "0");
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}:00-04:00`;
 }
@@ -198,7 +228,7 @@ for (const pr of PROMOS) {
   posts.push({
     id: pr.id,
     title: pr.title,
-    postAt: isoNowPlus(pr.offset),
+    postAt: isoPromoSlot(pr.offset),
     imageUrl: `${SITE}${rel}`,
     permalink: SITE,
     caption: pr.caption,
