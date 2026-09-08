@@ -11,6 +11,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { spaceOutPosts, MIN_GAP_MIN, nextDaylightSlot, DAY_START_HOUR } from "./ig-schedule.mjs";
 import { priorRunsById, pickRepeatsToDrop, MAX_REPEATS_PER_EPISODE } from "./ig-repeats.mjs";
+import { checkBanner } from "./ig-banner-check.mjs";
 
 const SITE = "https://soknoear.com";
 const BASE_HASHTAGS = "#SoKno #SouthKnoxville #Knoxville #SouthKnoxvilleEar";
@@ -138,6 +139,15 @@ for (const s of stories) {
   const { tags, unknown } = resolveTags(s);
   if (unknown.length) warnings.push(`${s.id}: no verified handle for ${unknown.join(", ")} — tag dropped`);
   if (!s.social?.igTags?.length) warnings.push(`${s.id}: no igTags set — posting untagged`);
+
+  // The banner has to stand on its own: a venue reshares the image, not the caption.
+  for (const p of checkBanner({
+    lines: s.social?.igBanner,
+    tags: s.social?.igTags,
+    dated: Boolean(dated),
+    handles: registry.handles,
+    skip: Boolean(s.social?.igBannerSkipCheck),
+  })) warnings.push(`${s.id}: ${p.message}`);
 
   // Prefer the titled banner version (scripts/ig-banners.py) when it exists.
   const bannerRel = `/assets/ig/${episode.slug}/${s.id}.jpg`;
