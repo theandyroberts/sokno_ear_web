@@ -16,9 +16,9 @@
     ],
     "layout": "imageTop",
     "image": "/assets/spots/twilight_trail.jpg",
-    "imageCaption": "The Universal Trail, Sunday, a little after sunset",
-    "title": "Twilight at Ijams strings the Universal Trail with lights and art on Sunday night, and it's the park's biggest fundraiser of the year",
-    "deck": "Small bites from local kitchens, a campfire with a s'mores bar, live music, a silent auction, and a trail of art installations between the Visitor Center and the woods, from six to nine. Tickets are $175, and the money is what keeps the park free the other 364 days.",
+    "imageCaption": "The Universal Trail, lit, Sunday after sunset",
+    "title": "Lights and art at Ijams Park",
+    "deck": "On Sunday night the Universal Trail becomes a gallery: lantern-lit installations and interactive vignettes strung between the Visitor Center and the woods, with a campfire, small bites from local kitchens, a band and a silent auction alongside. It's Twilight at Ijams, the park's biggest fundraiser of the year — six to nine, $175 a ticket.",
     "facts": [
       {
         "label": "When",
@@ -52,7 +52,7 @@
     "body": [
       {
         "type": "paragraph",
-        "text": "Once a year Ijams Park dresses up. On Sunday evening the paved Universal Trail that runs from the Visitor Center into the trees gets strung with lights and lined with art installations, small plates come out of local kitchens, somebody starts a campfire with a proper s'mores bar beside it, and a band plays while the sun goes down over the ridge. It's called Twilight at Ijams, it is the park's largest fundraiser of the year, and this is the night."
+        "text": "The art comes first. On Sunday evening the paved Universal Trail that runs from the Ijams Park Visitor Center into the trees is strung with lights and lined with installations — what the park calls interactive vignettes, built to be walked through slowly with a drink in hand. Around that, the rest of the party: small plates from local kitchens, a campfire with a proper s'mores bar, a band while the sun goes down over the ridge, a silent auction. It's called Twilight at Ijams, it is the park's largest fundraiser of the year, and this is the night."
       },
       {
         "type": "subhead",
@@ -60,7 +60,7 @@
       },
       {
         "type": "paragraph",
-        "text": "A $175 ticket gets you in at six for three hours of food and drink — the bites are from local restaurants and caterers, and the bar runs beer, wine and cocktails. A $275 VIP ticket opens the doors an hour early for a cocktail hour at five. Tables of ten start at $1,500, which is how the park's bigger friends tend to show up. Along the way there's a silent auction and, the part that makes it more than a garden party, a run of what the park calls interactive vignettes and art installations set along the trail, so the walk itself is the show."
+        "text": "A $175 ticket gets you in at six for three hours of food and drink — the bites are from local restaurants and caterers, and the bar runs beer, wine and cocktails. A $275 VIP ticket opens the doors an hour early for a cocktail hour at five. Tables of ten start at $1,500, which is how the park's bigger friends tend to show up. The installations along the trail are the reason to walk it slowly; the auction and the campfire are why people stay past the band."
       },
       {
         "type": "subhead",
@@ -100,7 +100,7 @@
         "ijams"
       ],
       "igBanner": [
-        "Twilight at Ijams Park",
+        "Lights and art at Ijams Park",
         "Sunday, six to nine"
       ]
     }
@@ -114,8 +114,8 @@
       ],
       "hot": true,
       "image": "/assets/spots/twilight_trail.jpg",
-      "title": "Twilight at Ijams, Sunday night",
-      "blurb": "Lights and art along the Universal Trail, a campfire s'mores bar, small bites and a band. The park's biggest fundraiser, six to nine.",
+      "title": "Lights and art at Ijams Park",
+      "blurb": "Sunday night the Universal Trail turns into a lit gallery of installations, with a campfire, small bites and a band. Twilight at Ijams, six to nine.",
       "cue": "Jump to story",
       "href": "#twilight-ijams"
     },
@@ -133,6 +133,22 @@
       "href": "#vols-at-puckers"
     },
     {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "hot": true,
+      "image": "/assets/spots/kerns_bars.jpg",
+      "title": "Four bars under one roof at Kern's",
+      "blurb": "A twenty-tap taproom, a rooftop, a market bar, and Roni's Mac Bar with five dollars off on the app. The game-weekend map of the old bakery.",
+      "cue": "Jump to story",
+      "href": "#kerns-bars"
+    },
+    {
       "label": "Ijams Park",
       "labelColor": "teal",
       "days": [
@@ -146,18 +162,6 @@
       "href": "#fungi-walk"
     },
     {
-      "label": "Over the bridge",
-      "labelColor": "ink",
-      "days": [
-        "Fri"
-      ],
-      "image": "/assets/spots/knoxtoberfest_stein.jpg",
-      "title": "KnoxtoberFest at One Knox",
-      "blurb": "Friday night: three-dollar beers, a free stein for the first thousand, polka in the biergarten, kickoff at 7:06.",
-      "cue": "Jump to story",
-      "href": "#knoxtoberfest"
-    },
-    {
       "label": "Ijams Park",
       "labelColor": "teal",
       "days": [
@@ -168,21 +172,6 @@
       "blurb": "Saturday at ten by Mead's Quarry — free, two hours, sixteen Saturdays to come.",
       "cue": "Jump to story",
       "href": "#playscape-fall"
-    },
-    {
-      "label": "Suttree Landing",
-      "labelColor": "gold",
-      "days": [
-        "Thu",
-        "Fri",
-        "Sat",
-        "Sun"
-      ],
-      "image": "/assets/spots/specials_riverboard.jpg",
-      "title": "The specials board",
-      "blurb": "Earl's runs a different deal every day of the weekend, down on the waterfront.",
-      "cue": "Jump to story",
-      "href": "#specials-board"
     }
   ],
   "stories": [
@@ -273,6 +262,121 @@
       }
     },
     {
+      "id": "kerns-bars",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/kerns_bars.jpg",
+      "imageCaption": "Twenty taps, a loft, a rooftop, and a bowl of mac",
+      "title": "Four bars under one roof: the game-weekend guide to Kern's",
+      "deck": "The old bakery on Chapman Highway runs a taproom with twenty Monday Night Brewing taps, a rooftop patio bar, a market bar named for the founder, and a breakfast place that turns into a cocktail bar after dark. Roni's Mac Bar takes five dollars off if you download the app, and the game-day sections come with their own televisions.",
+      "facts": [
+        {
+          "label": "Hours",
+          "value": "Thu 7 AM–10 PM · Fri 7 AM–11 PM · Sat 8 AM–11 PM · Sun 9 AM–9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Kern's Food Hall · 2201 Kern's Rising Way, off Chapman Highway"
+        },
+        {
+          "label": "Proofing Co.",
+          "value": "20 Monday Night taps and a cocktail list · Thu–Fri noon–midnight · Sat 11 AM–midnight · Sun 11–9"
+        },
+        {
+          "label": "UpTop",
+          "value": "The rooftop bar and the big patio"
+        },
+        {
+          "label": "Peter's Market Bar",
+          "value": "Draft beer, wine by the glass, cocktails, zero-proof"
+        },
+        {
+          "label": "Eggspectation",
+          "value": "Kitchen till 9 (8 Sunday) · happy hour and nightly specials · Date Night Fridays"
+        },
+        {
+          "label": "Food deal",
+          "value": "Roni's Mac Bar — $5 off with the app · Sun–Thu 11–9, Fri–Sat 11–10"
+        },
+        {
+          "label": "Game day",
+          "value": "Lawn sections from $300 with a TV each · every Tennessee game, road games included"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Kern's is one building with four bars in it, and on a weekend when Tennessee plays at seven on a Saturday night, it helps to know which is which. The short version: a proper taproom with twenty taps and a private door, a rooftop with a patio the size of a small park, a market bar off the main hall, and a breakfast restaurant that keeps pouring cocktails until nine."
+        },
+        {
+          "type": "subhead",
+          "text": "The bars, one by one"
+        },
+        {
+          "type": "paragraph",
+          "text": "Monday Night Proofing Co. is the anchor — the Atlanta brewery's Knoxville taproom, with twenty Monday Night taps running from barrel-aged stouts to lagers, a cocktail list, wine by the glass and the bottle, and its own entrance inside the hall so it keeps later hours than the food stalls: noon to midnight Thursday and Friday, eleven to midnight Saturday, eleven to nine Sunday. There's a service window onto the Great Lawn for live-music nights. Monday Night also staffs three smaller bars around the building — the High Proof Loft upstairs, the Market Bar, and the Scruff Bar. UpTop is the rooftop bar and the large patio, the one you go to when the weather cooperates. Peter's Market Bar, named for the baker who founded the place, pours draft beer, wine by the glass, cocktails and a zero-proof list. And Eggspectation, the all-day breakfast restaurant, runs a happy hour and nightly specials after the omelets are done, with Fridays billed as date night; the kitchen goes to nine, eight on Sunday."
+        },
+        {
+          "type": "subhead",
+          "text": "The food deal"
+        },
+        {
+          "type": "paragraph",
+          "text": "Roni's Mac Bar is the newest stall and the one with a deal attached: download its app and five dollars comes off the order. It's a build-your-own macaroni counter with more than twenty toppings, open eleven to nine Sunday through Thursday and eleven to ten Friday and Saturday. Around it the hall runs the usual spread — T. Ralph's burgers, Mr. Rico tacos, Hemingway's Cuban sandwiches, Disco Chicken & Donuts, Zukku sushi, WokXville stir-fry, Ooh Lala Indian, Kandilige Ghanaian, AVA's wood-fired pizza — so a table of six can eat from six kitchens and drink from one bar."
+        },
+        {
+          "type": "subhead",
+          "text": "Saturday's game"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kern's sells its game-day setup by the section. Three hundred dollars reserves a lawn-patio section for up to twenty people with its own television; twenty-five hundred takes the small rooftop for seventy-five. The packages cover every Tennessee game, road games included, with a quarter of the price down at booking. For the seven o'clock kickoff at Georgia Tech the math works: the hall is open until eleven Saturday and the taproom until midnight, so the fourth quarter fits inside the building."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Kern's — Libations (the bars)",
+          "url": "https://kernsbakery.com/sip/"
+        },
+        {
+          "label": "Kern's — Provisions (the kitchens)",
+          "url": "https://kernsbakery.com/savor/"
+        },
+        {
+          "label": "Kern's — Roni's Mac Bar (hours, $5 app offer)",
+          "url": "https://kernsbakery.com/ronis-mac-bar/"
+        },
+        {
+          "label": "Kern's — Football watch parties (packages, pricing)",
+          "url": "https://kernsbakery.com/football-watch-parties/"
+        },
+        {
+          "label": "Monday Night Brewing — Knoxville Proofing Co. (hours, taps)",
+          "url": "https://mondaynightbrewing.com/location/knoxville-proofing-co/"
+        },
+        {
+          "label": "Eggspectation Knoxville — hours, happy hour, nightly specials",
+          "url": "https://www.eggspectation.com/knoxville-tn"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "kerns"
+        ],
+        "igBanner": [
+          "Four bars under one roof at Kern's",
+          "Saturday, open till eleven"
+        ]
+      }
+    },
+    {
       "id": "vols-at-puckers",
       "label": "SoKno",
       "labelColor": "ink",
@@ -329,7 +433,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Puckers takes reservations on Resy, and for a seven o'clock kickoff a booked table beats a hopeful one. Its weekday Pucker Hour — the dollar lager, the three-dollar wells — runs Monday through Friday from five to six and does not extend to Saturday, so don't plan the budget around it. Last Saturday the room opened at nine in the morning and ran until ten at night; this week's hours weren't posted as of Tuesday. If the wall is full, Hi-Wire's rooftop and the SouthSide Garage beer garden on Sevier Avenue both keep the game on."
+          "text": "Puckers takes reservations on Resy, and for a seven o'clock kickoff a booked table beats a hopeful one. Its weekday Pucker Hour — the dollar lager, the three-dollar wells — runs Monday through Friday from five to six and does not extend to Saturday, so don't plan the budget around it. Last Saturday the room opened at nine in the morning and ran until ten at night; this week's hours weren't posted as of Tuesday. If the wall is full, Kern's up Chapman Highway rents game-day sections with a television each — that's the next story down."
         }
       ],
       "sources": [
@@ -359,96 +463,6 @@
         "igBanner": [
           "Vols at Georgia Tech, on the wall at Puckers",
           "Saturday, seven o'clock"
-        ]
-      }
-    },
-    {
-      "id": "knoxtoberfest",
-      "label": "Over the bridge",
-      "labelColor": "ink",
-      "days": [
-        "Fri"
-      ],
-      "layout": "imageRight",
-      "image": "/assets/spots/knoxtoberfest_stein.jpg",
-      "imageCaption": "Gates at five, polka by six, kickoff at 7:06",
-      "title": "One Knox pours three-dollar beers and hands out steins for KnoxtoberFest on Friday night",
-      "deck": "The defending league champions host FC Naples at Covenant Health Park with a free stein for the first thousand fans, three-dollar beer all match, and a live polka band in the biergarten. It's across the river, but it's a mile from Sevier Avenue.",
-      "facts": [
-        {
-          "label": "When",
-          "value": "Fri Sep 11 · gates and biergarten 5 PM · kickoff 7:06"
-        },
-        {
-          "label": "Match",
-          "value": "One Knoxville SC vs. FC Naples · USL League One"
-        },
-        {
-          "label": "Where",
-          "value": "Covenant Health Park · 500 E Jackson Ave, the Old City"
-        },
-        {
-          "label": "The deal",
-          "value": "Free stein to the first 1,000 fans 21+ · $3 beer all match"
-        },
-        {
-          "label": "Music",
-          "value": "Live polka band in the biergarten from gates"
-        },
-        {
-          "label": "Form",
-          "value": "11 wins, 5 losses, 7 draws · four straight draws coming in"
-        }
-      ],
-      "body": [
-        {
-          "type": "paragraph",
-          "text": "Friday night One Knox turns its home ground into a beer festival with a soccer match attached. It's KnoxtoberFest: gates and the biergarten open at five, a live polka band plays under the string lights, the first thousand fans over twenty-one get a beer stein to keep, and beer is three dollars all match long. Kickoff against FC Naples is at 7:06."
-        },
-        {
-          "type": "subhead",
-          "text": "The soccer part"
-        },
-        {
-          "type": "paragraph",
-          "text": "One Knox won USL League One last year, and this season's team is sitting on eleven wins, five losses and seven draws — four of those draws in a row coming into Friday, which is the polite way of saying they've forgotten how to close. Naples is a first-year club from Florida. On a theme night the match is the second-best reason to go, and the club knows it."
-        },
-        {
-          "type": "subhead",
-          "text": "From this side of the river"
-        },
-        {
-          "type": "paragraph",
-          "text": "Covenant Health Park is in the Old City, which is over the water from us — but only just. From the Sevier Avenue end of the neighborhood it's the Gay Street bridge and a few blocks, a mile or so on foot and five minutes in a car, and the walk back over the bridge with a stein in your bag is half the point. Three-dollar beer is a promotion, not an invitation to drive home on it."
-        }
-      ],
-      "sources": [
-        {
-          "label": "One Knoxville SC — Matchday HQ: KnoxtoberFest, Sep 11",
-          "url": "https://www.oneknoxsc.com/matchday-hq"
-        },
-        {
-          "label": "USL League One — One Knox schedule",
-          "url": "https://www.uslleagueone.com/one-knox-sc-schedule"
-        },
-        {
-          "label": "FOX Sports — USL League One standings",
-          "url": "https://www.foxsports.com/soccer/usl-league-one/standings"
-        }
-      ],
-      "event": {
-        "startDate": "2026-09-11T17:00:00-04:00",
-        "endDate": "2026-09-11T21:30:00-04:00",
-        "locationName": "Covenant Health Park",
-        "locationAddress": "500 E Jackson Ave"
-      },
-      "social": {
-        "igTags": [
-          "one-knoxville"
-        ],
-        "igBanner": [
-          "KnoxtoberFest at One Knox",
-          "Friday, gates at five, kickoff at seven"
         ]
       }
     },
@@ -529,81 +543,14 @@
           "Saturdays, ten to noon"
         ]
       }
-    },
-    {
-      "id": "specials-board",
-      "label": "Suttree Landing",
-      "labelColor": "gold",
-      "days": [
-        "Thu",
-        "Fri",
-        "Sat",
-        "Sun"
-      ],
-      "layout": "imageRight",
-      "image": "/assets/spots/specials_riverboard.jpg",
-      "imageCaption": "The board, and the water it faces",
-      "title": "The specials board: a different deal every day at Earl's",
-      "deck": "Ten-dollar Patrón ritas Thursday, nine-dollar spicy ones Friday, eight-dollar house margaritas all day Saturday, and seven-dollar mimosas and Bloody Marys all day Sunday, on the tables that face open river.",
-      "facts": [
-        {
-          "label": "Thu",
-          "value": "$10 Patrón mango margaritas · 4–6 PM · $1 off liquor, beer and wine all night"
-        },
-        {
-          "label": "Fri",
-          "value": "$9 spicy pineapple margaritas · 4–6 PM · $1 off all night"
-        },
-        {
-          "label": "Sat",
-          "value": "$8 house margaritas · all day"
-        },
-        {
-          "label": "Sun",
-          "value": "$7 mimosas and Bloody Marys · all day"
-        },
-        {
-          "label": "Where",
-          "value": "Earl's · 610 Waterfront Dr, Suttree Landing"
-        }
-      ],
-      "body": [
-        {
-          "type": "paragraph",
-          "text": "Earl's, down at the water on Waterfront Drive, keeps a different deal for every day of the weekend, and the ladder hasn't moved: ten-dollar Patrón mango margaritas during Thursday's happy hour, nine-dollar spicy pineapple ones Friday, eight-dollar house margaritas from open to close Saturday, and seven-dollar mimosas and Bloody Marys all day Sunday. Thursday and Friday the happy hour is four to six, and a dollar comes off liquor, beer and wine for the rest of the night."
-        },
-        {
-          "type": "subhead",
-          "text": "One honest note"
-        },
-        {
-          "type": "paragraph",
-          "text": "This board was last confirmed against Earl's own specials page on September 1. The page wouldn't load for us Tuesday, so if a price has moved, the chalk on the patio wins. The river seats go first regardless — get to Suttree Landing by turning toward the water at the Citgo on Sevier Avenue and following Claude Street down."
-        }
-      ],
-      "sources": [
-        {
-          "label": "Earl's Knoxville — specials",
-          "url": "https://earlsknox.com/specials"
-        }
-      ],
-      "social": {
-        "igTags": [
-          "earls"
-        ],
-        "igBanner": [
-          "The specials board at Earl's",
-          "A different deal every day, Thursday to Sunday"
-        ]
-      }
     }
   ],
   "sidebar": {
     "audio": {
       "title": "Weekend Audio Briefing",
       "intro": "What's happening in SoKno this weekend.",
-      "description": "Your weekend listen — Twilight at Ijams Park lights the trail Sunday, a beginner's mushroom walk Friday, storytime's fall run, the Vols' first road game on the Puckers wall, and three-dollar beers at One Knox across the bridge.",
-      "duration": "03:08",
+      "description": "Your weekend listen — lights and art along the Ijams Park trail Sunday, a beginner's mushroom walk Friday, storytime's fall run, the Vols' first road game on the screens at Puckers and Kern's.",
+      "duration": "03:09",
       "src": "/audio/2026-09-09.mp3"
     },
     "calendar": [
@@ -630,33 +577,11 @@
       },
       {
         "month": "SEP",
-        "day": "10",
-        "title": "Earl's — $10 Patrón ritas",
-        "meta": "4–6 PM · 610 Waterfront Dr",
-        "href": "#specials-board"
-      },
-      {
-        "month": "SEP",
-        "day": "11",
-        "title": "KNOXTOBERFEST — One Knox vs. FC Naples",
-        "meta": "Gates 5 PM · kick 7:06 · $3 beers · Covenant Health Park",
-        "starred": true,
-        "href": "#knoxtoberfest"
-      },
-      {
-        "month": "SEP",
         "day": "11",
         "title": "Fall Fungi ID walk",
         "meta": "5:30–7 PM · $15 · ages 14+ · Ijams Park",
         "starred": true,
         "href": "#fungi-walk"
-      },
-      {
-        "month": "SEP",
-        "day": "11",
-        "title": "Earl's — $9 spicy pineapple ritas",
-        "meta": "4–6 PM · 610 Waterfront Dr",
-        "href": "#specials-board"
       },
       {
         "month": "SEP",
@@ -683,24 +608,17 @@
       {
         "month": "SEP",
         "day": "12",
-        "title": "Earl's — $8 house margaritas",
-        "meta": "All day · 610 Waterfront Dr",
-        "href": "#specials-board"
+        "title": "Game-day sections at Kern's",
+        "meta": "$300 lawn section with a TV · hall till 11 · taproom till midnight",
+        "href": "#kerns-bars"
       },
       {
         "month": "SEP",
         "day": "13",
-        "title": "TWILIGHT AT IJAMS",
+        "title": "LIGHTS AND ART AT IJAMS PARK — Twilight at Ijams",
         "meta": "6–9 PM · $175 · Visitor Center + Universal Trail",
         "starred": true,
         "href": "#twilight-ijams"
-      },
-      {
-        "month": "SEP",
-        "day": "13",
-        "title": "Earl's — $7 mimosas & Bloody Marys",
-        "meta": "All day · 610 Waterfront Dr",
-        "href": "#specials-board"
       }
     ]
   }

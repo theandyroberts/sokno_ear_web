@@ -71,6 +71,13 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
   the literal subject of the headline (goats on yoga mats; lips puckered at a football; a
   chalkboard with specials actually written on it). See the `sokno-ear-art` skill; check
   each result at thumbnail size and ask whether it would let you guess the headline.
+- **Confirmed content only — and never say so.** If a fact can't be verified this week
+  (a specials page that won't load, a listing nobody can reach), it doesn't run — not
+  with a caveat, not "carried from last week." Cut the story. And never write "honest,"
+  "honest note," "to be honest," "the honest caveat," or anything that vouches for our own
+  truthfulness. We are honest; it's a given. A line that says "we're not lying now" invites
+  the question of whether we were before. (Andy, 2026-09-08 — a specials board that ran
+  with an "honest note" about an unreachable source was the offense.)
 - **Always attribute sources.** Every article ends with its source(s): an external
   link when the info came from one (official site, @handle, agency), or plain credit
   text like "Info from A. Roberts" when it came from a form submission/tip with no
