@@ -63,6 +63,11 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
     weekend sold out") is fine. A crosshead that changes the subject is not.
   - **Headlines name the thing.** Say "Puckers opens on Blount Avenue," not "The room on
     Blount has a new name." No coy withholding of the subject.
+- **The deck is read at a glance.** Under the headline, one or two short sentences that
+  say why this matters — the big deal, not the inventory. Aim for 25–35 words. Times,
+  prices, addresses and the list of what's on offer belong in the facts box and the body,
+  not the deck. (Andy, 2026-09-08 — a 70-word feature deck that packed in the campfire,
+  the bites, the band, the auction, the hours and the price was the offense.)
 - **Crossheads structure ONE subject.** `subhead` blocks (★ Special Elite crossheads) mark
   movement *within* a single story — background → detail → the practical part — never a
   change of topic. Never before the lede (the opening paragraph belongs to the headline).
