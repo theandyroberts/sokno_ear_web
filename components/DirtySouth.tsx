@@ -95,8 +95,13 @@ function SponsorCard({ sponsor, fontClass }: { sponsor: Sponsor; fontClass: stri
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={sponsor.image}
-          alt={`${sponsor.name} — from the Dirty South map`}
-          style={{ width: 150, height: "auto", border: `3px solid ${INK}`, transform: "rotate(-1.2deg)", display: "block" }}
+          alt={sponsor.name}
+          style={{
+            width: 150, height: "auto", border: `3px solid ${INK}`, transform: "rotate(-1.2deg)", display: "block",
+            // Cream chip behind the art: transparent logos (green lettering,
+            // knocked-out edges) disappear straight onto the acid green.
+            background: "#F3E8D2", padding: 10,
+          }}
         />
       </a>
       <div style={{ flex: "1 1 260px", minWidth: 220 }}>

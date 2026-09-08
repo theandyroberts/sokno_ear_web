@@ -83,7 +83,7 @@ describe("DirtySouth checklist", () => {
     expect(screen.getAllByText(new RegExp(sponsor.address)).length).toBeGreaterThanOrEqual(1);
     const digits = sponsor.phone.replace(/\D/g, "");
     expect(screen.getByRole("link", { name: new RegExp(digits.slice(-4)) })).toHaveAttribute("href", `tel:${digits}`);
-    expect(screen.getByAltText(/from the Dirty South map/i)).toBeInTheDocument();
+    expect(screen.getByAltText(sponsor.name)).toBeInTheDocument();
     rerender(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" sponsor={null} />);
     expect(screen.queryByText(/brought to you by/i)).not.toBeInTheDocument();
   });
