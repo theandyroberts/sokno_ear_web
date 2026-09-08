@@ -1,7 +1,7 @@
 {
   "_flow": "Each day reads as the night's arc: happy hour → dinner → events/concerts/comedy/drink specials → the closing-time hang. Bars, restaurants, music venues only.",
-  "updated": "2026-09-02",
-  "weekend": "Sep 3–6",
+  "updated": "2026-09-09",
+  "weekend": "Sep 10–13",
   "days": {
     "Thu": [
       {
@@ -80,10 +80,10 @@
       },
       {
         "id": "fri-puckers",
-        "time": "6:00 PM",
+        "time": "5:00 PM",
         "venue": "Puckers Sports Grill · 115 Mimosa Ave",
-        "headline": "Eve of gameday at Puckers",
-        "sub": "Kickoff tomorrow 3:30 — the wall of TVs warms up tonight",
+        "headline": "Pucker Hour, then the wall warms up",
+        "sub": "$1 Pucker Lager, $3 wells 5–6 · Vols at Georgia Tech tomorrow at 7",
         "href": "/2026-09-02/puckers-first-gameday",
         "cat": "food"
       },
@@ -118,10 +118,10 @@
     "Sat": [
       {
         "id": "sat-puckers",
-        "time": "9:00 AM",
+        "time": "6:00 PM",
         "venue": "Puckers Sports Grill · 115 Mimosa Ave",
-        "headline": "Brunch and football — doors at 9",
-        "sub": "First Vols Saturday · patio faces the stadium · Resy or walk in · kickoff 3:30",
+        "headline": "Vols at Georgia Tech on every screen",
+        "sub": "Kickoff 7 PM on ESPN · Resy for a kickoff table · 115 Mimosa Ave",
         "href": "/2026-09-02/puckers-first-gameday",
         "cat": "food"
       },
@@ -130,18 +130,9 @@
         "time": "ALL DAY",
         "venue": "Earl's · 610 Waterfront Dr",
         "headline": "$8 house margaritas, no clock",
-        "sub": "Doors 10:30 AM to 11 PM · river seats through the game",
+        "sub": "Doors 10:30 AM to 11 PM · river seats go first",
         "href": "https://earlsknox.com/specials",
         "cat": "drink"
-      },
-      {
-        "id": "sat-kerns",
-        "time": "11:00 AM",
-        "venue": "Kern's Food Hall",
-        "headline": "Game day at the old bakery",
-        "sub": "Watch parties all day · rentable sections $300 lawn, $2,500 rooftop · hall 8 AM–11 PM",
-        "href": "/2026-09-02/kerns-watch-parties",
-        "cat": "star"
       },
       {
         "id": "sat-soknotaco",
@@ -174,7 +165,7 @@
         "id": "sat-pinkcactus",
         "time": "10:30 PM",
         "venue": "The Pink Cactus · 1147 Sevier Ave",
-        "headline": "Victory karaoke till 1 AM",
+        "headline": "Post-game karaoke till 1 AM",
         "sub": "Reserve online — Saturday fills first · 21+ after 9",
         "href": "https://www.thepinkcactusknox.com/",
         "cat": "mic"
@@ -203,8 +194,8 @@
         "id": "sun-puckers",
         "time": "12:00 PM",
         "venue": "Puckers Sports Grill · 115 Mimosa Ave",
-        "headline": "Sunday on the screens",
-        "sub": "The game-day room, day two of the habit",
+        "headline": "NFL Sunday on the screens",
+        "sub": "The game-day room, week two of the habit",
         "href": "/2026-09-02/puckers-first-gameday",
         "cat": "food"
       },

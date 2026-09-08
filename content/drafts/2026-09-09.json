@@ -1,0 +1,707 @@
+{
+  "slug": "2026-09-09",
+  "volume": 1,
+  "number": 13,
+  "episode": "Weekend Episode",
+  "date": "2026-09-09",
+  "dateLabel": "Thu–Sun, Sep 10–13, 2026",
+  "shortDate": "Sep 10–13",
+  "place": "South Knoxville, TN",
+  "feature": {
+    "id": "twilight-ijams",
+    "label": "Ijams Park",
+    "labelColor": "teal",
+    "days": [
+      "Sun"
+    ],
+    "layout": "imageTop",
+    "image": "/assets/spots/twilight_trail.jpg",
+    "imageCaption": "The Universal Trail, Sunday, a little after sunset",
+    "title": "Twilight at Ijams strings the Universal Trail with lights and art on Sunday night, and it's the park's biggest fundraiser of the year",
+    "deck": "Small bites from local kitchens, a campfire with a s'mores bar, live music, a silent auction, and a trail of art installations between the Visitor Center and the woods, from six to nine. Tickets are $175, and the money is what keeps the park free the other 364 days.",
+    "facts": [
+      {
+        "label": "When",
+        "value": "Sun Sep 13 · 6–9 PM · VIP hour from 5"
+      },
+      {
+        "label": "Where",
+        "value": "Ijams Visitor Center and the Universal Trail · 2915 Island Home Ave"
+      },
+      {
+        "label": "Tickets",
+        "value": "$175 · VIP $275 · tables of ten from $1,500"
+      },
+      {
+        "label": "On offer",
+        "value": "Local small bites, beer, wine and cocktails, a campfire s'mores bar, live music, silent auction"
+      },
+      {
+        "label": "Dress",
+        "value": "\"Nature-inspired\" — whatever that means to you"
+      },
+      {
+        "label": "Sunset",
+        "value": "About 7:45, so the lights come on mid-party"
+      },
+      {
+        "label": "Not going?",
+        "value": "Expect the Visitor Center end of the park to be a private event Sunday evening"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Once a year Ijams Park dresses up. On Sunday evening the paved Universal Trail that runs from the Visitor Center into the trees gets strung with lights and lined with art installations, small plates come out of local kitchens, somebody starts a campfire with a proper s'mores bar beside it, and a band plays while the sun goes down over the ridge. It's called Twilight at Ijams, it is the park's largest fundraiser of the year, and this is the night."
+      },
+      {
+        "type": "subhead",
+        "text": "What the ticket buys"
+      },
+      {
+        "type": "paragraph",
+        "text": "A $175 ticket gets you in at six for three hours of food and drink — the bites are from local restaurants and caterers, and the bar runs beer, wine and cocktails. A $275 VIP ticket opens the doors an hour early for a cocktail hour at five. Tables of ten start at $1,500, which is how the park's bigger friends tend to show up. Along the way there's a silent auction and, the part that makes it more than a garden party, a run of what the park calls interactive vignettes and art installations set along the trail, so the walk itself is the show."
+      },
+      {
+        "type": "subhead",
+        "text": "Why it costs what it costs"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ijams Park is free to walk every day of the year, and the nature center behind it is a nonprofit that runs on exactly this kind of night. Twilight is the one evening where the people who use the trails for nothing are asked, politely and with a drink in hand, to pay for them. If the ticket is out of reach, the park has other doors — memberships, the $15 walks and workshops that run every week — and the trail will look ordinary again by Monday morning."
+      },
+      {
+        "type": "subhead",
+        "text": "If you're just out for a Sunday walk"
+      },
+      {
+        "type": "paragraph",
+        "text": "Plan around it. Expect the Visitor Center end of the park — the lot, the lawn and the Universal Trail — to be a private event from late afternoon on. The Mead's Quarry side off Island Home Avenue, the Playscape and the trail network beyond it aren't part of the party, and the weekend's other Ijams Park events, the Friday fungi walk and Saturday's storytime, run as scheduled. Sunset Sunday is about a quarter to eight, so if you want to see the lights without a ticket, the river overlooks give you the ridge, not the trail."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ijams Nature Center — Twilight at Ijams (2026 tickets, schedule, dress)",
+        "url": "https://www.ijams.org/twilight-at-ijams"
+      },
+      {
+        "label": "Ijams Nature Center — calendar of events, Sep 13",
+        "url": "https://www.ijams.org/calendar-of-events"
+      }
+    ],
+    "event": {
+      "startDate": "2026-09-13T18:00:00-04:00",
+      "endDate": "2026-09-13T21:00:00-04:00",
+      "locationName": "Ijams Nature Center",
+      "locationAddress": "2915 Island Home Ave"
+    },
+    "social": {
+      "igTags": [
+        "ijams"
+      ],
+      "igBanner": [
+        "Twilight at Ijams Park",
+        "Sunday, six to nine"
+      ]
+    }
+  },
+  "scanner": [
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "hot": true,
+      "image": "/assets/spots/twilight_trail.jpg",
+      "title": "Twilight at Ijams, Sunday night",
+      "blurb": "Lights and art along the Universal Trail, a campfire s'mores bar, small bites and a band. The park's biggest fundraiser, six to nine.",
+      "cue": "Jump to story",
+      "href": "#twilight-ijams"
+    },
+    {
+      "label": "SoKno",
+      "labelColor": "ink",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/puckers_roadgame.jpg",
+      "title": "Vols at Georgia Tech, on the Puckers wall",
+      "blurb": "Saturday at seven on ESPN — the first road trip of the year, and the first away game in the old Mimosas room.",
+      "cue": "Jump to story",
+      "href": "#vols-at-puckers"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "hot": true,
+      "image": "/assets/spots/fungi_walk.jpg",
+      "title": "A beginner's mushroom walk",
+      "blurb": "Friday, 5:30 to 7, fifteen dollars. First of the fall fungi series, a mile and a half in the woods.",
+      "cue": "Jump to story",
+      "href": "#fungi-walk"
+    },
+    {
+      "label": "Over the bridge",
+      "labelColor": "ink",
+      "days": [
+        "Fri"
+      ],
+      "image": "/assets/spots/knoxtoberfest_stein.jpg",
+      "title": "KnoxtoberFest at One Knox",
+      "blurb": "Friday night: three-dollar beers, a free stein for the first thousand, polka in the biergarten, kickoff at 7:06.",
+      "cue": "Jump to story",
+      "href": "#knoxtoberfest"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "image": "/assets/spots/playscape_fall.jpg",
+      "title": "Storytime's fall run begins",
+      "blurb": "Saturday at ten by Mead's Quarry — free, two hours, sixteen Saturdays to come.",
+      "cue": "Jump to story",
+      "href": "#playscape-fall"
+    },
+    {
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "image": "/assets/spots/specials_riverboard.jpg",
+      "title": "The specials board",
+      "blurb": "Earl's runs a different deal every day of the weekend, down on the waterfront.",
+      "cue": "Jump to story",
+      "href": "#specials-board"
+    }
+  ],
+  "stories": [
+    {
+      "id": "fungi-walk",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/fungi_walk.jpg",
+      "imageCaption": "The part of the log you usually step over",
+      "title": "A beginner's mushroom walk opens Ijams Park's fall fungi series on Friday evening",
+      "deck": "Ninety minutes with an Ijams naturalist — what a mushroom actually is, how to tell it from a lichen, and how to look at a fallen log properly. Fifteen dollars, ages fourteen and up, and a week of storms should make the woods generous.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Sep 11 · 5:30–7 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$15 · registration required"
+        },
+        {
+          "label": "Ages",
+          "value": "14 and up"
+        },
+        {
+          "label": "The walk",
+          "value": "Up to 1.5 miles on uneven, rooty trail"
+        },
+        {
+          "label": "Bring",
+          "value": "Water and closed-toe shoes · a signed risk form"
+        },
+        {
+          "label": "Next dates",
+          "value": "Sep 20 · Sep 27 · Oct 18"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Friday at half past five, an Ijams Park naturalist — the park's word is \"fun-guide,\" and they know what they did — takes a small group out on the trails to look at the things growing on dead wood. It's the first walk of a four-part fall fungi series, and it's pitched squarely at people who have never done this: what a mushroom is, which parts are which, how to tell a fungus from a lichen, and how to start identifying what you find without eating anything to check."
+        },
+        {
+          "type": "subhead",
+          "text": "What you'll actually see"
+        },
+        {
+          "type": "paragraph",
+          "text": "That depends on the week, and this week has been good to mushrooms. After a run of ninety-degree days with afternoon storms, the low, shaded ground at Ijams Park is about as productive as it gets in September: shelf fungi on the logs, small capped mushrooms in the leaf litter, and the lichens that were there all along on the bark. The walk is a mile and a half at the most, on real trail with roots and rocks, and it stops a lot."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "Fifteen dollars, ages fourteen and up, and you need to register ahead — the page was still taking sign-ups Tuesday. Wear shoes you'd hike in, bring water, and expect a risk waiver at check-in. If Friday doesn't work, the same beginner walk repeats on September 20 and 27 and again October 18, when the fall crop is at its best."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Fall Fungi ID: Beginner Workshop, Sep 11",
+          "url": "https://www.ijams.org/event-details/fall-fungi-id-beginner-workshop-2026-09-11-17-30"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-11T17:30:00-04:00",
+        "endDate": "2026-09-11T19:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Fall fungi walk at Ijams Park",
+          "Friday, five thirty to seven"
+        ]
+      }
+    },
+    {
+      "id": "vols-at-puckers",
+      "label": "SoKno",
+      "labelColor": "ink",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/puckers_roadgame.jpg",
+      "imageCaption": "Saturday, seven o'clock, every screen the same",
+      "title": "Tennessee's first road game of the season plays on the Puckers wall Saturday night",
+      "deck": "The Vols are at Georgia Tech at seven on ESPN — the first trip to Bobby Dodd Stadium since 1986. Last week the sports grill on Mimosa Avenue watched the crowd walk past it to the stadium. This week the crowd stays.",
+      "facts": [
+        {
+          "label": "Kickoff",
+          "value": "Sat Sep 12 · 7 PM · ESPN"
+        },
+        {
+          "label": "The game",
+          "value": "Tennessee at Georgia Tech · Bobby Dodd Stadium, Atlanta"
+        },
+        {
+          "label": "Where to watch",
+          "value": "Puckers Sports Grill · 115 Mimosa Ave, off Blount"
+        },
+        {
+          "label": "Reservations",
+          "value": "Resy — worth it for a kickoff table"
+        },
+        {
+          "label": "Pucker Hour",
+          "value": "Mon–Fri 5–6 only · $1 Pucker Lager, $3 wells — not Saturday"
+        },
+        {
+          "label": "Last Saturday's hours",
+          "value": "Open 9 AM to 10 PM · check before you plan around it"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "A sports grill on a home-game Saturday is a waiting room: everybody's there until they aren't. The night it earns the televisions is the away game, and Tennessee's first one is Saturday at seven, at Georgia Tech in Atlanta, on ESPN. Puckers — the Gatlinburg sports bar that took the old Mimosas room on Mimosa Avenue two weeks ago — gets its first real test of the wall."
+        },
+        {
+          "type": "subhead",
+          "text": "The game itself"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tennessee hasn't played at Bobby Dodd Stadium since 1986, and Georgia Tech is the kind of September opponent that turns a comfortable evening into a long one if the Vols start slow. It's a night kickoff, so it's a full evening: sit down at six, and the fourth quarter lands around half past ten."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "Puckers takes reservations on Resy, and for a seven o'clock kickoff a booked table beats a hopeful one. Its weekday Pucker Hour — the dollar lager, the three-dollar wells — runs Monday through Friday from five to six and does not extend to Saturday, so don't plan the budget around it. Last Saturday the room opened at nine in the morning and ran until ten at night; this week's hours weren't posted as of Tuesday. If the wall is full, Hi-Wire's rooftop and the SouthSide Garage beer garden on Sevier Avenue both keep the game on."
+        }
+      ],
+      "sources": [
+        {
+          "label": "On3 — Tennessee at Georgia Tech kickoff time and TV",
+          "url": "https://www.on3.com/teams/tennessee-volunteers/news/tennessee-georgia-tech-kickoff-time-tv-channel-announced/"
+        },
+        {
+          "label": "Georgia Tech Athletics — September kickoff times",
+          "url": "https://ramblinwreck.com/georgia-tech-football-announces-september-kickoff-times/"
+        },
+        {
+          "label": "Puckers Knoxville — Pucker Hour, Resy",
+          "url": "https://mimosasknoxville.com/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-12T19:00:00-04:00",
+        "endDate": "2026-09-12T22:30:00-04:00",
+        "locationName": "Puckers Sports Grill",
+        "locationAddress": "115 Mimosa Ave"
+      },
+      "social": {
+        "igTags": [
+          "puckers"
+        ],
+        "igBanner": [
+          "Vols at Georgia Tech, on the wall at Puckers",
+          "Saturday, seven o'clock"
+        ]
+      }
+    },
+    {
+      "id": "knoxtoberfest",
+      "label": "Over the bridge",
+      "labelColor": "ink",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/knoxtoberfest_stein.jpg",
+      "imageCaption": "Gates at five, polka by six, kickoff at 7:06",
+      "title": "One Knox pours three-dollar beers and hands out steins for KnoxtoberFest on Friday night",
+      "deck": "The defending league champions host FC Naples at Covenant Health Park with a free stein for the first thousand fans, three-dollar beer all match, and a live polka band in the biergarten. It's across the river, but it's a mile from Sevier Avenue.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Sep 11 · gates and biergarten 5 PM · kickoff 7:06"
+        },
+        {
+          "label": "Match",
+          "value": "One Knoxville SC vs. FC Naples · USL League One"
+        },
+        {
+          "label": "Where",
+          "value": "Covenant Health Park · 500 E Jackson Ave, the Old City"
+        },
+        {
+          "label": "The deal",
+          "value": "Free stein to the first 1,000 fans 21+ · $3 beer all match"
+        },
+        {
+          "label": "Music",
+          "value": "Live polka band in the biergarten from gates"
+        },
+        {
+          "label": "Form",
+          "value": "11 wins, 5 losses, 7 draws · four straight draws coming in"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Friday night One Knox turns its home ground into a beer festival with a soccer match attached. It's KnoxtoberFest: gates and the biergarten open at five, a live polka band plays under the string lights, the first thousand fans over twenty-one get a beer stein to keep, and beer is three dollars all match long. Kickoff against FC Naples is at 7:06."
+        },
+        {
+          "type": "subhead",
+          "text": "The soccer part"
+        },
+        {
+          "type": "paragraph",
+          "text": "One Knox won USL League One last year, and this season's team is sitting on eleven wins, five losses and seven draws — four of those draws in a row coming into Friday, which is the polite way of saying they've forgotten how to close. Naples is a first-year club from Florida. On a theme night the match is the second-best reason to go, and the club knows it."
+        },
+        {
+          "type": "subhead",
+          "text": "From this side of the river"
+        },
+        {
+          "type": "paragraph",
+          "text": "Covenant Health Park is in the Old City, which is over the water from us — but only just. From the Sevier Avenue end of the neighborhood it's the Gay Street bridge and a few blocks, a mile or so on foot and five minutes in a car, and the walk back over the bridge with a stein in your bag is half the point. Three-dollar beer is a promotion, not an invitation to drive home on it."
+        }
+      ],
+      "sources": [
+        {
+          "label": "One Knoxville SC — Matchday HQ: KnoxtoberFest, Sep 11",
+          "url": "https://www.oneknoxsc.com/matchday-hq"
+        },
+        {
+          "label": "USL League One — One Knox schedule",
+          "url": "https://www.uslleagueone.com/one-knox-sc-schedule"
+        },
+        {
+          "label": "FOX Sports — USL League One standings",
+          "url": "https://www.foxsports.com/soccer/usl-league-one/standings"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-11T17:00:00-04:00",
+        "endDate": "2026-09-11T21:30:00-04:00",
+        "locationName": "Covenant Health Park",
+        "locationAddress": "500 E Jackson Ave"
+      },
+      "social": {
+        "igTags": [
+          "one-knoxville"
+        ],
+        "igBanner": [
+          "KnoxtoberFest at One Knox",
+          "Friday, gates at five, kickoff at seven"
+        ]
+      }
+    },
+    {
+      "id": "playscape-fall",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/playscape_fall.jpg",
+      "imageCaption": "Ten o'clock, on the blankets, by Mead's Quarry",
+      "title": "Saturday storytime at the Ijams Nature Playscape starts a sixteen-week fall run",
+      "deck": "Free, ten to noon, under the trees at Mead's Quarry. A story read out loud, then a nature craft or free play in the Playscape, every Saturday from now into the new year.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Sep 12 · 10 AM–noon · then every Saturday, 16 dates"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Playscape · 3518 Island Home Ave, at Mead's Quarry"
+        },
+        {
+          "label": "Cost",
+          "value": "Free · parking $5 per car, free for Ijams members"
+        },
+        {
+          "label": "Bring",
+          "value": "A blanket or camp chair, water, snacks"
+        },
+        {
+          "label": "Good for",
+          "value": "The stroller-to-early-grade-school crowd, and whoever brought them"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Storytime at the Nature Playscape has been a summer habit; Saturday it becomes a season. The fall run starts September 12 and goes sixteen Saturdays, ten to noon, at the Playscape by Mead's Quarry — the log-and-rope play area on the Island Home Avenue side of Ijams Park where the trees do the shade."
+        },
+        {
+          "type": "subhead",
+          "text": "How a morning runs"
+        },
+        {
+          "type": "paragraph",
+          "text": "Somebody reads a nature story out loud to whoever's on the blankets. Then, on alternating weeks, the group either does a hands-on activity that goes with the book — a leaf craft, a bug hunt, that sort of thing — or simply turns the kids loose on the Playscape with an adult keeping a loose eye. It's two hours on the schedule; most families do one and drift."
+        },
+        {
+          "type": "subhead",
+          "text": "The fine print"
+        },
+        {
+          "type": "paragraph",
+          "text": "It's free, and it will stay free through the whole run. The one cost is the Mead's Quarry lot, which is five dollars a car unless you're an Ijams member. Bring your own seat, your own water and a snack — there's no concession on that side of the park — and note that Sunday's fundraiser doesn't touch this end of Ijams at all."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Storytelling at the Ijams Nature Playscape, Sep 12",
+          "url": "https://www.ijams.org/event-details/storytelling-at-the-ijams-nature-playscape-2026-09-12-10-00"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-12T10:00:00-04:00",
+        "endDate": "2026-09-12T12:00:00-04:00",
+        "locationName": "Ijams Nature Playscape",
+        "locationAddress": "3518 Island Home Ave"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Free storytime at Ijams Park",
+          "Saturdays, ten to noon"
+        ]
+      }
+    },
+    {
+      "id": "specials-board",
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/specials_riverboard.jpg",
+      "imageCaption": "The board, and the water it faces",
+      "title": "The specials board: a different deal every day at Earl's",
+      "deck": "Ten-dollar Patrón ritas Thursday, nine-dollar spicy ones Friday, eight-dollar house margaritas all day Saturday, and seven-dollar mimosas and Bloody Marys all day Sunday, on the tables that face open river.",
+      "facts": [
+        {
+          "label": "Thu",
+          "value": "$10 Patrón mango margaritas · 4–6 PM · $1 off liquor, beer and wine all night"
+        },
+        {
+          "label": "Fri",
+          "value": "$9 spicy pineapple margaritas · 4–6 PM · $1 off all night"
+        },
+        {
+          "label": "Sat",
+          "value": "$8 house margaritas · all day"
+        },
+        {
+          "label": "Sun",
+          "value": "$7 mimosas and Bloody Marys · all day"
+        },
+        {
+          "label": "Where",
+          "value": "Earl's · 610 Waterfront Dr, Suttree Landing"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Earl's, down at the water on Waterfront Drive, keeps a different deal for every day of the weekend, and the ladder hasn't moved: ten-dollar Patrón mango margaritas during Thursday's happy hour, nine-dollar spicy pineapple ones Friday, eight-dollar house margaritas from open to close Saturday, and seven-dollar mimosas and Bloody Marys all day Sunday. Thursday and Friday the happy hour is four to six, and a dollar comes off liquor, beer and wine for the rest of the night."
+        },
+        {
+          "type": "subhead",
+          "text": "One honest note"
+        },
+        {
+          "type": "paragraph",
+          "text": "This board was last confirmed against Earl's own specials page on September 1. The page wouldn't load for us Tuesday, so if a price has moved, the chalk on the patio wins. The river seats go first regardless — get to Suttree Landing by turning toward the water at the Citgo on Sevier Avenue and following Claude Street down."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Earl's Knoxville — specials",
+          "url": "https://earlsknox.com/specials"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "earls"
+        ],
+        "igBanner": [
+          "The specials board at Earl's",
+          "A different deal every day, Thursday to Sunday"
+        ]
+      }
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen — Twilight at Ijams Park lights the trail Sunday, a beginner's mushroom walk Friday, storytime's fall run, the Vols' first road game on the Puckers wall, and three-dollar beers at One Knox across the bridge.",
+      "duration": "03:08",
+      "src": "/audio/2026-09-09.mp3"
+    },
+    "calendar": [
+      {
+        "month": "SEP",
+        "day": "10",
+        "title": "Ecosystem Explorers at Ijams Park — kids' spots sold out",
+        "meta": "5:30–7 PM · adults free · Girl Scout badge night",
+        "href": "https://www.ijams.org/calendar-of-events"
+      },
+      {
+        "month": "SEP",
+        "day": "10",
+        "title": "Pint night at Hi-Wire",
+        "meta": "All-day happy hour too · 2020 Barber St",
+        "href": "https://hiwirebrewing.com/knoxville/"
+      },
+      {
+        "month": "SEP",
+        "day": "10",
+        "title": "Trivia at Trailhead Beer Market",
+        "meta": "7 PM · free · 1317 Island Home Ave",
+        "href": "https://www.instagram.com/trailheadbeer/"
+      },
+      {
+        "month": "SEP",
+        "day": "10",
+        "title": "Earl's — $10 Patrón ritas",
+        "meta": "4–6 PM · 610 Waterfront Dr",
+        "href": "#specials-board"
+      },
+      {
+        "month": "SEP",
+        "day": "11",
+        "title": "KNOXTOBERFEST — One Knox vs. FC Naples",
+        "meta": "Gates 5 PM · kick 7:06 · $3 beers · Covenant Health Park",
+        "starred": true,
+        "href": "#knoxtoberfest"
+      },
+      {
+        "month": "SEP",
+        "day": "11",
+        "title": "Fall Fungi ID walk",
+        "meta": "5:30–7 PM · $15 · ages 14+ · Ijams Park",
+        "starred": true,
+        "href": "#fungi-walk"
+      },
+      {
+        "month": "SEP",
+        "day": "11",
+        "title": "Earl's — $9 spicy pineapple ritas",
+        "meta": "4–6 PM · 610 Waterfront Dr",
+        "href": "#specials-board"
+      },
+      {
+        "month": "SEP",
+        "day": "11",
+        "title": "Live music at Trailhead Beer Market",
+        "meta": "Fri & Sat nights · till midnight · 1317 Island Home Ave",
+        "href": "https://www.instagram.com/trailheadbeer/"
+      },
+      {
+        "month": "SEP",
+        "day": "12",
+        "title": "Storytime at the Nature Playscape — fall run begins",
+        "meta": "10 AM – noon · free · $5 parking · Mead's Quarry",
+        "href": "#playscape-fall"
+      },
+      {
+        "month": "SEP",
+        "day": "12",
+        "title": "VOLS AT GEORGIA TECH",
+        "meta": "7 PM · ESPN · on the wall at Puckers, 115 Mimosa Ave",
+        "starred": true,
+        "href": "#vols-at-puckers"
+      },
+      {
+        "month": "SEP",
+        "day": "12",
+        "title": "Earl's — $8 house margaritas",
+        "meta": "All day · 610 Waterfront Dr",
+        "href": "#specials-board"
+      },
+      {
+        "month": "SEP",
+        "day": "13",
+        "title": "TWILIGHT AT IJAMS",
+        "meta": "6–9 PM · $175 · Visitor Center + Universal Trail",
+        "starred": true,
+        "href": "#twilight-ijams"
+      },
+      {
+        "month": "SEP",
+        "day": "13",
+        "title": "Earl's — $7 mimosas & Bloody Marys",
+        "meta": "All day · 610 Waterfront Dr",
+        "href": "#specials-board"
+      }
+    ]
+  }
+}
