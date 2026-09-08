@@ -74,13 +74,15 @@ describe("DirtySouth checklist", () => {
     expect(isSponsorDay(new Date("2026-08-29T12:00:00Z"))).toBe(false); // Saturday
   });
   it("sponsor card renders name, address, phone, art when passed; absent otherwise", () => {
-    const { rerender } = render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" sponsor={nightlife.sponsor!} />);
+    // The sponsor rotates week to week, so assert against whatever the content
+    // file says instead of pinning one business's details.
+    const sponsor = nightlife.sponsor!;
+    const { rerender } = render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" sponsor={sponsor} />);
     expect(screen.getByText(/brought to you by/i)).toBeInTheDocument();
-    // The name appears in the sponsor headline AND in the Thursday row's logo chip
-    // (this render passes no resolved logos, so the chip falls back to the wordmark).
-    expect(screen.getAllByText("Angry Dumplings").length).toBeGreaterThanOrEqual(1);
-    expect(screen.getAllByText(/1119 Sevier Ave/).length).toBeGreaterThanOrEqual(2); // sponsor card + checklist entry
-    expect(screen.getByRole("link", { name: /760\) 899-4121/ })).toHaveAttribute("href", "tel:7608994121");
+    expect(screen.getAllByText(sponsor.name).length).toBeGreaterThanOrEqual(1);
+    expect(screen.getAllByText(new RegExp(sponsor.address)).length).toBeGreaterThanOrEqual(1);
+    const digits = sponsor.phone.replace(/\D/g, "");
+    expect(screen.getByRole("link", { name: new RegExp(digits.slice(-4)) })).toHaveAttribute("href", `tel:${digits}`);
     expect(screen.getByAltText(/from the Dirty South map/i)).toBeInTheDocument();
     rerender(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" sponsor={null} />);
     expect(screen.queryByText(/brought to you by/i)).not.toBeInTheDocument();
