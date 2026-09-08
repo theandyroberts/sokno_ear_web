@@ -156,7 +156,7 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
           {/* Below the feature: the map card and the signup ride side by side under the
               article instead of stacking in the sidebar, where they used to trail the
               feature by a screen of empty column (Andy, 2026-09-08). */}
-          <div className="ear-belowfeature" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 36, alignItems: "start", marginTop: 32 }}>
+          <div className="ear-belowfeature" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 36, alignItems: "stretch", marginTop: 32 }}>
             <PartyMapCard />
             <SubscribeForm />
           </div>

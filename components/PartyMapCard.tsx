@@ -2,7 +2,9 @@
 import * as React from "react";
 import { createPortal } from "react-dom";
 
-// Sidebar card + lightbox for Andy's "Party in the Dirty South" festive map.
+// Card + lightbox for Andy's "Party in the Dirty South" festive map — sold on the
+// main site as a found artifact ("original map… recently unearthed"), no plan link:
+// the acid-green ad above already sends people to /party (Andy, 2026-09-08).
 // The /dirtysouthparty page frames the same map in acid green; here on the main
 // site it hangs like a framed print — cream mat inside an ink frame.
 
@@ -33,21 +35,20 @@ export function PartyMapCard() {
   }, [open]);
 
   return (
-    <section style={{ background: "var(--paper-bright)", border: "var(--border-ink) solid var(--ink-black)", borderRadius: "var(--radius-md)", overflow: "hidden", boxShadow: "var(--shadow-lift)" }}>
+    <section style={{ background: "var(--paper-bright)", border: "var(--border-ink) solid var(--ink-black)", borderRadius: "var(--radius-md)", overflow: "hidden", boxShadow: "var(--shadow-lift)", height: "100%", boxSizing: "border-box" }}>
       <div style={bandStyle}>
-        <span aria-hidden style={{ color: "var(--rust)" }}>★</span>Party in the Dirty South
+        <span aria-hidden style={{ color: "var(--rust)" }}>★</span>Original Dirty South Map Found
       </div>
       <button
         onClick={() => setOpen(true)}
-        aria-label="Open the Dirty South map full size"
+        aria-label="Open the original Dirty South map full size"
         style={{ display: "block", width: "100%", padding: 0, margin: 0, border: "none", background: "none", cursor: "zoom-in" }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={MAP_SRC} alt={MAP_ALT} loading="lazy" style={{ display: "block", width: "100%", height: "auto", borderBottom: "var(--border-hair) solid var(--paper-edge)" }} />
       </button>
       <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", lineHeight: 1.5, color: "var(--ink-black)", margin: 0, padding: "10px 16px 12px" }}>
-        The night side of SoKno, mapped — every bar, kitchen, and stage across the bridge.
-        Tap the map to zoom, or see <a href="/party" style={{ color: "var(--rust)", fontWeight: 700 }}>the night-by-night plan</a>.
+        Click to see the original map of Knoxville&rsquo;s Dirty South that was recently unearthed for the public to see.
       </p>
 
       {/* Portaled to <body>: the sidebar holding this card is position:sticky, which

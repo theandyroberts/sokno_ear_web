@@ -7,7 +7,33 @@ const boxStyle: React.CSSProperties = {
   border: "var(--border-ink) solid var(--ink-black)",
   borderRadius: "var(--radius-sm)",
   padding: "var(--space-5)",
+  // Sits beside the map card in a stretched grid row: fill the cell so the two
+  // borders land at the same height, content staying top-aligned (Andy, 2026-09-08).
+  height: "100%",
+  boxSizing: "border-box",
 };
+
+// Envelope, drawn in the Ear's ink line — the "delivered" of the heading.
+function EnvelopeMark() {
+  return (
+    <svg aria-hidden viewBox="0 0 120 84" width="108" height="76" style={{ display: "block", margin: "2px auto 14px" }}>
+      <g fill="none" stroke="var(--ink-black)" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round">
+        <rect x="6" y="14" width="108" height="64" rx="4" fill="var(--paper-cream)" />
+        <path d="M6 18 L60 54 L114 18" />
+        <path d="M6 76 L46 44" />
+        <path d="M114 76 L74 44" />
+      </g>
+      <g fill="var(--rust)" stroke="var(--ink-black)" strokeWidth="1.5">
+        <circle cx="60" cy="54" r="9" />
+      </g>
+      <text x="60" y="58.5" textAnchor="middle" fontSize="11" fontFamily="var(--font-label)" fill="var(--paper-cream)">★</text>
+      <g stroke="var(--ink-faded)" strokeWidth="1.5" strokeLinecap="round">
+        <path d="M16 6 h18" /><path d="M13 10 h12" />
+        <path d="M86 6 h18" /><path d="M95 10 h12" />
+      </g>
+    </svg>
+  );
+}
 
 const headingStyle: React.CSSProperties = {
   fontFamily: "var(--font-label)",
@@ -125,7 +151,12 @@ export function SubscribeForm() {
   return (
     <section style={boxStyle}>
       <div style={headingStyle}>★ Get the Ear Delivered</div>
+      <EnvelopeMark />
       <p style={copyStyle}>Sign up for the weekly dispatch — events and stories from around SoKno.</p>
+      <p style={copyStyle}>
+        One short email when a fresh episode is up: the weekend&apos;s calendar, the audio
+        briefing, and every story, in one place. No spam, ever.
+      </p>
       <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "var(--space-3, 12px)" }}>
         <input
           type="email"
