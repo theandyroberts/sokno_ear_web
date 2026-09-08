@@ -101,7 +101,9 @@ function SponsorCard({ sponsor, fontClass }: { sponsor: Sponsor; fontClass: stri
       </a>
       <div style={{ flex: "1 1 260px", minWidth: 220 }}>
         <div className={fontClass} style={{ fontSize: "clamp(1.05rem, 4vw, 1.5rem)", lineHeight: 1.1, letterSpacing: "0.03em", textTransform: "uppercase", transform: "rotate(-0.4deg)" }}>
-          ★ {sponsor.kicker} ★
+          {/* NBSPs weld the stars to the first and last words so a wrap never
+              strands a star on its own line. */}
+          {`★ ${sponsor.kicker} ★`}
         </div>
         <a href={sponsor.href ?? "#"} target="_blank" rel="noopener noreferrer" style={{ color: INK, textDecoration: "none" }}>
           <div className={fontClass} style={{ fontSize: "clamp(1.8rem, 7vw, 2.8rem)", lineHeight: 0.95, textTransform: "uppercase", margin: "6px 0 8px", transform: "rotate(-0.6deg)" }}>
