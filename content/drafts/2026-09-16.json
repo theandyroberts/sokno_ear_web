@@ -1,0 +1,731 @@
+{
+  "slug": "2026-09-16",
+  "volume": 1,
+  "number": 14,
+  "episode": "Weekend Episode",
+  "date": "2026-09-16",
+  "dateLabel": "Thu–Sun, Sep 17–20, 2026",
+  "shortDate": "Sep 17–20",
+  "place": "South Knoxville, TN",
+  "feature": {
+    "id": "sevier-day",
+    "label": "SoKno",
+    "labelColor": "ink",
+    "days": [
+      "Sat"
+    ],
+    "layout": "imageTop",
+    "image": "/assets/spots/sevier_day_forge.jpg",
+    "imageCaption": "The forge at Marble Springs, Saturday",
+    "title": "Blacksmiths, broom-makers and a fiddle band at Marble Springs",
+    "deck": "The governor's farm throws its founder a birthday party once a year, and the whole thing is free. Saturday it turns 281, with working craftspeople on the grounds from eleven to four.",
+    "facts": [
+      {
+        "label": "When",
+        "value": "Sat Sep 19 · 11 AM – 4 PM"
+      },
+      {
+        "label": "Where",
+        "value": "Marble Springs State Historic Site · 1220 W Governor John Sevier Hwy"
+      },
+      {
+        "label": "Admission",
+        "value": "Free · all ages"
+      },
+      {
+        "label": "Demonstrations",
+        "value": "Blacksmithing, open-hearth cooking, broom-making, weaving, pottery"
+      },
+      {
+        "label": "Music & talks",
+        "value": "Knoxville Irish Step Dancers 12:30 · The Bearded Trio 1:15 · Dr. Michael Lynch lecture 2:30"
+      },
+      {
+        "label": "Weather",
+        "value": "Mostly sunny, around 94 — the demonstrations are outdoors and the shade is uneven"
+      },
+      {
+        "label": "Phone",
+        "value": "(865) 573-5508"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "John Sevier was born in 1745, which makes Saturday his 281st birthday, and the farm he lived on is still standing at the far south end of the county. Marble Springs has thrown him a party every September for years. It costs nothing to walk in, it runs from eleven to four, and the reason to go is the people working: a blacksmith at a live forge, a cook over an open hearth, someone tying a broom by hand, a weaver at a loom, a potter at a wheel."
+      },
+      {
+        "type": "subhead",
+        "text": "What's actually happening on the grounds"
+      },
+      {
+        "type": "paragraph",
+        "text": "These are demonstrations, not a museum case — the craftspeople work through the day and will talk while they do it, and the hands-on crafts are open to all ages. It is the rare local event where a nine-year-old and a sixty-year-old get roughly the same thing out of standing at the same table."
+      },
+      {
+        "type": "agenda",
+        "title": "Saturday on the grounds",
+        "rows": [
+          {
+            "time": "11:00 AM",
+            "what": "Gates open — demonstrations begin across the site"
+          },
+          {
+            "time": "12:30 PM",
+            "what": "Knoxville Irish Step Dancers"
+          },
+          {
+            "time": "1:15 PM",
+            "what": "The Bearded Trio — one-hour set"
+          },
+          {
+            "time": "2:30 PM",
+            "what": "Dr. Michael Lynch on the Overmountain Men and the Southern Campaign"
+          },
+          {
+            "time": "4:00 PM",
+            "what": "Site closes"
+          }
+        ]
+      },
+      {
+        "type": "subhead",
+        "text": "Getting there, and the heat"
+      },
+      {
+        "type": "paragraph",
+        "text": "Marble Springs sits on West Governor John Sevier Highway, past the Urban Wilderness and well south of the Sevier Avenue end of things — it is a drive, not a walk, from the rest of this week's list. Saturday's forecast is mostly sunny and around 94 degrees. A forge on a 94-degree afternoon is exactly as warm as it sounds, so go early, bring water, and plan on the shade being wherever the trees are rather than wherever you are."
+      },
+      {
+        "type": "paragraph",
+        "text": "One scheduling note worth having: this is the daytime half of a very full Saturday in South Knoxville. The site closes at four, which leaves the evening open."
+      }
+    ],
+    "sources": [
+      {
+        "label": "The Knoxville Focus — Sevier Day at Marble Springs",
+        "url": "https://www.knoxfocus.com/archives/the-daily-focus/party-like-its-1745-at-marble-springs-state-historic-site-annual-sevier-day/"
+      },
+      {
+        "label": "Marble Springs State Historic Site",
+        "url": "https://www.marblesprings.net/"
+      }
+    ],
+    "event": {
+      "startDate": "2026-09-19T11:00:00-04:00",
+      "endDate": "2026-09-19T16:00:00-04:00",
+      "locationName": "Marble Springs State Historic Site",
+      "locationAddress": "1220 W Governor John Sevier Hwy, Knoxville, TN 37920"
+    },
+    "social": {
+      "igBanner": [
+        "Free 18th-century crafts at Marble Springs",
+        "Saturday, eleven to four"
+      ],
+      "igBannerSkipCheck": true
+    }
+  },
+  "scanner": [
+    {
+      "label": "SoKno",
+      "labelColor": "ink",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/sevier_day_forge.jpg",
+      "title": "Blacksmiths and broom-makers at Marble Springs",
+      "blurb": "The governor's farm turns 281 on Saturday. Free, eleven to four, with a live forge and a fiddle band.",
+      "cue": "Jump to story",
+      "href": "#sevier-day"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/circus_moon.jpg",
+      "title": "The Circus Under the Moon, on the lawn",
+      "blurb": "Aerialists, jugglers and fire performers after dark Saturday. Gate at six, show at seven thirty.",
+      "cue": "Jump to story",
+      "href": "#circus-moon"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "hot": false,
+      "image": "/assets/spots/lotr_lawn.jpg",
+      "title": "Lord of the Rings, outdoors on the grass",
+      "blurb": "Friday night on the Visitor Center lawn — twelve dollars, gate at seven, movie when it gets dark.",
+      "cue": "Jump to story",
+      "href": "#lotr-lawn"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/night_kickoff.jpg",
+      "title": "Night kickoff sends the crowd this way",
+      "blurb": "Tennessee hosts Kennesaw State at 7:45 Saturday. Where the 600-odd public spaces actually are.",
+      "cue": "Jump to story",
+      "href": "#night-kickoff"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/playscape_author.jpg",
+      "title": "The author reads her own book at storytime",
+      "blurb": "Free Saturday morning at the Nature Playscape, with a children's book that isn't out yet.",
+      "cue": "Jump to story",
+      "href": "#playscape-author"
+    },
+    {
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "hot": false,
+      "image": "/assets/spots/specials_chalk_kickoff.jpg",
+      "title": "A different deal every day at Earl's",
+      "blurb": "Ritas Thursday through Saturday, mimosas Sunday, and a separate Vols board for game day.",
+      "cue": "Jump to story",
+      "href": "#specials-board"
+    }
+  ],
+  "stories": [
+    {
+      "id": "circus-moon",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/circus_moon.jpg",
+      "imageCaption": "Fire and silks on the Visitor Center lawn",
+      "title": "The Circus Under the Moon returns to the Ijams Park lawn",
+      "deck": "Aerialists, jugglers and fire performers take the lawn outside the Visitor Center after dark on Saturday — one night, one show, and the only circus in town that ends with the woods behind it.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Sep 19 · gate and marketplace 6 PM · show 7:30–9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Visitor Center lawn, Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Tickets",
+          "value": "$22 adults · $15 kids 6–12 · under 6 free · parking included"
+        },
+        {
+          "label": "Intermission",
+          "value": "Around 8:30"
+        },
+        {
+          "label": "Bring",
+          "value": "A lawn chair or a blanket — the lawn is the seating"
+        },
+        {
+          "label": "Food & drink",
+          "value": "Food trucks and the Ijams beer garden on site"
+        },
+        {
+          "label": "Sunset",
+          "value": "About 7:37, so the fire acts land in real dark"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "A troupe of local and regional performers sets up on the grass outside the Ijams Park Visitor Center on Saturday evening, and for ninety minutes the lawn is a circus: acrobats, aerials and silks, jugglers, and the fire performers the park bills as the reason to stay to the end. The gate and the marketplace open at six; the show starts at 7:30 and runs to nine with an intermission around 8:30."
+        },
+        {
+          "type": "subhead",
+          "text": "How the night is built"
+        },
+        {
+          "type": "paragraph",
+          "text": "The hour and a half before the show is the part people underuse. The marketplace is open from six, the food trucks are parked, and the Ijams beer garden is pouring — so the sensible version of Saturday is to arrive at six, eat on the grass, and be settled when the light goes. Sunset is about 7:37, which means the show starts in dusk and finishes in full dark. That is deliberate, and it is why the fire acts are back half."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "Twenty-two dollars for an adult, fifteen for a kid six to twelve, free under six, and parking is included in the ticket — worth knowing, because parking at Ijams Park otherwise costs five dollars a car. There are no seats: bring a lawn chair or a blanket. And the one conflict to plan around is that Tennessee kicks off at Neyland at 7:45 the same night, fifteen minutes after the circus starts. The two audiences are mostly different people, but the bridges are not."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — The Circus Under the Moon 2026",
+          "url": "https://www.ijams.org/event-details/special-event-the-circus-under-the-moon-at-ijams-2026"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-19T19:30:00-04:00",
+        "endDate": "2026-09-19T21:00:00-04:00",
+        "locationName": "Ijams Nature Center Visitor Center lawn",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "The Circus Under the Moon at Ijams Park",
+          "Saturday, gate six, show seven thirty"
+        ]
+      }
+    },
+    {
+      "id": "lotr-lawn",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/lotr_lawn.jpg",
+      "imageCaption": "Middle Earth, projected on the lawn",
+      "title": "Lord of the Rings plays outdoors at Ijams Park on Friday",
+      "deck": "Twelve dollars puts you on the grass with a projector, a beer garden and a very long walk to Mordor. It is the second-to-last Movie Under the Stars of the year.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Sep 18 · gate 7 PM · movie at dark, about 8:15"
+        },
+        {
+          "label": "Where",
+          "value": "Visitor Center lawn, Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Tickets",
+          "value": "$12 · Ijams and Central Cinema members get a discount"
+        },
+        {
+          "label": "Bring",
+          "value": "Lawn chairs and blankets"
+        },
+        {
+          "label": "Don't bring",
+          "value": "Coolers or outside alcohol"
+        },
+        {
+          "label": "Dogs",
+          "value": "Welcome, on leash at all times"
+        },
+        {
+          "label": "Food & drink",
+          "value": "Food trucks and the Ijams beer garden"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Ijams Park and Central Cinema have been running Movies Under the Stars on the Visitor Center lawn since May, and Friday is the big one: Lord of the Rings, outdoors, on a screen, with the actual woods sitting right there behind it. The gate opens at seven and the movie starts when it gets dark, which the park puts at about 8:15."
+        },
+        {
+          "type": "subhead",
+          "text": "What to expect on the lawn"
+        },
+        {
+          "type": "paragraph",
+          "text": "Twelve dollars a head, with a discount for Ijams and Central Cinema members. Food trucks and the beer garden handle dinner and drinks — no coolers and no outside alcohol, which the park is direct about. Bring a chair or a blanket. Dogs are allowed and have to be leashed the whole time, and on a Friday night with a crowd that is a rule worth taking seriously."
+        },
+        {
+          "type": "subhead",
+          "text": "Two left after this"
+        },
+        {
+          "type": "paragraph",
+          "text": "The series has one more date after Friday — Carrie on October 2, which tells you where the calendar is heading. Buy ahead if you can; the park does not promise walk-up tickets. Friday's forecast is mostly sunny and around 94 with a slight chance of an evening storm, so check the event page before you load the car."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Movies Under the Stars: Lord of the Rings",
+          "url": "https://www.ijams.org/event-details/movies-under-the-stars-lord-of-the-rings"
+        },
+        {
+          "label": "Ijams Park — Movies Under the Stars series",
+          "url": "https://www.ijams.org/movies-under-the-stars"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-18T19:00:00-04:00",
+        "endDate": "2026-09-18T23:00:00-04:00",
+        "locationName": "Ijams Nature Center Visitor Center lawn",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Lord of the Rings on the Ijams Park lawn",
+          "Friday, gate at seven, movie at dark"
+        ]
+      }
+    },
+    {
+      "id": "night-kickoff",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/night_kickoff.jpg",
+      "imageCaption": "The corridor, an hour before kickoff",
+      "title": "A 7:45 night kickoff puts the stadium crowd on our side of the river",
+      "deck": "Tennessee hosts Kennesaw State on Saturday night, and a late kickoff means the South Knoxville parking hunt starts in the afternoon and the walk back across the bridge happens near midnight.",
+      "facts": [
+        {
+          "label": "Kickoff",
+          "value": "Sat Sep 19 · 7:45 PM · SEC Network"
+        },
+        {
+          "label": "Where",
+          "value": "Neyland Stadium — Tennessee's first night game of the season"
+        },
+        {
+          "label": "Why it matters here",
+          "value": "The stadium is a walk across the river from Old Sevier and Suttree Landing"
+        },
+        {
+          "label": "Public parking",
+          "value": "600+ public spaces near the Sevier Avenue corridor"
+        },
+        {
+          "label": "Suttree Landing",
+          "value": "200+ spaces at the park and on nearby streets"
+        },
+        {
+          "label": "Regal garage",
+          "value": "300+ spaces, free weekends and weekdays after 6 PM"
+        },
+        {
+          "label": "Also that night",
+          "value": "The Circus Under the Moon starts at 7:30 at Ijams Park"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Tennessee plays Kennesaw State on Saturday at 7:45 on SEC Network — the first night game at Neyland this season, and the last one before conference play starts. None of that is South Knoxville news by itself. What is South Knoxville news is that a 7:45 kickoff moves the whole rhythm of the day: cars start hunting for spaces on this side of the river by mid-afternoon, and the walk back over the bridge happens somewhere around eleven."
+        },
+        {
+          "type": "subhead",
+          "text": "Where the spaces actually are"
+        },
+        {
+          "type": "paragraph",
+          "text": "The City counts more than 600 public parking spaces near the Sevier Avenue corridor. More than 200 of those are at Suttree Landing Park and on the streets around it. Another 300-plus are in the Regal garage, which is open to the public on weekends and after six on weekdays. From any of them it is a five-to-ten-minute walk to the Sevier Avenue businesses, and a longer one to the stadium."
+        },
+        {
+          "type": "subhead",
+          "text": "If you live here and you are not going"
+        },
+        {
+          "type": "paragraph",
+          "text": "The roundabout construction at Sevier, Foggy Bottom and Island Home is still in the ground, so the corridor is narrower than it looks on a map. Marked pedestrian paths skirt the work. If Saturday night is a stay-home night, it is a good one to walk rather than drive. And if you were planning on the circus at Ijams Park, note that it starts fifteen minutes before kickoff — the lawn is fine, the bridges are the problem."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Rocky Top Insider — broadcast details, Tennessee vs. Kennesaw State",
+          "url": "https://www.rockytopinsider.com/2026/09/14/who-is-announcing-tennessee-football-vs-kennesaw-state-broadcast-details-for-clash-in-neyland-stadium/"
+        },
+        {
+          "label": "City of Knoxville — Updates on Sevier Avenue Projects",
+          "url": "https://www.knoxvilletn.gov/news/2026/updates_on_sevier_avenue_projects"
+        }
+      ],
+      "social": {
+        "igBanner": [
+          "Night kickoff fills Old Sevier",
+          "Saturday, seven forty-five, SEC Network"
+        ],
+        "igBannerSkipCheck": true
+      }
+    },
+    {
+      "id": "playscape-author",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/playscape_author.jpg",
+      "imageCaption": "Saturday storytime, with the author reading",
+      "title": "An author reads her own book at Saturday storytime at the Nature Playscape",
+      "deck": "The free Saturday storytime out by Mead's Quarry hands the book to the person who wrote it this week — Mona Martin Batchelor, reading from a children's book that isn't published yet.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Sep 19 · 10 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Playscape, Grayson Subaru Preserve · 3518 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "Free"
+        },
+        {
+          "label": "The book",
+          "value": "\"Nora T and the Champion Tree,\" by Mona Martin Batchelor — not yet published"
+        },
+        {
+          "label": "Getting there",
+          "value": "A short walk from the Mead's Quarry gravel lot"
+        },
+        {
+          "label": "Bring",
+          "value": "A blanket or a camp chair, water, and shoes that can get muddy"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Storytime at the Ijams Nature Playscape runs every Saturday morning from ten to noon and costs nothing: somebody reads a book out loud on the blankets, and then it is a craft or it is the climbing logs and the creek. This Saturday the reader is the author. Mona Martin Batchelor will read from \"Nora T and the Champion Tree,\" a children's book of hers that has not been published yet."
+        },
+        {
+          "type": "subhead",
+          "text": "Why the Playscape is the right room for it"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Playscape is five acres of deliberately unfinished woods at the Grayson Subaru Preserve — dirt to dig, logs to climb, a creek to stand in. A book about a champion tree read out loud under actual trees is the kind of thing that only works in a place like this, and it is free, which means a family can show up on a whim and leave when the two-year-old is done."
+        },
+        {
+          "type": "paragraph",
+          "text": "It is a short walk from the Mead's Quarry gravel lot. Saturday will be hot — mostly sunny and around 94 — but the ten-to-noon window is the cool half of that, and the Playscape is shaded."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Storytelling at the Nature Playscape: Author Reading",
+          "url": "https://www.ijams.org/event-details/storytelling-at-the-ijams-nature-playscape-special-event-author-reading-2026-09-19-10-00"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-19T10:00:00-04:00",
+        "endDate": "2026-09-19T12:00:00-04:00",
+        "locationName": "Ijams Nature Playscape",
+        "locationAddress": "3518 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Free storytime at Ijams Park, with the author",
+          "Saturday, ten to noon"
+        ]
+      }
+    },
+    {
+      "id": "specials-board",
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/specials_chalk_kickoff.jpg",
+      "imageCaption": "The week, in chalk",
+      "title": "The specials board: Earl's adds a game-day column for Saturday",
+      "deck": "Down at the water on Waterfront Drive, Earl's runs a different deal every day of the week — and this week a separate Vols board turns up beside Saturday's.",
+      "facts": [
+        {
+          "label": "Thu",
+          "value": "$10 Patrón mango ritas · 11 AM – 10 PM"
+        },
+        {
+          "label": "Fri",
+          "value": "$9 spicy pineapple ritas · 11 AM – 10 PM"
+        },
+        {
+          "label": "Sat",
+          "value": "$8 house margaritas · 11 AM – 10 PM"
+        },
+        {
+          "label": "Sat game day",
+          "value": "$2 off drafts and pizza · $6 Orange Bliss · 6-for-5 beer buckets"
+        },
+        {
+          "label": "Sun",
+          "value": "$7 mimosas and Bloody Marys · 11 AM – 10 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Earl's · 610 Waterfront Dr · open 11 AM – 10 PM daily"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Earl's sits at 610 Waterfront Drive, down where Suttree Landing meets the river, and it runs a different special every day of the week. Thursday is ten-dollar Patrón mango margaritas. Friday is nine-dollar spicy pineapple ones. Saturday is eight-dollar house margaritas, and Sunday is seven-dollar mimosas and Bloody Marys. All of them run the full day, eleven to ten."
+        },
+        {
+          "type": "subhead",
+          "text": "The new column"
+        },
+        {
+          "type": "paragraph",
+          "text": "What is new this week is a second Saturday board that runs alongside the margaritas: two dollars off drafts and two off pizza, six-dollar Orange Bliss, and beer buckets at six for the price of five, plus a run of four- and five-dollar shots. It is there because the Vols are home at 7:45, and because the tables at Earl's face open water about ten minutes' walk from where half the stadium crowd parks."
+        },
+        {
+          "type": "paragraph",
+          "text": "The food is the reason to get there before the drinks are, and eleven in the morning is a real opening time rather than a technicality. If Saturday night belongs to the stadium, Sunday at the water is the recovery."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Earl's Knoxville — specials",
+          "url": "https://earlsknox.com/specials/"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "earls"
+        ],
+        "igBanner": [
+          "A different deal every day at Earl's",
+          "Thursday through Sunday, eleven to ten"
+        ]
+      }
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen — a free 281st birthday party at Marble Springs, a circus on the Ijams Park lawn Saturday night, Lord of the Rings outdoors Friday, and what a 7:45 home kickoff does to this side of the river.",
+      "duration": "03:54",
+      "src": "/audio/2026-09-16.mp3"
+    },
+    "calendar": [
+      {
+        "month": "SEP",
+        "day": "18",
+        "title": "Evening Paddle on the Tennessee River",
+        "meta": "6:30–8:30 PM · $45 · launch at 3507 Island Home Pike",
+        "starred": false,
+        "href": "https://www.ijams.org/event-details/evening-paddle-2026-09-18-18-30"
+      },
+      {
+        "month": "SEP",
+        "day": "18",
+        "title": "LORD OF THE RINGS ON THE IJAMS PARK LAWN",
+        "meta": "Gate 7 PM · movie at dark, about 8:15 · $12",
+        "starred": true,
+        "href": "#lotr-lawn"
+      },
+      {
+        "month": "SEP",
+        "day": "19",
+        "title": "Storytime at the Nature Playscape — the author reads",
+        "meta": "10 AM – noon · free · Grayson Subaru Preserve",
+        "starred": false,
+        "href": "#playscape-author"
+      },
+      {
+        "month": "SEP",
+        "day": "19",
+        "title": "SEVIER DAY AT MARBLE SPRINGS",
+        "meta": "11 AM – 4 PM · free · 1220 W Gov. John Sevier Hwy",
+        "starred": true,
+        "href": "#sevier-day"
+      },
+      {
+        "month": "SEP",
+        "day": "19",
+        "title": "Life Beneath the Surface: caving trip",
+        "meta": "2–4:30 PM · $65 · registration required · Ijams Park",
+        "starred": false,
+        "href": "https://www.ijams.org/event-details/life-beneath-the-surface-caving-trip"
+      },
+      {
+        "month": "SEP",
+        "day": "19",
+        "title": "THE CIRCUS UNDER THE MOON AT IJAMS PARK",
+        "meta": "Gate 6 PM · show 7:30–9 PM · $22 · kids 6–12 $15",
+        "starred": true,
+        "href": "#circus-moon"
+      },
+      {
+        "month": "SEP",
+        "day": "19",
+        "title": "Vols host Kennesaw State",
+        "meta": "7:45 PM · SEC Network · Neyland Stadium",
+        "starred": false,
+        "href": "#night-kickoff"
+      },
+      {
+        "month": "SEP",
+        "day": "20",
+        "title": "Bird banding at Ijams Park",
+        "meta": "8–9:30 AM · $5, parking included · meet at Mead's Quarry",
+        "starred": false,
+        "href": "https://www.ijams.org/event-details/bird-banding-at-ijams-nature-center-2026-09-20-08-00-1"
+      },
+      {
+        "month": "SEP",
+        "day": "20",
+        "title": "Paint by the Pond workshop",
+        "meta": "11 AM – 1 PM · $45 · Ijams Park",
+        "starred": false,
+        "href": "https://www.ijams.org/event-details/creative-series-paint-by-the-pond-workshop"
+      },
+      {
+        "month": "SEP",
+        "day": "20",
+        "title": "Self Care Sunday yoga with Hope Irwin",
+        "meta": "11:30 AM – 12:30 PM · $10 adults · $5 kids 5–13 · Ijams Park",
+        "starred": false,
+        "href": "https://www.ijams.org/event-details/special-event-self-care-sunday-yoga-class-with-hope-irwin-september-20"
+      },
+      {
+        "month": "SEP",
+        "day": "20",
+        "title": "Fall Fungi ID: beginner workshop",
+        "meta": "12:30–2 PM · $15 · Ijams Park",
+        "starred": false,
+        "href": "https://www.ijams.org/event-details/fall-fungi-id-beginner-workshop-2026-09-20-12-30"
+      },
+      {
+        "month": "SEP",
+        "day": "20",
+        "title": "East Tennessee Bluegrass Association jam",
+        "meta": "2–5 PM · free · acoustic instruments welcome · Ijams Park",
+        "starred": false,
+        "href": "https://www.ijams.org/event-details/special-event-east-tennessee-bluegrass-association-monthly-jam-2026-09-20-14-00"
+      }
+    ]
+  }
+}
