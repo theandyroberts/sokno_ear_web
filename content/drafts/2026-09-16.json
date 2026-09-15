@@ -179,6 +179,19 @@
       "href": "#night-kickoff"
     },
     {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "hot": true,
+      "image": "/assets/spots/puckers_titans.jpg",
+      "title": "Titans and brunch, on every screen",
+      "blurb": "Sunday's one o'clock kickoff lands inside the last hour of weekend brunch at Puckers.",
+      "cue": "Jump to story",
+      "href": "#puckers-titans"
+    },
+    {
       "label": "Ijams Park",
       "labelColor": "teal",
       "days": [
@@ -546,6 +559,654 @@
       }
     },
     {
+      "id": "evening-paddle",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/evening_paddle.jpg",
+      "imageCaption": "Flat water, low sun",
+      "title": "A guided evening paddle goes out on the river as the sun drops",
+      "deck": "Two hours on the Tennessee River with a guide and a boat you don't have to own. It leaves Friday at six thirty, which puts the group on the water for the best light of the day.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Sep 18 · 6:30–8:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Launch at 3507 Island Home Pike"
+        },
+        {
+          "label": "Cost",
+          "value": "$45 · boat, paddle and vest included"
+        },
+        {
+          "label": "Sunset",
+          "value": "About 7:39 — roughly the midpoint of the trip"
+        },
+        {
+          "label": "Register",
+          "value": "Ahead of time; these fill"
+        },
+        {
+          "label": "Weather",
+          "value": "Around 94 and mostly sunny, with a slight chance of an evening storm"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Ijams Park runs guided paddles out of its river access on Island Home Pike, and Friday's goes out at six thirty for two hours. Forty-five dollars covers the boat, the paddle and the vest, which is the whole point — it is the version of kayaking available to people who do not have a kayak on the roof of the car."
+        },
+        {
+          "type": "subhead",
+          "text": "The timing is the product"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sunset Friday is about 7:39. A six-thirty launch means an hour of low gold light on the way out and dusk on the way back, which is a better trip than the same route at noon in ninety-four-degree heat. The water is flat, the bluffs are wooded on both sides, and the noise of the city drops away faster than you expect for something this close to downtown."
+        },
+        {
+          "type": "paragraph",
+          "text": "Register ahead — the paddles carry a small number of boats and they sell out. If Friday is full, the same evening has Lord of the Rings on the lawn a few minutes up the road."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Evening Paddle",
+          "url": "https://www.ijams.org/event-details/evening-paddle-2026-09-18-18-30"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-18T18:30:00-04:00",
+        "endDate": "2026-09-18T20:30:00-04:00",
+        "locationName": "Ijams Nature Center river access",
+        "locationAddress": "3507 Island Home Pike, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Guided evening paddle from Ijams Park",
+          "Friday, six thirty, boat included"
+        ]
+      }
+    },
+    {
+      "id": "caving-trip",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/caving_trip.jpg",
+      "imageCaption": "Fifty-five degrees, year round",
+      "title": "A guided caving trip goes underground Saturday afternoon",
+      "deck": "Two and a half hours inside a gated cave at fifty-five degrees, which on a ninety-four-degree Saturday is either the best idea on this list or the worst. Ijams Park is unusually blunt about what it involves.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Sep 19 · 2–4:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Meet at 3526 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$65 · registration required, no walk-ins"
+        },
+        {
+          "label": "Temperature",
+          "value": "About 55 degrees underground, year round"
+        },
+        {
+          "label": "The entrance",
+          "value": "A gated opening roughly 3 ft by 2 ft"
+        },
+        {
+          "label": "Expect",
+          "value": "Muddy slopes, knee- to thigh-deep water, tight crawls"
+        },
+        {
+          "label": "Wear",
+          "value": "Clothes and shoes you are willing to ruin"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Ijams Park takes small groups into a gated cave on Saturday afternoon, two till four thirty, sixty-five dollars a head. The park's own description is refreshingly free of salesmanship: it calls the trip physically and mentally demanding, and then it lists why."
+        },
+        {
+          "type": "subhead",
+          "text": "What they tell you before you sign up"
+        },
+        {
+          "type": "paragraph",
+          "text": "Participants should expect slippery muddy hills, water between knee and thigh deep, and stretches that require crawling and pulling yourself along with your hands and arms. The gated entrance measures about three feet by two. The cave holds around fifty-five degrees all year, which is a forty-degree swing from Saturday's forecast and the single best argument for going."
+        },
+        {
+          "type": "paragraph",
+          "text": "Registration is required and there are no walk-ins — every participant needs a ticket. There is also a liability waiver, good for the calendar year, so if you have done another Ijams Park program this year you are already covered. Read that list against what your knees are currently willing to do."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Life Beneath the Surface: Caving Trip",
+          "url": "https://www.ijams.org/event-details/life-beneath-the-surface-caving-trip"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-19T14:00:00-04:00",
+        "endDate": "2026-09-19T16:30:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "3526 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Guided caving trip at Ijams Park",
+          "Saturday, two o'clock, fifty-five degrees down there"
+        ]
+      }
+    },
+    {
+      "id": "puckers-titans",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/puckers_titans.jpg",
+      "imageCaption": "Sunday, one o'clock, every screen",
+      "title": "The Titans host the Eagles on Sunday, and Puckers has brunch running through kickoff",
+      "deck": "Sunday's one o'clock game lands in the last hour of weekend brunch at the sports grill on Mimosa Avenue — which is the one thing in South Knoxville this weekend that isn't happening at a nature center.",
+      "facts": [
+        {
+          "label": "Game",
+          "value": "Titans vs. Philadelphia · Sun Sep 20 · 1 PM · FOX"
+        },
+        {
+          "label": "Where they play",
+          "value": "Nissan Stadium, Nashville — this is a watch, not a drive"
+        },
+        {
+          "label": "Brunch",
+          "value": "Sat and Sun · 9 AM – 2 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Puckers Sports Grill · 115 Mimosa Ave"
+        },
+        {
+          "label": "Parking",
+          "value": "Garage entrance behind the building"
+        },
+        {
+          "label": "Record",
+          "value": "Tennessee is 0–1 after losing to the Jets in week one"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Tennessee's other football team plays Sunday at one. The Titans host Philadelphia at Nissan Stadium on FOX, which is three hours up the interstate and therefore a television game for everyone reading this. Puckers, the sports grill at 115 Mimosa Avenue, runs weekend brunch from nine to two on Saturdays and Sundays with the screens on throughout — so a one o'clock kickoff lands inside the last hour of the brunch menu."
+        },
+        {
+          "type": "subhead",
+          "text": "Why this is the odd one out this week"
+        },
+        {
+          "type": "paragraph",
+          "text": "Look at the rest of this weekend and nearly all of it is outdoors and most of it is at Ijams Park. Sunday at Puckers is the alternative: indoors, air-conditioned, and at ninety-three degrees outside that is not a small consideration. The room opened in August in the space that was Mimosas, across the river from the stadium, and brunch survived the change of name."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Titans are 0–1 after losing to the Jets at home in week one, so this is a Sunday for the faithful rather than a victory party. The Eagles are the better team by a good distance. Parking is in the garage behind the building, which matters more than usual on a weekend when everything on this side of the river is full."
+        }
+      ],
+      "sources": [
+        {
+          "label": "CBS Sports — Tennessee Titans 2026 schedule",
+          "url": "https://www.cbssports.com/nfl/teams/TEN/tennessee-titans/schedule/"
+        },
+        {
+          "label": "Puckers Knoxville — weekend brunch hours",
+          "url": "https://www.instagram.com/puckersknoxville/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-20T09:00:00-04:00",
+        "endDate": "2026-09-20T14:00:00-04:00",
+        "locationName": "Puckers Sports Grill",
+        "locationAddress": "115 Mimosa Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "puckers"
+        ],
+        "igBanner": [
+          "Titans on every screen at Puckers",
+          "Sunday, brunch nine to two, kickoff at one"
+        ]
+      }
+    },
+    {
+      "id": "bird-banding",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/bird_banding.jpg",
+      "imageCaption": "The banding table, a short walk below the quarry lot",
+      "title": "Five dollars puts you at the bird-banding table on Sunday morning",
+      "deck": "Migration is on, and the Ijams Park banding crew lets visitors stand at the table while they work — and hand you the bird to release. It is the cheapest ticket of the weekend.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Sep 20 · 8–9:30 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Meet at the Mead's Quarry lot · 3526 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$5 — and that includes your parking"
+        },
+        {
+          "label": "The walk",
+          "value": "About 500 feet downhill on uneven trail; the table is shaded, with seating"
+        },
+        {
+          "label": "Net runs",
+          "value": "Optional, off-trail — wear long pants and closed shoes"
+        },
+        {
+          "label": "Waiver",
+          "value": "One assumption-of-risk form per calendar year"
+        },
+        {
+          "label": "Rain",
+          "value": "Cancelled if it rains, with refunds — Sunday's chance is slight"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The Ijams Park community science team runs its banding station on Sunday morning from eight to nine thirty, and five dollars gets you a place at the table. Trained staff and volunteers catch songbirds in fine mist nets, record the data, fit a numbered leg band, and let them go — and visitors get to see the birds in the hand and release them afterward."
+        },
+        {
+          "type": "subhead",
+          "text": "What the station is actually for"
+        },
+        {
+          "type": "paragraph",
+          "text": "The station opened in early 2025 to study how resident and migratory songbirds use fruiting plants through the year, with a particular interest in which birds eat and spread native versus non-native invasive species. The crew bands at sites across the park before and after invasive plant removal to see what changes. All of it runs under a federally authorized banding permit issued by the USGS Bird Banding Laboratory."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "You meet in the Mead's Quarry gravel lot — there should be a staff member there to point you down — and walk about five hundred feet downhill on uneven trail to the table, which is shaded and has seating. The walk back is short and mostly uphill. Net runs are optional and go off-trail through unmaintained brush and over one small stream, so long pants and real shoes if you want to go along. The five dollars covers parking, so don't pay at the lot."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Bird Banding",
+          "url": "https://www.ijams.org/event-details/bird-banding-at-ijams-nature-center-2026-09-20-08-00-1"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-20T08:00:00-04:00",
+        "endDate": "2026-09-20T09:30:00-04:00",
+        "locationName": "Ijams Nature Center banding station",
+        "locationAddress": "3526 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Bird banding at Ijams Park",
+          "Sunday, eight in the morning, five dollars"
+        ]
+      }
+    },
+    {
+      "id": "sunday-yoga",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/sunday_yoga.jpg",
+      "imageCaption": "Mats on the grass, mid-morning",
+      "title": "Self Care Sunday puts a yoga class out on the grass at Ijams Park",
+      "deck": "An hour with Hope Irwin on Sunday mid-morning, ten dollars for adults and five for kids, which makes it one of the few things all weekend a whole family can do for under twenty.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Sep 20 · 11:30 AM – 12:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$10 adults (13+) · $5 kids 5–13"
+        },
+        {
+          "label": "Bring",
+          "value": "Your own mat, water, and a hat for the walk in"
+        },
+        {
+          "label": "Teacher",
+          "value": "Hope Irwin"
+        },
+        {
+          "label": "Weather",
+          "value": "Around 93 — it will be warm on the mat"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Self Care Sunday is an hour of yoga outdoors at Ijams Park with Hope Irwin, eleven thirty to twelve thirty. Ten dollars for anyone thirteen and up, five for children five to thirteen. A parent and two kids comes to twenty dollars for the morning, which is not a sentence you get to write about much of this weekend."
+        },
+        {
+          "type": "subhead",
+          "text": "About the heat"
+        },
+        {
+          "type": "paragraph",
+          "text": "It is going to be about ninety-three degrees Sunday and the class is at the warm end of the morning, so this is a water-and-shade situation rather than a gentle-breeze one. Bring your own mat. The upside of an outdoor class in September is the same as it always is — birdsong instead of a speaker, and the walk back to the car through the woods."
+        },
+        {
+          "type": "paragraph",
+          "text": "It stacks neatly with the rest of Sunday: painting starts at eleven, the mushroom workshop at twelve thirty, and the bluegrass jam at two. You could reasonably do two of the four."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Self Care Sunday Yoga with Hope Irwin",
+          "url": "https://www.ijams.org/event-details/special-event-self-care-sunday-yoga-class-with-hope-irwin-september-20"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-20T11:30:00-04:00",
+        "endDate": "2026-09-20T12:30:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Sunday yoga on the grass at Ijams Park",
+          "Sunday, eleven thirty, ten dollars"
+        ]
+      }
+    },
+    {
+      "id": "paint-pond",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/paint_pond.jpg",
+      "imageCaption": "Easels on the bank",
+      "title": "A painting workshop sets up its easels beside the pond Sunday",
+      "deck": "Two hours of guided outdoor painting at Ijams Park, materials sorted, no experience assumed. It is the Creative Series entry for September and it runs while the rest of the park is busy elsewhere.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Sep 20 · 11 AM – 1 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$45"
+        },
+        {
+          "label": "Register",
+          "value": "Ahead — the Creative Series workshops cap small"
+        },
+        {
+          "label": "Also this month",
+          "value": "Stained glass on Sep 26, hooping on Sep 24"
+        },
+        {
+          "label": "Weather",
+          "value": "Around 93 and mostly sunny — the pond bank has patchy shade"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Paint by the Pond is the September entry in the Ijams Park Creative Series: two hours on Sunday late morning, forty-five dollars, easels set up on the bank of the pond with the water and the treeline as the subject. It is a workshop rather than a class, which in practice means nobody checks whether you can already paint."
+        },
+        {
+          "type": "subhead",
+          "text": "Where it sits in the day"
+        },
+        {
+          "type": "paragraph",
+          "text": "Eleven to one on a Sunday is a good slot — the banding crew has packed up, the bluegrass has not started, and the pond is quiet. It is also the hottest part of the day, and the shade on the bank is patchy, so a hat is not optional."
+        },
+        {
+          "type": "paragraph",
+          "text": "The Creative Series keeps going after this weekend: a hooping workshop on the 24th and stained glass on the 26th. These cap small and are worth booking rather than turning up for."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Creative Series: Paint By The Pond",
+          "url": "https://www.ijams.org/event-details/creative-series-paint-by-the-pond-workshop"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-20T11:00:00-04:00",
+        "endDate": "2026-09-20T13:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Paint by the pond at Ijams Park",
+          "Sunday, eleven to one"
+        ]
+      }
+    },
+    {
+      "id": "fungi-workshop",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/fungi_workshop.jpg",
+      "imageCaption": "Gills up, on a fallen log",
+      "title": "The beginner mushroom workshop runs again Sunday afternoon",
+      "deck": "Ninety minutes with an Ijams Park naturalist on how to actually look at a mushroom — what the parts are, and how to tell a fungus from a lichen. Fifteen dollars, and the fall series has just started.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Sep 20 · 12:30–2 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$15 · registration required"
+        },
+        {
+          "label": "Level",
+          "value": "Beginner — no prior knowledge assumed"
+        },
+        {
+          "label": "Next one",
+          "value": "Sep 27 at 3 PM, if Sunday fills"
+        },
+        {
+          "label": "Bring",
+          "value": "Shoes for off-path walking and something to take notes on"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The Fall Fungi ID beginner workshop runs Sunday from twelve thirty to two, fifteen dollars, with an Ijams Park naturalist. It is the practical kind of nature program: what a mushroom actually is, which parts have names and which of those names matter, and how to tell a fungus from a lichen at a glance — the confusion that trips up almost everyone at the start."
+        },
+        {
+          "type": "subhead",
+          "text": "Why now is the right week"
+        },
+        {
+          "type": "paragraph",
+          "text": "Late September in East Tennessee is when the forest floor starts producing. A fallen log that looked like a fallen log in July is a small city by now. Learning to read one is the sort of thing that permanently changes an ordinary walk, which is a good return on ninety minutes."
+        },
+        {
+          "type": "paragraph",
+          "text": "This is a repeating series rather than a one-off. If Sunday is full there is another on the 27th at three. Registration is required either way, and the park does not take walk-ins for its education programs."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Fall Fungi ID: Beginner Workshop",
+          "url": "https://www.ijams.org/event-details/fall-fungi-id-beginner-workshop-2026-09-20-12-30"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-20T12:30:00-04:00",
+        "endDate": "2026-09-20T14:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Beginner mushroom workshop at Ijams Park",
+          "Sunday, twelve thirty, fifteen dollars"
+        ]
+      }
+    },
+    {
+      "id": "bluegrass-jam",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/bluegrass_jam.jpg",
+      "imageCaption": "Third Sunday, every month",
+      "title": "The third-Sunday bluegrass jam is free, and you don't have to play",
+      "deck": "Three hours of open acoustic jamming at Ijams Park with the East Tennessee Bluegrass Association. Any skill level, no cover, and chairs already set out for the people who only came to listen.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Sep 20 · 2–5 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Park Visitor Center · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "Free and open to the public"
+        },
+        {
+          "label": "Bring",
+          "value": "Any acoustic bluegrass instrument — no harmonicas or spoons"
+        },
+        {
+          "label": "Skill level",
+          "value": "All of them"
+        },
+        {
+          "label": "Just listening?",
+          "value": "Chairs are set out; that counts as attending"
+        },
+        {
+          "label": "How often",
+          "value": "Every third Sunday"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The East Tennessee Bluegrass Association and Ijams Park have run a community jam on the third Sunday of the month for a few years now, and this Sunday is the third Sunday. Two to five, free, open to anyone. All skill levels are welcome, which in a jam circle is a real statement rather than a polite one."
+        },
+        {
+          "type": "subhead",
+          "text": "The rules, such as they are"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bring any acoustic bluegrass instrument. The one stated exception is harmonicas and spoons, which are not currently part of it. And if you do not play anything at all, come anyway — the association sets chairs out and says so directly. An afternoon of live string-band music for nothing is a decent way to close a weekend."
+        },
+        {
+          "type": "paragraph",
+          "text": "In colder months the jam moves inside the Visitor Center. In September it is still the good version. More about the association, including how to get on their list, is at ETNBA.org."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — East Tennessee Bluegrass Association Monthly Jam",
+          "url": "https://www.ijams.org/event-details/special-event-east-tennessee-bluegrass-association-monthly-jam-2026-09-20-14-00"
+        },
+        {
+          "label": "East Tennessee Bluegrass Association",
+          "url": "https://www.etnba.org/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-20T14:00:00-04:00",
+        "endDate": "2026-09-20T17:00:00-04:00",
+        "locationName": "Ijams Nature Center Visitor Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Free bluegrass jam at Ijams Park",
+          "Sunday, two to five, bring an instrument"
+        ]
+      }
+    },
+    {
       "id": "specials-board",
       "label": "Suttree Landing",
       "labelColor": "gold",
@@ -625,18 +1286,18 @@
     "audio": {
       "title": "Weekend Audio Briefing",
       "intro": "What's happening in SoKno this weekend.",
-      "description": "Your weekend listen — a free 281st birthday party at Marble Springs, a circus on the Ijams Park lawn Saturday night, Lord of the Rings outdoors Friday, and what a 7:45 home kickoff does to this side of the river.",
-      "duration": "03:54",
+      "description": "Your weekend listen — a free 281st birthday party at Marble Springs, a circus on the Ijams Park lawn Saturday night, Lord of the Rings outdoors Friday, a full Sunday at the park, and the Titans on every screen at Puckers.",
+      "duration": "04:08",
       "src": "/audio/2026-09-16.mp3"
     },
     "calendar": [
       {
         "month": "SEP",
         "day": "18",
-        "title": "Evening Paddle on the Tennessee River",
-        "meta": "6:30–8:30 PM · $45 · launch at 3507 Island Home Pike",
+        "title": "Guided evening paddle on the river",
+        "meta": "6:30–8:30 PM · $45 · boat included · launch on Island Home Pike",
         "starred": false,
-        "href": "https://www.ijams.org/event-details/evening-paddle-2026-09-18-18-30"
+        "href": "#evening-paddle"
       },
       {
         "month": "SEP",
@@ -668,7 +1329,7 @@
         "title": "Life Beneath the Surface: caving trip",
         "meta": "2–4:30 PM · $65 · registration required · Ijams Park",
         "starred": false,
-        "href": "https://www.ijams.org/event-details/life-beneath-the-surface-caving-trip"
+        "href": "#caving-trip"
       },
       {
         "month": "SEP",
@@ -692,7 +1353,7 @@
         "title": "Bird banding at Ijams Park",
         "meta": "8–9:30 AM · $5, parking included · meet at Mead's Quarry",
         "starred": false,
-        "href": "https://www.ijams.org/event-details/bird-banding-at-ijams-nature-center-2026-09-20-08-00-1"
+        "href": "#bird-banding"
       },
       {
         "month": "SEP",
@@ -700,7 +1361,7 @@
         "title": "Paint by the Pond workshop",
         "meta": "11 AM – 1 PM · $45 · Ijams Park",
         "starred": false,
-        "href": "https://www.ijams.org/event-details/creative-series-paint-by-the-pond-workshop"
+        "href": "#paint-pond"
       },
       {
         "month": "SEP",
@@ -708,7 +1369,15 @@
         "title": "Self Care Sunday yoga with Hope Irwin",
         "meta": "11:30 AM – 12:30 PM · $10 adults · $5 kids 5–13 · Ijams Park",
         "starred": false,
-        "href": "https://www.ijams.org/event-details/special-event-self-care-sunday-yoga-class-with-hope-irwin-september-20"
+        "href": "#sunday-yoga"
+      },
+      {
+        "month": "SEP",
+        "day": "20",
+        "title": "TITANS HOST THE EAGLES — brunch and every screen at Puckers",
+        "meta": "Kickoff 1 PM · FOX · brunch 9 AM – 2 PM · 115 Mimosa Ave",
+        "starred": true,
+        "href": "#puckers-titans"
       },
       {
         "month": "SEP",
@@ -716,7 +1385,7 @@
         "title": "Fall Fungi ID: beginner workshop",
         "meta": "12:30–2 PM · $15 · Ijams Park",
         "starred": false,
-        "href": "https://www.ijams.org/event-details/fall-fungi-id-beginner-workshop-2026-09-20-12-30"
+        "href": "#fungi-workshop"
       },
       {
         "month": "SEP",
@@ -724,7 +1393,7 @@
         "title": "East Tennessee Bluegrass Association jam",
         "meta": "2–5 PM · free · acoustic instruments welcome · Ijams Park",
         "starred": false,
-        "href": "https://www.ijams.org/event-details/special-event-east-tennessee-bluegrass-association-monthly-jam-2026-09-20-14-00"
+        "href": "#bluegrass-jam"
       }
     ]
   }
