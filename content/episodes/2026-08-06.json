@@ -276,7 +276,9 @@
         "igBanner": [
           "Ho'Down at Kern's!",
           "Now every other Friday"
-        ]
+        ],
+        "standingKey": "kerns-weekend",
+        "standing": true
       }
     },
     {
@@ -359,7 +361,9 @@
         "igBanner": [
           "Sunday at Ijams Park",
           "Sound bath, stained glass & yoga"
-        ]
+        ],
+        "standingKey": "ijams-weekend",
+        "standing": true
       }
     },
     {
@@ -433,7 +437,9 @@
         "igBanner": [
           "The SoKno Specials Board",
           "Margaritas, mimosas & dog bingo"
-        ]
+        ],
+        "standingKey": "earls-specials-board",
+        "standing": true
       }
     }
   ],

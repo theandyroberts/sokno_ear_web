@@ -414,7 +414,9 @@
         "igBanner": [
           "Ho'Down at Kern's!",
           "Country dancing Friday night"
-        ]
+        ],
+        "standingKey": "kerns-weekend",
+        "standing": true
       }
     },
     {
@@ -615,7 +617,9 @@
         "igBanner": [
           "The Weekend at Ijams Park",
           "Paddles, stories & bird banding"
-        ]
+        ],
+        "standingKey": "ijams-weekend",
+        "standing": true
       }
     }
   ],

@@ -669,7 +669,9 @@
         "igBanner": [
           "The SoKno Specials Board",
           "A different deal every day"
-        ]
+        ],
+        "standingKey": "earls-specials-board",
+        "standing": true
       }
     }
   ],

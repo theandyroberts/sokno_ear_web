@@ -410,6 +410,10 @@
         "endDate": "2026-07-12T21:00:00-04:00",
         "locationName": "Hi-Wire Brewing",
         "locationAddress": "Sevier Ave"
+      },
+      "social": {
+        "standingKey": "hiwire-sunday-session",
+        "standing": true
       }
     },
     {

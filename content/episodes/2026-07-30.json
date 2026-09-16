@@ -396,7 +396,9 @@
         "igBanner": [
           "Back to School at Kern's!",
           "Bash Friday · jazz all weekend"
-        ]
+        ],
+        "standingKey": "kerns-weekend",
+        "standing": true
       }
     },
     {
@@ -459,7 +461,9 @@
         "igBanner": [
           "The Weekend at Ijams Park",
           "Tree school, EcoArt & the banders"
-        ]
+        ],
+        "standingKey": "ijams-weekend",
+        "standing": true
       }
     },
     {
@@ -536,7 +540,9 @@
         "igBanner": [
           "The SoKno Specials Board",
           "Ritas, pints & bottomless brunch"
-        ]
+        ],
+        "standingKey": "earls-specials-board",
+        "standing": true
       }
     }
   ],

@@ -33,6 +33,11 @@ export function cardHref(href, slug, home) {
  * Hero image for the email. Prefers a hand-made `<name>_email.jpg` companion when one
  * exists — those are sized for mail clients — and otherwise uses the feature art.
  * `fileExists` takes a public-relative path ("/assets/spots/x_email.jpg").
+ *
+ * @param {string | undefined} featureImage
+ * @param {(path: string) => boolean} [fileExists]  annotated because the `() => false`
+ *   default otherwise infers a zero-arg type, which rejects every real caller.
+ * @returns {string | undefined}
  */
 export function resolveHero(featureImage, fileExists = () => false) {
   if (!featureImage) return undefined;

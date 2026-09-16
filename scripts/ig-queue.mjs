@@ -9,8 +9,8 @@
 process.env.TZ = "America/New_York"; // all slot math is SoKno-local
 import fs from "node:fs";
 import path from "node:path";
-import { spaceOutPosts, MIN_GAP_MIN, nextDaylightSlot, DAY_START_HOUR } from "./ig-schedule.mjs";
-import { priorRunsById, pickRepeatsToDrop, MAX_REPEATS_PER_EPISODE } from "./ig-repeats.mjs";
+import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, DAY_START_HOUR } from "./ig-schedule.mjs";
+import { priorRunsById, pickRepeatsToDrop, standingKeyOf, MAX_REPEATS_PER_EPISODE } from "./ig-repeats.mjs";
 import { checkBanner } from "./ig-banner-check.mjs";
 
 const SITE = "https://soknoear.com";
@@ -114,6 +114,13 @@ function slotFor(story, dayDate, taken) {
   return { date, hour };
 }
 
+/** Stable 50/50 split on a story id — same story, same arm, every restage. */
+function abBucket(id) {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0;
+  return h % 2 === 0;
+}
+
 const stories = [{ ...episode.feature, __isFeature: true }, ...episode.stories];
 const taken = new Set();
 const posts = [];
@@ -153,14 +160,30 @@ for (const s of stories) {
   const bannerRel = `/assets/ig/${episode.slug}/${s.id}.jpg`;
   const hasBanner = fs.existsSync(path.join(process.cwd(), "public", bannerRel));
 
+  // A12: half the tagged story banners also carry an in-image `user_tags` mention,
+  // captions held identical, so non-follower reach can be read tagged vs untagged.
+  // Split deterministically on the story id so restaging never reshuffles a post
+  // between arms mid-experiment. See docs/ig-reviews/2026-09-15.md, A12.
+  const abGroup = tags.length ? (abBucket(s.id) ? "img-tagged" : "control") : undefined;
+  const userTags = abGroup === "img-tagged"
+    ? tags.slice(0, 1).map((t) => ({ username: t.replace(/^@/, ""), x: 0.5, y: 0.88 }))
+    : undefined;
+
   posts.push({
     id: s.id,
     title: s.title,
+    standingKey: standingKeyOf(s),
     postAt: iso(date, hour),
     imageUrl: `${SITE}${hasBanner ? bannerRel : s.image}`,
     permalink: `${SITE}/${episode.slug}/${s.id}`,
     caption: buildCaption(s, tags),
     tags,
+    // Whether this post is pinned to a real event time. ig-post.mjs drops a DATED
+    // post whose slot has gone stale (the event has started — posting it is worse
+    // than silence) but always publishes an undated one late.
+    dated: Boolean(dated),
+    ...(abGroup ? { abGroup } : {}),
+    ...(userTags ? { userTags } : {}),
     status: "pending",
   });
 }
@@ -169,21 +192,27 @@ for (const s of stories) {
 // repeat; at most one rides the drip per week, rotating so the same banner does not
 // go out with the same caption four weeks running. The episode still carries all of
 // them — this only thins the Instagram queue. See scripts/ig-repeats.mjs.
+// Counted by standing KEY, not id, so a retitle no longer resets the counter (A10).
 const archive = fs
   .readdirSync(episodesDir)
   .filter((f) => f.endsWith(".json"))
   .map((f) => {
     const ep = JSON.parse(fs.readFileSync(path.join(episodesDir, f), "utf8"));
-    return { date: ep.date, ids: [ep.feature, ...(ep.stories ?? [])].filter(Boolean).map((s) => s.id) };
+    return { date: ep.date, keys: [ep.feature, ...(ep.stories ?? [])].filter(Boolean).map(standingKeyOf) };
   });
 const history = priorRunsById(archive, episode.date);
-const dropped = pickRepeatsToDrop(posts.map((p) => p.id), history);
-if (dropped.length) {
-  for (const id of dropped) {
-    const h = history.get(id);
-    warnings.push(`${id}: standing item, ran ${h.runs}× (last ${h.lastRun}) — held out of the drip (cap ${MAX_REPEATS_PER_EPISODE}/week)`);
+const declaredStanding = stories.filter((s) => s.social?.standing).map(standingKeyOf);
+const droppedKeys = pickRepeatsToDrop(posts.map((p) => p.standingKey), history, { standingKeys: declaredStanding });
+if (droppedKeys.length) {
+  for (const key of droppedKeys) {
+    const h = history.get(key);
+    const post = posts.find((p) => p.standingKey === key);
+    const alias = post && post.id !== key ? ` (as "${post.id}")` : "";
+    warnings.push(h
+      ? `${key}${alias}: standing item, ran ${h.runs}× (last ${h.lastRun}) — held out of the drip (cap ${MAX_REPEATS_PER_EPISODE}/week)`
+      : `${key}${alias}: declared standing — held out of the drip (cap ${MAX_REPEATS_PER_EPISODE}/week)`);
   }
-  for (let i = posts.length - 1; i >= 0; i--) if (dropped.includes(posts[i].id)) posts.splice(i, 1);
+  for (let i = posts.length - 1; i >= 0; i--) if (droppedKeys.includes(posts[i].standingKey)) posts.splice(i, 1);
 }
 
 // ── Weekly promo pair (scripts/ig-promos.py). These OPEN the drip — they announce the
@@ -193,10 +222,28 @@ if (dropped.length) {
 // ran after midnight opened the whole drip at 01:45 in the morning. Floor it to the
 // episode's own publish day and the daytime window instead; `lead`/`leadOrder` still
 // decide the order, so the minute here only has to be sane.
+// A9: aim, don't just floor. The old version took max(now, publishDay 09:00) and
+// walked it into the 09:00–20:00 band, so a 16:55 publish opened the drip at 17:00 —
+// the second-worst cell in the slot table. Now it targets the next 09:00–13:00
+// window instead, which on a late publish means the following morning.
+//
+// The ceiling matters: leads are placed first and spaceOutPosts walks everything
+// after them, so a lead pushed to tomorrow morning would drag tonight's stories
+// along with it. Clamp the target to just before the earliest story so the cards
+// still open the run without displacing the run.
+const earliestStoryMs = posts.length
+  ? Math.min(...posts.map((p) => new Date(p.postAt).getTime()))
+  : Infinity;
+// Room for the two lead cards plus a gap before the first story.
+const promoCeiling = earliestStoryMs === Infinity
+  ? Infinity
+  : earliestStoryMs - 3 * MIN_GAP_MIN * 60000;
+
 function isoPromoSlot(min) {
   const openAt = new Date(`${episode.date}T12:00:00-04:00`);
   openAt.setHours(DAY_START_HOUR, 0, 0, 0);
-  const d = new Date(nextDaylightSlot(Math.max(Date.now(), openAt.getTime())) + min * 60000);
+  const floor = Math.max(Date.now(), openAt.getTime());
+  const d = new Date(nextLeadWindow(floor, promoCeiling) + min * 60000);
   const p = (n) => String(n).padStart(2, "0");
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}:00-04:00`;
 }

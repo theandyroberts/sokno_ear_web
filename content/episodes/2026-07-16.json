@@ -625,7 +625,9 @@
       "social": {
         "igTags": [
           "hiwire"
-        ]
+        ],
+        "standingKey": "hiwire-sunday-session",
+        "standing": true
       }
     }
   ],

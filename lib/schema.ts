@@ -51,6 +51,15 @@ export const Social = z.object({
   /** Two banner lines composited onto the IG image: ["Earl's Happy Hour!", "Two ritas, two nights"].
    *  Line 2 renders ALL CAPS. scripts/ig-banners.py rasterizes real type — never AI-generated text. */
   igBanner: z.array(z.string()).optional(),
+  /** This story is a standing item — true most weeks (Earl's board, Hi-Wire pint night,
+   *  the Playscape story time). The drip's repeat cap treats it as a repeat from its
+   *  FIRST run instead of waiting to see the id twice. */
+  standing: z.boolean().optional(),
+  /** Stable identity for a standing item across retitles. The cap counts runs by
+   *  `standingKey ?? id`, so renaming `playscape-storytelling` → `playscape-fall`
+   *  no longer resets the counter and hand the banner a third straight Friday
+   *  (docs/ig-reviews/2026-09-15.md, finding 8 / A10). */
+  standingKey: z.string().optional(),
 });
 
 export const StorySchema = z.object({

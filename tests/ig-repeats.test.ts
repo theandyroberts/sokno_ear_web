@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { priorRunsById, pickRepeatsToDrop, MAX_REPEATS_PER_EPISODE } from "../scripts/ig-repeats.mjs";
+import { priorRunsById, pickRepeatsToDrop, standingKeyOf, MAX_REPEATS_PER_EPISODE } from "../scripts/ig-repeats.mjs";
 
 // The real shape of content/episodes: each episode lists the story ids that ran in it.
 const EPISODES = [
@@ -87,5 +87,66 @@ describe("pickRepeatsToDrop", () => {
     const ids = ["specials-board", "hiwire-thursday", "playscape-storytelling"];
     expect(pickRepeatsToDrop(ids, history, { max: 2 })).toHaveLength(1);
     expect(pickRepeatsToDrop(ids, history, { max: 0 })).toHaveLength(3);
+  });
+});
+
+// ── A10: the rename hole. `playscape-storytelling` was retitled `playscape-fall`
+// after two runs; the cap keyed on the bare id, saw a brand-new story, and let the
+// same banner run a third straight Friday. Counting by `social.standingKey` fixes it.
+// See docs/ig-reviews/2026-09-15.md, finding 8.
+describe("standing keys survive a retitle", () => {
+  const ARCHIVE = [
+    { date: "2026-08-26", keys: ["playscape-storytime", "specials-board"] },
+    { date: "2026-09-02", keys: ["playscape-storytime", "specials-board"] },
+  ];
+
+  it("standingKeyOf prefers the declared key and falls back to the id", () => {
+    expect(standingKeyOf({ id: "playscape-fall", social: { standingKey: "playscape-storytime" } })).toBe("playscape-storytime");
+    expect(standingKeyOf({ id: "trailhead-trivia" })).toBe("trailhead-trivia");
+    expect(standingKeyOf({ id: "x", social: {} })).toBe("x");
+  });
+
+  it("carries the run count across the rename", () => {
+    const h = priorRunsById(ARCHIVE, "2026-09-09");
+    expect(h.get("playscape-storytime")).toEqual({ runs: 2, lastRun: "2026-09-02" });
+    // The new id on its own would have looked untouched — that was the bug.
+    expect(h.has("playscape-fall")).toBe(false);
+  });
+
+  it("drops the retitled standing item when another repeat is fresher", () => {
+    const h = priorRunsById(
+      [{ date: "2026-08-26", keys: ["playscape-storytime"] },
+       { date: "2026-09-02", keys: ["playscape-storytime"] },
+       { date: "2026-09-02", keys: ["hiwire-pint-night"] }],
+      "2026-09-09"
+    );
+    const keys = ["playscape-storytime", "hiwire-pint-night", "trailhead-trivia"];
+    const dropped = pickRepeatsToDrop(keys, h);
+    expect(dropped).toHaveLength(1);
+    expect(dropped).not.toContain("trailhead-trivia");
+  });
+
+  it("still reads legacy archives that carry `ids` instead of `keys`", () => {
+    const h = priorRunsById([{ date: "2026-08-26", ids: ["specials-board"] }], "2026-09-02");
+    expect(h.get("specials-board")).toEqual({ runs: 1, lastRun: "2026-08-26" });
+  });
+});
+
+describe("declared standing items count from their first run", () => {
+  it("treats social.standing:true as a repeat even with no history", () => {
+    const h = priorRunsById([{ date: "2026-08-26", keys: ["earls-specials-board"] }], "2026-09-02");
+    const keys = ["earls-specials-board", "brand-new-standing", "one-off"];
+    // Without the declaration the new standing item is invisible to the cap.
+    expect(pickRepeatsToDrop(keys, h)).toEqual([]);
+    // With it, two repeats compete for one slot and the one-off is never touched.
+    const dropped = pickRepeatsToDrop(keys, h, { standingKeys: ["brand-new-standing"] });
+    expect(dropped).toHaveLength(1);
+    expect(dropped).not.toContain("one-off");
+  });
+
+  it("a never-run standing item keeps its slot over one that has already decayed", () => {
+    const h = priorRunsById([{ date: "2026-08-26", keys: ["ran-before"] }], "2026-09-02");
+    expect(pickRepeatsToDrop(["ran-before", "never-run"], h, { standingKeys: ["never-run"] }))
+      .toEqual(["ran-before"]);
   });
 });

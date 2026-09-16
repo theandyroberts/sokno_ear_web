@@ -541,7 +541,9 @@
         "igBanner": [
           "Free storytime at Ijams Park",
           "Saturdays, ten to noon"
-        ]
+        ],
+        "standingKey": "playscape-storytime",
+        "standing": true
       }
     }
   ],

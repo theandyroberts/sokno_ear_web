@@ -312,7 +312,9 @@
         "igBanner": [
           "Three free nights at Kern's",
           "Soul Friday, School of Rock all weekend"
-        ]
+        ],
+        "standingKey": "kerns-weekend",
+        "standing": true
       }
     },
     {
@@ -750,7 +752,9 @@
         "igBanner": [
           "The SoKno Specials Board",
           "A different deal every day"
-        ]
+        ],
+        "standingKey": "earls-specials-board",
+        "standing": true
       }
     }
   ],

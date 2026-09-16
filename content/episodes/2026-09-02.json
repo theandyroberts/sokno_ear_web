@@ -756,7 +756,9 @@
         "igBanner": [
           "Free storytime Saturday",
           "Ten to noon, in the shade"
-        ]
+        ],
+        "standingKey": "playscape-storytime",
+        "standing": true
       }
     },
     {
@@ -850,7 +852,9 @@
         "igBanner": [
           "Pint night at Hi-Wire",
           "Thursday, all-day happy hour too"
-        ]
+        ],
+        "standingKey": "hiwire-pint-night",
+        "standing": true
       }
     },
     {
@@ -1021,7 +1025,9 @@
         "igBanner": [
           "The SoKno Specials Board",
           "A different deal every day"
-        ]
+        ],
+        "standingKey": "earls-specials-board",
+        "standing": true
       }
     }
   ],

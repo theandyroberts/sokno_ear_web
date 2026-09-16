@@ -18,6 +18,9 @@ export const LEAD_MIN = 5;
 export const DAY_START_HOUR = 9;
 /** First hour a rescheduled post may NOT land on (ET) — 20:00 is the worst slot on record. */
 export const DAY_END_HOUR = 20;
+/** The lead cards' target window (ET). The four best cells in the slot table. */
+export const LEAD_WINDOW_START_HOUR = 9;
+export const LEAD_WINDOW_END_HOUR = 13;
 
 const OFFSET = "-04:00";
 
@@ -40,6 +43,30 @@ export function nextDaylightSlot(ms) {
   else if (d.getHours() >= DAY_START_HOUR) return ms;
   d.setHours(DAY_START_HOUR, 0, 0, 0);
   return d.getTime();
+}
+
+/**
+ * The next 09:00–13:00 window at or after `ms`. Used to AIM the lead cards rather
+ * than just floor them: `isoPromoSlot` used to take max(now, publishDay 09:00), so a
+ * 16:55 publish opened the whole drip at 17:00 — the second-worst cell on record
+ * (docs/ig-reviews/2026-09-15.md, finding 7 / A9). Only ever moves forward.
+ *
+ * @param {number} ms
+ * @param {number} [notAfterMs]  a ceiling — usually the first story's slot. If the
+ *   morning target would land past it, stay put rather than pushing the drip's own
+ *   stories back behind the cards that are supposed to introduce them.
+ */
+export function nextLeadWindow(ms, notAfterMs = Infinity) {
+  const d = new Date(ms);
+  if (d.getHours() >= LEAD_WINDOW_END_HOUR) {
+    d.setDate(d.getDate() + 1);
+    d.setHours(LEAD_WINDOW_START_HOUR, 0, 0, 0);
+  } else if (d.getHours() < LEAD_WINDOW_START_HOUR) {
+    d.setHours(LEAD_WINDOW_START_HOUR, 0, 0, 0);
+  } else {
+    return ms; // already inside the window
+  }
+  return d.getTime() > notAfterMs ? ms : d.getTime();
 }
 
 /**
