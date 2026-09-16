@@ -21,6 +21,23 @@ const PARTY = "https://soknoear.com/party?src=email-weekly";
 
 // One teaser line per night, pulled from the live lineup.
 const nightlife = JSON.parse(fs.readFileSync(path.join(process.cwd(), "content", "nightlife.json"), "utf8"));
+
+// Refuse to announce a stale plan. The 2026-09-16 publish mailed "Sep 10–13"
+// because nightlife.json hadn't been refreshed for the new week — the episode's
+// dateLabel ("Thu–Sun, Sep 17–20, 2026") is the source of truth for the window,
+// so a weekend label it doesn't contain means the party page is last week's.
+// Override (rare, deliberate) with STALE_WEEKEND_OK=1.
+{
+  const epDir = path.join(process.cwd(), "content", "episodes");
+  const latest = fs.readdirSync(epDir).filter((f) => f.endsWith(".json")).sort().at(-1);
+  const episode = JSON.parse(fs.readFileSync(path.join(epDir, latest), "utf8"));
+  const label = episode.dateLabel ?? "";
+  if (!label.includes(nightlife.weekend) && process.env.STALE_WEEKEND_OK !== "1") {
+    console.error(`REFUSING TO SEND: nightlife.json says "${nightlife.weekend}" but the live episode is "${label}".`);
+    console.error(`Refresh content/nightlife.json for the new week (weekend label + game-day items), deploy, then re-run.`);
+    process.exit(1);
+  }
+}
 const DAYS = ["Thu", "Fri", "Sat", "Sun"];
 const teasers = DAYS.map((d) => {
   const items = nightlife.days[d] ?? [];

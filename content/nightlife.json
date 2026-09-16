@@ -1,7 +1,7 @@
 {
   "_flow": "Each day reads as the night's arc: happy hour → dinner → events/concerts/comedy/drink specials → the closing-time hang. Bars, restaurants, music venues only.",
   "updated": "2026-09-09",
-  "weekend": "Sep 10–13",
+  "weekend": "Sep 17–20",
   "days": {
     "Thu": [
       {
@@ -83,7 +83,7 @@
         "time": "5:00 PM",
         "venue": "Puckers Sports Grill · 115 Mimosa Ave",
         "headline": "Pucker Hour, then the wall warms up",
-        "sub": "$1 Pucker Lager, $3 wells 5–6 · Vols at Georgia Tech tomorrow at 7",
+        "sub": "$1 Pucker Lager, $3 wells 5–6 · Vols home tomorrow at 7:45",
         "href": "/2026-09-02/puckers-first-gameday",
         "cat": "food"
       },
@@ -118,10 +118,10 @@
     "Sat": [
       {
         "id": "sat-puckers",
-        "time": "6:00 PM",
+        "time": "7:45 PM",
         "venue": "Puckers Sports Grill · 115 Mimosa Ave",
-        "headline": "Vols at Georgia Tech on every screen",
-        "sub": "Kickoff 7 PM on ESPN · Resy for a kickoff table · 115 Mimosa Ave",
+        "headline": "Brunch 9–2, then Vols kickoff at 7:45 on every screen",
+        "sub": "Kickoff 7:45 on SEC Network · Resy for a kickoff table · 115 Mimosa Ave",
         "href": "/2026-09-02/puckers-first-gameday",
         "cat": "food"
       },
@@ -129,7 +129,7 @@
         "id": "sat-earls",
         "time": "ALL DAY",
         "venue": "Earl's · 610 Waterfront Dr",
-        "headline": "$8 house margaritas, no clock",
+        "headline": "$8 house margaritas + game-day board: $2 off drafts & pizza",
         "sub": "Doors 10:30 AM to 11 PM · river seats go first",
         "href": "https://earlsknox.com/specials",
         "cat": "drink"
@@ -194,8 +194,8 @@
         "id": "sun-puckers",
         "time": "12:00 PM",
         "venue": "Puckers Sports Grill · 115 Mimosa Ave",
-        "headline": "NFL Sunday on the screens",
-        "sub": "The game-day room, week two of the habit",
+        "headline": "Brunch 9–2 — Titans host the Eagles at 1 on FOX",
+        "sub": "Kickoff lands in the last hour of the brunch menu · 115 Mimosa Ave",
         "href": "/2026-09-02/puckers-first-gameday",
         "cat": "food"
       },
