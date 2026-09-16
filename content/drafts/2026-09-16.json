@@ -205,6 +205,19 @@
       "href": "#playscape-author"
     },
     {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "hot": false,
+      "image": "/assets/spots/bluegrass_jam.jpg",
+      "title": "A free bluegrass jam, and you don't have to play",
+      "blurb": "Sunday afternoon at Ijams Park, two to five. Bring an instrument or just take one of the chairs they set out.",
+      "cue": "Jump to story",
+      "href": "#bluegrass-jam"
+    },
+    {
       "label": "Suttree Landing",
       "labelColor": "gold",
       "days": [

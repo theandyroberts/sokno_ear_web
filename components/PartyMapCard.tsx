@@ -79,7 +79,9 @@ export function PartyMapCard() {
                 textTransform: "uppercase", color: "var(--paper-cream)", cursor: "auto",
               }}
             >
-              Festive guide · not to scale · plan the night at{" "}
+              {/* "Festive guide · not to scale" is lettered into the art itself now
+                  (Sep 2026 map), so the caption is just the call to action. */}
+              Plan the night at{" "}
               <a href="/party" style={{ color: "var(--gold)", fontWeight: 700 }}>soknoear.com/party</a>
             </figcaption>
           </figure>
