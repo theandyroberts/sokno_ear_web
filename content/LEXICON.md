@@ -88,8 +88,9 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
     complete index: **every story gets a dated row**, and a row's `href` is **always an
     in-page `#story-id`, never an outside link** (Andy, 2026-09-15). If an item is worth a
     calendar row it is worth a story; if it can't carry a story, it doesn't go in the
-    sidebar. The one standing exception is the **specials board**, which spans Thu–Sun
-    rather than landing on a date and so runs without a row (as in Jul 30 and Aug 6).
+    sidebar. A standing Thu–Sun item like the **specials board** earns its row through the
+    dated thing that drives it — e.g. "Vols host Kennesaw State — game-day board at Earl's"
+    pointing at `#specials-board`, the way No. 13 pointed the game row at the venue story.
   - **"Top Stories & Events"** (the `scanner` card grid) is a deliberate **subset of 5–8
     cards chosen to show the *range*** of the weekend — different days, different location
     pills, different *kinds* of thing (a free daytime festival, a ticketed night show, a
@@ -99,6 +100,16 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
   - Nothing in code enforces either rule: `scanner` and `sidebar.calendar` are both
     hand-authored arrays that duplicate title, blurb, art and href by hand. Check both
     when stories are added or cut.
+
+- **A source about one thing is not a source about another.** Numbers borrowed from a
+  nearby subject are still unverified for yours. (Andy, 2026-09-15 — a "night kickoff"
+  service piece told readers where to park for the stadium using the City's count of
+  public spaces *for Sevier Avenue businesses*, from a **January** streetscape update.
+  The City's actual game-day parking page lists no South Knoxville option at all: every
+  sanctioned garage, lot and meter is downtown or on campus. The story was cut.) Before
+  running logistics — parking, routes, shuttles, crowds — find the page that covers
+  *that*, and if it doesn't exist, the advice doesn't run. Note the **Regal garage is not
+  in South Knoxville**; don't cite it as a SoKno lot.
 
 - **Always attribute sources.** Every article ends with its source(s): an external
   link when the info came from one (official site, @handle, agency), or plain credit

@@ -169,19 +169,6 @@
       "label": "Old Sevier",
       "labelColor": "rust",
       "days": [
-        "Sat"
-      ],
-      "hot": false,
-      "image": "/assets/spots/night_kickoff.jpg",
-      "title": "Night kickoff sends the crowd this way",
-      "blurb": "Tennessee hosts Kennesaw State at 7:45 Saturday. Where the 600-odd public spaces actually are.",
-      "cue": "Jump to story",
-      "href": "#night-kickoff"
-    },
-    {
-      "label": "Old Sevier",
-      "labelColor": "rust",
-      "days": [
         "Sun"
       ],
       "hot": true,
@@ -296,7 +283,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Twenty-two dollars for an adult, fifteen for a kid six to twelve, free under six, and parking is included in the ticket — worth knowing, because parking at Ijams Park otherwise costs five dollars a car. There are no seats: bring a lawn chair or a blanket. And the one conflict to plan around is that Tennessee kicks off at Neyland at 7:45 the same night, fifteen minutes after the circus starts. The two audiences are mostly different people, but the bridges are not."
+          "text": "Twenty-two dollars for an adult, fifteen for a kid six to twelve, free under six, and parking is included in the ticket — worth knowing, because parking at Ijams Park otherwise costs five dollars a car. There are no seats: bring a lawn chair or a blanket. And the one conflict to plan around is the clock: Tennessee kicks off at Neyland at 7:45 the same night, fifteen minutes after the circus starts. You cannot do both, so pick one."
         }
       ],
       "sources": [
@@ -409,88 +396,6 @@
           "Lord of the Rings on the Ijams Park lawn",
           "Friday, gate at seven, movie at dark"
         ]
-      }
-    },
-    {
-      "id": "night-kickoff",
-      "label": "Old Sevier",
-      "labelColor": "rust",
-      "days": [
-        "Sat"
-      ],
-      "layout": "imageLeft",
-      "image": "/assets/spots/night_kickoff.jpg",
-      "imageCaption": "The corridor, an hour before kickoff",
-      "title": "A 7:45 night kickoff puts the stadium crowd on our side of the river",
-      "deck": "Tennessee hosts Kennesaw State on Saturday night, and a late kickoff means the South Knoxville parking hunt starts in the afternoon and the walk back across the bridge happens near midnight.",
-      "facts": [
-        {
-          "label": "Kickoff",
-          "value": "Sat Sep 19 · 7:45 PM · SEC Network"
-        },
-        {
-          "label": "Where",
-          "value": "Neyland Stadium — Tennessee's first night game of the season"
-        },
-        {
-          "label": "Why it matters here",
-          "value": "The stadium is a walk across the river from Old Sevier and Suttree Landing"
-        },
-        {
-          "label": "Public parking",
-          "value": "600+ public spaces near the Sevier Avenue corridor"
-        },
-        {
-          "label": "Suttree Landing",
-          "value": "200+ spaces at the park and on nearby streets"
-        },
-        {
-          "label": "Regal garage",
-          "value": "300+ spaces, free weekends and weekdays after 6 PM"
-        },
-        {
-          "label": "Also that night",
-          "value": "The Circus Under the Moon starts at 7:30 at Ijams Park"
-        }
-      ],
-      "body": [
-        {
-          "type": "paragraph",
-          "text": "Tennessee plays Kennesaw State on Saturday at 7:45 on SEC Network — the first night game at Neyland this season, and the last one before conference play starts. None of that is South Knoxville news by itself. What is South Knoxville news is that a 7:45 kickoff moves the whole rhythm of the day: cars start hunting for spaces on this side of the river by mid-afternoon, and the walk back over the bridge happens somewhere around eleven."
-        },
-        {
-          "type": "subhead",
-          "text": "Where the spaces actually are"
-        },
-        {
-          "type": "paragraph",
-          "text": "The City counts more than 600 public parking spaces near the Sevier Avenue corridor. More than 200 of those are at Suttree Landing Park and on the streets around it. Another 300-plus are in the Regal garage, which is open to the public on weekends and after six on weekdays. From any of them it is a five-to-ten-minute walk to the Sevier Avenue businesses, and a longer one to the stadium."
-        },
-        {
-          "type": "subhead",
-          "text": "If you live here and you are not going"
-        },
-        {
-          "type": "paragraph",
-          "text": "The roundabout construction at Sevier, Foggy Bottom and Island Home is still in the ground, so the corridor is narrower than it looks on a map. Marked pedestrian paths skirt the work. If Saturday night is a stay-home night, it is a good one to walk rather than drive. And if you were planning on the circus at Ijams Park, note that it starts fifteen minutes before kickoff — the lawn is fine, the bridges are the problem."
-        }
-      ],
-      "sources": [
-        {
-          "label": "Rocky Top Insider — broadcast details, Tennessee vs. Kennesaw State",
-          "url": "https://www.rockytopinsider.com/2026/09/14/who-is-announcing-tennessee-football-vs-kennesaw-state-broadcast-details-for-clash-in-neyland-stadium/"
-        },
-        {
-          "label": "City of Knoxville — Updates on Sevier Avenue Projects",
-          "url": "https://www.knoxvilletn.gov/news/2026/updates_on_sevier_avenue_projects"
-        }
-      ],
-      "social": {
-        "igBanner": [
-          "Night kickoff fills Old Sevier",
-          "Saturday, seven forty-five, SEC Network"
-        ],
-        "igBannerSkipCheck": true
       }
     },
     {
@@ -1355,10 +1260,10 @@
       {
         "month": "SEP",
         "day": "19",
-        "title": "Vols host Kennesaw State",
-        "meta": "7:45 PM · SEC Network · Neyland Stadium",
+        "title": "Vols host Kennesaw State — game-day board at Earl's",
+        "meta": "7:45 PM · SEC Network · Earl's, 610 Waterfront Dr",
         "starred": false,
-        "href": "#night-kickoff"
+        "href": "#specials-board"
       },
       {
         "month": "SEP",
