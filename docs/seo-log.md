@@ -8,6 +8,68 @@ entry.
 
 ---
 
+## 2026-09-15
+
+Third check. Deltas vs. 2026-09-01. Site-side half is clean and complete;
+**Search Console was not reachable** this run (see below), so there are no GSC
+deltas — the 2026-09-01 figures remain the latest ones on record.
+
+### Site-side audit
+
+| Check | Result | Delta |
+| --- | --- | --- |
+| `sitemap.xml` | 200, 14,661 bytes, **94 URLs** | +14 URLs (+2,208 bytes) |
+| Sitemap composition | 4 static + 13 episodes + 77 story permalinks | static unchanged, **+2 episodes** (`/2026-09-02`, `/2026-09-09`), **+12 stories** |
+| `lastmod` range | 2026-06-20 → 2026-09-09 | tracks the latest published episode ✓ |
+| Full sweep of all 94 sitemap URLs | **94/94 return 200**, **94/94 `index, follow`**, **94/94 carry a canonical** | — |
+| Spot-check 5 random URLs | `/2026-07-02/sunday-yoga`, `/2026-08-13/kerns-allplay`, `/2026-08-06/ijams-weekend`, `/2026-09-02/trailhead-trivia`, `/2026-06-26` → all 200 | — |
+| `robots.txt` | Unchanged — `Allow: /`, `Disallow: /next`, `Disallow: /draft/`, `Host:`, `Sitemap:` | — |
+| Canonical — homepage | `https://soknoear.com` | ✓ |
+| Canonical — latest episode `/2026-09-09` | `https://soknoear.com` (deliberate) | ✓ |
+| Canonical — older episodes (12 of them) | self, all 12 | ✓ |
+| Canonical — non-feature stories | self, **all 77** (sweep, not spot-check) | ✓ |
+| Canonical — feature permalink `/2026-09-09/twilight-ijams` | `/2026-09-09`, and correctly absent from the sitemap | ✓ |
+| Canonical — `/about`, `/archive`, `/dirtysouthparty` | self | ✓ |
+| `NewsArticle` JSON-LD | Present on **all 77** story pages (sweep) | ✓ |
+| Noindex audit | `/next` is **200 + `noindex, nofollow`** (No. 14 draft is pending — it was a 404 last check because nothing was queued); `/draft/*` 404 + `noindex`. Nothing in the sitemap is noindexed | ✓ |
+| Banned-copy check (`paper`/`newspaper`/`issue`/`edition`) in visible copy | Clean on `/`, `/about`, `/archive`, `/dirtysouthparty`, `/2026-09-09` | ✓ |
+| `www.soknoear.com` → apex | **Still 200, still no redirect** | ✗ **unfixed** |
+| `/stats` | Still 404 (cosmetic; no `Disallow` added) | unchanged |
+
+### Search Console
+
+**Not collected.** `list_connected_browsers` returns empty (no Chrome extension
+connected to this machine right now), and the Browser pane has no Google session —
+`sc-domain:soknoear.com` bounced to the signed-out marketing page, same as at
+baseline. The GSC half of this check needs Andy to open Search Console, or to
+have Chrome running with the extension connected at run time.
+
+### Findings
+
+**1. `www.soknoear.com` still serves 200 with no redirect to the apex.** Reported
+on 2026-09-01, unchanged two weeks later. `deploy/soknoear.com.nginx:6` still has
+`server_name soknoear.com www.soknoear.com;` in a single block with nothing
+redirecting. `http://` → `https://` works on both hosts (certbot's hop); the
+www → apex hop is the missing one. As of the last GSC read this was costing 14
+"Alternate page with proper canonical tag" rows and had made Google pick
+`www.soknoear.com/archive` over the apex.
+
+**2. Growth is healthy and the pipeline is clean.** +14 URLs in two weeks (~7/week,
+slightly ahead of the ~5/week expectation) with zero regressions across 94 pages:
+every status, canonical, robots directive, and `NewsArticle` block is correct.
+No new structural issue appeared.
+
+**3. Crawl demand is still the open question.** The 64 never-crawled URLs from
+2026-09-01 cannot be re-measured without GSC, and the sitemap has grown by 14 more
+pages since — the uncrawled tail has almost certainly grown, not shrunk. This is
+the one number worth getting eyes on.
+
+### Actions
+
+Audit-only; nothing changed or deployed.
+
+---
+
 ## 2026-09-01
 
 Second check. Deltas vs. 2026-08-15. **Search Console was reachable this time**
