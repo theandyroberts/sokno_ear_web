@@ -34,8 +34,24 @@ if [ "${REDEPLOY_STAGE:-}" != "run" ]; then
   REDEPLOY_STAGE=run REDEPLOY_OLD="$OLD" exec bash scripts/redeploy.sh "$@"
 fi
 
-OLD="${REDEPLOY_OLD:-$(git rev-parse HEAD)}"
 NEW=$(git rev-parse HEAD)
+
+# What is ACTUALLY live, not what this run happened to pull. Release dirs are named
+# <timestamp>-<short sha>, so the `current` symlink is the honest baseline.
+#
+# Deriving the baseline from the pre-pull HEAD is only correct when this script did
+# the pull. Run `git pull` by hand first — which is the natural thing to do — and
+# OLD == NEW, CHANGED is empty, and a diff full of app/ changes deploys with
+# build=false: the release flips, every check passes, and the site serves the old
+# code. That happened on 2026-09-16 and cost a deploy that looked entirely healthy.
+DEPLOYED=""
+if [ -L "$CURRENT" ]; then
+  _sha=$(basename "$(readlink "$CURRENT")" | awk -F- '{print $NF}')
+  # Only trust it if it names a commit this repo actually has.
+  if [ -n "$_sha" ] && git cat-file -e "${_sha}^{commit}" 2>/dev/null; then DEPLOYED="$_sha"; fi
+fi
+OLD="${DEPLOYED:-${REDEPLOY_OLD:-$(git rev-parse HEAD)}}"
+[ -n "$DEPLOYED" ] && echo "→ baseline: live release is $DEPLOYED"
 CHANGED=$(git diff --name-only "$OLD" "$NEW" || true)
 
 needs_deps=false
