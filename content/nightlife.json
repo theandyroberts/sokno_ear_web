@@ -1,230 +1,239 @@
 {
   "_flow": "Each day reads as the night's arc: happy hour → dinner → events/concerts/comedy/drink specials → the closing-time hang. Bars, restaurants, music venues only.",
-  "updated": "2026-09-09",
+  "updated": "2026-09-16",
   "weekend": "Sep 17–20",
   "days": {
     "Thu": [
       {
         "id": "thu-hiwire",
-        "time": "2:00 PM",
-        "venue": "Hi-Wire · Barber St",
-        "headline": "All-day happy hour, then $4 pint night",
-        "sub": "The Thursday stack — happy hour till close",
-        "href": "/2026-09-02/hiwire-thursday",
+        "time": "3:00 PM",
+        "venue": "Hi-Wire · 2020 Barber St",
+        "headline": "Doors at three, twenty taps",
+        "sub": "Open till 10 · rooftop deck · order food from Redbud downstairs · 2020 Barber St",
+        "cat": "drink"
+      },
+      {
+        "id": "thu-alliance",
+        "time": "12:00 PM",
+        "venue": "Alliance Brewing · 1130 Sevier Ave",
+        "headline": "Open till ten on Sevier Ave",
+        "sub": "Noon to 10 · the Urban Wilderness taproom · 1130 Sevier Ave",
         "cat": "drink"
       },
       {
         "id": "thu-earls",
         "time": "4:00 PM",
         "venue": "Earl's · 610 Waterfront Dr",
-        "headline": "$10 Patrón mango margaritas",
-        "sub": "Happy hour ends at 6 · $1 off liquor, beer & wine all night",
-        "href": "https://earlsknox.com/specials",
+        "headline": "Ten-dollar Patrón mango ritas",
+        "sub": "All day till 10 · the river-facing tables · 610 Waterfront Dr",
+        "cat": "drink",
+        "href": "/2026-09-16/specials-board"
+      },
+      {
+        "id": "thu-puckers",
+        "time": "5:00 PM",
+        "venue": "Puckers Sports Grill · 115 Mimosa Ave",
+        "headline": "Pucker Hour, five to six",
+        "sub": "$1 Pucker Lager · $3 wells and prosecco · $3 lemon drops · 115 Mimosa Ave",
         "cat": "drink"
-      },
-      {
-        "id": "thu-dumplings",
-        "time": "6:00 PM",
-        "venue": "Angry Dumplings · 1119 Sevier Ave",
-        "headline": "Dumpling dinner",
-        "sub": "Noodles, buns & tea · kitchen till 9",
-        "href": "https://www.toasttab.com/local/angry-dumpling-and-sweet-tea-1119-sevier-avenue-suite-a/r-9f107372-6885-42c9-8d45-6f92af96f2c2",
-        "cat": "food"
-      },
-      {
-        "id": "thu-trailhead",
-        "time": "7:00 PM",
-        "venue": "Trailhead Beer Market · 1317 Island Home Ave",
-        "headline": "Free trivia on the river",
-        "sub": "Past the traffic circle, one block · beers till 11",
-        "href": "/2026-09-02/trailhead-trivia",
-        "cat": "star"
       },
       {
         "id": "thu-pinkcactus",
-        "time": "8:00 PM",
+        "time": "7:00 PM",
         "venue": "The Pink Cactus · 1147 Sevier Ave",
         "headline": "Private-room karaoke",
-        "sub": "Rooms from $30/hr · 21+ after 9 · till 11 tonight",
-        "href": "https://www.thepinkcactusknox.com/",
+        "sub": "Book the room ahead — they fill up · bar and covered patio downstairs · 1147 Sevier Ave",
         "cat": "mic"
       },
       {
-        "id": "thu-southside",
-        "time": "9:30 PM",
-        "venue": "SouthSide Garage · 1014 Sevier Ave",
-        "headline": "Beer garden + food trucks to land at",
-        "sub": "Patio games & local taps till 11 · Alliance till 11 too",
-        "href": "https://southsidegarageknox.com/",
-        "cat": "drink"
+        "id": "thu-taco",
+        "time": "8:00 PM",
+        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
+        "headline": "Twenty-four taps and house margs",
+        "sub": "Street-style tacos up Sevierville Pike · 3701 Sevierville Pike",
+        "cat": "food"
       }
     ],
     "Fri": [
       {
-        "id": "fri-earls",
-        "time": "4:00 PM",
-        "venue": "Earl's · 610 Waterfront Dr",
-        "headline": "$9 spicy pineapple margaritas",
-        "sub": "Happy hour ends at 6 · $1 off liquor, beer & wine",
-        "href": "https://earlsknox.com/specials",
+        "id": "fri-ssg",
+        "time": "11:00 AM",
+        "venue": "SouthSide Garage · 1014 Sevier Ave",
+        "headline": "Open for lunch, and a Friday torta",
+        "sub": "Dia de runs a new torta special every Friday · 11 AM – 4 PM · 1014 Sevier Ave",
+        "cat": "food"
+      },
+      {
+        "id": "fri-alliance",
+        "time": "12:00 PM",
+        "venue": "Alliance Brewing · 1130 Sevier Ave",
+        "headline": "Open till ten on Sevier Ave",
+        "sub": "Noon to 10 · 1130 Sevier Ave",
         "cat": "drink"
       },
       {
-        "id": "fri-soknotaco",
-        "time": "5:00 PM",
-        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
-        "headline": "Taco base layer",
-        "sub": "24 taps · kitchen till 11 Fridays",
-        "href": "https://soknota.co/",
-        "cat": "food"
+        "id": "fri-hiwire",
+        "time": "3:00 PM",
+        "venue": "Hi-Wire · 2020 Barber St",
+        "headline": "Late doors — open till eleven",
+        "sub": "3 PM – 11 PM · two decks, one covered, one on the roof · 2020 Barber St",
+        "cat": "drink"
+      },
+      {
+        "id": "fri-earls",
+        "time": "4:00 PM",
+        "venue": "Earl's · 610 Waterfront Dr",
+        "headline": "Nine-dollar spicy pineapple ritas",
+        "sub": "All day till 10 · 610 Waterfront Dr",
+        "cat": "drink",
+        "href": "/2026-09-16/specials-board"
       },
       {
         "id": "fri-puckers",
         "time": "5:00 PM",
         "venue": "Puckers Sports Grill · 115 Mimosa Ave",
-        "headline": "Pucker Hour, then the wall warms up",
-        "sub": "$1 Pucker Lager, $3 wells 5–6 · Vols home tomorrow at 7:45",
-        "href": "/2026-09-02/puckers-first-gameday",
-        "cat": "food"
+        "headline": "Pucker Hour, five to six",
+        "sub": "$1 Pucker Lager · $3 wells and prosecco · 115 Mimosa Ave",
+        "cat": "drink"
       },
       {
-        "id": "fri-trailhead",
-        "time": "9:00 PM",
-        "venue": "Trailhead Beer Market · 1317 Island Home Ave",
-        "headline": "Live music on the river",
-        "sub": "Urban Wilderness backyard · till midnight Fridays",
-        "href": "https://www.instagram.com/trailheadbeermarket/",
-        "cat": "music"
+        "id": "fri-lotr",
+        "time": "7:00 PM",
+        "venue": "Ijams Park · 2915 Island Home Ave",
+        "headline": "Lord of the Rings on the lawn",
+        "sub": "Gate 7 · movie at dark, about 8:15 · $12 · beer garden and food trucks",
+        "cat": "star",
+        "href": "/2026-09-16/lotr-lawn"
       },
       {
         "id": "fri-pinkcactus",
-        "time": "10:00 PM",
+        "time": "9:00 PM",
         "venue": "The Pink Cactus · 1147 Sevier Ave",
-        "headline": "Karaoke rooms till 1 AM",
-        "sub": "Book online — Friday rooms fill · 21+ after 9",
-        "href": "https://www.thepinkcactusknox.com/",
+        "headline": "Karaoke rooms, weekend rate of filling up fast",
+        "sub": "Reservations strongly recommended · 1147 Sevier Ave",
         "cat": "mic"
-      },
-      {
-        "id": "fri-southside",
-        "time": "11:00 PM",
-        "venue": "SouthSide Garage · 1014 Sevier Ave",
-        "headline": "The late hang",
-        "sub": "Taps & trucks till midnight · Alliance till 12 too",
-        "href": "https://southsidegarageknox.com/",
-        "cat": "drink"
       }
     ],
     "Sat": [
       {
-        "id": "sat-puckers",
-        "time": "7:45 PM",
+        "id": "sat-puckersbrunch",
+        "time": "9:00 AM",
         "venue": "Puckers Sports Grill · 115 Mimosa Ave",
-        "headline": "Brunch 9–2, then Vols kickoff at 7:45 on every screen",
-        "sub": "Kickoff 7:45 on SEC Network · Resy for a kickoff table · 115 Mimosa Ave",
-        "href": "/2026-09-02/puckers-first-gameday",
+        "headline": "Brunch from nine, every screen on",
+        "sub": "9 AM – 2 PM · 115 Mimosa Ave",
+        "cat": "food",
+        "href": "/2026-09-16/puckers-titans"
+      },
+      {
+        "id": "sat-taco",
+        "time": "10:00 AM",
+        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
+        "headline": "Weekend brunch at the cantina",
+        "sub": "Saturday and Sunday, 10 AM – 2 PM · 3701 Sevierville Pike",
         "cat": "food"
+      },
+      {
+        "id": "sat-ssg",
+        "time": "12:00 PM",
+        "venue": "SouthSide Garage · 1014 Sevier Ave",
+        "headline": "Open twelve till twelve",
+        "sub": "A full twelve hours on Sevier Ave · 1014 Sevier Ave",
+        "cat": "food"
+      },
+      {
+        "id": "sat-hiwire",
+        "time": "12:00 PM",
+        "venue": "Hi-Wire · 2020 Barber St",
+        "headline": "Open from noon till eleven",
+        "sub": "Longest day of the week on the rooftop · 2020 Barber St",
+        "cat": "drink"
       },
       {
         "id": "sat-earls",
-        "time": "ALL DAY",
+        "time": "12:00 PM",
         "venue": "Earl's · 610 Waterfront Dr",
-        "headline": "$8 house margaritas + game-day board: $2 off drafts & pizza",
-        "sub": "Doors 10:30 AM to 11 PM · river seats go first",
-        "href": "https://earlsknox.com/specials",
-        "cat": "drink"
+        "headline": "Eight-dollar house margaritas, and a Vols board",
+        "sub": "$2 off drafts and pizza · $6 Orange Bliss · 6-for-5 buckets · kickoff 7:45",
+        "cat": "drink",
+        "href": "/2026-09-16/specials-board"
       },
       {
-        "id": "sat-soknotaco",
-        "time": "5:00 PM",
-        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
-        "headline": "Post-game tacos & ritas",
-        "sub": "Kitchen till 11 Saturdays",
-        "href": "https://soknota.co/",
-        "cat": "food"
-      },
-      {
-        "id": "sat-southcoast",
-        "time": "7:00 PM",
-        "venue": "South Coast Pizza · 1103 Sevier Ave",
-        "headline": "Pizza till midnight",
-        "sub": "Late kitchen Fridays & Saturdays",
-        "href": "https://southcoastpizza.com/",
-        "cat": "food"
-      },
-      {
-        "id": "sat-trailhead",
-        "time": "9:30 PM",
-        "venue": "Trailhead Beer Market · 1317 Island Home Ave",
-        "headline": "Live music on the river",
-        "sub": "Urban Wilderness backyard · till midnight",
-        "href": "https://www.instagram.com/trailheadbeermarket/",
-        "cat": "music"
+        "id": "sat-circus",
+        "time": "6:00 PM",
+        "venue": "Ijams Park · 2915 Island Home Ave",
+        "headline": "The Circus Under the Moon",
+        "sub": "Gate 6 · show 7:30–9 · $22 · aerials, jugglers and fire on the lawn",
+        "cat": "star",
+        "href": "/2026-09-16/circus-moon"
       },
       {
         "id": "sat-pinkcactus",
-        "time": "10:30 PM",
+        "time": "9:00 PM",
         "venue": "The Pink Cactus · 1147 Sevier Ave",
-        "headline": "Post-game karaoke till 1 AM",
-        "sub": "Reserve online — Saturday fills first · 21+ after 9",
-        "href": "https://www.thepinkcactusknox.com/",
+        "headline": "Karaoke rooms and the downstairs lounge",
+        "sub": "Book ahead for a Saturday room · 1147 Sevier Ave",
         "cat": "mic"
-      },
-      {
-        "id": "sat-southside",
-        "time": "10:30 PM",
-        "venue": "SouthSide Garage · 1014 Sevier Ave",
-        "headline": "Land here after",
-        "sub": "Taps & trucks till midnight · Alliance pours till 12 too",
-        "href": "https://southsidegarageknox.com/",
-        "cat": "drink"
       }
     ],
     "Sun": [
       {
-        "id": "sun-earls",
-        "time": "ALL DAY",
-        "venue": "Earl's · 610 Waterfront Dr",
-        "headline": "$7 mimosas & Bloody Marys",
-        "sub": "All day until 10 · take a water table",
-        "href": "https://earlsknox.com/specials",
+        "id": "sun-puckers",
+        "time": "9:00 AM",
+        "venue": "Puckers Sports Grill · 115 Mimosa Ave",
+        "headline": "Brunch nine to two, Titans at one",
+        "sub": "Kickoff lands in the last hour of the menu · FOX · 115 Mimosa Ave",
+        "cat": "food",
+        "href": "/2026-09-16/puckers-titans"
+      },
+      {
+        "id": "sun-taco",
+        "time": "10:00 AM",
+        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
+        "headline": "Weekend brunch at the cantina",
+        "sub": "10 AM – 2 PM · 3701 Sevierville Pike",
+        "cat": "food"
+      },
+      {
+        "id": "sun-ssg",
+        "time": "11:00 AM",
+        "venue": "SouthSide Garage · 1014 Sevier Ave",
+        "headline": "Dia De brunch, mimosas and Bloody Marys",
+        "sub": "11 AM – 3 PM · specials on both · 1014 Sevier Ave",
         "cat": "drink"
       },
       {
-        "id": "sun-puckers",
-        "time": "12:00 PM",
-        "venue": "Puckers Sports Grill · 115 Mimosa Ave",
-        "headline": "Brunch 9–2 — Titans host the Eagles at 1 on FOX",
-        "sub": "Kickoff lands in the last hour of the brunch menu · 115 Mimosa Ave",
-        "href": "/2026-09-02/puckers-first-gameday",
-        "cat": "food"
+        "id": "sun-earls",
+        "time": "11:00 AM",
+        "venue": "Earl's · 610 Waterfront Dr",
+        "headline": "Seven-dollar mimosas and Bloody Marys",
+        "sub": "All day till 10 · the water does the entertaining · 610 Waterfront Dr",
+        "cat": "drink",
+        "href": "/2026-09-16/specials-board"
       },
       {
-        "id": "sun-dumplings",
-        "time": "6:00 PM",
-        "venue": "Angry Dumplings · 1119 Sevier Ave",
-        "headline": "Dumplings to close the weekend",
-        "sub": "Kitchen till 9",
-        "href": "https://www.toasttab.com/local/angry-dumpling-and-sweet-tea-1119-sevier-avenue-suite-a/r-9f107372-6885-42c9-8d45-6f92af96f2c2",
-        "cat": "food"
+        "id": "sun-bluegrass",
+        "time": "2:00 PM",
+        "venue": "Ijams Park · 2915 Island Home Ave",
+        "headline": "Free bluegrass jam, two till five",
+        "sub": "Bring an acoustic instrument or just take a chair",
+        "cat": "music",
+        "href": "/2026-09-16/bluegrass-jam"
+      },
+      {
+        "id": "sun-hiwire",
+        "time": "12:00 PM",
+        "venue": "Hi-Wire · 2020 Barber St",
+        "headline": "Noon to nine, then it's a school night",
+        "sub": "2020 Barber St",
+        "cat": "drink"
       },
       {
         "id": "sun-pinkcactus",
         "time": "7:00 PM",
         "venue": "The Pink Cactus · 1147 Sevier Ave",
         "headline": "Sunday karaoke, easy mode",
-        "sub": "Rooms till 11 · all ages until 9",
-        "href": "https://www.thepinkcactusknox.com/",
+        "sub": "Quieter rooms, same mic · 1147 Sevier Ave",
         "cat": "mic"
-      },
-      {
-        "id": "sun-trailhead",
-        "time": "8:00 PM",
-        "venue": "Trailhead Beer Market · 1317 Island Home Ave",
-        "headline": "Sundown pour by the trailheads",
-        "sub": "Till 10 · SouthSide Garage & Alliance till 10 too",
-        "href": "https://www.instagram.com/trailheadbeermarket/",
-        "cat": "drink"
       }
     ]
   },

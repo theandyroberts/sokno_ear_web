@@ -39,11 +39,78 @@ const nightlife = JSON.parse(fs.readFileSync(path.join(process.cwd(), "content",
   }
 }
 const DAYS = ["Thu", "Fri", "Sat", "Sun"];
+
+// Ways to finish "…plus 5 more ___". One call-out alone read like it was the only thing
+// on that night (Andy, 2026-09-16), so every line now carries the rest of the count.
+// Stored as [singular, plural] so "plus 1 more" doesn't come out plural.
+const TAILS = [
+  ["thing to do", "things to do"],
+  ["reason to stay out", "reasons to stay out"],
+  ["stop on the crawl", "stops on the crawl"],
+  ["room worth walking into", "rooms worth walking into"],
+  ["way to spend the night", "ways to spend the night"],
+  ["place with something on", "places with something on"],
+  ["excuse to stay out", "excuses to stay out"],
+  ["door open late", "doors open late"],
+  ["reason not to go home", "reasons not to go home"],
+  ["good idea", "good ideas"],
+  ["option after that", "options after that"],
+  ["stop if you're still going", "stops if you're still going"],
+  ["plan in the same mile", "plans in the same mile"],
+  ["spot on the list", "spots on the list"],
+  ["way the night can go", "ways the night can go"],
+  ["reason to keep walking", "reasons to keep walking"],
+  ["place pouring", "places pouring"],
+  ["thing worth the walk", "things worth the walk"],
+  ["way to fill the hours", "ways to fill the hours"],
+  ["stop before last call", "stops before last call"],
+  ["reason to stay south", "reasons to stay south"],
+  ["corner worth turning", "corners worth turning"],
+  ["thing on the board", "things on the board"],
+  ["way to make an evening of it", "ways to make an evening of it"],
+  ["place still open", "places still open"],
+  ["good call", "good calls"],
+  ["turn you could take", "turns you could take"],
+  ["reason to stretch it out", "reasons to stretch it out"],
+  ["idea in walking distance", "ideas in walking distance"],
+  ["room with the lights on", "rooms with the lights on"],
+  ["thing happening the same night", "things happening the same night"],
+  ["stage, table or barstool", "stages, tables and barstools"],
+  ["reason to leave the house", "reasons to leave the house"],
+  ["way to lose an evening", "ways to lose an evening"],
+  ["nudge in the right direction", "nudges in the right direction"],
+  ["place that wants your company", "places that want your company"],
+];
+
+// Deterministic per (weekend, day) so a re-send reads the same, but the four lines in
+// one email never repeat a tail and the pool rotates week to week.
+const hash = (s) => [...s].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
+const used = new Set();
+const tailFor = (day, n) => {
+  let i = hash(`${nightlife.weekend}|${day}`) % TAILS.length;
+  while (used.has(i)) i = (i + 1) % TAILS.length;
+  used.add(i);
+  return TAILS[i][n === 1 ? 0 : 1];
+};
+
+// Lead each night with the most event-ish thing, best category first. Without the
+// venue de-dup three of four nights led with the same karaoke room, which read like
+// karaoke was all we had (Andy, 2026-09-16).
+const CAT_RANK = ["star", "music", "dance", "mic"];
+const seenVenue = new Set();
 const teasers = DAYS.map((d) => {
   const items = nightlife.days[d] ?? [];
-  // lead with the most event-ish item: music/dance/mic first, else the first entry
-  const pick = items.find((i) => ["music", "dance", "mic"].includes(i.cat)) ?? items[0];
-  return pick ? { day: d, line: `${pick.headline} — ${pick.venue.split(" · ")[0]}` } : null;
+  if (!items.length) return null;
+  const score = (i) => {
+    const r = CAT_RANK.indexOf(i.cat);
+    return (r === -1 ? CAT_RANK.length : r) * 10 + (seenVenue.has(i.venue) ? 5 : 0);
+  };
+  const pick = [...items].sort((a, b) => score(a) - score(b) || items.indexOf(a) - items.indexOf(b))[0];
+  seenVenue.add(pick.venue);
+  const rest = items.length - 1;
+  const callout = `${pick.headline} · ${pick.venue.split(" · ")[0]}`;
+  const line = rest > 0 ? `${callout}, plus ${rest} more ${tailFor(d, rest)}` : callout;
+  return { day: d, line };
 }).filter(Boolean);
 
 const SUBJECT = `The Dirty South plan is up — ${nightlife.weekend}`;
