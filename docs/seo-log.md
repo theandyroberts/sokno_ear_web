@@ -33,7 +33,7 @@ deltas — the 2026-09-01 figures remain the latest ones on record.
 | `NewsArticle` JSON-LD | Present on **all 77** story pages (sweep) | ✓ |
 | Noindex audit | `/next` is **200 + `noindex, nofollow`** (No. 14 draft is pending — it was a 404 last check because nothing was queued); `/draft/*` 404 + `noindex`. Nothing in the sitemap is noindexed | ✓ |
 | Banned-copy check (`paper`/`newspaper`/`issue`/`edition`) in visible copy | Clean on `/`, `/about`, `/archive`, `/dirtysouthparty`, `/2026-09-09` | ✓ |
-| `www.soknoear.com` → apex | **Still 200, still no redirect** | ✗ **unfixed** |
+| `www.soknoear.com` → apex | Was still 200 with no redirect at audit time; **fixed and deployed the same day** — now 301 → apex in one hop | ✓ **fixed** |
 | `/stats` | Still 404 (cosmetic; no `Disallow` added) | unchanged |
 
 ### Search Console
@@ -46,13 +46,42 @@ have Chrome running with the extension connected at run time.
 
 ### Findings
 
-**1. `www.soknoear.com` still serves 200 with no redirect to the apex.** Reported
-on 2026-09-01, unchanged two weeks later. `deploy/soknoear.com.nginx:6` still has
-`server_name soknoear.com www.soknoear.com;` in a single block with nothing
-redirecting. `http://` → `https://` works on both hosts (certbot's hop); the
-www → apex hop is the missing one. As of the last GSC read this was costing 14
-"Alternate page with proper canonical tag" rows and had made Google pick
-`www.soknoear.com/archive` over the apex.
+**1. `www.soknoear.com` served 200 with no redirect — FIXED this run.**
+Reported on 2026-09-01 and still unfixed at audit time, two weeks later. The live
+config had `server_name soknoear.com www.soknoear.com;` on the single serving
+block, and certbot's port-80 hop redirected to `https://$host`, which preserves
+whatever hostname the visitor typed — so www was a second live copy of the whole
+site and nothing ever collapsed it onto the apex.
+
+Fixed by adopting the pattern `christinadavilaproperties.com` already uses on the
+same box: the serving block claims the apex only, a second redirect-only 443 block
+claims `www` and returns `301 https://soknoear.com$request_uri`, and the port-80
+block redirects to the literal apex instead of `$host`. The cert already covers
+both names, so the www block terminates TLS cleanly before redirecting.
+
+Verified after reload:
+
+| Request | Result |
+| --- | --- |
+| `https://www.soknoear.com/` | 301 → `https://soknoear.com/` |
+| `https://www.soknoear.com/archive` (the URL Google canonicalized to www) | 301 → `https://soknoear.com/archive` |
+| `http://www.soknoear.com/2026-09-09` | 301 → `https://soknoear.com/2026-09-09` |
+| `http://soknoear.com/about` | 301 → `https://soknoear.com/about` |
+| Full redirect chain from www | **1 hop**, path preserved, final 200 |
+| Apex `/`, `/about`, `/archive`, `/dirtysouthparty`, latest episode, a story | all still 200 |
+| `/stats/script.js`, `/stats/api/send`, six `_next` chunks | all still serving |
+| `scripts/healthcheck.sh` on the VPS | exit 0 |
+
+Expect the GSC "Alternate page with proper canonical tag" bucket (14 rows, 12 of
+them www variants) to drain over the next few crawls, and
+`www.soknoear.com/archive` to be replaced by the apex as the indexed URL.
+
+**1b. The repo's copy of the nginx config was badly stale.** `deploy/soknoear.com.nginx`
+was missing the `/stats` Umami location blocks, the `deny-sensitive` include, and
+the entire 443 block — it described a server that hasn't existed since August.
+Re-synced from live in the same commit. (`/etc/nginx/sites-available/soknoear.com`
+is also stale on the box — an older fleet-wide `sub_filter` variant — but nginx
+includes `sites-enabled/*` only, so it is inert. Left alone.)
 
 **2. Growth is healthy and the pipeline is clean.** +14 URLs in two weeks (~7/week,
 slightly ahead of the ~5/week expectation) with zero regressions across 94 pages:
@@ -66,7 +95,21 @@ the one number worth getting eyes on.
 
 ### Actions
 
-Audit-only; nothing changed or deployed.
+**Done this run:**
+
+1. **www → apex redirect shipped.** Live config rewritten and `systemctl reload nginx`;
+   backup at `/root/soknoear.com.nginx.bak-2026-09-15`. Verified above.
+2. **`deploy/soknoear.com.nginx` re-synced from live**, so the repo copy is
+   documentation again rather than fiction.
+
+**Open, needs Andy:**
+
+3. **Alerting.** This finding sat unread for two weeks because "message Andy" in the
+   task file means printing to a terminal transcript. Andy's note: email is not the
+   answer either — 100+ unread on a normal day. A channel and a volume rule are still
+   to be decided; the standing requirement is that a *blocking* finding reaches him
+   within a day, and that a carried finding restates its age every run.
+4. **Search Console access**, so the crawl numbers can be read at all.
 
 ---
 

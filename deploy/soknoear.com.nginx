@@ -1,13 +1,29 @@
 # soknoear.com — reverse proxy to the Next.js standalone server (PM2, port 3007).
-# certbot --nginx adds the 443 server block + HTTP->HTTPS redirect.
+# certbot --nginx added the 443 server block + the HTTP->HTTPS redirect.
+#
+# Host policy: the apex is canonical. www.soknoear.com is a redirect-only server
+# block (2026-09-15) — it used to share this block's server_name, which made www
+# a second live copy of the whole site and cost us duplicate indexing in GSC.
+# Matches the pattern already used by christinadavilaproperties.com on this box.
 server {
-    listen 80;
-    listen [::]:80;
-    server_name soknoear.com www.soknoear.com;
+    server_name soknoear.com;
+    include snippets/deny-sensitive.conf;
 
     # modest body limit for the event/news submission form
     client_max_body_size 2m;
 
+
+    # Umami analytics: first-party collection only — the dashboard is NOT exposed.
+    location = /stats/script.js {
+        proxy_pass http://127.0.0.1:3010/script.js;
+        proxy_set_header Host $host;
+    }
+    location = /stats/api/send {
+        proxy_pass http://127.0.0.1:3010/api/send;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
     location / {
         proxy_pass http://127.0.0.1:3007;
         proxy_http_version 1.1;
@@ -19,4 +35,38 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
         proxy_cache_bypass $http_upgrade;
     }
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/soknoear.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/soknoear.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+
+}
+
+# www -> apex, over TLS. The cert covers both names, so this terminates cleanly
+# before redirecting (a plain port-80 redirect would break https://www/ callers).
+server {
+    server_name www.soknoear.com;
+    include snippets/deny-sensitive.conf;
+    return 301 https://soknoear.com$request_uri;
+
+    listen [::]:443 ssl; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/soknoear.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/soknoear.com/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+# Port 80, both hosts -> https on the apex. Redirecting to the literal apex
+# rather than certbot's $host is what collapses www in one hop.
+server {
+    listen 80;
+    listen [::]:80;
+    server_name soknoear.com www.soknoear.com;
+    include snippets/deny-sensitive.conf;
+    return 301 https://soknoear.com$request_uri;
 }
