@@ -63,7 +63,9 @@ export default async function DirtySouthParty({ searchParams }: { searchParams: 
       "@type": "ListItem",
       position: i + 1,
       name: v.venue.split(" · ")[0],
-      url: v.href.startsWith("http") ? v.href : `https://soknoear.com${v.href}`,
+      // href is required by the type, but a hand-edited nightlife.json has taken the
+      // whole page down with a 500 before now (2026-09-16) — treat it as optional here.
+      url: v.href?.startsWith("http") ? v.href : `https://soknoear.com${v.href ?? "/dirtysouthparty"}`,
     })),
   };
   return (
