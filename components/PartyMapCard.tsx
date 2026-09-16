@@ -10,7 +10,7 @@ import { createPortal } from "react-dom";
 
 const MAP_SRC = "/assets/dirty_south_festive_map.jpg";
 const MAP_ALT =
-  "Party in the Dirty South — festive map of the Old Sevier waterfront: Kern's Food Hall, Honeybee Coffee, Hi-Wire, Fly by Night, Southside Garage, Alliance Brewing, Earl's, South Coast Pizza, Angry Dumplings, The Pink Cactus, Trailhead Beer Market, Suttree Landing Park, and the crawl route along Sevier Ave";
+  "Party in the Dirty South — festive map of the Old Sevier waterfront: Puckers, Kern's Food Hall, Honeybee Coffee, Hi-Wire, Fly by Night, Southside Garage, Alliance Brewing, Earl's, South Coast Pizza, Angry Dumplings, The Pink Cactus, Trailhead Beer Market, Suttree Landing Park and the new traffic circle, with the Gay Street Bridge crossing to downtown and signposts out to the Urban Wilderness, Ijams Nature Center and SoKno Taco — plus the crawl route along Sevier Ave and Waterfront Drive";
 
 const bandStyle: React.CSSProperties = {
   background: "var(--teal)", color: "var(--on-teal)",
