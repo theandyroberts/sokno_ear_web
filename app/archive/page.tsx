@@ -44,8 +44,21 @@ export default function Archive() {
                 {e.feature.deck}
               </p>
             )}
+            {/* Story titles link to their own pages. They used to be plain text, which
+                left every story permalink with exactly ONE inbound link — its episode
+                page — and 64 of them had never been crawled at all (docs/seo-log.md,
+                2026-09-01). The archive is linked site-wide, so this gives each story
+                a second route in from a hub Google actually visits. */}
             <p style={{ fontFamily: "var(--font-label)", fontSize: "var(--label-sm)", letterSpacing: "var(--tracking-label-tight)", textTransform: "uppercase", color: "var(--ink-faded)", margin: "8px 0 0" }}>
-              Also in this episode: {e.stories.map((s) => s.title).join(" · ")}
+              Also in this episode:{" "}
+              {e.stories.map((s, i) => (
+                <span key={s.id}>
+                  {i > 0 && " · "}
+                  <Link href={`/${e.slug}/${s.id}`} style={{ color: "var(--ink-faded)", textDecoration: "none", borderBottom: "1px solid var(--paper-edge)" }}>
+                    {s.title}
+                  </Link>
+                </span>
+              ))}
             </p>
           </li>
         ))}
