@@ -102,14 +102,36 @@ the one number worth getting eyes on.
 2. **`deploy/soknoear.com.nginx` re-synced from live**, so the repo copy is
    documentation again rather than fiction.
 
+3. **Story links added to `/archive`.** `/archive` printed every story title as
+   plain text, so all 77 story permalinks had exactly ONE inbound internal link —
+   their own episode page. Nothing linked them from a hub. This is a better
+   explanation for the 64 never-crawled URLs than the "crawl demand" reading in the
+   2026-09-01 entry, and it is the cheapest thing on the list: the titles were
+   already on the page. Live: **0 → 73 story links** (the 77 in the sitemap minus
+   the current episode, which is not in "past episodes" yet), 12 episode links
+   intact, spot-checked links resolve 200.
+4. **`Disallow: /stats`** added to `app/robots.ts`, retiring the 404 that Googlebot
+   has been carrying in Page indexing. Umami collection is untouched —
+   `/stats/script.js` and `/stats/api/send` both still serve.
+5. **`redeploy.sh` build detection fixed.** Running `git pull` by hand before
+   `redeploy.sh` made OLD == NEW, so a diff full of `app/` changes deployed with
+   `build=false` — the release flipped, every check passed, and the site kept
+   serving the old code. Caught today, on these very changes. The baseline now
+   comes from the `current` symlink (release dirs are named `<timestamp>-<sha>`),
+   so it is right regardless of who pulled.
+6. **Open items now have one home:** `docs/OPEN-ITEMS.md`, with an Opened date per
+   item so age is the escalation signal.
+
 **Open, needs Andy:**
 
-3. **Alerting.** This finding sat unread for two weeks because "message Andy" in the
+7. **Alerting.** This finding sat unread for two weeks because "message Andy" in the
    task file means printing to a terminal transcript. Andy's note: email is not the
    answer either — 100+ unread on a normal day. A channel and a volume rule are still
    to be decided; the standing requirement is that a *blocking* finding reaches him
    within a day, and that a carried finding restates its age every run.
-4. **Search Console access**, so the crawl numbers can be read at all.
+8. **Search Console access**, so the crawl numbers can be read at all. Two fixes
+   that should move the never-crawled count shipped today and neither can be
+   measured without it.
 
 ---
 
