@@ -101,6 +101,16 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
     hand-authored arrays that duplicate title, blurb, art and href by hand. Check both
     when stories are added or cut.
 
+- **The football game is never its own story.** This is a college town — people already
+  know the Vols are playing. A game earns coverage **only when a South Knoxville venue has
+  something on for it**: a game-day board at Earl's, a watch package at Kern's, a sports
+  grill with every screen on. Then the story is *the venue's offer*, and the game is the
+  occasion — so the headline names the room, not the matchup ("Brunch at Puckers runs
+  straight through Sunday's kickoff," not "The Titans host the Eagles"). With no venue
+  angle, the game gets at most a one-line clock warning inside a story it collides with,
+  and nothing else. Never a standalone article, never its own item in the briefing.
+  (Andy, 2026-09-15.) Neyland itself is off the beat, same as downtown.
+
 - **A source about one thing is not a source about another.** Numbers borrowed from a
   nearby subject are still unverified for yours. (Andy, 2026-09-15 — a "night kickoff"
   service piece told readers where to park for the stadium using the City's count of

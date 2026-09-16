@@ -173,8 +173,8 @@
       ],
       "hot": true,
       "image": "/assets/spots/puckers_titans.jpg",
-      "title": "Titans and brunch, on every screen",
-      "blurb": "Sunday's one o'clock kickoff lands inside the last hour of weekend brunch at Puckers.",
+      "title": "Brunch at Puckers runs through kickoff",
+      "blurb": "Nine to two Sunday with every screen on, and the one o'clock game lands in the last hour of it.",
       "cue": "Jump to story",
       "href": "#puckers-titans"
     },
@@ -646,20 +646,12 @@
       "layout": "imageLeft",
       "image": "/assets/spots/puckers_titans.jpg",
       "imageCaption": "Sunday, one o'clock, every screen",
-      "title": "The Titans host the Eagles on Sunday, and Puckers has brunch running through kickoff",
-      "deck": "Sunday's one o'clock game lands in the last hour of weekend brunch at the sports grill on Mimosa Avenue — which is the one thing in South Knoxville this weekend that isn't happening at a nature center.",
+      "title": "Brunch at Puckers runs straight through Sunday's kickoff",
+      "deck": "Brunch at the sports grill on Mimosa Avenue goes nine to two with every screen on, so Sunday's one o'clock game lands in the last hour of it. The only indoor thing on this list.",
       "facts": [
         {
-          "label": "Game",
-          "value": "Titans vs. Philadelphia · Sun Sep 20 · 1 PM · FOX"
-        },
-        {
-          "label": "Where they play",
-          "value": "Nissan Stadium, Nashville — this is a watch, not a drive"
-        },
-        {
           "label": "Brunch",
-          "value": "Sat and Sun · 9 AM – 2 PM"
+          "value": "Sat and Sun · 9 AM – 2 PM · every screen on"
         },
         {
           "label": "Where",
@@ -670,26 +662,34 @@
           "value": "Garage entrance behind the building"
         },
         {
-          "label": "Record",
-          "value": "Tennessee is 0–1 after losing to the Jets in week one"
+          "label": "On the screens",
+          "value": "Titans vs. Philadelphia · Sun Sep 20 · 1 PM · FOX"
+        },
+        {
+          "label": "Pucker Hour",
+          "value": "Mon–Fri 5–6 PM · $1 Pucker Lager, $3 wells and prosecco"
+        },
+        {
+          "label": "Indoors",
+          "value": "Air-conditioned — Sunday's high is about 93"
         }
       ],
       "body": [
         {
           "type": "paragraph",
-          "text": "Tennessee's other football team plays Sunday at one. The Titans host Philadelphia at Nissan Stadium on FOX, which is three hours up the interstate and therefore a television game for everyone reading this. Puckers, the sports grill at 115 Mimosa Avenue, runs weekend brunch from nine to two on Saturdays and Sundays with the screens on throughout — so a one o'clock kickoff lands inside the last hour of the brunch menu."
+          "text": "Puckers runs weekend brunch from nine to two on Saturday and Sunday, with the screens on the whole time. That is the offer, and this Sunday it collects a bonus: the Titans host Philadelphia at one o'clock on FOX, which drops kickoff into the last hour of the brunch menu. The room is at 115 Mimosa Avenue, it opened in August in the space that was Mimosas, and the brunch dishes survived the change of name."
         },
         {
           "type": "subhead",
-          "text": "Why this is the odd one out this week"
+          "text": "Why it's the odd one out this week"
         },
         {
           "type": "paragraph",
-          "text": "Look at the rest of this weekend and nearly all of it is outdoors and most of it is at Ijams Park. Sunday at Puckers is the alternative: indoors, air-conditioned, and at ninety-three degrees outside that is not a small consideration. The room opened in August in the space that was Mimosas, across the river from the stadium, and brunch survived the change of name."
+          "text": "Look at the rest of this weekend: nearly all of it is outdoors, and most of it is at Ijams Park. Puckers is the alternative — indoors, air-conditioned, and with Sunday forecast around ninety-three degrees that is not a small consideration. It is also the only room on this list where the plan can be nothing more ambitious than sitting down."
         },
         {
           "type": "paragraph",
-          "text": "The Titans are 0–1 after losing to the Jets at home in week one, so this is a Sunday for the faithful rather than a victory party. The Eagles are the better team by a good distance. Parking is in the garage behind the building, which matters more than usual on a weekend when everything on this side of the river is full."
+          "text": "Parking is in the garage behind the building. If you want the bar rather than the brunch, Pucker Hour runs weekdays from five to six — a dollar for a Pucker Lager, three for well drinks and prosecco — though that is a Monday-to-Friday thing and not part of Sunday."
         }
       ],
       "sources": [
@@ -713,8 +713,8 @@
           "puckers"
         ],
         "igBanner": [
-          "Titans on every screen at Puckers",
-          "Sunday, brunch nine to two, kickoff at one"
+          "Brunch and every screen at Puckers",
+          "Sunday, nine to two"
         ]
       }
     },
@@ -1204,8 +1204,8 @@
     "audio": {
       "title": "Weekend Audio Briefing",
       "intro": "What's happening in SoKno this weekend.",
-      "description": "Your weekend listen — a free 281st birthday party at Marble Springs, a circus on the Ijams Park lawn Saturday night, Lord of the Rings outdoors Friday, a full Sunday at the park, and the Titans on every screen at Puckers.",
-      "duration": "04:08",
+      "description": "Your weekend listen — a free 281st birthday party at Marble Springs, a circus on the Ijams Park lawn Saturday night, Lord of the Rings outdoors Friday, a full Sunday at the park, and brunch through kickoff at Puckers.",
+      "duration": "04:27",
       "src": "/audio/2026-09-16.mp3"
     },
     "calendar": [
@@ -1292,8 +1292,8 @@
       {
         "month": "SEP",
         "day": "20",
-        "title": "TITANS HOST THE EAGLES — brunch and every screen at Puckers",
-        "meta": "Kickoff 1 PM · FOX · brunch 9 AM – 2 PM · 115 Mimosa Ave",
+        "title": "Brunch and every screen at Puckers",
+        "meta": "9 AM – 2 PM · Titans kick off at 1 on FOX · 115 Mimosa Ave",
         "starred": true,
         "href": "#puckers-titans"
       },
