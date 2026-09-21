@@ -29,8 +29,13 @@ is not sufficient: Andy runs 100+ unread on a normal day.
 ## Open
 
 ### 1. Venue outreach — nobody has ever talked to the venues
-**Opened:** 2026-08-11 · **Age: 35 days** · **Carried through 6 Instagram reviews**
+**Opened:** 2026-08-11 · **Age: 41 days** (as of 2026-09-21) · **Carried through 7 Instagram reviews**
 · **Only Andy can do this**
+
+**2026-09-21:** Ijams went from 14 tags to 22 in one week (8 of No. 14's 13 posts) and is now
+35% of everything posted since Aug 11, at 7.2 average reach, the lowest of any venue. It still
+has never engaged. The pipeline ran its first fully clean week and per-post reach is flat at 6–7,
+so nothing left in the pipeline addresses this.
 
 Nine venues tagged across 79 posts. Zero reshares, ever. Non-follower reach over the
 last three 28-day windows: 10 → 10 → 6, while the follower list grew 16% then 10%.
@@ -47,7 +52,7 @@ Six reviews of pipeline tuning have now run inside a 95-follower base. The pipel
 in good shape. This is what is left.
 
 ### 2. Search Console is unreadable from the Mac mini
-**Opened:** 2026-08-15 · **Age: 31 days** · **Missed 2 of 3 SEO checks**
+**Opened:** 2026-08-15 · **Age: 37 days** (as of 2026-09-21) · **Missed 2 of 3 SEO checks**
 · **Needs Andy**
 
 No Chrome extension connected to the mini, and the Browser pane has no Google session,
@@ -68,6 +73,9 @@ fires (1st and 15th), or open Search Console and paste the Page indexing numbers
 
 | Item | Opened | Closed | What fixed it |
 | --- | --- | --- | --- |
+| Same-day Instagram posts stacked an hour apart (No. 14's Sunday: 4 Ijams banners 08–11, read 4/5/2/5) | 2026-09-21 | 2026-09-21 | `placeDaySlots` in `ig-schedule.mjs`: ≥2h same-day spacing, collisions walk earlier, overflow to the day before; `tests/ig-day-slots.test.ts` (A15) |
+| A12 measure (per-post non-follower reach) can't be read: API rejects `follow_type` on media insights | 2026-09-21 | 2026-09-21 | Measure redefined to per-post reach/views by arm plus account-level non-follower count; A/B continues through No. 16 |
+| Post failures / lead-card slot / standing cap: measures confirmed on a live week | 2026-09-15 | 2026-09-21 | No. 14: 13/13 posted, 0 retries, lead cards 13:00, 2 repeats held (A8, A9, A10 closed in the IG review) |
 | `www.soknoear.com` served the whole site with no redirect | 2026-09-01 | 2026-09-15 | Apex-only serving block + redirect-only 443 block for www + port-80 hop to the literal apex. `dad9825` |
 | Instagram posts failed silently and permanently (2 lost) | 2026-09-15 | 2026-09-15 | `ig-post.mjs`: in-run publish retry on transients, `failed` made non-terminal with a 4-tick budget, `notify.mjs` on exhaustion, dated posts dropped rather than published hours late |
 | Standing-item cap reset on a retitle | 2026-09-15 | 2026-09-15 | Cap counts by `social.standingKey ?? id`; `social.standing` marks an item standing from run one; 20 archive stories keyed |

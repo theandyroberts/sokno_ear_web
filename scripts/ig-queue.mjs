@@ -9,7 +9,7 @@
 process.env.TZ = "America/New_York"; // all slot math is SoKno-local
 import fs from "node:fs";
 import path from "node:path";
-import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, DAY_START_HOUR } from "./ig-schedule.mjs";
+import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, DAY_START_HOUR, placeDaySlots, SAME_DAY_GAP_H } from "./ig-schedule.mjs";
 import { priorRunsById, pickRepeatsToDrop, standingKeyOf, MAX_REPEATS_PER_EPISODE } from "./ig-repeats.mjs";
 import { checkBanner } from "./ig-banner-check.mjs";
 
@@ -94,9 +94,9 @@ function buildCaption(story, tags) {
 /**
  * When to post so the reader can still act on it. Aim ~3h ahead of the doors.
  * A morning event is useless to promote that morning, so it gets a heads-up the
- * evening before instead. Collisions shift an hour later.
+ * evening before instead. Collisions are resolved later, by placeDaySlots.
  */
-function slotFor(story, dayDate, taken) {
+function slotFor(story, dayDate) {
   let date = new Date(dayDate);
   let hour = DEFAULT_HOUR;
   const start = story.event?.startDate ? new Date(story.event.startDate) : null;
@@ -109,8 +109,8 @@ function slotFor(story, dayDate, taken) {
       hour = Math.max(8, Math.min(19, h - 3));
     }
   }
-  while (taken.has(`${date.toDateString()}#${hour}`)) hour += 1;
-  taken.add(`${date.toDateString()}#${hour}`);
+  // Only the slot it WANTS. Same-day collisions are resolved once every post is
+  // known, by placeDaySlots — see the pass after the loop.
   return { date, hour };
 }
 
@@ -122,7 +122,6 @@ function abBucket(id) {
 }
 
 const stories = [{ ...episode.feature, __isFeature: true }, ...episode.stories];
-const taken = new Set();
 const posts = [];
 const warnings = [];
 
@@ -140,8 +139,8 @@ for (const s of stories) {
     : new Date(`${episode.date}T12:00:00-04:00`);
 
   const { date, hour } = dated
-    ? slotFor(s, dayDate, taken)
-    : slotFor({ ...s, event: undefined }, dayDate, taken);
+    ? slotFor(s, dayDate)
+    : slotFor({ ...s, event: undefined }, dayDate);
 
   const { tags, unknown } = resolveTags(s);
   if (unknown.length) warnings.push(`${s.id}: no verified handle for ${unknown.join(", ")} — tag dropped`);
@@ -213,6 +212,21 @@ if (droppedKeys.length) {
       : `${key}${alias}: declared standing — held out of the drip (cap ${MAX_REPEATS_PER_EPISODE}/week)`);
   }
   for (let i = posts.length - 1; i >= 0; i--) if (droppedKeys.includes(posts[i].standingKey)) posts.splice(i, 1);
+}
+
+// ── Same-day spacing (A15). Stories were stamped with the slot they wanted and a
+// collision walked +1h, so a busy Sunday went out 08:00/09:00/10:00/11:00. Resolve
+// all of them at once instead: two hours apart, collisions walk earlier, overflow
+// goes out the evening before. Runs after the standing cap so a held-out repeat
+// never takes a slot. See placeDaySlots in scripts/ig-schedule.mjs.
+{
+  const slots = placeDaySlots(posts.map((p) => ({ key: p.id, day: p.postAt.slice(0, 10), hour: Number(p.postAt.slice(11, 13)) })));
+  for (const p of posts) {
+    const s = slots.get(p.id);
+    const next = `${s.day}T${String(s.hour).padStart(2, "0")}:00:00-04:00`;
+    if (next !== p.postAt) warnings.push(`${p.id}: ${s.how === "evening-before" || s.how === "day-before" ? "moved to the day before" : s.how === "earlier" ? "moved earlier" : "shifted"} to keep ${SAME_DAY_GAP_H}h between same-day posts (${p.postAt.slice(5, 16)} → ${next.slice(5, 16)})`);
+    p.postAt = next;
+  }
 }
 
 // ── Weekly promo pair (scripts/ig-promos.py). These OPEN the drip — they announce the

@@ -104,3 +104,77 @@ export function spaceOutPosts(posts, nowMs = Date.now(), opts = {}) {
 
   return { posts: out, moved };
 }
+
+/** Hours between two story posts on the same day. Collisions used to shift +1h. */
+export const SAME_DAY_GAP_H = 2;
+/** Earliest hour a story post may walk back to. */
+export const EARLIEST_STORY_HOUR = 8;
+/** Evening-before slots tried, in order, for a post that finds no room on its own morning. */
+export const EVENING_SPILL_HOURS = [21, 18];
+
+function dayBefore(day) {
+  const d = new Date(`${day}T12:00:00Z`);
+  d.setUTCDate(d.getUTCDate() - 1);
+  return d.toISOString().slice(0, 10);
+}
+
+/**
+ * Place story posts so no two on the same day land within SAME_DAY_GAP_H of each other.
+ *
+ * Each post comes in with the slot it WANTS (its event time minus ~3h). The old rule
+ * walked a collision one hour LATER, which on a busy day stacks the posts back-to-back
+ * and eats into the lead time. No. 14's Sunday went out 08:00 / 09:00 / 10:00 / 11:00,
+ * four Ijams banners in a row, and read 4, 5, 2 and 5 — four of the week's five worst
+ * (docs/ig-reviews/2026-09-21.md, finding 3 / A15).
+ *
+ * Now, per day, latest-wanted first: a collision walks EARLIER, which only ever adds
+ * lead time. A post with no room left above EARLIEST_STORY_HOUR goes out the evening
+ * before (EVENING_SPILL_HOURS), the same "tell them the night before" rule morning
+ * events already follow, or failing that any open hour that day. Only if the whole
+ * day before is full does it fall back to the old behaviour: the first free hour at
+ * or after the slot it wanted.
+ *
+ * Pure and timezone-free: days are "YYYY-MM-DD" strings, hours are local integers.
+ *
+ * @param {Array<{key: string, day: string, hour: number}>} items
+ * @returns {Map<string, {day: string, hour: number, how: "as-wanted"|"earlier"|"evening-before"|"day-before"|"fallback"}>}
+ */
+export function placeDaySlots(items) {
+  const placed = new Map(); // day → hours[]
+  const out = new Map();
+  const hoursOn = (day) => placed.get(day) ?? [];
+  const fits = (day, h) => hoursOn(day).every((x) => Math.abs(x - h) >= SAME_DAY_GAP_H);
+  const put = (key, day, hour, how) => {
+    placed.set(day, [...hoursOn(day), hour]);
+    out.set(key, { day, hour, how });
+  };
+
+  const days = [...new Set(items.map((i) => i.day))].sort();
+  for (const day of days) {
+    // Latest-wanted first, so the post closest to its event keeps its slot and the
+    // earlier ones make room by moving earlier still. Key breaks ties for stability.
+    const todays = items
+      .filter((i) => i.day === day)
+      .sort((a, b) => b.hour - a.hour || a.key.localeCompare(b.key));
+    for (const it of todays) {
+      let h = it.hour;
+      while (h >= EARLIEST_STORY_HOUR && !fits(day, h)) h -= 1;
+      if (h >= EARLIEST_STORY_HOUR) {
+        put(it.key, day, h, h === it.hour ? "as-wanted" : "earlier");
+        continue;
+      }
+      const prev = dayBefore(day);
+      const eve = EVENING_SPILL_HOURS.find((eh) => fits(prev, eh));
+      if (eve !== undefined) { put(it.key, prev, eve, "evening-before"); continue; }
+      // Evening full: any open hour the day before, latest first — "this weekend" still
+      // lands ahead of the event, which beats a fourth post in a row on the day.
+      let dh = Math.max(...EVENING_SPILL_HOURS) - 1;
+      while (dh >= EARLIEST_STORY_HOUR && !fits(prev, dh)) dh -= 1;
+      if (dh >= EARLIEST_STORY_HOUR) { put(it.key, prev, dh, "day-before"); continue; }
+      let f = it.hour;
+      while (hoursOn(day).includes(f)) f += 1;
+      put(it.key, day, f, "fallback");
+    }
+  }
+  return out;
+}
