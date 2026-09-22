@@ -1,0 +1,1446 @@
+{
+  "slug": "2026-09-23",
+  "volume": 1,
+  "number": 15,
+  "episode": "Weekend Episode",
+  "date": "2026-09-23",
+  "dateLabel": "Thu–Sun, Sep 24–27, 2026",
+  "shortDate": "Sep 24–27",
+  "place": "South Knoxville, TN",
+  "feature": {
+    "id": "end-of-summer-jam",
+    "label": "Ijams Park",
+    "labelColor": "teal",
+    "days": [
+      "Sun"
+    ],
+    "layout": "imageTop",
+    "image": "/assets/spots/quarry_jam.jpg",
+    "imageCaption": "Mead's Quarry, Sunday, from noon until the light goes",
+    "title": "Channel 865 turns Mead's Quarry into a dance floor from noon to sundown",
+    "deck": "Six DJs, eight hours, the quarry lake behind the decks, and no ticket. Sunday's End of Summer Jam at Ijams Park is free and all ages, on the first cool weekend since June.",
+    "facts": [
+      {
+        "label": "When",
+        "value": "Sun Sep 27 · noon until sundown (listed to 8 PM)"
+      },
+      {
+        "label": "Where",
+        "value": "Mead's Quarry, Ijams Park · 3526 Island Home Ave"
+      },
+      {
+        "label": "Cost",
+        "value": "Free · all ages"
+      },
+      {
+        "label": "On the decks",
+        "value": "Alex Falk, Boy Acuff, Cheers, Innsaei, Jmo, Zee Other"
+      },
+      {
+        "label": "Food & drink",
+        "value": "Ijams beer garden and concessions open all day · a food truck on site"
+      },
+      {
+        "label": "Sunset",
+        "value": "7:25 PM, which is when the music is meant to stop"
+      },
+      {
+        "label": "Weather",
+        "value": "Mostly sunny, high near 78, a low of 52 that night"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Channel 865, the Knoxville DJ collective, takes over Mead's Quarry again on Sunday, and the plan is simple: start at noon, stop when the sun goes down, and let the quarry do the rest. The park bills it as an End of Summer Jam, which is a fair name for a day that lands on the first weekend in months with a high under 80. It is free, it is open to all ages, and the lineup runs six deep — Alex Falk, Boy Acuff, Cheers, Innsaei, Jmo and Zee Other."
+      },
+      {
+        "type": "subhead",
+        "text": "Why the quarry works for this"
+      },
+      {
+        "type": "paragraph",
+        "text": "Mead's Quarry is a flooded marble pit with a rock wall on one side and a lawn on the other, so the sound has somewhere to go and the crowd has somewhere to sit. The Ijams beer garden and the concession stand are open the whole day, there is a food truck on the property, and the lake is right there for anyone who wants to rent a paddleboard between sets. Eight hours is a long time to dance. Nobody is expected to do all eight."
+      },
+      {
+        "type": "subhead",
+        "text": "The practical part"
+      },
+      {
+        "type": "paragraph",
+        "text": "Bring a blanket or a chair, a hat for the early afternoon, and a layer for the last hour — Sunday's high is about 78 and the temperature drops fast once the sun is off the water. Sunset is 7:25, so the sundown finish means roughly a quarter past seven. Parking in the Ijams Park lots is $5 a car and free for members. The quarry is at the far end of Island Home Avenue past the main Visitor Center; follow the signs for Mead's Quarry."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ijams Park — Ijams End of Summer Jam",
+        "url": "https://www.ijams.org/event-details/special-event-ijams-end-of-summer-jam"
+      },
+      {
+        "label": "National Weather Service — Knoxville forecast",
+        "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+      }
+    ],
+    "event": {
+      "startDate": "2026-09-27T12:00:00-04:00",
+      "endDate": "2026-09-27T20:00:00-04:00",
+      "locationName": "Mead's Quarry, Ijams Nature Center",
+      "locationAddress": "3526 Island Home Ave, Knoxville, TN 37920"
+    },
+    "social": {
+      "igTags": [
+        "ijams"
+      ],
+      "igBanner": [
+        "Free End of Summer Jam at Ijams Park",
+        "Sunday, noon to sundown"
+      ]
+    }
+  },
+  "scanner": [
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "hot": true,
+      "image": "/assets/spots/quarry_jam.jpg",
+      "title": "Free DJs at Mead's Quarry, noon to sundown",
+      "blurb": "Channel 865's End of Summer Jam on Sunday. Six DJs, the beer garden open all day, no ticket, all ages.",
+      "cue": "Jump to story",
+      "href": "#end-of-summer-jam"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/harvest_moon_paddle.jpg",
+      "title": "A guided paddle under the Harvest Moon",
+      "blurb": "Saturday night on the river, boat and headlamp included. The moon comes up at 7:18 and the group launches at 7:30.",
+      "cue": "Jump to story",
+      "href": "#harvest-moon-paddle"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/cyanotype_day.jpg",
+      "title": "Make a sun print for free on the plaza",
+      "blurb": "World Cyanotype Day, Saturday noon to three. Leaves on blue-treated cloth, developed by the sun, rinsed in a bucket.",
+      "cue": "Jump to story",
+      "href": "#cyanotype-day"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/puckers_noon.jpg",
+      "title": "Brunch at Puckers runs straight into a noon kickoff",
+      "blurb": "Nine to two Saturday with every screen on, and Texas at Tennessee starts in the middle of it.",
+      "cue": "Jump to story",
+      "href": "#puckers-texas"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/possum_meet.jpg",
+      "title": "Meet the park's newest animal ambassador, an opossum",
+      "blurb": "Saturday at three, ten dollars, ages five and up. An hour with the animal, then nature journaling and an opossum drawing to take home.",
+      "cue": "Jump to story",
+      "href": "#playing-possum"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Thu"
+      ],
+      "hot": false,
+      "image": "/assets/spots/bats_blacklight.jpg",
+      "title": "The last bat walk of the year goes out Thursday",
+      "blurb": "Eight o'clock at Mead's Quarry, fifteen dollars, ages ten and up. Blacklight stations and a naturalist calling species overhead.",
+      "cue": "Jump to story",
+      "href": "#bats-after-dark"
+    },
+    {
+      "label": "Urban Wilderness",
+      "labelColor": "ink",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "hot": false,
+      "image": "/assets/spots/uw_cool_weekend.jpg",
+      "title": "The first weekend in the 70s since June",
+      "blurb": "Sunny, 77, lows in the low 50s, Friday through Sunday. Sixty miles of trail that have been unusable at noon for three months are back.",
+      "cue": "Jump to story",
+      "href": "#urban-wilderness-cool"
+    },
+    {
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "hot": false,
+      "image": "/assets/spots/specials_chalk_texas.jpg",
+      "title": "Earl's game-day board covers lunch this time",
+      "blurb": "The daily deals run Thursday through Sunday, and Saturday's Vols column starts at eleven for a noon kickoff.",
+      "cue": "Jump to story",
+      "href": "#specials-board"
+    }
+  ],
+  "stories": [
+    {
+      "id": "harvest-moon-paddle",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/harvest_moon_paddle.jpg",
+      "imageCaption": "Moonrise 7:18, launch 7:30",
+      "title": "A guided paddle goes out under the Harvest Moon on Saturday night",
+      "deck": "The full moon nearest the equinox rises over the river eight minutes before the boats push off. Two hours on the water with an Ijams Park naturalist, kayak and headlamp included.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Sep 26 · 7:30–9:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams River Landing · 3507 Island Home Pike"
+        },
+        {
+          "label": "Cost",
+          "value": "$45 · kayak, life vest and headlamp included"
+        },
+        {
+          "label": "The moon",
+          "value": "Full at 12:49 PM Saturday · rises 7:18 PM · sunset 7:26 PM"
+        },
+        {
+          "label": "Bring",
+          "value": "Water and a layer — Saturday night drops to about 51"
+        },
+        {
+          "label": "Don't bring",
+          "value": "Your own kayak; your own paddle, vest or headlamp is fine"
+        },
+        {
+          "label": "Waiver",
+          "value": "One adventure release per calendar year"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The Harvest Moon is the full moon closest to the fall equinox, and this year it lands on Saturday — full at 12:49 in the afternoon, up over the east bank at 7:18 in the evening, eight minutes before sunset. Ijams Park has built a paddle around it: two hours on the Tennessee River from the River Landing on Island Home Pike, leaving at 7:30, with naturalists pointing out what lives along the bank after dark and what is overhead."
+        },
+        {
+          "type": "subhead",
+          "text": "What the timing gives you"
+        },
+        {
+          "type": "paragraph",
+          "text": "Launching at 7:30 puts the group on the water in the last of the daylight, with the moon already up and the sky still bright enough to see the shore. By the turnaround it is full dark with a full moon, which is the whole point. The forecast is on the paddle's side: Saturday is sunny and 77, partly cloudy overnight, and the low is about 51, so the second hour is cool. Wear a layer you can paddle in."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "Forty-five dollars covers the kayak, the life vest and a headlamp. You may bring your own vest, paddle or headlamp, but the park asks that you not bring your own boat. Everyone signs the adventure release once a year if they haven't already. These paddles fill; register ahead rather than driving down."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Full Moon Paddle: Celebrating the Harvest Moon",
+          "url": "https://www.ijams.org/event-details/full-moon-paddle-celebrating-the-harvest-moon"
+        },
+        {
+          "label": "U.S. Naval Observatory — sun and moon data for Sep 26, 2026",
+          "url": "https://aa.usno.navy.mil/data/RS_OneDay"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-26T19:30:00-04:00",
+        "endDate": "2026-09-26T21:30:00-04:00",
+        "locationName": "Ijams River Landing",
+        "locationAddress": "3507 Island Home Pike, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Harvest Moon paddle from Ijams Park",
+          "Saturday, seven thirty, boat included"
+        ]
+      }
+    },
+    {
+      "id": "cyanotype-day",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/cyanotype_day.jpg",
+      "imageCaption": "Leaves, cloth, sun, water",
+      "title": "World Cyanotype Day puts a free sun-print workshop on the Ijams Park plaza",
+      "deck": "The Big Camera brings the oldest blue photographic process to the plaza for three hours Saturday. You lay a leaf on treated cloth, the sun does the exposure, and you take the print home.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Sep 26 · noon – 3 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The plaza at Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "Free · reserve a $0 ticket so they know you're coming"
+        },
+        {
+          "label": "Who",
+          "value": "The Big Camera, with Ijams Park"
+        },
+        {
+          "label": "The process",
+          "value": "Objects or leaves on light-sensitive fabric, exposed to the sun, rinsed in water"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny, high near 77 — which is the one ingredient they can't supply"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "World Cyanotype Day falls on the last Saturday of September every year, and this year The Big Camera is marking it on the plaza at Ijams Park with a free community workshop from noon to three. Cyanotype is a printing process from the earliest days of photography: you lay an object — a fern, a feather, a set of keys — on fabric treated with a light-sensitive solution, leave it in the sun, and rinse it in water. What comes out is a white silhouette on Prussian blue."
+        },
+        {
+          "type": "subhead",
+          "text": "Why it belongs in a park"
+        },
+        {
+          "type": "paragraph",
+          "text": "The process was popularized by Anna Atkins, who in the 1840s used it to make what is considered the first book illustrated with photographs — a catalog of British algae, pressed straight onto the treated sheets. Doing it at Ijams Park means the subjects are on the ground around you. Bring nothing; pick up a leaf on the walk in from the lot. Saturday's forecast is full sun, which is the whole method."
+        },
+        {
+          "type": "paragraph",
+          "text": "It is free, but the park asks you to reserve a ticket at no charge so they can plan the fabric. It runs alongside the stained-glass workshop and the possum meet-and-greet, so a Saturday at the park can be built entirely out of things you make or meet."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Creative Series: The Big Camera, World Cyanotype Day 2026",
+          "url": "https://www.ijams.org/event-details/creative-series-the-big-camera-world-cyanotype-day-2026"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-26T12:00:00-04:00",
+        "endDate": "2026-09-26T15:00:00-04:00",
+        "locationName": "Ijams Nature Center plaza",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Free sun prints at Ijams Park",
+          "Saturday, noon to three"
+        ]
+      }
+    },
+    {
+      "id": "puckers-texas",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/puckers_noon.jpg",
+      "imageCaption": "Pancakes at eleven, kickoff at noon",
+      "title": "Brunch at Puckers runs straight into a noon kickoff",
+      "deck": "The sports grill on Mimosa Avenue serves brunch nine to two both weekend days with every screen on. Saturday that means Texas at Tennessee lands in the last two hours of it.",
+      "facts": [
+        {
+          "label": "Brunch",
+          "value": "Sat and Sun · 9 AM – 2 PM · every screen on"
+        },
+        {
+          "label": "Where",
+          "value": "Puckers Sports Grill · 115 Mimosa Ave"
+        },
+        {
+          "label": "Saturday",
+          "value": "No. 1 Texas at Tennessee · noon · ABC · Checker Neyland"
+        },
+        {
+          "label": "Sunday",
+          "value": "Titans at the Giants · 1 PM"
+        },
+        {
+          "label": "Parking",
+          "value": "Garage entrance behind the building"
+        },
+        {
+          "label": "Pucker Hour",
+          "value": "Mon–Fri 5–6 PM · $1 Pucker Lager, $3 wells and prosecco"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Puckers keeps weekend brunch on the menu from nine to two on Saturday and Sunday, and this Saturday the clock does something useful: Tennessee and No. 1 Texas kick off at noon at Neyland, on ABC, so the second half of brunch is the first half of the game. It is the first time the two schools have met on either campus, and ESPN's College GameDay is setting up on the hill in the morning. If you are not among the hundred thousand walking to the stadium, a table on Mimosa Avenue with a plate in front of you is a reasonable alternative."
+        },
+        {
+          "type": "subhead",
+          "text": "How the morning works"
+        },
+        {
+          "type": "paragraph",
+          "text": "Get there for the nine o'clock open or soon after; a noon kickoff for a game this size fills a sports bar early, and the brunch dishes carried over from the room's Mimosas days are the reason people come. Parking is the garage behind the building. Sunday is quieter — the Titans are away at the Giants at one — and brunch runs the same hours."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Puckers Knoxville — brunch hours and Pucker Hour (official feed)",
+          "url": "https://www.instagram.com/puckersknoxville/"
+        },
+        {
+          "label": "University of Tennessee Athletics — 2026 football schedule",
+          "url": "https://utsports.com/sports/football/schedule/2026"
+        },
+        {
+          "label": "CBS Sports — Tennessee Titans 2026 schedule",
+          "url": "https://www.cbssports.com/nfl/teams/TEN/tennessee-titans/schedule/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-26T09:00:00-04:00",
+        "endDate": "2026-09-26T14:00:00-04:00",
+        "locationName": "Puckers Sports Grill",
+        "locationAddress": "115 Mimosa Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "puckers"
+        ],
+        "igBanner": [
+          "Brunch and every screen at Puckers",
+          "Saturday, nine to two, noon kickoff"
+        ],
+        "standing": true,
+        "standingKey": "puckers-brunch"
+      }
+    },
+    {
+      "id": "kerns-tailgate",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/kerns_tailgate.jpg",
+      "imageCaption": "A third of the Lawn Patio, with your name on the sign",
+      "title": "Kern's rents out sections of its lawn as private tailgates on Vols Saturdays",
+      "deck": "Three hundred dollars gets a group of twenty its own third of the Lawn Patio with a television, two couches and a canopy. For the Texas game, that is the cheapest reserved seat in town.",
+      "facts": [
+        {
+          "label": "The Ultimate Tailgate",
+          "value": "$300 per game · a private third of the Lawn Patio · up to 20 guests"
+        },
+        {
+          "label": "Included",
+          "value": "1 TV · 2 couches · 2 cocktail tables · 1 canopy · your own signage and stanchions"
+        },
+        {
+          "label": "The Fan Zone",
+          "value": "$2,500 · the UpTop rooftop patio · up to 75 guests"
+        },
+        {
+          "label": "Add-ons",
+          "value": "Catering and drink packages; tickets redeem at Peter's Market Bar or the UpTop bar"
+        },
+        {
+          "label": "Where",
+          "value": "Kern's · 2201 Kern's Rising Way · Sat 8 AM – 11 PM"
+        },
+        {
+          "label": "Only for",
+          "value": "University of Tennessee football games"
+        },
+        {
+          "label": "Saturday's game",
+          "value": "Texas at Tennessee · noon · ABC"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Kern's has put a price on a thing people have been improvising on its lawn all season: a private tailgate. The Ultimate Tailgate package is $300 a game for one-third of the Lawn Patio — a television, two couches, two cocktail tables, a canopy and a sign with your group's name on it, roped off for up to twenty people. It is offered only for Tennessee football games, and Saturday's is Texas at noon."
+        },
+        {
+          "type": "subhead",
+          "text": "The rooftop version"
+        },
+        {
+          "type": "paragraph",
+          "text": "The bigger option is the Fan Zone: the UpTop rooftop patio for up to 75, at $2,500, with tables, stanchions and signage. Both packages take catering and beverage add-ons, and drink tickets work at Peter's Market Bar downstairs or the UpTop bar. Everything runs through an inquiry form on the Kern's site rather than a checkout, so for this Saturday the sensible move is to ask today."
+        },
+        {
+          "type": "paragraph",
+          "text": "For everyone else, the food hall is open eight in the morning to eleven at night on Saturday, and the game will be on whatever screens the bars have. The lawn sections are the only part that comes with a reservation."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Kern's — Private Vols Football Watch Parties",
+          "url": "https://kernsbakery.com/football-watch-parties/"
+        },
+        {
+          "label": "Kern's — hours",
+          "url": "https://kernsbakery.com/public-events/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-26T08:00:00-04:00",
+        "endDate": "2026-09-26T23:00:00-04:00",
+        "locationName": "Kern's",
+        "locationAddress": "2201 Kern's Rising Way, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "kerns"
+        ],
+        "igBanner": [
+          "Private lawn tailgates at Kern's",
+          "Saturday, three hundred dollars for twenty"
+        ]
+      }
+    },
+    {
+      "id": "playing-possum",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/possum_meet.jpg",
+      "imageCaption": "The newest ambassador, Saturday at three",
+      "title": "Ijams Park introduces its newest animal ambassador, an opossum, on Saturday",
+      "deck": "An hour with the park's new opossum and the naturalist who works with it, then a lesson in nature journaling and a drawing to take home. Ten dollars, ages five and up, parking free.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Sep 26 · 3–4 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$10 · registration required"
+        },
+        {
+          "label": "Ages",
+          "value": "5 and up"
+        },
+        {
+          "label": "Parking",
+          "value": "Free for program participants · arrive 5–10 minutes early"
+        },
+        {
+          "label": "Indoors or out",
+          "value": "Depends on the weather; Saturday is sunny and about 77"
+        },
+        {
+          "label": "Next one",
+          "value": "Wed Oct 21 · 6 PM"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Ijams Park has a new animal ambassador, and it is an opossum. Saturday at three is the first public meet-and-greet: an hour that starts with the animal and the naturalist who handles it, covers what the park calls the misunderstood marsupial's adaptations — the prehensile tail, the playing dead, the tick-eating — and ends with a short introduction to nature journaling and an opossum drawing every participant makes and takes home."
+        },
+        {
+          "type": "subhead",
+          "text": "Who it's for"
+        },
+        {
+          "type": "paragraph",
+          "text": "The program is built for ages five and up, and it is mostly sitting, which makes it the easiest thing on the park's Saturday for the youngest visitors — storytime at the Playscape in the morning, the sun prints on the plaza at noon, the opossum at three. Ten dollars, register ahead, and parking is free for anyone signed up. The next one is a Wednesday evening in late October if Saturday fills."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Playing 'Possum: Animal Ambassador Meet & Greet",
+          "url": "https://www.ijams.org/event-details/playing-possum-animal-ambassador-meet-greet-2026-09-26-15-00"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-26T15:00:00-04:00",
+        "endDate": "2026-09-26T16:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Meet the new opossum at Ijams Park",
+          "Saturday at three, ten dollars"
+        ]
+      }
+    },
+    {
+      "id": "storytime-space",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/storytime_moon.jpg",
+      "imageCaption": "A book about the moon, on the day of the full one",
+      "title": "Saturday storytime at the Nature Playscape reads a book about the moon on Harvest Moon day",
+      "deck": "The free Saturday storytime out by Mead's Quarry goes to space this week, with a picture book about the moon read under the trees a few hours before the real one comes up full.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Sep 26 · 10 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Playscape, Grayson Subaru Preserve · 3518 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "Free · parking $5 a car, free for members"
+        },
+        {
+          "label": "The book",
+          "value": "\"Moon! Earth's Best Friend\""
+        },
+        {
+          "label": "The moon",
+          "value": "Full at 12:49 PM that day · rises 7:18 PM"
+        },
+        {
+          "label": "Bring",
+          "value": "A blanket or chair, a snack, shoes for the woods"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Every Saturday from ten to noon, someone reads a book out loud in the woods at the Nature Playscape by Mead's Quarry, and it costs nothing. This week's theme is space, the book is \"Moon! Earth's Best Friend,\" and the scheduling is either luck or somebody at the park paying attention: the Harvest Moon turns full at 12:49 that afternoon and rises over the river at 7:18 that night. A kid who hears the book in the morning can see the subject after dinner."
+        },
+        {
+          "type": "paragraph",
+          "text": "The format is loose. Some weeks there is a hands-on activity; some weeks the reading is the activity and the rest is roaming the Playscape. Bring a blanket or a chair and a snack. Parking at the quarry lot is $5 a car unless you are a member, and the walk in is short. Saturday is sunny and in the low 70s by noon, which after the month we have had counts as news."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Storytime at Ijams Nature Playscape: Space!",
+          "url": "https://www.ijams.org/event-details/storytime-at-ijams-nature-playscape-space-2026-09-26-10-00"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-26T10:00:00-04:00",
+        "endDate": "2026-09-26T12:00:00-04:00",
+        "locationName": "Ijams Nature Playscape",
+        "locationAddress": "3518 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Free storytime at Ijams Park, about the moon",
+          "Saturday, ten to noon"
+        ],
+        "standing": true,
+        "standingKey": "playscape-storytime"
+      }
+    },
+    {
+      "id": "bats-after-dark",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/bats_blacklight.jpg",
+      "imageCaption": "The blacklight station, Thursday at eight",
+      "title": "The last bat walk of the season goes out from Mead's Quarry on Thursday night",
+      "deck": "Ijams After Dark ends its run this week: ninety minutes at the quarry with a naturalist calling bat species as they pass overhead, and blacklight stations for everything else the night brings in.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Sep 24 · 8–9:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Mead's Quarry · 3526 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$15 · registration required"
+        },
+        {
+          "label": "Ages",
+          "value": "10 and up"
+        },
+        {
+          "label": "The walk",
+          "value": "Up to 1.5 miles on rock, root and gravel, with stops"
+        },
+        {
+          "label": "Weather",
+          "value": "Showers likely Thursday (70%), tapering to a 50% chance before 8 PM, then partly cloudy"
+        },
+        {
+          "label": "Last one",
+          "value": "This is the final date of the season"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Ijams After Dark has been walking people out to Mead's Quarry after sunset all summer to watch bats work the lake, and Thursday is the last date on the calendar. A naturalist teaches you to tell species apart by how they fly, and the park sets up blacklight stations along the way so the insects and everything else drawn to ultraviolet turn up too. It runs eight to nine-thirty, ages ten and up, fifteen dollars."
+        },
+        {
+          "type": "subhead",
+          "text": "The weather is the question"
+        },
+        {
+          "type": "paragraph",
+          "text": "Thursday is the one wet day of the week. The forecast has rain showers likely through the afternoon, a fifty percent chance before eight, and partly cloudy after — which is to say the walk is on the right side of the front, barely. Check the event page before you leave the house, wear shoes for wet rock, and bring a headlamp with a red setting if you own one. The upside is what a front does to the air: Thursday night's low is 59, the first night under 60 since spring."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Ijams After Dark: All About Bats",
+          "url": "https://www.ijams.org/event-details/ijams-after-dark-all-about-bats-2026-09-24-20-00"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-24T20:00:00-04:00",
+        "endDate": "2026-09-24T21:30:00-04:00",
+        "locationName": "Mead's Quarry, Ijams Nature Center",
+        "locationAddress": "3526 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Last bat walk of the year at Ijams Park",
+          "Thursday at eight, fifteen dollars"
+        ]
+      }
+    },
+    {
+      "id": "urban-wilderness-cool",
+      "label": "Urban Wilderness",
+      "labelColor": "ink",
+      "days": [
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/uw_cool_weekend.jpg",
+      "imageCaption": "Baker Creek, Saturday morning, 60 degrees",
+      "title": "The Urban Wilderness gets its first highs in the 70s since June",
+      "deck": "Thursday's rain breaks the heat. Friday through Sunday is sunny, 77 to 78, with nights in the low 50s, which puts sixty miles of trail back in play at any hour of the day.",
+      "facts": [
+        {
+          "label": "Friday",
+          "value": "Mostly sunny · high 77 · low 52"
+        },
+        {
+          "label": "Saturday",
+          "value": "Sunny · high 77 · low 51"
+        },
+        {
+          "label": "Sunday",
+          "value": "Mostly sunny · high 78 · low 52"
+        },
+        {
+          "label": "Last time",
+          "value": "The airport last recorded a high in the 70s on June 23; every day since has been 80 or hotter"
+        },
+        {
+          "label": "Daylight",
+          "value": "Sunrise 7:27 · sunset 7:26 on Saturday"
+        },
+        {
+          "label": "The trails",
+          "value": "1,000+ forested acres · 60+ miles of trail and greenway · the 30-mile South Loop"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The last day Knoxville's airport recorded a high in the 70s was June 23. Since then, every single day has topped 80, most of them 90 or better, and the last three weeks have run 86 to 98. That ends Thursday, when a front comes through with rain, and what follows is the weekend South Knoxville has been waiting on since spring: Friday 77 and mostly sunny, Saturday 77 and sunny, Sunday 78, with nights in the low 50s."
+        },
+        {
+          "type": "subhead",
+          "text": "What that does to the trails"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Urban Wilderness is more than a thousand forested acres along the south bank with over sixty miles of trail and greenway, anchored by Ijams Park, Baker Creek Preserve, the River Bluff Natural Area and the Forks of the River. For three months the only usable hours have been the first two after sunrise. This weekend the whole day is usable — a nine o'clock start at Baker Creek in the low 60s, or a four o'clock loop with the sun still up until 7:26."
+        },
+        {
+          "type": "paragraph",
+          "text": "Two notes for the first cool weekend. The trails will be busy, especially the Baker Creek flow trails and the Mead's Quarry loops, and the Saturday noon kickoff empties them for three hours in the middle of the day if you want them to yourself. And Thursday's rain means Friday morning is the muddy window; by Saturday the surface will have set up. Every trailhead in the district is free."
+        }
+      ],
+      "sources": [
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        },
+        {
+          "label": "National Weather Service — preliminary climate data, Knoxville McGhee Tyson (F-6)",
+          "url": "https://forecast.weather.gov/product.php?site=MRX&issuedby=TYS&product=CF6&format=CI&version=1"
+        },
+        {
+          "label": "Legacy Parks Foundation — Knoxville's Urban Wilderness",
+          "url": "https://legacyparks.org/about-us/current-projects/knoxvilles-urban-wilderness/"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "legacy-parks"
+        ],
+        "igBanner": [
+          "The Urban Wilderness gets a 77-degree weekend",
+          "Friday through Sunday, sunny"
+        ],
+        "igBannerSkipCheck": true
+      }
+    },
+    {
+      "id": "renew-in-nature",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/sound_bath_forest.jpg",
+      "imageCaption": "Mat, bowls, then the woods",
+      "title": "Renew in Nature strings yoga, a sound bath and forest bathing into one Sunday morning",
+      "deck": "Two hours at the Ijams Park homesite that move from an outdoor flow into a sound bath and finish with a guided walk in the trees. Forty dollars, and the weather finally matches the idea.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Sep 27 · 10 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Homesite · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$40 · pre-registration required"
+        },
+        {
+          "label": "Bring",
+          "value": "A yoga mat · optional: a journal for the forest walk, a pillow or eye covering for the sound bath"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly sunny, about 65 at ten, 78 by early afternoon"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Renew in Nature is a two-hour Sunday morning at the Ijams Park homesite built in three movements: an outdoor yoga flow to start, a sound bath in the middle, and a forest bathing session — a slow, guided, mostly silent walk in the trees — to close. The park's pitch is the stacked benefit of all three, and the pitch is easier to buy on a 65-degree morning than on the 90-degree ones it has been offering yoga in all summer."
+        },
+        {
+          "type": "paragraph",
+          "text": "Forty dollars a person, pre-registration required. Bring a mat; a journal for the walk and a pillow or eye mask for the sound bath are optional. It ends at noon, which is exactly when the DJs start at Mead's Quarry a mile down the road, so Sunday at the park can go from silence to a dance floor without leaving the property."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Renew in Nature: A Meditative Workshop",
+          "url": "https://www.ijams.org/event-details/special-event-renew-in-nature-a-meditative-workshop-september-27"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-27T10:00:00-04:00",
+        "endDate": "2026-09-27T12:00:00-04:00",
+        "locationName": "Ijams Homesite, Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Yoga, sound bath and forest bathing at Ijams Park",
+          "Sunday, ten to noon"
+        ]
+      }
+    },
+    {
+      "id": "fungi-workshop",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/fungi_fall.jpg",
+      "imageCaption": "After the rain, the woods produce",
+      "title": "The beginner mushroom workshop goes out Sunday afternoon, three days after a soaking",
+      "deck": "Ninety minutes with an Ijams Park naturalist on fungi and lichen anatomy and how to tell them apart. Thursday's rain followed by three dry days is close to ideal timing for what comes up.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Sep 27 · 3–4:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$15 · registration required"
+        },
+        {
+          "label": "Ages",
+          "value": "14 and up"
+        },
+        {
+          "label": "The walk",
+          "value": "Up to 1.5 miles on uneven ground, with stops"
+        },
+        {
+          "label": "Parking",
+          "value": "Free for participants"
+        },
+        {
+          "label": "Next ones",
+          "value": "Sun Oct 18 at 1 PM · Sat Oct 31 at 10 AM"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The fall run of the beginner fungi workshop continues Sunday at three: an Ijams Park naturalist, a mile and a half of trail, and the basics of what a mushroom actually is — the parts, the names, how a fungus differs from a lichen, and what each is doing for the forest. No prior knowledge assumed, ages fourteen and up, fifteen dollars."
+        },
+        {
+          "type": "paragraph",
+          "text": "The timing this week is good. Thursday brings the first real rain in a while, then three dry days in the 70s, which is roughly the recipe for a fall flush. Wear shoes you can take off the path, bring something to write on, and register ahead; parking is free for anyone signed up. If Sunday fills, the next dates are October 18 and Halloween morning."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Fall Fungi ID: Beginner Workshop",
+          "url": "https://www.ijams.org/event-details/fall-fungi-id-beginner-workshop-2026-09-27-15-00"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-27T15:00:00-04:00",
+        "endDate": "2026-09-27T16:30:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Beginner mushroom workshop at Ijams Park",
+          "Sunday at three, fifteen dollars"
+        ]
+      }
+    },
+    {
+      "id": "wildflower-walk",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Thu",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/wildflower_walk.jpg",
+      "imageCaption": "Ironweed and goldenrod, late September",
+      "title": "A fall wildflower walk goes out twice this week, Thursday evening and Sunday afternoon",
+      "deck": "Spring gets the reputation, but late September is ironweed and goldenrod season at Ijams Park, and a naturalist walks a mile and a half through it on two different days.",
+      "facts": [
+        {
+          "label": "Thursday",
+          "value": "Sep 24 · 5:30–7 PM"
+        },
+        {
+          "label": "Sunday",
+          "value": "Sep 27 · 3–4:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$15 · registration required"
+        },
+        {
+          "label": "Ages",
+          "value": "14 and up"
+        },
+        {
+          "label": "The walk",
+          "value": "Up to 1.5 miles on rock, root and gravel, with stops"
+        },
+        {
+          "label": "Weather",
+          "value": "Thursday: showers likely, 50% after 5 · Sunday: mostly sunny, 78"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The park's fall wildflower walk runs twice this week — Thursday at 5:30 in the evening and Sunday at three in the afternoon — and the pitch is that the late-September woods are as much a flower show as April, just in purple and yellow instead of white. An Ijams Park naturalist leads a mile and a half through the ironweed and goldenrod and explains what each is doing for the pollinators that are still out."
+        },
+        {
+          "type": "paragraph",
+          "text": "Of the two dates, Sunday is the sure one: mostly sunny and 78. Thursday evening has a fifty percent chance of showers, so if you book that one, check the event page in the afternoon. Fifteen dollars, ages fourteen and up, parking free for participants. The same walk runs again October 3 and October 17."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Fall Wildflower Walk (Thu Sep 24)",
+          "url": "https://www.ijams.org/event-details/fall-wildflower-walk-2026-09-24-17-30"
+        },
+        {
+          "label": "Ijams Park — Fall Wildflower Walk (Sun Sep 27)",
+          "url": "https://www.ijams.org/event-details/fall-wildflower-walk-2026-09-27-15-00"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-24T17:30:00-04:00",
+        "endDate": "2026-09-24T19:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Fall wildflower walk at Ijams Park",
+          "Thursday at five thirty, Sunday at three"
+        ]
+      }
+    },
+    {
+      "id": "stained-glass",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/stained_glass.jpg",
+      "imageCaption": "Copper foil, solder, two hours",
+      "title": "A two-hour stained-glass workshop sets up at Ijams Park on Saturday",
+      "deck": "Visualize Art Studio brings its mobile glass shop to the park: a pre-cut kit, a soldering iron, and a finished hummingbird, boot or lotus to carry out. Eighty dollars, everything included.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Sep 26 · 11 AM – 1 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$80 · all supplies and instruction included"
+        },
+        {
+          "label": "Designs",
+          "value": "Cowboy boot, hummingbird or lotus flower, in your choice of colors"
+        },
+        {
+          "label": "Ages",
+          "value": "14 and up · under 18 with an adult"
+        },
+        {
+          "label": "Wear",
+          "value": "Cotton clothes, closed-toe shoes, long hair tied back"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Visualize Art Studio runs a two-hour version of a stained-glass class out of a mobile workshop, and Saturday it parks at Ijams Park. You start with a kit of glass already cut and ground into a design — a cowboy boot, a hummingbird or a lotus — pick the colors, and learn the two skills that actually make a panel: wrapping each piece in copper foil and soldering the seams. Two hours later you leave with a finished piece."
+        },
+        {
+          "type": "paragraph",
+          "text": "Eighty dollars covers the kit, the tools and the instructor. Fourteen and up, with anyone under eighteen accompanied by an adult. Wear cotton, closed shoes, and tie long hair back — there is a hot iron involved. It runs eleven to one, which means you can finish, walk out to the plaza, and be at the free cyanotype table by one-thirty."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Creative Series: September Stained Glass Workshop",
+          "url": "https://www.ijams.org/event-details/creative-series-september-stained-glass-workshop-september-26"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-26T11:00:00-04:00",
+        "endDate": "2026-09-26T13:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Stained-glass workshop at Ijams Park",
+          "Saturday, eleven to one"
+        ]
+      }
+    },
+    {
+      "id": "hooping",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/hooping.jpg",
+      "imageCaption": "The Miller Building, Thursdays at six",
+      "title": "A weekly hula-hooping class spins up in the Miller Building on Thursday",
+      "deck": "Circles with Dizzy is an adult class that breaks hoop tricks down to their parts and builds back up at whatever pace the room can manage. Hoops to borrow, no experience required.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Sep 24 · 6–7 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Miller Education Building, Ijams Park · Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$25 per workshop"
+        },
+        {
+          "label": "Who",
+          "value": "Adults · beginners welcome"
+        },
+        {
+          "label": "Bring",
+          "value": "Your own hoop if you have one; a few are there to share"
+        },
+        {
+          "label": "Indoors",
+          "value": "Yes — Thursday's rain doesn't matter here"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Dizzy teaches hooping on Thursday evenings in the Miller Education Building at Ijams Park, and the method is the one good movement teachers use: take a trick, break it into its parts, drill the parts, put it back together. Classes go at the pace of whoever shows up. It is an adult class, twenty-five dollars a session, and there are hoops to borrow if you don't own one."
+        },
+        {
+          "type": "paragraph",
+          "text": "Thursday is the wet day of the week, and this is the one thing on the park's Thursday that is indoors. Six to seven; the Miller Building is on Island Home Avenue, and the event page has directions."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Creative Series: Circles with Dizzy, Weekly Hooping Workshop",
+          "url": "https://www.ijams.org/event-details/creative-series-circles-with-dizzy-weekly-hooping-workshop-september-24"
+        }
+      ],
+      "event": {
+        "startDate": "2026-09-24T18:00:00-04:00",
+        "endDate": "2026-09-24T19:00:00-04:00",
+        "locationName": "Miller Education Building, Ijams Nature Center",
+        "locationAddress": "Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Hooping class at Ijams Park",
+          "Thursday at six, twenty-five dollars"
+        ]
+      }
+    },
+    {
+      "id": "specials-board",
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/specials_chalk_texas.jpg",
+      "imageCaption": "The week, in chalk",
+      "title": "The specials board: Earl's game-day column covers lunch this Saturday",
+      "deck": "Down at the water on Waterfront Drive, Earl's runs a different deal every day, and Saturday's Vols board opens at eleven — an hour before a noon kickoff, for once.",
+      "facts": [
+        {
+          "label": "Thu",
+          "value": "$10 Patrón mango ritas · 11 AM – 10 PM"
+        },
+        {
+          "label": "Fri",
+          "value": "$9 spicy pineapple ritas · 11 AM – 10 PM"
+        },
+        {
+          "label": "Sat",
+          "value": "$8 house margaritas · 11 AM – 10 PM"
+        },
+        {
+          "label": "Sat game day",
+          "value": "$2 off drafts and pizza · $6 Orange Bliss · 6-for-5 beer buckets · game at noon on ABC"
+        },
+        {
+          "label": "Sun",
+          "value": "$7 mimosas and Bloody Marys · 11 AM – 10 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Earl's · 610 Waterfront Dr · open 11 AM – 10 PM daily"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Earl's, down on Waterfront Drive by Suttree Landing, runs a different deal every day of the week from open to close, and the week's board is above. The Saturday game-day column is the same one that has run all season — two dollars off drafts and pizza, six-dollar Orange Bliss, beer buckets six for the price of five — but this is the first home game with a noon kickoff, so for once the board opens at eleven with an hour to spare and covers lunch instead of dinner."
+        },
+        {
+          "type": "paragraph",
+          "text": "The river-facing tables are the ones to want on a 77-degree Saturday. Sunday is mimosas and Bloody Marys, and the Titans are away at one if the screens are on."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Earl's Knoxville — specials",
+          "url": "https://earlsknox.com/specials/"
+        },
+        {
+          "label": "University of Tennessee Athletics — 2026 football schedule",
+          "url": "https://utsports.com/sports/football/schedule/2026"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "earls"
+        ],
+        "igBanner": [
+          "A different deal every day at Earl's",
+          "Thursday through Sunday, eleven to ten"
+        ],
+        "standing": true,
+        "standingKey": "earls-specials-board"
+      }
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen — a free all-day DJ jam at Mead's Quarry Sunday, a paddle under the Harvest Moon Saturday night, free sun prints on the plaza, brunch through a noon kickoff at Puckers, and the first weekend in the 70s since June.",
+      "duration": "04:21",
+      "src": "/audio/2026-09-23.mp3"
+    },
+    "calendar": [
+      {
+        "month": "SEP",
+        "day": "24",
+        "title": "Fall wildflower walk",
+        "meta": "5:30–7 PM · $15 · ages 14+ · Ijams Park",
+        "starred": false,
+        "href": "#wildflower-walk"
+      },
+      {
+        "month": "SEP",
+        "day": "24",
+        "title": "Circles with Dizzy hooping class",
+        "meta": "6–7 PM · $25 · adults · Miller Building, Ijams Park",
+        "starred": false,
+        "href": "#hooping"
+      },
+      {
+        "month": "SEP",
+        "day": "24",
+        "title": "IJAMS AFTER DARK: ALL ABOUT BATS — last of the season",
+        "meta": "8–9:30 PM · $15 · ages 10+ · Mead's Quarry",
+        "starred": true,
+        "href": "#bats-after-dark"
+      },
+      {
+        "month": "SEP",
+        "day": "24",
+        "title": "Patrón mango ritas at Earl's",
+        "meta": "$10 · 11 AM – 10 PM · 610 Waterfront Dr",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "SEP",
+        "day": "25",
+        "title": "First day in the 70s since June — the Urban Wilderness",
+        "meta": "Mostly sunny · high 77 · low 52 · every trailhead free",
+        "starred": false,
+        "href": "#urban-wilderness-cool"
+      },
+      {
+        "month": "SEP",
+        "day": "26",
+        "title": "Brunch and every screen at Puckers",
+        "meta": "9 AM – 2 PM · Texas at Tennessee, noon on ABC · 115 Mimosa Ave",
+        "starred": true,
+        "href": "#puckers-texas"
+      },
+      {
+        "month": "SEP",
+        "day": "26",
+        "title": "Storytime at the Nature Playscape: Space!",
+        "meta": "10 AM – noon · free · Grayson Subaru Preserve",
+        "starred": false,
+        "href": "#storytime-space"
+      },
+      {
+        "month": "SEP",
+        "day": "26",
+        "title": "Stained-glass workshop with Visualize Art Studio",
+        "meta": "11 AM – 1 PM · $80 · ages 14+ · Ijams Park",
+        "starred": false,
+        "href": "#stained-glass"
+      },
+      {
+        "month": "SEP",
+        "day": "26",
+        "title": "Game-day board at Earl's",
+        "meta": "Vols kick off at noon on ABC · $2 off drafts and pizza · 610 Waterfront Dr",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "SEP",
+        "day": "26",
+        "title": "Private lawn tailgates at Kern's",
+        "meta": "$300 for up to 20 · TV, couches, canopy · inquire ahead · 2201 Kern's Rising Way",
+        "starred": false,
+        "href": "#kerns-tailgate"
+      },
+      {
+        "month": "SEP",
+        "day": "26",
+        "title": "WORLD CYANOTYPE DAY ON THE IJAMS PARK PLAZA",
+        "meta": "Noon – 3 PM · free · reserve a $0 ticket",
+        "starred": true,
+        "href": "#cyanotype-day"
+      },
+      {
+        "month": "SEP",
+        "day": "26",
+        "title": "Playing 'Possum: animal ambassador meet & greet",
+        "meta": "3–4 PM · $10 · ages 5+ · Ijams Park",
+        "starred": false,
+        "href": "#playing-possum"
+      },
+      {
+        "month": "SEP",
+        "day": "26",
+        "title": "HARVEST MOON PADDLE FROM IJAMS PARK",
+        "meta": "7:30–9:30 PM · $45 · boat and headlamp included · 3507 Island Home Pike",
+        "starred": true,
+        "href": "#harvest-moon-paddle"
+      },
+      {
+        "month": "SEP",
+        "day": "27",
+        "title": "Renew in Nature: yoga, sound bath, forest bathing",
+        "meta": "10 AM – noon · $40 · bring a mat · Ijams Homesite",
+        "starred": false,
+        "href": "#renew-in-nature"
+      },
+      {
+        "month": "SEP",
+        "day": "27",
+        "title": "IJAMS END OF SUMMER JAM WITH CHANNEL 865",
+        "meta": "Noon – sundown · free · all ages · Mead's Quarry",
+        "starred": true,
+        "href": "#end-of-summer-jam"
+      },
+      {
+        "month": "SEP",
+        "day": "27",
+        "title": "Fall Fungi ID: beginner workshop",
+        "meta": "3–4:30 PM · $15 · ages 14+ · Ijams Park",
+        "starred": false,
+        "href": "#fungi-workshop"
+      },
+      {
+        "month": "SEP",
+        "day": "27",
+        "title": "Fall wildflower walk",
+        "meta": "3–4:30 PM · $15 · ages 14+ · Ijams Park",
+        "starred": false,
+        "href": "#wildflower-walk"
+      }
+    ]
+  }
+}
