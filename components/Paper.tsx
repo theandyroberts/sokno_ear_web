@@ -77,6 +77,53 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
     dayAttr: calendarRowDay(c.month, c.day, episode.date)?.toLowerCase() ?? "none",
   }));
 
+  // Day bars. The rows stamp a date, not a weekday, and once the list runs past a dozen
+  // a reader can't see where Thursday ends and Friday starts (Andy, 2026-09-22: "I had
+  // to look five times to figure out there's only one thing on Friday"). A dark bar
+  // heads each new date in both the sidebar and the day board.
+  const sameDate = (a?: { month: string; day: string }, b?: { month: string; day: string }) =>
+    !!a && !!b && a.month === b.month && a.day === b.day;
+  const dayBarLabel = (c: { month: string; day: string }) => {
+    const wd = calendarRowDay(c.month, c.day, episode.date);
+    return `${wd ? `${DAY_FULL[wd]} · ` : ""}${c.month} ${c.day}`;
+  };
+  const renderCalendar = () =>
+    calendarRows.map((c, i) => {
+      const newDay = !sameDate(calendarRows[i - 1], c);
+      const lastOfDay = !sameDate(c, calendarRows[i + 1]);
+      return (
+        <React.Fragment key={i}>
+          {newDay && (
+            <div className="ear-daybar" data-days={c.dayAttr} style={{ background: "var(--ink-black)", color: "var(--paper-cream)", fontFamily: "var(--font-label)", fontSize: "var(--label-sm)", letterSpacing: "var(--tracking-label)", textTransform: "uppercase", padding: "5px 10px", borderRadius: "var(--radius-sm)", margin: i === 0 ? "6px 0 6px" : "14px 0 6px" }}>
+              {dayBarLabel(c)}
+            </div>
+          )}
+          <CalendarItem data-days={c.dayAttr} month={c.month} day={c.day} title={c.title} meta={c.meta} starred={c.starred} href={resolveHref(c.href)} divider={!lastOfDay} />
+        </React.Fragment>
+      );
+    });
+
+  // With a long calendar the sidebar runs a screen or two past the feature and the main
+  // column sits empty beside it (Andy, 2026-09-22). Lift the first story or two up into
+  // the feature band so the column stays full; the rest run below the scanner as before.
+  // Story permalinks never lift — their siblings are teasers, not articles.
+  const liftCount = storyView ? 0 : sidebar.calendar.length >= 14 ? 2 : sidebar.calendar.length >= 9 ? 1 : 0;
+  const lifted = stories.slice(0, liftCount);
+  const rest = stories.slice(liftCount);
+  const renderStory = (s: Episode["stories"][number], withDivider: boolean) => (
+    <div key={s.id} data-days={daysAttr(s.days)}>
+      {withDivider && <Divider ornament="star" />}
+      <section id={s.id} style={{ padding: "24px 0" }}>
+        <SectionHeader>{s.label}</SectionHeader>
+        <Article id={s.id} label={s.label} labelColor={s.labelColor} days={s.days} image={s.image} imageCaption={s.imageCaption} title={s.title} deck={s.deck} facts={s.facts} layout={s.layout}>
+          <ArticleBody blocks={s.body} />
+          <ArticleSources sources={s.sources} />
+          {permalinks && <ShareStory slug={episode.slug} id={s.id} title={s.title} />}
+        </Article>
+      </section>
+    </div>
+  );
+
   const dayPills = (
     <div className="ear-daynav ear-daynav--board">
       <span className="ear-daynav-label">See</span>
@@ -114,9 +161,7 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
               </div>
               {dayPills}
               <div style={{ padding: "4px 16px 8px" }}>
-                {calendarRows.map((c, i) => (
-                  <CalendarItem key={i} data-days={c.dayAttr} month={c.month} day={c.day} title={c.title} meta={c.meta} starred={c.starred} href={resolveHref(c.href)} divider={i < calendarRows.length - 1} />
-                ))}
+                {renderCalendar()}
               </div>
             </section>
           </Page>
@@ -127,11 +172,14 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
       <div id="events" data-days={daysAttr(feature.days)} style={{ borderBottom: "var(--border-rule) double var(--ink-black)", padding: "28px 0 32px" }}>
         <Page>
           <div className="ear-twocol" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.9fr) minmax(0, 1fr)", gap: 36, alignItems: "start" }}>
-            <Article id={feature.id} label={feature.label} labelColor={feature.labelColor} days={feature.days} image={feature.image} imageCaption={feature.imageCaption} title={feature.title} deck={feature.deck} facts={feature.facts} layout={feature.layout}>
-              <ArticleBody blocks={feature.body} />
-              <ArticleSources sources={feature.sources} />
-              {permalinks && <ShareStory slug={episode.slug} id={feature.id} title={feature.title} />}
-            </Article>
+            <div className="ear-maincol">
+              <Article id={feature.id} label={feature.label} labelColor={feature.labelColor} days={feature.days} image={feature.image} imageCaption={feature.imageCaption} title={feature.title} deck={feature.deck} facts={feature.facts} layout={feature.layout}>
+                <ArticleBody blocks={feature.body} />
+                <ArticleSources sources={feature.sources} />
+                {permalinks && <ShareStory slug={episode.slug} id={feature.id} title={feature.title} />}
+              </Article>
+              {lifted.map((s) => renderStory(s, true))}
+            </div>
             <aside id="listen" style={{ display: "flex", flexDirection: "column", gap: 22, position: "sticky", top: 16 }}>
               <div className="ds-card-desktop">
                 <DirtySouthCard />
@@ -141,9 +189,7 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
               )}
               <div className="ear-soon-aside">
               <Well title="What's Happening Soon">
-                {sidebar.calendar.map((c, i) => (
-                  <CalendarItem key={i} month={c.month} day={c.day} title={c.title} meta={c.meta} starred={c.starred} href={resolveHref(c.href)} divider={i < sidebar.calendar.length - 1} />
-                ))}
+                {renderCalendar()}
                 {sidebar.calendar.some((c) => c.starred) && (
                   <div style={{ padding: "8px 4px 4px", fontFamily: "var(--font-label)", fontSize: "var(--label-sm)", letterSpacing: "var(--tracking-label)", textTransform: "uppercase", color: "var(--ink-faded)", textAlign: "right" }}>
                     <span aria-hidden style={{ color: "var(--rust)" }}>★</span> don&rsquo;t miss it
@@ -195,19 +241,7 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
         </div>
       ) : (
         <Page style={{ padding: "8px 24px" }}>
-          {stories.map((s, i) => (
-            <div key={s.id} data-days={daysAttr(s.days)}>
-              {i > 0 && <Divider ornament="star" />}
-              <section id={s.id} style={{ padding: "24px 0" }}>
-                <SectionHeader>{s.label}</SectionHeader>
-                <Article id={s.id} label={s.label} labelColor={s.labelColor} days={s.days} image={s.image} imageCaption={s.imageCaption} title={s.title} deck={s.deck} facts={s.facts} layout={s.layout}>
-                  <ArticleBody blocks={s.body} />
-                  <ArticleSources sources={s.sources} />
-                  {permalinks && <ShareStory slug={episode.slug} id={s.id} title={s.title} />}
-                </Article>
-              </section>
-            </div>
-          ))}
+          {rest.map((s, i) => renderStory(s, i > 0))}
         </Page>
       )}
 
