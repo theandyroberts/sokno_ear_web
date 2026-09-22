@@ -107,7 +107,10 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
   // column sits empty beside it (Andy, 2026-09-22). Lift the first story or two up into
   // the feature band so the column stays full; the rest run below the scanner as before.
   // Story permalinks never lift — their siblings are teasers, not articles.
-  const liftCount = storyView ? 0 : sidebar.calendar.length >= 14 ? 2 : sidebar.calendar.length >= 9 ? 1 : 0;
+  // Measured on No. 15 at 1360px: the feature runs ~1,550px, a lifted story ~1,200px, the
+  // sidebar's ad + player ~570px and each calendar row (with its day bar) ~120px. The
+  // feature alone covers ~14 rows; every ten rows past that is one more story.
+  const liftCount = storyView ? 0 : Math.max(0, Math.floor((sidebar.calendar.length - 5) / 10));
   const lifted = stories.slice(0, liftCount);
   const rest = stories.slice(liftCount);
   const renderStory = (s: Episode["stories"][number], withDivider: boolean) => (

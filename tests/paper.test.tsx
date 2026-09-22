@@ -60,7 +60,8 @@ describe("Paper — long calendars", () => {
   it("lifts the first stories into the feature band when the calendar runs long, and not otherwise", () => {
     const { container, unmount } = render(<Paper episode={long} />);
     const main = container.querySelector(".ear-maincol")!;
-    expect(main.querySelector(`#${episode.stories[0].id}`)).toBeTruthy();   // 16 rows → two lifted
+    expect(main.querySelector(`#${episode.stories[0].id}`)).toBeTruthy();   // 16 rows → one lifted
+    expect(main.querySelector(`#${episode.stories[1].id}`)).toBeNull();     // the second stays below
     expect(container.querySelectorAll(`section#${episode.stories[0].id}`).length).toBe(1); // and not repeated below
     unmount();
     const short = render(<Paper episode={episode} />);
