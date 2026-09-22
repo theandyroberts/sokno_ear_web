@@ -61,7 +61,7 @@ describe("Paper — long calendars", () => {
     const { container, unmount } = render(<Paper episode={long} />);
     const main = container.querySelector(".ear-maincol")!;
     expect(main.querySelector(`#${episode.stories[0].id}`)).toBeTruthy();   // 16 rows → one lifted
-    expect(main.querySelector(`#${episode.stories[1].id}`)).toBeNull();     // the second stays below
+    expect(main.querySelectorAll("section").length).toBe(1);               // and only one
     expect(container.querySelectorAll(`section#${episode.stories[0].id}`).length).toBe(1); // and not repeated below
     unmount();
     const short = render(<Paper episode={episode} />);
