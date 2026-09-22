@@ -56,8 +56,12 @@ describe("logo chip on the checklist", () => {
     const chips = container.querySelectorAll(".ds-logo");
     expect(chips.length).toBe(days.Thu.length); // one chip per row, always
     const srcs = [...container.querySelectorAll<HTMLImageElement>(".ds-logo img")].map((i) => i.src);
-    expect(srcs.some((s) => s.includes("/assets/venues/hi-wire.svg"))).toBe(true);
-    expect(srcs.some((s) => s.includes("/assets/venues/angry-dumplings.png"))).toBe(true);
+    // The list rotates week to week, so assert against whichever Thursday venues
+    // the registry actually has a logo for, rather than pinning a business that may
+    // have left the plan (Angry Dumplings had, and this test sat red for weeks).
+    const expected = days.Thu.map((i) => i.logo).filter((l): l is string => !!l);
+    expect(expected.length).toBeGreaterThan(0);
+    for (const logo of new Set(expected)) expect(srcs.some((s) => s.includes(logo))).toBe(true);
   });
   it("falls back to a wordmark chip for a venue with no logo, keeping the row shape", () => {
     const days = { ...nightlife.days, Thu: [{ ...nightlife.days.Thu[0], venue: "Nowhere Bar · 1 Main St", logo: null, brand: "Nowhere Bar" }] };

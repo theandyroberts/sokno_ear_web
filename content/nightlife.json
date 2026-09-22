@@ -1,18 +1,9 @@
 {
   "_flow": "Each day reads as the night's arc: happy hour → dinner → events/concerts/comedy/drink specials → the closing-time hang. Bars, restaurants, music venues only.",
-  "updated": "2026-09-16",
-  "weekend": "Sep 17–20",
+  "updated": "2026-09-22",
+  "weekend": "Sep 24–27",
   "days": {
     "Thu": [
-      {
-        "id": "thu-hiwire",
-        "time": "3:00 PM",
-        "venue": "Hi-Wire · 2020 Barber St",
-        "headline": "Doors at three, twenty taps",
-        "sub": "Open till 10 · rooftop deck · order food from Redbud downstairs · 2020 Barber St",
-        "cat": "drink",
-        "href": "https://hiwirebrewing.com/knoxville/"
-      },
       {
         "id": "thu-alliance",
         "time": "12:00 PM",
@@ -23,13 +14,22 @@
         "href": "https://alliancebrewing.com/"
       },
       {
+        "id": "thu-hiwire",
+        "time": "3:00 PM",
+        "venue": "Hi-Wire · 2020 Barber St",
+        "headline": "Doors at three, twenty taps",
+        "sub": "Open till 10 · the covered deck is the rain plan · order food from Redbud downstairs · 2020 Barber St",
+        "cat": "drink",
+        "href": "https://hiwirebrewing.com/knoxville/"
+      },
+      {
         "id": "thu-earls",
         "time": "4:00 PM",
         "venue": "Earl's · 610 Waterfront Dr",
         "headline": "Ten-dollar Patrón mango ritas",
-        "sub": "All day till 10 · the river-facing tables · 610 Waterfront Dr",
+        "sub": "All day till 10 · showers likely, so the inside tables · 610 Waterfront Dr",
         "cat": "drink",
-        "href": "/2026-09-16/specials-board"
+        "href": "/2026-09-23/specials-board"
       },
       {
         "id": "thu-puckers",
@@ -38,7 +38,16 @@
         "headline": "Pucker Hour, five to six",
         "sub": "$1 Pucker Lager · $3 wells and prosecco · $3 lemon drops · 115 Mimosa Ave",
         "cat": "drink",
-        "href": "/2026-09-16/puckers-titans"
+        "href": "/2026-09-23/puckers-texas"
+      },
+      {
+        "id": "thu-taco",
+        "time": "7:00 PM",
+        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
+        "headline": "Singo, seven to nine, free to play",
+        "sub": "Music bingo · $13 domestic pitchers all day · street-style tacos · 3701 Sevierville Pike",
+        "cat": "mic",
+        "href": "https://soknotaco.com/"
       },
       {
         "id": "thu-pinkcactus",
@@ -50,13 +59,13 @@
         "href": "https://www.thepinkcactusknox.com/"
       },
       {
-        "id": "thu-taco",
+        "id": "thu-bats",
         "time": "8:00 PM",
-        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
-        "headline": "Twenty-four taps and house margs",
-        "sub": "Street-style tacos up Sevierville Pike · 3701 Sevierville Pike",
-        "cat": "food",
-        "href": "https://soknotaco.com/"
+        "venue": "Ijams Park · 3526 Island Home Ave",
+        "headline": "The last bat walk of the season",
+        "sub": "8–9:30 at Mead's Quarry · $15 · ages 10+ · blacklight stations · check the page if it's raining",
+        "cat": "star",
+        "href": "/2026-09-23/bats-after-dark"
       }
     ],
     "Fri": [
@@ -74,7 +83,7 @@
         "time": "12:00 PM",
         "venue": "Alliance Brewing · 1130 Sevier Ave",
         "headline": "Open till ten on Sevier Ave",
-        "sub": "Noon to 10 · 1130 Sevier Ave",
+        "sub": "Noon to 10 · first patio day in the 70s since June · 1130 Sevier Ave",
         "cat": "drink",
         "href": "https://alliancebrewing.com/"
       },
@@ -83,7 +92,7 @@
         "time": "3:00 PM",
         "venue": "Hi-Wire · 2020 Barber St",
         "headline": "Late doors — open till eleven",
-        "sub": "3 PM – 11 PM · two decks, one covered, one on the roof · 2020 Barber St",
+        "sub": "3 PM – 11 PM · the rooftop deck, 77 and sunny · 2020 Barber St",
         "cat": "drink",
         "href": "https://hiwirebrewing.com/knoxville/"
       },
@@ -92,9 +101,9 @@
         "time": "4:00 PM",
         "venue": "Earl's · 610 Waterfront Dr",
         "headline": "Nine-dollar spicy pineapple ritas",
-        "sub": "All day till 10 · 610 Waterfront Dr",
+        "sub": "All day till 10 · the river-facing tables are back in play · 610 Waterfront Dr",
         "cat": "drink",
-        "href": "/2026-09-16/specials-board"
+        "href": "/2026-09-23/specials-board"
       },
       {
         "id": "fri-puckers",
@@ -103,22 +112,22 @@
         "headline": "Pucker Hour, five to six",
         "sub": "$1 Pucker Lager · $3 wells and prosecco · 115 Mimosa Ave",
         "cat": "drink",
-        "href": "/2026-09-16/puckers-titans"
+        "href": "/2026-09-23/puckers-texas"
       },
       {
-        "id": "fri-lotr",
+        "id": "fri-taco",
         "time": "7:00 PM",
-        "venue": "Ijams Park · 2915 Island Home Ave",
-        "headline": "Lord of the Rings on the lawn",
-        "sub": "Gate 7 · movie at dark, about 8:15 · $12 · beer garden and food trucks",
-        "cat": "star",
-        "href": "/2026-09-16/lotr-lawn"
+        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
+        "headline": "Frozen Fridays in the margarita garden",
+        "sub": "$5 ten-ounce frozen margs · $10 frozen coronaritas · open till 11 · 3701 Sevierville Pike",
+        "cat": "drink",
+        "href": "https://soknotaco.com/"
       },
       {
         "id": "fri-pinkcactus",
         "time": "9:00 PM",
         "venue": "The Pink Cactus · 1147 Sevier Ave",
-        "headline": "Karaoke rooms, weekend rate of filling up fast",
+        "headline": "Karaoke rooms, and they fill fast on a Friday",
         "sub": "Reservations strongly recommended · 1147 Sevier Ave",
         "cat": "mic",
         "href": "https://www.thepinkcactusknox.com/"
@@ -129,10 +138,10 @@
         "id": "sat-puckersbrunch",
         "time": "9:00 AM",
         "venue": "Puckers Sports Grill · 115 Mimosa Ave",
-        "headline": "Brunch from nine, every screen on",
-        "sub": "9 AM – 2 PM · 115 Mimosa Ave",
+        "headline": "Brunch from nine, Texas at noon",
+        "sub": "9 AM – 2 PM · No. 1 Texas at Tennessee kicks off at noon on ABC · get there early · 115 Mimosa Ave",
         "cat": "food",
-        "href": "/2026-09-16/puckers-titans"
+        "href": "/2026-09-23/puckers-texas"
       },
       {
         "id": "sat-taco",
@@ -142,6 +151,24 @@
         "sub": "Saturday and Sunday, 10 AM – 2 PM · 3701 Sevierville Pike",
         "cat": "food",
         "href": "https://soknotaco.com/"
+      },
+      {
+        "id": "sat-earls",
+        "time": "11:00 AM",
+        "venue": "Earl's · 610 Waterfront Dr",
+        "headline": "The Vols board opens at eleven for a noon kickoff",
+        "sub": "$8 house margs · $2 off drafts and pizza · $6 Orange Bliss · 6-for-5 buckets · 610 Waterfront Dr",
+        "cat": "drink",
+        "href": "/2026-09-23/specials-board"
+      },
+      {
+        "id": "sat-kerns",
+        "time": "11:00 AM",
+        "venue": "Kern's · 2201 Kern's Rising Way",
+        "headline": "Private lawn tailgates, or the bar screens",
+        "sub": "$300 lawn section for 20 with a TV, couches and canopy — inquire ahead · food hall open 8 AM – 11 PM",
+        "cat": "star",
+        "href": "/2026-09-23/kerns-tailgate"
       },
       {
         "id": "sat-ssg",
@@ -157,27 +184,18 @@
         "time": "12:00 PM",
         "venue": "Hi-Wire · 2020 Barber St",
         "headline": "Open from noon till eleven",
-        "sub": "Longest day of the week on the rooftop · 2020 Barber St",
+        "sub": "Longest day of the week on the rooftop, 77 and sunny · 2020 Barber St",
         "cat": "drink",
         "href": "https://hiwirebrewing.com/knoxville/"
       },
       {
-        "id": "sat-earls",
-        "time": "12:00 PM",
-        "venue": "Earl's · 610 Waterfront Dr",
-        "headline": "Eight-dollar house margaritas, and a Vols board",
-        "sub": "$2 off drafts and pizza · $6 Orange Bliss · 6-for-5 buckets · kickoff 7:45",
-        "cat": "drink",
-        "href": "/2026-09-16/specials-board"
-      },
-      {
-        "id": "sat-circus",
-        "time": "6:00 PM",
-        "venue": "Ijams Park · 2915 Island Home Ave",
-        "headline": "The Circus Under the Moon",
-        "sub": "Gate 6 · show 7:30–9 · $22 · aerials, jugglers and fire on the lawn",
+        "id": "sat-paddle",
+        "time": "7:30 PM",
+        "venue": "Ijams Park · 3507 Island Home Pike",
+        "headline": "Paddle under the Harvest Moon",
+        "sub": "7:30–9:30 · $45, kayak and headlamp included · moonrise 7:18 · book ahead",
         "cat": "star",
-        "href": "/2026-09-16/circus-moon"
+        "href": "/2026-09-23/harvest-moon-paddle"
       },
       {
         "id": "sat-pinkcactus",
@@ -195,16 +213,16 @@
         "time": "9:00 AM",
         "venue": "Puckers Sports Grill · 115 Mimosa Ave",
         "headline": "Brunch nine to two, Titans at one",
-        "sub": "Kickoff lands in the last hour of the menu · FOX · 115 Mimosa Ave",
+        "sub": "Titans at the Giants lands in the last hour of the menu · 115 Mimosa Ave",
         "cat": "food",
-        "href": "/2026-09-16/puckers-titans"
+        "href": "/2026-09-23/puckers-texas"
       },
       {
         "id": "sun-taco",
         "time": "10:00 AM",
         "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
-        "headline": "Weekend brunch at the cantina",
-        "sub": "10 AM – 2 PM · 3701 Sevierville Pike",
+        "headline": "Brunch, then all-day happy hour",
+        "sub": "Brunch 10 AM – 2 PM · $4 wells, champagne and domestics all day · 3701 Sevierville Pike",
         "cat": "food",
         "href": "https://soknotaco.com/"
       },
@@ -214,7 +232,7 @@
         "venue": "SouthSide Garage · 1014 Sevier Ave",
         "headline": "Dia De brunch, mimosas and Bloody Marys",
         "sub": "11 AM – 3 PM · specials on both · 1014 Sevier Ave",
-        "cat": "drink",
+        "cat": "food",
         "href": "https://www.southsidegarageknox.com/specials/"
       },
       {
@@ -222,18 +240,27 @@
         "time": "11:00 AM",
         "venue": "Earl's · 610 Waterfront Dr",
         "headline": "Seven-dollar mimosas and Bloody Marys",
-        "sub": "All day till 10 · the water does the entertaining · 610 Waterfront Dr",
+        "sub": "All day till 10 · 78 and sunny on the water · 610 Waterfront Dr",
         "cat": "drink",
-        "href": "/2026-09-16/specials-board"
+        "href": "/2026-09-23/specials-board"
       },
       {
-        "id": "sun-bluegrass",
-        "time": "2:00 PM",
-        "venue": "Ijams Park · 2915 Island Home Ave",
-        "headline": "Free bluegrass jam, two till five",
-        "sub": "Bring an acoustic instrument or just take a chair",
-        "cat": "music",
-        "href": "/2026-09-16/bluegrass-jam"
+        "id": "sun-jam",
+        "time": "12:00 PM",
+        "venue": "Ijams Park · 3526 Island Home Ave",
+        "headline": "Channel 865's End of Summer Jam at the quarry",
+        "sub": "Noon to sundown · free, all ages · six DJs · beer garden and a food truck all day",
+        "cat": "dance",
+        "href": "/2026-09-23/end-of-summer-jam"
+      },
+      {
+        "id": "sun-alliance",
+        "time": "12:00 PM",
+        "venue": "Alliance Brewing · 1130 Sevier Ave",
+        "headline": "Noon to eight on Sevier Ave",
+        "sub": "Sunday hours · 1130 Sevier Ave",
+        "cat": "drink",
+        "href": "https://alliancebrewing.com/"
       },
       {
         "id": "sun-hiwire",
