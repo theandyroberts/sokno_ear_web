@@ -119,7 +119,7 @@ const teaserHtml = teasers.map((t) =>
   `<tr><td style="padding:4px 22px;font-family:'Courier New',monospace;font-size:13px;line-height:1.5;color:${INK};"><span style="font-family:'Arial Black',Arial,sans-serif;font-weight:900;">${t.day.toUpperCase()}</span> &mdash; ${t.line}</td></tr>`
 ).join("\n");
 
-const HTML = `<!doctype html><html><body style="margin:0;padding:0;background:${GREEN};">
+const HTML = `<!doctype html><html><head><meta name="color-scheme" content="light only"><meta name="supported-color-schemes" content="light only"><style>:root{color-scheme:light only;supported-color-schemes:light only;}</style></head><body style="margin:0;padding:0;background:${GREEN};">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${GREEN};"><tr><td align="center" style="padding:0 0 28px;">
 <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="width:100%;max-width:560px;">
   <tr><td style="background:${INK};color:${GREEN};padding:10px 18px;font-family:'Courier New',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;">&#9733; The South Knoxville Ear &mdash; night side</td></tr>

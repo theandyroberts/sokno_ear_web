@@ -106,7 +106,7 @@ export function buildNewsletter(episode, opts = {}) {
     )
     .join("");
 
-  const html = `<!doctype html><html><body style="margin:0;padding:0;background:#e9dcc4;">
+  const html = `<!doctype html><html><head><meta name="color-scheme" content="light only"><meta name="supported-color-schemes" content="light only"><style>:root{color-scheme:light only;supported-color-schemes:light only;}</style></head><body style="margin:0;padding:0;background:#e9dcc4;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#e9dcc4;"><tr><td align="center" style="padding:24px 12px;">
 <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="width:100%;max-width:560px;background:#F3E8D2;border:1px solid #171512;">
   <tr><td align="center" style="padding:22px 24px 8px;">
