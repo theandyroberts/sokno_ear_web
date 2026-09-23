@@ -85,13 +85,19 @@ const storyUrl = (episode, s) => `${SITE}/${episode.slug}/${s.id}`;
  * with an HTML twin that is the same words, linked. `first` is the introduction
  * variant Andy sends himself.
  */
-export function renderMessage({ episode, name, contact = {}, stories, first = false }) {
+export function renderMessage({ episode, name, contact = {}, stories, first = false, now = Date.now() }) {
   const who = contact.salutation ?? (contact.people?.[0]?.name ? `Hi ${contact.people[0].name.split(" ")[0]},` : `Hi ${name} team,`);
   const ep = `No. ${episode.number}`;
   const when = episode.shortDate ?? episode.dateLabel ?? episode.date;
   const n = stories.length;
   const igTag = contact.instagram ? `, tagging ${contact.instagram}` : "";
-  const each = n === 1 ? "It" : "Each one";
+  // The drip runs Wed–Sun. A note sent after that (a first contact Andy gets to late)
+  // has to say "went", not "goes". And not every story is queued — the standing cap
+  // holds repeats — so with several stories the claim is about the week's picks.
+  const over = now > new Date(`${episode.date}T00:00:00-04:00`).getTime() + 6 * 86400000;
+  const igLine = n === 1
+    ? `It ${over ? "went" : "also goes"} out on Instagram ${over ? "" : "over the weekend "}from @soknoear${igTag}, too.`
+    : `The week's picks ${over ? "went" : "go"} out on Instagram ${over ? "" : "over the weekend "}from @soknoear${igTag}, too.`;
 
   const lines = [];
   if (first) {
@@ -111,7 +117,7 @@ export function renderMessage({ episode, name, contact = {}, stories, first = fa
   for (const s of stories) lines.push(`  • ${s.title}`, `    ${storyUrl(episode, s)}`);
   lines.push(
     "",
-    `${each} also goes out on Instagram over the weekend from @soknoear${igTag}. Everything we publish about you is yours to share — a repost, a story, a link, whatever's useful.`,
+    `${igLine} Everything we publish about you is yours to share — a repost, a story, a link, whatever's useful.`,
     "",
     "If we've got a detail wrong, or there's something coming up you'd like us to know about, just reply to this email. You can also call or text the Ear's tip line any time: 865-252-6500.",
     "",
@@ -131,7 +137,7 @@ export function renderMessage({ episode, name, contact = {}, stories, first = fa
 ${p(esc(who))}
 ${p(body)}
 <ul style="margin:0 0 14px 20px;padding:0;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.5;">${list}</ul>
-${p(`${each} also goes out on Instagram over the weekend from <a href="${IG_PROFILE}" style="color:#A94A34;">@soknoear</a>${esc(igTag)}. Everything we publish about you is yours to share — a repost, a story, a link, whatever's useful.`)}
+${p(`${esc(igLine).replace("@soknoear", `<a href="${IG_PROFILE}" style="color:#A94A34;">@soknoear</a>`)} Everything we publish about you is yours to share — a repost, a story, a link, whatever's useful.`)}
 ${p(`If we've got a detail wrong, or there's something coming up you'd like us to know about, just reply to this email. You can also call or text the Ear's tip line any time: 865-252-6500.`)}
 ${p(first ? "Thanks for giving the neighborhood things to do." : "Thanks, as always, for keeping South Knoxville interesting.")}
 ${p(SIGNATURE.split("\n").map(esc).join("<br>"))}

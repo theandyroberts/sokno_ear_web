@@ -9,7 +9,7 @@ const contacts: Record<string, any> = {
 };
 
 const episode = {
-  slug: "2026-09-16", number: 14, shortDate: "Sep 17–20",
+  slug: "2026-09-16", date: "2026-09-16", number: 14, shortDate: "Sep 17–20",
   feature: { id: "sevier-day", title: "Sevier Day at Marble Springs", facts: [{ label: "Where", value: "Marble Springs State Historic Site" }] },
   stories: [
     { id: "lotr-lawn", title: "LOTR on the Ijams lawn", social: { igTags: ["ijams"] }, facts: [{ label: "Where", value: "Ijams Park" }] },
@@ -65,29 +65,35 @@ describe("planNotifications", () => {
 
 describe("renderMessage", () => {
   const { venues } = resolveVenues(episode, contacts);
+  const now = new Date("2026-09-16T13:00:00-04:00").getTime();
 
   it("links every story and signs as Andy", () => {
-    const { text, html, subject } = renderMessage({ episode, name: "Ijams Nature Center", contact: contacts.ijams, stories: venues.get("ijams")!.stories });
+    const { text, html, subject } = renderMessage({ episode, name: "Ijams Nature Center", contact: contacts.ijams, stories: venues.get("ijams")!.stories , now });
     expect(subject).toBe("You're in this week's South Knoxville Ear (No. 14)");
     expect(text).toContain("https://soknoear.com/2026-09-16/lotr-lawn");
     expect(text).toContain("https://soknoear.com/2026-09-16/caving-trip");
-    expect(text).toContain("from @soknoear, tagging @ijamsnaturecenter");
+    expect(text).toContain("The week's picks go out on Instagram over the weekend from @soknoear, tagging @ijamsnaturecenter, too.");
     expect(text.endsWith(SIGNATURE)).toBe(true);
     expect(html).toContain('href="https://soknoear.com/2026-09-16/lotr-lawn"');
   });
   it("addresses a named person by first name", () => {
-    const { text } = renderMessage({ episode, name: "Puckers Sports Grill", contact: contacts.puckers, stories: venues.get("puckers")!.stories });
+    const { text } = renderMessage({ episode, name: "Puckers Sports Grill", contact: contacts.puckers, stories: venues.get("puckers")!.stories , now });
     expect(text.startsWith("Hi Sam,")).toBe(true);
   });
   it("has a first-contact variant that introduces the Ear", () => {
-    const { text, subject } = renderMessage({ episode, name: "Ijams Nature Center", contact: contacts.ijams, stories: venues.get("ijams")!.stories, first: true });
+    const { text, subject } = renderMessage({ episode, name: "Ijams Nature Center", contact: contacts.ijams, stories: venues.get("ijams")!.stories, first: true , now });
     expect(subject).toBe("Ijams Nature Center is in this week's South Knoxville Ear");
     expect(text).toContain("I edit The South Knoxville Ear");
     expect(text).toContain("2 stories about you");
   });
   it("singularises one story", () => {
-    const { text } = renderMessage({ episode, name: "Earl's", contact: contacts.earls, stories: venues.get("earls")!.stories });
+    const { text } = renderMessage({ episode, name: "Earl's", contact: contacts.earls, stories: venues.get("earls")!.stories , now });
     expect(text).toContain("The story:");
-    expect(text).toContain("It also goes out on Instagram");
+    expect(text).toContain("It also goes out on Instagram over the weekend");
+  });
+  it("switches to past tense once the drip week is over", () => {
+    const late = new Date("2026-09-23T12:00:00-04:00").getTime();
+    const { text } = renderMessage({ episode: { ...episode, date: "2026-09-16" }, name: "Earl's", contact: contacts.earls, stories: venues.get("earls")!.stories, now: late });
+    expect(text).toContain("It went out on Instagram from @soknoear, tagging @earlsknoxville, too.");
   });
 });
