@@ -1,0 +1,542 @@
+{
+  "_comment": "Who to tell when the Ear covers a place. One entry per venue/organizer, keyed like content/ig-handles.json so a story's social.igTags resolves here too; `match` strings catch untagged stories by their Where/Venue fact. Every email/phone/name here is one the organization PUBLISHES ITSELF (its site, its official socials) and `source` says where — nothing scraped from people-search sites. `to` overrides `email` as the address the weekly note goes to. `introduced` is the date Andy sent the FIRST note himself; until it's set, scripts/venue-notify.mjs only drafts. `salutation` overrides the greeting (default: first name of people[0], else 'Hi <name> team,').",
+  "contacts": {
+    "ijams": {
+      "name": "Ijams Nature Center",
+      "match": [
+        "Ijams",
+        "Mead's Quarry",
+        "Meads Quarry",
+        "Nature Playscape",
+        "Island Home Pike"
+      ],
+      "instagram": "@ijamsnaturecenter",
+      "website": "https://www.ijams.org/",
+      "contactPage": "https://www.ijams.org/staff",
+      "email": "publicprograms@ijams.org",
+      "to": "chassil@ijams.org",
+      "phone": "865-577-4717",
+      "people": [
+        {
+          "name": "Cindy Hassil",
+          "role": "Development Director; named Media Contact on most Ijams press releases (ext. 1006)",
+          "email": "chassil@ijams.org",
+          "source": "https://www.ijams.org/news-information"
+        },
+        {
+          "name": "Paige Crane",
+          "role": "Education Director; Media Contact on the Jul 2026 Hummingbird Festival release (ext. 1010)",
+          "email": "pcrane@ijams.org",
+          "source": "https://www.ijams.org/news-information"
+        },
+        {
+          "name": "Melanie Thomas",
+          "role": "Chief of Operations (ext. 1003)",
+          "email": "mthomas@ijams.org",
+          "source": "https://www.ijams.org/staff"
+        },
+        {
+          "name": "Sarah Brobst",
+          "role": "Visitor Services Director (ext. 1008)",
+          "email": "sbrobst@ijams.org",
+          "source": "https://www.ijams.org/staff"
+        },
+        {
+          "name": "Katie Brittian",
+          "role": "Private Events Manager (ext. 1011)",
+          "email": "kbrittian@ijams.org",
+          "source": "https://www.ijams.org/staff"
+        }
+      ],
+      "salutation": null,
+      "introduced": null,
+      "source": "https://www.ijams.org/staff",
+      "notes": "No general info@ inbox; publicprograms@ijams.org is the public-programs/events inbox. No marketing/PR role on staff — press releases name Hassil (most often) or Crane as Media Contact, so the note goes to Cindy. President & CEO Amber Parker left Aug 14 2026; CEO search open (start Jan 2027), no interim named on ijams.org as of 2026-09-23."
+    },
+    "kerns": {
+      "name": "Kern's Food Hall",
+      "match": [
+        "Kern's",
+        "Kerns"
+      ],
+      "instagram": "@kernsknox",
+      "website": "https://kernsbakery.com/",
+      "contactPage": "https://kernsbakery.com/contact/",
+      "email": "events@kernsbakery.com",
+      "to": null,
+      "phone": null,
+      "people": [],
+      "salutation": "Hi Kern's team,",
+      "introduced": null,
+      "source": "https://kernsbakery.com/event-spaces/",
+      "notes": "kernsfoodhall.com redirects to kernsbakery.com. Contact page is a HubSpot form only; events@kernsbakery.com is the only published address. No events/marketing manager named. Developer/operator Four Stones Group, Atlanta (info@fourstonesgrp.com). Third-party listings show (865) 381-3612 but Kern's doesn't publish it. Also TikTok @kernsbakery."
+    },
+    "earls": {
+      "name": "Earl's",
+      "match": [
+        "Earl's"
+      ],
+      "instagram": "@earlsknoxville",
+      "website": "https://earlsknox.com/",
+      "contactPage": "https://earlsknox.com/",
+      "email": "info@earlsknox.com",
+      "to": null,
+      "phone": "(865) 252-4886",
+      "people": [
+        {
+          "name": "Jimmy Loup",
+          "role": "Co-founder, Gemini Hospitality (operator)",
+          "email": null,
+          "source": "https://gemini-hac.com/"
+        },
+        {
+          "name": "Jim Saunders",
+          "role": "Co-founder, Gemini Hospitality (operator)",
+          "email": null,
+          "source": "https://gemini-hac.com/"
+        }
+      ],
+      "salutation": "Hi Earl's team,",
+      "introduced": null,
+      "source": "https://earlsknox.com/",
+      "notes": "Domain is earlsknox.com. Operator Gemini Hospitality (also Raven Steakhouse, Bella, The Armory); its contact page is form-only. Opened Jan 2026."
+    },
+    "hiwire": {
+      "name": "Hi-Wire Brewing",
+      "match": [
+        "Hi-Wire",
+        "Hiwire"
+      ],
+      "instagram": "@hiwirebrewing_knx",
+      "website": "https://hiwirebrewing.com/knoxville/",
+      "contactPage": "https://hiwirebrewing.com/contact-us/",
+      "email": "knoxville@hiwirebrewing.com",
+      "to": null,
+      "phone": "(865) 935-9395",
+      "people": [],
+      "salutation": "Hi Hi-Wire Knoxville team,",
+      "introduced": null,
+      "source": "https://hiwirebrewing.com/contact-us/",
+      "notes": "2020 Barber St. Taproom inbox knoxville@; company-wide events@hiwirebrewing.com and info@hiwirebrewing.com (Asheville HQ, 828-738-2448). No named staff or marketing contact published. Space rental form: https://hiwirebrewing.com/rent-our-space-knoxville/. Food by Redbud Kitchen."
+    },
+    "pink-cactus": {
+      "name": "The Pink Cactus",
+      "match": [
+        "Pink Cactus"
+      ],
+      "instagram": "@thepinkcactusknox",
+      "website": "https://www.thepinkcactusknox.com/",
+      "contactPage": "https://www.thepinkcactusknox.com/contact",
+      "email": "thepinkcactusknox@gmail.com",
+      "to": null,
+      "phone": "(865) 437-3293",
+      "people": [
+        {
+          "name": "Jenny Salata",
+          "role": "Co-owner; marketing and events (per WBIR, not the venue's site)",
+          "email": null,
+          "source": "https://www.wbir.com/article/money/business/small-business/friendship-fuels-south-knoxville-karaoke-bar/51-fc68bb0a-da68-4bb6-9a87-5b9fd5b468cb"
+        },
+        {
+          "name": "Harold Goldston",
+          "role": "Co-owner / CEO (per WBIR)",
+          "email": null,
+          "source": "https://www.wbir.com/article/money/business/small-business/friendship-fuels-south-knoxville-karaoke-bar/51-fc68bb0a-da68-4bb6-9a87-5b9fd5b468cb"
+        },
+        {
+          "name": "DeShaun Richardson",
+          "role": "General manager (per WBIR)",
+          "email": null,
+          "source": "https://www.wbir.com/article/money/business/small-business/friendship-fuels-south-knoxville-karaoke-bar/51-fc68bb0a-da68-4bb6-9a87-5b9fd5b468cb"
+        }
+      ],
+      "salutation": "Hi Pink Cactus team,",
+      "introduced": null,
+      "source": "https://www.thepinkcactusknox.com/contact",
+      "notes": "1147 Sevier Ave. Email and phone are on the venue's contact page and Facebook intro. Names are from a WBIR story, not the venue's own site — ask for Jenny (marketing/events) via the general inbox."
+    },
+    "trailhead": {
+      "name": "Trailhead Beer Market",
+      "match": [
+        "Trailhead"
+      ],
+      "instagram": "@trailheadbeer",
+      "website": "https://www.facebook.com/trailheadbeermarket/",
+      "contactPage": "https://www.facebook.com/trailheadbeermarket/",
+      "email": null,
+      "to": null,
+      "phone": "(865) 409-4058",
+      "people": [],
+      "salutation": null,
+      "introduced": null,
+      "source": "https://x.com/trailheadbeer",
+      "notes": "1317 Island Home Ave. No website; Facebook is the official presence (age-gated, contact info unreadable logged out). Phone is from the venue's own X bio. Third-party listings show trailheadbar@gmail.com — unverified, so not recorded. Route: Facebook Messenger, Instagram DM, or phone."
+    },
+    "mimosas": {
+      "name": "Mimosas (closed Aug 2026 — now Puckers)",
+      "match": [],
+      "instagram": null,
+      "website": "https://mimosasknoxville.com/",
+      "contactPage": null,
+      "email": null,
+      "to": null,
+      "phone": "(865) 357-7020",
+      "people": [],
+      "salutation": null,
+      "introduced": null,
+      "source": "https://mimosasknoxville.com/",
+      "notes": "Closed; the space reopened as Puckers Sports Grill on Aug 26 2026 and @mimosasknoxville was renamed @puckersknoxville. Old igTags 'mimosas' still resolve here; 'Mimosas' in a Where fact now matches puckers. Operator Kennedy Concepts. Use the puckers record."
+    },
+    "puckers": {
+      "name": "Puckers Sports Grill",
+      "match": [
+        "Puckers",
+        "Mimosas"
+      ],
+      "instagram": "@puckersknoxville",
+      "website": "https://puckersknoxville.com/",
+      "contactPage": "https://puckersknoxville.com/#contact",
+      "email": null,
+      "to": null,
+      "phone": "(865) 357-7020",
+      "people": [],
+      "salutation": null,
+      "introduced": null,
+      "source": "https://puckersknoxville.com/",
+      "notes": "222 E Blount Ave Suite 1030 / 115 Mimosa Ave, bottom of The Davy. No email published anywhere — homepage 'Get in touch' form only. Operator Kennedy Concepts (CEO Hannah Kennedy; founder Chad Kennedy d. Dec 2025); corporate form https://kennedy-concepts.com/book-an-event/. A Hoodline Aug 2026 piece claims Douglas Management took ownership — unverified. Route: Instagram DM or the form."
+    },
+    "alliance": {
+      "name": "Alliance Brewing",
+      "match": [
+        "Alliance Brewing",
+        "Alliance,",
+        "Alliance "
+      ],
+      "instagram": "@alliancebrewing",
+      "website": "https://alliancebrewing.com/",
+      "contactPage": "https://alliancebrewing.com/contact/",
+      "email": null,
+      "to": null,
+      "phone": "(865) 247-5355",
+      "people": [
+        {
+          "name": "Adam Ingle",
+          "role": "Co-founder / head brewer (2015 press; may have changed)",
+          "email": null,
+          "source": "https://insideofknoxville.com/2015/07/alliance-brewing-company-nears-opening-date/"
+        }
+      ],
+      "salutation": null,
+      "introduced": null,
+      "source": "https://alliancebrewing.com/",
+      "notes": "1130 Sevier Ave. No email anywhere on the site — contact form and phone only. Event bookings via https://alliancebrewing.com/book-event-space/. Route: form, Instagram DM, or phone."
+    },
+    "disco-chicken": {
+      "name": "Disco Chicken & Donuts",
+      "match": [
+        "Disco Chicken"
+      ],
+      "instagram": "@discochickenanddonuts",
+      "website": "https://www.discochickenanddonuts.com/",
+      "contactPage": "https://www.facebook.com/DiscoChickenandDonuts/about",
+      "email": "richykreme@outlook.com",
+      "to": null,
+      "phone": null,
+      "people": [
+        {
+          "name": "Dustin Cochran",
+          "role": "Owner (per WBIR)",
+          "email": null,
+          "source": "https://www.wbir.com/article/news/local/knoxville/disco-chicken-gluten-free-kerns-food-hall/51-d9b6dc9c-412d-4812-b202-640faf71be25"
+        }
+      ],
+      "salutation": "Hi Disco Chicken team,",
+      "introduced": null,
+      "source": "https://www.facebook.com/DiscoChickenandDonuts/about",
+      "notes": "Stall inside Kern's. Email is the one on the business's own Facebook contact section (personal-style address). discochickenanddonuts@gmail.com appears on Kern's landlord page — likely valid but third-party. No phone published."
+    },
+    "tennessee-stage": {
+      "name": "Tennessee Stage Company",
+      "match": [
+        "Tennessee Stage",
+        "Knoxville Shakespeare"
+      ],
+      "instagram": "@tennesseestage",
+      "website": "https://tennesseestage.com/",
+      "contactPage": "https://tennesseestage.com/get-in-touch/",
+      "email": "TennesseeStage@comcast.net",
+      "to": null,
+      "phone": "(865) 546-4280",
+      "people": [
+        {
+          "name": "Tom Parkhill",
+          "role": "Founding Artistic Director",
+          "email": null,
+          "source": "http://tennesseestage.com/home/about-us-3/artistic-director/"
+        }
+      ],
+      "salutation": "Hi Tennessee Stage team,",
+      "introduced": null,
+      "source": "https://tennesseestage.com/get-in-touch/",
+      "notes": "Site returned HTTP 500 on 2026-09-23; email/phone read from the Internet Archive copy of its own Get in Touch page — re-verify when it's back. Office 100 S Gay St by appointment; P.O. Box 1186, Knoxville 37901."
+    },
+    "one-knoxville": {
+      "name": "One Knoxville SC",
+      "match": [
+        "One Knoxville",
+        "One Knox"
+      ],
+      "instagram": "@oneknoxville",
+      "website": "https://www.oneknoxsc.com/",
+      "contactPage": "https://www.oneknoxsc.com/contact-us/",
+      "email": null,
+      "to": "emma@oneknoxsc.com",
+      "phone": "(865) 562-3362",
+      "people": [
+        {
+          "name": "Emma Moore",
+          "role": "Media contact on 2025 press releases (not on the current front-office page — confirm)",
+          "email": "emma@oneknoxsc.com",
+          "source": "https://www.oneknoxsc.com/news/2025/08/06/one-knoxville-sc-bolsters-attack-with-signing-of-forward-lucas-meek/"
+        },
+        {
+          "name": "Trey Mongrue",
+          "role": "Marketing & Communications Manager",
+          "email": null,
+          "source": "https://www.oneknoxsc.com/front-office-staff/"
+        },
+        {
+          "name": "Faith Wood",
+          "role": "Social Media & Content Manager",
+          "email": null,
+          "source": "https://www.oneknoxsc.com/front-office-staff/"
+        },
+        {
+          "name": "Sam Weisbrod",
+          "role": "Executive Director, One Knox Collective (community/youth arm)",
+          "email": "sam@oneknoxsc.com",
+          "source": "https://www.oneknoxsc.com/the-collective-staff/"
+        }
+      ],
+      "salutation": null,
+      "introduced": null,
+      "source": "https://www.oneknoxsc.com/front-office-staff/",
+      "notes": "No general inbox; contact page is phone + form. Emma Moore was the media contact through 2025; Trey Mongrue is the current comms manager (no email published). ticketing@oneknoxsc.com also exists."
+    },
+    "knox-parks": {
+      "name": "Knoxville Parks & Recreation",
+      "match": [
+        "Suttree Landing",
+        "South Waterfront",
+        "Fort Dickerson",
+        "Augusta Quarry"
+      ],
+      "instagram": "@knoxvillerecreation",
+      "website": "https://www.knoxvilletn.gov/government/city_departments_offices/parks_and_recreation",
+      "contactPage": "https://knoxville.recdesk.com/Community/Page?pageId=39647",
+      "email": "kprd@knoxvilletn.gov",
+      "to": null,
+      "phone": "(865) 215-1700",
+      "people": [
+        {
+          "name": "Sheryl Ely",
+          "role": "Parks and Recreation Director",
+          "email": "sely@knoxvilletn.gov",
+          "source": "https://www.knoxvilletn.gov/m/directory"
+        },
+        {
+          "name": "Kristin Farley",
+          "role": "Communications Director, City of Knoxville",
+          "email": "kfarley@knoxvilletn.gov",
+          "source": "https://www.knoxvilletn.gov/government/city_departments_offices/communications"
+        },
+        {
+          "name": "Eric Vreeland",
+          "role": "Deputy Director of Communications, City of Knoxville",
+          "email": "evreeland@knoxvilletn.gov",
+          "source": "https://www.knoxvilletn.gov/m/directory"
+        }
+      ],
+      "salutation": "Hi Parks & Rec team,",
+      "introduced": null,
+      "source": "https://knoxville.recdesk.com/Community/Page?pageId=39647",
+      "notes": "Covers Suttree Landing, the South Waterfront, Fort Dickerson/Augusta Quarry. No departmental PIO — press goes through citywide Communications (Farley, 865-215-2589)."
+    },
+    "legacy-parks": {
+      "name": "Legacy Parks Foundation",
+      "match": [
+        "Legacy Parks"
+      ],
+      "instagram": "@legacyparks",
+      "website": "https://legacyparks.org/",
+      "contactPage": "https://legacyparks.org/about-us/our-people/",
+      "email": "info@legacyparks.org",
+      "to": null,
+      "phone": "(865) 525-2585",
+      "people": [
+        {
+          "name": "Sarah Rump",
+          "role": "Marketing Director",
+          "email": null,
+          "source": "https://legacyparks.org/about-us/our-people/"
+        },
+        {
+          "name": "Carol Evans",
+          "role": "Executive Director",
+          "email": null,
+          "source": "https://legacyparks.org/about-us/our-people/"
+        }
+      ],
+      "salutation": "Hi Legacy Parks team,",
+      "introduced": null,
+      "source": "https://legacyparks.org/about-us/our-people/",
+      "notes": "900 Volunteer Landing Lane. No individual emails published; /contact/ 404s. Ask for Sarah Rump (marketing) via info@."
+    },
+    "wdvx": {
+      "name": "WDVX",
+      "match": [
+        "WDVX"
+      ],
+      "instagram": "@wdvx",
+      "website": "https://wdvx.com/",
+      "contactPage": "https://wdvx.com/connect/",
+      "email": "info@wdvx.com",
+      "to": "gm@wdvx.com",
+      "phone": "(865) 544-1029",
+      "people": [
+        {
+          "name": "Tony Lawson",
+          "role": "General Manager & Program Director",
+          "email": "tlawson@wdvx.com",
+          "source": "https://wdvx.com/connect/"
+        }
+      ],
+      "salutation": null,
+      "introduced": null,
+      "source": "https://wdvx.com/about/press/",
+      "notes": "301 S Gay St (Visit Knoxville building). The press page asks writers to email gm@wdvx.com, so the note goes there, addressed to Tony. Also studio@wdvx.com, musicdirector@wdvx.com."
+    },
+    "marble-springs": {
+      "name": "Marble Springs State Historic Site",
+      "match": [
+        "Marble Springs"
+      ],
+      "instagram": null,
+      "website": "https://www.marblesprings.net/",
+      "contactPage": "https://www.marblesprings.net/contact-us",
+      "email": "info@marblesprings.net",
+      "to": "kyled@marblesprings.net",
+      "phone": "(865) 573-5508",
+      "people": [
+        {
+          "name": "Kyle Dickson",
+          "role": "Executive Director",
+          "email": "kyled@marblesprings.net",
+          "source": "https://www.marblesprings.net/contact-us"
+        },
+        {
+          "name": "Lily Arwood",
+          "role": "Education Coordinator",
+          "email": "Lilya@marblesprings.net",
+          "source": "https://www.marblesprings.net/contact-us"
+        }
+      ],
+      "salutation": null,
+      "introduced": null,
+      "source": "https://www.marblesprings.net/contact-us",
+      "notes": "1220 W Governor John Sevier Hwy; mail P.O. Box 20195, Knoxville 37940. Everything from the site's own Contact Us page."
+    },
+    "south-coast-pizza": {
+      "name": "South Coast Pizza",
+      "match": [
+        "South Coast"
+      ],
+      "instagram": "@southcoastpizzaknoxville",
+      "website": "https://southcoastpizza.com/",
+      "contactPage": "https://southcoastpizza.com/",
+      "email": "southcoastpizza1@gmail.com",
+      "to": null,
+      "phone": "(865) 200-5818",
+      "people": [],
+      "salutation": "Hi South Coast team,",
+      "introduced": null,
+      "source": "https://southcoastpizza.com/",
+      "notes": "1103 Sevier Ave. No owner named."
+    },
+    "southside-garage": {
+      "name": "SouthSide Garage",
+      "match": [
+        "Southside Garage"
+      ],
+      "instagram": "@southsidegarageknox",
+      "website": "https://southsidegarageknox.com/",
+      "contactPage": "https://southsidegarageknox.com/",
+      "email": "southsidegarageknox@gmail.com",
+      "to": null,
+      "phone": "(865) 951-2790",
+      "people": [],
+      "salutation": "Hi SouthSide Garage team,",
+      "introduced": null,
+      "source": "https://southsidegarageknox.com/",
+      "notes": "1014 Sevier Ave. Site footer phone recorded (third-party listings show 865-230-2188). No owner named."
+    },
+    "sokno-taco": {
+      "name": "SoKno Taco Cantina",
+      "match": [
+        "SoKno Taco"
+      ],
+      "instagram": "@sokno_taco",
+      "website": "https://soknota.co/",
+      "contactPage": "https://soknota.co/contact/",
+      "email": "soknotaco@gmail.com",
+      "to": null,
+      "phone": "(865) 851-8882",
+      "people": [],
+      "salutation": "Hi SoKno Taco team,",
+      "introduced": null,
+      "source": "https://soknota.co/contact/",
+      "notes": "3701 Sevierville Pike. Catering inbox soknotaco.catering@gmail.com. No owner named."
+    },
+    "angry-dumplings": {
+      "name": "Angry Dumplings",
+      "match": [
+        "Angry Dumpling"
+      ],
+      "instagram": "@dumplingsteaknoxville",
+      "website": "https://www.angrydumplingtn.com/",
+      "contactPage": null,
+      "email": null,
+      "to": null,
+      "phone": "(865) 343-8930",
+      "people": [
+        {
+          "name": "Jason Chau",
+          "role": "Owner, with Vanessa Chau",
+          "email": null,
+          "source": "https://www.instagram.com/dumplingsteaknoxville/"
+        }
+      ],
+      "salutation": null,
+      "introduced": null,
+      "source": "https://www.instagram.com/dumplingsteaknoxville/",
+      "notes": "1119 Sevier Ave Suite A. Site refused connections on 2026-09-23. Phone is from the Instagram bio (labelled Jason's number, for job inquiries). Business says it operates mainly on Instagram. Route: Instagram DM."
+    },
+    "fly-by-night": {
+      "name": "Fly By Night",
+      "match": [
+        "Fly by Night"
+      ],
+      "instagram": "@flybynightknox",
+      "website": "https://www.flybynightknox.com/",
+      "contactPage": "https://www.flybynightknox.com/",
+      "email": "flybynightknox@gmail.com",
+      "to": null,
+      "phone": "(865) 247-5022",
+      "people": [],
+      "salutation": "Hi Fly By Night team,",
+      "introduced": null,
+      "source": "https://www.flybynightknox.com/",
+      "notes": "906 Sevier Ave Suite 126. By the team behind Tern Club; no individuals named. Invites inquiries by email or Instagram DM."
+    }
+  }
+}

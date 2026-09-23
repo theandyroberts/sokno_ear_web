@@ -11,6 +11,8 @@
 //   node scripts/publish-episode.mjs --site              → just promote + deploy
 //   node scripts/publish-episode.mjs --instagram         → just build/deploy/queue the drip
 //   node scripts/publish-episode.mjs --status            → report what's done, change nothing
+//   --venues send|preview|skip   the weekly "you're in the Ear" note to each venue
+//                                (default preview; first contacts are always drafts for Andy)
 //   --slug YYYY-MM-DD   target a specific episode (default: newest draft, else newest episode)
 //   --dry-run           print every command without running it
 //
@@ -40,12 +42,18 @@ if (!["preview", "send", "skip"].includes(dspartyMode)) {
   console.error(`--dsparty must be preview|send|skip (got ${dspartyMode})`);
   process.exit(1);
 }
-// With no channel flags, do all three (newsletter defaults to the safe preview).
-const explicit = has("--site") || has("--instagram") || has("--newsletter") || has("--dsparty");
+const venuesMode = val("--venues") ?? "preview";
+if (!["preview", "send", "skip"].includes(venuesMode)) {
+  console.error(`--venues must be preview|send|skip (got ${venuesMode})`);
+  process.exit(1);
+}
+// With no channel flags, do all of them (outward ones default to the safe preview).
+const explicit = has("--site") || has("--instagram") || has("--newsletter") || has("--dsparty") || has("--venues");
 const doSite = !explicit || has("--site");
 const doIg = !explicit || has("--instagram");
 const doMail = (!explicit || has("--newsletter")) && newsletterMode !== "skip";
 const doParty = (!explicit || has("--dsparty")) && dspartyMode !== "skip";
+const doVenues = (!explicit || has("--venues")) && venuesMode !== "skip";
 
 const DRAFTS = path.join(process.cwd(), "content", "drafts");
 const EPISODES = path.join(process.cwd(), "content", "episodes");
@@ -85,7 +93,7 @@ console.log(`episode:    ${slug}  (${isDraft ? "DRAFT" : "published"})`);
 console.log(`ig assets:  ${igAssets ? `${igAssets} images in public/assets/ig/${slug}` : "MISSING — none built"}`);
 console.log(`ig queue:   ${queueState}`);
 if (STATUS_ONLY) process.exit(0);
-console.log(`plan:       site=${doSite} instagram=${doIg} newsletter=${doMail ? newsletterMode : "skip"} dsparty=${doParty ? dspartyMode : "skip"}${DRY ? "  (dry run)" : ""}`);
+console.log(`plan:       site=${doSite} instagram=${doIg} newsletter=${doMail ? newsletterMode : "skip"} dsparty=${doParty ? dspartyMode : "skip"} venues=${doVenues ? venuesMode : "skip"}${DRY ? "  (dry run)" : ""}`);
 
 // ── 1. Promote the draft ────────────────────────────────────────────────────
 if (doSite && isDraft) {
@@ -142,6 +150,14 @@ if (doMail) {
 if (doParty) {
   step(`DSParty notice — ${dspartyMode}`);
   ssh(`cd ${REMOTE} && set -a; . ./.env; set +a; node scripts/notify-dsparty.mjs ${dspartyMode}`);
+}
+
+// ── 8. Venue notes ──────────────────────────────────────────────────────────
+// After the drip is staged, so the note can promise the Instagram posts. Introduced
+// venues get the weekly note; anyone new becomes a draft in Andy's inbox.
+if (doVenues) {
+  step(`Venue notes — ${venuesMode}`);
+  ssh(`cd ${REMOTE} && set -a; . ./.env; set +a; node scripts/venue-notify.mjs ${venuesMode} --slug ${slug}`);
 }
 
 console.log(`\n✓ ${slug} done — ${SITE}`);
