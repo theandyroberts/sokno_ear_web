@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { resolveVenues, planNotifications, renderMessage, SIGNATURE } from "../scripts/venue-notify-lib.mjs";
+import { resolveVenues, planNotifications, renderMessage, upcomingStories, lastEventDay, SIGNATURE } from "../scripts/venue-notify-lib.mjs";
 
 const contacts: Record<string, any> = {
   ijams: { name: "Ijams Nature Center", match: ["Ijams"], instagram: "@ijamsnaturecenter", email: "info@ijams.org", introduced: null },
@@ -95,5 +95,30 @@ describe("renderMessage", () => {
     const late = new Date("2026-09-23T12:00:00-04:00").getTime();
     const { text } = renderMessage({ episode: { ...episode, date: "2026-09-16" }, name: "Earl's", contact: contacts.earls, stories: venues.get("earls")!.stories, now: late });
     expect(text).toContain("It went out on Instagram from @soknoear, tagging @earlsknoxville, too.");
+  });
+});
+
+describe("upcomingStories", () => {
+  // Episode dated Wed Sep 23; a Friday-morning run in Knoxville.
+  const ep = { date: "2026-09-23" };
+  const fri = Date.parse("2026-09-25T13:00:00Z");
+  const stories = [
+    { id: "thu", days: ["Thu"] },
+    { id: "sat", days: ["Sat"] },
+    { id: "thu-sun", days: ["Thu", "Sun"] },
+    { id: "undated" },
+  ];
+
+  it("counts days forward from the episode's Wednesday", () => {
+    expect(lastEventDay(ep, { days: ["Wed"] })).toBe("2026-09-23");
+    expect(lastEventDay(ep, { days: ["Thu", "Sun"] })).toBe("2026-09-27");
+    expect(lastEventDay(ep, {})).toBe("2026-09-27");
+  });
+  it("drops stories whose events are over and keeps the rest", () => {
+    expect(upcomingStories(ep, stories, fri).map((s) => s.id)).toEqual(["sat", "thu-sun", "undated"]);
+  });
+  it("keeps an event on the day it happens, in Knoxville time", () => {
+    // 11:30 PM Thursday in Knoxville is already Friday in UTC.
+    expect(upcomingStories(ep, [{ id: "thu", days: ["Thu"] }], Date.parse("2026-09-25T03:30:00Z"))).toHaveLength(1);
   });
 });

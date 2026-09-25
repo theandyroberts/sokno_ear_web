@@ -18,7 +18,7 @@
 // Mac mini reads that over ssh and creates the Gmail drafts through the connector.
 import fs from "node:fs";
 import path from "node:path";
-import { resolveVenues, planNotifications, renderMessage } from "./venue-notify-lib.mjs";
+import { resolveVenues, planNotifications, renderMessage, upcomingStories, lastEventDay } from "./venue-notify-lib.mjs";
 
 const mode = process.argv[2] && !process.argv[2].startsWith("--") ? process.argv[2] : "plan";
 if (!["plan", "preview", "send"].includes(mode)) {
@@ -43,10 +43,18 @@ const logPath = path.join(outDir, `${episode.slug}.json`);
 const sentLog = fs.existsSync(logPath) ? JSON.parse(fs.readFileSync(logPath, "utf8")) : {};
 
 const { venues, unresolved } = resolveVenues(episode, contacts);
+// A note only earns its keep before the event, so past stories drop out, and a
+// venue whose whole week is behind it gets nothing this time.
+const past = [];
+for (const [k, v] of venues) {
+  v.stories = upcomingStories(episode, v.stories);
+  if (!v.stories.length) { venues.delete(k); past.push(contacts[k]?.name ?? k); }
+}
 const plan = planNotifications(venues, contacts, sentLog);
 
 console.log(`venue-notify · ${episode.slug} (No. ${episode.number}) · mode=${mode}`);
 console.log(`  ${venues.size} venue(s) referenced · ${plan.filter((p) => p.action === "send").length} to send · ${plan.filter((p) => p.action === "draft").length} first-contact draft(s) · ${plan.filter((p) => p.action === "no-email").length} with no email · ${plan.filter((p) => p.action === "done").length} already sent`);
+if (past.length) console.log(`  ⌛ skipped, every event already past: ${past.join(", ")}`);
 for (const u of unresolved) console.log(`  ? ${u.id}: "${u.where}" matched no contact — add a match string or a new entry in content/contacts.json`);
 
 let resend = null;
@@ -89,6 +97,8 @@ for (const d of drafts) {
     key: d.key, name: d.name, action: d.action, to: d.to, instagram: d.contact.instagram ?? null,
     contactPage: d.contact.contactPage ?? null, subject: d.msg.subject, text: d.msg.text, html: d.msg.html,
     stories: d.stories.map((s) => s.id), writtenAt: new Date().toISOString(),
+    // The Gmail-drafts task makes no draft once this day has passed.
+    lastDay: d.stories.map((s) => lastEventDay(episode, s)).sort().at(-1),
   };
 }
 fs.writeFileSync(draftsPath, JSON.stringify(prior, null, 2) + "\n");

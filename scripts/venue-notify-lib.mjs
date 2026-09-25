@@ -56,6 +56,30 @@ export function resolveVenues(episode, contacts) {
   return { venues, unresolved };
 }
 
+const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+/**
+ * The last calendar day (YYYY-MM-DD) a story's event runs, from its `days` —
+ * weekday names counted forward from the episode date (a Wednesday). A story
+ * with no days runs the whole Wed–Sun week.
+ */
+export function lastEventDay(episode, story) {
+  const start = new Date(`${episode.date}T12:00:00Z`);
+  const offsets = (story.days ?? []).map((d) => DOW.indexOf(String(d).slice(0, 3))).filter((i) => i > -1)
+    .map((i) => (i - start.getUTCDay() + 7) % 7);
+  const off = offsets.length ? Math.max(...offsets) : 4;
+  return new Date(start.getTime() + off * 86400000).toISOString().slice(0, 10);
+}
+
+/**
+ * The point of a venue note is a reason to reshare BEFORE the event (Andy,
+ * 2026-09-25). Keep only stories whose last day is today or later, in Knoxville time.
+ */
+export function upcomingStories(episode, stories, now = Date.now()) {
+  const today = new Date(now).toLocaleDateString("en-CA", { timeZone: "America/New_York" });
+  return stories.filter((s) => lastEventDay(episode, s) >= today);
+}
+
 /**
  * Decide what happens for each venue this week.
  *   send     — introduced, has an email, not already notified for this slug
