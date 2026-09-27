@@ -69,7 +69,10 @@ export function gatherFacts(root, week, now = Date.now()) {
   };
 }
 
-/** Re-derive this week and next from the files on disk, and store the snapshots. */
+/**
+ * Re-derive this week and next from the files on disk, and store the snapshots.
+ * @param {{root?: string, weeks?: string[], now?: number, db?: any}} [opts]
+ */
 export async function sync({ root = process.cwd(), weeks, now = Date.now(), db } = {}) {
   const own = !db;
   db ??= await openStore();
@@ -85,7 +88,10 @@ export async function sync({ root = process.cwd(), weeks, now = Date.now(), db }
   return out;
 }
 
-/** Record that a task happened (or, with done:false, only leave a note on it). */
+/**
+ * Record that a task happened (or, with done:false, only leave a note on it).
+ * @param {{date?: string, task?: string, done?: boolean, note?: string|null, by?: string, db?: any}} [args]
+ */
 export async function mark({ date, task, done = true, note = null, by = "pipeline", db } = {}) {
   const own = !db;
   db ??= await openStore();
@@ -97,6 +103,7 @@ export async function mark({ date, task, done = true, note = null, by = "pipelin
   return week;
 }
 
+/** @param {{date?: string, task?: string, db?: any}} [args] */
 export async function unmark({ date, task, db } = {}) {
   const own = !db;
   db ??= await openStore();
@@ -107,7 +114,7 @@ export async function unmark({ date, task, db } = {}) {
 }
 
 /** The desk's address. The token is made once and lives in the DB, not in .env. */
-export async function deskUrl({ db } = {}) {
+export async function deskUrl(/** @type {{db?: any}} */ { db } = {}) {
   const own = !db;
   db ??= await openStore();
   let row = db.prepare("SELECT value FROM pub_meta WHERE key = 'desk_token'").get();
