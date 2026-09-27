@@ -160,6 +160,13 @@ if (doVenues) {
   ssh(`cd ${REMOTE} && set -a; . ./.env; set +a; node scripts/venue-notify.mjs ${venuesMode} --slug ${slug}`);
 }
 
+// ── 9. Publishing desk ──────────────────────────────────────────────────────
+// Each step above records itself on the VPS; this re-reads the files once more so
+// the desk is right the moment the run ends, not at the next 15-minute tick.
+step("Updating the publishing desk");
+try { ssh(`cd ${REMOTE} && node scripts/pub-status.mjs sync --week ${slug}`); }
+catch { console.log("  (desk sync failed — it will catch up on the next Instagram tick)"); }
+
 console.log(`\n✓ ${slug} done — ${SITE}`);
 if (doMail && newsletterMode === "preview") {
   console.log("  newsletter was a PREVIEW (Andy only). Real send:");

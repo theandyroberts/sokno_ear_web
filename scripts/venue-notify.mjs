@@ -103,3 +103,10 @@ for (const d of drafts) {
 }
 fs.writeFileSync(draftsPath, JSON.stringify(prior, null, 2) + "\n");
 if (drafts.length) console.log(`  ⇢ ${drafts.length} draft(s) written to ${path.relative(root, draftsPath)} for the Gmail-drafts task`);
+
+// Publishing desk: the venue rows come from the files just written.
+{
+  const { syncQuietly } = await import("./pub-status-store.mjs");
+  const { weekOf } = await import("./pub-status-lib.mjs");
+  await syncQuietly({ weeks: [weekOf(episode.slug)] });
+}

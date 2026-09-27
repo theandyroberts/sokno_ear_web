@@ -181,6 +181,14 @@ for (const to of recipients) {
   console.log(`  ${to}: ${error ? "ERROR " + results.at(-1).error : "sent " + results.at(-1).id}`);
 }
 
+// ── Publishing desk: tick the party-notice box (a preview only leaves a note) ──
+{
+  const ok = results.filter((r) => r.ok).length;
+  const { record } = await import("./pub-status-store.mjs");
+  if (mode === "send") await record({ task: "party-notice", done: ok > 0, note: `${nightlife.weekend} · sent ${ok} of ${results.length}`, by: "pipeline" });
+  else if (mode === "preview") await record({ task: "party-notice", done: false, note: "preview sent to Andy — real send still to do", by: "pipeline" });
+}
+
 if (mode === "send") {
   const sent = results.filter((r) => r.ok);
   const failed = results.filter((r) => !r.ok);

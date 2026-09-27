@@ -200,4 +200,11 @@ if (alerts.length && !dryRun) {
   if (!delivered) console.error("  ⚠ alert reached NO channel — the failure above is unreported");
 }
 
+// Publishing desk: this cron tick is the desk's heartbeat — every 15 minutes the
+// week is re-read from the files, so a post that just went out ticks its own box.
+if (!dryRun) {
+  const { syncQuietly } = await import("./pub-status-store.mjs");
+  await syncQuietly();
+}
+
 if (failed > 0) process.exit(1);

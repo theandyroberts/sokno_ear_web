@@ -92,6 +92,14 @@ for (const to of recipients) {
   console.log(`  ${to}: ${error ? "ERROR " + results.at(-1).error : "sent " + results.at(-1).id}`);
 }
 
+// ── Publishing desk: tick the newsletter box (a preview only leaves a note) ──
+{
+  const ok = results.filter((r) => r.ok).length;
+  const { record } = await import("./pub-status-store.mjs");
+  if (mode === "send") await record({ date: episode.slug, task: "newsletter", done: ok > 0, note: `sent ${ok} of ${results.length}`, by: "pipeline" });
+  else if (mode === "preview") await record({ date: episode.slug, task: "newsletter", done: false, note: "preview sent to Andy — real send still to do", by: "pipeline" });
+}
+
 // ── Publish-run recap to the city desk (send mode only) ─────────────────────
 if (mode === "send") {
   const sent = results.filter((r) => r.ok);

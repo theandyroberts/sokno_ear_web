@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
     // /stats/script.js and /stats/api/send exist; Googlebot found the script and
     // then probed the bare directory, which 404s. Disallowing the prefix keeps
     // that out of the Page indexing report without touching collection.
-    rules: { userAgent: "*", allow: "/", disallow: ["/next", "/draft/", "/stats"] },
+    rules: { userAgent: "*", allow: "/", disallow: ["/next", "/draft/", "/desk/", "/stats"] },
     sitemap: "https://soknoear.com/sitemap.xml",
     host: "https://soknoear.com",
   };
