@@ -18,6 +18,7 @@ export interface DeskItem {
 
 export interface SettledItem extends DeskItem {
   state: TaskState;
+  dueToday: boolean;
   locked: boolean;
   markedBy: string | null;
   markedAt: string | null;

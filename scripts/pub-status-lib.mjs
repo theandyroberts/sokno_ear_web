@@ -218,10 +218,13 @@ export function mergeMarks(snapshot, marks = [], now = Date.now()) {
     const marked = Boolean(m?.done);
     const done = i.done || marked;
     let state = i.state;
+    // A task with its own deadline (a venue note's send-by day) is late by THAT day,
+    // not by the day it was handed out.
     if (done) state = "done";
-    else if (!state) state = i.date < today ? "late" : "todo";
+    else if (!state) state = (i.due ?? i.date) < today ? "late" : "todo";
     return {
       ...i, done, state,
+      dueToday: !done && state === "todo" && i.due === today,
       detail: marked && m.note ? m.note : i.detail || (m?.note ?? ""),
       markedBy: marked ? m.by ?? null : null,
       markedAt: marked ? m.at ?? null : null,

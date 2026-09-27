@@ -158,6 +158,14 @@ describe("mergeMarks", () => {
     expect(find(w, "publish-check").state).toBe("late"); // Wednesday's
     expect(find(w, "ig-post:paddle").state).toBe("todo"); // Saturday's
   });
+  it("judges a task with its own deadline by that deadline", () => {
+    const sunday = at("2026-09-27T09:00:00-04:00");
+    const w = mergeMarks(deriveWeek(facts({ now: sunday })), [], sunday);
+    expect(find(w, "venue-sent:puckers")).toMatchObject({ state: "todo", dueToday: true }); // send by Sunday, and it is Sunday
+    expect(find(w, "venue-sent:kerns")).toMatchObject({ state: "missed", dueToday: false }); // Saturday's is gone
+    const friday = mergeMarks(snap, [], now);
+    expect(find(friday, "venue-sent:kerns")).toMatchObject({ state: "todo", dueToday: false }); // handed out Wednesday, due Saturday
+  });
   it("knows which day is today", () => {
     expect(mergeMarks(snap, [], now).days.filter((d: any) => d.isToday).map((d: any) => d.dow)).toEqual(["Fri"]);
   });

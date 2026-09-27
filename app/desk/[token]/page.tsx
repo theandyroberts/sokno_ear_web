@@ -36,6 +36,7 @@ function Task({ i, token, week }: { i: SettledItem; token: string; week: string 
       <div className="desk-task-body">
         <div className="desk-task-line">
           <span className="desk-task-title">{i.title}</span>
+          {i.dueToday && <span className="desk-flag desk-flag--due">due today</span>}
           {i.state === "late" && <span className="desk-flag">late</span>}
           {i.state === "failed" && <span className="desk-flag">failed</span>}
           {i.state === "missed" && <span className="desk-flag desk-flag--quiet">missed</span>}
@@ -128,7 +129,7 @@ export default async function DeskPage({ params, searchParams }: {
       <footer className="desk-foot">
         <p>
           <span className="desk-box desk-box--done desk-box--fixed desk-box--key">✓</span> with a grey edge is ticked by the pipeline from its own files and can’t be changed here.
-          An open box is yours, or Claude’s, to tick.
+          A thin empty box is the pipeline’s too, and fills itself in. A heavy empty box is yours, or Claude’s, to tick.
         </p>
         <p>Last synced {ago(w.syncedAt)}. The Instagram poster re-syncs every 15 minutes; this page refreshes itself every minute.</p>
       </footer>
@@ -186,6 +187,7 @@ const CSS = `
 .desk-chan i{width:8px;height:8px;border-radius:2px;display:inline-block}
 .desk-detail{font-family:var(--font-body);font-size:13.5px;letter-spacing:0;overflow-wrap:anywhere}
 .desk-flag{font-family:var(--font-label);font-size:10px;letter-spacing:.1em;text-transform:uppercase;background:var(--rust);color:var(--paper-cream);padding:2px 6px;border-radius:3px}
+.desk-flag--due{background:var(--gold);color:var(--ink-black)}
 .desk-flag--quiet{background:transparent;color:var(--ink-faded);border:1px solid var(--paper-edge)}
 
 .desk-box{width:24px;height:24px;border:2px solid var(--ink-black);border-radius:4px;background:var(--paper-bright);display:inline-flex;align-items:center;justify-content:center;font:700 15px/1 var(--font-body);color:var(--paper-cream);padding:0;margin-top:1px;cursor:pointer;flex:none}
@@ -196,6 +198,7 @@ button.desk-box:disabled{opacity:.6;cursor:progress}
 .desk-box--done{background:var(--green-bridge);border-color:var(--green-bridge)}
 .desk-box--done.desk-box--fixed{border-color:var(--ink-faded);box-shadow:inset 0 0 0 1px var(--paper-cream)}
 .desk-box--late{border-color:var(--rust)}
+.desk-box--fixed.desk-box--todo,.desk-box--fixed.desk-box--late{background:transparent;border-width:1px;border-color:var(--ink-faded)}
 .desk-box--failed{background:var(--rust);border-color:var(--rust)}
 .desk-box--missed{background:transparent;border-color:var(--paper-edge);color:var(--ink-faded)}
 .desk-box--skipped,.desk-box--na{background:transparent;border:2px dashed var(--paper-edge);color:var(--ink-faded)}
