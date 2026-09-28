@@ -332,11 +332,16 @@ export const CSS = `
   .g-more{border-top:1px solid var(--line);padding-top:18px;margin-top:10px}
   .g-more>summary{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);cursor:pointer;padding:6px 0}
   .g-more[open]>summary{margin-bottom:26px}
-  @media (max-width:1080px){.g-tiles{grid-template-columns:repeat(2,1fr)}.g-shots--row{grid-template-columns:repeat(3,1fr)}}
+  /* On a narrow screen the picture comes first and the list of past runs goes underneath. */
+  @media (max-width:1080px){.g-tiles{grid-template-columns:repeat(2,1fr)}.g-shots--row{grid-template-columns:repeat(3,1fr)}
+    main{order:1}.rail{order:2;border-bottom:none;border-top:1px solid var(--line)}}
   @media (max-width:760px){
     .g-head h2{font-size:28px}
     .g-two,.g-two--wide{grid-template-columns:1fr}
     .g-strip{grid-template-columns:repeat(5,minmax(0,1fr));row-gap:14px}
+    .g-cell--newday{padding-left:0;border-left:none}
+    .g-tile-v{font-size:32px}
+    .g-dials{gap:4px}
     .g-move{grid-template-columns:1fr;gap:10px}
     .g-owner{margin-left:0}
     .g-bar{grid-template-columns:96px 1fr 36px}
