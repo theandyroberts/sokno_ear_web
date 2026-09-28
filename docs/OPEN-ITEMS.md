@@ -30,7 +30,7 @@ is not sufficient: Andy runs 100+ unread on a normal day.
 
 ### 1. Venue outreach — five notes were written for him and none was sent
 **Opened:** 2026-08-11 · **Age: 48 days** (as of 2026-09-28) · **Carried through 8 Instagram reviews**
-· **Only Andy can do this** · **Push sent 2026-09-28** (next push only if the Sep 30 drafts also expire unsent)
+· **Only Andy can do this** · **Push tried 2026-09-28, phone not reached** (Remote Control was inactive on the mini, so it was desktop only; next push only if the Sep 30 drafts also expire unsent)
 
 **2026-09-28:** The venue-notes pipeline went live and put five first-contact drafts in Gmail
 on Wed Sep 23: Kern's, Earl's, Ijams, Legacy Parks, Puckers (Puckers has no email, so that one
