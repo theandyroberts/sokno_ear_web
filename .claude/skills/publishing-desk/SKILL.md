@@ -13,6 +13,20 @@ The desk has a box for every step of the week, Monday to Sunday, across four cha
 SoKnoEar.com, the Dirty South party page, Instagram, and venue notes. **Your job is to
 leave it true.** A box that stays empty after the work is done is a lie Andy will act on.
 
+## Read Andy's answers first
+
+Andy answers the week's **moves** from the Instagram dashboard (Go ahead / Don't / Done /
+Not this week, or a note). Before you start any Ear task:
+
+```bash
+node scripts/pub-status.mjs moves
+```
+
+An answer marked `▶` has not been acted on. If it is in your lane, act on it, then
+`node scripts/pub-status.mjs handled <key> "what you did"`. If it isn't, leave it for the
+task it belongs to. A move that is Claude's and has a due date is yours to deliver by
+that date. Full rules: `docs/IG-DASHBOARD.md`.
+
 ## The one command
 
 ```bash

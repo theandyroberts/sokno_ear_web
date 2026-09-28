@@ -28,7 +28,13 @@ is not sufficient: Andy runs 100+ unread on a normal day.
 
 ## Open
 
-### 1. Venue outreach — five notes were written for him and none was sent
+**Names, not numbers.** Items are called what they are ("Venue outreach"). The lettered
+tickets the Instagram reviews used until 2026-09-28 (A1–A16) meant nothing to Andy and are
+retired; where an old one appears below, its name is beside it. Things Andy can answer are
+**moves** on the dashboard (`node scripts/pub-status.mjs moves`).
+
+### 1. Venue outreach — the first notes go out with this week's drafts
+**Move:** `venue-notes` (Andy's, due Fri Oct 2)
 **Opened:** 2026-08-11 · **Age: 48 days** (as of 2026-09-28) · **Carried through 8 Instagram reviews**
 · **Only Andy can do this** · **Push tried 2026-09-28, phone not reached** (Remote Control was inactive on the mini, so it was desktop only; next push only if the Sep 30 drafts also expire unsent)
 
@@ -44,7 +50,7 @@ The week it matters to: No. 15 read 4.9 reach per post, the lowest on record, on
 Nine of them were Ijams, now 41% of everything posted since Aug 11 (31 posts, 6.9 average
 reach, never one like or reshare). Followers went 100 → 101, with no new follower in the
 five days Sep 24–28. The pipeline has run two clean weeks; the layout problem it did have
-is fixed (A16, in Closed). What's left is that the venues have never heard from the Ear.
+is fixed (two posts a day per venue, in Closed). What's left is that the venues have never heard from the Ear.
 
 **2026-09-21:** Ijams went from 14 tags to 22 in one week (8 of No. 14's 13 posts) and is now
 35% of everything posted since Aug 11, at 7.2 average reach, the lowest of any venue. It still
@@ -58,6 +64,31 @@ since August.
 
 *To close:* one first-contact note sent. `content/contacts.json` records it as `introduced`,
 and from then on that venue's weekly note goes out by itself.
+
+### 3. A weekly Reel from the audio briefing — sample owed to Andy
+**Opened:** 2026-09-28 · **Due: Mon 2026-10-05** · **Claude's** · **Move:** `weekly-reel`
+
+All 106 posts are still images, and Reels are the surface Instagram shows to people who
+don't follow an account. The Monday Oct 5 Instagram review builds a sample and puts it on
+the dashboard (`sample: {video, poster}` on the move in the data file). **Nothing posts
+until Andy answers "Go ahead".**
+
+*To build:* `ffmpeg` is at `/opt/homebrew/bin/ffmpeg` on the mini. Audio is
+`public/audio/<slug>.mp3`; banners are `public/assets/ig/<slug>/`. Aim for 30–45 seconds,
+1080×1920, the week's strongest four or five banners over the opening of the briefing,
+captions burned in (most people watch muted). Host the mp4 under
+`/var/www/note15/insta/img/soknoear/`. Publishing a Reel needs `media_type=REELS` and a
+public `video_url` in `scripts/ig-container.mjs`; don't build that half until he says go.
+
+### 4. The weekend roundup — first live week is No. 16
+**Opened:** 2026-09-28 · **Claude's** · **Move:** `weekend-roundup`
+
+Shipped 2026-09-28: the "new episode" card becomes a carousel of the weekend, a venue
+keeps three single posts, and its other stories go out as one carousel. The carousel
+publish path has only been tested against a fake Instagram. **Wednesday's publish check
+confirms the roundup posted as a carousel**, not as the fallback card (`downgradedFrom` in
+the queue means it fell back). The Oct 5 review reads: posts sent, reach per post, saves,
+and whether anyone unfollowed.
 
 ### 2. Search Console is unreadable from the Mac mini
 **Opened:** 2026-08-15 · **Age: 44 days** (as of 2026-09-28) · **Missed 2 of 3 SEO checks**
@@ -81,10 +112,10 @@ fires (1st and 15th), or open Search Console and paste the Page indexing numbers
 
 | Item | Opened | Closed | What fixed it |
 | --- | --- | --- | --- |
-| One venue filled a day of the Instagram drip (No. 15: three Ijams banners Thursday, four Saturday, read 2, 2, 7 and 2, 6, 5, 1) | 2026-09-28 | 2026-09-28 | `placeDaySlots` takes each post's venue: two posts a day per venue, the rest move earlier in the week, never before publish day, nothing dropped; 7 tests in `tests/ig-day-slots.test.ts` (A16). First live week is No. 16 |
-| Same-day Instagram posts stacked an hour apart (No. 14's Sunday: 4 Ijams banners 08–11, read 4/5/2/5) | 2026-09-21 | 2026-09-21 | `placeDaySlots` in `ig-schedule.mjs`: ≥2h same-day spacing, collisions walk earlier, overflow to the day before; `tests/ig-day-slots.test.ts` (A15) |
-| A12 measure (per-post non-follower reach) can't be read: API rejects `follow_type` on media insights | 2026-09-21 | 2026-09-21 | Measure redefined to per-post reach/views by arm plus account-level non-follower count; A/B continues through No. 16 |
-| Post failures / lead-card slot / standing cap: measures confirmed on a live week | 2026-09-15 | 2026-09-21 | No. 14: 13/13 posted, 0 retries, lead cards 13:00, 2 repeats held (A8, A9, A10 closed in the IG review) |
+| One venue filled a day of the Instagram drip (No. 15: three Ijams banners Thursday, four Saturday, read 2, 2, 7 and 2, 6, 5, 1) | 2026-09-28 | 2026-09-28 | `placeDaySlots` takes each post's venue: two posts a day per venue, the rest move earlier in the week, never before publish day, nothing dropped; 7 tests in `tests/ig-day-slots.test.ts` (two posts a day per venue). First live week is No. 16 |
+| Same-day Instagram posts stacked an hour apart (No. 14's Sunday: 4 Ijams banners 08–11, read 4/5/2/5) | 2026-09-21 | 2026-09-21 | `placeDaySlots` in `ig-schedule.mjs`: ≥2h same-day spacing, collisions walk earlier, overflow to the day before; `tests/ig-day-slots.test.ts` (same-day spacing) |
+| The image tag test's measure (per-post non-follower reach) can't be read: API rejects `follow_type` on media insights | 2026-09-21 | 2026-09-21 | Measure redefined to per-post reach/views by arm plus account-level non-follower count; A/B continues through No. 16 |
+| Post failures / lead-card slot / standing cap: measures confirmed on a live week | 2026-09-15 | 2026-09-21 | No. 14: 13/13 posted, 0 retries, lead cards 13:00, 2 repeats held (retry-and-alert, lead-card aiming and the standing cap, closed in the IG review) |
 | `www.soknoear.com` served the whole site with no redirect | 2026-09-01 | 2026-09-15 | Apex-only serving block + redirect-only 443 block for www + port-80 hop to the literal apex. `dad9825` |
 | Instagram posts failed silently and permanently (2 lost) | 2026-09-15 | 2026-09-15 | `ig-post.mjs`: in-run publish retry on transients, `failed` made non-terminal with a 4-tick budget, `notify.mjs` on exhaustion, dated posts dropped rather than published hours late |
 | Standing-item cap reset on a retitle | 2026-09-15 | 2026-09-15 | Cap counts by `social.standingKey ?? id`; `social.standing` marks an item standing from run one; 20 archive stories keyed |

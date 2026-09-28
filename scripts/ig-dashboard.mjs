@@ -142,7 +142,7 @@ function move(m, i) {
     <div class="g-move-h"><h4>${esc(m.title)}</h4><span class="g-owner">${OWNER[m.owner]}</span></div>
     <p class="g-move-why">${esc(m.why)}</p>
     <p class="g-move-plan">${esc(m.plan)}</p>
-    <div class="g-answer" hidden>
+${m.sample ? `    <video class="g-sample" controls playsinline preload="none" poster="${esc(m.sample.poster)}" src="${esc(m.sample.video)}"></video>\n` : ""}    <div class="g-answer" hidden>
       <div class="g-said" hidden></div>
       <div class="g-btns">${BUTTONS[m.owner].map(([a, l]) => `<button type="button" data-answer="${a}">${l}</button>`).join("")}</div>
       <div class="g-note"><input type="text" maxlength="400" placeholder="Or tell me something about it" aria-label="A note about ${esc(m.title)}"><button type="button" data-send>Send</button></div>
@@ -311,6 +311,7 @@ export const CSS = `
   .g-move--andy .g-owner{background:var(--alert);color:#fff}
   .g-move-why{font-size:14.8px;color:var(--ink-soft);line-height:1.55;margin-top:8px;max-width:70ch}
   .g-move-plan{font-family:var(--mono);font-size:12.5px;color:var(--gray);margin-top:8px}
+  .g-sample{display:block;width:100%;max-width:300px;aspect-ratio:9/16;border-radius:10px;background:var(--ink);margin-top:14px}
   .g-answer{margin-top:14px;padding-top:14px;border-top:1px dashed var(--line)}
   .g-btns{display:flex;gap:8px;flex-wrap:wrap}
   .g-answer button{font-family:var(--display);font-weight:600;font-size:13px;padding:9px 16px;border-radius:8px;border:1px solid var(--ink);background:var(--paper);color:var(--ink);cursor:pointer}
