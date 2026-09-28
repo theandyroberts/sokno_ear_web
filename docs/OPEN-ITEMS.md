@@ -91,5 +91,24 @@ fires (1st and 15th), or open Search Console and paste the Page indexing numbers
 | Lead cards took the 17:00 cell on a late publish | 2026-09-15 | 2026-09-15 | `nextLeadWindow` aims the pair at the next 09:00–13:00 window, clamped so it never pushes the stories it introduces |
 | `user_tags` A/B never ran | 2026-09-07 | 2026-09-15 | Deterministic 50/50 split in `ig-queue.mjs`, `user_tags` on container creation in `ig-post.mjs`, captions held identical |
 | 77 story pages had one inbound link each | 2026-09-15 | 2026-09-15 | `/archive` links every story title instead of printing it as text |
-| `/stats` 404 noise in Page indexing | 2026-09-01 | 2026-09-15 | `Disallow: /stats` in `app/robots.ts` |
+| `/stats` 404 noise in Page indexing | 2026-09-01 | 2026-09-28 | **Reverted, not fixed.** The 2026-09-15 `Disallow: /stats` prefix-matched `/stats/script.js` and blocked the Umami tracker on every page; Google mailed a "Blocked by robots.txt" alert on 2026-09-28. The 404 was the better state and is back. See the lesson below |
 | Repo nginx config had drifted from live | 2026-09-15 | 2026-09-15 | `deploy/soknoear.com.nginx` re-synced |
+
+---
+
+## Lessons
+
+**2026-09-28 — don't silence cosmetic noise with robots.txt.** The `/stats` 404 was
+logged as "Harmless" on 2026-09-01 and then "fixed" anyway on 2026-09-15. `Disallow`
+is a prefix match, so the fix blocked `/stats/script.js` — the analytics tracker on
+100% of pages — and produced a louder problem than the one it removed, thirteen days
+later, by email, to Andy.
+
+Two rules out of it:
+
+1. **A `Disallow` path blocks everything beneath it.** Before adding one, list what
+   actually serves under that prefix. `curl` each path.
+2. **Noise that a check has already called harmless does not need fixing.** A 404
+   ages out on its own. A robots block does not — it stays in the report indefinitely
+   and can be indexed with no content. Removing a report row is not a goal; the
+   report is an instrument, not the thing being optimised.
