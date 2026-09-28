@@ -151,6 +151,12 @@ either line counts. What must never happen is neither line naming it.
 
 House style still applies inside the band: **"Ijams Park," never bare "Ijams."**
 
+**The band's color is not the place's color.** On the site a pill's color is how you
+find a place, one color each. On Instagram that made a week of Ijams Park stories a wall
+of teal (9 banners of 12 in No. 15). `scripts/ig-banners.py` gives the first story from
+a place its own color and spreads the rest across gold, rust, green, ink and teal.
+`social.igBand` names one outright.
+
 `scripts/ig-queue.mjs` warns at approval time when a banner names no tagged venue,
 or when a dated item carries no day or time. Genuine exceptions — a multi-venue
 roundup like the specials board, or an org co-presenter tagged beside the real

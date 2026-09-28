@@ -2,6 +2,7 @@
 """Composite titled banners onto the week's engravings for Instagram.
 
     python3 scripts/ig-banners.py <episode-slug>
+    python3 scripts/ig-banners.py <episode-slug> --colors   # print the band colors, draw nothing
 
 Reads content/episodes/<slug>.json; for every story with social.igBanner
 (["Line one", "line two"]) it takes the story's engraving from public/ and
@@ -9,7 +10,9 @@ writes public/assets/ig/<slug>/<id>.jpg. scripts/ig-queue.mjs prefers these
 automatically.
 
 Design — the Ear's own print language, readability first:
-  · band color = the story's labelColor (teal/green/gold/rust/ink) — varied, on-palette
+  · band color = the place's own color for the FIRST story from that place, then
+    whichever palette color the week has used least (see band_colors) — a week of
+    Ijams Park stories used to come out as a wall of teal
   · double ink rule between art and band; thin keyline frame inset in the band
   · line 1: PT Serif Bold (the site's headline font)
   · line 2: Special Elite caps, letterspaced, flanked by ★ (the label/ribbon look)
@@ -33,6 +36,45 @@ BAND = {  # story labelColor → band fill (app/ds/colors.css)
     "ink": "#171512",
 }
 DARK_BANDS = {"rust", "green", "ink"}  # cream text; light bands get ink text
+
+# Order a story reaches for when its place's color is already taken. Gold first: the
+# three best-read banners on record are gold, and no gold banner has read below 8.
+ROTATION = ["gold", "rust", "green", "ink", "teal"]
+
+def has_banner(s):
+    return bool((s.get("social") or {}).get("igBanner")) and bool(s.get("image"))
+
+def band_colors(stories):
+    """Band color for each story that gets a banner: {story id: color name}.
+
+    A story's labelColor is its PLACE (Old Sevier rust, Ijams Park teal, Kern's green).
+    That is right for the pills on the site, where the color is how you find a place.
+    On Instagram it meant the band said only how many stories a place had: No. 15 was
+    9 teal banners out of 12 and No. 14 was 8 of 11, while the six best posts on record
+    are gold, ink, gold, rust, green and gold (docs/ig-reviews/2026-09-28.md).
+
+    So, in the episode's own order: the first story from a place keeps the place's
+    color; every later story from that place takes the color the week has used least,
+    ROTATION breaking ties. `social.igBand` names a color outright and always wins.
+    """
+    used = {c: 0 for c in ROTATION}
+    places = set()
+    out = {}
+    for s in stories:
+        if not has_banner(s):
+            continue
+        place = s.get("labelColor", "rust")
+        forced = (s.get("social") or {}).get("igBand")
+        if forced in BAND:
+            color = forced
+        elif place in BAND and place not in places:
+            color = place
+        else:
+            color = min(ROTATION, key=lambda c: (used[c], ROTATION.index(c)))
+        places.add(place)
+        used[color] = used.get(color, 0) + 1
+        out[s["id"]] = color
+    return out
 
 def font(name: str, size: int) -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(str(FONT_DIR / name), size)
@@ -125,14 +167,19 @@ def banner(src, dst, line1, line2, label_color):
 def main():
     slug = sys.argv[1]
     episode = json.loads((ROOT / "content" / "episodes" / f"{slug}.json").read_text())
+    stories = [episode["feature"], *episode["stories"]]
+    colors = band_colors(stories)
+    if "--colors" in sys.argv:
+        print(json.dumps(colors))
+        return
     made = 0
-    for s in [episode["feature"], *episode["stories"]]:
-        lines = (s.get("social") or {}).get("igBanner")
-        if not lines or not s.get("image"):
+    for s in stories:
+        if not has_banner(s):
             continue
+        lines = s["social"]["igBanner"]
         src = ROOT / "public" / s["image"].lstrip("/")
         dst = ROOT / "public" / "assets" / "ig" / slug / f"{s['id']}.jpg"
-        banner(src, dst, lines[0], lines[1] if len(lines) > 1 else "", s.get("labelColor", "rust"))
+        banner(src, dst, lines[0], lines[1] if len(lines) > 1 else "", colors[s["id"]])
         made += 1
     print(f"{made} banner image(s) for {slug}")
 

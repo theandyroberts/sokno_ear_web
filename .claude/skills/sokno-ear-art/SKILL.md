@@ -20,28 +20,75 @@ Three generation modes. All use the **Higgsfield MCP** (`generate_image`,
 - **Place under:** `public/assets/spots/<name>.jpg` (art) or
   `public/assets/diagrams/<name>` (diagrams); reference in the episode JSON
   `image` / `imageTop` field, or in a page `<Figure>`.
-- After viewing each result with the Read tool, only ship it if it reads at small size.
+- After viewing each result with the Read tool, only ship it if it reads at small size
+  (the 120-pixel test under Mode 1).
 
 ---
 
 ## Mode 1 — Category & article illustrations (text → engraving)
 
-For scene/object spot art (events, food, places, abstract concepts). No real people.
+For spot art (events, food, places, abstract concepts). No real, recognizable people.
+
+### One subject, close in (Andy, 2026-09-28)
+
+**Pick one thing and fill the frame with it. Do not draw the scene.** The picture is
+seen first as a thumbnail an inch wide, in a feed, by someone who has not read the
+story. A wide view of a place with small figures in it turns to grey texture at that
+size. One large subject still reads.
+
+The six best-read Instagram posts on record are a plate and two glasses, a margarita, a
+gavel on a newspaper, a banjo and a pair of boots: one object, close. The week that
+read lowest (No. 15, 4.9 reach a post) was a quarry from the far bank, a class seen
+from the back of the room, a lawn, a trail through the woods.
+
+Before writing the prompt, answer: **what is the one thing, and what is it doing?**
+
+| The story | Don't draw | Draw |
+| --- | --- | --- |
+| A hula-hoop class | The class, the room | A hoop spinning at one dancer's bare waist, cropped from ribs to hips |
+| A circus on the lawn | The tent, the crowd, the whole troupe | One clown breathing fire, from the chest up |
+| DJs or a band at the quarry | The quarry with a stage in the distance | A singer sweating into the microphone, eyes shut |
+| A guided night paddle | The river, the bank, the moon, the boats | One paddle blade breaking the water, the moon in the drips |
+| A bat walk | People on a trail at dusk | One bat, wings open, filling the frame |
+| A wildflower walk | A meadow | One bloom with a bee on it, hand for scale |
+| A food hall's game day | The hall and its screens | A hand lifting one loaded slice, or a beer at the moment it's poured |
+
+Rules for the prompt:
+
+- **Name the subject first**, then the crop: "extreme close-up", "cropped from the chest
+  up", "fills the frame edge to edge". Say what is out of frame if the model keeps
+  pulling back ("no horizon, no background scenery").
+- **The subject takes two thirds of the picture or more.** If you can see the ground
+  it stands on and the sky above it, you are too far away.
+- **Something is happening.** Spinning, pouring, breathing fire, breaking the water.
+  A subject at rest is a catalogue photo.
+- **People are fine and usually better**: a body part, a gesture, a face in the act.
+  Nobody real or recognizable (that's Mode 2), and nothing you wouldn't run in a
+  family newspaper.
+- **One week, many subjects.** Seven stories from one park must not be seven views of
+  the park. Check the week's pictures side by side before shipping any of them.
+- A place may still be the subject when the place is the news (a building opening, a
+  road closing). Then draw one telling piece of it, close: the new sign, the barricade.
+
+**The test:** shrink it to 120 pixels wide. If you can't say what it is in two words,
+redo it closer.
 
 - **Model:** `recraft-v4-1`, `model_type: "standard"`
 - **Params:** `colors: ["#171512","#F3E8D2","#7FAEA3","#A94A34"]`,
   `background_color: "#F3E8D2"`, `aspect_ratio` per layout
   (`1:1` spot, `3:4` portrait, `16:9`/`3:2` banner)
 - **Prompt template:**
-  > "A vintage local-newspaper engraving for a South Knoxville article about
-  > **[subject/scene, specific to SoKno]**. **[key visual details]**.
+  > "A vintage local-newspaper engraving: **[the one subject, and what it is doing]**,
+  > **[the crop — extreme close-up / from the chest up / fills the frame edge to edge]**.
+  > **[two or three telling details on the subject itself]**. No wide view, no
+  > background scenery.
   > Predominantly black ink linework with stipple dots and cross-hatch shading,
   > slight engraving texture, warm cream paper background, restrained accents in
   > muted teal and rust red. Charming and specific, not generic. Hand-drawn local
   > newspaper engraving, not a photograph, not flat vector. No text or letters anywhere."
 
-Examples shipped: bird-banding (gloved hands), fireflies at Ijams, Kern's mac &
-cheese, Old Sevier traffic circle, Serena solo portrait.
+Shipped examples that got it right: bird-banding (two gloved hands and one bird),
+Kern's mac & cheese (the dish), Earl's margarita (the glass).
 
 ---
 
