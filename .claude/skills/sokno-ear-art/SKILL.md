@@ -70,6 +70,23 @@ Rules for the prompt:
 - A place may still be the subject when the place is the news (a building opening, a
   road closing). Then draw one telling piece of it, close: the new sign, the barricade.
 
+### Close in is not macro (Andy, 2026-09-28, on No. 16)
+
+Close means the subject fills the frame. It does not mean a specimen under glass. Three
+No. 16 pictures followed the rule above and still put him off: a giant eye behind a lens
+over moss, a paddler drawn from under the chin, a hoop floating in front of a torso.
+
+- **Ask whether you'd want to be there.** Fun, whimsy, attractiveness and composition
+  count as much as the crop. A smiling person with a magnifying glass held up to the
+  moss beats the moss at ten times life size.
+- **Show the face when there is one,** from an angle a friend would see it. No severed
+  eyes, no up-the-nostrils, no body parts that read as anatomy.
+- **Get the physics right.** A hoop goes around the waist, with the far side hidden
+  behind the body. A paddle is in the hands. If the object is in the wrong place the
+  picture reads as wrong before it reads as anything else.
+- **Whole bodies need their clothes named** ("teal tank top and full-length leggings").
+  Left unsaid, the model has drawn a yoga figure unclothed.
+
 **The test:** shrink it to 120 pixels wide. If you can't say what it is in two words,
 redo it closer.
 
