@@ -2,6 +2,7 @@
 //   node scripts/ig-queue.mjs            → build queue for the latest episode, print for review
 //   node scripts/ig-queue.mjs <slug>     → build for a specific episode
 //   node scripts/ig-queue.mjs --json     → machine-readable only
+//   node scripts/ig-queue.mjs --no-roundup → the old shape: a "new episode" card and every story as a single
 //
 // One post per story, scheduled on the day the thing actually happens (stories
 // carry `days` already). The feature and any undated news post on publish day.
@@ -12,6 +13,7 @@ import path from "node:path";
 import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, DAY_START_HOUR, placeDaySlots, SAME_DAY_GAP_H, MAX_VENUE_POSTS_PER_DAY } from "./ig-schedule.mjs";
 import { priorRunsById, pickRepeatsToDrop, standingKeyOf, MAX_REPEATS_PER_EPISODE } from "./ig-repeats.mjs";
 import { checkBanner } from "./ig-banner-check.mjs";
+import { buildRoundup, buildVenueRoundup, pickSingles, roundupIsOn, MAX_SINGLES_PER_VENUE } from "./ig-roundup.mjs";
 
 const SITE = "https://soknoear.com";
 const BASE_HASHTAGS = "#SoKno #SouthKnoxville #Knoxville #SouthKnoxvilleEar";
@@ -124,6 +126,7 @@ function abBucket(id) {
 const stories = [{ ...episode.feature, __isFeature: true }, ...episode.stories];
 const posts = [];
 const warnings = [];
+const featureIds = new Set();
 
 for (const s of stories) {
   if (!s.image) continue;
@@ -168,6 +171,7 @@ for (const s of stories) {
     ? tags.slice(0, 1).map((t) => ({ username: t.replace(/^@/, ""), x: 0.5, y: 0.88 }))
     : undefined;
 
+  if (s.__isFeature) featureIds.add(s.id);
   posts.push({
     id: s.id,
     title: s.title,
@@ -212,6 +216,73 @@ if (droppedKeys.length) {
       : `${key}${alias}: declared standing — held out of the drip (cap ${MAX_REPEATS_PER_EPISODE}/week)`);
   }
   for (let i = posts.length - 1; i >= 0; i--) if (droppedKeys.includes(posts[i].standingKey)) posts.splice(i, 1);
+}
+
+// ── The weekend roundup. One carousel carries the whole episode and replaces the
+// "new episode" card; each venue keeps at most three single posts and the rest of
+// its stories appear only in the roundup. Off when Andy answered "Don't" to the move
+// on the dashboard, when --no-roundup is passed, when the cover card hasn't been
+// drawn, or when this queue already went out the old way (restaging a past week must
+// never publish a roundup for it). See scripts/ig-roundup.mjs.
+const queuePath = path.join(process.cwd(), "content", "ig-queue", `${episode.slug}.json`);
+let prevQueue = null;
+try { prevQueue = JSON.parse(fs.readFileSync(queuePath, "utf8")); } catch { /* first staging */ }
+const wentOutTheOldWay = Boolean(prevQueue?.posts?.some((p) => p.id === "episode-drop" && p.status !== "pending"));
+
+let moves = [];
+try {
+  const { hasStore, openStore } = await import("./pub-status-store.mjs");
+  if (hasStore()) {
+    const { listMoves } = await import("./pub-status-lib.mjs");
+    const db = await openStore();
+    moves = listMoves(db, { all: true });
+    db.close();
+  }
+} catch (e) { warnings.push(`could not read Andy's answers (${e.message}) — building with the roundup on`); }
+
+const assetUrl = (id) => `${SITE}/assets/ig/${episode.slug}/${id}.jpg`;
+const hasAsset = (id) => fs.existsSync(path.join(process.cwd(), "public", "assets", "ig", episode.slug, `${id}.jpg`));
+let roundup = null;
+if (args.includes("--no-roundup")) warnings.push("roundup off (--no-roundup)");
+else if (!roundupIsOn(moves)) warnings.push("roundup off — Andy answered “Don't” on the dashboard");
+else if (wentOutTheOldWay) warnings.push("roundup off — this week already went out with the episode card");
+else if (!hasAsset("episode-drop")) warnings.push("roundup off — no cover card (run scripts/ig-promos.py)");
+else {
+  const { fold } = pickSingles(posts.map((p) => ({ id: p.id, tags: p.tags, feature: featureIds.has(p.id) })));
+  const withBanner = stories.filter((s) => s.image && !s.social?.igSkip && hasAsset(s.id));
+  roundup = buildRoundup({
+    episode,
+    stories: withBanner,
+    bannerUrl: (s) => assetUrl(s.id),
+    coverUrl: assetUrl("episode-drop"),
+    tagsOf: (s) => resolveTags(s).tags,
+    hashtags: BASE_HASHTAGS,
+  });
+  if (!roundup) warnings.push("roundup off — fewer than three stories have a banner");
+  else {
+    // A venue's folded stories go out together, in one carousel of their own. A story
+    // only leaves the singles if a carousel really carries it.
+    const byVenue = new Map();
+    for (const id of fold) {
+      const handle = posts.find((x) => x.id === id).tags[0];
+      byVenue.set(handle, [...(byVenue.get(handle) ?? []), id]);
+    }
+    for (const [handle, ids] of byVenue) {
+      const [key, entry] = Object.entries(registry.handles ?? {}).find(([, v]) => v.handle === handle) ?? [];
+      const folded = withBanner.filter((s) => ids.includes(s.id));
+      const vr = key && buildVenueRoundup({
+        key, name: entry.copyName ?? entry.name ?? handle, handle, episode,
+        stories: folded, bannerUrl: (s) => assetUrl(s.id), hashtags: BASE_HASHTAGS,
+      });
+      if (!vr) continue; // one story on its own keeps its single post
+      const slots = posts.filter((x) => vr.stories.includes(x.id)).map((x) => x.postAt).sort();
+      for (let i = posts.length - 1; i >= 0; i--) if (vr.stories.includes(posts[i].id)) posts.splice(i, 1);
+      // It goes out the morning of the first thing in it (never before publish day).
+      const day = slots[0].slice(0, 10) < episode.date ? episode.date : slots[0].slice(0, 10);
+      posts.push({ ...vr, postAt: `${day}T${String(DEFAULT_HOUR).padStart(2, "0")}:00:00-04:00`, permalink: `${SITE}/${episode.slug}`, dated: false, status: "pending" });
+      warnings.push(`${handle}: ${MAX_SINGLES_PER_VENUE} single posts this week, and ${vr.stories.length} more in one carousel (${vr.stories.join(", ")})`);
+    }
+  }
 }
 
 // ── Same-day spacing (A15) and the venue cap (A16). Stories were stamped with the
@@ -318,6 +389,19 @@ const PROMOS = [
 for (const pr of PROMOS) {
   const rel = `/assets/ig/${episode.slug}/${pr.id}.jpg`;
   if (!fs.existsSync(path.join(process.cwd(), "public", rel))) continue;
+  if (pr.id === "episode-drop" && roundup) {
+    // The roundup takes the episode card's place, and its slot, at the head of the drip.
+    posts.push({
+      ...roundup,
+      fallbackCaption: pr.caption,
+      postAt: isoPromoSlot(pr.offset),
+      permalink: SITE,
+      lead: true,
+      leadOrder: pr.offset,
+      status: "pending",
+    });
+    continue;
+  }
   posts.push({
     id: pr.id,
     title: pr.title,
@@ -380,7 +464,7 @@ if (jsonOnly) {
     const when = new Date(p.postAt);
     console.log("─".repeat(64));
     console.log(`${DOW[when.getDay()]} ${when.toLocaleDateString("en-US", { month: "short", day: "numeric" })} · ${when.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}   [${p.id}]`);
-    console.log(`image: ${p.imageUrl}`);
+    console.log(p.slides?.length ? `carousel: ${p.slides.length} slides — ${p.stories.join(", ")}` : `image: ${p.imageUrl}`);
     console.log(`tags:  ${p.tags.length ? p.tags.join(" ") : "(none)"}`);
     console.log("");
     console.log(p.caption.split("\n").map((l) => "  " + l).join("\n"));

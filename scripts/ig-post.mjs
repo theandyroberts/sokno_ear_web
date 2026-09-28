@@ -27,6 +27,8 @@
 process.env.TZ = "America/New_York"; // all slot math is SoKno-local
 import fs from "node:fs";
 import path from "node:path";
+import { publishPost } from "./ig-container.mjs";
+import { downgradeCarousel } from "./ig-roundup.mjs";
 
 const GRAPH = process.env.IG_GRAPH_BASE || "https://graph.instagram.com/v22.0";
 const args = process.argv.slice(2);
@@ -38,22 +40,11 @@ const IG_ACCESS_TOKEN = process.env.IG_ACCESS_TOKEN;
 
 /** Cron ticks to spend on one post before giving up and shouting. ~1h at 15-min ticks. */
 const MAX_ATTEMPTS = 4;
-/** In-run publish retries, and the waits between them. Deliberately short: the cron
- *  tick is the long backoff, so holding this process for 10 minutes would just make
- *  runs overlap. Worst case here is ~75s. */
-const PUBLISH_BACKOFF_MS = [5000, 20000, 50000];
+/** Tries a carousel gets before it is sent as a single image instead. */
+const CAROUSEL_TRIES = 2;
 /** How late a DATED post may be before it is dropped rather than published. Slots sit
  *  ~3h ahead of doors, so 4h late means the thing has started. */
 const STALE_AFTER_MS = 4 * 60 * 60 * 1000;
-/** Meta's transient publish errors — the container is fine, the media just is not ready. */
-const TRANSIENT_CODES = new Set([9007, 2207027, 1, 2]);
-
-function isTransient(payload) {
-  const e = payload?.error ?? {};
-  return TRANSIENT_CODES.has(Number(e.code)) || TRANSIENT_CODES.has(Number(e.error_subcode))
-    || /not ready|try again|transient|temporarily/i.test(String(e.message ?? ""));
-}
-
 const alerts = [];
 
 const dir = path.join(process.cwd(), "content", "ig-queue");
@@ -91,7 +82,8 @@ for (const file of files) {
 
     if (dryRun) {
       console.log(`WOULD POST [${q.slug}/${post.id}] scheduled ${post.postAt}`);
-      console.log(`  image: ${post.imageUrl}`);
+      if (post.slides?.length) console.log(`  carousel, ${post.slides.length} slides:\n${post.slides.map((u) => "    " + u).join("\n")}`);
+      else console.log(`  image: ${post.imageUrl}`);
       console.log(`  tags:  ${post.tags.join(" ") || "(none)"}`);
       if (post.userTags?.length) console.log(`  user_tags: ${post.userTags.map((t) => "@" + t.username).join(" ")}  [A/B: ${post.abGroup}]`);
       else if (post.abGroup) console.log(`  user_tags: (none)  [A/B: ${post.abGroup}]`);
@@ -105,53 +97,8 @@ for (const file of files) {
     }
 
     try {
-      // 1. container  (form-encoded — the Graph endpoints accept this universally)
-      // A12: `user_tags` tags the venue IN THE IMAGE, which is the one surface in this
-      // pipeline that puts a post in front of non-followers. ig-queue.mjs sets it on
-      // half the tagged story banners (`abGroup`), captions held identical.
-      const createBody = {
-        image_url: post.imageUrl,
-        caption: post.caption,
-        access_token: IG_ACCESS_TOKEN,
-      };
-      if (post.userTags?.length) createBody.user_tags = JSON.stringify(post.userTags);
-      const createRes = await fetch(`${GRAPH}/${IG_USER_ID}/media`, {
-        method: "POST",
-        body: new URLSearchParams(createBody),
-      });
-      const created = await createRes.json();
-      if (!createRes.ok || !created.id) throw new Error(`container: ${JSON.stringify(created).slice(0, 300)}`);
-
-      // 1b. wait for Meta to fetch + process the image — publishing immediately
-      // races the processing and fails with code 9007 "media not ready".
-      let ready = false;
-      for (let i = 0; i < 10; i++) {
-        const stRes = await fetch(`${GRAPH}/${created.id}?fields=status_code&access_token=${encodeURIComponent(IG_ACCESS_TOKEN)}`);
-        const st = await stRes.json().catch(() => ({}));
-        if (st.status_code === "FINISHED") { ready = true; break; }
-        if (st.status_code === "ERROR") throw new Error(`container processing ERROR: ${JSON.stringify(st).slice(0, 200)}`);
-        await new Promise((r) => setTimeout(r, 4000));
-      }
-      if (!ready) throw new Error("container never reached FINISHED after 40s");
-
-      // 2. publish — retried on a transient, because "FINISHED" is not a promise.
-      // Both silent losses happened exactly here: the container reported FINISHED and
-      // media_publish still came back 9007 / 2207027. The container stays valid for 24h,
-      // so re-issuing against the same creation_id is safe and is not a duplicate post.
-      let published = null;
-      for (let attempt = 0; attempt <= PUBLISH_BACKOFF_MS.length; attempt++) {
-        const pubRes = await fetch(`${GRAPH}/${IG_USER_ID}/media_publish`, {
-          method: "POST",
-          body: new URLSearchParams({ creation_id: created.id, access_token: IG_ACCESS_TOKEN }),
-        });
-        const body = await pubRes.json().catch(() => ({}));
-        if (pubRes.ok && body.id) { published = body; break; }
-        const retryable = isTransient(body) && attempt < PUBLISH_BACKOFF_MS.length;
-        if (!retryable) throw new Error(`publish: ${JSON.stringify(body).slice(0, 300)}`);
-        console.warn(`  … publish transient (attempt ${attempt + 1}), retrying in ${PUBLISH_BACKOFF_MS[attempt] / 1000}s`);
-        await new Promise((r) => setTimeout(r, PUBLISH_BACKOFF_MS[attempt]));
-      }
-      if (!published) throw new Error("publish: exhausted in-run retries");
+      // Container(s), wait, publish — one image or a carousel. See ig-container.mjs.
+      const published = await publishPost(post, { graph: GRAPH, userId: IG_USER_ID, token: IG_ACCESS_TOKEN });
 
       post.status = "posted";
       post.igMediaId = published.id;
@@ -162,6 +109,14 @@ for (const file of files) {
       post.attempts = (post.attempts ?? 0) + 1;
       post.error = String(err.message ?? err).slice(0, 400);
       post.lastAttemptAt = new Date().toISOString();
+      // A carousel that has failed twice goes out as the plain card it replaced, so
+      // the episode is still announced. The remaining attempts are spent on that.
+      const plain = post.attempts >= CAROUSEL_TRIES ? downgradeCarousel(post) : null;
+      if (plain) {
+        console.warn(`↓ ${q.slug}/${post.id}: carousel failed ${post.attempts}× — falling back to the single card`);
+        for (const k of Object.keys(post)) delete post[k];
+        Object.assign(post, plain);
+      }
       if (post.attempts < MAX_ATTEMPTS) {
         // Stay pending. The 15-minute cron is the backoff — retries cost nothing.
         post.status = "pending";
