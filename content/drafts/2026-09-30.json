@@ -1,0 +1,1342 @@
+{
+  "slug": "2026-09-30",
+  "volume": 1,
+  "number": 16,
+  "episode": "Weekend Episode",
+  "date": "2026-09-30",
+  "dateLabel": "Thu–Sun, Oct 1–4, 2026",
+  "shortDate": "Oct 1–4",
+  "place": "South Knoxville, TN",
+  "feature": {
+    "id": "carrie-on-the-lawn",
+    "label": "Ijams Park",
+    "labelColor": "teal",
+    "days": [
+      "Fri"
+    ],
+    "layout": "imageTop",
+    "image": "/assets/spots/carrie_bucket.jpg",
+    "imageCaption": "The bucket, the tiara, and the last movie of the season",
+    "title": "\"Carrie\" closes the outdoor movie season on the Ijams Park lawn",
+    "deck": "The last Movies Under the Stars of the year is the original prom-night horror, fifty years old this fall, shown outdoors on the first Friday of October with the woods right behind the screen.",
+    "facts": [
+      {
+        "label": "When",
+        "value": "Fri Oct 2 · doors 6 PM · movie at dark, about 7:30"
+      },
+      {
+        "label": "Where",
+        "value": "Visitor Center lawn, Ijams Park · 2915 Island Home Ave"
+      },
+      {
+        "label": "Cost",
+        "value": "$12 · members of Ijams Park or Central Cinema get a discount code by phone"
+      },
+      {
+        "label": "The film",
+        "value": "\"Carrie\" (1976) · directed by Brian De Palma · Sissy Spacek · 98 minutes"
+      },
+      {
+        "label": "Food & drink",
+        "value": "Food trucks and the Ijams beer garden · no coolers, no outside alcohol"
+      },
+      {
+        "label": "Dogs",
+        "value": "Welcome, on a leash"
+      },
+      {
+        "label": "Sunset",
+        "value": "7:18 PM"
+      },
+      {
+        "label": "Weather",
+        "value": "Mostly sunny and 89 on Friday · a 30% chance of a shower from mid-afternoon into the evening"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Ijams Park and Central Cinema have been showing movies on the Visitor Center lawn since spring, and Friday is the last one of the season. They saved the right film for October: the original \"Carrie,\" Brian De Palma's 1976 adaptation of the first novel Stephen King ever published, with Sissy Spacek as the girl nobody at school should have pushed that far. It came out in November 1976, which makes it fifty years old this fall."
+      },
+      {
+        "type": "subhead",
+        "text": "Why outdoors is the way to see it"
+      },
+      {
+        "type": "paragraph",
+        "text": "A horror movie plays differently with no walls. The screen goes up on the lawn, the sun sets at 7:18, and by the time the prom scene arrives the only light for a quarter mile is the one on the screen, with the tree line sitting dark behind it. The film runs 98 minutes, so a 7:30 start has everyone walking back to the car a little after nine. It is an R-rated movie, and the park allows dogs on a leash, so plan the rest of the household accordingly."
+      },
+      {
+        "type": "subhead",
+        "text": "The practical part"
+      },
+      {
+        "type": "paragraph",
+        "text": "Doors open at six, and the hour and a half before dark is for dinner: food trucks are on the property and the Ijams beer garden is open. Coolers and outside alcohol stay home. Bring a lawn chair or a blanket. Tickets are $12 a person, and members of either Ijams Park or Central Cinema can call (865) 577-4717, extension 1001, for a discount code. Friday is 89 and mostly sunny with a 30 percent chance of a shower after two o'clock and into the evening, so check the event page before you load the chairs."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ijams Park — Movies Under the Stars: \"Carrie\"",
+        "url": "https://www.ijams.org/event-details/movies-under-the-stars-carrie"
+      },
+      {
+        "label": "Wikipedia — Carrie (1976 film)",
+        "url": "https://en.wikipedia.org/wiki/Carrie_(1976_film)"
+      },
+      {
+        "label": "National Weather Service — Knoxville forecast",
+        "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+      }
+    ],
+    "event": {
+      "startDate": "2026-10-02T18:00:00-04:00",
+      "endDate": "2026-10-02T22:00:00-04:00",
+      "locationName": "Ijams Nature Center",
+      "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+    },
+    "social": {
+      "igTags": [
+        "ijams"
+      ],
+      "igBanner": [
+        "\"Carrie\" on the lawn at Ijams Park",
+        "Friday, doors at six, movie at dark"
+      ]
+    }
+  },
+  "scanner": [
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "hot": true,
+      "image": "/assets/spots/carrie_bucket.jpg",
+      "title": "\"Carrie\" outdoors, the last movie of the season",
+      "blurb": "Friday on the Visitor Center lawn. Doors at six, movie at dark, twelve dollars, food trucks and the beer garden.",
+      "cue": "Jump to story",
+      "href": "#carrie-on-the-lawn"
+    },
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "hot": true,
+      "image": "/assets/spots/kerns_lure_mural.jpg",
+      "title": "Giant fishing lures on the Kern's tower",
+      "blurb": "\"Shiny Objects,\" a mural for the SoKno Art Walk, is painted to look like it's hanging off the wall. Free to look at, any day.",
+      "cue": "Jump to story",
+      "href": "#kerns-lure-mural"
+    },
+    {
+      "label": "Urban Wilderness",
+      "labelColor": "ink",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/trail_work_party.jpg",
+      "title": "A trail work party at Baker Creek, lunch after",
+      "blurb": "Saturday nine to noon. The bike club brings the tools, you bring gloves, and the sponsors feed you at twelve.",
+      "cue": "Jump to story",
+      "href": "#baker-creek-work-party"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/puckers_plate.jpg",
+      "title": "Brunch at Puckers, then Auburn at 3:30",
+      "blurb": "Nine to two Saturday and Sunday with every screen on. Saturday's kickoff comes ninety minutes after the last plate.",
+      "cue": "Jump to story",
+      "href": "#puckers-auburn"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/storytime_frog.jpg",
+      "title": "Frogs and toads at free Saturday storytime",
+      "blurb": "Ten to noon in the woods at the Nature Playscape. Picture books about amphibians, then the run of the place.",
+      "cue": "Jump to story",
+      "href": "#storytime-frogs"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "hot": false,
+      "image": "/assets/spots/bird_release.jpg",
+      "title": "Watch songbirds get banded and let go",
+      "blurb": "Sunday at eight at Mead's Quarry, five dollars with parking included. It's the last banding morning on the calendar.",
+      "cue": "Jump to story",
+      "href": "#bird-banding"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "hot": false,
+      "image": "/assets/spots/gong_sound_bath.jpg",
+      "title": "A sound bath indoors on the rainy day",
+      "blurb": "Sunday at ten in the Visitor Center. Singing bowls and a gong for an hour, twenty-five dollars, bring a mat.",
+      "cue": "Jump to story",
+      "href": "#sound-bath"
+    },
+    {
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "hot": false,
+      "image": "/assets/spots/earls_slice.jpg",
+      "title": "Earl's game-day board is on all Saturday",
+      "blurb": "A different deal every day, Thursday through Sunday, and two dollars off pizza and drafts for the Auburn game.",
+      "cue": "Jump to story",
+      "href": "#specials-board"
+    }
+  ],
+  "stories": [
+    {
+      "id": "starlight-paddle",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/starlight_paddle.jpg",
+      "imageCaption": "No moon until 11:41",
+      "title": "A starlight paddle goes out on a moonless river Friday night",
+      "deck": "The moon doesn't rise until 11:41 Friday night, so the two hours Ijams Park naturalists spend on the Tennessee River after sunset belong to the stars, clouds permitting.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 2 · 7–9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams River Landing · 3507 Island Home Pike"
+        },
+        {
+          "label": "Cost",
+          "value": "$45 · kayak, life vest and headlamp included"
+        },
+        {
+          "label": "Ages",
+          "value": "14 and up · under 18 with an adult"
+        },
+        {
+          "label": "The sky",
+          "value": "Sunset 7:18 PM · moonrise 11:41 PM"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly cloudy Friday night · 30% chance of a shower · low 66"
+        },
+        {
+          "label": "Waiver",
+          "value": "One adventure release per calendar year"
+        },
+        {
+          "label": "More dates",
+          "value": "Oct 16 · Oct 17 · Oct 30 · all at 7 PM"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Last week the park paddled under a full Harvest Moon. This week it does the opposite. Friday's Starlight Paddle leaves the River Landing on Island Home Pike at seven, eighteen minutes before sunset, and the moon does not come up until 11:41 that night, so once the light is gone the river is as dark as it gets this close to a city. Ijams Park naturalists lead the two hours and talk through what lives along the bank after dark and what is overhead."
+        },
+        {
+          "type": "subhead",
+          "text": "What the forecast says"
+        },
+        {
+          "type": "paragraph",
+          "text": "The sky is the open question. Friday night is forecast mostly cloudy with a 30 percent chance of a shower and a low of 66, which is warm for October and comfortable on the water. If the clouds win, the river at night is still the river at night, and the same paddle runs again October 16, 17 and 30."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "Forty-five dollars covers the kayak, the life vest and a headlamp. It is built for ages fourteen and up, and anyone under eighteen comes with an adult. Bring water and clothes you can paddle in. Everyone signs the adventure release once a year if they haven't already. Register ahead rather than driving down."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Starlight Paddle",
+          "url": "https://www.ijams.org/event-details/starlight-paddle-2026-10-02-19-00"
+        },
+        {
+          "label": "U.S. Naval Observatory — sun and moon data for Oct 2, 2026",
+          "url": "https://aa.usno.navy.mil/data/RS_OneDay"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-02T19:00:00-04:00",
+        "endDate": "2026-10-02T21:00:00-04:00",
+        "locationName": "Ijams River Landing",
+        "locationAddress": "3507 Island Home Pike, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Starlight paddle from Ijams Park",
+          "Friday at seven, boat included"
+        ]
+      }
+    },
+    {
+      "id": "kerns-lure-mural",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/kerns_lure_mural.jpg",
+      "imageCaption": "Painted to look like it's hanging off the brick",
+      "title": "Giant fishing lures hang down the Kern's tower, painted for the SoKno Art Walk",
+      "deck": "A muralist has turned the old bakery's tower into a tackle box several stories tall. It is one of the first pieces of a rail trail that will run from Chapman Highway to Ijams Park.",
+      "facts": [
+        {
+          "label": "The mural",
+          "value": "\"Shiny Objects\" by Naomi Haverland"
+        },
+        {
+          "label": "Where",
+          "value": "The tower at Kern's · 2201 Kern's Rising Way"
+        },
+        {
+          "label": "Cost",
+          "value": "Free · it's on the outside of the building"
+        },
+        {
+          "label": "The trail",
+          "value": "SoKno Rail Trail & Art Walk · 3.8 miles, Chapman Highway to Ijams Park · scheduled to open this fall"
+        },
+        {
+          "label": "The art walk",
+          "value": "1.5 miles, Chapman Highway to Island Home · four murals and four sculptures to start"
+        },
+        {
+          "label": "Paid for by",
+          "value": "A $1 million gift from the Lawson Family Foundation"
+        },
+        {
+          "label": "Who",
+          "value": "Legacy Parks Foundation, with Gulf & Ohio Railway, the City of Knoxville and Dogwood Arts"
+        },
+        {
+          "label": "Coming next",
+          "value": "A painted train engine, and ten-foot letters spelling SOKNO"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Look up the next time you are at Kern's. The tower on the old bakery now carries \"Shiny Objects,\" a mural of fishing lures blown up to the size of the building, painted with hard cast shadows so they appear to dangle off the brick. The artist is Naomi Haverland, who works out of Florida and painted one of the KnoxWalls murals at Emory Place in 2024. She has said she picked lures because they are built to catch the eye and because fishing is part of life in East Tennessee."
+        },
+        {
+          "type": "subhead",
+          "text": "What it belongs to"
+        },
+        {
+          "type": "paragraph",
+          "text": "The mural is one of four planned for the SoKno Rail Trail & Art Walk, a 3.8-mile trail on the old rail line from Chapman Highway to Ijams Park. The first mile and a half, from Chapman Highway to Island Home, is the art walk, and it opens with four murals and four sculptures chosen with Dogwood Arts and paid for by a million-dollar gift from the Lawson Family Foundation. Legacy Parks Foundation told its annual luncheon on September 25 that the mural at Kern's is finished, that another was days from starting, and that more pieces go in over the next few weeks. The trail is scheduled to open this fall."
+        },
+        {
+          "type": "subhead",
+          "text": "What comes next"
+        },
+        {
+          "type": "paragraph",
+          "text": "Two more pieces have been announced: a historic train engine that will be set on the trail and painted, and a set of ten-foot metal letters spelling SOKNO, each one a mural. Legacy Parks is raising $25,000 for the letters, and a single letter can be sponsored for $5,000. The lures, meanwhile, cost nothing to look at. Kern's is open seven in the morning to ten at night Thursday, to eleven Friday, eight to eleven Saturday and nine to nine Sunday."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Legacy Parks Foundation — Second art installation coming to the SoKno Rail Trail & Art Walk",
+          "url": "https://legacyparks.org/news_and_events/second-art-installation-coming-to-the-sokno-rail-trail-and-art-walk/"
+        },
+        {
+          "label": "Legacy Parks Foundation — 2026 Legacy Luncheon",
+          "url": "https://legacyparks.org/news_and_events/2026-luncheon-celebrates-successes/"
+        },
+        {
+          "label": "Legacy Parks Foundation — Put the SoKno in SoKno campaign",
+          "url": "https://legacyparks.org/news_and_events/sokno-in-sokno-campaign/"
+        },
+        {
+          "label": "Kern's — hours",
+          "url": "https://kernsbakery.com/public-events/"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "kerns",
+          "legacy-parks"
+        ],
+        "igBanner": [
+          "Giant fishing lures on the Kern's tower",
+          "Any day, free to look at"
+        ]
+      }
+    },
+    {
+      "id": "puckers-auburn",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/puckers_plate.jpg",
+      "imageCaption": "Out of the kitchen until two",
+      "title": "Brunch at Puckers wraps ninety minutes before Auburn kicks off",
+      "deck": "The sports grill on Mimosa Avenue serves brunch nine to two both weekend days with every screen on. Saturday's 3:30 kickoff means there is time to eat first and settle in.",
+      "facts": [
+        {
+          "label": "Brunch",
+          "value": "Sat and Sun · 9 AM – 2 PM · every screen on"
+        },
+        {
+          "label": "Where",
+          "value": "Puckers Sports Grill · 115 Mimosa Ave"
+        },
+        {
+          "label": "Saturday",
+          "value": "Auburn at Tennessee · 3:30 PM"
+        },
+        {
+          "label": "Sunday",
+          "value": "Titans at the Ravens · 1 PM"
+        },
+        {
+          "label": "Parking",
+          "value": "Garage entrance behind the building"
+        },
+        {
+          "label": "Pucker Hour",
+          "value": "Mon–Fri 5–6 PM · $1 Pucker Lager, $3 wells and prosecco"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Puckers keeps weekend brunch on the menu from nine to two on Saturday and Sunday, and this Saturday the schedule is kind to it. Tennessee hosts Auburn at 3:30, so the kitchen's brunch service ends an hour and a half before kickoff instead of colliding with it the way last week's noon game did. The room bills itself as a game-day headquarters, with the screens on for Vols Saturdays and NFL Sundays alike."
+        },
+        {
+          "type": "subhead",
+          "text": "How the day works"
+        },
+        {
+          "type": "paragraph",
+          "text": "A mid-afternoon kickoff fills a sports bar across the river from the stadium well before the game, so a late brunch is the way to already have a seat when it starts. Parking is the garage behind the building, and the room takes reservations. Sunday runs the same brunch hours, with the Titans away at Baltimore at one."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Puckers Knoxville — brunch hours and Pucker Hour (official feed)",
+          "url": "https://www.instagram.com/puckersknoxville/"
+        },
+        {
+          "label": "University of Tennessee Athletics — 2026 football schedule",
+          "url": "https://utsports.com/sports/football/schedule/2026"
+        },
+        {
+          "label": "ESPN — Tennessee Titans schedule",
+          "url": "https://www.espn.com/nfl/team/schedule/_/name/ten"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-03T09:00:00-04:00",
+        "endDate": "2026-10-03T14:00:00-04:00",
+        "locationName": "Puckers Sports Grill",
+        "locationAddress": "115 Mimosa Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "puckers"
+        ],
+        "igBanner": [
+          "Brunch and every screen at Puckers",
+          "Saturday, nine to two, kickoff at 3:30"
+        ],
+        "standing": true,
+        "standingKey": "puckers-brunch"
+      }
+    },
+    {
+      "id": "baker-creek-work-party",
+      "label": "Urban Wilderness",
+      "labelColor": "ink",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/trail_work_party.jpg",
+      "imageCaption": "Tools provided, gloves not",
+      "title": "Volunteers dig in at Baker Creek on Saturday to get the trails ready for Fall Fest",
+      "deck": "The mountain bike club's monthly work party is open to anyone with gloves and sturdy shoes. Three hours of trail repair and pulling invasive plants, and then the sponsors buy lunch.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 3 · 9 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Baker Creek Preserve · 1516 Taylor Rd"
+        },
+        {
+          "label": "Cost",
+          "value": "Free · no sign-up"
+        },
+        {
+          "label": "Bring",
+          "value": "Sturdy shoes, gloves, safety glasses, water"
+        },
+        {
+          "label": "Provided",
+          "value": "Tools · lunch at noon from Bear Paw Bikes and 71 South · cold drinks from Creature Comforts"
+        },
+        {
+          "label": "With",
+          "value": "Trees Knoxville, leading the invasive-plant removal"
+        },
+        {
+          "label": "Kids",
+          "value": "Families welcome"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly cloudy · 50% chance of showers · high 84"
+        },
+        {
+          "label": "What it's for",
+          "value": "AMBC Fall Fest · Nov 6–7"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The trails at Baker Creek do not maintain themselves. The Appalachian Mountain Bike Club holds a work party on the first Saturday morning of most months, and October's is at Baker Creek Preserve, where the job is getting the trails in shape for the club's Fall Fest on November 6 and 7. Trees Knoxville is joining to lead the removal of invasive plants alongside the trail work."
+        },
+        {
+          "type": "subhead",
+          "text": "Who can come"
+        },
+        {
+          "type": "paragraph",
+          "text": "Anyone. You do not need to ride a bike, belong to the club or sign up ahead; the club calls these the best chance for trail users of every kind to give a morning back. It supplies the tools. You bring sturdy shoes, gloves, safety glasses and water, and you sign the club's 2026 waiver if you haven't. Families with kids are welcome."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "Work runs nine to noon, and at noon Bear Paw Bikes and 71 South provide lunch, with cold drinks from Creature Comforts. Saturday is mostly cloudy with a high of 84 and a 50 percent chance of showers, so dress for mud. The preserve is at 1516 Taylor Road."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Appalachian Mountain Bike Club — Work Party, Baker Creek",
+          "url": "https://ambcknox.org/event/work-party-baker-creek-2/"
+        },
+        {
+          "label": "AMBC Fall Festival — schedule",
+          "url": "https://fallfest.ambcknox.org/schedule/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-03T09:00:00-04:00",
+        "endDate": "2026-10-03T12:00:00-04:00",
+        "locationName": "Baker Creek Preserve",
+        "locationAddress": "1516 Taylor Rd, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [],
+        "igBanner": [
+          "Trail work party at Baker Creek",
+          "Saturday, nine to noon, lunch after"
+        ],
+        "igBannerSkipCheck": true
+      }
+    },
+    {
+      "id": "moss-meander",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/moss_lens.jpg",
+      "imageCaption": "A forest an inch tall",
+      "title": "The moss walk at Mead's Quarry goes out Saturday, the last one on the calendar",
+      "deck": "Most people stopped looking closely at moss around age seven. An Ijams Park naturalist spends two hours at the quarry on how to tell the species apart and what they do for the woods.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 3 · 1–3 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Mead's Quarry · 3526 Island Home Ave · meet staff at the picnic tables"
+        },
+        {
+          "label": "Cost",
+          "value": "$15 · registration required"
+        },
+        {
+          "label": "Ages",
+          "value": "16 and up"
+        },
+        {
+          "label": "Parking",
+          "value": "The quarry lot"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly cloudy · 50% chance of showers · high 84"
+        },
+        {
+          "label": "Last date",
+          "value": "The park lists no other Moss Meander after this one"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The park's own description of the Moss Meander starts with fairies, which is where most of us left the subject. The walk picks it back up. An Ijams Park naturalist leads two hours at Mead's Quarry on how to identify different species of moss and on what moss is doing for the forest it grows in, which is more than its size suggests."
+        },
+        {
+          "type": "paragraph",
+          "text": "Saturday's forecast is mostly cloudy with a 50 percent chance of showers, and for this one program damp is the better condition: moss is at its greenest wet. Fifteen dollars, ages sixteen and up, registration required. Park in the quarry lot and meet staff near the picnic tables. The event page marks Saturday as the last available date."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Moss Meander",
+          "url": "https://www.ijams.org/event-details/moss-meander-2026-10-03-13-00"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-03T13:00:00-04:00",
+        "endDate": "2026-10-03T15:00:00-04:00",
+        "locationName": "Mead's Quarry, Ijams Nature Center",
+        "locationAddress": "3526 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "The last moss walk at Ijams Park",
+          "Saturday at one, fifteen dollars"
+        ]
+      }
+    },
+    {
+      "id": "bird-banding",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/bird_release.jpg",
+      "imageCaption": "Measured, banded, and gone",
+      "title": "Songbirds get their leg bands at Mead's Quarry on Sunday, the last banding morning listed",
+      "deck": "The Ijams Park community science team catches, measures, bands and releases songbirds in front of whoever shows up. Five dollars puts you at the table, and the ticket covers parking.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Oct 4 · 8–9:30 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Mead's Quarry · 3526 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$5 · parking included, so don't pay at the lot"
+        },
+        {
+          "label": "Finding it",
+          "value": "Staff in the gravel lot walk you to the station, about five minutes"
+        },
+        {
+          "label": "Weather",
+          "value": "Showers likely Sunday (70%) · cloudy · high 80"
+        },
+        {
+          "label": "Waiver",
+          "value": "One release per calendar year"
+        },
+        {
+          "label": "Questions",
+          "value": "publicprograms@ijams.org"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Bird banding is the rare science you can watch from three feet away. On Sunday morning the Ijams Park community science team works its banding station near Mead's Quarry, where migratory and resident songbirds are safely caught, measured, fitted with a numbered leg band and let go. The numbers feed a long record of how the birds around the park are doing. The event page lists Sunday as the last available date."
+        },
+        {
+          "type": "paragraph",
+          "text": "It costs five dollars, and the ticket includes parking, so skip the pay station. Meet at the Mead's Quarry gravel lot, where a staff member walks the group to the station. Sunday is the wet day of the weekend, with showers likely and a 70 percent chance of rain, so check the event page before you drive over."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Bird Banding at Ijams Nature Center",
+          "url": "https://www.ijams.org/event-details/bird-banding-at-ijams-nature-center-2026-10-04-08-00"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-04T08:00:00-04:00",
+        "endDate": "2026-10-04T09:30:00-04:00",
+        "locationName": "Mead's Quarry, Ijams Nature Center",
+        "locationAddress": "3526 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Bird banding at Ijams Park",
+          "Sunday at eight, five dollars"
+        ]
+      }
+    },
+    {
+      "id": "storytime-frogs",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/storytime_frog.jpg",
+      "imageCaption": "This week's subject, leaving the page",
+      "title": "Frogs and toads take over Saturday storytime at the Nature Playscape",
+      "deck": "The free Saturday storytime in the woods by Mead's Quarry is about amphibians this week. Two hours of picture books read aloud and the run of the Playscape, and it costs nothing.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 3 · 10 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Playscape, Grayson Subaru Preserve · 3518 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "Free · parking $5 a car, free for members"
+        },
+        {
+          "label": "The book",
+          "value": "\"Frogs and Toads,\" and others like it"
+        },
+        {
+          "label": "Bring",
+          "value": "A blanket or chair, a snack"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly cloudy · 50% chance of showers"
+        },
+        {
+          "label": "Next week",
+          "value": "Flowers and plants · Sat Oct 10"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Every Saturday from ten to noon, volunteer storytellers read out loud in the woods at the Nature Playscape by Mead's Quarry, and it costs nothing. This week's theme is frogs and toads. The reading list starts with a book called \"Frogs and Toads\" and goes on from there, and the Playscape has enough damp corners that a child who listens closely has a fair chance of meeting the subject afterward."
+        },
+        {
+          "type": "paragraph",
+          "text": "The format is loose. Some weeks there is a hands-on activity, and some weeks the reading is the activity and the rest is roaming. Bring a blanket or a chair and a snack. Parking at the quarry lot is $5 a car unless you are a member. Saturday has a 50 percent chance of showers, so look at the sky before you go. Next Saturday's theme is flowers and plants."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Storytime at the Ijams Nature Playscape: Frogs and Toads!",
+          "url": "https://www.ijams.org/event-details/storytime-at-the-ijams-nature-playscape-frogs-and-toads"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-03T10:00:00-04:00",
+        "endDate": "2026-10-03T12:00:00-04:00",
+        "locationName": "Ijams Nature Playscape",
+        "locationAddress": "3518 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Free frog storytime at Ijams Park",
+          "Saturday, ten to noon"
+        ],
+        "standing": true,
+        "standingKey": "playscape-storytime"
+      }
+    },
+    {
+      "id": "wonder-of-wildflowers",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/wildflower_kids.jpg",
+      "imageCaption": "Flower anatomy, up close",
+      "title": "Kids study fall wildflowers and make flower art at Ijams Park on Saturday morning",
+      "deck": "The Wonder of Wildflowers is built for ages six to twelve: how a flower is put together, how pollination works, what people once used each plant for, and an art piece to carry home.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 3 · 9:30–11 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Park · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$10 a child · adults free"
+        },
+        {
+          "label": "Ages",
+          "value": "6 to 12, with family"
+        },
+        {
+          "label": "The series",
+          "value": "Ecosystem Explorers · come to one or come to all"
+        },
+        {
+          "label": "Scouts",
+          "value": "Fits the Junior Girl Scout Flowers badge"
+        },
+        {
+          "label": "For grown-ups",
+          "value": "The adult Fall Wildflower Walk runs the same hour · $15 · ages 14+"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The park's Ecosystem Explorers series is a run of short outdoor programs for children, and Saturday's is about fall wildflowers. Ijams Park naturalists take the group through flower anatomy and the pollination process, teach how to identify the native wildflowers they come across, and explain the historical, medicinal and cultural uses of each one. It ends with every child making a flower-inspired art piece."
+        },
+        {
+          "type": "paragraph",
+          "text": "It is designed for ages six to twelve, the child's ticket is ten dollars, and the adult who comes along gets in free. There is no commitment to the rest of the series. The park notes it suits Junior Girl Scouts working on the Flowers badge. For a household with older kids, the adult Fall Wildflower Walk goes out at the same hour, 9:30, for fifteen dollars."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — The Wonder of Wildflowers: Ecosystem Explorers Series",
+          "url": "https://www.ijams.org/event-details/the-wonder-of-wildflowers-ecosystem-explorers-series"
+        },
+        {
+          "label": "Ijams Park — Fall Wildflower Walk (Sat Oct 3)",
+          "url": "https://www.ijams.org/event-details/fall-wildflower-walk-2026-10-03-09-30"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-03T09:30:00-04:00",
+        "endDate": "2026-10-03T11:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Wildflowers for kids at Ijams Park",
+          "Saturday, nine thirty, ages six to twelve"
+        ]
+      }
+    },
+    {
+      "id": "sound-bath",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/gong_sound_bath.jpg",
+      "imageCaption": "One strike, a long time fading",
+      "title": "A sound bath with gongs and singing bowls fills the Visitor Center on Sunday morning",
+      "deck": "KB Sound Healing plays Tibetan and crystal singing bowls and a gong for an hour while you lie still. It is indoors, which on a Sunday with rain likely makes it the sure thing.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Oct 4 · 10–11 AM"
+        },
+        {
+          "label": "Where",
+          "value": "The large room, Ijams Park Visitor Center · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$25"
+        },
+        {
+          "label": "Who",
+          "value": "KB Sound Healing"
+        },
+        {
+          "label": "Bring",
+          "value": "A mat, a blanket, a pillow or a bolster"
+        },
+        {
+          "label": "Indoors",
+          "value": "Yes"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "A sound bath asks nothing of you but lying down. For an hour on Sunday morning, KB Sound Healing fills the large room at the Ijams Park Visitor Center with Tibetan singing bowls, crystal singing bowls and a gong, and the people on the floor let it go past. The park describes the point as quieting the mind and letting go of the week."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bring whatever makes a floor comfortable: a mat, a blanket, a pillow or a bolster. Twenty-five dollars, ten to eleven. Sunday's forecast has showers likely and a 70 percent chance of rain, and this is the one program on the park's Sunday that was always going to be under a roof."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Sound Bath Meditation (October 4)",
+          "url": "https://www.ijams.org/event-details/special-event-sound-bath-meditation-october-4"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-04T10:00:00-04:00",
+        "endDate": "2026-10-04T11:00:00-04:00",
+        "locationName": "Ijams Nature Center Visitor Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Sound bath at Ijams Park",
+          "Sunday at ten, indoors"
+        ]
+      }
+    },
+    {
+      "id": "self-care-yoga",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/yoga_warrior.jpg",
+      "imageCaption": "On the patio, or under the roof",
+      "title": "Self Care Sunday yoga meets on the Visitor Center patio, and moves inside if it rains",
+      "deck": "Hope Irwin's weekly hour at Ijams Park works flexibility, strength and balance for every level, kids included. With showers likely this Sunday, the class has a roof to go to.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Oct 4 · 11:30 AM – 12:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Back patio, Ijams Park Visitor Center · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$10 adults · $5 kids 5–12"
+        },
+        {
+          "label": "Who",
+          "value": "Hope Irwin"
+        },
+        {
+          "label": "Styles",
+          "value": "Vinyasa, Hatha and Power flows"
+        },
+        {
+          "label": "Bring",
+          "value": "A yoga mat"
+        },
+        {
+          "label": "Rain plan",
+          "value": "The class moves indoors"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Self Care Sunday is a weekly yoga class at Ijams Park taught by Hope Irwin, an hour on the back patio of the Visitor Center that mixes Vinyasa, Hatha and Power flows to work flexibility, strength and balance. All ages and all levels are welcome, and the pricing says so: ten dollars for adults, five for kids five to twelve."
+        },
+        {
+          "type": "paragraph",
+          "text": "Bring your own mat. Sunday's forecast has showers likely, and the park's plan for that is simple: the class moves inside. It starts at 11:30, half an hour after the sound bath in the same building lets out, for anyone who wants to make a morning of it."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Self Care Sunday Yoga Class with Hope Irwin (October 4)",
+          "url": "https://www.ijams.org/event-details/special-event-self-care-sunday-yoga-class-with-hope-irwin-october-4"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-04T11:30:00-04:00",
+        "endDate": "2026-10-04T12:30:00-04:00",
+        "locationName": "Ijams Nature Center Visitor Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Sunday yoga at Ijams Park",
+          "Sunday, eleven thirty, ten dollars"
+        ],
+        "standing": true,
+        "standingKey": "ijams-sunday-yoga"
+      }
+    },
+    {
+      "id": "hooping",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/hoop_waist.jpg",
+      "imageCaption": "Thursdays at six",
+      "title": "Circles with Dizzy spins hoops in the Miller Building on Thursday evening",
+      "deck": "The weekly adult hooping class at Ijams Park breaks each trick into its parts and rebuilds it at the room's pace. Hoops to borrow, no experience needed, and it is indoors on an 89-degree day.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Oct 1 · 6–7 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Miller Education Building, Ijams Park · Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$25 per workshop"
+        },
+        {
+          "label": "Who",
+          "value": "Adults · beginners welcome"
+        },
+        {
+          "label": "Bring",
+          "value": "Your own hoop if you have one; a few are there to share"
+        },
+        {
+          "label": "Next ones",
+          "value": "Thu Oct 8 · Thu Oct 15"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Dizzy teaches hooping every Thursday at six in the Miller Education Building at Ijams Park. The class takes a trick, breaks it into its base parts, drills the parts and builds up to the harder variations, at the pace of whoever is in the room. It is an adult class, no background required, and there are a few hoops to share if you don't own one."
+        },
+        {
+          "type": "paragraph",
+          "text": "Twenty-five dollars a workshop, six to seven. Thursday is sunny with a high near 89, the warmest day of the weekend, and this is the one thing on the park's Thursday with a roof over it. The event page has directions to the Miller Building. The class runs again October 8 and 15."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Creative Series: Circles with Dizzy, Weekly Hooping Workshop (October 1)",
+          "url": "https://www.ijams.org/event-details/creative-series-circles-with-dizzy-weekly-hooping-workshop-october-1"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-01T18:00:00-04:00",
+        "endDate": "2026-10-01T19:00:00-04:00",
+        "locationName": "Miller Education Building, Ijams Nature Center",
+        "locationAddress": "Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Hooping class at Ijams Park",
+          "Thursday at six, twenty-five dollars"
+        ],
+        "standing": true,
+        "standingKey": "ijams-hooping"
+      }
+    },
+    {
+      "id": "specials-board",
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/earls_slice.jpg",
+      "imageCaption": "Two dollars off on game day",
+      "title": "The specials board: Earl's game-day column runs all Saturday for a 3:30 kickoff",
+      "deck": "Down on Waterfront Drive, Earl's runs a different deal every day from open to close. Saturday adds the Vols board for the Auburn game, with pizza and drafts two dollars off.",
+      "facts": [
+        {
+          "label": "Thu",
+          "value": "$10 Patrón mango ritas · 11 AM – 10 PM"
+        },
+        {
+          "label": "Fri",
+          "value": "$9 spicy pineapple ritas · 11 AM – 10 PM"
+        },
+        {
+          "label": "Sat",
+          "value": "$8 house margaritas · 11 AM – 10 PM"
+        },
+        {
+          "label": "Sat game day",
+          "value": "$2 off drafts and pizza · $6 Orange Bliss · 6-for-5 beer buckets · kickoff 3:30 PM"
+        },
+        {
+          "label": "Sun",
+          "value": "$7 mimosas and Bloody Marys · 11 AM – 10 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Earl's · 610 Waterfront Dr · open 11 AM – 10 PM daily"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Earl's, down on Waterfront Drive by Suttree Landing, runs a different deal every day of the week from open to close, and the week's board is above. Saturday is a home game, Auburn at 3:30, so the game-day column is on too: two dollars off drafts and pizza, a six-dollar Orange Bliss, and beer buckets at six for the price of five. It runs eleven to ten, which covers lunch before the game, the game, and dinner after it."
+        },
+        {
+          "type": "paragraph",
+          "text": "Thursday and Friday are the days for the river-facing tables, sunny and 89 with the rain holding off until late Friday. Sunday is mimosas and Bloody Marys, with showers likely, so the inside tables."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Earl's Knoxville — specials",
+          "url": "https://earlsknox.com/specials/"
+        },
+        {
+          "label": "University of Tennessee Athletics — 2026 football schedule",
+          "url": "https://utsports.com/sports/football/schedule/2026"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "earls"
+        ],
+        "igBanner": [
+          "A different deal every day at Earl's",
+          "Thursday through Sunday, eleven to ten"
+        ],
+        "standing": true,
+        "standingKey": "earls-specials-board"
+      }
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen — \"Carrie\" outdoors on the Ijams Park lawn Friday, a paddle on a moonless river, giant fishing lures on the Kern's tower, a trail work party at Baker Creek, brunch before Auburn at Puckers, and a Sunday built for the rain.",
+      "duration": "04:13",
+      "src": "/audio/2026-09-30.mp3"
+    },
+    "calendar": [
+      {
+        "month": "OCT",
+        "day": "1",
+        "title": "\"Shiny Objects\" mural on the Kern's tower",
+        "meta": "On view any day · free · 2201 Kern's Rising Way",
+        "starred": false,
+        "href": "#kerns-lure-mural"
+      },
+      {
+        "month": "OCT",
+        "day": "1",
+        "title": "Patrón mango ritas at Earl's",
+        "meta": "$10 · 11 AM – 10 PM · 610 Waterfront Dr",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "OCT",
+        "day": "1",
+        "title": "Circles with Dizzy hooping class",
+        "meta": "6–7 PM · $25 · adults · Miller Building, Ijams Park",
+        "starred": false,
+        "href": "#hooping"
+      },
+      {
+        "month": "OCT",
+        "day": "2",
+        "title": "MOVIES UNDER THE STARS: \"CARRIE\" — last of the season",
+        "meta": "Doors 6 PM · movie at dark · $12 · Visitor Center lawn, Ijams Park",
+        "starred": true,
+        "href": "#carrie-on-the-lawn"
+      },
+      {
+        "month": "OCT",
+        "day": "2",
+        "title": "STARLIGHT PADDLE FROM IJAMS PARK",
+        "meta": "7–9 PM · $45 · boat and headlamp included · 3507 Island Home Pike",
+        "starred": true,
+        "href": "#starlight-paddle"
+      },
+      {
+        "month": "OCT",
+        "day": "3",
+        "title": "TRAIL WORK PARTY AT BAKER CREEK",
+        "meta": "9 AM – noon · free · lunch after · 1516 Taylor Rd",
+        "starred": true,
+        "href": "#baker-creek-work-party"
+      },
+      {
+        "month": "OCT",
+        "day": "3",
+        "title": "Brunch and every screen at Puckers",
+        "meta": "9 AM – 2 PM · Auburn at Tennessee, 3:30 PM · 115 Mimosa Ave",
+        "starred": false,
+        "href": "#puckers-auburn"
+      },
+      {
+        "month": "OCT",
+        "day": "3",
+        "title": "The Wonder of Wildflowers, for ages 6–12",
+        "meta": "9:30–11 AM · $10 a child, adults free · Ijams Park",
+        "starred": false,
+        "href": "#wonder-of-wildflowers"
+      },
+      {
+        "month": "OCT",
+        "day": "3",
+        "title": "Storytime at the Nature Playscape: Frogs and Toads!",
+        "meta": "10 AM – noon · free · Grayson Subaru Preserve",
+        "starred": false,
+        "href": "#storytime-frogs"
+      },
+      {
+        "month": "OCT",
+        "day": "3",
+        "title": "Moss Meander — last date listed",
+        "meta": "1–3 PM · $15 · ages 16+ · Mead's Quarry",
+        "starred": false,
+        "href": "#moss-meander"
+      },
+      {
+        "month": "OCT",
+        "day": "3",
+        "title": "Game-day board at Earl's",
+        "meta": "Vols kick off at 3:30 · $2 off drafts and pizza · 610 Waterfront Dr",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "OCT",
+        "day": "4",
+        "title": "BIRD BANDING AT MEAD'S QUARRY — last date listed",
+        "meta": "8–9:30 AM · $5, parking included · Ijams Park",
+        "starred": true,
+        "href": "#bird-banding"
+      },
+      {
+        "month": "OCT",
+        "day": "4",
+        "title": "Sound bath with KB Sound Healing",
+        "meta": "10–11 AM · $25 · indoors · Ijams Park Visitor Center",
+        "starred": false,
+        "href": "#sound-bath"
+      },
+      {
+        "month": "OCT",
+        "day": "4",
+        "title": "Self Care Sunday yoga with Hope Irwin",
+        "meta": "11:30 AM – 12:30 PM · $10, kids $5 · Ijams Park Visitor Center",
+        "starred": false,
+        "href": "#self-care-yoga"
+      }
+    ]
+  }
+}
