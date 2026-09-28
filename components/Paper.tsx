@@ -17,6 +17,7 @@ import { ArticleSources } from "@/components/ArticleSources";
 import { ShareStory } from "@/components/ShareStory";
 import { JsonLd } from "@/components/JsonLd";
 import { calendarRowDay } from "@/lib/episodes";
+import { liftCount } from "@/lib/layout";
 
 const Page = ({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) => (
   <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", ...style }}>{children}</div>
@@ -107,12 +108,10 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
   // column sits empty beside it (Andy, 2026-09-22). Lift the first story or two up into
   // the feature band so the column stays full; the rest run below the scanner as before.
   // Story permalinks never lift — their siblings are teasers, not articles.
-  // Measured on No. 15 at 1360px: the feature runs ~1,550px, a lifted story ~1,200px, the
-  // sidebar's ad + player ~570px and each calendar row (with its day bar) ~120px. The
-  // feature alone covers ~14 rows; every ten rows past that is one more story.
-  const liftCount = storyView ? 0 : Math.max(0, Math.floor((sidebar.calendar.length - 5) / 10));
-  const lifted = stories.slice(0, liftCount);
-  const rest = stories.slice(liftCount);
+  // How many is worked out from the content on both sides — see lib/layout.ts.
+  const lifts = storyView ? 0 : liftCount(episode);
+  const lifted = stories.slice(0, lifts);
+  const rest = stories.slice(lifts);
   const renderStory = (s: Episode["stories"][number], withDivider: boolean) => (
     <div key={s.id} data-days={daysAttr(s.days)}>
       {withDivider && <Divider ornament="star" />}
