@@ -32,6 +32,8 @@ is not sufficient: Andy runs 100+ unread on a normal day.
 **Opened:** 2026-08-11 · **Age: 48 days** (as of 2026-09-28) · **Carried through 8 Instagram reviews**
 · **Only Andy can do this** · **Push tried 2026-09-28, phone not reached** (Remote Control was inactive on the mini, so it was desktop only; next push only if the Sep 30 drafts also expire unsent)
 
+**2026-09-28, from Andy:** he deleted all five of last week's drafts himself. They did not lapse unread. The first notes go out with this week's drafts (No. 16, in Gmail Wed Sep 30 at 5:30 PM). The Oct 5 review checks `introduced` in `content/contacts.json` before saying anything about this item.
+
 **2026-09-28:** The venue-notes pipeline went live and put five first-contact drafts in Gmail
 on Wed Sep 23: Kern's, Earl's, Ijams, Legacy Parks, Puckers (Puckers has no email, so that one
 is an Instagram DM). None was sent and all five expired when their events passed. **New drafts
