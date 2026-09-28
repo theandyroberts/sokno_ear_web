@@ -60,3 +60,18 @@ export function weekDays(week: string): Array<{ date: string; dow: string; label
 export function clock(hhmm: string): string;
 export function deriveWeek(facts: Record<string, unknown>): WeekSnapshot;
 export function mergeMarks(snapshot: WeekSnapshot, marks?: DeskMark[], now?: number): MergedWeek;
+
+export type MoveOwner = "claude" | "andy";
+export type MoveAnswer = "go" | "no" | "done" | "later";
+export interface DeskMove {
+  key: string; title: string; owner: MoveOwner; plan: string | null; due: string | null; opened: string;
+  answer: MoveAnswer | null; note: string | null; answeredAt: string | null;
+  handledAt: string | null; handledNote: string | null; closedAt: string | null; closedNote: string | null;
+}
+export const MOVE_ANSWERS: Record<MoveOwner, MoveAnswer[]>;
+export function listMoves(db: unknown, opts?: { all?: boolean }): DeskMove[];
+export function pendingAnswers(db: unknown): DeskMove[];
+export function putMove(db: unknown, move: { key: string; title: string; owner: MoveOwner; plan?: string | null; due?: string | null }, now?: number): void;
+export function answerMove(db: unknown, key: string, answer: MoveAnswer | null, note?: string | null, now?: number): "ok" | "unknown-move" | "closed" | "bad-answer";
+export function handleMove(db: unknown, key: string, note?: string | null, now?: number): boolean;
+export function closeMove(db: unknown, key: string, note?: string | null, now?: number): boolean;

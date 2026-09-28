@@ -87,6 +87,8 @@ export default async function DeskPage({ params, searchParams }: {
           <Link href={`${base}?w=${w.prev}`}>← Earlier</Link>
           {!w.isThisWeek && <Link href={base}>This week</Link>}
           <Link href={`${base}?w=${w.next}`}>Later →</Link>
+          {/* The key rides in the fragment so the dashboard's answer buttons work; it never reaches a server log. */}
+          <a href={`https://note15.com/insta/soknoear#k=${token}`} rel="noreferrer">Instagram dashboard ↗</a>
         </nav>
       </header>
 

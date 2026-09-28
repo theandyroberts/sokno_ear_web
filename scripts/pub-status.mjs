@@ -7,6 +7,11 @@
 //   node scripts/pub-status.mjs note <task> "…"         leave a note without ticking the box
 //   node scripts/pub-status.mjs undo <task>             remove a mark (evidence can't be undone)
 //   node scripts/pub-status.mjs url                     print the desk's address
+//   node scripts/pub-status.mjs url --insta             the Instagram dashboard, with the key for its buttons
+//   node scripts/pub-status.mjs moves                   open moves and what Andy answered (READ THIS FIRST)
+//   node scripts/pub-status.mjs move <key> --title "…" --owner claude|andy [--plan "…"] [--due YYYY-MM-DD]
+//   node scripts/pub-status.mjs handled <key> "what you did about his answer"
+//   node scripts/pub-status.mjs close <key> "why it's finished"
 //   --week YYYY-MM-DD   any date in the week you mean (an episode slug works). Default: today.
 //
 // The store is the site's DB on the VPS. Run this anywhere: off the VPS it forwards
@@ -17,8 +22,8 @@
 // venue-drafts · venue-sent:<venue-key> · publish-check · ig-post:<story-id>
 // (docs/PUBLISHING-DESK.md says which are evidence and which need a mark.)
 import { execFileSync } from "node:child_process";
-import { hasStore, openStore, sync, mark, unmark, deskUrl } from "./pub-status-store.mjs";
-import { mergeMarks, weekOf, todayET, CHANNELS } from "./pub-status-lib.mjs";
+import { hasStore, openStore, sync, mark, unmark, deskUrl, dashboardUrl } from "./pub-status-store.mjs";
+import { mergeMarks, weekOf, todayET, CHANNELS, listMoves, pendingAnswers, putMove, handleMove, closeMove } from "./pub-status-lib.mjs";
 
 const argv = process.argv.slice(2);
 const VPS = process.env.EAR_VPS || "andy@143.244.188.235";
@@ -34,7 +39,7 @@ if (!hasStore()) {
 }
 
 const flag = (f) => { const i = argv.indexOf(f); return i > -1 ? argv[i + 1] : null; };
-const FLAGS = ["--week", "--slug", "--note", "--by"];
+const FLAGS = ["--week", "--slug", "--note", "--by", "--title", "--owner", "--plan", "--due"];
 const positional = argv.filter((a, i) => !a.startsWith("--") && !FLAGS.includes(argv[i - 1]));
 const [cmd = "show", task, text] = positional;
 const date = flag("--week") ?? flag("--slug") ?? todayET();
@@ -82,7 +87,40 @@ switch (cmd) {
     console.log(`removed mark ${task} · week of ${await unmark({ date, task })}`);
     break;
   }
-  case "url": console.log(await deskUrl()); break;
+  case "url": console.log(argv.includes("--insta") ? await dashboardUrl() : await deskUrl()); break;
+  case "moves": {
+    const db = await openStore();
+    const moves = listMoves(db);
+    const waiting = new Set(pendingAnswers(db).map((m) => m.key));
+    db.close();
+    if (!moves.length) { console.log("no open moves"); break; }
+    console.log("");
+    for (const m of moves) {
+      console.log(`${waiting.has(m.key) ? "▶" : " "} ${m.title}   [${m.key}]`);
+      console.log(`    ${m.owner === "claude" ? "Claude's" : "Andy's"} · opened ${m.opened}${m.due ? ` · due ${m.due}` : ""}${m.plan ? ` · ${m.plan}` : ""}`);
+      if (m.answeredAt) console.log(`    Andy ${m.answeredAt.slice(0, 16).replace("T", " ")}Z: ${m.answer ?? "(note only)"}${m.note ? ` — “${m.note}”` : ""}`);
+      else console.log("    no answer yet");
+      if (m.handledAt) console.log(`    handled ${m.handledAt.slice(0, 10)}${m.handledNote ? ` — ${m.handledNote}` : ""}`);
+    }
+    console.log(waiting.size ? `\n  ${waiting.size} answer(s) not acted on yet (▶). Act, then: pub-status.mjs handled <key> "…"\n` : "\n  Every answer has been acted on.\n");
+    break;
+  }
+  case "move": {
+    const db = await openStore();
+    putMove(db, { key: task, title: flag("--title"), owner: flag("--owner"), plan: flag("--plan"), due: flag("--due") });
+    db.close();
+    console.log(`✎ move ${task}`);
+    break;
+  }
+  case "handled": case "close": {
+    if (!task) { console.error(`usage: pub-status.mjs ${cmd} <key> "note"`); process.exit(1); }
+    const db = await openStore();
+    const ok = (cmd === "handled" ? handleMove : closeMove)(db, task, flag("--note") ?? text ?? null);
+    db.close();
+    if (!ok) { console.error(`no move called ${task}`); process.exit(1); }
+    console.log(`${cmd === "handled" ? "✓ handled" : "✓ closed"} ${task}`);
+    break;
+  }
   default:
-    console.error("usage: node scripts/pub-status.mjs [show|sync|done|note|undo|url] …"); process.exit(1);
+    console.error("usage: node scripts/pub-status.mjs [show|sync|done|note|undo|url|moves|move|handled|close] …"); process.exit(1);
 }

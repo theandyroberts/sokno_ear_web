@@ -126,6 +126,19 @@ export async function deskUrl(/** @type {{db?: any}} */ { db } = {}) {
   return `${SITE}/desk/${row.value}`;
 }
 
+/** Where the Instagram dashboard lives. Public page; the answer buttons need the key. */
+export const INSTA_DASHBOARD = "https://note15.com/insta/soknoear";
+
+/**
+ * The dashboard's address WITH the key that turns its answer buttons on. The key rides
+ * in the fragment, which browsers never send to a server; the page moves it into
+ * localStorage and strips it from the address bar. Same secret as the desk's.
+ */
+export async function dashboardUrl(/** @type {{db?: any}} */ { db } = {}) {
+  const desk = await deskUrl({ db });
+  return `${INSTA_DASHBOARD}#k=${desk.split("/").pop()}`;
+}
+
 // ── For pipeline scripts: never throw, never block ──────────────────────────
 export async function record(args) {
   if (!hasStore()) return;

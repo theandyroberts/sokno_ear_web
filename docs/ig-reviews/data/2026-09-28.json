@@ -1,0 +1,426 @@
+{
+ "run": 9,
+ "date": "2026-09-28",
+ "next": "2026-10-05",
+ "episode": 15,
+ "kicker": "Week of Sep 23 · episode No. 15 · read Sep 28",
+ "railKind": "101 followers · 4.9 reach a post",
+ "headline": "Reach slipped, followers stalled, nothing broke.",
+ "verdicts": [
+  {
+   "label": "Reach",
+   "tone": "bad",
+   "text": "4.9 a post, lowest yet"
+  },
+  {
+   "label": "Growth",
+   "tone": "warn",
+   "text": "+1 follower in seven days"
+  },
+  {
+   "label": "New people",
+   "tone": "ok",
+   "text": "12 non-followers reached, up from 9"
+  },
+  {
+   "label": "Pipeline",
+   "tone": "ok",
+   "text": "14 of 14 posted"
+  }
+ ],
+ "tiles": [
+  {
+   "label": "Followers",
+   "value": "101",
+   "good": "up",
+   "series": [
+    46,
+    49,
+    59,
+    66,
+    74,
+    86,
+    95,
+    100,
+    101
+   ],
+   "vsLast": {
+    "dir": "flat",
+    "tone": "flat",
+    "text": "+1 this week"
+   },
+   "vsBase": "46 on Aug 11"
+  },
+  {
+   "label": "Reach per post",
+   "value": "4.9",
+   "good": "up",
+   "series": [
+    16.1,
+    10.5,
+    10.5,
+    14.2,
+    10.4,
+    8.2,
+    8.1,
+    6.8,
+    7.8,
+    4.9
+   ],
+   "vsLast": {
+    "dir": "down",
+    "tone": "bad",
+    "text": "−1.6 on last week"
+   },
+   "vsBase": "10.5 in early Aug"
+  },
+  {
+   "label": "Reach, whole week",
+   "value": "69",
+   "good": "up",
+   "series": [
+    113,
+    84,
+    63,
+    128,
+    104,
+    106,
+    89,
+    41,
+    101,
+    69
+   ],
+   "vsLast": {
+    "dir": "down",
+    "tone": "bad",
+    "text": "−15 on last week"
+   },
+   "vsBase": "best 128, Aug 12"
+  },
+  {
+   "label": "New people reached · 28 days",
+   "value": "12",
+   "good": "up",
+   "series": [
+    10,
+    10,
+    6,
+    9,
+    12
+   ],
+   "vsLast": {
+    "dir": "up",
+    "tone": "ok",
+    "text": "+3 on last week"
+   },
+   "vsBase": "10 a month ago"
+  }
+ ],
+ "tilesNote": "Lines run from July to now. Last week is compared as it read at the same age.",
+ "week": [
+  {
+   "id": "call-the-ear",
+   "day": "Wed",
+   "time": "11:45",
+   "reach": 6,
+   "title": "Call the Ear",
+   "img": "/insta/img/soknoear/2026-09-23_call-the-ear.jpg",
+   "group": "lead"
+  },
+  {
+   "id": "episode-drop",
+   "day": "Wed",
+   "time": "12:00",
+   "reach": 4,
+   "title": "New episode card",
+   "img": "/insta/img/soknoear/2026-09-23_episode-drop.jpg",
+   "group": "lead"
+  },
+  {
+   "id": "end-of-summer-jam",
+   "day": "Wed",
+   "time": "12:15",
+   "reach": 8,
+   "title": "End of Summer Jam",
+   "img": "/insta/img/soknoear/2026-09-23_end-of-summer-jam.jpg"
+  },
+  {
+   "id": "wildflower-walk",
+   "day": "Thu",
+   "time": "13:00",
+   "reach": 2,
+   "title": "Fall wildflower walk",
+   "img": "/insta/img/soknoear/2026-09-23_wildflower-walk.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "hooping",
+   "day": "Thu",
+   "time": "15:00",
+   "reach": 2,
+   "title": "Hula-hooping class",
+   "img": "/insta/img/soknoear/2026-09-23_hooping.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "bats-after-dark",
+   "day": "Thu",
+   "time": "17:00",
+   "reach": 7,
+   "title": "Last bat walk",
+   "img": "/insta/img/soknoear/2026-09-23_bats-after-dark.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "urban-wilderness-cool",
+   "day": "Fri",
+   "time": "09:00",
+   "reach": 6,
+   "title": "First highs in the 70s",
+   "img": "/insta/img/soknoear/2026-09-23_urban-wilderness-cool.jpg"
+  },
+  {
+   "id": "puckers-texas",
+   "day": "Fri",
+   "time": "17:00",
+   "reach": 3,
+   "title": "Brunch at Puckers",
+   "img": "/insta/img/soknoear/2026-09-23_puckers-texas.jpg"
+  },
+  {
+   "id": "kerns-tailgate",
+   "day": "Fri",
+   "time": "19:00",
+   "reach": 12,
+   "title": "Kern's lawn tailgates",
+   "img": "/insta/img/soknoear/2026-09-23_kerns-tailgate.jpg"
+  },
+  {
+   "id": "stained-glass",
+   "day": "Fri",
+   "time": "21:00",
+   "reach": 5,
+   "title": "Stained-glass workshop",
+   "img": "/insta/img/soknoear/2026-09-23_stained-glass.jpg"
+  },
+  {
+   "id": "cyanotype-day",
+   "day": "Sat",
+   "time": "09:00",
+   "reach": 2,
+   "title": "World Cyanotype Day",
+   "img": "/insta/img/soknoear/2026-09-23_cyanotype-day.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "playing-possum",
+   "day": "Sat",
+   "time": "12:00",
+   "reach": 6,
+   "title": "Opossum ambassador",
+   "img": "/insta/img/soknoear/2026-09-23_playing-possum.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "harvest-moon-paddle",
+   "day": "Sat",
+   "time": "16:00",
+   "reach": 5,
+   "title": "Harvest Moon paddle",
+   "img": "/insta/img/soknoear/2026-09-23_harvest-moon-paddle.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "renew-in-nature",
+   "day": "Sat",
+   "time": "19:00",
+   "reach": 1,
+   "title": "Renew in Nature",
+   "img": "/insta/img/soknoear/2026-09-23_renew-in-nature.jpg",
+   "group": "hot"
+  }
+ ],
+ "weekLegend": [
+  {
+   "group": "hot",
+   "label": "A day with three or more Ijams posts"
+  },
+  {
+   "group": "lead",
+   "label": "The two weekly cards"
+  },
+  {
+   "group": "plain",
+   "label": "Everything else"
+  }
+ ],
+ "worked": [
+  {
+   "title": "Kern's lawn tailgates",
+   "reach": 12,
+   "img": "/insta/img/soknoear/2026-09-23_kerns-tailgate.jpg",
+   "why": "Food and drink, one venue, Friday at 7. Best post in three weeks."
+  },
+  {
+   "title": "End of Summer Jam",
+   "reach": 8,
+   "img": "/insta/img/soknoear/2026-09-23_end-of-summer-jam.jpg",
+   "why": "A one-off event with a name, posted on publish day."
+  },
+  {
+   "title": "Last bat walk",
+   "reach": 7,
+   "img": "/insta/img/soknoear/2026-09-23_bats-after-dark.jpg",
+   "why": "A last chance, posted three hours before it started."
+  }
+ ],
+ "didnt": [
+  {
+   "title": "Renew in Nature",
+   "reach": 1,
+   "img": "/insta/img/soknoear/2026-09-23_renew-in-nature.jpg",
+   "why": "Fourth Ijams post on Saturday. Lowest reach on record."
+  },
+  {
+   "title": "World Cyanotype Day",
+   "reach": 2,
+   "img": "/insta/img/soknoear/2026-09-23_cyanotype-day.jpg",
+   "why": "One of four Ijams posts that day."
+  },
+  {
+   "title": "Fall wildflower walk",
+   "reach": 2,
+   "img": "/insta/img/soknoear/2026-09-23_wildflower-walk.jpg",
+   "why": "One of three Ijams posts in four hours."
+  }
+ ],
+ "learned": {
+  "title": "What people stop for",
+  "note": "Average reach per post, story posts since Aug 11.",
+  "rows": [
+   {
+    "label": "News, no venue",
+    "value": 10.5,
+    "note": "6 posts",
+    "tone": "ink"
+   },
+   {
+    "label": "Food and drink",
+    "value": 10.0,
+    "note": "24 posts",
+    "tone": "ink"
+   },
+   {
+    "label": "Ijams programs",
+    "value": 6.9,
+    "note": "31 posts · 41% of the feed",
+    "tone": "bad"
+   }
+  ]
+ },
+ "dials": [
+  {
+   "label": "Posts delivered",
+   "value": 14,
+   "max": 14,
+   "display": "14/14",
+   "note": "0 failed, 0 late",
+   "tone": "ok"
+  },
+  {
+   "label": "Followers who saw a post",
+   "value": 28,
+   "max": 100,
+   "display": "28%",
+   "note": "28 of 101, in 28 days",
+   "tone": "warn"
+  },
+  {
+   "label": "Reach that was new people",
+   "value": 30,
+   "max": 100,
+   "display": "30%",
+   "note": "12 of 40, in 28 days",
+   "tone": "ink"
+  }
+ ],
+ "bestEver": [
+  {
+   "title": "Mimosas opens",
+   "reach": 22,
+   "img": "/insta/img/soknoear/2026-07-23_mimosas.jpg",
+   "why": "A new restaurant. Jul 25."
+  },
+  {
+   "title": "Mimosas, last weekends",
+   "reach": 19,
+   "img": "/insta/img/soknoear/2026-08-13_mimosas-puckers.jpg",
+   "why": "A place about to change hands. Aug 13."
+  },
+  {
+   "title": "Earl's specials board",
+   "reach": 18,
+   "img": "/insta/img/soknoear/2026-08-13_specials-board.jpg",
+   "why": "A deal for every day. Aug 13."
+  },
+  {
+   "title": "The Kerbela hearing",
+   "reach": 17,
+   "img": "/insta/img/soknoear/2026-08-13_kerbela-hearing.jpg",
+   "why": "Neighborhood news with a date. Aug 13."
+  },
+  {
+   "title": "Kern's hoedown",
+   "reach": 16,
+   "img": "/insta/img/soknoear/2026-07-23_kerns-weekend.jpg",
+   "why": "A food hall's weekend. Jul 24."
+  },
+  {
+   "title": "Earl's margarita clock",
+   "reach": 16,
+   "img": "/insta/img/soknoear/2026-07-23_earls.jpg",
+   "why": "A drink special. Jul 23."
+  }
+ ],
+ "moves": [
+  {
+   "key": "weekend-roundup",
+   "owner": "claude",
+   "title": "One roundup post, fewer single posts",
+   "why": "Nine Ijams posts read 4 each. Food, drink and news read 10. The calendar goes into one swipeable post; single posts go to the strongest stories.",
+   "plan": "Staged with episode No. 16 for Wed Sep 30. Say don't and the week posts the old way.",
+   "due": "2026-09-30"
+  },
+  {
+   "key": "venue-notes",
+   "owner": "andy",
+   "title": "Send the first venue notes",
+   "why": "Every follower so far came from following someone first. One reshare from a venue reaches more new people than the feed has since August.",
+   "plan": "Drafts land in Gmail Wed Sep 30 at 5:30 PM. Ijams first. Send by Fri Oct 2.",
+   "due": "2026-10-02"
+  },
+  {
+   "key": "weekly-reel",
+   "owner": "claude",
+   "title": "A weekly Reel from the audio briefing",
+   "why": "Reels are how Instagram shows an account to people who don't follow it. All 106 posts so far are still images, and the narration already exists.",
+   "plan": "A sample appears on this page by Mon Oct 5. Nothing posts until you say go ahead.",
+   "due": "2026-10-05"
+  }
+ ],
+ "done": [
+  {
+   "title": "Two posts a day per venue.",
+   "text": "Live for Wednesday. A venue's third post of the day now moves earlier in the week."
+  },
+  {
+   "title": "Image tag test, week 2 of 3.",
+   "text": "Tagged posts lead 7.3 to 4.4. It gets decided next Monday and needs nothing from you."
+  },
+  {
+   "title": "Answers on this page.",
+   "text": "Every scheduled run reads what you said here before it starts."
+  }
+ ],
+ "writeUp": "./2026-09-28.writeup.html"
+}

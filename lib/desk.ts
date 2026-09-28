@@ -5,8 +5,8 @@
 import crypto from "node:crypto";
 import type Database from "better-sqlite3";
 import {
-  SCHEMA, deriveWeek, mergeMarks, weekOf, todayET, addDays,
-  type MergedWeek, type WeekSnapshot, type DeskMark,
+  SCHEMA, deriveWeek, mergeMarks, weekOf, todayET, addDays, listMoves, answerMove,
+  type MergedWeek, type WeekSnapshot, type DeskMark, type DeskMove, type MoveAnswer,
 } from "@/scripts/pub-status-lib.mjs";
 
 const ready = new WeakSet<Database.Database>();
@@ -53,4 +53,20 @@ export function setDeskMark(d: Database.Database, week: string, task: string, do
     d.prepare("DELETE FROM pub_marks WHERE week = ? AND task = ?").run(w.week, task);
   }
   return "ok";
+}
+
+/** What the dashboard is allowed to see of a move: no handling notes, nothing closed. */
+export type PublicMove = Pick<DeskMove, "key" | "title" | "owner" | "plan" | "due" | "opened" | "answer" | "note" | "answeredAt"> & { handled: boolean };
+
+export function getMoves(d: Database.Database): PublicMove[] {
+  return listMoves(prepared(d)).map((m) => ({
+    key: m.key, title: m.title, owner: m.owner, plan: m.plan, due: m.due, opened: m.opened,
+    answer: m.answer, note: m.note, answeredAt: m.answeredAt,
+    handled: Boolean(m.handledAt && m.answeredAt && m.handledAt >= m.answeredAt),
+  }));
+}
+
+/** Andy answers a move from the page he reads. */
+export function setMoveAnswer(d: Database.Database, key: string, answer: MoveAnswer | null, note: string | null) {
+  return answerMove(prepared(d), key, answer, note);
 }

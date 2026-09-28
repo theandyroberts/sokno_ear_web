@@ -24,7 +24,70 @@ export const SCHEMA = `
     PRIMARY KEY (week, task)
   );
   CREATE TABLE IF NOT EXISTS pub_meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
+  CREATE TABLE IF NOT EXISTS desk_moves (
+    key TEXT PRIMARY KEY, title TEXT NOT NULL, owner TEXT NOT NULL, plan TEXT, due TEXT,
+    opened TEXT NOT NULL, answer TEXT, note TEXT, answered_at TEXT,
+    handled_at TEXT, handled_note TEXT, closed_at TEXT, closed_note TEXT
+  );
 `;
+
+// ── Moves: the one-to-three things a review says should change, and Andy's answer.
+// A move belongs to Claude ("I'm doing this unless you say no") or to Andy ("only
+// you can do this"). Andy answers from the page he reads; every scheduled run reads
+// the answers before it starts. Nothing here is a task id or a ticket number — the
+// key is a plain slug and the title is what the page shows.
+
+/** What Andy can say to each kind of move. */
+export const MOVE_ANSWERS = { claude: ["go", "no"], andy: ["done", "later"] };
+
+const MOVE_COLS = "key, title, owner, plan, due, opened, answer, note, answered_at AS answeredAt, handled_at AS handledAt, handled_note AS handledNote, closed_at AS closedAt, closed_note AS closedNote";
+
+/** Open moves, oldest first. `all` includes closed ones. */
+export function listMoves(db, { all = false } = {}) {
+  return db.prepare(`SELECT ${MOVE_COLS} FROM desk_moves ${all ? "" : "WHERE closed_at IS NULL"} ORDER BY opened, key`).all();
+}
+
+/** Answers nobody has acted on yet: the list a run reads first. */
+export function pendingAnswers(db) {
+  return listMoves(db).filter((m) => m.answeredAt && (!m.handledAt || m.handledAt < m.answeredAt));
+}
+
+/**
+ * Open a move, or reword one already open. The opened date never changes and an
+ * answer already given is kept.
+ */
+export function putMove(db, { key, title, owner, plan = null, due = null }, now = Date.now()) {
+  if (!/^[a-z0-9][a-z0-9-]{1,60}$/.test(String(key))) throw new Error(`move key must be a plain slug: ${key}`);
+  if (!MOVE_ANSWERS[owner]) throw new Error(`owner must be claude or andy: ${owner}`);
+  if (!title) throw new Error("a move needs a title");
+  db.prepare(`INSERT INTO desk_moves (key, title, owner, plan, due, opened) VALUES (?,?,?,?,?,?)
+    ON CONFLICT(key) DO UPDATE SET title=excluded.title, owner=excluded.owner, plan=excluded.plan, due=excluded.due, closed_at=NULL, closed_note=NULL`)
+    .run(key, title, owner, plan, due, todayET(now));
+}
+
+/** Andy's answer. Returns "ok", "unknown-move", "closed" or "bad-answer". */
+export function answerMove(db, key, answer, note = null, now = Date.now()) {
+  const m = db.prepare("SELECT owner, closed_at FROM desk_moves WHERE key = ?").get(key);
+  if (!m) return "unknown-move";
+  if (m.closed_at) return "closed";
+  const text = note ? String(note).trim().slice(0, 1000) : null;
+  // A note on its own is an answer too: it's how he says "yes, but".
+  if (answer == null && !text) return "bad-answer";
+  if (answer != null && !MOVE_ANSWERS[m.owner].includes(answer)) return "bad-answer";
+  db.prepare("UPDATE desk_moves SET answer = COALESCE(?, answer), note = COALESCE(?, note), answered_at = ? WHERE key = ?")
+    .run(answer ?? null, text, new Date(now).toISOString(), key);
+  return "ok";
+}
+
+/** A run has acted on the answer. */
+export function handleMove(db, key, note = null, now = Date.now()) {
+  return db.prepare("UPDATE desk_moves SET handled_at = ?, handled_note = ? WHERE key = ?").run(new Date(now).toISOString(), note, key).changes > 0;
+}
+
+/** The move is finished or withdrawn. It leaves the page. */
+export function closeMove(db, key, note = null, now = Date.now()) {
+  return db.prepare("UPDATE desk_moves SET closed_at = ?, closed_note = ? WHERE key = ?").run(new Date(now).toISOString(), note, key).changes > 0;
+}
 
 export const CHANNELS = {
   site: "SoKnoEar.com",
