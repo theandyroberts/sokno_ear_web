@@ -28,31 +28,37 @@ is not sufficient: Andy runs 100+ unread on a normal day.
 
 ## Open
 
-### 1. Venue outreach — nobody has ever talked to the venues
-**Opened:** 2026-08-11 · **Age: 41 days** (as of 2026-09-21) · **Carried through 7 Instagram reviews**
-· **Only Andy can do this**
+### 1. Venue outreach — five notes were written for him and none was sent
+**Opened:** 2026-08-11 · **Age: 48 days** (as of 2026-09-28) · **Carried through 8 Instagram reviews**
+· **Only Andy can do this** · **Push sent 2026-09-28** (next push only if the Sep 30 drafts also expire unsent)
+
+**2026-09-28:** The venue-notes pipeline went live and put five first-contact drafts in Gmail
+on Wed Sep 23: Kern's, Earl's, Ijams, Legacy Parks, Puckers (Puckers has no email, so that one
+is an Instagram DM). None was sent and all five expired when their events passed. **New drafts
+land Wed Sep 30 at 5:30 PM, each with a send-by day on the desk.** Ijams first — the note goes
+to Cindy Hassil.
+
+The week it matters to: No. 15 read 4.9 reach per post, the lowest on record, on 14 posts.
+Nine of them were Ijams, now 41% of everything posted since Aug 11 (31 posts, 6.9 average
+reach, never one like or reshare). Followers went 100 → 101, with no new follower in the
+five days Sep 24–28. The pipeline has run two clean weeks; the layout problem it did have
+is fixed (A16, in Closed). What's left is that the venues have never heard from the Ear.
 
 **2026-09-21:** Ijams went from 14 tags to 22 in one week (8 of No. 14's 13 posts) and is now
 35% of everything posted since Aug 11, at 7.2 average reach, the lowest of any venue. It still
 has never engaged. The pipeline ran its first fully clean week and per-post reach is flat at 6–7,
 so nothing left in the pipeline addresses this.
 
-Nine venues tagged across 79 posts. Zero reshares, ever. Non-follower reach over the
-last three 28-day windows: 10 → 10 → 6, while the follower list grew 16% then 10%.
-Ijams alone is 14 tags since Aug 11 — a quarter of everything posted, at 7.8 average
-reach, the worst of any venue — and has never engaged once.
-
 Every Instagram review since the baseline has said the same thing: this is the binding
 constraint, and it is a conversation, not a pipeline setting. One reshare from Ijams,
 Kern's or Puckers reaches more non-followers in an afternoon than the feed has reached
-since August. **Ijams is the door to knock on** — not because it performs, but because
-a quarter of the coverage already goes there and the relationship is entirely one-way.
+since August.
 
-Six reviews of pipeline tuning have now run inside a 95-follower base. The pipeline is
-in good shape. This is what is left.
+*To close:* one first-contact note sent. `content/contacts.json` records it as `introduced`,
+and from then on that venue's weekly note goes out by itself.
 
 ### 2. Search Console is unreadable from the Mac mini
-**Opened:** 2026-08-15 · **Age: 37 days** (as of 2026-09-21) · **Missed 2 of 3 SEO checks**
+**Opened:** 2026-08-15 · **Age: 44 days** (as of 2026-09-28) · **Missed 2 of 3 SEO checks**
 · **Needs Andy**
 
 No Chrome extension connected to the mini, and the Browser pane has no Google session,
@@ -73,6 +79,7 @@ fires (1st and 15th), or open Search Console and paste the Page indexing numbers
 
 | Item | Opened | Closed | What fixed it |
 | --- | --- | --- | --- |
+| One venue filled a day of the Instagram drip (No. 15: three Ijams banners Thursday, four Saturday, read 2, 2, 7 and 2, 6, 5, 1) | 2026-09-28 | 2026-09-28 | `placeDaySlots` takes each post's venue: two posts a day per venue, the rest move earlier in the week, never before publish day, nothing dropped; 7 tests in `tests/ig-day-slots.test.ts` (A16). First live week is No. 16 |
 | Same-day Instagram posts stacked an hour apart (No. 14's Sunday: 4 Ijams banners 08–11, read 4/5/2/5) | 2026-09-21 | 2026-09-21 | `placeDaySlots` in `ig-schedule.mjs`: ≥2h same-day spacing, collisions walk earlier, overflow to the day before; `tests/ig-day-slots.test.ts` (A15) |
 | A12 measure (per-post non-follower reach) can't be read: API rejects `follow_type` on media insights | 2026-09-21 | 2026-09-21 | Measure redefined to per-post reach/views by arm plus account-level non-follower count; A/B continues through No. 16 |
 | Post failures / lead-card slot / standing cap: measures confirmed on a live week | 2026-09-15 | 2026-09-21 | No. 14: 13/13 posted, 0 retries, lead cards 13:00, 2 repeats held (A8, A9, A10 closed in the IG review) |

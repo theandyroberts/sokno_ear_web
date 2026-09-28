@@ -118,8 +118,14 @@ function dayBefore(day) {
   return d.toISOString().slice(0, 10);
 }
 
+/** Posts naming the same venue on one day. A third reads like the feed repeating itself. */
+export const MAX_VENUE_POSTS_PER_DAY = 2;
+/** How many days back a post held off its day by the venue cap may look for room. */
+export const VENUE_SPILL_DAYS = 3;
+
 /**
- * Place story posts so no two on the same day land within SAME_DAY_GAP_H of each other.
+ * Place story posts so no two on the same day land within SAME_DAY_GAP_H of each other,
+ * and no venue gets more than MAX_VENUE_POSTS_PER_DAY posts on one day.
  *
  * Each post comes in with the slot it WANTS (its event time minus ~3h). The old rule
  * walked a collision one hour LATER, which on a busy day stacks the posts back-to-back
@@ -134,19 +140,44 @@ function dayBefore(day) {
  * day before is full does it fall back to the old behaviour: the first free hour at
  * or after the slot it wanted.
  *
+ * The venue cap (A16) came out of No. 15. Two hours between posts was not enough when
+ * the posts were all the same venue: Thursday carried three Ijams banners and Saturday
+ * four, every one of them 2h+ apart, and they read 2, 2, 7 and 2, 6, 5, 1 against 6.3
+ * for the rest of the week. On record, a banner on a day carrying three or more from
+ * one venue averages 4.4; on a day carrying one or two, 9.1 (docs/ig-reviews/
+ * 2026-09-28.md, finding 2). A post held off its day by the cap goes out earlier in the week — the
+ * evening before first, then further back, never before `floorDay`. Nothing is ever
+ * dropped: if the whole week is at the cap the post keeps its own day and comes back
+ * marked "over-venue-cap" so the builder can say so.
+ *
  * Pure and timezone-free: days are "YYYY-MM-DD" strings, hours are local integers.
  *
- * @param {Array<{key: string, day: string, hour: number}>} items
- * @returns {Map<string, {day: string, hour: number, how: "as-wanted"|"earlier"|"evening-before"|"day-before"|"fallback"}>}
+ * @param {Array<{key: string, day: string, hour: number, venue?: string}>} items
+ *   `venue` is whatever identifies the place (the first tag). Posts without one are
+ *   only ever spaced by the clock.
+ * @param {{maxPerVenuePerDay?: number, floorDay?: string}} [opts]
+ *   `floorDay` is the earliest day a venue-capped post may move to — publish day.
+ * @returns {Map<string, {day: string, hour: number, how: "as-wanted"|"earlier"|"evening-before"|"day-before"|"days-before"|"over-venue-cap"|"fallback", venueCapped?: boolean}>}
  */
-export function placeDaySlots(items) {
+export function placeDaySlots(items, opts = {}) {
+  const maxVenue = opts.maxPerVenuePerDay ?? MAX_VENUE_POSTS_PER_DAY;
   const placed = new Map(); // day → hours[]
+  const venues = new Map(); // day → venue[]
   const out = new Map();
   const hoursOn = (day) => placed.get(day) ?? [];
   const fits = (day, h) => hoursOn(day).every((x) => Math.abs(x - h) >= SAME_DAY_GAP_H);
-  const put = (key, day, hour, how) => {
+  const venueRoom = (day, venue) =>
+    !venue || (venues.get(day) ?? []).filter((v) => v === venue).length < maxVenue;
+  const put = (it, day, hour, how, venueCapped) => {
     placed.set(day, [...hoursOn(day), hour]);
-    out.set(key, { day, hour, how });
+    if (it.venue) venues.set(day, [...(venues.get(day) ?? []), it.venue]);
+    out.set(it.key, { day, hour, how, ...(venueCapped ? { venueCapped: true } : {}) });
+  };
+  /** Walk down from `from` to the first hour that fits on `day`, or undefined. */
+  const walkEarlier = (day, from) => {
+    let h = from;
+    while (h >= EARLIEST_STORY_HOUR && !fits(day, h)) h -= 1;
+    return h >= EARLIEST_STORY_HOUR ? h : undefined;
   };
 
   const days = [...new Set(items.map((i) => i.day))].sort();
@@ -157,23 +188,42 @@ export function placeDaySlots(items) {
       .filter((i) => i.day === day)
       .sort((a, b) => b.hour - a.hour || a.key.localeCompare(b.key));
     for (const it of todays) {
-      let h = it.hour;
-      while (h >= EARLIEST_STORY_HOUR && !fits(day, h)) h -= 1;
-      if (h >= EARLIEST_STORY_HOUR) {
-        put(it.key, day, h, h === it.hour ? "as-wanted" : "earlier");
-        continue;
+      // Held off a day by the venue cap, as opposed to by the clock. Only a capped
+      // post looks further back than the day before.
+      let capped = !venueRoom(day, it.venue);
+      if (!capped) {
+        const h = walkEarlier(day, it.hour);
+        if (h !== undefined) {
+          put(it, day, h, h === it.hour ? "as-wanted" : "earlier");
+          continue;
+        }
       }
-      const prev = dayBefore(day);
-      const eve = EVENING_SPILL_HOURS.find((eh) => fits(prev, eh));
-      if (eve !== undefined) { put(it.key, prev, eve, "evening-before"); continue; }
-      // Evening full: any open hour the day before, latest first — "this weekend" still
-      // lands ahead of the event, which beats a fourth post in a row on the day.
-      let dh = Math.max(...EVENING_SPILL_HOURS) - 1;
-      while (dh >= EARLIEST_STORY_HOUR && !fits(prev, dh)) dh -= 1;
-      if (dh >= EARLIEST_STORY_HOUR) { put(it.key, prev, dh, "day-before"); continue; }
+
+      let landed = false;
+      let prev = day;
+      for (let back = 1; back <= VENUE_SPILL_DAYS && !landed; back++) {
+        if (back > 1 && !capped) break;
+        prev = dayBefore(prev);
+        if (capped && opts.floorDay && prev < opts.floorDay) break;
+        if (!venueRoom(prev, it.venue)) { capped = true; continue; }
+        const eve = EVENING_SPILL_HOURS.find((eh) => fits(prev, eh));
+        // Evening full: any open hour that day, latest first — "this weekend" still
+        // lands ahead of the event, which beats a fourth post in a row on the day.
+        const h = eve ?? walkEarlier(prev, Math.max(...EVENING_SPILL_HOURS) - 1);
+        if (h === undefined) continue;
+        put(it, prev, h, back > 1 ? "days-before" : eve !== undefined ? "evening-before" : "day-before", capped);
+        landed = true;
+      }
+      if (landed) continue;
+
+      // No day under the cap. Keep its own day rather than drop it, and say so.
+      if (capped) {
+        const h = walkEarlier(day, it.hour);
+        if (h !== undefined) { put(it, day, h, "over-venue-cap", true); continue; }
+      }
       let f = it.hour;
       while (hoursOn(day).includes(f)) f += 1;
-      put(it.key, day, f, "fallback");
+      put(it, day, f, "fallback", capped);
     }
   }
   return out;

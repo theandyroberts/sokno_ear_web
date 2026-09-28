@@ -9,7 +9,7 @@
 process.env.TZ = "America/New_York"; // all slot math is SoKno-local
 import fs from "node:fs";
 import path from "node:path";
-import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, DAY_START_HOUR, placeDaySlots, SAME_DAY_GAP_H } from "./ig-schedule.mjs";
+import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, DAY_START_HOUR, placeDaySlots, SAME_DAY_GAP_H, MAX_VENUE_POSTS_PER_DAY } from "./ig-schedule.mjs";
 import { priorRunsById, pickRepeatsToDrop, standingKeyOf, MAX_REPEATS_PER_EPISODE } from "./ig-repeats.mjs";
 import { checkBanner } from "./ig-banner-check.mjs";
 
@@ -214,17 +214,39 @@ if (droppedKeys.length) {
   for (let i = posts.length - 1; i >= 0; i--) if (droppedKeys.includes(posts[i].standingKey)) posts.splice(i, 1);
 }
 
-// ── Same-day spacing (A15). Stories were stamped with the slot they wanted and a
-// collision walked +1h, so a busy Sunday went out 08:00/09:00/10:00/11:00. Resolve
-// all of them at once instead: two hours apart, collisions walk earlier, overflow
-// goes out the evening before. Runs after the standing cap so a held-out repeat
-// never takes a slot. See placeDaySlots in scripts/ig-schedule.mjs.
+// ── Same-day spacing (A15) and the venue cap (A16). Stories were stamped with the
+// slot they wanted and a collision walked +1h, so a busy Sunday went out
+// 08:00/09:00/10:00/11:00. Resolve all of them at once instead: two hours apart,
+// collisions walk earlier, overflow goes out the evening before. And no venue gets
+// more than two posts a day — No. 15 spaced three and four Ijams banners properly
+// and they still read 2, 2, 7 and 2, 6, 5, 1. Runs after the standing cap so a
+// held-out repeat never takes a slot. See placeDaySlots in scripts/ig-schedule.mjs.
 {
-  const slots = placeDaySlots(posts.map((p) => ({ key: p.id, day: p.postAt.slice(0, 10), hour: Number(p.postAt.slice(11, 13)) })));
+  const slots = placeDaySlots(
+    posts.map((p) => ({
+      key: p.id,
+      day: p.postAt.slice(0, 10),
+      hour: Number(p.postAt.slice(11, 13)),
+      venue: p.tags[0]?.toLowerCase(),
+    })),
+    { floorDay: episode.date },
+  );
   for (const p of posts) {
     const s = slots.get(p.id);
     const next = `${s.day}T${String(s.hour).padStart(2, "0")}:00:00-04:00`;
-    if (next !== p.postAt) warnings.push(`${p.id}: ${s.how === "evening-before" || s.how === "day-before" ? "moved to the day before" : s.how === "earlier" ? "moved earlier" : "shifted"} to keep ${SAME_DAY_GAP_H}h between same-day posts (${p.postAt.slice(5, 16)} → ${next.slice(5, 16)})`);
+    const moved = `(${p.postAt.slice(5, 16)} → ${next.slice(5, 16)})`;
+    const why = s.venueCapped
+      ? `to keep ${p.tags[0]} to ${MAX_VENUE_POSTS_PER_DAY} posts a day`
+      : `to keep ${SAME_DAY_GAP_H}h between same-day posts`;
+    if (s.how === "over-venue-cap" || (s.how === "fallback" && s.venueCapped)) {
+      warnings.push(`${p.id}: ${p.tags[0]} already has ${MAX_VENUE_POSTS_PER_DAY} posts on every day from publish day on — left on its own day, over the cap${next !== p.postAt ? ` ${moved}` : ""}`);
+    } else if (next !== p.postAt) {
+      const where = s.how === "days-before" ? "moved earlier in the week"
+        : s.how === "evening-before" || s.how === "day-before" ? "moved to the day before"
+        : s.how === "earlier" ? "moved earlier"
+        : "shifted";
+      warnings.push(`${p.id}: ${where} ${why} ${moved}`);
+    }
     p.postAt = next;
   }
 }
