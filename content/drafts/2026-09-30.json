@@ -50,7 +50,7 @@
       },
       {
         "label": "Weather",
-        "value": "Mostly sunny and 89 on Friday · a 30% chance of a shower from mid-afternoon into the evening"
+        "value": "Mostly sunny and 89 on Friday · a 20% chance of a shower after 2 PM, 50% after dark"
       }
     ],
     "body": [
@@ -72,7 +72,7 @@
       },
       {
         "type": "paragraph",
-        "text": "Doors open at six, and the hour and a half before dark is for dinner: food trucks are on the property and the Ijams beer garden is open. Coolers and outside alcohol stay home. Bring a lawn chair or a blanket. Tickets are $12 a person, and members of either Ijams Park or Central Cinema can call (865) 577-4717, extension 1001, for a discount code. Friday is 89 and mostly sunny with a 30 percent chance of a shower after two o'clock and into the evening, so check the event page before you load the chairs."
+        "text": "Doors open at six, and the hour and a half before dark is for dinner: food trucks are on the property and the Ijams beer garden is open. Coolers and outside alcohol stay home. Bring a lawn chair or a blanket. Tickets are $12 a person, and members of either Ijams Park or Central Cinema can call (865) 577-4717, extension 1001, for a discount code. Friday is 89 and mostly sunny, with a slight chance of a shower after two o'clock and a 50 percent chance once it is dark, so check the event page before you load the chairs."
       }
     ],
     "sources": [
@@ -195,7 +195,7 @@
       ],
       "hot": false,
       "image": "/assets/spots/gong_sound_bath.jpg",
-      "title": "A sound bath indoors on the rainy day",
+      "title": "A sound bath indoors, out of the rain",
       "blurb": "Sunday at ten in the Visitor Center. Singing bowls and a gong for an hour, twenty-five dollars, bring a mat.",
       "cue": "Jump to story",
       "href": "#sound-bath"
@@ -253,7 +253,7 @@
         },
         {
           "label": "Weather",
-          "value": "Mostly cloudy Friday night · 30% chance of a shower · low 66"
+          "value": "Mostly cloudy Friday night · 50% chance of showers · low 67"
         },
         {
           "label": "Waiver",
@@ -275,7 +275,7 @@
         },
         {
           "type": "paragraph",
-          "text": "The sky is the open question. Friday night is forecast mostly cloudy with a 30 percent chance of a shower and a low of 66, which is warm for October and comfortable on the water. If the clouds win, the river at night is still the river at night, and the same paddle runs again October 16, 17 and 30."
+          "text": "The sky is the open question. Friday night is forecast mostly cloudy with a 50 percent chance of showers and a low of 67, which is warm for October and comfortable on the water. If the weather wins, check the event page; if it is only clouds, the river at night is still the river at night, and the same paddle runs again October 16, 17 and 30."
         },
         {
           "type": "subhead",
@@ -544,7 +544,7 @@
         },
         {
           "label": "Weather",
-          "value": "Mostly cloudy · 50% chance of showers · high 84"
+          "value": "Showers likely in the morning · 80% chance of rain · high 83"
         },
         {
           "label": "What it's for",
@@ -570,7 +570,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Work runs nine to noon, and at noon Bear Paw Bikes and 71 South provide lunch, with cold drinks from Creature Comforts. Saturday is mostly cloudy with a high of 84 and a 50 percent chance of showers, so dress for mud. The preserve is at 1516 Taylor Road."
+          "text": "Work runs nine to noon, and at noon Bear Paw Bikes and 71 South provide lunch, with cold drinks from Creature Comforts. Saturday has showers likely through the morning and an 80 percent chance of rain, so dress for mud and check the club's event page before you head over. The preserve is at 1516 Taylor Road."
         }
       ],
       "sources": [
@@ -637,7 +637,7 @@
         },
         {
           "label": "Weather",
-          "value": "Mostly cloudy · 50% chance of showers · high 84"
+          "value": "Showers likely, thunderstorms after 2 PM · 80% chance of rain · high 83"
         },
         {
           "label": "Last date",
@@ -651,7 +651,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Saturday's forecast is mostly cloudy with a 50 percent chance of showers, and for this one program damp is the better condition: moss is at its greenest wet. Fifteen dollars, ages sixteen and up, registration required. Park in the quarry lot and meet staff near the picnic tables. The event page marks Saturday as the last available date."
+          "text": "Saturday's forecast has showers likely and thunderstorms after two o'clock, an 80 percent chance of rain. Damp is the better condition for this one program, since moss is at its greenest wet, but lightning is another matter, so check the event page before you drive over. Fifteen dollars, ages sixteen and up, registration required. Park in the quarry lot and meet staff near the picnic tables. The event page marks Saturday as the last available date."
         }
       ],
       "sources": [
@@ -711,7 +711,7 @@
         },
         {
           "label": "Weather",
-          "value": "Showers likely Sunday (70%) · cloudy · high 80"
+          "value": "Showers Sunday morning (80%) · cloudy · high 78"
         },
         {
           "label": "Waiver",
@@ -729,7 +729,7 @@
         },
         {
           "type": "paragraph",
-          "text": "It costs five dollars, and the ticket includes parking, so skip the pay station. Meet at the Mead's Quarry gravel lot, where a staff member walks the group to the station. Sunday is the wet day of the weekend, with showers likely and a 70 percent chance of rain, so check the event page before you drive over."
+          "text": "It costs five dollars, and the ticket includes parking, so skip the pay station. Meet at the Mead's Quarry gravel lot, where a staff member walks the group to the station. Sunday has showers through the morning and an 80 percent chance of rain, so check the event page before you drive over."
         }
       ],
       "sources": [
@@ -793,7 +793,7 @@
         },
         {
           "label": "Weather",
-          "value": "Mostly cloudy · 50% chance of showers"
+          "value": "Showers likely · 80% chance of rain"
         },
         {
           "label": "Next week",
@@ -807,7 +807,7 @@
         },
         {
           "type": "paragraph",
-          "text": "The format is loose. Some weeks there is a hands-on activity, and some weeks the reading is the activity and the rest is roaming. Bring a blanket or a chair and a snack. Parking at the quarry lot is $5 a car unless you are a member. Saturday has a 50 percent chance of showers, so look at the sky before you go. Next Saturday's theme is flowers and plants."
+          "text": "The format is loose. Some weeks there is a hands-on activity, and some weeks the reading is the activity and the rest is roaming. Bring a blanket or a chair and a snack. Parking at the quarry lot is $5 a car unless you are a member. Saturday has showers likely and an 80 percent chance of rain, so check the event page before you go. Next Saturday's theme is flowers and plants."
         }
       ],
       "sources": [
@@ -957,7 +957,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Bring whatever makes a floor comfortable: a mat, a blanket, a pillow or a bolster. Twenty-five dollars, ten to eleven. Sunday's forecast has showers likely and a 70 percent chance of rain, and this is the one program on the park's Sunday that was always going to be under a roof."
+          "text": "Bring whatever makes a floor comfortable: a mat, a blanket, a pillow or a bolster. Twenty-five dollars, ten to eleven. Sunday's forecast has showers and an 80 percent chance of rain, and this is the one program on the park's Sunday that was always going to be under a roof."
         }
       ],
       "sources": [
@@ -1107,7 +1107,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Twenty-five dollars a workshop, six to seven. Thursday is sunny with a high near 89, the warmest day of the weekend, and this is the one thing on the park's Thursday with a roof over it. The event page has directions to the Miller Building. The class runs again October 8 and 15."
+          "text": "Twenty-five dollars a workshop, six to seven. Thursday is sunny with a high near 89, and this is the one thing on the park's Thursday with a roof over it. The event page has directions to the Miller Building. The class runs again October 8 and 15."
         }
       ],
       "sources": [
@@ -1186,7 +1186,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Thursday and Friday are the days for the river-facing tables, sunny and 89 with the rain holding off until late Friday. Sunday is mimosas and Bloody Marys, with showers likely, so the inside tables."
+          "text": "Thursday and Friday are the days for the river-facing tables, sunny and 89 with the rain holding off until Friday night. Saturday and Sunday each have an 80 percent chance of rain, so the inside tables for the game and for Sunday's mimosas and Bloody Marys."
         }
       ],
       "sources": [
@@ -1220,8 +1220,8 @@
     "audio": {
       "title": "Weekend Audio Briefing",
       "intro": "What's happening in SoKno this weekend.",
-      "description": "Your weekend listen — \"Carrie\" outdoors on the Ijams Park lawn Friday, a paddle on a moonless river, giant fishing lures on the Kern's tower, a trail work party at Baker Creek, brunch before Auburn at Puckers, and a Sunday built for the rain.",
-      "duration": "04:13",
+      "description": "Your weekend listen — \"Carrie\" outdoors on the Ijams Park lawn Friday, a paddle on a moonless river, giant fishing lures on the Kern's tower, a trail work party at Baker Creek, brunch before Auburn at Puckers, and what to do with a wet Saturday and Sunday.",
+      "duration": "04:58",
       "src": "/audio/2026-09-30.mp3"
     },
     "calendar": [
