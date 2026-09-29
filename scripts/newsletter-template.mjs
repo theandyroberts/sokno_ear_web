@@ -68,8 +68,26 @@ export function buildSubject(episode) {
     const pair = `${lead} — and ${lowerFirst(headline(second.title))}`;
     if (pair.length <= 80) return pair;
   }
-  const when = episode.shortDate ?? episode.dateLabel ?? episode.date;
+  const when = featureWhen(episode);
   return when ? `${lead} · ${when}` : lead;
+}
+
+const DAY_FULL = { Mon: "Monday", Tue: "Tuesday", Wed: "Wednesday", Thu: "Thursday", Fri: "Friday", Sat: "Saturday", Sun: "Sunday" };
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+/**
+ * The date that trails the lead in a subject line. It sits beside the feature, so it
+ * has to be the feature's date: "Carrie outdoors · Oct 1–4" told subscribers the movie
+ * ran four nights (Andy, 2026-09-29). A one-day feature gets its own day ("Friday,
+ * Oct 2"); only a feature that runs the whole weekend gets the episode's range.
+ */
+export function featureWhen(episode) {
+  const range = episode.shortDate ?? episode.dateLabel ?? episode.date;
+  const days = episode.feature.days ?? [];
+  if (days.length !== 1) return range;
+  const day = DAY_FULL[days[0]] ?? days[0];
+  const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(episode.feature.event?.startDate ?? "");
+  return m ? `${day}, ${MONTHS[Number(m[2]) - 1]} ${Number(m[3])}` : day;
 }
 
 /**

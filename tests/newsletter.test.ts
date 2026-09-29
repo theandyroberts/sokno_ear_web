@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import fs from "node:fs";
 import path from "node:path";
-import { buildNewsletter, buildSubject, headline, cardHref, resolveHero } from "../scripts/newsletter-template.mjs";
+import { buildNewsletter, buildSubject, featureWhen, headline, cardHref, resolveHero } from "../scripts/newsletter-template.mjs";
 
 const load = (slug: string) =>
   JSON.parse(fs.readFileSync(path.resolve(__dirname, `../content/episodes/${slug}.json`), "utf8"));
@@ -49,6 +49,18 @@ describe("buildSubject", () => {
   });
   it("honours an explicit override", () => {
     expect(buildSubject({ ...current, newsletter: { subject: "Hand-written" } })).toBe("Hand-written");
+  });
+  it("dates a one-day feature by its own day, never the whole weekend", () => {
+    // No. 16 went to preview as '"Carrie" outdoors … · Oct 1–4', which read as four nights of Carrie.
+    const base = { shortDate: "Oct 1–4", scanner: [{ title: "A lead too long to pair with anything else on the list, by design", href: "#f" }] };
+    const friday = { ...base, feature: { id: "f", title: "x", days: ["Fri"], event: { startDate: "2026-10-02T18:00:00-04:00" } } };
+    expect(featureWhen(friday)).toBe("Friday, Oct 2");
+    expect(buildSubject(friday)).toMatch(/ · Friday, Oct 2$/);
+    expect(buildSubject(friday)).not.toContain("Oct 1–4");
+    const undated = { ...base, feature: { id: "f", title: "x", days: ["Sun"] } };
+    expect(featureWhen(undated)).toBe("Sunday");
+    const allWeekend = { ...base, feature: { id: "f", title: "x", days: ["Thu", "Fri", "Sat", "Sun"] } };
+    expect(featureWhen(allWeekend)).toBe("Oct 1–4");
   });
 });
 
