@@ -1,6 +1,6 @@
 {
   "_flow": "Each day reads as the night's arc: happy hour → dinner → events/concerts/comedy/drink specials → the closing-time hang. Bars, restaurants, music venues only.",
-  "updated": "2026-09-28",
+  "updated": "2026-09-29",
   "weekend": "Oct 1–4",
   "days": {
     "Thu": [
@@ -39,6 +39,15 @@
         "sub": "$1 Pucker Lager · $3 wells and prosecco · $3 lemon drops · 115 Mimosa Ave",
         "cat": "drink",
         "href": "/2026-09-30/puckers-auburn"
+      },
+      {
+        "id": "thu-dumplings",
+        "time": "6:00 PM",
+        "venue": "Angry Dumplings · 1119 Sevier Ave",
+        "headline": "Dumplings before the night starts",
+        "sub": "Hand-wrapped dumplings, noodles and boba · 1119 Sevier Ave",
+        "cat": "food",
+        "href": "https://www.instagram.com/dumplingsteaknoxville/"
       },
       {
         "id": "thu-hooping",
@@ -113,6 +122,15 @@
         "sub": "$1 Pucker Lager · $3 wells and prosecco · 115 Mimosa Ave",
         "cat": "drink",
         "href": "/2026-09-30/puckers-auburn"
+      },
+      {
+        "id": "fri-dumplings",
+        "time": "6:00 PM",
+        "venue": "Angry Dumplings · 1119 Sevier Ave",
+        "headline": "Dumplings first, then the movie or the bars",
+        "sub": "Hand-wrapped dumplings, noodles and boba · 1119 Sevier Ave",
+        "cat": "food",
+        "href": "https://www.instagram.com/dumplingsteaknoxville/"
       },
       {
         "id": "fri-carrie",
@@ -225,6 +243,15 @@
         "href": "https://alliancebrewing.com/"
       },
       {
+        "id": "sat-dumplings",
+        "time": "6:00 PM",
+        "venue": "Angry Dumplings · 1119 Sevier Ave",
+        "headline": "Dumplings before Saturday night gets going",
+        "sub": "Hand-wrapped dumplings, noodles and boba · 1119 Sevier Ave",
+        "cat": "food",
+        "href": "https://www.instagram.com/dumplingsteaknoxville/"
+      },
+      {
         "id": "sat-pinkcactus",
         "time": "9:00 PM",
         "venue": "The Pink Cactus · 1147 Sevier Ave",
@@ -288,6 +315,15 @@
         "sub": "Pinball, ping pong and a roof for a rainy Sunday · 2020 Barber St",
         "cat": "drink",
         "href": "https://hiwirebrewing.com/knoxville/"
+      },
+      {
+        "id": "sun-dumplings",
+        "time": "6:00 PM",
+        "venue": "Angry Dumplings · 1119 Sevier Ave",
+        "headline": "Dumplings to close the weekend",
+        "sub": "Hand-wrapped dumplings, noodles and boba · 1119 Sevier Ave",
+        "cat": "food",
+        "href": "https://www.instagram.com/dumplingsteaknoxville/"
       },
       {
         "id": "sun-pinkcactus",
