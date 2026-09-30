@@ -7,7 +7,9 @@ export interface DeskItem {
   date: string;
   channel: ChannelKey;
   title: string;
-  who: "Pipeline" | "Claude" | "Andy";
+  who: "Pipeline" | "Claude";
+  /** The question Claude needs Andy's yes for. Rare; shown under "AI needs to ask for permission". */
+  ask?: string;
   kind: "auto" | "mark";
   done: boolean;
   detail: string;
@@ -43,7 +45,8 @@ export interface DeskMark { task: string; done: number | boolean; note?: string 
 export interface MergedWeek extends Omit<WeekSnapshot, "days"> {
   days: Array<DeskDay<SettledItem> & { isToday: boolean }>;
   channels: Array<{ key: ChannelKey; name: string; done: number; total: number; trouble: number }>;
-  waiting: SettledItem[];
+  /** What Claude needs Andy's yes for — rare. */
+  asks: SettledItem[];
   done: number;
   total: number;
   today: string;

@@ -61,9 +61,9 @@ async function show() {
     console.log(`${d.isToday ? "▶" : " "} ${d.label}`);
     for (const i of d.items) console.log(`    [${GLYPH[i.state]}] ${(i.time ?? "").padEnd(8)} ${i.title}  ${`(${CHANNELS[i.channel]} · ${i.who})`}${i.detail ? ` — ${i.detail}` : ""}   ${i.id}`);
   }
-  if (w.waiting.length) {
-    console.log("\n  Waiting on Andy:");
-    for (const i of w.waiting) console.log(`    · ${i.title}${i.detail ? ` — ${i.detail}` : ""}`);
+  if (w.asks.length) {
+    console.log("\n  AI needs to ask for permission:");
+    for (const i of w.asks) console.log(`    · ${i.ask}${i.due ? ` (by ${i.due})` : ""}   ${i.id}`);
   }
   console.log("");
 }

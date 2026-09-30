@@ -166,6 +166,15 @@ if (mode === "preview") {
   recipients = [one];
 } else {
   const db = new Database(process.env.SQLITE_PATH || "/var/lib/soknoear/ear.db", { readonly: true });
+  // The real send is the default at publish now, so a rerun must not mail the list twice.
+  try {
+    const { weekOf, todayET } = await import("./pub-status-lib.mjs");
+    const sent = db.prepare("SELECT note FROM pub_marks WHERE week = ? AND task = 'party-notice' AND done = 1").get(weekOf(todayET()));
+    if (sent && process.env.RESEND_OK !== "1") {
+      console.error(`REFUSING TO SEND AGAIN: the desk says this week's party-notice already went (${sent.note ?? "sent"}). Override with RESEND_OK=1.`);
+      process.exit(1);
+    }
+  } catch { /* no desk tables yet */ }
   recipients = db.prepare("SELECT email FROM subscriber_lists WHERE list = 'dsparty' ORDER BY created_at").all()
     .map((r) => r.email).filter((e) => !EXCLUDE.has(e));
   if (recipients.length === 0) { console.log("dsparty list is empty (after exclusions) — nothing to send"); process.exit(0); }

@@ -7,8 +7,8 @@
 //
 //   auto — the pipeline's own files are the evidence (the episode JSON exists, the
 //          queue says "posted"). Nobody ticks these; they tick themselves on sync.
-//   mark — nothing on disk proves it (the research pass happened, Andy read the
-//          draft, a DM went out). A script, Claude, or Andy's click records it.
+//   mark — nothing on disk proves it (the research pass happened, a list send went
+//          out, Andy said yes). A script, Claude, or Andy's click records it.
 //
 // A task is done if the evidence says so OR someone marked it. A mark never
 // un-does evidence.
@@ -187,15 +187,20 @@ export function deriveWeek(f) {
       : f.nightlife?.weekend ? `still showing ${f.nightlife.weekend}` : "",
   });
 
-  // ── Wednesday: Andy's review, then the publish ────────────────────────────
-  add(wed, { id: "review", channel: "site", title: "Read the draft, send notes", who: "Andy", kind: "mark", done: published, detail: published ? "" : "soknoear.com/next" });
+  // ── Wednesday: the publish ────────────────────────────────────────────────
+  // Nothing on this desk waits on Andy. Claude checks its own work and does the step;
+  // the rare thing it needs his yes for carries an `ask` and shows under
+  // "AI needs to ask for permission". Publishing is one: it takes his "run it".
   add(wed, {
-    id: "site-live", channel: "site", title: "Episode live on soknoear.com", who: "Andy",
-    done: published, detail: published ? `No. ${f.episode.number} · ${f.episode.shortDate ?? ""}` : "say “run it”",
+    id: "site-live", channel: "site", title: "Episode live on soknoear.com", who: "Claude",
+    done: published, detail: published ? `No. ${f.episode.number} · ${f.episode.shortDate ?? ""}` : ep ? "draft at soknoear.com/next" : "",
+    ...(published || !ep ? {} : { ask: `Publish No. ${ep.number}? Say “run it”.` }),
   });
   add(wed, { id: "party-live", channel: "party", title: "/dirtysouthparty shows this weekend", done: published && partyFresh, detail: published && partyFresh ? f.nightlife.weekend : "" });
-  add(wed, { id: "newsletter", channel: "site", title: "Newsletter sent to subscribers", who: "Andy", kind: "mark", detail: "preview first, then the real send" });
-  add(wed, { id: "party-notice", channel: "party", title: "Party notice sent to the list", who: "Andy", kind: "mark", detail: "preview first, then the real send" });
+  // The two list sends follow the publish with no review: Claude builds each, checks
+  // it (no template warnings; the party plan matches the episode), and sends for real.
+  add(wed, { id: "newsletter", channel: "site", title: "Newsletter sent to subscribers", who: "Claude", kind: "mark", detail: "goes out right after the publish" });
+  add(wed, { id: "party-notice", channel: "party", title: "Party notice sent to the list", who: "Claude", kind: "mark", detail: "goes out right after the publish" });
   add(wed, { id: "ig-art", channel: "instagram", title: "Instagram artwork built", done: f.igAssets > 0, detail: f.igAssets ? `${f.igAssets} images` : "" });
   const posts = f.queue?.posts ?? [];
   add(wed, {
@@ -203,8 +208,8 @@ export function deriveWeek(f) {
     done: Boolean(f.queue?.approved), detail: f.queue ? `${posts.length} posts${f.queue.approved ? "" : " · NOT approved"}` : "",
   });
 
-  // Venue notes. Introduced venues are mailed by the pipeline; everyone else is a
-  // Gmail draft Andy sends himself, before the event.
+  // Venue notes. Introduced venues are mailed by the pipeline. A first contact is a
+  // Gmail draft in Andy's account; Claude sends it once he has said yes, before the event.
   const ran = f.venueDrafts !== null && f.venueDrafts !== undefined;
   const auto = (f.venues ?? []).filter((v) => v.introduced && v.introduced < f.week && v.to);
   const autoSent = auto.filter((v) => f.venueLog?.[v.key]);
@@ -224,18 +229,32 @@ export function deriveWeek(f) {
   });
   const today = todayET(now);
   const byKey = Object.fromEntries((f.venues ?? []).map((v) => [v.key, v]));
+  const isSent = (d) => { const i = byKey[d.key]?.introduced ?? null; return Boolean(d.sentAt) || Boolean(i && i >= mon); };
+  const open = drafts.filter((d) => !isSent(d) && !(d.lastDay && d.lastDay < today));
+  const mailable = open.filter((d) => d.to);
+  if (drafts.length) {
+    // One yes covers the week's first notes, so the ask stays rare. Ticking this box is the yes.
+    const due = mailable.map((d) => d.lastDay).filter(Boolean).sort()[0] ?? null;
+    add(wed, {
+      id: "venue-send", channel: "venues", title: "Permission to send this week's first notes", who: "Claude", kind: "mark",
+      done: drafts.every(isSent), due,
+      state: mailable.length === 0 && !drafts.every(isSent) ? "na" : undefined,
+      detail: mailable.length ? `${mailable.map((d) => d.name).join(", ")} · from andy@note15.com` : "",
+      ...(mailable.length ? { ask: `Send the first note to ${mailable.map((d) => d.name).join(", ")} from andy@note15.com? Tick to say yes.` } : {}),
+    });
+  }
   for (const d of drafts.sort((a, b) => String(a.lastDay).localeCompare(String(b.lastDay)) || a.name.localeCompare(b.name))) {
     const introduced = byKey[d.key]?.introduced ?? null;
-    const sent = Boolean(d.sentAt) || Boolean(introduced && introduced >= mon);
+    const sent = isSent(d);
     const missed = !sent && d.lastDay && d.lastDay < today;
     add(wed, {
-      id: `venue-sent:${d.key}`, channel: "venues", who: "Andy", kind: "mark",
+      id: `venue-sent:${d.key}`, channel: "venues", who: "Claude", kind: "mark",
       title: `Send the first note to ${d.name}`,
       done: sent, due: d.lastDay ?? null,
       state: missed ? "missed" : undefined,
       detail: [
         sent ? `sent ${dayLabel(d.sentAt ? d.sentAt.slice(0, 10) : introduced)}` : d.lastDay ? `${missed ? "event passed" : "send by"} ${dayLabel(d.lastDay)}` : "",
-        d.to ? `to ${d.to}` : `no email — DM ${d.instagram ?? "them"}`,
+        d.to ? `to ${d.to}` : `no email yet — Claude is finding one (${d.instagram ?? "no Instagram"})`,
       ].filter(Boolean).join(" · "),
     });
   }
@@ -302,9 +321,10 @@ export function mergeMarks(snapshot, marks = [], now = Date.now()) {
     const mine = counted.filter((i) => i.channel === key);
     return { key, name, done: mine.filter((i) => i.done).length, total: mine.length, trouble: mine.filter((i) => ["failed", "late", "missed"].includes(i.state)).length };
   });
-  // What is waiting on Andy, soonest deadline first. Missed ones are history, not a to-do.
-  const waiting = all
-    .filter((i) => i.who === "Andy" && !i.done && i.state !== "missed" && i.state !== "na")
+  // What Claude needs Andy's yes for, soonest deadline first. Should be rare; missed
+  // ones are history, not a question.
+  const asks = all
+    .filter((i) => i.ask && !i.done && i.state !== "missed" && i.state !== "na")
     .sort((a, b) => String(a.due ?? a.date).localeCompare(String(b.due ?? b.date)));
-  return { ...snapshot, days, channels, waiting, done: counted.filter((i) => i.done).length, total: counted.length, today };
+  return { ...snapshot, days, channels, asks, done: counted.filter((i) => i.done).length, total: counted.length, today };
 }

@@ -29,13 +29,13 @@ function ago(iso: string | null) {
   return `${Math.round(min / 1440)} days ago`;
 }
 
-function Task({ i, token, week }: { i: SettledItem; token: string; week: string }) {
+function Task({ i, token, week, asking = false }: { i: SettledItem; token: string; week: string; asking?: boolean }) {
   return (
     <li className={`desk-task desk-task--${i.state}`}>
       <DeskCheck token={token} week={week} task={i.id} state={i.state} locked={i.locked} label={i.title} />
       <div className="desk-task-body">
         <div className="desk-task-line">
-          <span className="desk-task-title">{i.title}</span>
+          <span className="desk-task-title">{asking && i.ask ? i.ask : i.title}</span>
           {i.dueToday && <span className="desk-flag desk-flag--due">due today</span>}
           {i.state === "late" && <span className="desk-flag">late</span>}
           {i.state === "failed" && <span className="desk-flag">failed</span>}
@@ -106,11 +106,12 @@ export default async function DeskPage({ params, searchParams }: {
         ))}
       </section>
 
-      <section className="desk-waiting" aria-label="Waiting on Andy">
-        <h2>Waiting on Andy</h2>
-        {w.waiting.length === 0
-          ? <p className="desk-clear">Nothing. Every box with your name on it is ticked.</p>
-          : <ul>{w.waiting.map((i) => <Task key={i.id} i={i} token={token} week={w.week} />)}</ul>}
+      {/* Nothing on this page waits on Andy. The rare thing Claude needs his yes for shows here. */}
+      <section className={`desk-asks${w.asks.length ? "" : " desk-asks--clear"}`} aria-label="AI needs to ask for permission">
+        <h2>AI needs to ask for permission</h2>
+        {w.asks.length === 0
+          ? <p className="desk-clear">Nothing. Claude has what it needs.</p>
+          : <ul>{w.asks.map((i) => <Task key={i.id} i={i} token={token} week={w.week} asking />)}</ul>}
       </section>
 
       <section aria-label="The week">
@@ -131,7 +132,7 @@ export default async function DeskPage({ params, searchParams }: {
       <footer className="desk-foot">
         <p>
           <span className="desk-box desk-box--done desk-box--fixed desk-box--key">✓</span> with a grey edge is ticked by the pipeline from its own files and can’t be changed here.
-          A thin empty box is the pipeline’s too, and fills itself in. A heavy empty box is yours, or Claude’s, to tick.
+          A thin empty box is the pipeline’s too, and fills itself in. A heavy empty box is Claude’s to tick. Under “AI needs to ask for permission”, ticking a box is your yes.
         </p>
         <p>Last synced {ago(w.syncedAt)}. The Instagram poster re-syncs every 15 minutes; this page refreshes itself every minute.</p>
       </footer>
@@ -165,8 +166,10 @@ const CSS = `
 .desk-bar{height:8px;background:var(--paper-shadow);border-radius:4px;margin-top:12px;overflow:hidden}
 .desk-bar i{display:block;height:100%;background:var(--green-bridge)}
 
-.desk-waiting{border:2px solid var(--rust);border-radius:6px;padding:16px 18px 8px;margin-bottom:28px;background:var(--paper-bright)}
-.desk-waiting h2{font-family:var(--font-label);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin:0 0 6px;font-weight:400}
+.desk-asks{border:2px solid var(--rust);border-radius:6px;padding:16px 18px 8px;margin-bottom:28px;background:var(--paper-bright)}
+.desk-asks--clear{border-width:1px;border-color:var(--paper-edge);padding-bottom:4px}
+.desk-asks--clear h2{color:var(--ink-faded)}
+.desk-asks h2{font-family:var(--font-label);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin:0 0 6px;font-weight:400}
 .desk-clear{margin:4px 0 10px;color:var(--ink-faded)}
 
 .desk-day{display:grid;grid-template-columns:92px 1fr;gap:0 18px;border-top:1px solid var(--ink-black);padding:14px 0 6px}

@@ -6,8 +6,10 @@
 // forgot simply didn't happen. This runs the whole sequence in the right order, with
 // the outward steps gated behind explicit flags.
 //
-//   node scripts/publish-episode.mjs                     → site + Instagram + newsletter PREVIEW
-//   node scripts/publish-episode.mjs --newsletter send   → ...and the real send
+//   node scripts/publish-episode.mjs                     → site + Instagram + newsletter + party notice, for real
+//   node scripts/publish-episode.mjs --newsletter preview → ...but the newsletter to Andy only
+//   (Andy, 2026-09-29: the list sends need no review. Preview only when you're unsure of
+//   what you made; notify-dsparty.mjs still refuses a stale party plan on its own.)
 //   node scripts/publish-episode.mjs --site              → just promote + deploy
 //   node scripts/publish-episode.mjs --instagram         → just build/deploy/queue the drip
 //   node scripts/publish-episode.mjs --status            → report what's done, change nothing
@@ -32,12 +34,12 @@ const val = (f) => { const i = argv.indexOf(f); return i > -1 ? argv[i + 1] : nu
 
 const DRY = has("--dry-run");
 const STATUS_ONLY = has("--status");
-const newsletterMode = val("--newsletter") ?? "preview";
+const newsletterMode = val("--newsletter") ?? "send";
 if (!["preview", "send", "skip"].includes(newsletterMode)) {
   console.error(`--newsletter must be preview|send|skip (got ${newsletterMode})`);
   process.exit(1);
 }
-const dspartyMode = val("--dsparty") ?? "preview";
+const dspartyMode = val("--dsparty") ?? "send";
 if (!["preview", "send", "skip"].includes(dspartyMode)) {
   console.error(`--dsparty must be preview|send|skip (got ${dspartyMode})`);
   process.exit(1);

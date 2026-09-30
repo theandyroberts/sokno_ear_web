@@ -63,9 +63,14 @@ describe("deriveWeek — a published week", () => {
     expect(find(w, "ig-queue").detail).toBe("5 posts");
     expect(find(w, "ig-review").detail).toBe("report filed Mon Sep 21");
   });
-  it("treats publishing as proof the draft was researched and reviewed", () => {
+  it("treats publishing as proof the draft was researched", () => {
     expect(find(w, "research").done).toBe(true);
-    expect(find(w, "review").done).toBe(true);
+  });
+  it("puts nothing in Andy's name", () => {
+    const whos = new Set(w.days.flatMap((d: any) => d.items).map((i: any) => i.who));
+    expect([...whos].sort()).toEqual(["Claude", "Pipeline"]);
+    expect(find(w, "review")).toBeUndefined();
+    expect(find(w, "site-live").ask).toBeUndefined(); // published: nothing to ask
   });
   it("leaves the sends unticked until a script says they went", () => {
     expect(find(w, "newsletter").done).toBe(false);
@@ -81,9 +86,13 @@ describe("deriveWeek — a published week", () => {
     expect(find(w, "ig-post:gone").state).toBe("skipped");
     expect(find(w, "ig-post:broke")).toMatchObject({ state: "failed", detail: "failed after 4 tries" });
   });
-  it("gives Andy one line per venue he has to write to, with the deadline", () => {
-    expect(find(w, "venue-sent:kerns")).toMatchObject({ who: "Andy", done: false, due: "2026-09-26", detail: "send by Sat Sep 26 · to events@kernsbakery.com" });
-    expect(find(w, "venue-sent:puckers").detail).toBe("send by Sun Sep 27 · no email — DM @puckersknoxville");
+  it("gives Claude one line per venue, with the deadline, and asks once to send them", () => {
+    expect(find(w, "venue-sent:kerns")).toMatchObject({ who: "Claude", done: false, due: "2026-09-26", detail: "send by Sat Sep 26 · to events@kernsbakery.com" });
+    expect(find(w, "venue-sent:puckers").detail).toBe("send by Sun Sep 27 · no email yet — Claude is finding one (@puckersknoxville)");
+    expect(find(w, "venue-send")).toMatchObject({
+      who: "Claude", kind: "mark", done: false, due: "2026-09-26",
+      ask: "Send the first note to Kern's Food Hall from andy@note15.com? Tick to say yes.",
+    }); // Puckers has no address, so it isn't in the ask
     expect(find(w, "venue-sent:old")).toBeUndefined(); // superseded drafts are gone
     expect(find(w, "venue-drafts")).toMatchObject({ done: true, detail: "2 of 2 in andy@note15.com" });
   });
@@ -118,16 +127,17 @@ describe("deriveWeek — before the publish", () => {
     expect(w).toMatchObject({ stage: "not-started", number: 16, slug: null });
     expect(w.days.flatMap((d: any) => d.items).filter((i: any) => i.done)).toEqual([]);
     expect(find(w, "party-plan").detail).toBe("still showing Sep 24–27"); // last week's, and it says so
-    expect(find(w, "site-live").detail).toBe("say “run it”");
+    expect(find(w, "site-live")).toMatchObject({ detail: "" });
+    expect(find(w, "site-live").ask).toBeUndefined(); // nothing to publish yet, so nothing to ask
   });
-  it("a drafted week ticks Tuesday and waits on Andy", () => {
+  it("a drafted week ticks Tuesday and asks to publish", () => {
     const draft = { ...episode, slug: "2026-09-30", date: "2026-09-30", number: 16, shortDate: "Oct 1–4" };
     const w = deriveWeek({ week: "2026-09-30", now: at("2026-09-29T15:00:00-04:00"), episode: null, draft, hasAudio: true, igAssets: 0, queue: null, nightlife: { updated: "2026-09-29", weekend: "Oct 1–4" }, reviews: [], venues: [], venueLog: {}, venueDrafts: null });
     expect(w.stage).toBe("draft");
     expect(find(w, "draft").done).toBe(true);
     expect(find(w, "party-plan").done).toBe(true);
     expect(find(w, "party-live").done).toBe(false); // refreshed, but not live until the publish
-    expect(find(w, "site-live").done).toBe(false);
+    expect(find(w, "site-live")).toMatchObject({ done: false, detail: "draft at soknoear.com/next", ask: "Publish No. 16? Say “run it”." });
     expect(find(w, "research").done).toBe(false); // needs its mark
   });
   it("flags a stale party plan by naming what it still shows", () => {
@@ -169,14 +179,25 @@ describe("mergeMarks", () => {
   it("knows which day is today", () => {
     expect(mergeMarks(snap, [], now).days.filter((d: any) => d.isToday).map((d: any) => d.dow)).toEqual(["Fri"]);
   });
-  it("lists what is waiting on Andy, soonest deadline first, without the missed ones", () => {
-    const w = mergeMarks(deriveWeek(facts({ now: at("2026-09-27T09:00:00-04:00") })), [{ task: "newsletter", done: 1 }], at("2026-09-27T09:00:00-04:00"));
-    expect(w.waiting.map((i: any) => i.id)).toEqual(["party-notice", "venue-sent:puckers"]);
+  it("lists only what Claude needs Andy's yes for — the list sends are Claude's", () => {
+    const w = mergeMarks(snap, [], now);
+    expect(w.asks.map((i: any) => i.id)).toEqual(["venue-send"]);
+  });
+  it("a tick on the ask is the yes, and it leaves the list", () => {
+    const w = mergeMarks(snap, [{ task: "venue-send", done: 1, by: "andy" }], now);
+    expect(w.asks).toEqual([]);
+    expect(find(w, "venue-send")).toMatchObject({ done: true, markedBy: "andy" });
+  });
+  it("stops asking once the only mailable note's event has passed", () => {
+    const sunday = at("2026-09-27T09:00:00-04:00");
+    const w = mergeMarks(deriveWeek(facts({ now: sunday })), [], sunday);
+    expect(find(w, "venue-send").state).toBe("na");
+    expect(w.asks).toEqual([]);
   });
   it("counts per channel, leaving out skipped and not-applicable", () => {
     const w = mergeMarks(snap, [], now);
     const ig = w.channels.find((c: any) => c.key === "instagram");
     expect(ig).toMatchObject({ done: 5, total: 7, trouble: 1 }); // review, art, queue, 2 posted · pending + failed · stale left out
-    expect(w.channels.find((c: any) => c.key === "venues")).toMatchObject({ done: 1, total: 3 }); // venue-auto is n/a
+    expect(w.channels.find((c: any) => c.key === "venues")).toMatchObject({ done: 1, total: 4 }); // drafts, the ask, two notes · venue-auto is n/a
   });
 });

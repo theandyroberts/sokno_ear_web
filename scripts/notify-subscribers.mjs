@@ -68,6 +68,15 @@ if (mode === "preview") {
   recipients = [one];
 } else {
   const db = new Database(process.env.SQLITE_PATH || "/var/lib/soknoear/ear.db", { readonly: true });
+  // The real send is the default at publish now, so a rerun must not mail the list twice.
+  try {
+    const { weekOf } = await import("./pub-status-lib.mjs");
+    const sent = db.prepare("SELECT note FROM pub_marks WHERE week = ? AND task = 'newsletter' AND done = 1").get(weekOf(episode.slug));
+    if (sent && process.env.RESEND_OK !== "1") {
+      console.error(`REFUSING TO SEND AGAIN: the desk says this week's newsletter already went (${sent.note ?? "sent"}). Override with RESEND_OK=1.`);
+      process.exit(1);
+    }
+  } catch { /* no desk tables yet */ }
   // The weekly episode email goes to the 'ear' list only — 'dsparty' members
   // signed up for party-page notices, not this. (Falls back to the old
   // whole-table read if the lists table hasn't been created yet.)

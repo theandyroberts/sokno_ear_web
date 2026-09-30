@@ -5,9 +5,9 @@ One page for the whole week: every step, every channel, a box for each.
 
 ## Why it exists
 
-Publishing the Ear is four channels and three actors. Claude researches and drafts on
-Tuesday; Andy reviews and says "run it" on Wednesday; the pipeline drips Instagram posts
-through Sunday; venue notes have to reach each venue before its event. Each piece
+Publishing the Ear is four channels. Claude researches and drafts on Tuesday; Andy says
+"run it" on Wednesday; the pipeline drips Instagram posts through Sunday; venue notes have
+to reach each venue before its event. Each piece
 reported into its own place — a terminal transcript, a recap email, a queue file on the
 VPS — and nothing showed the week as a whole. On 2026-09-16 the party email went out
 with the previous week's plan; on 2026-09-25 a batch of venue notes was thrown out
@@ -23,8 +23,25 @@ episode's slug in a normal week.
 | --- | --- | --- |
 | **Mon** | Weekly Instagram review, 9 AM | Claude (`instagram-review` task) |
 | **Tue** | Research · episode draft to /next · audio briefing · party plan rebuilt, 9 AM | Claude (`tuesday-research-draft` task) |
-| **Wed** | Read the draft · "run it" · site live · party page live · newsletter · party notice · Instagram artwork + drip approved · venue notes · publish check at 2 PM | Andy, then the pipeline (`publish-episode.mjs`), then Claude (`wednesday-publish-check` task) |
-| **Wed–Sun** | Instagram posts go out one by one · first-contact venue drafts land in Gmail at 5:30 PM · Andy sends them before each event | Pipeline (cron, every 15 min) · Claude (`venue-drafts` task) · Andy |
+| **Wed** | "run it" · site live · party page live · newsletter and party notice sent for real · Instagram artwork + drip approved · venue notes · publish check at 2 PM | the pipeline (`publish-episode.mjs`) on Andy's "run it", then Claude (`wednesday-publish-check` task) |
+| **Wed–Sun** | Instagram posts go out one by one · first-contact venue drafts land in Gmail at 5:30 PM · Claude sends them before each event once Andy has said yes | Pipeline (cron, every 15 min) · Claude (`venue-drafts` task) |
+
+## Nothing waits on Andy
+
+Andy, 2026-09-29: *nothing should be "waiting on Andy" if you are unsure of what you've
+built or what has been built; the status can be "AI needs to ask for permission", but that
+should be rare.* Every box belongs to Claude or the pipeline. Claude checks its own work
+and does the step. It doesn't hand the check to Andy. A task that really does need his yes
+carries an `ask`, and it shows at the top of the page under **AI needs to ask for
+permission**. Ticking a box there is the yes. There are two such asks today:
+
+- **Publish No. N** (`site-live`, until it's live). Andy's "run it" answers it.
+- **Send this week's first notes** (`venue-send`). This is mail from his account to venues
+  that haven't heard from the Ear. One yes covers the week.
+
+The newsletter and the party notice aren't asks. They go out for real at the publish.
+Preview one only when you're unsure of what you made. Both scripts refuse to mail a list
+twice in a week (`RESEND_OK=1` overrides), and `notify-dsparty.mjs` refuses a stale party plan.
 
 ## How a box gets ticked
 
@@ -36,8 +53,7 @@ stores a snapshot of the week. It runs at the end of `ig-post.mjs` (the 15-minut
 tick), at the end of `venue-notify.mjs`, and as the last step of `publish-episode.mjs`.
 Evidence boxes have a grey edge on the page and can't be changed there.
 
-**Marks.** Nothing on disk proves the research pass happened or that Andy read the
-draft. Those are recorded — by a script (`notify-subscribers.mjs` and
+**Marks.** Nothing on disk proves the research pass happened or that Andy said yes. Those are recorded — by a script (`notify-subscribers.mjs` and
 `notify-dsparty.mjs` mark their own real sends), by Claude
 (`node scripts/pub-status.mjs done <task>`), or by Andy clicking the box on the page.
 

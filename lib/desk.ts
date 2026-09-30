@@ -42,7 +42,7 @@ export function getDeskWeek(d: Database.Database, asked?: string, now = Date.now
 /** Andy ticks or un-ticks a box. Only tasks in that week's plan, and never pipeline evidence. */
 export function setDeskMark(d: Database.Database, week: string, task: string, done: boolean): "ok" | "unknown-task" | "locked" {
   const w = getDeskWeek(d, week);
-  const item = [...w.days.flatMap((x) => x.items), ...w.waiting].find((i) => i.id === task);
+  const item = [...w.days.flatMap((x) => x.items), ...w.asks].find((i) => i.id === task);
   if (!item) return "unknown-task";
   if (item.locked) return "locked";
   if (done) {

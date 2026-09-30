@@ -1,6 +1,6 @@
 ---
 name: publishing-desk
-description: Use whenever you do, finish, or check any step of The South Knoxville Ear's weekly publishing — research, the episode draft, audio, the Dirty South party plan, publishing, the newsletter, the party notice, the Instagram drip, venue notes, the Monday Instagram review — or when Andy asks what's done, what's left, or what's waiting on him. Covers how to read the publishing desk and how to tick its boxes.
+description: Use whenever you do, finish, or check any step of The South Knoxville Ear's weekly publishing — research, the episode draft, audio, the Dirty South party plan, publishing, the newsletter, the party notice, the Instagram drip, venue notes, the Monday Instagram review — or when Andy asks what's done or what's left. Nothing on the desk waits on Andy; the rare thing Claude needs his yes for is an "AI needs to ask for permission" item. Covers how to read the publishing desk and how to tick its boxes.
 ---
 
 # The publishing desk
@@ -12,6 +12,13 @@ into commits, docs, or anything public.
 The desk has a box for every step of the week, Monday to Sunday, across four channels:
 SoKnoEar.com, the Dirty South party page, Instagram, and venue notes. **Your job is to
 leave it true.** A box that stays empty after the work is done is a lie Andy will act on.
+
+**Nothing waits on Andy** (Andy, 2026-09-29). Every box is Claude's or the pipeline's.
+Check your own work and do the step. Don't park it for him to review. When you're unsure
+of what you made, or the step is mail from his account to someone new, it becomes an
+**AI needs to ask for permission** item. Those should be rare. There are two today:
+`site-live` (his "run it") and `venue-send` (his tick). Never write "waiting on Andy"
+or "needs Andy" anywhere.
 
 ## Read Andy's answers first
 
@@ -71,11 +78,11 @@ mini proves nothing — commit, push, and redeploy, then `sync`.
 | Box | Who marks it | When |
 | --- | --- | --- |
 | `research` | you | the Tuesday research pass is finished |
-| `review` | Andy (or you, when he sends notes or says "run it") | he has read the draft |
-| `newsletter` | `notify-subscribers.mjs` on a real send | a preview only leaves a note |
-| `party-notice` | `notify-dsparty.mjs` on a real send | a preview only leaves a note |
+| `newsletter` | `notify-subscribers.mjs` on a real send | it goes out for real at the publish, no review |
+| `party-notice` | `notify-dsparty.mjs` on a real send | same, and the script refuses a stale party plan |
+| `venue-send` | Andy's tick on the page, or you when he says yes in chat | his yes to send the week's first notes |
 | `publish-check` | you | the Wednesday 2 PM check found every channel out, or fixed what wasn't |
-| `venue-sent:<key>` | you or Andy | he sent the note some way Gmail can't show — an Instagram DM, a contact form, a phone call |
+| `venue-sent:<key>` | you | the note went some way Gmail can't show — a contact form, a phone call |
 
 ## The rules
 
@@ -86,11 +93,13 @@ mini proves nothing — commit, push, and redeploy, then `sync`.
 3. **A failure is a note, not a tick.** If a step failed or was skipped, leave the box
    empty and `note` why. The desk turns an empty box past its day into a rust "late" flag;
    that is the correct picture.
-4. **Finish with `show`.** At the end of any publishing task, run `show` and include the
-   "Waiting on Andy" list in your message to him, soonest deadline first. Venue notes carry
-   a send-by day — say it.
+4. **Finish with `show`, and give the link.** At the end of any publishing task, run
+   `show`. If it lists anything under "AI needs to ask for permission", put each question
+   in your message to Andy, soonest deadline first, with the desk link from `url`. Never
+   say "the desk" without the link.
 5. **Never tick `site-live`, the newsletter, or the party notice by hand to make the page
-   look finished.** Publishing and the real sends are Andy's call; the boxes follow the act.
+   look finished.** The boxes follow the act. Publishing is Andy's "run it". The list
+   sends are yours and go out at the publish.
 
 ## When a box looks wrong
 
