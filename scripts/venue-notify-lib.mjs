@@ -170,7 +170,7 @@ ${p(SIGNATURE.split("\n").map(esc).join("<br>"))}
 </div></body></html>`;
 
   const subject = first
-    ? `${name} is in this week's South Knoxville Ear`
+    ? `I featured ${name} in this week's South Knoxville Ear`
     : `You're in this week's South Knoxville Ear (${ep})`;
   return { subject, text, html };
 }
