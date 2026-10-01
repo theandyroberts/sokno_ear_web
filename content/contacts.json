@@ -1,5 +1,5 @@
 {
-  "_comment": "Who to tell when the Ear covers a place. One entry per venue/organizer, keyed like content/ig-handles.json so a story's social.igTags resolves here too; `match` strings catch untagged stories by their Where/Venue fact. Every email/phone/name here is one the organization PUBLISHES ITSELF (its site, its official socials) and `source` says where — nothing scraped from people-search sites. `to` overrides `email` as the address the weekly note goes to. `introduced` is the date Andy sent the FIRST note himself; until it's set, scripts/venue-notify.mjs only drafts. `salutation` overrides the greeting (default: first name of people[0], else 'Hi <name> team,').",
+  "_comment": "Who to tell when the Ear covers a place. One entry per venue/organizer, keyed like content/ig-handles.json so a story's social.igTags resolves here too; `match` strings catch untagged stories by their Where/Venue fact. Every email/phone/name here is one the organization PUBLISHES ITSELF (its site, its official socials) and `source` says where — nothing scraped from people-search sites. `to` overrides `email` as the address the weekly note goes to. `introduced` is the date Andy sent the FIRST note himself; until it's set, scripts/venue-notify.mjs only drafts. `salutation` overrides the greeting (default: first name of people[0], else 'Hiya <name> team,').",
   "contacts": {
     "ijams": {
       "name": "Ijams Nature Center",
@@ -66,7 +66,7 @@
       "to": null,
       "phone": null,
       "people": [],
-      "salutation": "Hi Kern's team,",
+      "salutation": "Hiya Kern's team,",
       "introduced": "2026-10-01",
       "source": "https://kernsbakery.com/event-spaces/",
       "notes": "kernsfoodhall.com redirects to kernsbakery.com. Contact page is a HubSpot form only; events@kernsbakery.com is the only published address. No events/marketing manager named. Developer/operator Four Stones Group, Atlanta (info@fourstonesgrp.com). Third-party listings show (865) 381-3612 but Kern's doesn't publish it. Also TikTok @kernsbakery."
@@ -96,7 +96,7 @@
           "source": "https://gemini-hac.com/"
         }
       ],
-      "salutation": "Hi Earl's team,",
+      "salutation": "Hiya Earl's team,",
       "introduced": "2026-10-01",
       "source": "https://earlsknox.com/",
       "notes": "Domain is earlsknox.com. Operator Gemini Hospitality (also Raven Steakhouse, Bella, The Armory); its contact page is form-only. Opened Jan 2026."
@@ -114,7 +114,7 @@
       "to": null,
       "phone": "(865) 935-9395",
       "people": [],
-      "salutation": "Hi Hi-Wire Knoxville team,",
+      "salutation": "Hiya Hi-Wire Knoxville team,",
       "introduced": null,
       "source": "https://hiwirebrewing.com/contact-us/",
       "notes": "2020 Barber St. Taproom inbox knoxville@; company-wide events@hiwirebrewing.com and info@hiwirebrewing.com (Asheville HQ, 828-738-2448). No named staff or marketing contact published. Space rental form: https://hiwirebrewing.com/rent-our-space-knoxville/. Food by Redbud Kitchen."
@@ -150,7 +150,7 @@
           "source": "https://www.wbir.com/article/money/business/small-business/friendship-fuels-south-knoxville-karaoke-bar/51-fc68bb0a-da68-4bb6-9a87-5b9fd5b468cb"
         }
       ],
-      "salutation": "Hi Pink Cactus team,",
+      "salutation": "Hiya Pink Cactus team,",
       "introduced": null,
       "source": "https://www.thepinkcactusknox.com/contact",
       "notes": "1147 Sevier Ave. Email and phone are on the venue's contact page and Facebook intro. Names are from a WBIR story, not the venue's own site — ask for Jenny (marketing/events) via the general inbox."
@@ -250,7 +250,7 @@
           "source": "https://www.wbir.com/article/news/local/knoxville/disco-chicken-gluten-free-kerns-food-hall/51-d9b6dc9c-412d-4812-b202-640faf71be25"
         }
       ],
-      "salutation": "Hi Disco Chicken team,",
+      "salutation": "Hiya Disco Chicken team,",
       "introduced": null,
       "source": "https://www.facebook.com/DiscoChickenandDonuts/about",
       "notes": "Stall inside Kern's. Email is the one on the business's own Facebook contact section (personal-style address). discochickenanddonuts@gmail.com appears on Kern's landlord page — likely valid but third-party. No phone published."
@@ -275,7 +275,7 @@
           "source": "http://tennesseestage.com/home/about-us-3/artistic-director/"
         }
       ],
-      "salutation": "Hi Tennessee Stage team,",
+      "salutation": "Hiya Tennessee Stage team,",
       "introduced": null,
       "source": "https://tennesseestage.com/get-in-touch/",
       "notes": "Site returned HTTP 500 on 2026-09-23; email/phone read from the Internet Archive copy of its own Get in Touch page — re-verify when it's back. Office 100 S Gay St by appointment; P.O. Box 1186, Knoxville 37901."
@@ -357,7 +357,7 @@
           "source": "https://www.knoxvilletn.gov/m/directory"
         }
       ],
-      "salutation": "Hi Parks & Rec team,",
+      "salutation": "Hiya Parks & Rec team,",
       "introduced": null,
       "source": "https://knoxville.recdesk.com/Community/Page?pageId=39647",
       "notes": "Covers Suttree Landing, the South Waterfront, Fort Dickerson/Augusta Quarry. No departmental PIO — press goes through citywide Communications (Farley, 865-215-2589)."
@@ -387,7 +387,7 @@
           "source": "https://legacyparks.org/about-us/our-people/"
         }
       ],
-      "salutation": "Hi Legacy Parks team,",
+      "salutation": "Hiya Legacy Parks team,",
       "introduced": "2026-09-29",
       "source": "https://legacyparks.org/about-us/our-people/",
       "notes": "900 Volunteer Landing Lane. No individual emails published; /contact/ 404s. Ask for Sarah Rump (marketing) via info@."
@@ -458,7 +458,7 @@
       "to": null,
       "phone": "(865) 200-5818",
       "people": [],
-      "salutation": "Hi South Coast team,",
+      "salutation": "Hiya South Coast team,",
       "introduced": null,
       "source": "https://southcoastpizza.com/",
       "notes": "1103 Sevier Ave. No owner named."
@@ -475,7 +475,7 @@
       "to": null,
       "phone": "(865) 951-2790",
       "people": [],
-      "salutation": "Hi SouthSide Garage team,",
+      "salutation": "Hiya SouthSide Garage team,",
       "introduced": null,
       "source": "https://southsidegarageknox.com/",
       "notes": "1014 Sevier Ave. Site footer phone recorded (third-party listings show 865-230-2188). No owner named."
@@ -492,7 +492,7 @@
       "to": null,
       "phone": "(865) 851-8882",
       "people": [],
-      "salutation": "Hi SoKno Taco team,",
+      "salutation": "Hiya SoKno Taco team,",
       "introduced": null,
       "source": "https://soknota.co/contact/",
       "notes": "3701 Sevierville Pike. Catering inbox soknotaco.catering@gmail.com. No owner named."
@@ -533,7 +533,7 @@
       "to": null,
       "phone": "(865) 247-5022",
       "people": [],
-      "salutation": "Hi Fly By Night team,",
+      "salutation": "Hiya Fly By Night team,",
       "introduced": null,
       "source": "https://www.flybynightknox.com/",
       "notes": "906 Sevier Ave Suite 126. By the team behind Tern Club; no individuals named. Invites inquiries by email or Instagram DM."

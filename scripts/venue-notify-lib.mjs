@@ -11,6 +11,8 @@ export const IG_PROFILE = "https://www.instagram.com/soknoear/";
 
 export const SIGNATURE = [
   "Andy Roberts",
+  "",
+  "310-292-4925 andy@note15.com",
   "Editor, The South Knoxville Ear — South Knoxville Events & Rumors",
   "Note Fifteen Marketing",
   "soknoear.com · @soknoear",
@@ -110,7 +112,7 @@ const storyUrl = (episode, s) => `${SITE}/${episode.slug}/${s.id}`;
  * variant Andy sends himself.
  */
 export function renderMessage({ episode, name, contact = {}, stories, first = false, now = Date.now() }) {
-  const who = contact.salutation ?? (contact.people?.[0]?.name ? `Hi ${contact.people[0].name.split(" ")[0]},` : `Hi ${name} team,`);
+  const who = contact.salutation ?? (contact.people?.[0]?.name ? `Hi ${contact.people[0].name.split(" ")[0]},` : `Hiya ${name} team,`);
   const ep = `No. ${episode.number}`;
   const when = episode.shortDate ?? episode.dateLabel ?? episode.date;
   const n = stories.length;
@@ -128,7 +130,7 @@ export function renderMessage({ episode, name, contact = {}, stories, first = fa
     lines.push(
       `${who}`,
       "",
-      `I edit The South Knoxville Ear, a weekly guide to what's happening in South Knoxville, and I wanted to make sure you knew we cover ${name} regularly. This week's episode (${ep}, ${when}) has ${n === 1 ? "a story" : `${n} stories`} about you:`,
+      `I'm Andy Roberts. I live in SoKno and I edit The South Knoxville Ear (SoKno Events and Rumors), a fun weekly guide to what's happening in South Knoxville, and I wanted to make sure you knew we cover ${name} regularly. This week's episode (${ep}, ${when}) has ${n === 1 ? "a story" : `${n} stories`} about you:`,
     );
   } else {
     lines.push(
@@ -141,9 +143,9 @@ export function renderMessage({ episode, name, contact = {}, stories, first = fa
   for (const s of stories) lines.push(`  • ${s.title}`, `    ${storyUrl(episode, s)}`);
   lines.push(
     "",
-    `${igLine} Everything we publish about you is yours to share — a repost, a story, a link, whatever's useful.`,
+    `${igLine} Everything we publish about you is yours to share — and we'd love a repost, a story, a link, whatever's useful.`,
     "",
-    "If we've got a detail wrong, or there's something coming up you'd like us to know about, just reply to this email. You can also call or text the Ear's tip line any time: 865-252-6500.",
+    "If we've got a detail wrong, or there's something coming up you'd like us to know about, just reply to this email. You can also call or text me directly at 310-292-4925.",
     "",
     first ? "Thanks for giving the neighborhood things to do." : "Thanks, as always, for keeping South Knoxville interesting.",
     "",
@@ -155,14 +157,14 @@ export function renderMessage({ episode, name, contact = {}, stories, first = fa
   const p = (t) => `<p style="margin:0 0 14px;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.55;color:#171512;">${t}</p>`;
   const list = stories.map((s) => `<li style="margin:0 0 8px;"><a href="${storyUrl(episode, s)}" style="color:#A94A34;">${esc(s.title)}</a></li>`).join("");
   const body = first
-    ? `I edit <a href="${SITE}" style="color:#A94A34;">The South Knoxville Ear</a>, a weekly guide to what's happening in South Knoxville, and I wanted to make sure you knew we cover ${esc(name)} regularly. This week's episode (${ep}, ${esc(when)}) has ${n === 1 ? "a story" : `${n} stories`} about you:`
+    ? `I'm Andy Roberts. I live in SoKno and I edit <a href="${SITE}" style="color:#A94A34;">The South Knoxville Ear</a> (SoKno Events and Rumors), a fun weekly guide to what's happening in South Knoxville, and I wanted to make sure you knew we cover ${esc(name)} regularly. This week's episode (${ep}, ${esc(when)}) has ${n === 1 ? "a story" : `${n} stories`} about you:`
     : `${esc(name)} is in this week's <a href="${SITE}" style="color:#A94A34;">South Knoxville Ear</a> (${ep}, ${esc(when)}). ${n === 1 ? "The story" : `The ${n} stories`}:`;
   const html = `<!doctype html><html><body style="margin:0;padding:24px 16px;background:#ffffff;"><div style="max-width:560px;margin:0 auto;">
 ${p(esc(who))}
 ${p(body)}
 <ul style="margin:0 0 14px 20px;padding:0;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.5;">${list}</ul>
-${p(`${esc(igLine).replace("@soknoear", `<a href="${IG_PROFILE}" style="color:#A94A34;">@soknoear</a>`)} Everything we publish about you is yours to share — a repost, a story, a link, whatever's useful.`)}
-${p(`If we've got a detail wrong, or there's something coming up you'd like us to know about, just reply to this email. You can also call or text the Ear's tip line any time: 865-252-6500.`)}
+${p(`${esc(igLine).replace("@soknoear", `<a href="${IG_PROFILE}" style="color:#A94A34;">@soknoear</a>`)} Everything we publish about you is yours to share — and we'd love a repost, a story, a link, whatever's useful.`)}
+${p(`If we've got a detail wrong, or there's something coming up you'd like us to know about, just reply to this email. You can also call or text me directly at 310-292-4925.`)}
 ${p(first ? "Thanks for giving the neighborhood things to do." : "Thanks, as always, for keeping South Knoxville interesting.")}
 ${p(SIGNATURE.split("\n").map(esc).join("<br>"))}
 </div></body></html>`;

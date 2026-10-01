@@ -84,6 +84,9 @@ describe("renderMessage", () => {
     const { text, subject } = renderMessage({ episode, name: "Ijams Nature Center", contact: contacts.ijams, stories: venues.get("ijams")!.stories, first: true , now });
     expect(subject).toBe("Ijams Nature Center is in this week's South Knoxville Ear");
     expect(text).toContain("I edit The South Knoxville Ear");
+    expect(text).toContain("we'd love a repost");
+    expect(text).toContain("call or text me directly at 310-292-4925");
+    expect(text).not.toContain("tip line");
     expect(text).toContain("2 stories about you");
   });
   it("singularises one story", () => {
