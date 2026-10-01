@@ -91,8 +91,12 @@ the queue means it fell back). The Oct 5 review reads: posts sent, reach per pos
 and whether anyone unfollowed.
 
 ### 2. Search Console is unreadable from the Mac mini
-**Opened:** 2026-08-15 · **Age: 44 days** (as of 2026-09-28) · **Missed 2 of 3 SEO checks**
-· **Needs Andy**
+**Opened:** 2026-08-15 · **Age: 47 days** (as of 2026-10-01) · **Missed 3 of 4 SEO checks**
+· **Needs Andy** · not blocking — no push (the site-side half covers breakage; this only costs the crawl numbers)
+
+**2026-10-01:** missed again — no Chrome extension connected, Browser pane signed out.
+Sitemap is now 135 URLs (+41 since 2026-09-15), so the uncrawled-share question has
+grown, not shrunk.
 
 No Chrome extension connected to the mini, and the Browser pane has no Google session,
 so `sc-domain:soknoear.com` bounces to the signed-out page. The 2026-09-01 run got in

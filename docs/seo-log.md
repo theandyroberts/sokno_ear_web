@@ -8,6 +8,46 @@ entry.
 
 ---
 
+## 2026-10-01
+
+Fourth check. Deltas vs. 2026-09-15. Site-side half is clean; **Search Console
+was not reachable** (third miss in four checks), so 2026-09-01 is still the
+latest GSC data on record. Nothing was changed or deployed — nothing needed it.
+
+### Site-side audit
+
+| Check | Result | Delta |
+| --- | --- | --- |
+| `sitemap.xml` | 200, 21,127 bytes, **135 URLs** | +41 URLs (+6,466 bytes) — well above the ~10 expected for two weeks; see note |
+| Sitemap composition | 4 static + 16 episodes + 115 story permalinks | **+3 episodes** (`/2026-09-16`, `/2026-09-23`, `/2026-09-30`), **+38 stories** |
+| `lastmod` range | 2026-06-20 → 2026-09-30 | tracks the latest episode ✓ |
+| Full sweep of all 135 sitemap URLs | **135/135 200**, **135/135 `index, follow`**, **135/135 canonical** | — |
+| Spot-check 5 random URLs | `/2026-08-26/playscape-storytelling`, `/2026-09-02/playscape-storytelling`, `/2026-09-23`, `/2026-08-19/old-sevier-weekend`, `/2026-06-26/after-brunch` → all 200 | — |
+| `robots.txt` | `Allow: /`, `Disallow: /next`, `Disallow: /draft/`, **`Disallow: /desk/`**, `Host:`, `Sitemap:` | `/desk/` added in `6856af3` (publishing desk). Only `app/desk` serves under that prefix — checked against the `/stats` lesson ✓ |
+| Canonical — homepage | `https://soknoear.com` | ✓ |
+| Canonical — latest episode `/2026-09-30` | `https://soknoear.com` (deliberate) | ✓ |
+| Canonical — older episodes (15) | self, all 15 | ✓ |
+| Canonical — non-feature stories | self, **all 115** (sweep) | ✓ |
+| Canonical — feature permalink `/2026-09-30/carrie-on-the-lawn` | `/2026-09-30`, absent from sitemap | ✓ |
+| `NewsArticle` JSON-LD | Present on **all 115** story pages (sweep) | ✓ |
+| Noindex audit | `/next`, `/draft/*`, `/desk/*` → 404 + `noindex`. Nothing in the sitemap is noindexed | ✓ |
+| `www.soknoear.com` → apex | `https://www.` / `https://www./archive` / `http://www./about` → 301 to apex; `http://` apex → 301 https | ✓ **still fixed** (since 2026-09-15) |
+| `/stats/script.js` | 200 — tracker not blocked | ✓ |
+
+**Sitemap growth note.** +38 stories in two weeks against ~5/week of past growth.
+All 38 are 200, indexable, self-canonical and carry `NewsArticle`, so this is
+real content, not junk. Some are recurring-event pages repeated across episodes
+(e.g. `playscape-storytelling` under both `/2026-08-26` and `/2026-09-02`) —
+distinct URLs with distinct dates; worth watching for "Duplicate, Google chose
+different canonical" once GSC is readable again, not worth acting on blind.
+
+### Search Console
+
+**Not collected.** No Chrome extension connected (`list_connected_browsers` empty);
+the Browser pane bounced to Google sign-in. Open item 2 in `docs/OPEN-ITEMS.md`.
+
+---
+
 ## 2026-09-15
 
 Third check. Deltas vs. 2026-09-01. Site-side half is clean and complete;
