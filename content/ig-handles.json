@@ -110,6 +110,42 @@
       "name": "Puckers Sports Grill Knoxville",
       "verified": "live profile 'Puckers Sports Grill | Knoxville' — bio reads 'NOW OPEN in South Knoxville, TN / Your Game Day Headquarters' and links the official Kennedy Concepts domain mimosasknoxville.com/coming-soon-puckers; checked 2026-09-01",
       "confidence": "high"
+    },
+    "old-sevier": {
+      "handle": "@oldsevierdistrict",
+      "name": "Old Sevier District",
+      "verified": "linked from the merchants association's site oldsevierdistrict.org; live profile 'Old Sevier District', bio 'things happening in the Old Sevier District in South Knoxville'",
+      "confidence": "high"
+    },
+    "the-808": {
+      "handle": "@808knox",
+      "name": "The 808",
+      "verified": "tagged by the Old Sevier District's own First Friday post (2026-10-02); live profile read 2026-10-02: 'The 808 Knox — A South Knoxville music venue', links 808knox.com",
+      "confidence": "high"
+    },
+    "printshop": {
+      "handle": "@printshopbeer",
+      "name": "Printshop Beer Co.",
+      "verified": "tagged by the Old Sevier District's own First Friday post (2026-10-02); live profile read 2026-10-02: 'Printshop Beer Co. — Craft Malt Certified Brewery in South Knox'",
+      "confidence": "high"
+    },
+    "fly-by-night": {
+      "handle": "@flybynightknox",
+      "name": "Fly by Night",
+      "verified": "printed on flybynightknox.com; live profile 'Fly by Night — Knoxville's 70's Cocktail Lounge'",
+      "confidence": "high"
+    },
+    "knoxville-theatre-club": {
+      "handle": "@knoxvilletheatreclub.lovesyou",
+      "name": "Knoxville Theatre Club",
+      "verified": "tagged by the Old Sevier District's own First Friday post (2026-10-02); live profile read 2026-10-02: 'Knoxville Theatre Club', links knoxvilletheatreclub.org/tickets",
+      "confidence": "high"
+    },
+    "borderland-tees": {
+      "handle": "@borderlandtees",
+      "name": "Borderland Tees",
+      "verified": "tagged by the Old Sevier District's own First Friday post (2026-10-02); live profile read 2026-10-02: posts as 'Borderland Tees' about its own playhouse at 802 Sevier Ave",
+      "confidence": "high"
     }
   }
 }

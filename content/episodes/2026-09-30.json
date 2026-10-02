@@ -123,6 +123,33 @@
       "href": "#carrie-on-the-lawn"
     },
     {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri",
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/venue808_trumpet.jpg",
+      "title": "A new music venue opens on Sevier Avenue",
+      "blurb": "The 808 opens with High Step Society on Friday and Marcy Playground on Saturday. Doors at seven, all ages.",
+      "cue": "Jump to story",
+      "href": "#the-808-opens"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "hot": true,
+      "image": "/assets/spots/first_friday_print.jpg",
+      "title": "First Friday: an art crawl up and down Old Sevier",
+      "blurb": "Openings at six, live printing, theater and a band at seven, a free bachata class at nine. Most of it is free.",
+      "cue": "Jump to story",
+      "href": "#first-friday"
+    },
+    {
       "label": "Kern's",
       "labelColor": "green",
       "days": [
@@ -157,25 +184,12 @@
       "days": [
         "Sat"
       ],
-      "hot": true,
+      "hot": false,
       "image": "/assets/spots/puckers_plate.jpg",
       "title": "Brunch at Puckers, then Auburn at 3:30",
       "blurb": "Nine to two Saturday and Sunday with every screen on. Saturday's kickoff comes ninety minutes after the last plate.",
       "cue": "Jump to story",
       "href": "#puckers-auburn"
-    },
-    {
-      "label": "Ijams Park",
-      "labelColor": "teal",
-      "days": [
-        "Sat"
-      ],
-      "hot": false,
-      "image": "/assets/spots/storytime_frog.jpg",
-      "title": "Frogs and toads at free Saturday storytime",
-      "blurb": "Ten to noon in the woods at the Nature Playscape. Picture books about amphibians, then the run of the place.",
-      "cue": "Jump to story",
-      "href": "#storytime-frogs"
     },
     {
       "label": "Ijams Park",
@@ -189,19 +203,6 @@
       "blurb": "Sunday at eight at Mead's Quarry, five dollars with parking included. It's the last banding morning on the calendar.",
       "cue": "Jump to story",
       "href": "#bird-banding"
-    },
-    {
-      "label": "Ijams Park",
-      "labelColor": "teal",
-      "days": [
-        "Sun"
-      ],
-      "hot": false,
-      "image": "/assets/spots/gong_sound_bath.jpg",
-      "title": "A sound bath indoors, out of the rain",
-      "blurb": "Sunday at ten in the Visitor Center. Singing bowls and a gong for an hour, twenty-five dollars, bring a mat.",
-      "cue": "Jump to story",
-      "href": "#sound-bath"
     },
     {
       "label": "Suttree Landing",
@@ -221,6 +222,405 @@
     }
   ],
   "stories": [
+    {
+      "id": "the-808-opens",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri",
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/venue808_trumpet.jpg",
+      "imageCaption": "Opening night, doors at seven",
+      "title": "The 808, a new music venue, opens on Sevier Avenue this weekend",
+      "deck": "A 420-capacity room built by two longtime Knoxville music people opens in the former Drunk Church space with High Step Society on Friday and Marcy Playground on Saturday. Both shows are all ages.",
+      "facts": [
+        {
+          "label": "Friday",
+          "value": "High Step Society, with Cuddlefish and InnSæi · doors 7 PM, show 8 · all ages"
+        },
+        {
+          "label": "Saturday",
+          "value": "Marcy Playground · doors 7 PM, show 8 · all ages"
+        },
+        {
+          "label": "Where",
+          "value": "The 808 · 808 Sevier Ave"
+        },
+        {
+          "label": "Tickets",
+          "value": "808knox.com, or at the door"
+        },
+        {
+          "label": "Under 18",
+          "value": "With a parent or guardian"
+        },
+        {
+          "label": "Parking",
+          "value": "None in the Borderland Tees lot next door; cars there will be towed. The venue suggests a rideshare"
+        },
+        {
+          "label": "The room",
+          "value": "420 capacity"
+        },
+        {
+          "label": "Coming up",
+          "value": "Paul Oakenfold and The Crystal Method, Thu Oct 8 · a classic-country vinyl night with dance lessons, Sat Oct 17"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Sevier Avenue has a music venue as of Friday night. The 808 opens at 808 Sevier Avenue, in the building that used to be Drunk Church, with High Step Society on its first night and Marcy Playground on its second. Doors are at seven and the music starts at eight both nights, both shows are all ages, and anyone under eighteen comes with a parent or guardian. Cuddlefish and InnSæi open on Friday."
+        },
+        {
+          "type": "subhead",
+          "text": "Who built it"
+        },
+        {
+          "type": "paragraph",
+          "text": "The owners are Brian Coakley and Scott Campbell, friends of nearly fifteen years who met when Coakley was a talent buyer booking Campbell's bands. They told Blank News their first plan was a 100-person room in a basement down the street at 605 Sevier, and when that fell through the idea grew into this one: 420 people, big enough to bring in touring acts and small enough that the band and the crowd share the room. The venue has also announced Club:808, a local dance night that is ten dollars at the door or free with a ticket to any 808 show."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "Parking is the thing to plan. The venue has posted a parking guide and is blunt about one point: do not park in the Borderland Tees lot next door, because you will be towed. It suggests a rideshare. The public options for the district are the Riverwalk Garage at the west end and the gravel lot under the James White Parkway bridge at the east end. Tickets are on the venue's site and at the door. The next show after the weekend is Paul Oakenfold with The Crystal Method on Thursday, October 8."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The 808 — live music schedule",
+          "url": "https://808knox.com/"
+        },
+        {
+          "label": "The 808 on Instagram — opening day and parking",
+          "url": "https://www.instagram.com/808knox/"
+        },
+        {
+          "label": "Blank News — The 808: Built by fans for people who believe in the power of the room",
+          "url": "https://blanknews.com/the-808-built-by-fans-for-people-who-believe-in-the-power-of-the-room/"
+        },
+        {
+          "label": "Old Sevier District — where to park",
+          "url": "https://oldsevierdistrict.org/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-02T19:00:00-04:00",
+        "endDate": "2026-10-03T23:00:00-04:00",
+        "locationName": "The 808",
+        "locationAddress": "808 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "the-808"
+        ],
+        "igBanner": [
+          "The 808 opens on Sevier Avenue",
+          "Friday and Saturday, doors at seven"
+        ]
+      }
+    },
+    {
+      "id": "first-friday",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/first_friday_print.jpg",
+      "imageCaption": "Bring a blank tee or tote to Printshop",
+      "title": "First Friday turns Old Sevier into an art crawl, with live printing, two openings and a late dance floor",
+      "deck": "The district's monthly night out starts with art openings at six and ends with a free Latin dance party after ten. Most of it costs nothing, and all of it is in Old Sevier.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 2 · 6 PM until late"
+        },
+        {
+          "label": "Where",
+          "value": "Across the Old Sevier District"
+        },
+        {
+          "label": "Cost",
+          "value": "Mostly free · the play and the concert are ticketed"
+        },
+        {
+          "label": "Eat first",
+          "value": "Sevier Ave Burger Co.'s October burger, the Monster Mash · the Dia De Verde pizza at South Coast Pizza"
+        },
+        {
+          "label": "Closed tonight",
+          "value": "Fly by Night, 6:30–11 PM, for a private party"
+        },
+        {
+          "label": "Parking",
+          "value": "Riverwalk Garage at the west end · the gravel lot under the James White Parkway bridge at the east end"
+        },
+        {
+          "label": "Weather",
+          "value": "A 50% chance of showers and thunderstorms, mostly after 8 PM · low 67"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "First Friday in Old Sevier is the night the district's shops, galleries and bars all schedule something at once, and October's is a full one. The Old Sevier District's own game plan for the night runs from an art opening at six to a dance floor that goes past midnight. Here is the order it suggests."
+        },
+        {
+          "type": "agenda",
+          "title": "Friday night in Old Sevier",
+          "rows": [
+            {
+              "time": "6–8 PM",
+              "what": "Printshop Beer Co.: volunteers help neighbors register to vote and check their registration, and print a design on the blank tee or tote you bring"
+            },
+            {
+              "time": "6–8 PM",
+              "what": "Printshop Beer Co.: a hands-on glass art workshop with Visualize Art Studio, supplies and guidance included"
+            },
+            {
+              "time": "6–9 PM",
+              "what": "Mighty Mud: \"Reflections,\" an exhibition of paintings and ink by Studio Logan JB, opens"
+            },
+            {
+              "time": "6–8 PM",
+              "what": "SoKno Sourdough: First Friday reception featuring Abby Hamilton"
+            },
+            {
+              "time": "7 PM",
+              "what": "Borderland Playhouse: Knoxville Theatre Club's \"Hedda Gabler\""
+            },
+            {
+              "time": "7 PM",
+              "what": "Trailhead Beer Market: The Bearded play live, and Gato Peligroso starts its fall soup menu"
+            },
+            {
+              "time": "7 PM",
+              "what": "The 808: doors for opening night with High Step Society, show at 8"
+            },
+            {
+              "time": "9–10 PM",
+              "what": "The Pink Cactus: a free bachata class, then a Latin dance party until late, no cover"
+            }
+          ]
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "Park once. The Riverwalk Garage sits at the west end of the district and the gravel lot under the James White Parkway bridge at the east end, and the stops are a walk or a short hop apart. Tennessee's voter registration deadline is days away, which is why Printshop has given its First Friday to it. Fly by Night is closed from 6:30 to 11 for a private party. There is a 50 percent chance of showers and thunderstorms, mostly after eight, and nearly everything on the list is indoors."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Sevier District — First Friday game plan, Oct 2",
+          "url": "https://www.instagram.com/oldsevierdistrict/p/Dd_yL_oFhsg/"
+        },
+        {
+          "label": "Printshop Beer Co. — voter registration night",
+          "url": "https://www.instagram.com/printshopbeer/p/Dd2LYYPPbwf/"
+        },
+        {
+          "label": "The Pink Cactus — bachata class and Latin dance party",
+          "url": "https://www.instagram.com/thepinkcactusknox/reel/DdrqcTIuKeu/"
+        },
+        {
+          "label": "Old Sevier District — where to park",
+          "url": "https://oldsevierdistrict.org/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-02T18:00:00-04:00",
+        "endDate": "2026-10-02T23:59:00-04:00",
+        "locationName": "Old Sevier District",
+        "locationAddress": "Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "old-sevier",
+          "printshop",
+          "pink-cactus"
+        ],
+        "igBanner": [
+          "First Friday in Old Sevier",
+          "Friday, six o'clock until late"
+        ]
+      }
+    },
+    {
+      "id": "hedda-gabler",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri",
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/hedda_candle.jpg",
+      "imageCaption": "Two nights left",
+      "title": "\"Hedda Gabler\" plays its last two nights at the Borderland Playhouse on Sevier Avenue",
+      "deck": "Knoxville Theatre Club has been staging Ibsen inside the yellow T-shirt shop with the possum on it. The run ends Saturday, and you pick your own ticket price, from five dollars to thirty-five.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 2 and Sat Oct 3 · 7 PM · no matinee this weekend"
+        },
+        {
+          "label": "Where",
+          "value": "Borderland Playhouse, at Borderland Tees · 802 Sevier Ave"
+        },
+        {
+          "label": "Tickets",
+          "value": "Choose your price: $35, $20, $15 or $5"
+        },
+        {
+          "label": "Seating",
+          "value": "First come, first served · reserving online is recommended"
+        },
+        {
+          "label": "Who",
+          "value": "Knoxville Theatre Club"
+        },
+        {
+          "label": "Parking",
+          "value": "Free at Borderland Tees for the play"
+        },
+        {
+          "label": "Closes",
+          "value": "Saturday, Oct 3"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "There is a theater inside the yellow building with the possum on it. Borderland Tees, the screen-printing shop at 802 Sevier Avenue, has a playhouse, and since September 17 Knoxville Theatre Club has been using it for Henrik Ibsen's \"Hedda Gabler\": a Victorian parlor, a general's daughter with very little patience for the life she has been handed, and one of the great bad decisions in drama. This is the last weekend. The final two performances are Friday and Saturday at seven, with no Sunday matinee."
+        },
+        {
+          "type": "subhead",
+          "text": "How the tickets work"
+        },
+        {
+          "type": "paragraph",
+          "text": "The club lets you choose what you pay: $35, $20, $15 or $5 a ticket, and you can pick a different price for each seat you buy. Its reasoning is that the show should be open to everyone and that those who can pay the top price cover the real cost of paying the actors and crew. Seating is first come, first served, so reserve online and arrive early. Borderland Tees says there is plenty of free parking at the shop for the play."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Knoxville Theatre Club — tickets",
+          "url": "https://knoxvilletheatreclub.org/tickets"
+        },
+        {
+          "label": "Knoxville Theatre Club on Instagram — final weekend",
+          "url": "https://www.instagram.com/knoxvilletheatreclub.lovesyou/p/Dd9E_L4IOpB/"
+        },
+        {
+          "label": "Borderland Tees — the playhouse",
+          "url": "https://www.instagram.com/borderlandtees/p/Ddg8ZV8oEq3/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-02T19:00:00-04:00",
+        "endDate": "2026-10-03T21:30:00-04:00",
+        "locationName": "Borderland Playhouse",
+        "locationAddress": "802 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "knoxville-theatre-club",
+          "borderland-tees"
+        ],
+        "igBanner": [
+          "Hedda Gabler at the Borderland Playhouse",
+          "Friday and Saturday at seven"
+        ]
+      }
+    },
+    {
+      "id": "knoxferno",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/knoxferno_poi.jpg",
+      "imageCaption": "The front yard, after dark",
+      "title": "Knoxferno brings fire spinners and DJs to the Pink Cactus front yard on Saturday",
+      "deck": "Fire artists work the front yard of the pink house on Sevier Avenue for five hours Saturday night while DJs play. All ages, no cover, and the troupe's second visit.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 3 · 7 PM – midnight"
+        },
+        {
+          "label": "Where",
+          "value": "The Pink Cactus front yard · 1147 Sevier Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "Free · no cover"
+        },
+        {
+          "label": "Ages",
+          "value": "All ages"
+        },
+        {
+          "label": "Weather",
+          "value": "A chance of showers and thunderstorms before 8 PM, likely after (70%)"
+        },
+        {
+          "label": "The night before",
+          "value": "Free bachata class Friday 9–10 PM, then a Latin dance party, no cover"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The Pink Cactus is the big pink house at 1147 Sevier Avenue with karaoke rooms upstairs, a bar downstairs and a front yard, and on Saturday the yard belongs to Knoxferno. It is the second time the fire-performance crew has set up there: fire spinners and DJs from seven until midnight, open to all ages, with no cover charge."
+        },
+        {
+          "type": "paragraph",
+          "text": "It is an outdoor show with open flame, and Saturday night's forecast has showers and thunderstorms likely after eight, so look at the Pink Cactus feed before you walk over. The same house runs a free bachata class and Latin dance party on Friday night as part of First Friday."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The Pink Cactus — Knoxferno, Oct 3",
+          "url": "https://www.instagram.com/thepinkcactusknox/p/Dd9bj5WuGvB/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-03T19:00:00-04:00",
+        "endDate": "2026-10-03T23:59:00-04:00",
+        "locationName": "The Pink Cactus",
+        "locationAddress": "1147 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "pink-cactus"
+        ],
+        "igBanner": [
+          "Fire spinners at the Pink Cactus",
+          "Saturday, seven to midnight, free"
+        ]
+      }
+    },
     {
       "id": "starlight-paddle",
       "label": "Ijams Park",
@@ -547,7 +947,7 @@
         },
         {
           "label": "Weather",
-          "value": "Showers likely in the morning · 80% chance of rain · high 83"
+          "value": "A 50% chance of showers and thunderstorms · high 82"
         },
         {
           "label": "What it's for",
@@ -573,7 +973,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Work runs nine to noon, and at noon Bear Paw Bikes and 71 South provide lunch, with cold drinks from Creature Comforts. Saturday has showers likely through the morning and an 80 percent chance of rain, so dress for mud and check the club's event page before you head over. The preserve is at 1516 Taylor Road."
+          "text": "Work runs nine to noon, and at noon Bear Paw Bikes and 71 South provide lunch, with cold drinks from Creature Comforts. Saturday has a 50 percent chance of showers and thunderstorms, so dress for mud and check the club's event page before you head over. The preserve is at 1516 Taylor Road."
         }
       ],
       "sources": [
@@ -640,7 +1040,7 @@
         },
         {
           "label": "Weather",
-          "value": "Showers likely, thunderstorms after 2 PM · 80% chance of rain · high 83"
+          "value": "A 50% chance of showers and thunderstorms · high 82"
         },
         {
           "label": "Last date",
@@ -654,7 +1054,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Saturday's forecast has showers likely and thunderstorms after two o'clock, an 80 percent chance of rain. Damp is the better condition for this one program, since moss is at its greenest wet, but lightning is another matter, so check the event page before you drive over. Fifteen dollars, ages sixteen and up, registration required. Park in the quarry lot and meet staff near the picnic tables. The event page marks Saturday as the last available date."
+          "text": "Saturday's forecast has a 50 percent chance of showers and thunderstorms. Damp is the better condition for this one program, since moss is at its greenest wet, but lightning is another matter, so check the event page before you drive over. Fifteen dollars, ages sixteen and up, registration required. Park in the quarry lot and meet staff near the picnic tables. The event page marks Saturday as the last available date."
         }
       ],
       "sources": [
@@ -796,7 +1196,7 @@
         },
         {
           "label": "Weather",
-          "value": "Showers likely · 80% chance of rain"
+          "value": "A 50% chance of showers and thunderstorms"
         },
         {
           "label": "Next week",
@@ -810,7 +1210,7 @@
         },
         {
           "type": "paragraph",
-          "text": "The format is loose. Some weeks there is a hands-on activity, and some weeks the reading is the activity and the rest is roaming. Bring a blanket or a chair and a snack. Parking at the quarry lot is $5 a car unless you are a member. Saturday has showers likely and an 80 percent chance of rain, so check the event page before you go. Next Saturday's theme is flowers and plants."
+          "text": "The format is loose. Some weeks there is a hands-on activity, and some weeks the reading is the activity and the rest is roaming. Bring a blanket or a chair and a snack. Parking at the quarry lot is $5 a car unless you are a member. Saturday has a 50 percent chance of showers and thunderstorms, so check the event page before you go. Next Saturday's theme is flowers and plants."
         }
       ],
       "sources": [
@@ -1255,6 +1655,14 @@
       {
         "month": "OCT",
         "day": "2",
+        "title": "FIRST FRIDAY IN OLD SEVIER",
+        "meta": "6 PM until late · mostly free · art openings, live printing, music, dancing",
+        "starred": true,
+        "href": "#first-friday"
+      },
+      {
+        "month": "OCT",
+        "day": "2",
         "title": "MOVIES UNDER THE STARS: \"CARRIE\" — last of the season",
         "meta": "Doors 6 PM · movie at dark · $12 · Visitor Center lawn, Ijams Park",
         "starred": true,
@@ -1267,6 +1675,22 @@
         "meta": "7–9 PM · $45 · boat and headlamp included · 3507 Island Home Pike",
         "starred": true,
         "href": "#starlight-paddle"
+      },
+      {
+        "month": "OCT",
+        "day": "2",
+        "title": "THE 808 OPENS: HIGH STEP SOCIETY",
+        "meta": "Doors 7 PM, show 8 · all ages · 808 Sevier Ave",
+        "starred": true,
+        "href": "#the-808-opens"
+      },
+      {
+        "month": "OCT",
+        "day": "2",
+        "title": "\"Hedda Gabler\" at the Borderland Playhouse",
+        "meta": "7 PM · choose your price, $5 to $35 · 802 Sevier Ave",
+        "starred": false,
+        "href": "#hedda-gabler"
       },
       {
         "month": "OCT",
@@ -1315,6 +1739,30 @@
         "meta": "Vols kick off at 3:30 · $2 off drafts and pizza · 610 Waterfront Dr",
         "starred": false,
         "href": "#specials-board"
+      },
+      {
+        "month": "OCT",
+        "day": "3",
+        "title": "\"Hedda Gabler\" closes at the Borderland Playhouse",
+        "meta": "7 PM · choose your price, $5 to $35 · 802 Sevier Ave",
+        "starred": false,
+        "href": "#hedda-gabler"
+      },
+      {
+        "month": "OCT",
+        "day": "3",
+        "title": "Marcy Playground at The 808",
+        "meta": "Doors 7 PM, show 8 · all ages · 808 Sevier Ave",
+        "starred": false,
+        "href": "#the-808-opens"
+      },
+      {
+        "month": "OCT",
+        "day": "3",
+        "title": "Knoxferno: fire spinners and DJs",
+        "meta": "7 PM – midnight · free · all ages · The Pink Cactus, 1147 Sevier Ave",
+        "starred": false,
+        "href": "#knoxferno"
       },
       {
         "month": "OCT",

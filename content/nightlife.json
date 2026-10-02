@@ -1,6 +1,6 @@
 {
   "_flow": "Each day reads as the night's arc: happy hour → dinner → events/concerts/comedy/drink specials → the closing-time hang. Bars, restaurants, music venues only.",
-  "updated": "2026-09-29",
+  "updated": "2026-10-02",
   "weekend": "Oct 1–4",
   "days": {
     "Thu": [
@@ -142,6 +142,15 @@
         "href": "/2026-09-30/carrie-on-the-lawn"
       },
       {
+        "id": "fri-firstfriday",
+        "time": "6:00 PM",
+        "venue": "Old Sevier District · Sevier Ave",
+        "headline": "First Friday: the art crawl starts at six",
+        "sub": "Openings at Mighty Mud and SoKno Sourdough · live printing at Printshop · mostly free",
+        "cat": "star",
+        "href": "/2026-09-30/first-friday"
+      },
+      {
         "id": "fri-paddle",
         "time": "7:00 PM",
         "venue": "Ijams Park · 3507 Island Home Pike",
@@ -160,13 +169,40 @@
         "href": "https://soknotaco.com/"
       },
       {
+        "id": "fri-808",
+        "time": "7:00 PM",
+        "venue": "The 808 · 808 Sevier Ave",
+        "headline": "A new music venue opens: High Step Society",
+        "sub": "Doors 7, show 8 · all ages · don't park in the Borderland Tees lot",
+        "cat": "music",
+        "href": "/2026-09-30/the-808-opens"
+      },
+      {
+        "id": "fri-hedda",
+        "time": "7:00 PM",
+        "venue": "Borderland Playhouse · 802 Sevier Ave",
+        "headline": "\"Hedda Gabler,\" second-to-last night",
+        "sub": "7 PM · choose your price, $5 to $35 · Knoxville Theatre Club",
+        "cat": "star",
+        "href": "/2026-09-30/hedda-gabler"
+      },
+      {
+        "id": "fri-trailhead",
+        "time": "7:00 PM",
+        "venue": "Trailhead Beer Market · 1317 Island Home Ave",
+        "headline": "The Bearded play live, and soup season starts",
+        "sub": "Music at 7 · Gato Peligroso's new fall menu",
+        "cat": "music",
+        "href": "/2026-09-30/first-friday"
+      },
+      {
         "id": "fri-pinkcactus",
         "time": "9:00 PM",
         "venue": "The Pink Cactus · 1147 Sevier Ave",
-        "headline": "Karaoke rooms, and they fill fast on a Friday",
-        "sub": "Reservations strongly recommended · 1147 Sevier Ave",
-        "cat": "mic",
-        "href": "https://www.thepinkcactusknox.com/"
+        "headline": "Free bachata class, then a Latin dance party",
+        "sub": "Class 9–10 PM, dancing until late · no cover · karaoke rooms upstairs · 1147 Sevier Ave",
+        "cat": "dance",
+        "href": "/2026-09-30/first-friday"
       }
     ],
     "Sat": [
@@ -250,6 +286,33 @@
         "sub": "Hand-wrapped dumplings, noodles and boba · 1119 Sevier Ave",
         "cat": "food",
         "href": "https://www.instagram.com/dumplingsteaknoxville/"
+      },
+      {
+        "id": "sat-hedda",
+        "time": "7:00 PM",
+        "venue": "Borderland Playhouse · 802 Sevier Ave",
+        "headline": "\"Hedda Gabler\" closes tonight",
+        "sub": "7 PM · choose your price, $5 to $35 · the last performance",
+        "cat": "star",
+        "href": "/2026-09-30/hedda-gabler"
+      },
+      {
+        "id": "sat-808",
+        "time": "7:00 PM",
+        "venue": "The 808 · 808 Sevier Ave",
+        "headline": "Marcy Playground, night two at the new venue",
+        "sub": "Doors 7, show 8 · all ages · rideshare if you can",
+        "cat": "music",
+        "href": "/2026-09-30/the-808-opens"
+      },
+      {
+        "id": "sat-knoxferno",
+        "time": "7:00 PM",
+        "venue": "The Pink Cactus · 1147 Sevier Ave",
+        "headline": "Knoxferno: fire spinners and DJs in the front yard",
+        "sub": "7 PM to midnight · free, all ages · check the feed if it storms",
+        "cat": "dance",
+        "href": "/2026-09-30/knoxferno"
       },
       {
         "id": "sat-pinkcactus",
