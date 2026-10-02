@@ -121,6 +121,16 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
   *that*, and if it doesn't exist, the advice doesn't run. Note the **Regal garage is not
   in South Knoxville**; don't cite it as a SoKno lot.
 
+- **Spread the week across the beat.** Old Sevier is where most readers are; Ijams Park is a
+  drive for them. An episode carries **at least three Old Sevier stories** and **at most four
+  from Ijams Park, never more than a third of the episode** — the park's biggest things that
+  week, not its weekly classes. (Andy, 2026-10-02 — No. 16 ran nine Ijams Park stories and one
+  from Old Sevier on the weekend The 808 opened on Sevier Avenue, First Friday filled the
+  district and a play closed at the Borderland Playhouse. All three were on the Old Sevier
+  District's Instagram and none was on a website, which was the only place research looked.)
+  The research pass reads every source in `content/sources.json`, Instagram included, and
+  `scripts/research-check.mjs` fails a draft that skipped one or leans on one place.
+
 - **Always attribute sources.** Every article ends with its source(s): an external
   link when the info came from one (official site, @handle, agency), or plain credit
   text like "Info from A. Roberts" when it came from a form submission/tip with no

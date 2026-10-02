@@ -1,0 +1,164 @@
+{
+  "_comment": "Dated things found during research that fall AFTER the episode being drafted. The next research pass starts here: confirm each against the venue, then it becomes a story or is dropped with a reason. Delete a lead once its date has passed.",
+  "updated": "2026-10-02",
+  "leads": [
+    {
+      "date": "2026-10-08",
+      "what": "Paul Oakenfold + The Crystal Method at The 808, doors 7, 18+",
+      "source": "the-808"
+    },
+    {
+      "date": "2026-10-08",
+      "what": "DJ night at Alliance Brewing with @thedjisagoblin, music at 8",
+      "source": "alliance"
+    },
+    {
+      "date": "2026-10-09",
+      "what": "Feral Kitty release show at Fly by Night, with Horcerer and Adam Gray",
+      "source": "fly-by-night"
+    },
+    {
+      "date": "2026-10-10",
+      "what": "Old Sevier Market grand opening (the grocery on Sevier Ave)",
+      "source": "old-sevier-market"
+    },
+    {
+      "date": "2026-10-10",
+      "what": "KNOX-ILL 2026 at Printshop Beer Co.",
+      "source": "old-sevier-district"
+    },
+    {
+      "date": "2026-10-10",
+      "what": "The After Brunch Special, stand-up at The Pink Cactus, doors 2, show 2:30, $5",
+      "source": "pink-cactus"
+    },
+    {
+      "date": "2026-10-10",
+      "what": "Dizzle Phunk dance party at Fly by Night",
+      "source": "fly-by-night"
+    },
+    {
+      "date": "2026-10-16",
+      "what": "Goodbye June and Danny Worsnop at The 808, 18+",
+      "source": "the-808"
+    },
+    {
+      "date": "2026-10-17",
+      "what": "All My Exes Live in Texas: classic-country vinyl night with dance lessons at The 808, doors 7",
+      "source": "the-808"
+    },
+    {
+      "date": "2026-10-17",
+      "what": "Quiet Entertainer album-release pre-party at Fly by Night",
+      "source": "fly-by-night"
+    },
+    {
+      "date": "2026-10-17",
+      "what": "First Bass x Planet Doom at The Pink Cactus, 8 PM-1 AM, $20, 18+",
+      "source": "pink-cactus"
+    },
+    {
+      "date": "2026-10-18",
+      "what": "Pup-O-Ween at Hi-Wire",
+      "source": "old-sevier-district"
+    },
+    {
+      "date": "2026-10-23",
+      "what": "Spooky Streets: family street event up and down Old Sevier, 5-7:30 PM",
+      "source": "old-sevier-district"
+    },
+    {
+      "date": "2026-10-23",
+      "what": "The Big Pink House Party Vol. 5, drum and bass at The Pink Cactus, 9 PM, 21+",
+      "source": "pink-cactus"
+    },
+    {
+      "date": "2026-10-30",
+      "what": "Stand-up comedy at Printshop Beer Co. (Rowdy Rog)",
+      "source": "printshop"
+    },
+    {
+      "date": "2026-10-31",
+      "what": "Old Sevier Halloween Pub Crawl",
+      "source": "old-sevier-district"
+    },
+    {
+      "date": "2026-10-31",
+      "what": "Halloween house party at The Pink Cactus: free karaoke after 9, goth DJs, open until 2",
+      "source": "pink-cactus"
+    },
+    {
+      "date": "2026-10-31",
+      "what": "Bear Grillz at The 808, 18+",
+      "source": "the-808"
+    },
+    {
+      "date": "2026-11-06",
+      "what": "AMBC Fall Fest at Baker Creek, Nov 6-7",
+      "source": "ambc"
+    },
+    {
+      "date": "2026-11-18",
+      "what": "Mildred Baby soup pop-up at SoKno Sourdough (postponed from October)",
+      "source": "sokno-sourdough"
+    }
+  ],
+  "weekly": [
+    {
+      "day": "Tue",
+      "what": "Free Casino Rueda salsa at Alliance Brewing, 7 PM",
+      "source": "alliance",
+      "seen": "2026-09-29"
+    },
+    {
+      "day": "Tue",
+      "what": "Free team trivia at SouthSide Garage, 7 PM",
+      "source": "southside-garage",
+      "seen": "2026-09-28"
+    },
+    {
+      "day": "Wed",
+      "what": "Singer & Songwriter Night open mic at Alliance Brewing, 7-10, led by Tom Smith",
+      "source": "alliance",
+      "seen": "2026-09-30"
+    },
+    {
+      "day": "Wed",
+      "what": "Survivor watch party at Fly by Night, 8 PM",
+      "source": "fly-by-night",
+      "seen": "2026-09-30"
+    },
+    {
+      "day": "Wed",
+      "what": "Singo at Sevier Ave Burger Co., 7 PM",
+      "source": "sevier-ave-burger",
+      "seen": "2026-10-02"
+    },
+    {
+      "day": "Thu",
+      "what": "Free hour in the karaoke rooms at The Pink Cactus, every Thursday in October",
+      "source": "pink-cactus",
+      "seen": "2026-09-30"
+    },
+    {
+      "day": "Sun",
+      "what": "Karaoke at Fly by Night, 8 PM",
+      "source": "fly-by-night",
+      "seen": "2026-09-23",
+      "note": "last confirmed by the host's own post for Sep 27; re-confirm each week"
+    },
+    {
+      "day": "4th Sun",
+      "what": "The Breadlosers (bluegrass) at Alliance Brewing",
+      "source": "alliance",
+      "seen": "2026-09-29"
+    },
+    {
+      "day": "daily",
+      "what": "Hi-Wire weekly lineup (Mug Mondays, Flagship Tuesday, Wed trivia at 7, half-off drafts Thu, Sat yoga at 11, Sunday Funday)",
+      "source": "hi-wire",
+      "seen": "2026-04-01",
+      "note": "UNVERIFIED since April; the profile is age-gated. Do not run until a current post confirms it."
+    }
+  ]
+}

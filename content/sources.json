@@ -1,0 +1,304 @@
+{
+  "_comment": "Every place the weekly research pass must look. One entry per source; `instagram` is read in the built-in browser with scripts/ig-scan.browser.js (curl cannot read Instagram), `web` with curl and a browser User-Agent (scripts/research-sweep.mjs does all of them at once). A source is checked EVERY week unless `weekly` is false. scripts/research-check.mjs fails the draft when one was skipped. Add a venue the day it first turns up in someone else's post.",
+  "_rules": {
+    "ijamsMaxStories": 4,
+    "ijamsMaxShare": 0.34,
+    "oldSevierMinStories": 3,
+    "why": "Andy, 2026-10-02: No. 16 ran nine Ijams Park stories and one from Old Sevier on the weekend a music venue opened on Sevier Ave. Ijams Park is a drive for most readers; Old Sevier is where they are."
+  },
+  "sources": [
+    {
+      "key": "old-sevier-district",
+      "name": "Old Sevier District (the merchants' association)",
+      "district": "Old Sevier",
+      "hub": true,
+      "instagram": "oldsevierdistrict",
+      "web": [
+        "https://oldsevierdistrict.org/"
+      ],
+      "note": "THE HUB. Posts a First Friday game plan, a weekend roundup, a monthly can't-miss list, gameday and Halloween guides, each tagging every venue involved. Every dated item in a post from the last 10 days goes in the research log as a lead. The site's Google calendar (ics below) has been stale since May 2026; look anyway.",
+      "ics": "https://calendar.google.com/calendar/ical/10a8389025c9c77445cff7df907de187dd53076babb51d8c4513f3326eca9a76%40group.calendar.google.com/public/basic.ics"
+    },
+    {
+      "key": "the-808",
+      "name": "The 808",
+      "district": "Old Sevier",
+      "address": "808 Sevier Ave",
+      "instagram": "808knox",
+      "web": [
+        "https://808knox.com/"
+      ],
+      "note": "Music venue, opened 2026-10-02. The site's schedule reads cleanly with curl: date, act, doors, ages. Ticket prices on the site and in posts have disagreed; leave a price out unless both match."
+    },
+    {
+      "key": "alliance",
+      "name": "Alliance Brewing",
+      "district": "Old Sevier",
+      "address": "1130 Sevier Ave",
+      "instagram": "alliancebrewing",
+      "web": [
+        "https://alliancebrewing.com/"
+      ],
+      "note": "Site is hours only. The feed carries the events: Singer & Songwriter Night (Wed 7-10), free Casino Rueda salsa (Tue 7), The Breadlosers every 4th Sunday, one-off DJ nights, a gameday seltzer. Bands announce their own dates and tag the brewery."
+    },
+    {
+      "key": "hi-wire",
+      "name": "Hi-Wire Brewing Knoxville",
+      "district": "Old Sevier",
+      "address": "2020 Barber St",
+      "instagram": "hiwirebrewing_knx",
+      "web": [
+        "https://hiwirebrewing.com/events-knoxville/",
+        "https://hiwirebrewing.com/knoxville/"
+      ],
+      "gated": true,
+      "note": "The profile is age-gated: a logged-out browser gets nothing (seen: 0). The events page has rendered empty since Sept 2026. Weekly lineup as of an April 2026 highlight, UNVERIFIED since: Mug Mondays, Flagship Tuesday, free trivia Wed 7 (Not Rocket Science), half-off drafts Thu, Sat yoga 11, Sunday Funday. Find Hi-Wire through the Old Sevier District's posts and through a signed-in Instagram session when there is one."
+    },
+    {
+      "key": "fly-by-night",
+      "name": "Fly by Night",
+      "district": "Old Sevier",
+      "address": "906 Sevier Ave, Suite 126",
+      "instagram": "flybynightknox",
+      "web": [
+        "https://www.flybynightknox.com/"
+      ],
+      "note": "Site is hours and menu. The feed carries closures for private parties, Survivor watch parties (Wed 8), karaoke Sundays, and DJ and band nights announced by the acts."
+    },
+    {
+      "key": "printshop",
+      "name": "Printshop Beer Co.",
+      "district": "Old Sevier",
+      "address": "1532 Island Home Ave",
+      "instagram": "printshopbeer",
+      "web": [
+        "https://printshopbeer.com/specials/"
+      ],
+      "note": "Daily posts say who is pouring and what is on: First Friday shows, comedy open mic, D&D nights, yoga, food pop-ups, gallery calls. /specials/ has the weekly deals."
+    },
+    {
+      "key": "trailhead",
+      "name": "Trailhead Beer Market",
+      "district": "Old Sevier",
+      "address": "1317 Island Home Ave",
+      "instagram": "trailheadbeer",
+      "note": "The weekly lineup is a FLYER IMAGE; the caption only says 'planning their weekend?'. Read the scan's `img` text and open the post if it is thin. Kitchen is Gato Peligroso (@gatopeligrosokno)."
+    },
+    {
+      "key": "pink-cactus",
+      "name": "The Pink Cactus",
+      "district": "Old Sevier",
+      "address": "1147 Sevier Ave",
+      "instagram": "thepinkcactusknox",
+      "web": [
+        "https://www.thepinkcactusknox.com/"
+      ],
+      "note": "Posts a month-ahead list on the 1st, then one post per event: dance classes, DJ nights, comedy, fire shows, karaoke deals."
+    },
+    {
+      "key": "southside-garage",
+      "name": "SouthSide Garage",
+      "district": "Old Sevier",
+      "address": "1014 Sevier Ave",
+      "instagram": "southsidegarageknox",
+      "web": [
+        "https://www.southsidegarageknox.com/specials/",
+        "https://www.southsidegarageknox.com/events/"
+      ],
+      "note": "/specials/ and /events/ are dated and reliable."
+    },
+    {
+      "key": "sevier-ave-burger",
+      "name": "Sevier Ave Burger Co.",
+      "district": "Old Sevier",
+      "instagram": "sevieraveburgerco",
+      "note": "Burger and drink of the month on the 1st; Singo Wed 7; weekend brunch 11-2."
+    },
+    {
+      "key": "south-coast-pizza",
+      "name": "South Coast Pizza",
+      "district": "Old Sevier",
+      "instagram": "southcoastpizzaknoxville",
+      "web": [
+        "https://southcoastpizza.com/"
+      ],
+      "note": "Pizza of the month with Dia de Foods."
+    },
+    {
+      "key": "redbud",
+      "name": "Redbud Kitchen",
+      "district": "Old Sevier",
+      "instagram": "redbudkitchenknox",
+      "web": [
+        "https://www.redbudkitchen.com/"
+      ],
+      "note": "Hours and happy hour (weekdays 4-6) are on the site."
+    },
+    {
+      "key": "mighty-mud",
+      "name": "Mighty Mud Studio",
+      "district": "Old Sevier",
+      "address": "1528 Island Home Ave",
+      "instagram": "mightymudstudio",
+      "web": [
+        "https://mightymud.com/"
+      ],
+      "note": "A new gallery show opens every First Friday, 6-9; classes and one-night workshops on the site."
+    },
+    {
+      "key": "sokno-sourdough",
+      "name": "SoKno Sourdough",
+      "district": "Old Sevier",
+      "address": "2006 Barber St",
+      "instagram": "soknosourdough",
+      "web": [
+        "https://www.soknosourdough.com/"
+      ],
+      "note": "Bakery between Redbud and Hi-Wire. First Friday receptions 6-8; pop-ups announced by the guest."
+    },
+    {
+      "key": "borderland",
+      "name": "Borderland Tees and the Borderland Playhouse",
+      "district": "Old Sevier",
+      "address": "802 Sevier Ave",
+      "instagram": "borderlandtees",
+      "web": [
+        "https://borderlandtees.com/playhouse"
+      ],
+      "note": "Live theater on Sevier Ave. Runs are produced by Knoxville Theatre Club."
+    },
+    {
+      "key": "knoxville-theatre-club",
+      "name": "Knoxville Theatre Club",
+      "district": "Old Sevier",
+      "instagram": "knoxvilletheatreclub.lovesyou",
+      "web": [
+        "https://knoxvilletheatreclub.org/tickets"
+      ],
+      "note": "Show dates, pick-your-price tickets."
+    },
+    {
+      "key": "old-sevier-market",
+      "name": "Old Sevier Market",
+      "district": "Old Sevier",
+      "instagram": "oldseviermarket",
+      "web": [
+        "https://oldseviermarket.com/"
+      ],
+      "note": "Grocery on Sevier Ave; grand opening Sat 2026-10-10."
+    },
+    {
+      "key": "angry-dumplings",
+      "name": "Angry Dumplings",
+      "district": "Old Sevier",
+      "address": "1119 Sevier Ave",
+      "instagram": "dumplingsteaknoxville",
+      "note": "Site is down; the business posts here. Always in the party plan at 6 PM (Andy)."
+    },
+    {
+      "key": "honeybee",
+      "name": "HoneyBee Coffee",
+      "district": "Old Sevier",
+      "web": [
+        "https://honeybeecoffeeco.com/"
+      ],
+      "weekly": false,
+      "note": "Site is a shop page. No verified handle yet."
+    },
+    {
+      "key": "kerns",
+      "name": "Kern's",
+      "district": "Kern's",
+      "address": "2201 Kern's Rising Way",
+      "instagram": "kernsknox",
+      "web": [
+        "https://kernsbakery.com/public-events/",
+        "https://kernsbakery.com/football-watch-parties/",
+        "https://kernsbakery.com/"
+      ],
+      "note": "The site lists weekly specials but no dated events; the feed has them."
+    },
+    {
+      "key": "puckers",
+      "name": "Puckers Sports Grill",
+      "district": "Old Sevier",
+      "address": "115 Mimosa Ave",
+      "instagram": "puckersknoxville",
+      "web": [
+        "https://mimosasknoxville.com/this-page-does-not-exist"
+      ],
+      "note": "The 404 page embeds the Puckers feed."
+    },
+    {
+      "key": "earls",
+      "name": "Earl's",
+      "district": "Suttree Landing",
+      "address": "610 Waterfront Dr",
+      "instagram": "earlsknoxville",
+      "web": [
+        "https://earlsknox.com/specials/"
+      ],
+      "note": "curl with a browser User-Agent."
+    },
+    {
+      "key": "ijams",
+      "name": "Ijams Park",
+      "district": "Ijams Park",
+      "instagram": "ijamsnaturecenter",
+      "web": [
+        "https://www.ijams.org/calendar-of-events"
+      ],
+      "note": "grep the raw HTML for dated slugs; details at /event-details/<slug>. The park lists a dozen programs a week. Pick its biggest four at most."
+    },
+    {
+      "key": "ambc",
+      "name": "Appalachian Mountain Bike Club",
+      "district": "Urban Wilderness",
+      "web": [
+        "https://www.ambcknox.org/events/list/"
+      ],
+      "note": "Work parties, social rides, races, Fall Fest."
+    },
+    {
+      "key": "legacy-parks",
+      "name": "Legacy Parks Foundation",
+      "district": "Urban Wilderness",
+      "instagram": "legacyparks",
+      "web": [
+        "https://legacyparks.org/events/"
+      ],
+      "note": "News list: SoKno Rail Trail & Art Walk, campaigns."
+    },
+    {
+      "key": "sokno-taco",
+      "name": "SoKno Taco Cantina",
+      "district": "SoKno",
+      "address": "3701 Sevierville Pike",
+      "web": [
+        "https://soknotaco.com/"
+      ],
+      "note": "Weekly specials on the home page."
+    },
+    {
+      "key": "blank-news",
+      "name": "Blank News",
+      "district": "SoKno",
+      "web": [
+        "https://blanknews.com/?s=South+Knoxville"
+      ],
+      "media": true,
+      "note": "Local press. It had the first interview with The 808's owners three days before opening."
+    },
+    {
+      "key": "inside-of-knoxville",
+      "name": "Inside of Knoxville",
+      "district": "SoKno",
+      "instagram": "insideofknoxville",
+      "web": [
+        "https://insideofknoxville.com/?s=South+Knoxville"
+      ],
+      "media": true,
+      "note": "Local press: openings, reviews, the 10-day planner. Use as a lead, then confirm with the venue."
+    }
+  ]
+}
