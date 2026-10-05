@@ -30,6 +30,20 @@ export function roundupIsOn(moves) {
   return !(moves ?? []).some((m) => m.key === ROUNDUP_MOVE && m.answer === "no");
 }
 
+/** The move that turned a venue's own carousel OFF: "Venue stories back to single posts". */
+export const VENUE_SINGLES_MOVE = "venue-singles";
+
+/**
+ * Whether a venue's folded stories go out as one carousel of their own. Off since
+ * 2026-10-05: No. 16's "3 more at Ijams Park" read 4 where three single banners read
+ * 13–15 between them the week before, and the two-posts-a-day venue cap already stops
+ * the stacking that the fold was for. Every story keeps its single post; the weekend
+ * roundup still rides on top. Andy answering "Don't" to the move turns the fold back on.
+ */
+export function venueCarouselsOn(moves) {
+  return (moves ?? []).some((m) => m.key === VENUE_SINGLES_MOVE && m.answer === "no");
+}
+
 /**
  * Which posts keep a single slot. Walks the posts in the order the episode lists them
  * (the editor's ranking) and keeps each venue's first MAX_SINGLES_PER_VENUE; the

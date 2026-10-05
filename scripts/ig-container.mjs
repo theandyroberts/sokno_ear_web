@@ -17,6 +17,36 @@ export function isTransient(payload) {
     || /not ready|try again|transient|temporarily/i.test(String(e.message ?? ""));
 }
 
+/** Where the in-image tag sits: low centre, on the banner's venue band. */
+export const USER_TAG_SPOT = { x: 0.5, y: 0.88 };
+/** The dashboard move that turned tagging every post on: "Tag the venue in every picture". */
+export const TAG_EVERY_POST_MOVE = "tag-every-post";
+
+/** Every tagged banner is tagged in the image unless Andy said "Don't" — then back to the 50/50 test. */
+export function imageTagsOn(moves) {
+  return !(moves ?? []).some((m) => m.key === TAG_EVERY_POST_MOVE && m.answer === "no");
+}
+
+/** Stable 50/50 split on a story id — same story, same arm, every restage. The old test's split. */
+export function abBucket(id) {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0;
+  return h % 2 === 0;
+}
+
+/**
+ * The `user_tags` a story banner carries: its first venue handle, tagged in the image.
+ * Every tagged banner gets one since 2026-10-05 — the one surface in this pipeline that
+ * puts a post in front of the venue's own followers. Untagged stays untagged.
+ *
+ * @param {string[]} tags   caption handles, "@kernsknox" first
+ * @returns {Array<{username: string, x: number, y: number}> | undefined}
+ */
+export function userTagsFor(tags) {
+  const first = (tags ?? []).find((t) => /^@[a-z0-9_.]+$/i.test(String(t)));
+  return first ? [{ username: first.replace(/^@/, ""), ...USER_TAG_SPOT }] : undefined;
+}
+
 /**
  * @param {object} post   a queue entry: imageUrl, caption, optional slides[], userTags[]
  * @param {object} io
@@ -58,8 +88,8 @@ export async function publishPost(post, { graph, userId, token, fetchImpl = fetc
     containers = children.length + 1;
   } else {
     // `user_tags` tags the venue IN THE IMAGE, the one surface in this pipeline that
-    // puts a post in front of non-followers. ig-queue.mjs sets it on half the tagged
-    // story banners (`abGroup`), captions held identical.
+    // puts a post in front of non-followers. ig-queue.mjs sets it on every tagged
+    // story banner (userTagsFor); until 2026-10-05 it was a 50/50 test (`abGroup`).
     const body = { image_url: post.imageUrl, caption: post.caption };
     if (post.userTags?.length) body.user_tags = JSON.stringify(post.userTags);
     creationId = await container(body, "container");

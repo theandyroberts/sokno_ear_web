@@ -51,7 +51,7 @@ Runs 01–08 stay as they were written; they are the archive.
 | `learned` | One set of bars: the thing the numbers show | |
 | `dials` | Half-circle gauges | |
 | `bestEver` | The account's best posts, as images | |
-| `moves` | **One to three.** `key`, `title`, `owner` (`claude` / `andy`), `why`, `plan` | 28 words a reason |
+| `moves` | **One to three.** `key`, `title`, `owner` (`claude` / `andy`), `why`, `plan`; optional `sample: {video, poster}` plays a clip under the plan (the Reel sample, run 10) | 28 words a reason |
 | `done` | What you already did this week | 24 words each |
 | `writeUp` | Optional path to HTML for a collapsed "full write-up". Leave it out; the markdown is the write-up. | |
 

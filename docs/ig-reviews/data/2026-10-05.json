@@ -1,0 +1,138 @@
+{
+ "run": 10,
+ "date": "2026-10-05",
+ "next": "2026-10-12",
+ "episode": 16,
+ "kicker": "Week of Sep 30 · episode No. 16 · read Oct 5",
+ "railKind": "111 followers · 5.9 reach a post",
+ "headline": "Ten new followers, most since August. Fewer posts reached fewer people.",
+ "verdicts": [
+  { "label": "Growth", "tone": "ok", "text": "+10 followers, best in four weeks" },
+  { "label": "Reach", "tone": "warn", "text": "5.9 a post, but only 47 all week" },
+  { "label": "New people", "tone": "bad", "text": "1 non-follower reached this week" },
+  { "label": "Pipeline", "tone": "ok", "text": "8 of 8 posted, both carousels" }
+ ],
+ "tiles": [
+  {
+   "label": "Followers",
+   "value": "111",
+   "good": "up",
+   "series": [46, 49, 59, 66, 74, 86, 95, 100, 101, 111],
+   "vsLast": { "dir": "up", "tone": "ok", "text": "+10 this week" },
+   "vsBase": "46 on Aug 11"
+  },
+  {
+   "label": "Reach per post",
+   "value": "5.9",
+   "good": "up",
+   "series": [16.1, 10.5, 10.5, 14.2, 10.4, 8.2, 8.1, 6.8, 7.8, 4.9, 5.9],
+   "vsLast": { "dir": "up", "tone": "ok", "text": "+1.0 on last week, same age" },
+   "vsBase": "10.5 in early Aug"
+  },
+  {
+   "label": "Reach, whole week",
+   "value": "47",
+   "good": "up",
+   "series": [113, 84, 63, 128, 104, 106, 89, 41, 101, 69, 47],
+   "vsLast": { "dir": "down", "tone": "bad", "text": "−22, on six fewer posts" },
+   "vsBase": "best 128, Aug 12"
+  },
+  {
+   "label": "People reached this week",
+   "value": "19",
+   "good": "up",
+   "series": [19, 11, 21, 25, 19],
+   "vsLast": { "dir": "down", "tone": "bad", "text": "−6 on last week" },
+   "vsBase": "19 a month ago"
+  },
+  {
+   "label": "New people reached · 28 days",
+   "value": "13",
+   "good": "up",
+   "series": [10, 10, 6, 9, 12, 13],
+   "vsLast": { "dir": "up", "tone": "ok", "text": "+1 on last week" },
+   "vsBase": "10 a month ago"
+  }
+ ],
+ "tilesNote": "Lines run from July to now. Reach per post is read at the same age as last week's was.",
+ "week": [
+  { "id": "call-the-ear", "day": "Wed", "time": "09:00", "reach": 6, "title": "Call the Ear", "img": "/insta/img/soknoear/2026-09-30_call-the-ear.jpg", "group": "lead" },
+  { "id": "weekend-roundup", "day": "Wed", "time": "09:31", "reach": 4, "title": "Weekend roundup · 10 slides", "img": "/insta/img/soknoear/2026-09-30_episode-drop.jpg", "group": "hot" },
+  { "id": "carrie-on-the-lawn", "day": "Wed", "time": "09:45", "reach": 7, "title": "\"Carrie\" on the lawn", "img": "/insta/img/soknoear/2026-09-30_carrie-on-the-lawn.jpg" },
+  { "id": "roundup-ijams", "day": "Wed", "time": "21:00", "reach": 4, "title": "3 more at Ijams · 3 slides", "img": "/insta/img/soknoear/2026-09-30_hooping.jpg", "group": "hot" },
+  { "id": "kerns-lure-mural", "day": "Thu", "time": "09:00", "reach": 7, "title": "Kern's fishing lures", "img": "/insta/img/soknoear/2026-09-30_kerns-lure-mural.jpg" },
+  { "id": "starlight-paddle", "day": "Fri", "time": "16:00", "reach": 5, "title": "Starlight paddle", "img": "/insta/img/soknoear/2026-09-30_starlight-paddle.jpg" },
+  { "id": "baker-creek-work-party", "day": "Fri", "time": "19:00", "reach": 8, "title": "Baker Creek work party", "img": "/insta/img/soknoear/2026-09-30_baker-creek-work-party.jpg" },
+  { "id": "moss-meander", "day": "Sat", "time": "10:00", "reach": 6, "title": "Moss walk at Mead's Quarry", "img": "/insta/img/soknoear/2026-09-30_moss-meander.jpg" }
+ ],
+ "weekLegend": [
+  { "group": "hot", "label": "A carousel, new this week" },
+  { "group": "lead", "label": "The weekly ad" },
+  { "group": "plain", "label": "Single posts" }
+ ],
+ "worked": [
+  { "title": "Baker Creek work party", "reach": 8, "img": "/insta/img/soknoear/2026-09-30_baker-creek-work-party.jpg", "why": "Volunteers, gloves and a date. No venue tag, Friday at 7. Best of the week." },
+  { "title": "Kern's fishing lures", "reach": 7, "img": "/insta/img/soknoear/2026-09-30_kerns-lure-mural.jpg", "why": "Kern's again, one object up close, tagged in the image." },
+  { "title": "\"Carrie\" on the lawn", "reach": 7, "img": "/insta/img/soknoear/2026-09-30_carrie-on-the-lawn.jpg", "why": "The feature on publish day. One bucket, close in: the new art rule." }
+ ],
+ "didnt": [
+  { "title": "Weekend roundup", "reach": 4, "img": "/insta/img/soknoear/2026-09-30_episode-drop.jpg", "why": "Ten slides, posted eleven minutes after the ad. Read the same as the old card." },
+  { "title": "3 more at Ijams Park", "reach": 4, "img": "/insta/img/soknoear/2026-09-30_hooping.jpg", "why": "Three stories in one post read 4. As single posts they'd have read about 13." },
+  { "title": "Starlight paddle", "reach": 5, "img": "/insta/img/soknoear/2026-09-30_starlight-paddle.jpg", "why": "The fourth Ijams story of the week, on a Friday afternoon." }
+ ],
+ "learned": {
+  "title": "Tagging the venue in the picture works",
+  "note": "Average reach per post, story posts Sep 16 – Oct 4, read today. Three weeks of a half-and-half test.",
+  "rows": [
+   { "label": "Tagged in the image", "value": 9.0, "note": "10 posts · ahead all three weeks", "tone": "ok" },
+   { "label": "Tagged in the caption only", "value": 6.6, "note": "16 posts", "tone": "ink" },
+   { "label": "Caption only, Ijams Park", "value": 5.5, "note": "11 posts", "tone": "bad" }
+  ]
+ },
+ "dials": [
+  { "label": "Posts delivered", "value": 8, "max": 8, "display": "8/8", "note": "0 failed, both carousels went", "tone": "ok" },
+  { "label": "Followers who saw a post", "value": 16, "max": 100, "display": "16%", "note": "18 of 111, this week", "tone": "warn" },
+  { "label": "Reach that was new people", "value": 32, "max": 100, "display": "32%", "note": "13 of 41, in 28 days", "tone": "ink" }
+ ],
+ "bestEver": [
+  { "title": "Mimosas opens", "reach": 22, "img": "/insta/img/soknoear/2026-07-23_mimosas.jpg", "why": "A new restaurant. Jul 25." },
+  { "title": "Mimosas, last weekends", "reach": 19, "img": "/insta/img/soknoear/2026-08-13_mimosas-puckers.jpg", "why": "A place about to change hands. Aug 13." },
+  { "title": "Earl's specials board", "reach": 18, "img": "/insta/img/soknoear/2026-08-13_specials-board.jpg", "why": "A deal for every day. Aug 13." },
+  { "title": "The Kerbela hearing", "reach": 17, "img": "/insta/img/soknoear/2026-08-13_kerbela-hearing.jpg", "why": "Neighborhood news with a date. Aug 13." },
+  { "title": "Kern's hoedown", "reach": 16, "img": "/insta/img/soknoear/2026-07-23_kerns-weekend.jpg", "why": "A food hall's weekend. Jul 24." },
+  { "title": "Earl's margarita clock", "reach": 16, "img": "/insta/img/soknoear/2026-07-23_earls.jpg", "why": "A drink special. Jul 23." }
+ ],
+ "moves": [
+  {
+   "key": "tag-every-post",
+   "owner": "claude",
+   "title": "Tag the venue in every picture",
+   "why": "Three weeks of a half-and-half test: tagged posts read 9.0, untagged 6.6, ahead every week. New people reached each week tracked how many posts were tagged.",
+   "plan": "Every venue post from Wed Oct 7 carries the venue tagged in the image. Say don't and it goes back to half.",
+   "due": "2026-10-07"
+  },
+  {
+   "key": "venue-singles",
+   "owner": "claude",
+   "title": "Venue stories back to single posts",
+   "why": "The Ijams carousel read 4 for three stories; as singles they'd read about 13. Weekly reach follows the number of posts, and two-a-day already stops the stacking.",
+   "plan": "From Wed Oct 7 every story gets its own post again; the weekend roundup stays on top. Say don't and a venue's extra stories fold into one carousel.",
+   "due": "2026-10-07"
+  },
+  {
+   "key": "weekly-reel",
+   "owner": "claude",
+   "title": "A weekly Reel from the audio briefing",
+   "why": "Only 1 of the 19 people reached this week is a non-follower. Reels are how Instagram reaches people who don't follow you; all 114 posts are stills.",
+   "plan": "The sample is above. The first Reel goes out with No. 18 on Wed Oct 14 unless you say don't; the publish path gets built Mon Oct 12.",
+   "due": "2026-10-14",
+   "sample": { "video": "/insta/img/soknoear/2026-10-05_reel-sample.mp4", "poster": "/insta/img/soknoear/2026-10-05_reel-sample.jpg" }
+  }
+ ],
+ "done": [
+  { "title": "The venue notes went out.", "text": "Five first notes sent: Legacy Parks, Earl's, Ijams, Kern's, Puckers. Open 48 days, now closed. Weekly notes send themselves from here." },
+  { "title": "The roundup posted as a carousel.", "text": "Both carousels went out properly, no fallback. The weekend one stays: it read the same as the card it replaced." },
+  { "title": "The image-tag test is decided.", "text": "Three weeks, tagged ahead every week. From Wednesday every venue post is tagged in the picture." },
+  { "title": "Last week kept growing.", "text": "No. 15 rose from 69 to 93 reach as it aged, No. 14 from 84 to 116. Posts earn reach for two weeks." }
+ ]
+}

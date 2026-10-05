@@ -33,65 +33,42 @@ tickets the Instagram reviews used until 2026-09-28 (A1–A16) meant nothing to 
 retired; where an old one appears below, its name is beside it. Things Andy can answer are
 **moves** on the dashboard (`node scripts/pub-status.mjs moves`).
 
-### 1. Venue outreach — the first notes go out with this week's drafts
-**Move:** `venue-notes` (Andy's, due Fri Oct 2)
-**Opened:** 2026-08-11 · **Age: 48 days** (as of 2026-09-28) · **Carried through 8 Instagram reviews**
-· **Only Andy can do this** · **Push tried 2026-09-28, phone not reached** (Remote Control was inactive on the mini, so it was desktop only; next push only if the Sep 30 drafts also expire unsent)
+### 1. A weekly Reel from the audio briefing — sample delivered, publish half owed
+**Opened:** 2026-09-28 · **Age: 7 days** (as of 2026-10-05) · **Claude's** · **Move:** `weekly-reel` · **Due: Wed 2026-10-14**
 
-**2026-09-28, from Andy:** he deleted all five of last week's drafts himself. They did not lapse unread. The first notes go out with this week's drafts (No. 16, in Gmail Wed Sep 30 at 5:30 PM). The Oct 5 review checks `introduced` in `content/contacts.json` before saying anything about this item.
+**2026-10-05:** the sample is on the dashboard (run 10) and at
+`https://note15.com/insta/img/soknoear/2026-10-05_reel-sample.mp4`: 46 s, 1080×1920, the
+No. 16 briefing's open and its Carrie paragraph over five banners, the spoken line burned in
+under the picture. Built with Pillow frames + ffmpeg's concat demuxer (the mini's ffmpeg has no
+`drawtext`); paragraph boundaries from `silencedetect`. Recipe in `docs/ig-reviews/2026-10-05.md`.
+**The first Reel rides the No. 18 drip on Wed Oct 14 unless Andy answers "Don't"** on the page.
 
-**2026-09-28:** The venue-notes pipeline went live and put five first-contact drafts in Gmail
-on Wed Sep 23: Kern's, Earl's, Ijams, Legacy Parks, Puckers (Puckers has no email, so that one
-is an Instagram DM). None was sent and all five expired when their events passed. **New drafts
-land Wed Sep 30 at 5:30 PM, each with a send-by day on the desk.** Ijams first — the note goes
-to Cindy Hassil.
+*To do, Mon Oct 12 review:* `scripts/ig-reel.mjs` (build the mp4 from `content/audio-scripts/<date>.md`,
+`public/audio/<date>.mp3`, `public/assets/ig/<date>/`), and the publish half in
+`scripts/ig-container.mjs`: `media_type=REELS`, public `video_url`, a longer `FINISHED` wait
+(video processing takes minutes, not seconds), a `reel` post in the queue after the roundup.
+Check `moves` first — a "Don't" closes this item instead.
 
-The week it matters to: No. 15 read 4.9 reach per post, the lowest on record, on 14 posts.
-Nine of them were Ijams, now 41% of everything posted since Aug 11 (31 posts, 6.9 average
-reach, never one like or reshare). Followers went 100 → 101, with no new follower in the
-five days Sep 24–28. The pipeline has run two clean weeks; the layout problem it did have
-is fixed (two posts a day per venue, in Closed). What's left is that the venues have never heard from the Ear.
+### 2. Fewer posts reached fewer people — the roundup and its first fixes, read again Oct 12
+**Opened:** 2026-10-05 · **Claude's** · **Moves:** `venue-singles`, `tag-every-post` (both live Wed Oct 7)
 
-**2026-09-21:** Ijams went from 14 tags to 22 in one week (8 of No. 14's 13 posts) and is now
-35% of everything posted since Aug 11, at 7.2 average reach, the lowest of any venue. It still
-has never engaged. The pipeline ran its first fully clean week and per-post reach is flat at 6–7,
-so nothing left in the pipeline addresses this.
+No. 16 went out as 8 posts (the roundup week) where No. 15 had 14. Per-post reach rose
+4.9 → 5.9 at equal age and no post read below 4, but weekly reach fell 69 → 47, unique
+people reached 25 → 19, views 176 → 84, and non-follower reach for the week was 1. Both
+carousels read 4 — the weekend roundup exactly what the episode card read, and the Ijams
+carousel 4 for three stories that as singles would have read about 13.
 
-Every Instagram review since the baseline has said the same thing: this is the binding
-constraint, and it is a conversation, not a pipeline setting. One reshare from Ijams,
-Kern's or Puckers reaches more non-followers in an afternoon than the feed has reached
-since August.
+Shipped 2026-10-05: **every story keeps its single post** (`venueCarouselsOn` in
+`scripts/ig-roundup.mjs`, off unless Andy says "Don't" to `venue-singles`); **every venue
+post is tagged in the image** (`userTagsFor` / `imageTagsOn` in `scripts/ig-container.mjs`,
+the old 50/50 split returns on "Don't" to `tag-every-post`). The weekend roundup stays on top.
 
-*To close:* one first-contact note sent. `content/contacts.json` records it as `introduced`,
-and from then on that venue's weekly note goes out by itself.
+*Measures for Oct 12 (No. 17):* weekly reach at equal age above 69; no post below 3; every
+tagged post carries `userTags`; per-window non-follower reach 5 or more; the roundup's saves
+and whether it beats 6. *If the roundup hasn't beaten 6 by Oct 19 it goes back to the card.*
 
-### 3. A weekly Reel from the audio briefing — sample owed to Andy
-**Opened:** 2026-09-28 · **Due: Mon 2026-10-05** · **Claude's** · **Move:** `weekly-reel`
-
-All 106 posts are still images, and Reels are the surface Instagram shows to people who
-don't follow an account. The Monday Oct 5 Instagram review builds a sample and puts it on
-the dashboard (`sample: {video, poster}` on the move in the data file). **Nothing posts
-until Andy answers "Go ahead".**
-
-*To build:* `ffmpeg` is at `/opt/homebrew/bin/ffmpeg` on the mini. Audio is
-`public/audio/<slug>.mp3`; banners are `public/assets/ig/<slug>/`. Aim for 30–45 seconds,
-1080×1920, the week's strongest four or five banners over the opening of the briefing,
-captions burned in (most people watch muted). Host the mp4 under
-`/var/www/note15/insta/img/soknoear/`. Publishing a Reel needs `media_type=REELS` and a
-public `video_url` in `scripts/ig-container.mjs`; don't build that half until he says go.
-
-### 4. The weekend roundup — first live week is No. 16
-**Opened:** 2026-09-28 · **Claude's** · **Move:** `weekend-roundup`
-
-Shipped 2026-09-28: the "new episode" card becomes a carousel of the weekend, a venue
-keeps three single posts, and its other stories go out as one carousel. The carousel
-publish path has only been tested against a fake Instagram. **Wednesday's publish check
-confirms the roundup posted as a carousel**, not as the fallback card (`downgradedFrom` in
-the queue means it fell back). The Oct 5 review reads: posts sent, reach per post, saves,
-and whether anyone unfollowed.
-
-### 2. Search Console is unreadable from the Mac mini
-**Opened:** 2026-08-15 · **Age: 47 days** (as of 2026-10-01) · **Missed 3 of 4 SEO checks**
+### 3. Search Console is unreadable from the Mac mini
+**Opened:** 2026-08-15 · **Age: 51 days** (as of 2026-10-05) · **Missed 3 of 4 SEO checks**
 · **Needs Andy** · not blocking — no push (the site-side half covers breakage; this only costs the crawl numbers)
 
 **2026-10-01:** missed again — no Chrome extension connected, Browser pane signed out.
@@ -116,6 +93,11 @@ fires (1st and 15th), or open Search Console and paste the Page indexing numbers
 
 | Item | Opened | Closed | What fixed it |
 | --- | --- | --- | --- |
+| **Venue outreach**: the venues had never heard from the Ear (carried through 9 Instagram reviews, 48 days at the last) | 2026-08-11 | 2026-10-03 | Andy sent the five first notes himself: Legacy Parks Sep 29, Earl's, Ijams and Kern's Oct 1, Puckers Oct 3 (Instagram DM). `content/contacts.json` records each as `introduced`; `scripts/venue-notify.mjs` sends their weekly note itself from the No. 17 publish. Still to come: the first reshare |
+| The image-tag test (`user_tags`, 50/50 by story id, Sep 16 – Oct 4) | 2026-09-07 | 2026-10-05 | Decided: tagged 9.0 against untagged 6.6 reach a post over three weeks, ahead every week; every venue post is now tagged in the image (`userTagsFor`). The split is kept behind Andy's "Don't" |
+| A venue's folded stories went out as one carousel of their own ("3 more at Ijams Park", read 4 for three stories) | 2026-09-28 | 2026-10-05 | `venueCarouselsOn` is off: every story keeps its single post; the two-posts-a-day venue cap already stops the stacking the fold was for. The weekend roundup itself stays (item 2 above) |
+| The carousel publish path had only run against a fake Instagram | 2026-09-28 | 2026-09-30 | No. 16: both carousels published as carousels, 10+1 and 3+1 containers, no `downgradedFrom`; publish check and the Oct 5 review confirm |
+| The equal-age reading said age ≥2 was within 6% of final | 2026-09-28 | 2026-10-05 | It wasn't: No. 15 grew 35% after age 2–5, No. 14 another 15% after age 8. Revised in `docs/ig-reviews/2026-10-05.md`: expect +30–35% from age 2–5, +10–15% from age 8 |
 | Instagram banners were a wall of teal (9 of 12 in No. 15): the band took the place's pill colour, and the place was Ijams Park | 2026-09-28 | 2026-09-28 | `band_colors` in `scripts/ig-banners.py`: a place keeps its colour for its first story of the week, the rest take the least-used palette colour; `social.igBand` overrides; `tests/ig-band-colors.test.ts` |
 | Artwork drew the whole scene (the quarry, the class, the lawn) where the best-read posts are one object up close | 2026-09-28 | 2026-09-28 | "One subject, close in" in `.claude/skills/sokno-ear-art/SKILL.md`, and the Tuesday draft task now loads that skill before drawing. First used on No. 16; the Oct 5 review compares |
 | One venue filled a day of the Instagram drip (No. 15: three Ijams banners Thursday, four Saturday, read 2, 2, 7 and 2, 6, 5, 1) | 2026-09-28 | 2026-09-28 | `placeDaySlots` takes each post's venue: two posts a day per venue, the rest move earlier in the week, never before publish day, nothing dropped; 7 tests in `tests/ig-day-slots.test.ts` (two posts a day per venue). First live week is No. 16 |

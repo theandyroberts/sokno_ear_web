@@ -1,10 +1,10 @@
 // @vitest-environment node
 import { describe, it, expect } from "vitest";
 import {
-  pickSingles, chooseVaried, buildRoundup, buildVenueRoundup, roundupIsOn, downgradeCarousel, shortTitle,
+  pickSingles, chooseVaried, buildRoundup, buildVenueRoundup, roundupIsOn, venueCarouselsOn, downgradeCarousel, shortTitle,
   MAX_SINGLES_PER_VENUE, MAX_SLIDES,
 } from "../scripts/ig-roundup.mjs";
-import { publishPost } from "../scripts/ig-container.mjs";
+import { publishPost, userTagsFor, imageTagsOn, abBucket, USER_TAG_SPOT } from "../scripts/ig-container.mjs";
 
 const IJAMS = "@ijamsnaturecenter";
 const story = (id: string, venue: string | null, day: string, start?: string, banner?: string) => ({
@@ -112,6 +112,37 @@ describe("Andy's switch", () => {
     expect(roundupIsOn([{ key: "weekend-roundup", answer: "go" }])).toBe(true);
     expect(roundupIsOn([{ key: "weekend-roundup", answer: "no" }])).toBe(false);
     expect(roundupIsOn([{ key: "weekly-reel", answer: "no" }])).toBe(true);
+  });
+
+  it("keeps every story as a single post unless he says Don't to 'venue stories back to single posts'", () => {
+    // Since 2026-10-05 a venue's own carousel is off: No. 16's read 4 for three stories.
+    expect(venueCarouselsOn([])).toBe(false);
+    expect(venueCarouselsOn(undefined)).toBe(false);
+    expect(venueCarouselsOn([{ key: "venue-singles", answer: null }])).toBe(false);
+    expect(venueCarouselsOn([{ key: "venue-singles", answer: "go" }])).toBe(false);
+    expect(venueCarouselsOn([{ key: "venue-singles", answer: "no" }])).toBe(true);
+    expect(venueCarouselsOn([{ key: "weekend-roundup", answer: "no" }])).toBe(false);
+  });
+});
+
+describe("the venue tagged in the image", () => {
+  it("tags every banner with a venue, by its first handle, on the band", () => {
+    expect(userTagsFor(["@kernsknox", "@legacyparks"])).toEqual([{ username: "kernsknox", ...USER_TAG_SPOT }]);
+    expect(userTagsFor(["@ijamsnaturecenter"])).toEqual([{ username: "ijamsnaturecenter", x: 0.5, y: 0.88 }]);
+  });
+  it("leaves an untagged post alone", () => {
+    expect(userTagsFor([])).toBeUndefined();
+    expect(userTagsFor(undefined)).toBeUndefined();
+    expect(userTagsFor(["not a handle"])).toBeUndefined();
+  });
+  it("is on for every post unless Andy says Don't, which brings the 50/50 split back", () => {
+    expect(imageTagsOn([])).toBe(true);
+    expect(imageTagsOn([{ key: "tag-every-post", answer: "go" }])).toBe(true);
+    expect(imageTagsOn([{ key: "tag-every-post", answer: "no" }])).toBe(false);
+    // The split is stable per id, and it is the split the three-week test ran on.
+    expect(abBucket("kerns-tailgate")).toBe(abBucket("kerns-tailgate"));
+    expect(abBucket("end-of-summer-jam")).toBe(true);
+    expect(abBucket("wildflower-walk")).toBe(false);
   });
 });
 

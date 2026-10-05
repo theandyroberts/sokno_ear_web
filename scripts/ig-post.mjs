@@ -85,7 +85,7 @@ for (const file of files) {
       if (post.slides?.length) console.log(`  carousel, ${post.slides.length} slides:\n${post.slides.map((u) => "    " + u).join("\n")}`);
       else console.log(`  image: ${post.imageUrl}`);
       console.log(`  tags:  ${post.tags.join(" ") || "(none)"}`);
-      if (post.userTags?.length) console.log(`  user_tags: ${post.userTags.map((t) => "@" + t.username).join(" ")}  [A/B: ${post.abGroup}]`);
+      if (post.userTags?.length) console.log(`  user_tags: ${post.userTags.map((t) => "@" + t.username).join(" ")}${post.abGroup ? `  [A/B: ${post.abGroup}]` : ""}`);
       else if (post.abGroup) console.log(`  user_tags: (none)  [A/B: ${post.abGroup}]`);
       console.log(post.caption.split("\n").map((l) => "    " + l).join("\n"));
       continue;

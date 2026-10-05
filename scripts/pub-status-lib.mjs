@@ -267,7 +267,7 @@ export function deriveWeek(f) {
       id: `ig-post:${p.id}`, channel: "instagram", title: p.title ?? p.id, time: clock(p.postAt.slice(11, 16)),
       done: state === "done", state: state === "done" || state === "todo" ? undefined : state,
       detail: state === "failed" ? `failed after ${p.attempts ?? "?"} tries` : state === "skipped" ? "dropped — its event had started"
-        : [p.tags?.join(" "), p.abGroup === "img-tagged" ? "tagged in image" : ""].filter(Boolean).join(" · "),
+        : [p.tags?.join(" "), p.userTags?.length || p.abGroup === "img-tagged" ? "tagged in image" : ""].filter(Boolean).join(" · "),
     });
   }
 

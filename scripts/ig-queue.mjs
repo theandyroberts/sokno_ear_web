@@ -13,7 +13,8 @@ import path from "node:path";
 import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, DAY_START_HOUR, placeDaySlots, SAME_DAY_GAP_H, MAX_VENUE_POSTS_PER_DAY } from "./ig-schedule.mjs";
 import { priorRunsById, pickRepeatsToDrop, standingKeyOf, MAX_REPEATS_PER_EPISODE } from "./ig-repeats.mjs";
 import { checkBanner } from "./ig-banner-check.mjs";
-import { buildRoundup, buildVenueRoundup, pickSingles, roundupIsOn, MAX_SINGLES_PER_VENUE } from "./ig-roundup.mjs";
+import { buildRoundup, buildVenueRoundup, pickSingles, roundupIsOn, venueCarouselsOn, MAX_SINGLES_PER_VENUE } from "./ig-roundup.mjs";
+import { userTagsFor, imageTagsOn, abBucket } from "./ig-container.mjs";
 
 const SITE = "https://soknoear.com";
 const BASE_HASHTAGS = "#SoKno #SouthKnoxville #Knoxville #SouthKnoxvilleEar";
@@ -116,13 +117,6 @@ function slotFor(story, dayDate) {
   return { date, hour };
 }
 
-/** Stable 50/50 split on a story id — same story, same arm, every restage. */
-function abBucket(id) {
-  let h = 0;
-  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0;
-  return h % 2 === 0;
-}
-
 const stories = [{ ...episode.feature, __isFeature: true }, ...episode.stories];
 const posts = [];
 const warnings = [];
@@ -162,14 +156,12 @@ for (const s of stories) {
   const bannerRel = `/assets/ig/${episode.slug}/${s.id}.jpg`;
   const hasBanner = fs.existsSync(path.join(process.cwd(), "public", bannerRel));
 
-  // A12: half the tagged story banners also carry an in-image `user_tags` mention,
-  // captions held identical, so non-follower reach can be read tagged vs untagged.
-  // Split deterministically on the story id so restaging never reshuffles a post
-  // between arms mid-experiment. See docs/ig-reviews/2026-09-15.md, A12.
-  const abGroup = tags.length ? (abBucket(s.id) ? "img-tagged" : "control") : undefined;
-  const userTags = abGroup === "img-tagged"
-    ? tags.slice(0, 1).map((t) => ({ username: t.replace(/^@/, ""), x: 0.5, y: 0.88 }))
-    : undefined;
+  // Every tagged story banner also carries the venue as an in-image `user_tags`
+  // mention. Three weeks of a 50/50 split (Sep 16 – Oct 4) read tagged 9.0 against
+  // untagged 6.6 reach a post, ahead every week, and the account's weekly non-follower
+  // reach tracked the number of tagged posts (7, 5, 1 with 4, 5, 1 of them). Decided
+  // in docs/ig-reviews/2026-10-05.md.
+  const userTags = userTagsFor(tags);
 
   if (s.__isFeature) featureIds.add(s.id);
   posts.push({
@@ -185,7 +177,6 @@ for (const s of stories) {
     // post whose slot has gone stale (the event has started — posting it is worse
     // than silence) but always publishes an undated one late.
     dated: Boolean(dated),
-    ...(abGroup ? { abGroup } : {}),
     ...(userTags ? { userTags } : {}),
     status: "pending",
   });
@@ -219,8 +210,9 @@ if (droppedKeys.length) {
 }
 
 // ── The weekend roundup. One carousel carries the whole episode and replaces the
-// "new episode" card; each venue keeps at most three single posts and the rest of
-// its stories appear only in the roundup. Off when Andy answered "Don't" to the move
+// "new episode" card. Every story keeps its single post as well (since 2026-10-05;
+// before that a venue kept three and the rest went out as one carousel of its own —
+// see venueCarouselsOn). Off when Andy answered "Don't" to the move
 // on the dashboard, when --no-roundup is passed, when the cover card hasn't been
 // drawn, or when this queue already went out the old way (restaging a past week must
 // never publish a roundup for it). See scripts/ig-roundup.mjs.
@@ -239,6 +231,16 @@ try {
     db.close();
   }
 } catch (e) { warnings.push(`could not read Andy's answers (${e.message}) — building with the roundup on`); }
+
+// Andy answering "Don't" to tagging every picture puts the old 50/50 split back.
+if (!imageTagsOn(moves)) {
+  for (const p of posts) {
+    if (!p.userTags) continue;
+    p.abGroup = abBucket(p.id) ? "img-tagged" : "control";
+    if (p.abGroup === "control") delete p.userTags;
+  }
+  warnings.push("image tags on half the posts — Andy answered “Don't” to tagging every picture");
+}
 
 const assetUrl = (id) => `${SITE}/assets/ig/${episode.slug}/${id}.jpg`;
 const hasAsset = (id) => fs.existsSync(path.join(process.cwd(), "public", "assets", "ig", episode.slug, `${id}.jpg`));
@@ -259,7 +261,11 @@ else {
     hashtags: BASE_HASHTAGS,
   });
   if (!roundup) warnings.push("roundup off — fewer than three stories have a banner");
-  else {
+  else if (!venueCarouselsOn(moves)) {
+    // Since 2026-10-05 every story keeps its single post: a venue's carousel read 4
+    // where the singles it replaced read three times that. See venueCarouselsOn.
+    warnings.push(`every story keeps its single post — the roundup rides on top (${fold.length} would have folded)`);
+  } else {
     // A venue's folded stories go out together, in one carousel of their own. A story
     // only leaves the singles if a carousel really carries it.
     const byVenue = new Map();
