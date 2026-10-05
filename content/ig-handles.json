@@ -146,6 +146,12 @@
       "name": "Borderland Tees",
       "verified": "tagged by the Old Sevier District's own First Friday post (2026-10-02); live profile read 2026-10-02: posts as 'Borderland Tees' about its own playhouse at 802 Sevier Ave",
       "confidence": "high"
+    },
+    "old-sevier-market": {
+      "handle": "@oldseviermarket",
+      "name": "Old Sevier Market",
+      "verified": "tagged by the Old Sevier District's own October can't-miss post (2026-10-01); live profile read 2026-10-05: 'Old Sevier Market — Grocery Store Coming Soon To Sevier Ave', linktr.ee/oldseviermarket; the store's site links its socials",
+      "confidence": "high"
     }
   }
 }

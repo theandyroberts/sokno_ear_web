@@ -1,0 +1,307 @@
+{
+  "_comment": "Research log for No. 17 (Thu-Sun Oct 8-11, 2026). Websites via scripts/research-sweep.mjs, Instagram read in the built-in browser with scripts/ig-scan.browser.js on 2026-10-05.",
+  "slug": "2026-10-07",
+  "researched": "2026-10-05",
+  "checked": {
+    "old-sevier-district": {
+      "how": "both",
+      "found": 5,
+      "note": "site: hours/parking only. IG: Oct 1 can't-miss carousel (10/10 KNOX-ILL at Printshop, 10/10 Old Sevier Market opening), Oct 1 Spooky SZN carousel (10/9 AHS trivia at Hi-Wire, later-October dates), gameday guide, First Friday game plan"
+    },
+    "the-808": {
+      "how": "both",
+      "found": 2
+    },
+    "alliance": {
+      "how": "both",
+      "found": 3
+    },
+    "hi-wire": {
+      "unreadable": "age-gated profile, seen: 0 logged out; events page empty; the hub lists AHS trivia Fri 10/9 but no first-hand source"
+    },
+    "fly-by-night": {
+      "how": "both",
+      "found": 3
+    },
+    "printshop": {
+      "how": "both",
+      "found": 6,
+      "note": "the venue's events page carries KNOX-ILL 2026, the fish fry, $1 wings and the vegan BBQ; the feed had voter night and D&D"
+    },
+    "trailhead": {
+      "how": "instagram",
+      "found": 4,
+      "note": "October flyer read in the post page: Fri 10/9 Daniel Kimbro feat. Stranger May, Sun 10/11 Two Heads Are Better Than One; Fri/Sat music at 7, Sun at 4; Thu trivia 7, Wed Singo 7, Tue run club 6, Mon happy hour all day"
+    },
+    "pink-cactus": {
+      "how": "both",
+      "found": 4
+    },
+    "southside-garage": {
+      "how": "both",
+      "found": 2
+    },
+    "sevier-ave-burger": {
+      "how": "instagram",
+      "found": 1
+    },
+    "south-coast-pizza": {
+      "how": "both",
+      "found": 0,
+      "note": "no posts since Sept 21; site has holiday dates only"
+    },
+    "redbud": {
+      "how": "both",
+      "found": 0
+    },
+    "mighty-mud": {
+      "how": "both",
+      "found": 0,
+      "note": "Reflections opened Oct 2; nothing dated this weekend"
+    },
+    "sokno-sourdough": {
+      "how": "both",
+      "found": 1,
+      "note": "fall break Oct 12-16"
+    },
+    "borderland": {
+      "how": "both",
+      "found": 1,
+      "note": "Hedda Gabler closed Oct 3; next run is John, Oct 21-25"
+    },
+    "knoxville-theatre-club": {
+      "how": "both",
+      "found": 0
+    },
+    "old-sevier-market": {
+      "how": "both",
+      "found": 4
+    },
+    "angry-dumplings": {
+      "how": "instagram",
+      "found": 1,
+      "note": "second location opened in Farragut Sept 23; Sevier Ave still the party-plan stop"
+    },
+    "honeybee": {
+      "how": "web",
+      "found": 0
+    },
+    "kerns": {
+      "how": "both",
+      "found": 5,
+      "note": "Scruffy Roots Fest Sun 10/11 confirmed on wdvx.com; Ghostbusters movie night Wed 10/7 is outside the window; Fall Festival is 10/18"
+    },
+    "puckers": {
+      "how": "instagram",
+      "found": 0,
+      "note": "site 404 page as designed; feed had the Preds giveaway and standing brunch/Pucker Hour"
+    },
+    "earls": {
+      "how": "both",
+      "found": 1
+    },
+    "ijams": {
+      "how": "both",
+      "found": 4,
+      "note": "calendar HTML grep: Oct 8 hooping, Oct 10 Big Day Birding Hike + Storytime Flowers, Oct 11 Sunday yoga; Fall Break Camp is registration-only"
+    },
+    "ambc": {
+      "how": "web",
+      "found": 2,
+      "note": "Urban Wilderness 50K & 10K Sat 10/10; ultrasignup page has packet pickup Fri at SouthSide Garage"
+    },
+    "legacy-parks": {
+      "how": "both",
+      "found": 1
+    },
+    "sokno-taco": {
+      "how": "web",
+      "found": 0
+    },
+    "blank-news": {
+      "how": "web",
+      "found": 0
+    },
+    "inside-of-knoxville": {
+      "how": "instagram",
+      "found": 0,
+      "note": "site returns 403 to curl; the feed had nothing on the beat this week beyond the 808 opening"
+    }
+  },
+  "leads": [
+    {
+      "date": "2026-10-10",
+      "what": "Old Sevier Market grand opening",
+      "source": "old-sevier-market",
+      "story": "old-sevier-market-opens"
+    },
+    {
+      "date": "2026-10-10",
+      "what": "KNOX-ILL 2026 at Printshop, live painting 10 AM-10 PM",
+      "source": "old-sevier-district",
+      "story": "knox-ill"
+    },
+    {
+      "date": "2026-10-10",
+      "what": "KNOX-ILL 2026 on the venue's events page",
+      "source": "printshop",
+      "story": "knox-ill"
+    },
+    {
+      "date": "2026-10-09",
+      "what": "AHS trivia at Hi-Wire",
+      "source": "old-sevier-district",
+      "skipped": "Hi-Wire's own feed is age-gated and its events page is empty; only the hub lists it"
+    },
+    {
+      "date": "2026-10-08",
+      "what": "Paul Oakenfold + The Crystal Method at The 808, sold out",
+      "source": "the-808",
+      "story": "oakenfold-sold-out"
+    },
+    {
+      "date": "2026-10-08",
+      "what": "DJ night at Alliance Brewing with @thedjisagoblin, 8 PM",
+      "source": "alliance",
+      "story": "dj-goblin-alliance"
+    },
+    {
+      "date": "2026-10-09",
+      "what": "Feral Kitty release show at Fly by Night with Horcerer and Adam Gray",
+      "source": "fly-by-night",
+      "story": "feral-kitty-release"
+    },
+    {
+      "date": "2026-10-10",
+      "what": "Dizzle Phunk dance party debut at Fly by Night",
+      "source": "fly-by-night",
+      "story": "dizzle-phunk"
+    },
+    {
+      "date": "2026-10-11",
+      "what": "Sunday karaoke at Fly by Night",
+      "source": "fly-by-night",
+      "skipped": "the host's feed has no post for Oct 11; last confirmed for Sept 27"
+    },
+    {
+      "date": "2026-10-08",
+      "what": "$1 wing night with Friends BBQ at Printshop, 5-9",
+      "source": "printshop",
+      "skipped": "weekly special; in the party plan, not a story"
+    },
+    {
+      "date": "2026-10-10",
+      "what": "Fish fry at Printshop 3-8",
+      "source": "printshop",
+      "skipped": "venue page says details coming soon; one line inside the KNOX-ILL story"
+    },
+    {
+      "date": "2026-10-11",
+      "what": "Southern Fried Vegan BBQ pop-up at Printshop 1-4",
+      "source": "printshop",
+      "story": "vegan-bbq-printshop"
+    },
+    {
+      "date": "2026-10-09",
+      "what": "Daniel Kimbro feat. Stranger May at Trailhead, 7 PM",
+      "source": "trailhead",
+      "story": "trailhead-kimbro"
+    },
+    {
+      "date": "2026-10-11",
+      "what": "Two Heads Are Better Than One at Trailhead, 4 PM",
+      "source": "trailhead",
+      "story": "trailhead-two-heads"
+    },
+    {
+      "date": "2026-10-08",
+      "what": "Thursday trivia at Trailhead, 7 PM",
+      "source": "trailhead",
+      "skipped": "weekly; party plan"
+    },
+    {
+      "date": "2026-10-10",
+      "what": "The After Brunch Special, stand-up at The Pink Cactus, doors 2, show 2:30, $5",
+      "source": "pink-cactus",
+      "story": "after-brunch-special"
+    },
+    {
+      "date": "2026-10-08",
+      "what": "Free hour in the karaoke rooms at The Pink Cactus, Thursdays in October",
+      "source": "pink-cactus",
+      "skipped": "weekly deal; party plan"
+    },
+    {
+      "date": "2026-10-10",
+      "what": "Big Day Birding Hike at Ijams Park, 8-10 AM, $15, ages 14+",
+      "source": "ijams",
+      "story": "big-day-birding"
+    },
+    {
+      "date": "2026-10-10",
+      "what": "Storytime at the Nature Playscape: Flowers, 10-noon, free",
+      "source": "ijams",
+      "story": "storytime-flowers"
+    },
+    {
+      "date": "2026-10-08",
+      "what": "Circles with Dizzy hooping, 6 PM",
+      "source": "ijams",
+      "skipped": "weekly class; ran last week"
+    },
+    {
+      "date": "2026-10-11",
+      "what": "Self Care Sunday yoga, 11:30",
+      "source": "ijams",
+      "skipped": "weekly class; ran last week"
+    },
+    {
+      "date": "2026-10-10",
+      "what": "Urban Wilderness 50K & 10K trail race, 7:30 and 9 AM",
+      "source": "ambc",
+      "story": "urban-wilderness-50k"
+    },
+    {
+      "date": "2026-10-09",
+      "what": "Race packet pickup at SouthSide Garage 4-8",
+      "source": "southside-garage",
+      "story": "urban-wilderness-50k"
+    },
+    {
+      "date": "2026-10-09",
+      "what": "SouthSide Garage opens for lunch at 11 with a Friday torta",
+      "source": "southside-garage",
+      "skipped": "weekly; party plan"
+    },
+    {
+      "date": "2026-10-11",
+      "what": "Scruffy Roots Fest at Kern's, gates noon, music 1-7:30, free",
+      "source": "kerns",
+      "story": "scruffy-roots-fest"
+    },
+    {
+      "date": "2026-10-08",
+      "what": "Earl's daily specials Thu-Sun and the Vols board Saturday",
+      "source": "earls",
+      "story": "specials-board"
+    },
+    {
+      "date": "2026-10-08",
+      "what": "October burger and drink of the month at Sevier Ave Burger Co.",
+      "source": "sevier-ave-burger",
+      "skipped": "month-long; party plan"
+    },
+    {
+      "date": "2026-10-10",
+      "what": "Weekend brunch at Puckers 9-2",
+      "source": "puckers",
+      "skipped": "standing hours, nothing new posted; party plan"
+    },
+    {
+      "date": "2026-10-08",
+      "what": "Second rail-trail mural underway on the back of Kern's, two sculptures installed",
+      "source": "legacy-parks",
+      "story": "kerns-second-mural"
+    }
+  ]
+}

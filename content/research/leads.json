@@ -1,46 +1,31 @@
 {
   "_comment": "Dated things found during research that fall AFTER the episode being drafted. The next research pass starts here: confirm each against the venue, then it becomes a story or is dropped with a reason. Delete a lead once its date has passed.",
-  "updated": "2026-10-02",
+  "updated": "2026-10-05",
   "leads": [
     {
-      "date": "2026-10-08",
-      "what": "Paul Oakenfold + The Crystal Method at The 808, doors 7, 18+",
-      "source": "the-808"
+      "date": "2026-10-15",
+      "what": "Boos & Booze cigar night at UpTop, Kern's rooftop",
+      "source": "kerns"
     },
     {
-      "date": "2026-10-08",
-      "what": "DJ night at Alliance Brewing with @thedjisagoblin, music at 8",
-      "source": "alliance"
-    },
-    {
-      "date": "2026-10-09",
-      "what": "Feral Kitty release show at Fly by Night, with Horcerer and Adam Gray",
-      "source": "fly-by-night"
-    },
-    {
-      "date": "2026-10-10",
-      "what": "Old Sevier Market grand opening (the grocery on Sevier Ave)",
-      "source": "old-sevier-market"
-    },
-    {
-      "date": "2026-10-10",
-      "what": "KNOX-ILL 2026 at Printshop Beer Co.",
-      "source": "old-sevier-district"
-    },
-    {
-      "date": "2026-10-10",
-      "what": "The After Brunch Special, stand-up at The Pink Cactus, doors 2, show 2:30, $5",
-      "source": "pink-cactus"
-    },
-    {
-      "date": "2026-10-10",
-      "what": "Dizzle Phunk dance party at Fly by Night",
-      "source": "fly-by-night"
+      "date": "2026-10-15",
+      "what": "KTC social run from Printshop, 3 miles, 6 PM, $1 wings after",
+      "source": "printshop"
     },
     {
       "date": "2026-10-16",
       "what": "Goodbye June and Danny Worsnop at The 808, 18+",
       "source": "the-808"
+    },
+    {
+      "date": "2026-10-16",
+      "what": "Crawdaddy Jones at Trailhead, 7 PM",
+      "source": "trailhead"
+    },
+    {
+      "date": "2026-10-16",
+      "what": "Starlight Paddle from Ijams Park, 7 PM (also Oct 17 and Oct 30)",
+      "source": "ijams"
     },
     {
       "date": "2026-10-17",
@@ -58,9 +43,69 @@
       "source": "pink-cactus"
     },
     {
+      "date": "2026-10-17",
+      "what": "Goat yoga on the Kern's lawn with Misfit Herd Zoo, 8:30 AM",
+      "source": "kerns"
+    },
+    {
+      "date": "2026-10-17",
+      "what": "ScruffyCat and ScrappyKitty mountain bike adventure, 3000 McClure Lane",
+      "source": "ambc"
+    },
+    {
+      "date": "2026-10-17",
+      "what": "Catalyst Sports adaptive MTB ride at Baker Creek, 9:30-noon",
+      "source": "ambc"
+    },
+    {
       "date": "2026-10-18",
       "what": "Pup-O-Ween at Hi-Wire",
       "source": "old-sevier-district"
+    },
+    {
+      "date": "2026-10-18",
+      "what": "Kern's Bakery Fall Festival on the lawn, 1:30-4: line dancing, School of Rock, pumpkin painting, axe throwing, vendors",
+      "source": "kerns"
+    },
+    {
+      "date": "2026-10-18",
+      "what": "Greg Horne at Trailhead, 4 PM",
+      "source": "trailhead"
+    },
+    {
+      "date": "2026-10-18",
+      "what": "Early Bird Paddle from Ijams River Landing, 9-11 AM, $45",
+      "source": "ijams"
+    },
+    {
+      "date": "2026-10-18",
+      "what": "East Tennessee Bluegrass Association monthly jam at Ijams Park, 2 PM",
+      "source": "ijams"
+    },
+    {
+      "date": "2026-10-18",
+      "what": "Fall Fungi ID beginner workshop at Ijams Park, 1 PM",
+      "source": "ijams"
+    },
+    {
+      "date": "2026-10-20",
+      "what": "Ijams Sunset Social: Spooky Poetry Night, 7 PM",
+      "source": "ijams"
+    },
+    {
+      "date": "2026-10-20",
+      "what": "AMBC social ride at Baker Creek, 5:30",
+      "source": "ambc"
+    },
+    {
+      "date": "2026-10-21",
+      "what": "Borderland Playhouse: John (Annie Baker) by Free Spirit Theatre, Oct 21, 22, 24 at 7:30, Oct 23 at 8, Oct 25 at 2",
+      "source": "borderland"
+    },
+    {
+      "date": "2026-10-21",
+      "what": "Playing 'Possum animal ambassador meet and greet at Ijams Park, 6 PM",
+      "source": "ijams"
     },
     {
       "date": "2026-10-23",
@@ -73,9 +118,69 @@
       "source": "pink-cactus"
     },
     {
+      "date": "2026-10-23",
+      "what": "Rodney Lee & Corey Kimbro at Trailhead, 7 PM",
+      "source": "trailhead"
+    },
+    {
+      "date": "2026-10-23",
+      "what": "Ijams After Dark: Mischief Night, 7 PM",
+      "source": "ijams"
+    },
+    {
+      "date": "2026-10-24",
+      "what": "Ijams Enchanted Forest at Mead's Quarry, 3-8 PM, timed entry, $10",
+      "source": "ijams"
+    },
+    {
+      "date": "2026-10-24",
+      "what": "October stained glass workshop at Ijams Park",
+      "source": "ijams"
+    },
+    {
+      "date": "2026-10-25",
+      "what": "The Lonetones at Trailhead, 4 PM",
+      "source": "trailhead"
+    },
+    {
+      "date": "2026-10-25",
+      "what": "The Crossword Play by Potential Energy Theatre at Ijams Park, 2 PM",
+      "source": "ijams"
+    },
+    {
+      "date": "2026-10-25",
+      "what": "Full Moon Paddle: the Hunter Moon, 6:30 PM",
+      "source": "ijams"
+    },
+    {
+      "date": "2026-10-25",
+      "what": "Best if Used By, free readers' theatre at the Borderland Playhouse, 7 PM",
+      "source": "borderland"
+    },
+    {
+      "date": "2026-10-27",
+      "what": "Ben Garnett Trio feat. Daniel Kimbro at Trailhead",
+      "source": "trailhead"
+    },
+    {
+      "date": "2026-10-27",
+      "what": "Ijams Sunset Social: scary stories with Smoky Mountain Storytellers, 7 PM",
+      "source": "ijams"
+    },
+    {
       "date": "2026-10-30",
       "what": "Stand-up comedy at Printshop Beer Co. (Rowdy Rog)",
       "source": "printshop"
+    },
+    {
+      "date": "2026-10-30",
+      "what": "Halloween silent disco at Hi-Wire",
+      "source": "old-sevier-district"
+    },
+    {
+      "date": "2026-10-30",
+      "what": "Jake Smith Trio at Trailhead, 7 PM",
+      "source": "trailhead"
     },
     {
       "date": "2026-10-31",
@@ -91,6 +196,36 @@
       "date": "2026-10-31",
       "what": "Bear Grillz at The 808, 18+",
       "source": "the-808"
+    },
+    {
+      "date": "2026-10-31",
+      "what": "Four Legged Dog at Trailhead, 7 PM",
+      "source": "trailhead"
+    },
+    {
+      "date": "2026-10-31",
+      "what": "Belltower: Hi-Ween edition at The Pink Cactus (the Halloween house party)",
+      "source": "old-sevier-district"
+    },
+    {
+      "date": "2026-10-31",
+      "what": "Storytime at the Nature Playscape: Bats, 10-noon",
+      "source": "ijams"
+    },
+    {
+      "date": "2026-11-01",
+      "what": "Mt Olive Pleasure Club at Trailhead, 4 PM",
+      "source": "trailhead"
+    },
+    {
+      "date": "2026-11-01",
+      "what": "Dia de los Muertos celebration at The Pink Cactus",
+      "source": "pink-cactus"
+    },
+    {
+      "date": "2026-11-01",
+      "what": "Bird banding at Ijams Park, 8 AM (also Nov 8)",
+      "source": "ijams"
     },
     {
       "date": "2026-11-06",
@@ -145,7 +280,7 @@
       "what": "Karaoke at Fly by Night, 8 PM",
       "source": "fly-by-night",
       "seen": "2026-09-23",
-      "note": "last confirmed by the host's own post for Sep 27; re-confirm each week"
+      "note": "last confirmed by the host's own post for Sep 27; no post for Oct 11 as of Oct 5. Re-confirm each week"
     },
     {
       "day": "4th Sun",
@@ -159,6 +294,18 @@
       "source": "hi-wire",
       "seen": "2026-04-01",
       "note": "UNVERIFIED since April; the profile is age-gated. Do not run until a current post confirms it."
+    },
+    {
+      "day": "Thu",
+      "what": "Trivia at Trailhead Beer Market, 7 PM (Mon happy hour all day, Tue SloKno run club 6, Wed Singo 7)",
+      "source": "trailhead",
+      "seen": "2026-10-01"
+    },
+    {
+      "day": "Thu",
+      "what": "$1 wing night with Friends BBQ at Printshop, 5-9 (Fri $12 flights all day, Sat yoga 10:30)",
+      "source": "printshop",
+      "seen": "2026-10-05"
     }
   ]
 }

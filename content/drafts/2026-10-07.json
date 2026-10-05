@@ -1,0 +1,1481 @@
+{
+  "slug": "2026-10-07",
+  "volume": 1,
+  "number": 17,
+  "episode": "Weekend Episode",
+  "date": "2026-10-07",
+  "dateLabel": "Thu–Sun, Oct 8–11, 2026",
+  "shortDate": "Oct 8–11",
+  "place": "South Knoxville, TN",
+  "newsletter": {
+    "subject": "A grocery store opens on Sevier Avenue — and a free Americana fest on the Kern's lawn"
+  },
+  "feature": {
+    "id": "old-sevier-market-opens",
+    "label": "Old Sevier",
+    "labelColor": "rust",
+    "days": [
+      "Sat"
+    ],
+    "layout": "imageTop",
+    "image": "/assets/spots/market_apples.jpg",
+    "imageCaption": "The produce islands went in last week",
+    "title": "Old Sevier Market, the grocery store on Sevier Avenue, opens Saturday",
+    "deck": "South Knoxville gets a neighborhood grocery. The store the district has been counting down to opens its doors October 10, and for its first month fifteen percent of every purchase buys food for people in Knoxville who need it.",
+    "facts": [
+      {
+        "label": "When",
+        "value": "Sat Oct 10 · grand opening"
+      },
+      {
+        "label": "Hours",
+        "value": "7 AM – 7 PM, the hours the store lists for every day"
+      },
+      {
+        "label": "Where",
+        "value": "Old Sevier Market · Sevier Ave, in the Old Sevier District"
+      },
+      {
+        "label": "The first month",
+        "value": "15% of every purchase funds food donations in Knoxville · a $100 trip pays for $15 of food"
+      },
+      {
+        "label": "On the shelves",
+        "value": "Produce, dairy and frozen, baking and school supplies, local artisan honey, the basics and the novelties"
+      },
+      {
+        "label": "Weather",
+        "value": "Partly sunny and 82 Saturday · a slight chance of a shower after 2 PM"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Sevier Avenue has restaurants, breweries, a bakery, a theater and, as of last Friday, a music venue. What it has not had is a place to buy an onion. That changes Saturday, when Old Sevier Market opens for the first time. The store has been posting a countdown since October 1, and the Old Sevier District put the opening at the top of its October can't-miss list, calling it long-awaited."
+      },
+      {
+        "type": "subhead",
+        "text": "What's on the shelves"
+      },
+      {
+        "type": "paragraph",
+        "text": "The owners describe the mission in three words, procure, curate, create, and the plan in plainer ones: fresh, good groceries at prices the neighborhood can pay, with the basics you need and the novelties you want. The posts from inside the store this month show the produce islands going in, a home for potatoes, onions and apples, shelves stocked with baking and school supplies, and dairy and frozen cases filled. The store says its range will run from the lettuce in your salad to local artisan honey for your latte. It is a member of the Old Sevier merchants' group and says it will work with the district's other businesses and with local artists and farmers."
+      },
+      {
+        "type": "subhead",
+        "text": "The first month gives back"
+      },
+      {
+        "type": "paragraph",
+        "text": "For the first month the store is open, fifteen percent of every purchase goes toward food for people in Knoxville who need it. The store's own example: a hundred-dollar grocery trip funds fifteen dollars of donated food. Opening day is Saturday, the listed hours are seven in the morning to seven at night, and the forecast is partly sunny and 82, with only a slight chance of a shower in the afternoon."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Old Sevier Market — the store's site",
+        "url": "https://oldseviermarket.com/"
+      },
+      {
+        "label": "Old Sevier Market on Instagram — the countdown to October 10",
+        "url": "https://www.instagram.com/oldseviermarket/p/Dd92Xm0TI68/"
+      },
+      {
+        "label": "Old Sevier Market on Instagram — 15% of first-month purchases",
+        "url": "https://www.instagram.com/oldseviermarket/p/DeF5BPPKROB/"
+      },
+      {
+        "label": "Old Sevier District — October can't-miss events",
+        "url": "https://www.instagram.com/oldsevierdistrict/p/Dd9RYJoltQh/"
+      },
+      {
+        "label": "National Weather Service — Knoxville forecast",
+        "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+      }
+    ],
+    "event": {
+      "startDate": "2026-10-10T07:00:00-04:00",
+      "endDate": "2026-10-10T19:00:00-04:00",
+      "locationName": "Old Sevier Market",
+      "locationAddress": "Sevier Ave, Knoxville, TN 37920"
+    },
+    "social": {
+      "igTags": [
+        "old-sevier-market",
+        "old-sevier"
+      ],
+      "igBanner": [
+        "Old Sevier Market opens on Sevier Avenue",
+        "Saturday, seven in the morning"
+      ]
+    }
+  },
+  "scanner": [
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/market_apples.jpg",
+      "title": "Old Sevier Market opens Saturday",
+      "blurb": "A grocery store on Sevier Avenue, seven to seven, and fifteen percent of the first month's purchases buys food for the community.",
+      "cue": "Jump to story",
+      "href": "#old-sevier-market-opens"
+    },
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Sun"
+      ],
+      "hot": true,
+      "image": "/assets/spots/scruffy_fiddle.jpg",
+      "title": "Scruffy Roots Fest on the lawn, free",
+      "blurb": "Six Americana acts from one to seven thirty Sunday, presented by WDVX. Bring a chair.",
+      "cue": "Jump to story",
+      "href": "#scruffy-roots-fest"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/knoxill_spraycan.jpg",
+      "title": "KNOX-ILL: live spray painting at Printshop",
+      "blurb": "Artists paint from ten in the morning to ten at night Saturday, with a fish fry from three.",
+      "cue": "Jump to story",
+      "href": "#knox-ill"
+    },
+    {
+      "label": "Urban Wilderness",
+      "labelColor": "ink",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/uw50k_runner.jpg",
+      "title": "The first Urban Wilderness 50K",
+      "blurb": "Thirty-one miles through seven parks from 7:30 Saturday, a 10K at nine. Registration closes Wednesday night.",
+      "cue": "Jump to story",
+      "href": "#urban-wilderness-50k"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "hot": false,
+      "image": "/assets/spots/goblin_headphones.jpg",
+      "title": "DJ night at Alliance Brewing",
+      "blurb": "Music at eight Thursday at the brewery on Sevier Avenue, taproom open till ten.",
+      "cue": "Jump to story",
+      "href": "#dj-goblin-alliance"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/brunch_comic.jpg",
+      "title": "Stand-up after brunch at the Pink Cactus",
+      "blurb": "Six comics, doors at two, show at two thirty, five dollars.",
+      "cue": "Jump to story",
+      "href": "#after-brunch-special"
+    },
+    {
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/birding_binoculars.jpg",
+      "title": "Big Day birding hike",
+      "blurb": "Two hours of counting fall migrants with a naturalist, eight to ten Saturday, fifteen dollars, ages fourteen and up.",
+      "cue": "Jump to story",
+      "href": "#big-day-birding"
+    },
+    {
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "hot": false,
+      "image": "/assets/spots/earls_spicy_rita.jpg",
+      "title": "Earl's board, Thursday through Sunday",
+      "blurb": "A different deal every day on Waterfront Drive, and the Vols board Saturday for the 4:15 game at Arkansas.",
+      "cue": "Jump to story",
+      "href": "#specials-board"
+    }
+  ],
+  "stories": [
+    {
+      "id": "scruffy-roots-fest",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/scruffy_fiddle.jpg",
+      "imageCaption": "Six acts, one lawn, no ticket",
+      "title": "Scruffy Roots Fest puts six Americana acts on the Kern's lawn Sunday, free",
+      "deck": "WDVX's free celebration of East Tennessee Americana takes over the lawn at the old bakery from one in the afternoon to seven thirty. Bring a chair; the food, the drinks and the vendors are all on the property.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Oct 11 · gates noon · music 1 – 7:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The lawn at Kern's · 2201 Kern's Rising Way"
+        },
+        {
+          "label": "Cost",
+          "value": "Free"
+        },
+        {
+          "label": "Lineup",
+          "value": "Crawdaddy Jones · Free Rein Bluegrass · Lazarus Lake · EmiSunshine · Big Pink · The Dirty Gospel"
+        },
+        {
+          "label": "Bring",
+          "value": "A lawn chair"
+        },
+        {
+          "label": "Food & drink",
+          "value": "Vendors, food and drinks on site · the food hall is open 9 AM – 9 PM Sunday"
+        },
+        {
+          "label": "Weather",
+          "value": "Partly sunny and 79 · a 40% chance of a shower"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Scruffy Roots Fest is WDVX's free, all-day festival of East Tennessee Americana, and this year it is on the lawn at Kern's. Gates open at noon on Sunday, the music runs from one to seven thirty, and nobody pays to get in. Six acts play: Crawdaddy Jones, Free Rein Bluegrass, Lazarus Lake, EmiSunshine, Big Pink and The Dirty Gospel."
+        },
+        {
+          "type": "subhead",
+          "text": "Two names from the lineup"
+        },
+        {
+          "type": "paragraph",
+          "text": "Kern's own post singles out two of them. Lazarus Lake is the Knoxville alt-country band led by singer-songwriter Michael Jones, whose debut LP Family Tree came out last year and whose new single, Long Distance Call, with LB Beistad, is in rotation on WDVX. EmiSunshine has been performing since she was four, is twenty-two now, and has played the Grand Ole Opry sixteen times."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bring a lawn chair and plan to stay a while; vendors, food and drinks are on site, and the food hall behind the lawn is open nine to nine on Sunday. The forecast is partly sunny and 79 with a 40 percent chance of a shower, so a rain layer in the car is a fair bet. The Titans kick off at one in Nashville if someone in your party needs a screen; the bars inside have them."
+        }
+      ],
+      "sources": [
+        {
+          "label": "WDVX — Scruffy Roots Fest, Kern's Food Hall, Oct 11",
+          "url": "https://wdvx.com/event/scruffy-roots-fest-kerns-food-hall-10-11/"
+        },
+        {
+          "label": "Kern's on Instagram — Lazarus Lake and EmiSunshine at Scruffy Roots Fest",
+          "url": "https://www.instagram.com/kernsknox/p/Dd9LnaciN7P/"
+        },
+        {
+          "label": "Kern's — hours",
+          "url": "https://kernsbakery.com/public-events/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-11T12:00:00-04:00",
+        "endDate": "2026-10-11T19:30:00-04:00",
+        "locationName": "Kern's",
+        "locationAddress": "2201 Kern's Rising Way, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "kerns",
+          "wdvx"
+        ],
+        "igBanner": [
+          "Scruffy Roots Fest on the Kern's lawn",
+          "Sunday, one to seven thirty, free"
+        ]
+      }
+    },
+    {
+      "id": "knox-ill",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/knoxill_spraycan.jpg",
+      "imageCaption": "Another day of sprays on Island Home Avenue",
+      "title": "KNOX-ILL fills Printshop with live spray painting all day Saturday",
+      "deck": "The brewery on Island Home Avenue gives its Saturday over to spray cans. Artists paint live from ten in the morning to ten at night, the taps pour the whole time, and a fish fry starts at three.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 10 · 10 AM – 10 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Printshop Beer Co. · 1532 Island Home Ave"
+        },
+        {
+          "label": "Also Saturday",
+          "value": "Fish fry, 3 – 8 PM · yoga in the warehouse at 10:30"
+        },
+        {
+          "label": "Rest of the week",
+          "value": "Thu $1 wings with Friends BBQ 5 – 9 and 10% off cases · Fri $12 flights all day · Sun the vegan barbecue pop-up"
+        },
+        {
+          "label": "Weather",
+          "value": "Partly sunny and 82 · a slight chance of a shower after 2 PM"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Printshop's events calendar puts it in one line: Knox-Ill is back, with another day of sprays. The brewery's live-painting day runs the full length of Saturday, ten in the morning to ten at night, with artists working on the property while the taproom pours. The Old Sevier District put it on its October can't-miss list alongside the grocery opening up the street."
+        },
+        {
+          "type": "paragraph",
+          "text": "The brewery stacks the day. A yoga class takes the warehouse at ten thirty, the painting is under way by the time it lets out, and a fish fry runs from three to eight. The weather is on the painters' side: partly sunny and 82, with only a slight chance of a shower after two."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Printshop Beer Co. — events: Knox-Ill 2026",
+          "url": "https://printshopbeer.com/knoxville-south-knoxville-printshop-beer-co-events"
+        },
+        {
+          "label": "Old Sevier District — October can't-miss events",
+          "url": "https://www.instagram.com/oldsevierdistrict/p/Dd9RYJoltQh/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-10T10:00:00-04:00",
+        "endDate": "2026-10-10T22:00:00-04:00",
+        "locationName": "Printshop Beer Co.",
+        "locationAddress": "1532 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "printshop",
+          "old-sevier"
+        ],
+        "igBanner": [
+          "Live spray painting at Printshop",
+          "Saturday, ten in the morning to ten at night"
+        ]
+      }
+    },
+    {
+      "id": "urban-wilderness-50k",
+      "label": "Urban Wilderness",
+      "labelColor": "ink",
+      "days": [
+        "Fri",
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/uw50k_runner.jpg",
+      "imageCaption": "Thirty-one miles, no repeats",
+      "title": "The first Urban Wilderness 50K runs a loop through seven parks on Saturday",
+      "deck": "A new trail race starts at the Gateway Park at 7:30: thirty-one miles and close to four thousand feet of climbing through the Urban Wilderness, with a 10K at nine for everyone else. Registration closes Wednesday night.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 10 · 50K at 7:30 AM · 10K at 9 AM"
+        },
+        {
+          "label": "Start",
+          "value": "Urban Wilderness Gateway Park · 1515 Tilson St"
+        },
+        {
+          "label": "Cost",
+          "value": "$86.50 for the 50K · $40 for the 10K · register at ultrasignup.com by Wed Oct 7, 11:59 PM"
+        },
+        {
+          "label": "Packet pickup",
+          "value": "Fri Oct 9, 4 – 8 PM at SouthSide Garage, 1014 Sevier Ave · race-morning pickup from 6:30"
+        },
+        {
+          "label": "The 50K",
+          "value": "A counterclockwise loop through seven parks and natural areas, Ijams Park included · five aid stations"
+        },
+        {
+          "label": "The 10K",
+          "value": "A figure-eight to the top of View Park · one aid station"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny start, partly sunny and 82 by afternoon"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Knox County has never had a trail 50K. It gets one Saturday morning, when the Urban Wilderness 50K leaves the Gateway Park at the end of James White Parkway at 7:30 and heads out on a thirty-one-mile loop that touches four city parks, a wildlife management area and three pieces of private trail land, Ijams Park, the Drop Inn and the Helix trails among them. The organizers put the climbing at close to four thousand feet. A 10K leaves the same line at nine and runs a figure-eight up to View Park for the look at Chilhowee Mountain and the Smokies."
+        },
+        {
+          "type": "subhead",
+          "text": "Where the course goes"
+        },
+        {
+          "type": "paragraph",
+          "text": "The race's own description of the opening miles: a half mile of greenway to spread the field out, the first climb of the day up Red Bud, a descent through Rendezvous past the Drop Inn cabins, then into Ijams Park for the rolling climbs on Burnett Ridge and Ross Marble and a gentle stretch through the Hickory Loop. If you are out on those trails Saturday morning, expect runners, and give them the line."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "Registration closes Wednesday, October 7, at 11:59 PM, and the race shirt deadline has already passed. Packet pickup is Friday from four to eight at SouthSide Garage on Sevier Avenue, which the race prefers to the race-morning line; bibs are also available at the start from 6:30 until fifteen minutes before each gun. Volunteers sign up through the same site."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Appalachian Mountain Bike Club — Urban Wilderness 50K & 10K Trail Race",
+          "url": "https://ambcknox.org/event/urban-wilderness-50k-10k-trail-race/"
+        },
+        {
+          "label": "UltraSignup — Urban Wilderness 50k, registration and schedule",
+          "url": "https://ultrasignup.com/register.aspx?did=139047"
+        },
+        {
+          "label": "Urban Wilderness 50k — the race site",
+          "url": "https://www.uw50k.com/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-10T07:30:00-04:00",
+        "endDate": "2026-10-10T17:30:00-04:00",
+        "locationName": "Urban Wilderness Gateway Park",
+        "locationAddress": "1515 Tilson St, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [],
+        "igBanner": [
+          "Urban Wilderness 50K and 10K",
+          "Saturday, seven thirty at the Gateway Park"
+        ],
+        "igBannerSkipCheck": true
+      }
+    },
+    {
+      "id": "oakenfold-sold-out",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/sold_out_stamp.jpg",
+      "imageCaption": "The first sell-out on Sevier Avenue",
+      "title": "Paul Oakenfold's Thursday show at The 808 is sold out, the venue's first",
+      "deck": "A week after opening, the Sevier Avenue room has its first sell-out: the Mission Underground tour with The Crystal Method. If you don't have a ticket, Thursday night is about where you park.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Oct 8 · doors 7 PM · show 8 · 18 and up"
+        },
+        {
+          "label": "Where",
+          "value": "The 808 · 808 Sevier Ave"
+        },
+        {
+          "label": "Tickets",
+          "value": "Sold out · the venue says a few may come back as things change"
+        },
+        {
+          "label": "Parking",
+          "value": "None in the Borderland Tees lot next door; cars there are towed · the venue suggests a rideshare · Riverwalk Garage to the west, the gravel lot under the James White Parkway bridge to the east"
+        },
+        {
+          "label": "Next up",
+          "value": "Goodbye June with Danny Worsnop, Fri Oct 16 · All My Exes Live in Texas, a classic-country vinyl night with dance lessons, Sat Oct 17"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The 808 opened on Sevier Avenue on Friday with High Step Society and followed it with Marcy Playground on Saturday. Its first midweek show is also its first sell-out: Paul Oakenfold and The Crystal Method on the Mission Underground tour, Thursday, doors at seven and music at eight, eighteen and up. The venue announced the sell-out last week and thanked the buyers for selling out the grand opening show, adding that some tickets might come back as things change."
+        },
+        {
+          "type": "paragraph",
+          "text": "For the rest of the neighborhood, a sold-out room at 808 Sevier means a full street. The venue is blunt about the Borderland Tees lot next door: do not park there, you will be towed. It suggests a rideshare. The district's public options are the Riverwalk Garage at the west end and the gravel lot under the James White Parkway bridge at the east end."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The 808 — live music schedule",
+          "url": "https://808knox.com/"
+        },
+        {
+          "label": "The 808 on Instagram — sold out",
+          "url": "https://www.instagram.com/808knox/p/DeAPqHBihDJ/"
+        },
+        {
+          "label": "The 808 on Instagram — parking guide",
+          "url": "https://www.instagram.com/808knox/p/Dd__h7TCYD9/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-08T19:00:00-04:00",
+        "endDate": "2026-10-08T23:00:00-04:00",
+        "locationName": "The 808",
+        "locationAddress": "808 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "the-808"
+        ],
+        "igBanner": [
+          "Sold out: Oakenfold at The 808",
+          "Thursday, doors at seven"
+        ]
+      }
+    },
+    {
+      "id": "dj-goblin-alliance",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/goblin_headphones.jpg",
+      "imageCaption": "Dancing shoes, the DJ says",
+      "title": "A DJ called Goblin turns Alliance Brewing into a dance floor Thursday night",
+      "deck": "The DJ's own post says bring your dancing shoes. Music starts at eight at the brewery on Sevier Avenue, a repeat of a night the two of them have done before, and the taproom is open till ten.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Oct 8 · music at 8 PM · taproom open till 10"
+        },
+        {
+          "label": "Where",
+          "value": "Alliance Brewing · 1130 Sevier Ave"
+        },
+        {
+          "label": "Who",
+          "value": "@thedjisagoblin"
+        },
+        {
+          "label": "Before",
+          "value": "Happy hour runs 3 – 6 on weekdays"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 84, clear and 54 after dark · the patio works"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Alliance Brewing's calendar is mostly standing items, salsa on Tuesdays, the songwriter open mic on Wednesdays, and a DJ night is the exception. Thursday's is the second go-round with the DJ who posts as Goblin: \"We doing the damn thing again,\" the announcement reads, with the music at eight. The brewery is open until ten on Thursdays, and with a sunny 84-degree day cooling to the mid-50s after dark, the patio is the place to start before the floor fills."
+        }
+      ],
+      "sources": [
+        {
+          "label": "@thedjisagoblin on Instagram — Oct 8 at Alliance",
+          "url": "https://www.instagram.com/thedjisagoblin/p/Dd7CyQjPAN4/"
+        },
+        {
+          "label": "Alliance Brewing — hours",
+          "url": "https://alliancebrewing.com/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-08T20:00:00-04:00",
+        "endDate": "2026-10-08T22:00:00-04:00",
+        "locationName": "Alliance Brewing",
+        "locationAddress": "1130 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "alliance"
+        ],
+        "igBanner": [
+          "DJ night at Alliance Brewing",
+          "Thursday, music at eight"
+        ]
+      }
+    },
+    {
+      "id": "feral-kitty-release",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/feral_kitty_lollipop.jpg",
+      "imageCaption": "Hard Candy, the band calls it",
+      "title": "Feral Kitty lets its new music out of the box at Fly by Night on Friday",
+      "deck": "The Knoxville band's release show, billed as Hard Candy, brings Horcerer and Adam Gray to the seventies cocktail lounge on Sevier Avenue. The band's instructions: come early, stay late, get feral.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 9 · Fly by Night is open 4 PM – 1 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Fly by Night · 906 Sevier Ave, Suite 126"
+        },
+        {
+          "label": "With",
+          "value": "Horcerer · Adam Gray"
+        },
+        {
+          "label": "The room",
+          "value": "A neighborhood cocktail bar with a seventies twist, from the people behind Tern Club"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Feral Kitty is releasing new music, and the band is doing it in the lounge. Friday's show at Fly by Night, the seventies cocktail bar in the Sevier Avenue building that also holds Redbud Kitchen, is the release party, billed as Hard Candy, with Horcerer and Adam Gray on the bill. The band's own post has the whole plan: come early, stay late, get feral. Fly by Night is open from four until one on Fridays, and the martini list is the house specialty."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Feral Kitty on Instagram — Oct 9 at Fly by Night",
+          "url": "https://www.instagram.com/feralkittyofficial/reel/DdmyoYlAg-w/"
+        },
+        {
+          "label": "Fly by Night — hours",
+          "url": "https://www.flybynightknox.com/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-09T20:00:00-04:00",
+        "endDate": "2026-10-10T01:00:00-04:00",
+        "locationName": "Fly by Night",
+        "locationAddress": "906 Sevier Ave, Suite 126, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "fly-by-night"
+        ],
+        "igBanner": [
+          "Feral Kitty release show at Fly by Night",
+          "Friday night on Sevier Avenue"
+        ]
+      }
+    },
+    {
+      "id": "dizzle-phunk",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/dizzle_turntable.jpg",
+      "imageCaption": "Bass, groove, disco, hip hop",
+      "title": "Dizzle Phunk makes a dance-party debut at Fly by Night on Saturday",
+      "deck": "A new DJ picks the lounge for an official first night out: funk with a side of bass, groove, disco and hip hop, on the Saturday Fly by Night calls the start of spooky season.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 10 · Fly by Night is open 4 PM – 1 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Fly by Night · 906 Sevier Ave, Suite 126"
+        },
+        {
+          "label": "Who",
+          "value": "Dizzle Phunk, official debut"
+        },
+        {
+          "label": "Sound",
+          "value": "Funk, bass, groove, disco, hip hop and more, by the DJ's own description"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "\"Did someone call for a dance party?\" is how the DJ put it. Dizzle Phunk's official debut is Saturday night at Fly by Night, with a pumpkin on the date and a promise of funky good vibes with a side of bass, groove, disco and hip hop. It is the second night running the lounge has a show: Feral Kitty's release party is Friday. Fly by Night is open four to one on Saturdays."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Dizzle Phunk on Instagram — Oct 10 at Fly by Night",
+          "url": "https://www.instagram.com/dizzlephunk/p/Dd1bzpqnCQL/"
+        },
+        {
+          "label": "Fly by Night — hours",
+          "url": "https://www.flybynightknox.com/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-10T21:00:00-04:00",
+        "endDate": "2026-10-11T01:00:00-04:00",
+        "locationName": "Fly by Night",
+        "locationAddress": "906 Sevier Ave, Suite 126, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "fly-by-night"
+        ],
+        "igBanner": [
+          "Dizzle Phunk dance party at Fly by Night",
+          "Saturday night, open till one"
+        ]
+      }
+    },
+    {
+      "id": "after-brunch-special",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/brunch_comic.jpg",
+      "imageCaption": "Doors at two, show at two thirty",
+      "title": "The After Brunch Special brings six stand-ups to the Pink Cactus on Saturday afternoon",
+      "deck": "Comedy Sphere's matinee is back at the pink house: doors at two, show at two thirty, five dollars, and a lineup of Knoxville's working comics with Justin Chavez hosting. Brunch first is the whole idea.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 10 · doors 2 PM · show 2:30"
+        },
+        {
+          "label": "Where",
+          "value": "The Pink Cactus · 1147 Sevier Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$5 at thecomedysphere.com"
+        },
+        {
+          "label": "Lineup",
+          "value": "Keith Marcell · Daniel Castillo · Trey Galyon · Hope Conner · Lauren Reilly · Sam Kelly · host Justin Chavez"
+        },
+        {
+          "label": "Brunch first",
+          "value": "Sevier Ave Burger Co. serves weekend brunch 11 – 2 · SouthSide Garage opens at noon Saturday"
+        },
+        {
+          "label": "Also at the pink house",
+          "value": "A free hour in the karaoke rooms every Thursday in October"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The After Brunch Special is Comedy Sphere's idea of a matinee: walk out of brunch and into a stand-up show, with the mimosa energy intact. Saturday's edition at the Pink Cactus seats at two, starts at two thirty and costs five dollars. Six comics are on the bill, Keith Marcell, Daniel Castillo, Trey Galyon, Hope Conner, Lauren Reilly and Sam Kelly, with Justin Chavez hosting. The Pink Cactus serves Latin-inspired food and cocktails downstairs, the front-yard patio has covered seating and yard games, and the private karaoke rooms upstairs are free for an hour every Thursday this month."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The Comedy Sphere — The After Brunch Special, tickets",
+          "url": "https://thecomedysphere.com/"
+        },
+        {
+          "label": "Comedy Sphere on Instagram — lineup",
+          "url": "https://www.instagram.com/comedysphereknox/p/Dd2mjhaxDV7/"
+        },
+        {
+          "label": "The Pink Cactus on Instagram — October at the pink house",
+          "url": "https://www.instagram.com/thepinkcactusknox/p/Dd6tuR1lts4/"
+        },
+        {
+          "label": "Sevier Ave Burger Co. on Instagram — weekend brunch hours",
+          "url": "https://www.instagram.com/sevieraveburgerco/"
+        },
+        {
+          "label": "SouthSide Garage — specials and hours",
+          "url": "https://www.southsidegarageknox.com/specials/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-10T14:00:00-04:00",
+        "endDate": "2026-10-10T16:00:00-04:00",
+        "locationName": "The Pink Cactus",
+        "locationAddress": "1147 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "pink-cactus"
+        ],
+        "igBanner": [
+          "Stand-up at the Pink Cactus",
+          "Saturday, doors at two, five dollars"
+        ]
+      }
+    },
+    {
+      "id": "trailhead-kimbro",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/kimbro_upright_bass.jpg",
+      "imageCaption": "Outdoors, music at seven",
+      "title": "Daniel Kimbro and Stranger May play the Trailhead patio on Friday at seven",
+      "deck": "Knoxville musician Daniel Kimbro headlines the outdoor stage at the beer market on Island Home Avenue with Stranger May as the guest. Gato Peligroso runs the kitchen, and Friday night is clear and 55.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 9 · music at 7 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Trailhead Beer Market · 1317 Island Home Ave · outdoors"
+        },
+        {
+          "label": "Kitchen",
+          "value": "Gato Peligroso"
+        },
+        {
+          "label": "The rest of the week",
+          "value": "Trivia Thu at 7 · Two Heads Are Better Than One, Sun at 4"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 84, partly cloudy and 55 overnight"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Trailhead posts its month as a flyer, and October's has a show every weekend. Friday's is Daniel Kimbro featuring Stranger May, on the outdoor stage at seven, with the taps inside and Gato Peligroso cooking. The beer market's weekly pattern around it: happy hour all day Monday, the SloKno run club Tuesday at six, Singo Wednesday at seven, trivia Thursday at seven, and Sunday music at four. Friday is sunny and 84 with a clear night in the mid-50s, a good one for the patio."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Trailhead Beer Market on Instagram — October live music and events",
+          "url": "https://www.instagram.com/trailheadbeer/p/Dd92UvFBnV5/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-09T19:00:00-04:00",
+        "endDate": "2026-10-09T22:00:00-04:00",
+        "locationName": "Trailhead Beer Market",
+        "locationAddress": "1317 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "trailhead"
+        ],
+        "igBanner": [
+          "Daniel Kimbro live at Trailhead",
+          "Friday at seven, outdoors"
+        ]
+      }
+    },
+    {
+      "id": "trailhead-two-heads",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/two_heads_mic.jpg",
+      "imageCaption": "Sunday music starts at four",
+      "title": "Two Heads Are Better Than One closes the weekend on the Trailhead stage Sunday at four",
+      "deck": "Sunday music at the beer market starts at four, early enough to be home for dinner. The duo plays outdoors with the kitchen open and a 40 percent chance of a shower to keep an eye on.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Oct 11 · music at 4 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Trailhead Beer Market · 1317 Island Home Ave · outdoors"
+        },
+        {
+          "label": "Kitchen",
+          "value": "Gato Peligroso"
+        },
+        {
+          "label": "Weather",
+          "value": "Partly sunny and 79 · a 40% chance of showers"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Trailhead's Sunday slot is the early one: music at four on the outdoor stage, which this week is the duo Two Heads Are Better Than One. It is the last show of the weekend on the beat and the easiest to get home from. The forecast is partly sunny and 79 with a 40 percent chance of a shower, so check the beer market's feed on the day if the sky turns."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Trailhead Beer Market on Instagram — October live music and events",
+          "url": "https://www.instagram.com/trailheadbeer/p/Dd92UvFBnV5/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-11T16:00:00-04:00",
+        "endDate": "2026-10-11T19:00:00-04:00",
+        "locationName": "Trailhead Beer Market",
+        "locationAddress": "1317 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "trailhead"
+        ],
+        "igBanner": [
+          "Two Heads Are Better Than One at Trailhead",
+          "Sunday at four, outdoors"
+        ]
+      }
+    },
+    {
+      "id": "big-day-birding",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/birding_binoculars.jpg",
+      "imageCaption": "Count everything you can see or hear",
+      "title": "Ijams Park's Big Day birding hike counts fall migrants on Saturday morning",
+      "deck": "A naturalist leads two hours of hiking and listing: identify as many species as you can on the trails, by sight and by sound, and log them on eBird. Beginners welcome, ages fourteen and up.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 10 · 8 – 10 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$15 · parking free for participants"
+        },
+        {
+          "label": "Ages",
+          "value": "14 and up"
+        },
+        {
+          "label": "The walk",
+          "value": "Up to 2.5 miles over rocks, roots and gravel, with stops"
+        },
+        {
+          "label": "Bring",
+          "value": "Binoculars if you have them, water, the eBird app"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and in the 60s at eight, 82 by afternoon"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "A Big Day, in birding, is a race against the clock to see or hear as many species as possible. Ijams Park's October version is gentler: two hours on the trails with a naturalist, learning to bird by sight and sound during fall migration and recording what you find on the eBird app. The program is written for complete beginners and for people who already keep a list."
+        },
+        {
+          "type": "paragraph",
+          "text": "It is fifteen dollars, for ages fourteen and up, and covers up to two and a half miles of uneven trail with plenty of stops. Parking is free for participants. Arrive five to ten minutes early at the Visitor Center. Saturday starts sunny and cool, the best birding light of the week."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Big Day Birding Hike",
+          "url": "https://www.ijams.org/event-details/big-day-birding-hike"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-10T08:00:00-04:00",
+        "endDate": "2026-10-10T10:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Big Day birding hike at Ijams Park",
+          "Saturday, eight to ten, fifteen dollars"
+        ]
+      }
+    },
+    {
+      "id": "storytime-flowers",
+      "label": "Ijams Park",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/storytime_sunflower.jpg",
+      "imageCaption": "What's inside a flower, read aloud",
+      "title": "Flowers and plants take over Saturday storytime at the Nature Playscape",
+      "deck": "The free Saturday storytime in the woods by Mead's Quarry reads What's Inside a Flower and a stack of other books about blooming things, then turns the kids loose on the playscape. Parking is five dollars.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 10 · 10 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Playscape at the Grayson Subaru Preserve · 3518 Island Home Ave, by Mead's Quarry"
+        },
+        {
+          "label": "Cost",
+          "value": "Free · parking $5 a car, free for Ijams Park members"
+        },
+        {
+          "label": "Parking",
+          "value": "Mead's Quarry main or overflow lots, then the signed connector trail"
+        },
+        {
+          "label": "Bring",
+          "value": "A blanket or chair, a snack, or nothing at all"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Every Saturday morning, volunteer storytellers read in the woods at the Nature Playscape, and this week the theme is flowers and plants: What's Inside a Flower and a pile of other books about beautiful, blooming things. Some weeks there is a hands-on activity; some weeks the kids just roam the playscape. It is free, and it runs from ten to noon. Park at the Mead's Quarry lots, five dollars a car unless you are a member, and follow the signs down the connector trail."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Park — Storytime at the Ijams Nature Playscape: Flowers!",
+          "url": "https://www.ijams.org/event-details/storytime-at-the-ijams-nature-playscape-flowers"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-10T10:00:00-04:00",
+        "endDate": "2026-10-10T12:00:00-04:00",
+        "locationName": "Ijams Nature Playscape",
+        "locationAddress": "3518 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Free flower storytime at Ijams Park",
+          "Saturday, ten to noon"
+        ],
+        "standing": true,
+        "standingKey": "playscape-storytime"
+      }
+    },
+    {
+      "id": "kerns-second-mural",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/charney_mural_roller.jpg",
+      "imageCaption": "Dogwood, trillium, milkweed, iris, passionflower, tulip poplar",
+      "title": "A second mural goes up on the back of Kern's, and two sculptures land on the rail trail",
+      "deck": "Anna Charney is painting Tennessee's wildflowers, dogwood to passionflower, on the back of the old bakery, while sculptures by Nathan Pierce and Brian Ferriby already stand along the SoKno Rail Trail.",
+      "facts": [
+        {
+          "label": "What",
+          "value": "A botanical mural by Anna Charney: dogwood, trillium, common milkweed, blue iris, passionflower and tulip poplar"
+        },
+        {
+          "label": "Where",
+          "value": "The back of Kern's · 2201 Kern's Rising Way"
+        },
+        {
+          "label": "Status",
+          "value": "Under way as of Oct 2 · free to watch any day"
+        },
+        {
+          "label": "Also new",
+          "value": "Two large-scale sculptures by Nathan Pierce and Brian Ferriby, installed along the trail"
+        },
+        {
+          "label": "Already done",
+          "value": "\"Shiny Objects,\" the fishing-lure mural by Naomi Haverland on the tower, finished in September"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Last week it was fishing lures on the tower. This week Legacy Parks says a third mural for the SoKno Rail Trail & Art Walk is under way, on the back of Kern's: Anna Charney's design celebrates Tennessee's botanical beauty with stylized dogwood, trillium, common milkweed, blue iris, passionflower and tulip poplar. It joins Naomi Haverland's Shiny Objects, which was finished last month."
+        },
+        {
+          "type": "paragraph",
+          "text": "The art is already off the walls, too. Two large-scale sculptures by Nathan Pierce and Brian Ferriby are now installed along the trail, and Legacy Parks promises more sections of trail, more murals and more sculptures in the coming weeks. Watching a wall get painted costs nothing; Kern's is open seven to eleven Thursday and Friday, eight to eleven Saturday and nine to nine Sunday."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Legacy Parks Foundation — Third mural installation and two sculptures along the SoKno Rail Trail & Art Walk",
+          "url": "https://legacyparks.org/events/"
+        },
+        {
+          "label": "Legacy Parks on Instagram — the Charney mural and the sculptures",
+          "url": "https://www.instagram.com/legacyparks/p/DeAPejqmlhL/"
+        },
+        {
+          "label": "Kern's — hours",
+          "url": "https://kernsbakery.com/public-events/"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "kerns",
+          "legacy-parks"
+        ],
+        "igBanner": [
+          "Wildflower mural on the back of Kern's",
+          "Under way now, free to watch"
+        ]
+      }
+    },
+    {
+      "id": "vegan-bbq-printshop",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/vegan_bbq_sandwich.jpg",
+      "imageCaption": "Fried chickun, smoked meats, mac and cheeze",
+      "title": "Southern Fried Vegan sets up a barbecue pop-up at Printshop on Sunday",
+      "deck": "A traveling vegan barbecue joint, ranked first in the country by VegNews and USA Today according to the brewery, brings fried chickun, smoked meats and mac and cheeze to Island Home Avenue for three hours.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Oct 11 · 1 – 4 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Printshop Beer Co. · 1532 Island Home Ave"
+        },
+        {
+          "label": "Menu",
+          "value": "Fried chickun, smoked meats, mac and cheeze, beer-battered Beyond burgers, jambalaya, po' boys, cajun corn, totchos"
+        },
+        {
+          "label": "Allergies",
+          "value": "Nut-free menu with several gluten-free options"
+        },
+        {
+          "label": "Weather",
+          "value": "Partly sunny and 79 · a 40% chance of a shower"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Printshop's calendar calls it the return of the vegan barbecue: Southern Fried Vegan, which the brewery introduces as VegNews and USA Today's number-one vegan barbecue joint, sets up on Sunday from one to four. The menu is southern staples and sandwich specials, fried chickun, smoked meats, mac and cheeze, beer-battered Beyond burgers, jambalaya, po' boys, cajun corn and totchos, all nut-free with gluten-free options. It is the back half of a Printshop weekend that starts with the live-painting day on Saturday."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Printshop Beer Co. — events: Vegan BBQ Returns",
+          "url": "https://printshopbeer.com/knoxville-south-knoxville-printshop-beer-co-events"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-11T13:00:00-04:00",
+        "endDate": "2026-10-11T16:00:00-04:00",
+        "locationName": "Printshop Beer Co.",
+        "locationAddress": "1532 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "printshop"
+        ],
+        "igBanner": [
+          "Vegan barbecue pop-up at Printshop",
+          "Sunday, one to four"
+        ]
+      }
+    },
+    {
+      "id": "specials-board",
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/earls_spicy_rita.jpg",
+      "imageCaption": "Friday is the spicy pineapple one",
+      "title": "The specials board: Earl's lists its Vols board for Saturday, with the game in Arkansas at 4:15",
+      "deck": "Down on Waterfront Drive, a different deal every day from open to close. The Vols are in Fayetteville at 4:15 Saturday, and the game-day board is the closest thing to a tailgate on the river.",
+      "facts": [
+        {
+          "label": "Thursday",
+          "value": "$10 Patrón mango margaritas"
+        },
+        {
+          "label": "Friday",
+          "value": "$9 spicy pineapple margaritas"
+        },
+        {
+          "label": "Saturday",
+          "value": "$8 house margaritas · the Vols board: $2 off drafts and pizza, $6 Orange Bliss, 6-for-5 beer buckets, $4 and $5 shots"
+        },
+        {
+          "label": "Sunday",
+          "value": "$7 mimosas and Bloody Marys"
+        },
+        {
+          "label": "Hours",
+          "value": "11 AM – 10 PM every day · 610 Waterfront Dr"
+        },
+        {
+          "label": "The games",
+          "value": "Tennessee at Arkansas, Sat 4:15 PM · Texans at Titans, Sun 1 PM"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Earl's runs a different special every day of the week, eleven to ten, and the Thursday-to-Sunday run is Patrón mango ritas, spicy pineapple ritas, house margaritas and then mimosas and Bloody Marys. Saturday's game is an away one, Tennessee at Arkansas with a 4:15 kickoff, and Earl's lists its Vols board for the day: two dollars off drafts and pizza, six-dollar Orange Bliss cocktails, beer buckets at six for the price of five, and four- and five-dollar shots. On Sunday the Titans host the Texans at one, which lines up with the mimosas."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Earl's Knoxville — specials",
+          "url": "https://earlsknox.com/specials/"
+        },
+        {
+          "label": "University of Tennessee Athletics — 2026 football schedule",
+          "url": "https://utsports.com/sports/football/schedule/2026"
+        },
+        {
+          "label": "ESPN — Tennessee Titans schedule",
+          "url": "https://www.espn.com/nfl/team/schedule/_/name/ten"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "earls"
+        ],
+        "igBanner": [
+          "A different deal every day at Earl's",
+          "Thursday through Sunday, eleven to ten"
+        ],
+        "standing": true,
+        "standingKey": "earls-specials-board"
+      }
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen — Old Sevier Market opens on Sevier Avenue Saturday, a free Americana festival on the Kern's lawn Sunday, live spray painting at Printshop, the first Urban Wilderness 50K, a sold-out night at The 808, and where the music is Thursday through Sunday.",
+      "duration": "04:14",
+      "src": "/audio/2026-10-07.mp3"
+    },
+    "calendar": [
+      {
+        "month": "OCT",
+        "day": "8",
+        "title": "Wildflower mural under way on the back of Kern's",
+        "meta": "Free to watch any day · 2201 Kern's Rising Way",
+        "starred": false,
+        "href": "#kerns-second-mural"
+      },
+      {
+        "month": "OCT",
+        "day": "8",
+        "title": "Patrón mango ritas at Earl's",
+        "meta": "$10 · 11 AM – 10 PM · 610 Waterfront Dr",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "OCT",
+        "day": "8",
+        "title": "PAUL OAKENFOLD + THE CRYSTAL METHOD AT THE 808 — SOLD OUT",
+        "meta": "Doors 7 PM, show 8 · 18+ · 808 Sevier Ave",
+        "starred": true,
+        "href": "#oakenfold-sold-out"
+      },
+      {
+        "month": "OCT",
+        "day": "8",
+        "title": "DJ night at Alliance Brewing with Goblin",
+        "meta": "Music at 8 PM · open till 10 · 1130 Sevier Ave",
+        "starred": false,
+        "href": "#dj-goblin-alliance"
+      },
+      {
+        "month": "OCT",
+        "day": "9",
+        "title": "Race packet pickup for the Urban Wilderness 50K",
+        "meta": "4 – 8 PM · SouthSide Garage, 1014 Sevier Ave",
+        "starred": false,
+        "href": "#urban-wilderness-50k"
+      },
+      {
+        "month": "OCT",
+        "day": "9",
+        "title": "Daniel Kimbro feat. Stranger May at Trailhead",
+        "meta": "7 PM · outdoors · 1317 Island Home Ave",
+        "starred": false,
+        "href": "#trailhead-kimbro"
+      },
+      {
+        "month": "OCT",
+        "day": "9",
+        "title": "Feral Kitty release show at Fly by Night",
+        "meta": "With Horcerer and Adam Gray · open 4 PM – 1 AM · 906 Sevier Ave",
+        "starred": false,
+        "href": "#feral-kitty-release"
+      },
+      {
+        "month": "OCT",
+        "day": "10",
+        "title": "URBAN WILDERNESS 50K & 10K TRAIL RACE",
+        "meta": "50K at 7:30 AM, 10K at 9 · Gateway Park, 1515 Tilson St",
+        "starred": true,
+        "href": "#urban-wilderness-50k"
+      },
+      {
+        "month": "OCT",
+        "day": "10",
+        "title": "OLD SEVIER MARKET GRAND OPENING",
+        "meta": "7 AM – 7 PM · Sevier Ave",
+        "starred": true,
+        "href": "#old-sevier-market-opens"
+      },
+      {
+        "month": "OCT",
+        "day": "10",
+        "title": "Big Day Birding Hike at Ijams Park",
+        "meta": "8 – 10 AM · $15 · ages 14+ · 2915 Island Home Ave",
+        "starred": false,
+        "href": "#big-day-birding"
+      },
+      {
+        "month": "OCT",
+        "day": "10",
+        "title": "Storytime at the Nature Playscape: Flowers!",
+        "meta": "10 AM – noon · free · parking $5 · Grayson Subaru Preserve",
+        "starred": false,
+        "href": "#storytime-flowers"
+      },
+      {
+        "month": "OCT",
+        "day": "10",
+        "title": "KNOX-ILL 2026 AT PRINTSHOP",
+        "meta": "Live painting 10 AM – 10 PM · fish fry 3 – 8 · 1532 Island Home Ave",
+        "starred": true,
+        "href": "#knox-ill"
+      },
+      {
+        "month": "OCT",
+        "day": "10",
+        "title": "The After Brunch Special at the Pink Cactus",
+        "meta": "Doors 2 PM, show 2:30 · $5 · 1147 Sevier Ave",
+        "starred": false,
+        "href": "#after-brunch-special"
+      },
+      {
+        "month": "OCT",
+        "day": "10",
+        "title": "Vols board at Earl's",
+        "meta": "Tennessee at Arkansas, 4:15 PM · $2 off drafts and pizza · 610 Waterfront Dr",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "OCT",
+        "day": "10",
+        "title": "Dizzle Phunk dance party at Fly by Night",
+        "meta": "Open 4 PM – 1 AM · 906 Sevier Ave",
+        "starred": false,
+        "href": "#dizzle-phunk"
+      },
+      {
+        "month": "OCT",
+        "day": "11",
+        "title": "SCRUFFY ROOTS FEST AT KERN'S",
+        "meta": "Gates noon · music 1 – 7:30 PM · free · 2201 Kern's Rising Way",
+        "starred": true,
+        "href": "#scruffy-roots-fest"
+      },
+      {
+        "month": "OCT",
+        "day": "11",
+        "title": "Southern Fried Vegan BBQ pop-up at Printshop",
+        "meta": "1 – 4 PM · 1532 Island Home Ave",
+        "starred": false,
+        "href": "#vegan-bbq-printshop"
+      },
+      {
+        "month": "OCT",
+        "day": "11",
+        "title": "Two Heads Are Better Than One at Trailhead",
+        "meta": "4 PM · outdoors · 1317 Island Home Ave",
+        "starred": false,
+        "href": "#trailhead-two-heads"
+      }
+    ]
+  }
+}

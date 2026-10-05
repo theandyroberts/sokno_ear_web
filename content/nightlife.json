@@ -1,24 +1,15 @@
 {
   "_flow": "Each day reads as the night's arc: happy hour → dinner → events/concerts/comedy/drink specials → the closing-time hang. Bars, restaurants, music venues only.",
-  "updated": "2026-10-02",
-  "weekend": "Oct 1–4",
+  "updated": "2026-10-05",
+  "weekend": "Oct 8–11",
   "days": {
     "Thu": [
-      {
-        "id": "thu-alliance",
-        "time": "12:00 PM",
-        "venue": "Alliance Brewing · 1130 Sevier Ave",
-        "headline": "Open till ten on Sevier Ave",
-        "sub": "Noon to 10 · sunny and 89, so the patio · 1130 Sevier Ave",
-        "cat": "drink",
-        "href": "https://alliancebrewing.com/"
-      },
       {
         "id": "thu-hiwire",
         "time": "3:00 PM",
         "venue": "Hi-Wire · 2020 Barber St",
         "headline": "Doors at three, twenty taps",
-        "sub": "Open till 10 · two decks, one with a roof · order food from Redbud downstairs · 2020 Barber St",
+        "sub": "Open till 10 · two decks · order food from Redbud downstairs · 2020 Barber St",
         "cat": "drink",
         "href": "https://hiwirebrewing.com/knoxville/"
       },
@@ -27,18 +18,18 @@
         "time": "4:00 PM",
         "venue": "Earl's · 610 Waterfront Dr",
         "headline": "Ten-dollar Patrón mango ritas",
-        "sub": "All day till 10 · the river-facing tables, sunny and 89 · 610 Waterfront Dr",
+        "sub": "All day till 10 · sunny and 84, so the river tables · 610 Waterfront Dr",
         "cat": "drink",
-        "href": "/2026-09-30/specials-board"
+        "href": "/2026-10-07/specials-board"
       },
       {
-        "id": "thu-puckers",
+        "id": "thu-printshop-wings",
         "time": "5:00 PM",
-        "venue": "Puckers Sports Grill · 115 Mimosa Ave",
-        "headline": "Pucker Hour, five to six",
-        "sub": "$1 Pucker Lager · $3 wells and prosecco · $3 lemon drops · 115 Mimosa Ave",
-        "cat": "drink",
-        "href": "/2026-09-30/puckers-auburn"
+        "venue": "Printshop Beer Co. · 1532 Island Home Ave",
+        "headline": "Dollar wings on the river",
+        "sub": "Friends BBQ runs the smoker 5–9 · 10% off cases to go all day · 1532 Island Home Ave",
+        "cat": "food",
+        "href": "https://printshopbeer.com/knoxville-south-knoxville-printshop-beer-co-events"
       },
       {
         "id": "thu-dumplings",
@@ -50,233 +41,215 @@
         "href": "https://www.instagram.com/dumplingsteaknoxville/"
       },
       {
-        "id": "thu-hooping",
-        "time": "6:00 PM",
-        "venue": "Ijams Park · Miller Education Building",
-        "headline": "Hooping class with Dizzy",
-        "sub": "6–7 · $25 · adults, beginners welcome · hoops to borrow · indoors",
-        "cat": "dance",
-        "href": "/2026-09-30/hooping"
-      },
-      {
-        "id": "thu-taco",
+        "id": "thu-808",
         "time": "7:00 PM",
-        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
-        "headline": "Singo, seven to nine, free to play",
-        "sub": "Music bingo · $13 domestic pitchers all day · street-style tacos · 3701 Sevierville Pike",
-        "cat": "mic",
-        "href": "https://soknotaco.com/"
+        "venue": "The 808 · 808 Sevier Ave",
+        "headline": "Oakenfold and The Crystal Method, sold out",
+        "sub": "Doors 7, show 8 · 18+ · the venue says a few tickets may come back · do not park in the Borderland lot",
+        "cat": "music",
+        "href": "/2026-10-07/oakenfold-sold-out"
       },
       {
         "id": "thu-pinkcactus",
         "time": "7:00 PM",
         "venue": "The Pink Cactus · 1147 Sevier Ave",
-        "headline": "Private-room karaoke",
-        "sub": "Book the room ahead — they fill up · bar and covered patio downstairs · 1147 Sevier Ave",
+        "headline": "A free hour in the karaoke rooms",
+        "sub": "Every Thursday in October · book a room · the bar and patio downstairs · 1147 Sevier Ave",
         "cat": "mic",
         "href": "https://www.thepinkcactusknox.com/"
+      },
+      {
+        "id": "thu-trailhead",
+        "time": "7:00 PM",
+        "venue": "Trailhead Beer Market · 1317 Island Home Ave",
+        "headline": "Trivia at seven",
+        "sub": "Gato Peligroso in the kitchen · 1317 Island Home Ave",
+        "cat": "mic",
+        "href": "https://www.instagram.com/trailheadbeer/p/Dd92UvFBnV5/"
+      },
+      {
+        "id": "thu-soknotaco",
+        "time": "7:00 PM",
+        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
+        "headline": "Singo, seven to nine, free to play",
+        "sub": "$13 domestic pitchers all day · 3701 Sevierville Pike",
+        "cat": "mic",
+        "href": "https://soknotaco.com/"
+      },
+      {
+        "id": "thu-alliance",
+        "time": "8:00 PM",
+        "venue": "Alliance Brewing · 1130 Sevier Ave",
+        "headline": "DJ Goblin, bring your dancing shoes",
+        "sub": "Music at 8 · taproom open till 10 · happy hour 3–6 first · 1130 Sevier Ave",
+        "cat": "dance",
+        "href": "/2026-10-07/dj-goblin-alliance"
       }
     ],
     "Fri": [
       {
-        "id": "fri-ssg",
+        "id": "fri-southside-lunch",
         "time": "11:00 AM",
         "venue": "SouthSide Garage · 1014 Sevier Ave",
         "headline": "Open for lunch, and a Friday torta",
-        "sub": "Dia de runs a torta special every Friday · 11 AM – 4 PM · 1014 Sevier Ave",
+        "sub": "Dia de Foods torta special every Friday · 1014 Sevier Ave",
         "cat": "food",
         "href": "https://www.southsidegarageknox.com/specials/"
-      },
-      {
-        "id": "fri-alliance",
-        "time": "12:00 PM",
-        "venue": "Alliance Brewing · 1130 Sevier Ave",
-        "headline": "Open till ten on Sevier Ave",
-        "sub": "Noon to 10 · 1130 Sevier Ave",
-        "cat": "drink",
-        "href": "https://alliancebrewing.com/"
       },
       {
         "id": "fri-hiwire",
         "time": "3:00 PM",
         "venue": "Hi-Wire · 2020 Barber St",
-        "headline": "Late doors — open till eleven",
-        "sub": "3 PM – 11 PM · the covered deck if the showers show up · 2020 Barber St",
+        "headline": "Late doors, open till eleven",
+        "sub": "Two decks, one with a roof · 2020 Barber St",
         "cat": "drink",
         "href": "https://hiwirebrewing.com/knoxville/"
+      },
+      {
+        "id": "fri-printshop-flights",
+        "time": "4:00 PM",
+        "venue": "Printshop Beer Co. · 1532 Island Home Ave",
+        "headline": "Twelve-dollar flights, you pick four",
+        "sub": "All day · the riverfront patio · 1532 Island Home Ave",
+        "cat": "drink",
+        "href": "https://printshopbeer.com/knoxville-south-knoxville-printshop-beer-co-events"
       },
       {
         "id": "fri-earls",
         "time": "4:00 PM",
         "venue": "Earl's · 610 Waterfront Dr",
         "headline": "Nine-dollar spicy pineapple ritas",
-        "sub": "All day till 10 · 89 and mostly sunny, showers holding off until after dark · 610 Waterfront Dr",
+        "sub": "All day till 10 · 610 Waterfront Dr",
         "cat": "drink",
-        "href": "/2026-09-30/specials-board"
+        "href": "/2026-10-07/specials-board"
+      },
+      {
+        "id": "fri-packets",
+        "time": "4:00 PM",
+        "venue": "SouthSide Garage · 1014 Sevier Ave",
+        "headline": "Race packet pickup for the Urban Wilderness 50K",
+        "sub": "4–8 PM · runners, then everyone else · 1014 Sevier Ave",
+        "cat": "star",
+        "href": "/2026-10-07/urban-wilderness-50k"
       },
       {
         "id": "fri-puckers",
         "time": "5:00 PM",
         "venue": "Puckers Sports Grill · 115 Mimosa Ave",
         "headline": "Pucker Hour, five to six",
-        "sub": "$1 Pucker Lager · $3 wells and prosecco · 115 Mimosa Ave",
+        "sub": "The patio, the dogs and the screens · 115 Mimosa Ave",
         "cat": "drink",
-        "href": "/2026-09-30/puckers-auburn"
+        "href": "https://www.instagram.com/puckersknoxville/"
       },
       {
         "id": "fri-dumplings",
         "time": "6:00 PM",
         "venue": "Angry Dumplings · 1119 Sevier Ave",
-        "headline": "Dumplings first, then the movie or the bars",
+        "headline": "Dumplings first, then the music",
         "sub": "Hand-wrapped dumplings, noodles and boba · 1119 Sevier Ave",
         "cat": "food",
         "href": "https://www.instagram.com/dumplingsteaknoxville/"
       },
       {
-        "id": "fri-carrie",
-        "time": "6:00 PM",
-        "venue": "Ijams Park · 2915 Island Home Ave",
-        "headline": "\"Carrie\" on the lawn, the last movie of the season",
-        "sub": "Doors 6, movie at dark, about 7:30 · $12 · food trucks and the beer garden · no coolers · bring a chair",
-        "cat": "star",
-        "href": "/2026-09-30/carrie-on-the-lawn"
-      },
-      {
-        "id": "fri-firstfriday",
-        "time": "6:00 PM",
-        "venue": "Old Sevier District · Sevier Ave",
-        "headline": "First Friday: the art crawl starts at six",
-        "sub": "Openings at Mighty Mud and SoKno Sourdough · live printing at Printshop · mostly free",
-        "cat": "star",
-        "href": "/2026-09-30/first-friday"
-      },
-      {
-        "id": "fri-paddle",
+        "id": "fri-trailhead",
         "time": "7:00 PM",
-        "venue": "Ijams Park · 3507 Island Home Pike",
-        "headline": "Starlight paddle on a moonless river",
-        "sub": "7–9 · $45, kayak and headlamp included · ages 14+ · book ahead",
-        "cat": "star",
-        "href": "/2026-09-30/starlight-paddle"
+        "venue": "Trailhead Beer Market · 1317 Island Home Ave",
+        "headline": "Daniel Kimbro feat. Stranger May, outdoors",
+        "sub": "Music at 7 · clear and 55 · Gato Peligroso cooks · 1317 Island Home Ave",
+        "cat": "music",
+        "href": "/2026-10-07/trailhead-kimbro"
       },
       {
-        "id": "fri-taco",
+        "id": "fri-soknotaco",
         "time": "7:00 PM",
         "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
         "headline": "Frozen Fridays in the margarita garden",
-        "sub": "$5 ten-ounce frozen margs · $10 frozen coronaritas · open till 11 · 3701 Sevierville Pike",
+        "sub": "$10 frozen coronaritas · $5 and $8 frozen margs · 3701 Sevierville Pike",
         "cat": "drink",
         "href": "https://soknotaco.com/"
       },
       {
-        "id": "fri-808",
-        "time": "7:00 PM",
-        "venue": "The 808 · 808 Sevier Ave",
-        "headline": "A new music venue opens: High Step Society",
-        "sub": "Doors 7, show 8 · all ages · don't park in the Borderland Tees lot",
-        "cat": "music",
-        "href": "/2026-09-30/the-808-opens"
-      },
-      {
-        "id": "fri-hedda",
-        "time": "7:00 PM",
-        "venue": "Borderland Playhouse · 802 Sevier Ave",
-        "headline": "\"Hedda Gabler,\" second-to-last night",
-        "sub": "7 PM · choose your price, $5 to $35 · Knoxville Theatre Club",
-        "cat": "star",
-        "href": "/2026-09-30/hedda-gabler"
-      },
-      {
-        "id": "fri-trailhead",
-        "time": "7:00 PM",
-        "venue": "Trailhead Beer Market · 1317 Island Home Ave",
-        "headline": "The Bearded play live, and soup season starts",
-        "sub": "Music at 7 · Gato Peligroso's new fall menu",
-        "cat": "music",
-        "href": "/2026-09-30/first-friday"
-      },
-      {
-        "id": "fri-pinkcactus",
+        "id": "fri-flybynight",
         "time": "9:00 PM",
-        "venue": "The Pink Cactus · 1147 Sevier Ave",
-        "headline": "Free bachata class, then a Latin dance party",
-        "sub": "Class 9–10 PM, dancing until late · no cover · karaoke rooms upstairs · 1147 Sevier Ave",
-        "cat": "dance",
-        "href": "/2026-09-30/first-friday"
+        "venue": "Fly by Night · 906 Sevier Ave",
+        "headline": "Feral Kitty's release show, Hard Candy",
+        "sub": "With Horcerer and Adam Gray · open till 1 · come early, stay late · 906 Sevier Ave",
+        "cat": "music",
+        "href": "/2026-10-07/feral-kitty-release"
       }
     ],
     "Sat": [
       {
-        "id": "sat-puckersbrunch",
-        "time": "9:00 AM",
-        "venue": "Puckers Sports Grill · 115 Mimosa Ave",
-        "headline": "Brunch nine to two, Auburn at 3:30",
-        "sub": "Every screen on · eat first and already have the seat at kickoff · 115 Mimosa Ave",
-        "cat": "food",
-        "href": "/2026-09-30/puckers-auburn"
+        "id": "sat-market",
+        "time": "7:00 AM",
+        "venue": "Old Sevier Market · Sevier Ave",
+        "headline": "The grocery store opens",
+        "sub": "Grand opening, 7 to 7 · 15% of the first month's purchases buys food for Knoxville",
+        "cat": "star",
+        "href": "/2026-10-07/old-sevier-market-opens"
       },
       {
-        "id": "sat-taco",
+        "id": "sat-50k",
+        "time": "7:30 AM",
+        "venue": "Urban Wilderness Gateway Park · 1515 Tilson St",
+        "headline": "The first Urban Wilderness 50K leaves the line",
+        "sub": "10K at 9 · cheer at the Gateway Park · 1515 Tilson St",
+        "cat": "star",
+        "href": "/2026-10-07/urban-wilderness-50k"
+      },
+      {
+        "id": "sat-knoxill",
         "time": "10:00 AM",
-        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
-        "headline": "Weekend brunch at the cantina",
-        "sub": "Saturday and Sunday, 10 AM – 2 PM · happy hour 4–7 · 3701 Sevierville Pike",
+        "venue": "Printshop Beer Co. · 1532 Island Home Ave",
+        "headline": "KNOX-ILL: live spray painting all day",
+        "sub": "10 AM–10 PM · fish fry 3–8 · 1532 Island Home Ave",
+        "cat": "star",
+        "href": "/2026-10-07/knox-ill"
+      },
+      {
+        "id": "sat-burger-brunch",
+        "time": "11:00 AM",
+        "venue": "Sevier Ave Burger Co. · Sevier Ave",
+        "headline": "Weekend brunch, and the Monster Mash",
+        "sub": "Brunch 11–2 · October's burger and the Bad Apple cocktail · Sevier Ave",
         "cat": "food",
-        "href": "https://soknotaco.com/"
+        "href": "https://www.instagram.com/sevieraveburgerco/"
       },
       {
         "id": "sat-earls",
         "time": "11:00 AM",
         "venue": "Earl's · 610 Waterfront Dr",
-        "headline": "The Vols board is on all day",
-        "sub": "$8 house margs · $2 off drafts and pizza · $6 Orange Bliss · 6-for-5 buckets · kickoff 3:30 · 610 Waterfront Dr",
+        "headline": "Eight-dollar margs, then the Vols board",
+        "sub": "Tennessee at Arkansas, 4:15 · $2 off drafts and pizza · 610 Waterfront Dr",
         "cat": "drink",
-        "href": "/2026-09-30/specials-board"
-      },
-      {
-        "id": "sat-kerns",
-        "time": "11:00 AM",
-        "venue": "Kern's · 2201 Kern's Rising Way",
-        "headline": "Private lawn tailgates, under a new mural",
-        "sub": "$300 lawn section for 20 with a TV, couches and canopy — inquire ahead · food hall open 8 AM – 11 PM",
-        "cat": "star",
-        "href": "https://kernsbakery.com/football-watch-parties/"
-      },
-      {
-        "id": "sat-kernsmural",
-        "time": "12:00 PM",
-        "venue": "Kern's · 2201 Kern's Rising Way",
-        "headline": "Giant fishing lures on the tower",
-        "sub": "\"Shiny Objects,\" painted for the SoKno Art Walk · free to look at · bring the out-of-town guests",
-        "cat": "star",
-        "href": "/2026-09-30/kerns-lure-mural"
-      },
-      {
-        "id": "sat-ssg",
-        "time": "12:00 PM",
-        "venue": "SouthSide Garage · 1014 Sevier Ave",
-        "headline": "Open twelve till twelve",
-        "sub": "A full twelve hours on Sevier Ave · 1014 Sevier Ave",
-        "cat": "food",
-        "href": "https://www.southsidegarageknox.com/specials/"
+        "href": "/2026-10-07/specials-board"
       },
       {
         "id": "sat-hiwire",
         "time": "12:00 PM",
         "venue": "Hi-Wire · 2020 Barber St",
         "headline": "Open from noon till eleven",
-        "sub": "Longest day of the week · the covered deck is the rain plan · 2020 Barber St",
+        "sub": "Twenty taps and the rooftop deck · 2020 Barber St",
         "cat": "drink",
         "href": "https://hiwirebrewing.com/knoxville/"
       },
       {
-        "id": "sat-alliance",
-        "time": "12:00 PM",
-        "venue": "Alliance Brewing · 1130 Sevier Ave",
-        "headline": "Noon to ten on Sevier Ave",
-        "sub": "1130 Sevier Ave",
-        "cat": "drink",
-        "href": "https://alliancebrewing.com/"
+        "id": "sat-comedy",
+        "time": "2:00 PM",
+        "venue": "The Pink Cactus · 1147 Sevier Ave",
+        "headline": "The After Brunch Special: six stand-ups",
+        "sub": "Doors 2, show 2:30 · $5 · host Justin Chavez · 1147 Sevier Ave",
+        "cat": "star",
+        "href": "/2026-10-07/after-brunch-special"
+      },
+      {
+        "id": "sat-fishfry",
+        "time": "3:00 PM",
+        "venue": "Printshop Beer Co. · 1532 Island Home Ave",
+        "headline": "Fish fry on the patio",
+        "sub": "3–8 PM, while the painters work · 1532 Island Home Ave",
+        "cat": "food",
+        "href": "https://printshopbeer.com/knoxville-south-knoxville-printshop-beer-co-events"
       },
       {
         "id": "sat-dumplings",
@@ -288,40 +261,13 @@
         "href": "https://www.instagram.com/dumplingsteaknoxville/"
       },
       {
-        "id": "sat-hedda",
-        "time": "7:00 PM",
-        "venue": "Borderland Playhouse · 802 Sevier Ave",
-        "headline": "\"Hedda Gabler\" closes tonight",
-        "sub": "7 PM · choose your price, $5 to $35 · the last performance",
-        "cat": "star",
-        "href": "/2026-09-30/hedda-gabler"
-      },
-      {
-        "id": "sat-808",
-        "time": "7:00 PM",
-        "venue": "The 808 · 808 Sevier Ave",
-        "headline": "Marcy Playground, night two at the new venue",
-        "sub": "Doors 7, show 8 · all ages · rideshare if you can",
-        "cat": "music",
-        "href": "/2026-09-30/the-808-opens"
-      },
-      {
-        "id": "sat-knoxferno",
-        "time": "7:00 PM",
-        "venue": "The Pink Cactus · 1147 Sevier Ave",
-        "headline": "Knoxferno: fire spinners and DJs in the front yard",
-        "sub": "7 PM to midnight · free, all ages · check the feed if it storms",
-        "cat": "dance",
-        "href": "/2026-09-30/knoxferno"
-      },
-      {
-        "id": "sat-pinkcactus",
+        "id": "sat-flybynight",
         "time": "9:00 PM",
-        "venue": "The Pink Cactus · 1147 Sevier Ave",
-        "headline": "Karaoke rooms and the downstairs lounge",
-        "sub": "Book ahead for a Saturday room · 1147 Sevier Ave",
-        "cat": "mic",
-        "href": "https://www.thepinkcactusknox.com/"
+        "venue": "Fly by Night · 906 Sevier Ave",
+        "headline": "Dizzle Phunk's dance-party debut",
+        "sub": "Funk, bass, disco, hip hop · open till 1 · 906 Sevier Ave",
+        "cat": "dance",
+        "href": "/2026-10-07/dizzle-phunk"
       }
     ],
     "Sun": [
@@ -330,25 +276,25 @@
         "time": "9:00 AM",
         "venue": "Puckers Sports Grill · 115 Mimosa Ave",
         "headline": "Brunch nine to two, Titans at one",
-        "sub": "Titans at the Ravens lands in the last hour of the menu · 115 Mimosa Ave",
+        "sub": "Every screen on · book on Resy · 115 Mimosa Ave",
         "cat": "food",
-        "href": "/2026-09-30/puckers-auburn"
+        "href": "https://resy.com/cities/knoxville-tn/venues/puckers-knoxville"
       },
       {
-        "id": "sun-taco",
+        "id": "sun-soknotaco",
         "time": "10:00 AM",
         "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
         "headline": "Brunch, then all-day happy hour",
-        "sub": "Brunch 10 AM – 2 PM · $4 wells, champagne and domestics all day · 3701 Sevierville Pike",
+        "sub": "Brunch 10–2 · $4 wells, champagne and domestics all day · 3701 Sevierville Pike",
         "cat": "food",
         "href": "https://soknotaco.com/"
       },
       {
-        "id": "sun-ssg",
+        "id": "sun-southside",
         "time": "11:00 AM",
         "venue": "SouthSide Garage · 1014 Sevier Ave",
         "headline": "Dia De brunch, mimosas and Bloody Marys",
-        "sub": "11 AM – 3 PM · specials on both · 1014 Sevier Ave",
+        "sub": "11–3 · 1014 Sevier Ave",
         "cat": "food",
         "href": "https://www.southsidegarageknox.com/specials/"
       },
@@ -357,27 +303,36 @@
         "time": "11:00 AM",
         "venue": "Earl's · 610 Waterfront Dr",
         "headline": "Seven-dollar mimosas and Bloody Marys",
-        "sub": "All day till 10 · an 80% chance of rain, so the inside tables · 610 Waterfront Dr",
+        "sub": "All day till 10 · 610 Waterfront Dr",
         "cat": "drink",
-        "href": "/2026-09-30/specials-board"
+        "href": "/2026-10-07/specials-board"
       },
       {
-        "id": "sun-alliance",
+        "id": "sun-scruffy",
         "time": "12:00 PM",
-        "venue": "Alliance Brewing · 1130 Sevier Ave",
-        "headline": "Noon to eight on Sevier Ave",
-        "sub": "Sunday hours · 1130 Sevier Ave",
-        "cat": "drink",
-        "href": "https://alliancebrewing.com/"
+        "venue": "Kern's · 2201 Kern's Rising Way",
+        "headline": "Scruffy Roots Fest on the lawn, free",
+        "sub": "Gates noon, music 1–7:30 · six acts · bring a chair · 2201 Kern's Rising Way",
+        "cat": "music",
+        "href": "/2026-10-07/scruffy-roots-fest"
       },
       {
-        "id": "sun-hiwire",
-        "time": "12:00 PM",
-        "venue": "Hi-Wire · 2020 Barber St",
-        "headline": "Noon to nine, then it's a school night",
-        "sub": "Pinball, ping pong and a roof for a rainy Sunday · 2020 Barber St",
-        "cat": "drink",
-        "href": "https://hiwirebrewing.com/knoxville/"
+        "id": "sun-veganbbq",
+        "time": "1:00 PM",
+        "venue": "Printshop Beer Co. · 1532 Island Home Ave",
+        "headline": "Southern Fried Vegan barbecue pop-up",
+        "sub": "1–4 PM · fried chickun, smoked meats, mac and cheeze · 1532 Island Home Ave",
+        "cat": "food",
+        "href": "/2026-10-07/vegan-bbq-printshop"
+      },
+      {
+        "id": "sun-trailhead",
+        "time": "4:00 PM",
+        "venue": "Trailhead Beer Market · 1317 Island Home Ave",
+        "headline": "Two Heads Are Better Than One, outdoors",
+        "sub": "Music at 4 · Gato Peligroso cooks · 1317 Island Home Ave",
+        "cat": "music",
+        "href": "/2026-10-07/trailhead-two-heads"
       },
       {
         "id": "sun-dumplings",
@@ -392,8 +347,8 @@
         "id": "sun-pinkcactus",
         "time": "7:00 PM",
         "venue": "The Pink Cactus · 1147 Sevier Ave",
-        "headline": "Sunday karaoke, easy mode",
-        "sub": "Quieter rooms, same mic · 1147 Sevier Ave",
+        "headline": "Sunday karaoke rooms, easy mode",
+        "sub": "Open 5–11 · book a room · the lounge downstairs · 1147 Sevier Ave",
         "cat": "mic",
         "href": "https://www.thepinkcactusknox.com/"
       }
