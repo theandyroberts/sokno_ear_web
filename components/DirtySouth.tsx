@@ -361,7 +361,7 @@ export function DirtySouth({
             const external = item.href.startsWith("http");
             return (
               <li key={item.id} style={{ borderTop: `3px solid ${INK}`, padding: "14px 0" }}>
-                <div style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
+                <div className="ds-row" style={{ display: "flex", gap: 14, alignItems: "flex-start" }}>
                   <button
                     aria-label={done ? `Uncheck ${item.headline}` : `Check off ${item.headline}`}
                     aria-pressed={done}

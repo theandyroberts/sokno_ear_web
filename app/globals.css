@@ -115,13 +115,18 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
 }
 
 /* Dirty South listing logos: a cream chip right-justified on every row. Fixed
-   size so a dozen brand marks line up in one column down the page; the phone
-   size gives the headline back the width it needs at 375px. */
-.ds-logo { width: 112px; height: 74px; }
+   size so a dozen brand marks line up in one column down the page. 280x185 is
+   2.5x the original 112x74 — Andy, 2026-10-06: "give the venues a bit more
+   love." The headline keeps ~290px beside it in the 720px column. */
+.ds-logo { width: 280px; height: 185px; }
 @media (max-width: 560px) {
-  .ds-logo { width: 72px; height: 50px; padding: 5px !important; }
-  /* A phone can't carry the checkbox, the category stamp, the headline AND a
-     logo across 375px. The stamp is the one that goes: the venue's own mark
-     says more about the stop than a generic fork-and-knife does. */
+  /* A phone can't carry the checkbox, the headline AND a 2.5x chip across
+     375px, so the row wraps: the headline takes the first line and the chip
+     sits under it, indented past the checkbox, still 2.5x the old phone size. */
+  .ds-row { flex-wrap: wrap; }
+  .ds-row > a { flex: 1 1 160px; }
+  .ds-logo { width: 180px; height: 125px; padding: 6px !important; margin-left: 48px; }
+  /* The category stamp went when the logo arrived: the venue's own mark says
+     more about the stop than a generic fork-and-knife does. */
   .ds-cat { display: none; }
 }
