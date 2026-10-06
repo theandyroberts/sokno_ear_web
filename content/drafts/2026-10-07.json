@@ -144,8 +144,8 @@
       ],
       "hot": true,
       "image": "/assets/spots/knoxill_spraycan.jpg",
-      "title": "KNOX-ILL: live spray painting at Printshop",
-      "blurb": "Artists paint from ten in the morning to ten at night Saturday, with a fish fry from three.",
+      "title": "KNOX-ILL: graffiti writers paint live at Printshop",
+      "blurb": "The brewery's annual spray-can day, ten in the morning to ten at night Saturday, with a lager brewed for it and a fish fry from three.",
       "cue": "Jump to story",
       "href": "#knox-ill"
     },
@@ -327,9 +327,9 @@
       ],
       "layout": "imageRight",
       "image": "/assets/spots/knoxill_spraycan.jpg",
-      "imageCaption": "Another day of sprays on Island Home Avenue",
-      "title": "KNOX-ILL fills Printshop with live spray painting all day Saturday",
-      "deck": "The brewery on Island Home Avenue gives its Saturday over to spray cans. Artists paint live from ten in the morning to ten at night, the taps pour the whole time, and a fish fry starts at three.",
+      "imageCaption": "Another day of sprays, as the brewery puts it",
+      "title": "KNOX-ILL, Printshop's graffiti day, puts spray-can writers to work live for twelve hours Saturday",
+      "deck": "The brewery's annual day for graffiti writers is back on Island Home Avenue: artists paint live from ten in the morning to ten at night, with a lager brewed for the occasion and a fish fry from three.",
       "facts": [
         {
           "label": "When",
@@ -338,6 +338,14 @@
         {
           "label": "Where",
           "value": "Printshop Beer Co. · 1532 Island Home Ave"
+        },
+        {
+          "label": "What it is",
+          "value": "Live spray painting by graffiti writers, all day, while the taproom pours · the brewery has run it since at least 2022"
+        },
+        {
+          "label": "The beer",
+          "value": "Knox-Ill Writer's Brew, a 5.4% dark lager brewed and canned for the day · 2022's was a Citra IPA"
         },
         {
           "label": "Also Saturday",
@@ -355,17 +363,33 @@
       "body": [
         {
           "type": "paragraph",
-          "text": "Printshop's events calendar puts it in one line: Knox-Ill is back, with another day of sprays. The brewery's live-painting day runs the full length of Saturday, ten in the morning to ten at night, with artists working on the property while the taproom pours. The Old Sevier District put it on its October can't-miss list alongside the grocery opening up the street."
+          "text": "KNOX-ILL is a graffiti event, not a paint-and-sip. Printshop's calendar puts it in one line, \"Knox-Ill is back, with another day of sprays,\" and the photo on the listing says the rest: a writer bent over a blackbook, the sketchbook graffiti artists carry, with a marker in his hand and a can of Knox-Ill Writer's Brew at his elbow. \"Writer\" is the word graffiti artists use for themselves. For twelve hours on Saturday, ten in the morning to ten at night, they paint live on the brewery's property on Island Home Avenue while the taps pour."
+        },
+        {
+          "type": "subhead",
+          "text": "The brewery has done this before"
         },
         {
           "type": "paragraph",
-          "text": "The brewery stacks the day. A yoga class takes the warehouse at ten thirty, the painting is under way by the time it lets out, and a fish fry runs from three to eight. The weather is on the painters' side: partly sunny and 82, with only a slight chance of a shower after two."
+          "text": "It is a standing date. Printshop brewed a Citra IPA as \"the official beer of Knox-Ill 2022,\" and this year's edition comes with its own can again: Knox-Ill Writer's Brew, a 5.4 percent dark lager with toffee notes, brewed and canned in South Knoxville. The Old Sevier District put the day on its October can't-miss list alongside the grocery opening up the street."
+        },
+        {
+          "type": "subhead",
+          "text": "What to expect"
+        },
+        {
+          "type": "paragraph",
+          "text": "Come to watch; the painting is the show, and it runs all day, so there is no start time to miss. The brewery stacks the rest of Saturday around it: a yoga class in the warehouse at ten thirty, then a fish fry from three to eight. The weather is on the painters' side, partly sunny and 82 with only a slight chance of a shower after two."
         }
       ],
       "sources": [
         {
           "label": "Printshop Beer Co. — events: Knox-Ill 2026",
           "url": "https://printshopbeer.com/knoxville-south-knoxville-printshop-beer-co-events"
+        },
+        {
+          "label": "Untappd — Knox-ill, the official beer of Knox-Ill 2022",
+          "url": "https://untappd.com/b/printshop-beer-co-knox-ill/5099712"
         },
         {
           "label": "Old Sevier District — October can't-miss events",
@@ -388,7 +412,7 @@
           "old-sevier"
         ],
         "igBanner": [
-          "Live spray painting at Printshop",
+          "Graffiti writers paint live at Printshop",
           "Saturday, ten in the morning to ten at night"
         ]
       }
@@ -1327,7 +1351,7 @@
     "audio": {
       "title": "Weekend Audio Briefing",
       "intro": "What's happening in SoKno this weekend.",
-      "description": "Your weekend listen — Old Sevier Market opens on Sevier Avenue Saturday, a free Americana festival on the Kern's lawn Sunday, live spray painting at Printshop, the first Urban Wilderness 50K, a sold-out night at The 808, and where the music is Thursday through Sunday.",
+      "description": "Your weekend listen — Old Sevier Market opens on Sevier Avenue Saturday, a free Americana festival on the Kern's lawn Sunday, graffiti writers painting live at Printshop, the first Urban Wilderness 50K, a sold-out night at The 808, and where the music is Thursday through Sunday.",
       "duration": "04:44",
       "src": "/audio/2026-10-07.mp3"
     },
@@ -1423,8 +1447,8 @@
       {
         "month": "OCT",
         "day": "10",
-        "title": "KNOX-ILL 2026 AT PRINTSHOP",
-        "meta": "Live painting 10 AM – 10 PM · fish fry 3 – 8 · 1532 Island Home Ave",
+        "title": "KNOX-ILL: GRAFFITI WRITERS PAINT LIVE AT PRINTSHOP",
+        "meta": "10 AM – 10 PM · fish fry 3 – 8 · 1532 Island Home Ave",
         "starred": true,
         "href": "#knox-ill"
       },
