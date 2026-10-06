@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://soknoear.com"),
   title: "The South Knoxville Ear",
   description:
-    "South Knoxville's weekly roundup — events, openings, and neighborhood news for Sevier Avenue, Ijams Park, Kern's, and the river.",
+    "South Knoxville's weekly roundup — events, openings, and neighborhood news for Sevier Avenue, Ijams Nature Center, Kern's, and the river.",
   applicationName: "The South Knoxville Ear",
   keywords: [
-    "South Knoxville", "SoKno", "Sevier Avenue", "Old Sevier", "Ijams Park",
+    "South Knoxville", "SoKno", "Sevier Avenue", "Old Sevier", "Ijams Nature Center",
     "Urban Wilderness", "Suttree Landing", "Knoxville events", "South Waterfront",
   ],
   openGraph: { type: "website", siteName: "The South Knoxville Ear", locale: "en_US" },

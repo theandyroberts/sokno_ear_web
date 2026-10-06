@@ -14,7 +14,7 @@ const story = (id: string, venue: string | null, day: string, start?: string, ba
 });
 // No. 15, in the order the episode lists it.
 const no15 = [
-  { ...story("end-of-summer-jam", IJAMS, "Sun", "2026-09-27T12:00:00-04:00", "Free End of Summer Jam at Ijams Park"), feature: true },
+  { ...story("end-of-summer-jam", IJAMS, "Sun", "2026-09-27T12:00:00-04:00", "Free End of Summer Jam at Ijams Nature Center"), feature: true },
   story("harvest-moon-paddle", IJAMS, "Sat", "2026-09-26T19:30:00-04:00"),
   story("cyanotype-day", IJAMS, "Sat", "2026-09-26T12:00:00-04:00"),
   story("puckers-texas", "@puckersknoxville", "Sat", "2026-09-26T09:00:00-04:00"),
@@ -74,7 +74,7 @@ describe("the weekend roundup", () => {
   });
 
   it("names each slide by its banner line, tags every venue once, and stays under the caption limit", () => {
-    expect(r.caption).toContain("Free End of Summer Jam at Ijams Park");
+    expect(r.caption).toContain("Free End of Summer Jam at Ijams Nature Center");
     expect(r.caption).toContain("This weekend in South Knoxville · Sep 24–27");
     expect(r.caption.match(/@ijamsnaturecenter/g)).toHaveLength(1);
     expect(r.caption).toContain("with 3 more");
@@ -89,18 +89,18 @@ describe("the weekend roundup", () => {
 
 describe("a venue's own carousel", () => {
   const folded = no15.filter((s) => pickSingles(no15).fold.includes(s.id));
-  const v = buildVenueRoundup({ ...io, key: "ijams", name: "Ijams Park", handle: IJAMS, stories: folded, hashtags: "#SoKno" })!;
+  const v = buildVenueRoundup({ ...io, key: "ijams", name: "Ijams Nature Center", handle: IJAMS, stories: folded, hashtags: "#SoKno" })!;
 
   it("carries every folded story, in weekend order, under the venue's house name", () => {
     expect(v.id).toBe("roundup-ijams");
     expect(v.stories).toEqual(["wildflower-walk", "hooping", "bats-after-dark", "stained-glass", "playing-possum", "renew-in-nature"]);
-    expect(v.caption).toContain("6 more at Ijams Park this week");
+    expect(v.caption).toContain("6 more at Ijams Nature Center this week");
     expect(v.caption).not.toMatch(/at Ijams this week/);
     expect(v.tags).toEqual([IJAMS]);
   });
 
   it("leaves a single folded story alone", () => {
-    expect(buildVenueRoundup({ ...io, key: "ijams", name: "Ijams Park", handle: IJAMS, stories: folded.slice(0, 1) })).toBeNull();
+    expect(buildVenueRoundup({ ...io, key: "ijams", name: "Ijams Nature Center", handle: IJAMS, stories: folded.slice(0, 1) })).toBeNull();
   });
 });
 

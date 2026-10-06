@@ -9,7 +9,7 @@ const allChecked = () =>
   Object.fromEntries(registry.sources.filter((s: any) => s.weekly !== false).map((s: any) => [s.key, { how: s.instagram ? "instagram" : "web", found: 1 }]));
 const balanced = {
   feature: story("f", "Old Sevier"),
-  stories: [story("a", "Old Sevier"), story("b", "Old Sevier"), story("c", "Ijams Park"), story("d", "Kern's"), story("e", "Suttree Landing")],
+  stories: [story("a", "Old Sevier"), story("b", "Old Sevier"), story("c", "Ijams Nature Center"), story("d", "Kern's"), story("e", "Suttree Landing")],
 };
 const hubLead = { source: "old-sevier-district", what: "First Friday", story: "a" };
 
@@ -52,15 +52,15 @@ describe("checkResearch", () => {
     const r = checkResearch(registry, { checked: allChecked(), leads }, balanced);
     expect(r.errors).toHaveLength(2);
   });
-  it("fails No. 16's shape: nine Ijams Park stories and one from Old Sevier", () => {
-    const no16 = { feature: story("f", "Ijams Park"), stories: [...Array.from({ length: 8 }, (_, i) => story(`i${i}`, "Ijams Park")), story("p", "Old Sevier"), story("k", "Kern's"), story("u", "Urban Wilderness"), story("e", "Suttree Landing")] };
-    expect(districtTable(no16)["Ijams Park"]).toBe(9);
+  it("fails No. 16's shape: nine Ijams Nature Center stories and one from Old Sevier", () => {
+    const no16 = { feature: story("f", "Ijams Nature Center"), stories: [...Array.from({ length: 8 }, (_, i) => story(`i${i}`, "Ijams Nature Center")), story("p", "Old Sevier"), story("k", "Kern's"), story("u", "Urban Wilderness"), story("e", "Suttree Landing")] };
+    expect(districtTable(no16)["Ijams Nature Center"]).toBe(9);
     const r = checkResearch(registry, { checked: allChecked(), leads: [{ ...hubLead, story: "p" }] }, no16);
-    expect(r.errors.some((e) => /9 Ijams Park stories/.test(e))).toBe(true);
+    expect(r.errors.some((e) => /9 Ijams Nature Center stories/.test(e))).toBe(true);
     expect(r.errors.some((e) => /Old Sevier has 1 stories/.test(e))).toBe(true);
   });
   it("a quiet Old Sevier week passes only with a reason written down", () => {
-    const thin = { feature: story("f", "Kern's"), stories: [story("a", "Old Sevier"), story("c", "Ijams Park"), story("e", "Suttree Landing")] };
+    const thin = { feature: story("f", "Kern's"), stories: [story("a", "Old Sevier"), story("c", "Ijams Nature Center"), story("e", "Suttree Landing")] };
     const base = { checked: allChecked(), leads: [hubLead] };
     expect(checkResearch(registry, base, thin).errors).toHaveLength(1);
     expect(checkResearch(registry, { ...base, quiet: { "Old Sevier": "district feed had only the gameday guide" } }, thin).errors).toEqual([]);

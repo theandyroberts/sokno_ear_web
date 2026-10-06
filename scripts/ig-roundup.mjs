@@ -161,7 +161,7 @@ export const MIN_VENUE_ROUNDUP = 2;
  *
  * @param {object} a
  * @param {string} a.key         registry key, e.g. "ijams"
- * @param {string} a.name        the name copy uses, e.g. "Ijams Park"
+ * @param {string} a.name        the name copy uses, e.g. "Ijams Nature Center"
  * @param {string} a.handle      "@ijamsnaturecenter"
  * @param {Array<object>} a.stories   the folded stories
  */

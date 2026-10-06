@@ -189,7 +189,7 @@
       "href": "#after-brunch-special"
     },
     {
-      "label": "Ijams Park",
+      "label": "Ijams Nature Center",
       "labelColor": "teal",
       "days": [
         "Sat"
@@ -425,7 +425,7 @@
         },
         {
           "label": "The 50K",
-          "value": "A counterclockwise loop through seven parks and natural areas, Ijams Park included · five aid stations"
+          "value": "A counterclockwise loop through seven parks and natural areas, Ijams Nature Center included · five aid stations"
         },
         {
           "label": "The 10K",
@@ -439,7 +439,7 @@
       "body": [
         {
           "type": "paragraph",
-          "text": "Knox County has never had a trail 50K. It gets one Saturday morning, when the Urban Wilderness 50K leaves the Gateway Park at the end of James White Parkway at 7:30 and heads out on a thirty-one-mile loop that touches four city parks, a wildlife management area and three pieces of private trail land, Ijams Park, the Drop Inn and the Helix trails among them. The organizers put the climbing at close to four thousand feet. A 10K leaves the same line at nine and runs a figure-eight up to View Park for the look at Chilhowee Mountain and the Smokies."
+          "text": "Knox County has never had a trail 50K. It gets one Saturday morning, when the Urban Wilderness 50K leaves the Gateway Park at the end of James White Parkway at 7:30 and heads out on a thirty-one-mile loop that touches four city parks, a wildlife management area and three pieces of private trail land, Ijams Nature Center, the Drop Inn and the Helix trails among them. The organizers put the climbing at close to four thousand feet. A 10K leaves the same line at nine and runs a figure-eight up to View Park for the look at Chilhowee Mountain and the Smokies."
         },
         {
           "type": "subhead",
@@ -447,7 +447,7 @@
         },
         {
           "type": "paragraph",
-          "text": "The race's own description of the opening miles: a half mile of greenway to spread the field out, the first climb of the day up Red Bud, a descent through Rendezvous past the Drop Inn cabins, then into Ijams Park for the rolling climbs on Burnett Ridge and Ross Marble and a gentle stretch through the Hickory Loop. If you are out on those trails Saturday morning, expect runners, and give them the line."
+          "text": "The race's own description of the opening miles: a half mile of greenway to spread the field out, the first climb of the day up Red Bud, a descent through Rendezvous past the Drop Inn cabins, then into Ijams Nature Center for the rolling climbs on Burnett Ridge and Ross Marble and a gentle stretch through the Hickory Loop. If you are out on those trails Saturday morning, expect runners, and give them the line."
         },
         {
           "type": "subhead",
@@ -971,7 +971,7 @@
     },
     {
       "id": "big-day-birding",
-      "label": "Ijams Park",
+      "label": "Ijams Nature Center",
       "labelColor": "teal",
       "days": [
         "Sat"
@@ -979,7 +979,7 @@
       "layout": "imageLeft",
       "image": "/assets/spots/birding_binoculars.jpg",
       "imageCaption": "Count everything you can see or hear",
-      "title": "Ijams Park's Big Day birding hike counts fall migrants on Saturday morning",
+      "title": "Ijams Nature Center's Big Day birding hike counts fall migrants on Saturday morning",
       "deck": "A naturalist leads two hours of hiking and listing: identify as many species as you can on the trails, by sight and by sound, and log them on eBird. Beginners welcome, ages fourteen and up.",
       "facts": [
         {
@@ -1014,7 +1014,7 @@
       "body": [
         {
           "type": "paragraph",
-          "text": "A Big Day, in birding, is a race against the clock to see or hear as many species as possible. Ijams Park's October version is gentler: two hours on the trails with a naturalist, learning to bird by sight and sound during fall migration and recording what you find on the eBird app. The program is written for complete beginners and for people who already keep a list."
+          "text": "A Big Day, in birding, is a race against the clock to see or hear as many species as possible. Ijams Nature Center's October version is gentler: two hours on the trails with a naturalist, learning to bird by sight and sound during fall migration and recording what you find on the eBird app. The program is written for complete beginners and for people who already keep a list."
         },
         {
           "type": "paragraph",
@@ -1023,7 +1023,7 @@
       ],
       "sources": [
         {
-          "label": "Ijams Park — Big Day Birding Hike",
+          "label": "Ijams Nature Center — Big Day Birding Hike",
           "url": "https://www.ijams.org/event-details/big-day-birding-hike"
         },
         {
@@ -1042,14 +1042,14 @@
           "ijams"
         ],
         "igBanner": [
-          "Big Day birding hike at Ijams Park",
+          "Big Day birding hike at Ijams Nature Center",
           "Saturday, eight to ten, fifteen dollars"
         ]
       }
     },
     {
       "id": "storytime-flowers",
-      "label": "Ijams Park",
+      "label": "Ijams Nature Center",
       "labelColor": "teal",
       "days": [
         "Sat"
@@ -1070,7 +1070,7 @@
         },
         {
           "label": "Cost",
-          "value": "Free · parking $5 a car, free for Ijams Park members"
+          "value": "Free · parking $5 a car, free for Ijams members"
         },
         {
           "label": "Parking",
@@ -1089,7 +1089,7 @@
       ],
       "sources": [
         {
-          "label": "Ijams Park — Storytime at the Ijams Nature Playscape: Flowers!",
+          "label": "Ijams Nature Center — Storytime at the Ijams Nature Playscape: Flowers!",
           "url": "https://www.ijams.org/event-details/storytime-at-the-ijams-nature-playscape-flowers"
         }
       ],
@@ -1104,7 +1104,7 @@
           "ijams"
         ],
         "igBanner": [
-          "Free flower storytime at Ijams Park",
+          "Free flower storytime at Ijams Nature Center",
           "Saturday, ten to noon"
         ],
         "standing": true,
@@ -1328,7 +1328,7 @@
       "title": "Weekend Audio Briefing",
       "intro": "What's happening in SoKno this weekend.",
       "description": "Your weekend listen — Old Sevier Market opens on Sevier Avenue Saturday, a free Americana festival on the Kern's lawn Sunday, live spray painting at Printshop, the first Urban Wilderness 50K, a sold-out night at The 808, and where the music is Thursday through Sunday.",
-      "duration": "04:14",
+      "duration": "04:54",
       "src": "/audio/2026-10-07.mp3"
     },
     "calendar": [
@@ -1407,7 +1407,7 @@
       {
         "month": "OCT",
         "day": "10",
-        "title": "Big Day Birding Hike at Ijams Park",
+        "title": "Big Day Birding Hike at Ijams Nature Center",
         "meta": "8 – 10 AM · $15 · ages 14+ · 2915 Island Home Ave",
         "starred": false,
         "href": "#big-day-birding"

@@ -11,9 +11,10 @@
     "ijams": {
       "handle": "@ijamsnaturecenter",
       "name": "Ijams Nature Center",
-      "copyName": "Ijams Park",
+      "copyName": "Ijams Nature Center",
       "verified": "linked from the ijams.org footer; live profile 'Ijams Nature Center'",
-      "confidence": "high"
+      "confidence": "high",
+      "note": "Call it Ijams Nature Center, never 'Ijams Park' — the organization asked (note to Andy, 2026-10-06)"
     },
     "kerns": {
       "handle": "@kernsknox",

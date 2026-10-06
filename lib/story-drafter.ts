@@ -34,7 +34,7 @@ export type StoryDraft = {
   confidence: number;
 };
 
-const PILLS = ["Old Sevier", "Kern's", "Ijams Park", "Island Home", "Suttree Landing", "Urban Wilderness", "SoKno"];
+const PILLS = ["Old Sevier", "Kern's", "Ijams Nature Center", "Island Home", "Suttree Landing", "Urban Wilderness", "SoKno"];
 
 const DRAFT_SCHEMA = {
   type: "object",
@@ -133,7 +133,7 @@ async function requestDraft(apiKey: string, input: StoryDraftInput): Promise<Sto
             "Anything unknown, unverified, or ambiguous goes in followUpQuestions as a concrete question to ask the submitter.",
             "Write 1-3 short paragraphs. Facts strip holds the essentials (When / Where / The deal / Cost etc.).",
             "days: 3-letter day names only when the input states the day(s). label: the neighborhood pill; 'SoKno' when unclear.",
-            "Say 'Ijams Park' (never bare 'Ijams'). Kern's = the food-hall pocket; Old Sevier = the Sevier Avenue strip.",
+            "Say 'Ijams Nature Center' (never 'Ijams Park', never bare 'Ijams'). Kern's = the food-hall pocket; Old Sevier = the Sevier Avenue strip.",
             "If the input reads like speech-to-text, normalize only when context proves the meaning; otherwise ask in followUpQuestions.",
           ].join(" "),
         },

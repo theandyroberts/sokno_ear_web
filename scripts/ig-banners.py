@@ -12,7 +12,7 @@ automatically.
 Design — the Ear's own print language, readability first:
   · band color = the place's own color for the FIRST story from that place, then
     whichever palette color the week has used least (see band_colors) — a week of
-    Ijams Park stories used to come out as a wall of teal
+    Ijams Nature Center stories used to come out as a wall of teal
   · double ink rule between art and band; thin keyline frame inset in the band
   · line 1: PT Serif Bold (the site's headline font)
   · line 2: Special Elite caps, letterspaced, flanked by ★ (the label/ribbon look)
@@ -47,7 +47,7 @@ def has_banner(s):
 def band_colors(stories):
     """Band color for each story that gets a banner: {story id: color name}.
 
-    A story's labelColor is its PLACE (Old Sevier rust, Ijams Park teal, Kern's green).
+    A story's labelColor is its PLACE (Old Sevier rust, Ijams Nature Center teal, Kern's green).
     That is right for the pills on the site, where the color is how you find a place.
     On Instagram it meant the band said only how many stories a place had: No. 15 was
     9 teal banners out of 12 and No. 14 was 8 of 11, while the six best posts on record

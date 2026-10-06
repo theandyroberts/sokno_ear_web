@@ -4,7 +4,7 @@
     "ijamsMaxStories": 4,
     "ijamsMaxShare": 0.34,
     "oldSevierMinStories": 3,
-    "why": "Andy, 2026-10-02: No. 16 ran nine Ijams Park stories and one from Old Sevier on the weekend a music venue opened on Sevier Ave. Ijams Park is a drive for most readers; Old Sevier is where they are."
+    "why": "Andy, 2026-10-02: No. 16 ran nine Ijams Nature Center stories and one from Old Sevier on the weekend a music venue opened on Sevier Ave. Ijams Nature Center is a drive for most readers; Old Sevier is where they are."
   },
   "sources": [
     {
@@ -242,8 +242,8 @@
     },
     {
       "key": "ijams",
-      "name": "Ijams Park",
-      "district": "Ijams Park",
+      "name": "Ijams Nature Center",
+      "district": "Ijams Nature Center",
       "instagram": "ijamsnaturecenter",
       "web": [
         "https://www.ijams.org/calendar-of-events"

@@ -68,12 +68,12 @@ export function checkResearch(registry, log, episode) {
 
   // 3. The week is spread across the beat.
   const total = allStories(episode).length;
-  const ijams = table["Ijams Park"] ?? 0;
+  const ijams = table["Ijams Nature Center"] ?? 0;
   const oldSevier = table["Old Sevier"] ?? 0;
   if (rules.ijamsMaxStories != null && ijams > rules.ijamsMaxStories) {
-    errors.push(`${ijams} Ijams Park stories; the most in one episode is ${rules.ijamsMaxStories}. Keep the park's biggest things and drop the weekly classes`);
+    errors.push(`${ijams} Ijams Nature Center stories; the most in one episode is ${rules.ijamsMaxStories}. Keep the park's biggest things and drop the weekly classes`);
   } else if (rules.ijamsMaxShare != null && total >= 6 && ijams / total > rules.ijamsMaxShare) {
-    errors.push(`Ijams Park is ${ijams} of ${total} stories; it may be a third at most`);
+    errors.push(`Ijams Nature Center is ${ijams} of ${total} stories; it may be a third at most`);
   }
   if (rules.oldSevierMinStories != null && oldSevier < rules.oldSevierMinStories) {
     const why = log.quiet?.["Old Sevier"];

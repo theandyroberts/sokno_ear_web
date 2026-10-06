@@ -11,7 +11,7 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
 |---|---|---|
 | **SoKno** | **"SO-no"** (two beats: *So · No*) | NOT "sock-no." Short for South Knoxville. For TTS spell it **`So No`** — two separate words. On `eleven_v3` the hyphenated `So-No` read as "Sow-No" in the No. 13 sign-off (Andy, 2026-09-09); two plain words read right. Never "sock-no." |
 | Sevier Ave | "suh-VEER" (like the word *severe*) | Not "SEE-vee-er" or "Sue-veer." For TTS, spell it **`Severe`**. |
-| **Ijams** | **ONE syllable** — *times* without the T. Think the plural of "I'm": **I'ms**. "I'ms Park," "I'ms Nature Center." | Not "EYE-ams," not "EYE-jams," not "ih-JAMS." The J is silent **and there is no second syllable** — that's the part everyone gets wrong, including us. For TTS, spell it **`Imes`** — confirmed by Andy 2026-08-12 (he judged `Imes` and `I'ms` both correct and very close; `Imes` wins for having no apostrophe to trip the engine). The old `Eye-ams` spelling gave a two-beat read and shipped in every briefing Jul–Aug 2026. **Always say "Ijams Park"** in scripts & copy — never bare "Ijams" (the official "Ijams Nature Center" is fine but almost no one uses it). |
+| **Ijams** | **ONE syllable** — *times* without the T. Think the plural of "I'm": **I'ms**. "I'ms Nature Center." | Not "EYE-ams," not "EYE-jams," not "ih-JAMS." The J is silent **and there is no second syllable** — that's the part everyone gets wrong, including us. For TTS, spell it **`Imes`** — confirmed by Andy 2026-08-12 (he judged `Imes` and `I'ms` both correct and very close; `Imes` wins for having no apostrophe to trip the engine). The old `Eye-ams` spelling gave a two-beat read and shipped in every briefing Jul–Aug 2026. **Always say "Ijams Nature Center"** in scripts & copy (TTS: `Imes Nature Center`) — never "Ijams Park" and never bare "Ijams." The organization asked to be called Ijams Nature Center (note to Andy, 2026-10-06); "Ijams Park" was house style through No. 16. |
 | **Resy** | **"REZ-ee"** | The reservation platform. For TTS spell it **`Rezzy`** — plain "Resy" reads as "reese". Added 2026-09-01 (Puckers takes bookings there). |
 | **Krutch Park** | **"crutch"** | The downtown park on Clinch Ave (KAT's football shuttle stop). Confirmed by Andy 2026-09-01. Reads correctly as spelled — no TTS respelling needed. |
 | **Neyland** | **"NEE-land"** — rhymes with *knee* | Neyland Stadium / Neyland Drive. Not "NAY-land." For TTS spell it **`Nee-land`**. Added 2026-09-01 for the No. 12 briefing (first home game of the season). |
@@ -53,7 +53,7 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
   write a venue/location roundup. Each subject is its own `Story` with its own headline,
   its own art, its own scanner card and its own anchor. If a venue has two events that
   weekend, that is two stories. (Andy, 2026-08-25 — a feature headlined "Opera at the
-  quarry, then the moon goes dark" and a five-event "Ijams Park after dark" roundup were
+  quarry, then the moon goes dark" and a five-event "Ijams Park after dark" roundup (the name was house style then) were
   the offense.) **There is no cap on story count** — twelve single-subject stories beat
   five combined ones.
   - **The test:** an event earns an article when it can carry **its own headline AND its
@@ -121,10 +121,10 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
   *that*, and if it doesn't exist, the advice doesn't run. Note the **Regal garage is not
   in South Knoxville**; don't cite it as a SoKno lot.
 
-- **Spread the week across the beat.** Old Sevier is where most readers are; Ijams Park is a
+- **Spread the week across the beat.** Old Sevier is where most readers are; Ijams Nature Center is a
   drive for them. An episode carries **at least three Old Sevier stories** and **at most four
-  from Ijams Park, never more than a third of the episode** — the park's biggest things that
-  week, not its weekly classes. (Andy, 2026-10-02 — No. 16 ran nine Ijams Park stories and one
+  from Ijams Nature Center, never more than a third of the episode** — the park's biggest things that
+  week, not its weekly classes. (Andy, 2026-10-02 — No. 16 ran nine Ijams Nature Center stories and one
   from Old Sevier on the weekend The 808 opened on Sevier Avenue, First Friday filled the
   district and a play closed at the Borderland Playhouse. All three were on the Old Sevier
   District's Instagram and none was on a website, which was the only place research looked.)
@@ -151,7 +151,7 @@ Two lines, `social.igBanner`:
 
 - **Line 1** (PT Serif) — the event. **Name the venue here** wherever the sentence
   will carry it: *"Pint night at Hi-Wire," "Game day rooms at Kern's," "Free
-  storytime at Ijams Park."*
+  storytime at Ijams Nature Center."*
 - **Line 2** (Special Elite caps) — **the day, and the time.** *"Saturday, ten to
   noon." "Thursday, all-day happy hour too."*
 
@@ -159,10 +159,10 @@ The venue may sit on line 2 instead when line 1 reads better without it (*"Free
 trivia Thursday" / "Seven o'clock at Trailhead"*) — the card travels whole, so
 either line counts. What must never happen is neither line naming it.
 
-House style still applies inside the band: **"Ijams Park," never bare "Ijams."**
+House style still applies inside the band: **"Ijams Nature Center," never "Ijams Park," never bare "Ijams."**
 
 **The band's color is not the place's color.** On the site a pill's color is how you
-find a place, one color each. On Instagram that made a week of Ijams Park stories a wall
+find a place, one color each. On Instagram that made a week of Ijams Nature Center stories a wall
 of teal (9 banners of 12 in No. 15). `scripts/ig-banners.py` gives the first story from
 a place its own color and spreads the rest across gold, rust, green, ink and teal.
 `social.igBand` names one outright.
@@ -181,14 +181,17 @@ coverage *about* them. The venue's name in our own type does the same job.
 ## SoKno locations (the pill vocabulary)
 
 Story **labels are geographic location pills** — make them accurate. Keep one color per
-place for recognition: **Old Sevier = rust, Ijams Park = teal, Kern's = green.**
+place for recognition: **Old Sevier = rust, Ijams Nature Center = teal, Kern's = green.**
 
 - **Old Sevier** — the Sevier Avenue corridor (the main drag); Honeybee Coffee, Alliance
   Brewing, SouthSide Garage, the Pink Cactus, Fly by Night.
 - **Kern's** — the Kern's Bakery / Food Hall pocket. Its own SoKno section, **no water
   view** (starts ~2 cross streets up from the river). Roni's Mac Bar lives here.
-- **Ijams Park** — Ijams Nature Center / Meads Quarry; its own call-out (fireflies, bird
-  banding, the bluegrass jam). Say "Ijams Park," never just "nature center" — and never bare "Ijams."
+- **Ijams Nature Center** — the pill, the label and the name in copy; Meads Quarry is part of it. Its own
+  call-out (fireflies, bird banding, the bluegrass jam). Say "Ijams Nature Center," never "Ijams Park"
+  (house style until No. 16; the organization asked for its name, note to Andy 2026-10-06), never bare
+  "Ijams," and never just "the nature center" on first mention. The research rules in `content/sources.json`
+  and `scripts/research-lib.mjs` key on the label "Ijams Nature Center."
 - **Suttree Landing** — Suttree Landing Park, the riverside park down on the waterfront.
   Reach it by turning toward the river at the Citgo on Sevier, down Claude St to Waterfront
   Dr. Give it its own pill (not "South Waterfront").
