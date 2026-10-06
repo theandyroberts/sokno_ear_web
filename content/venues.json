@@ -8,7 +8,10 @@
   "venues": {
     "angry-dumplings": {
       "name": "Angry Dumplings",
-      "match": ["Angry Dumplings", "Angry Dumpling"],
+      "match": [
+        "Angry Dumplings",
+        "Angry Dumpling"
+      ],
       "site": "https://www.angrydumplingtn.com/",
       "logo": "/assets/venues/angry-dumplings.png",
       "source": "https://www.angrydumplingtn.com/assets/angry-dumplings-logo-B_9ifeA1.png",
@@ -20,7 +23,9 @@
     },
     "earls": {
       "name": "Earl's",
-      "match": ["Earl's"],
+      "match": [
+        "Earl's"
+      ],
       "site": "https://earlsknox.com/",
       "logo": "/assets/venues/earls.png",
       "source": "https://static.spotapps.co/website_images/ab_websites/620499_website_v1/logo_new_2.png",
@@ -31,7 +36,9 @@
     },
     "hi-wire": {
       "name": "Hi-Wire Brewing",
-      "match": ["Hi-Wire"],
+      "match": [
+        "Hi-Wire"
+      ],
       "site": "https://hiwirebrewing.com/knoxville/",
       "logo": "/assets/venues/hi-wire.svg",
       "source": "inline <svg aria-label=\"weblogo\"> in the hiwirebrewing.com page header",
@@ -43,7 +50,11 @@
     },
     "kerns": {
       "name": "Kern's",
-      "match": ["Kern's", "Kern's Food Hall", "Kern's Food Hall rooftop"],
+      "match": [
+        "Kern's",
+        "Kern's Food Hall",
+        "Kern's Food Hall rooftop"
+      ],
       "site": "https://kernsbakery.com/",
       "logo": "/assets/venues/kerns.png",
       "source": "https://kernsbakery.com/wp-content/uploads/2025/10/KERNS-FINAL-LOGO-Black.png",
@@ -54,7 +65,10 @@
     },
     "the-pink-cactus": {
       "name": "The Pink Cactus",
-      "match": ["The Pink Cactus", "Pink Cactus"],
+      "match": [
+        "The Pink Cactus",
+        "Pink Cactus"
+      ],
       "site": "https://www.thepinkcactusknox.com/",
       "logo": "/assets/venues/the-pink-cactus.svg",
       "source": "inline 631×334 <svg> in the thepinkcactusknox.com header",
@@ -65,7 +79,10 @@
     },
     "southside-garage": {
       "name": "SouthSide Garage",
-      "match": ["SouthSide Garage", "Southside Garage"],
+      "match": [
+        "SouthSide Garage",
+        "Southside Garage"
+      ],
       "site": "https://southsidegarageknox.com/",
       "logo": "/assets/venues/southside-garage.png",
       "source": "https://static.spotapps.co/website_images/ab_websites/127050_website_v1/logo_new.png",
@@ -76,7 +93,10 @@
     },
     "sokno-taco": {
       "name": "SoKno Taco Cantina",
-      "match": ["SoKno Taco Cantina", "SoKno Taco"],
+      "match": [
+        "SoKno Taco Cantina",
+        "SoKno Taco"
+      ],
       "site": "https://soknota.co/",
       "logo": "/assets/venues/sokno-taco.png",
       "source": "https://soknota.co/wp-content/uploads/2019/03/sokno-taco-cantina-logo.png",
@@ -88,7 +108,9 @@
     },
     "south-coast-pizza": {
       "name": "South Coast Pizza",
-      "match": ["South Coast Pizza"],
+      "match": [
+        "South Coast Pizza"
+      ],
       "site": "https://southcoastpizza.com/",
       "logo": "/assets/venues/south-coast-pizza.png",
       "source": "https://static.spotapps.co/website_images/ab_websites/120402_website_v1/logo.png",
@@ -100,7 +122,10 @@
     },
     "puckers": {
       "name": "Puckers Sports Grill",
-      "match": ["Puckers Sports Grill", "Puckers"],
+      "match": [
+        "Puckers Sports Grill",
+        "Puckers"
+      ],
       "site": "https://puckersgatlinburg.com/",
       "logo": "/assets/venues/puckers.png",
       "source": "https://puckersgatlinburg.com/wp-content/uploads/2024/07/Puckers-Full-Logo-2.19.25.png",
@@ -112,7 +137,10 @@
     },
     "alliance-brewing": {
       "name": "Alliance Brewing Company",
-      "match": ["Alliance Brewing", "Alliance"],
+      "match": [
+        "Alliance Brewing",
+        "Alliance"
+      ],
       "site": "https://alliancebrewing.com/",
       "logo": "/assets/venues/alliance-brewing.png",
       "source": "https://alliancebrewing.com/wp-content/themes/alliancebrewing/images/abc--race--HOT.png",
@@ -124,7 +152,10 @@
     },
     "trailhead": {
       "name": "Trailhead Beer Market",
-      "match": ["Trailhead Beer Market", "Trailhead"],
+      "match": [
+        "Trailhead Beer Market",
+        "Trailhead"
+      ],
       "site": "https://www.instagram.com/trailheadbeer/",
       "logo": null,
       "source": null,
@@ -135,7 +166,9 @@
     },
     "mimosas": {
       "name": "Mimosas",
-      "match": ["Mimosas"],
+      "match": [
+        "Mimosas"
+      ],
       "site": "https://mimosasknoxville.com/",
       "logo": null,
       "source": null,
@@ -143,6 +176,20 @@
       "treatment": null,
       "fetched": "2026-08-29",
       "confidence": "none"
+    },
+    "printshop": {
+      "name": "Printshop Beer Co.",
+      "match": [
+        "Printshop Beer Co.",
+        "Printshop"
+      ],
+      "site": "https://printshopbeer.com/",
+      "logo": "/assets/venues/printshop.png",
+      "source": "https://printshopbeer.com/ (header wordmark; the site's own file at static.spotapps.co/website_images/ab_websites/184025_website_v1/logo.png is 210x99)",
+      "sourceNote": "Andy's capture of the wordmark from printshopbeer.com, 2026-10-06, at 1320px; white background knocked out to transparency, trimmed. The site's safari-pinned-tab.svg is only the P mark.",
+      "treatment": "as-is",
+      "fetched": "2026-10-06",
+      "confidence": "high"
     }
   }
 }
