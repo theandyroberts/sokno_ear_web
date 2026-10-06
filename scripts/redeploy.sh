@@ -219,6 +219,18 @@ echo "✓ $bundle_checked Next static files serve"
 
 # Keep the 5 newest releases (~135M each) so any of the last few deploys can be
 # flipped back to by hand: ln -sfn <release> current && pm2 reload soknoear
-ls -1dt "$RELEASES"/*/ 2>/dev/null | tail -n +6 | xargs -r rm -rf
+#
+# Newest by NAME, never by mtime. cp -a preserves the staging dir's timestamp, so
+# every release cut from one build shares the same mtime; on 2026-10-06 the sixth
+# deploy of the day tied six ways under `ls -t`, and the prune deleted the release
+# it had just made live (502 until `current` was flipped back by hand). The names
+# start with the cut time, so a plain reverse sort is the true order. The live
+# release is skipped outright as a second guard.
+LIVE=$(readlink -f "$CURRENT" 2>/dev/null || true)
+for old in $(ls -1d "$RELEASES"/*/ 2>/dev/null | sort -r | tail -n +6); do
+  old=${old%/}
+  [ "$(readlink -f "$old")" = "$LIVE" ] && continue
+  rm -rf "$old"
+done
 
 echo "deployed $NEW → $RELEASE (deps=$needs_deps build=$needs_build)"
