@@ -157,12 +157,12 @@
         "Trailhead"
       ],
       "site": "https://www.instagram.com/trailheadbeer/",
-      "logo": null,
-      "source": null,
-      "sourceNote": "NO CLEAN SOURCE YET. trailheadbeermarket.com is a parked GoDaddy lander; Untappd shows a generic placeholder; Toast and Yelp block fetching. The only real mark found is the @trailheadbeer Instagram avatar — their bottle-cap sign shot against a wood wall, and Instagram caps it at 150×150, too small and too busy to sit on a cream tile. Falls back to the wordmark tile until Andy can get a file from the bar.",
-      "treatment": null,
-      "fetched": "2026-08-29",
-      "confidence": "none"
+      "logo": "/assets/venues/trailhead.png",
+      "source": "https://graph.facebook.com/trailheadbeermarket/picture?type=large&width=720&height=720",
+      "sourceNote": "the bar's own Facebook page picture (facebook.com/trailheadbeermarket), the bottle-cap mark at 720px; the wood-wall background was removed and the cap trimmed to its edge. Instagram caps the same avatar at 150px and trailheadbeermarket.com is parked. Andy, 2026-10-06: the cap beats the typeset tile.",
+      "treatment": "as-is",
+      "fetched": "2026-10-06",
+      "confidence": "high"
     },
     "mimosas": {
       "name": "Mimosas",
