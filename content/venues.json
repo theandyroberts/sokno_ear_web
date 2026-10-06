@@ -190,6 +190,20 @@
       "treatment": "as-is",
       "fetched": "2026-10-06",
       "confidence": "high"
+    },
+    "the-808": {
+      "name": "The 808",
+      "match": [
+        "The 808",
+        "808 Sevier"
+      ],
+      "site": "https://808knox.com/",
+      "logo": "/assets/venues/the-808.png",
+      "source": "https://808knox.com/wp-content/uploads/2026/09/808-Stacked-FullColor-WhiteType.png",
+      "sourceNote": "header logo on 808knox.com, the venue's own upload (1346x1292)",
+      "treatment": "ink-recolor",
+      "fetched": "2026-10-06",
+      "confidence": "high"
     }
   }
 }
