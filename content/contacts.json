@@ -537,6 +537,71 @@
       "introduced": null,
       "source": "https://www.flybynightknox.com/",
       "notes": "906 Sevier Ave Suite 126. By the team behind Tern Club; no individuals named. Invites inquiries by email or Instagram DM."
+    },
+    "printshop": {
+      "name": "Printshop Beer Co.",
+      "match": [
+        "Printshop"
+      ],
+      "instagram": "@printshopbeer",
+      "website": "https://printshopbeer.com/",
+      "contactPage": "https://printshopbeer.com/",
+      "email": "info@printshopbeer.com",
+      "to": null,
+      "phone": "(865) 474-9591",
+      "people": [],
+      "salutation": "Hiya Printshop team,",
+      "introduced": null,
+      "source": "https://printshopbeer.com/",
+      "notes": "1532 Island Home Ave. Email and phone are in the site header. Events calendar at /knoxville-south-knoxville-printshop-beer-co-events. Added 2026-10-06 (No. 17: KNOX-ILL, the vegan BBQ pop-up)."
+    },
+    "old-sevier-market": {
+      "name": "Old Sevier Market",
+      "match": [
+        "Old Sevier Market"
+      ],
+      "instagram": "@oldseviermarket",
+      "website": "https://oldseviermarket.com/",
+      "contactPage": "https://oldseviermarket.com/",
+      "email": "info@oldseviermarket.com",
+      "to": null,
+      "phone": null,
+      "people": [],
+      "salutation": "Hiya Old Sevier Market team,",
+      "introduced": null,
+      "source": "https://oldseviermarket.com/",
+      "notes": "Grocery on Sevier Ave, opened 2026-10-10. The site lists info@oldseviermarket.com under Contact Us and Oldseviermarket@gmail.com in the header; using info@. Added 2026-10-06 (No. 17 feature)."
+    },
+    "the-808": {
+      "name": "The 808",
+      "match": [
+        "The 808",
+        "808 Sevier"
+      ],
+      "instagram": "@808knox",
+      "website": "https://808knox.com/",
+      "contactPage": "https://808knox.com/",
+      "email": null,
+      "to": null,
+      "phone": null,
+      "people": [
+        {
+          "name": "Brian Coakley",
+          "role": "Co-owner",
+          "email": null,
+          "source": "https://blanknews.com/the-808-built-by-fans-for-people-who-believe-in-the-power-of-the-room/"
+        },
+        {
+          "name": "Scott Campbell",
+          "role": "Co-owner",
+          "email": null,
+          "source": "https://blanknews.com/the-808-built-by-fans-for-people-who-believe-in-the-power-of-the-room/"
+        }
+      ],
+      "salutation": "Hiya 808 team,",
+      "introduced": null,
+      "source": "https://808knox.com/",
+      "notes": "808 Sevier Ave, opened 2026-10-02. No email published; the site has a contact form with topics (General Info, Press & Marketing). Reach by Instagram DM or the form. Added 2026-10-06 (No. 16 opening, No. 17 Oakenfold sell-out)."
     }
   }
 }
