@@ -151,7 +151,7 @@
         }
       ],
       "salutation": "Hiya Pink Cactus team,",
-      "introduced": null,
+      "introduced": "2026-10-07",
       "source": "https://www.thepinkcactusknox.com/contact",
       "notes": "1147 Sevier Ave. Email and phone are on the venue's contact page and Facebook intro. Names are from a WBIR story, not the venue's own site — ask for Jenny (marketing/events) via the general inbox."
     },
@@ -412,7 +412,7 @@
         }
       ],
       "salutation": null,
-      "introduced": null,
+      "introduced": "2026-10-07",
       "source": "https://wdvx.com/about/press/",
       "notes": "301 S Gay St (Visit Knoxville building). The press page asks writers to email gm@wdvx.com, so the note goes there, addressed to Tony. Also studio@wdvx.com, musicdirector@wdvx.com."
     },
@@ -534,7 +534,7 @@
       "phone": "(865) 247-5022",
       "people": [],
       "salutation": "Hiya Fly By Night team,",
-      "introduced": null,
+      "introduced": "2026-10-07",
       "source": "https://www.flybynightknox.com/",
       "notes": "906 Sevier Ave Suite 126. By the team behind Tern Club; no individuals named. Invites inquiries by email or Instagram DM."
     },
@@ -551,7 +551,7 @@
       "phone": "(865) 474-9591",
       "people": [],
       "salutation": "Hiya Printshop team,",
-      "introduced": null,
+      "introduced": "2026-10-07",
       "source": "https://printshopbeer.com/",
       "notes": "1532 Island Home Ave. Email and phone are in the site header. Events calendar at /knoxville-south-knoxville-printshop-beer-co-events. Added 2026-10-06 (No. 17: KNOX-ILL, the vegan BBQ pop-up)."
     },
@@ -563,14 +563,14 @@
       "instagram": "@oldseviermarket",
       "website": "https://oldseviermarket.com/",
       "contactPage": "https://oldseviermarket.com/",
-      "email": "info@oldseviermarket.com",
-      "to": null,
+      "email": "oldseviermarket@gmail.com",
+      "to": "oldseviermarket@gmail.com",
       "phone": null,
       "people": [],
       "salutation": "Hiya Old Sevier Market team,",
       "introduced": null,
       "source": "https://oldseviermarket.com/",
-      "notes": "Grocery on Sevier Ave, opened 2026-10-10. The site lists info@oldseviermarket.com under Contact Us and Oldseviermarket@gmail.com in the header; using info@. Added 2026-10-06 (No. 17 feature)."
+      "notes": "Grocery on Sevier Ave, opened 2026-10-10. The site lists info@oldseviermarket.com under Contact Us and Oldseviermarket@gmail.com in the header; using info@. Added 2026-10-06 (No. 17 feature). 2026-10-07: info@oldseviermarket.com bounced (550 5.1.1, address not found); switched to Oldseviermarket@gmail.com from the site header."
     },
     "the-808": {
       "name": "The 808",
