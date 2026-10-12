@@ -1,0 +1,1807 @@
+{
+  "slug": "2026-10-14",
+  "volume": 1,
+  "number": 18,
+  "episode": "Weekend Episode",
+  "date": "2026-10-14",
+  "dateLabel": "Thu–Sun, Oct 15–18, 2026",
+  "shortDate": "Oct 15–18",
+  "place": "South Knoxville, TN",
+  "newsletter": {
+    "subject": "A free fall festival on the Kern's lawn — and dogs in costume on a runway at Hi-Wire"
+  },
+  "feature": {
+    "id": "kerns-fall-fest",
+    "label": "Kern's",
+    "labelColor": "green",
+    "days": [
+      "Sun"
+    ],
+    "layout": "imageTop",
+    "image": "/assets/spots/fallfest_pumpkin.jpg",
+    "imageCaption": "Pumpkin painting is on the lawn all afternoon",
+    "title": "The Kern's Bakery Fall Festival puts line dancing, a School of Rock set and pumpkin painting on the lawn Sunday, free",
+    "deck": "The old bakery's lawn turns into a fall fair for an afternoon: a dance lesson for everyone, a kids' rock band, pumpkins, axes and a village of local vendors. Nobody pays to get in.",
+    "facts": [
+      {
+        "label": "When",
+        "value": "Sun Oct 18 · live schedule 2 – 4 PM"
+      },
+      {
+        "label": "Where",
+        "value": "The lawn at Kern's · 2201 Kern's Rising Way"
+      },
+      {
+        "label": "Cost",
+        "value": "Free admission"
+      },
+      {
+        "label": "Schedule",
+        "value": "2 – 3 PM line dancing with Cowtown Studios · 3:15 – 4 PM School of Rock"
+      },
+      {
+        "label": "Also on the lawn",
+        "value": "Pumpkin painting · axe throwing · face painting · a local vendor village"
+      },
+      {
+        "label": "Vendors",
+        "value": "Making Faces Face Painting · Kyra Bakes Cookies · Circa Records · Basement Bratz Art · Paige's Art Room · Sun Essentials · Feed the Children · The Garden Pjs · Mae Larue Boutique · Mounts Family Farm · Stem to Stem"
+      },
+      {
+        "label": "Food hall hours",
+        "value": "Sunday 9 AM – 9 PM"
+      },
+      {
+        "label": "Weather",
+        "value": "Sunny and 68 · a cold front comes through Friday night, so the first real fall afternoon"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Kern's has been using its lawn hard this month, with a free Americana festival last Sunday and a movie night Wednesday, and the biggest of the lot is the Fall Festival this Sunday afternoon. The food hall's own posts call it a full day on the lawn: a live schedule from two to four, a market of local makers, pumpkin painting, axe throwing and face painting, with free admission. Its Sunday post put it in three words, crisp air, live tunes, line dancing."
+      },
+      {
+        "type": "subhead",
+        "text": "The two o'clock lesson"
+      },
+      {
+        "type": "paragraph",
+        "text": "The afternoon opens at two with an hour of line dancing led by Cowtown Studios, the same crew that runs the Friday-night Ho'Down Socials at Kern's, so this is the daytime, all-ages version. Nobody needs a partner or boots. At 3:15 the stage goes to School of Rock, the music school whose student bands play real sets, for forty-five minutes. In between and around it, the pumpkins get painted and the axes get thrown."
+      },
+      {
+        "type": "subhead",
+        "text": "The practical part"
+      },
+      {
+        "type": "paragraph",
+        "text": "Admission is free and the food hall behind the lawn is open nine to nine, so lunch, a seasonal beer and dessert are all inside. Eleven vendors are on the list, from cookies and vinyl records to a boutique and a family farm. The cold front that comes through Friday night leaves Sunday sunny and 68, which is sweater weather for the first time this fall; bring a blanket for the grass. The Titans play in Indianapolis at one if someone in your party needs a screen, and the bars inside have them."
+      },
+      {
+        "type": "agenda",
+        "title": "Sunday on the lawn",
+        "rows": [
+          {
+            "time": "2:00 PM",
+            "what": "Line dancing with Cowtown Studios"
+          },
+          {
+            "time": "3:15 PM",
+            "what": "School of Rock live"
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Kern's on Instagram — Fall Festival schedule and vendors",
+        "url": "https://www.instagram.com/kernsknox/p/Dd6FvuPo-ay/"
+      },
+      {
+        "label": "Kern's on Instagram — Fall Fest is one week away, free admission",
+        "url": "https://www.instagram.com/kernsknox/p/DeH6bELoU-O/"
+      },
+      {
+        "label": "Kern's — hours",
+        "url": "https://kernsbakery.com/public-events/"
+      },
+      {
+        "label": "National Weather Service — Knoxville forecast",
+        "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+      }
+    ],
+    "event": {
+      "startDate": "2026-10-18T14:00:00-04:00",
+      "endDate": "2026-10-18T16:00:00-04:00",
+      "locationName": "Kern's",
+      "locationAddress": "2201 Kern's Rising Way, Knoxville, TN 37920"
+    },
+    "social": {
+      "igTags": [
+        "kerns"
+      ],
+      "igBanner": [
+        "Fall Festival on the Kern's lawn, free",
+        "Sunday, two to four"
+      ]
+    }
+  },
+  "scanner": [
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Sun"
+      ],
+      "hot": true,
+      "image": "/assets/spots/fallfest_pumpkin.jpg",
+      "title": "Fall Festival on the Kern's lawn",
+      "blurb": "Line dancing at two, School of Rock at 3:15, pumpkins, axes and eleven vendors. Free, and the first sweater-weather Sunday.",
+      "cue": "Jump to story",
+      "href": "#kerns-fall-fest"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "hot": true,
+      "image": "/assets/spots/pupoween_witchdog.jpg",
+      "title": "Pup-O-Ween at Hi-Wire",
+      "blurb": "Dogs in costume walk a runway at three. Five dollars a dog, all of it to a small-breed rescue.",
+      "cue": "Jump to story",
+      "href": "#pup-o-ween-hiwire"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "hot": false,
+      "image": "/assets/spots/goodbye_june_mic.jpg",
+      "title": "Goodbye June and Danny Worsnop at The 808",
+      "blurb": "Blues and rock on Sevier Avenue Friday at seven. Eighteen and up, and mind where you park.",
+      "cue": "Jump to story",
+      "href": "#goodbye-june-808"
+    },
+    {
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Fri",
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/starlight_paddle_night.jpg",
+      "title": "Starlight Paddle on the river",
+      "blurb": "Two hours in a kayak after dark with a naturalist, Friday or Saturday at seven. Headlamps provided; a warm layer is on you.",
+      "cue": "Jump to story",
+      "href": "#starlight-paddle"
+    },
+    {
+      "label": "Urban Wilderness",
+      "labelColor": "ink",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/scruffycat_muddy_grin.jpg",
+      "title": "ScruffyCat: 100 miles of Knoxville trail in a day",
+      "blurb": "A self-supported mountain bike tour of every trail in town, with 50- and 25-mile versions and a bonfire after.",
+      "cue": "Jump to story",
+      "href": "#scruffycat-ride"
+    },
+    {
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/storytime_binoculars.jpg",
+      "title": "Birds at Saturday storytime",
+      "blurb": "Free stories and crafts in the woods at the Nature Playscape, ten to noon. Bring a blanket; parking is five dollars.",
+      "cue": "Jump to story",
+      "href": "#storytime-birds"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/first_bass_dancer.jpg",
+      "title": "First Bass x Planet Doom at the Pink Cactus",
+      "blurb": "Ten DJs on two stages, eight to one, twenty dollars, eighteen and up. The loud end of Saturday night.",
+      "cue": "Jump to story",
+      "href": "#first-bass-pink-cactus"
+    },
+    {
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/specials_beer_bucket.jpg",
+      "title": "Alabama at 3:30, and the Vols board at Earl's",
+      "blurb": "The game-day board on Waterfront Drive: two dollars off drafts and pizza, buckets at six for five.",
+      "cue": "Jump to story",
+      "href": "#specials-board"
+    }
+  ],
+  "stories": [
+    {
+      "id": "pup-o-ween-hiwire",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/pupoween_witchdog.jpg",
+      "imageCaption": "Spookiest Pooch is one of three categories",
+      "title": "Pup-O-Ween puts dogs in costume on a runway at Hi-Wire Sunday, five dollars a dog for a rescue",
+      "deck": "The brewery's annual dog costume contest is back on the Barber Street deck, and every entry fee goes to Small Breed Rescue of East Tennessee. The runway starts at three; come to watch for nothing.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Oct 18 · 2 – 5 PM · check-in 2 – 2:45 · runway at 3"
+        },
+        {
+          "label": "Where",
+          "value": "Hi-Wire Brewing · 2020 Barber St"
+        },
+        {
+          "label": "Entry",
+          "value": "$5 per dog, all of it to Small Breed Rescue of East Tennessee · free to watch"
+        },
+        {
+          "label": "Categories",
+          "value": "Spookiest Pooch · Most Creative Canine · Dynamic Duo (dog and owner)"
+        },
+        {
+          "label": "Also",
+          "value": "A Halloween photo booth by Cassie Krause Photography"
+        },
+        {
+          "label": "Rules",
+          "value": "All breeds welcome · leashed and well-behaved · ask before approaching a dog you don't know"
+        },
+        {
+          "label": "Taproom hours",
+          "value": "Sunday noon – 9 PM"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 68"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The Old Sevier District's Halloween lineup, posted on the first of the month, lists Pup-O-Ween at Hi-Wire for October 18, and the brewery's own ticket page fills in the rest: a dog costume contest on the taproom deck from two to five on Sunday, with check-in from two to a quarter of three and the runway at three. Entry is five dollars a dog, and all of it goes to Small Breed Rescue of East Tennessee, the all-volunteer group that places displaced and abandoned small dogs."
+        },
+        {
+          "type": "subhead",
+          "text": "Three categories, one runway"
+        },
+        {
+          "type": "paragraph",
+          "text": "Dogs compete in three categories: Spookiest Pooch for the Halloween-spirited, Most Creative Canine for the original, and Dynamic Duo for a dog and owner in coordinated costumes. Cassie Krause Photography, which shoots pets for a living, runs a Halloween photo booth. The brewery's rules are the usual ones: every breed is welcome, every dog stays on a leash and on its best behavior, and you ask before you pet someone else's."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "Watching costs nothing, and the taproom is open noon to nine on Sunday with twenty taps, two decks and food ordered from Redbud Kitchen downstairs. It is sunny and 68, so the covered deck and the rooftop one both work. If you are coming from the Fall Festival at Kern's, the runway at three lands in the middle of the line-dancing hour; pick one and walk to the other."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Hi-Wire Brewing — Pup-o-Ween Dog Costume Contest, Oct 18, 2026 (the brewery's ticket page)",
+          "url": "https://www.simpletix.com/e/pup-o-ween-dog-costume-contest-hi-wire-bre-tickets-294296"
+        },
+        {
+          "label": "Old Sevier District on Instagram — the Spooky SZN lineup",
+          "url": "https://www.instagram.com/oldsevierdistrict/p/Dd9RBY2lo0f/"
+        },
+        {
+          "label": "Hi-Wire Brewing — Knoxville taproom hours",
+          "url": "https://hiwirebrewing.com/knoxville/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-18T14:00:00-04:00",
+        "endDate": "2026-10-18T17:00:00-04:00",
+        "locationName": "Hi-Wire Brewing Knoxville",
+        "locationAddress": "2020 Barber St, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "hiwire",
+          "old-sevier"
+        ],
+        "igBanner": [
+          "Pup-O-Ween: dog costumes on a runway at Hi-Wire",
+          "Sunday, runway at three"
+        ]
+      }
+    },
+    {
+      "id": "goodbye-june-808",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/goodbye_june_mic.jpg",
+      "imageCaption": "The venue's post promises blues and rock",
+      "title": "Goodbye June and Danny Worsnop bring a blues-rock double bill to The 808 Friday",
+      "deck": "Two weeks after it opened, the Sevier Avenue music venue has its first Friday-night rock show. Doors and show are early, the patio has a hot-dog cart, and the parking map matters.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 16 · 7 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The 808 · 808 Sevier Ave"
+        },
+        {
+          "label": "Ages",
+          "value": "18 and up"
+        },
+        {
+          "label": "Tickets",
+          "value": "808knox.com"
+        },
+        {
+          "label": "Food",
+          "value": "Average Wieners sells hot dogs on the patio at every show"
+        },
+        {
+          "label": "Parking",
+          "value": "Use the venue's map · do not park across from Trailhead Beer Market or in the Borderland Tees lot"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly sunny and 80, then the front: 46 overnight"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The 808 opened on the first weekend of October and sold out its second show, so a Friday-night rock bill is the venue settling into a rhythm. Goodbye June and Danny Worsnop share the stage on October 16; the venue's own post bills it as their unique blend of blues and rock. The schedule on 808knox.com puts the show at seven, eighteen and up, with tickets on the site."
+        },
+        {
+          "type": "subhead",
+          "text": "Before you go"
+        },
+        {
+          "type": "paragraph",
+          "text": "Two things from the venue's feed this past week. Average Wieners now sets up on the patio at every show, so dinner can be a hot dog between sets. And the parking update: The 808 posted a map and asked people not to park across the street from Trailhead Beer Market, which sits on Island Home Avenue behind the venue. The Borderland Tees lot next door still tows. Friday is mostly sunny and 80, with a cold front arriving overnight; the walk back to the car will be a lot cooler than the walk in."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The 808 — live music schedule",
+          "url": "https://808knox.com/"
+        },
+        {
+          "label": "The 808 on Instagram — Goodbye June and Danny Worsnop, Oct 16",
+          "url": "https://www.instagram.com/808knox/p/DeKMuC_ir2f/"
+        },
+        {
+          "label": "The 808 on Instagram — parking update",
+          "url": "https://www.instagram.com/808knox/p/DePgcnxFGEw/"
+        },
+        {
+          "label": "The 808 on Instagram — Average Wieners on the patio",
+          "url": "https://www.instagram.com/808knox/p/DePAR3ckQSj/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-16T19:00:00-04:00",
+        "locationName": "The 808",
+        "locationAddress": "808 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "the-808"
+        ],
+        "igBanner": [
+          "Goodbye June and Danny Worsnop at The 808",
+          "Friday at seven, eighteen and up"
+        ]
+      }
+    },
+    {
+      "id": "all-my-exes-808",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/exes_vinyl_needle.jpg",
+      "imageCaption": "Classic country, after the game",
+      "title": "All My Exes Live in Texas turns The 808 into a classic-country dance hall Saturday night",
+      "deck": "Doors open at seven, right as the Alabama game ends across the river, for a night of old country on Sevier Avenue. It is the venue's first non-touring night, and the first one built for dancing.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 17 · doors 7 PM · show 8 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The 808 · 808 Sevier Ave"
+        },
+        {
+          "label": "Ages",
+          "value": "18 and up"
+        },
+        {
+          "label": "Tickets",
+          "value": "808knox.com"
+        },
+        {
+          "label": "Earlier that day",
+          "value": "Alabama at Tennessee, 3:30 PM kickoff at Neyland"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 62 · clear and 40 overnight"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "All My Exes Live in Texas: Classic Country Night is how The 808's schedule lists Saturday, doors at seven and the show at eight, eighteen and up. After an opening fortnight of touring acts, this is the room doing a theme night of its own, the old songs played for a dance floor. The venue's earlier announcement promised dance lessons with it, so nobody has to already know a two-step."
+        },
+        {
+          "type": "subhead",
+          "text": "The game ends first"
+        },
+        {
+          "type": "paragraph",
+          "text": "Alabama kicks off at Neyland at 3:30 Saturday, which puts the final whistle somewhere around seven, the same minute the doors open on Sevier Avenue. The bridge traffic will be heavy at exactly that hour; walking over from a game-day room in Old Sevier is faster than driving anything. Average Wieners is on the patio, the parking rules from Friday still hold, and the night is clear and cold, down to 40 by the time the last song ends."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The 808 — live music schedule",
+          "url": "https://808knox.com/"
+        },
+        {
+          "label": "The 808 on Instagram",
+          "url": "https://www.instagram.com/808knox/"
+        },
+        {
+          "label": "ESPN — Tennessee football schedule",
+          "url": "https://www.espn.com/college-football/team/schedule/_/id/2633"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-17T19:00:00-04:00",
+        "locationName": "The 808",
+        "locationAddress": "808 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "the-808"
+        ],
+        "igBanner": [
+          "Classic country night at The 808",
+          "Saturday, doors at seven"
+        ]
+      }
+    },
+    {
+      "id": "first-bass-pink-cactus",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/first_bass_dancer.jpg",
+      "imageCaption": "Two stages, ten names on the bill",
+      "title": "First Bass and Planet Doom stack ten DJs on two stages at The Pink Cactus Saturday",
+      "deck": "The pink house on Sevier Avenue goes heavy for a night: bass music on two stages from eight until one, with vendors, a tie-dye station and a harm-reduction table. Twenty dollars, eighteen and up.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 17 · 8 PM – 1 AM"
+        },
+        {
+          "label": "Where",
+          "value": "The Pink Cactus · 1147 Sevier Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$20 · 18+"
+        },
+        {
+          "label": "Lineup",
+          "value": "Ouski · Infinite Chlo · Lunchmoney · Andrew Fetch · Spectruum · Lucenti · Caniion · DJ Abrakapokus · Ortep · Yakota"
+        },
+        {
+          "label": "On site",
+          "value": "Two stages · vendors · harm reduction · a tie-dye station"
+        },
+        {
+          "label": "Weather",
+          "value": "Clear and cold, 40 overnight · the front-yard patio has covered seating"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "First Bass and Planet Doom, two of the promoters behind Knoxville's bass-music nights, take over The Pink Cactus on Saturday from eight until one in the morning. The Pink Cactus put it on its October list at the end of September, and the promoters' post has the detail: ten DJs across two stages, twenty dollars at the door, eighteen and up."
+        },
+        {
+          "type": "subhead",
+          "text": "More than a dance floor"
+        },
+        {
+          "type": "paragraph",
+          "text": "The post lists vendors, a tie-dye station and a harm-reduction table alongside the music, which makes it closer to a small festival than a club night. The bar downstairs serves Latin-inspired food and cocktails, the front-yard patio has covered seating for a breather, and the private karaoke rooms upstairs are their own thing. The cold front has come through by then: a clear night falling to 40, so a jacket for the patio."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Planet Doom on Instagram — First Bass x Planet Doom at The Pink Cactus, Oct 17",
+          "url": "https://www.instagram.com/planetdoomshows/p/Dd9lKsEpUXg/"
+        },
+        {
+          "label": "The Pink Cactus on Instagram — October at the pink house",
+          "url": "https://www.instagram.com/thepinkcactusknox/p/Dd6tuR1lts4/"
+        },
+        {
+          "label": "The Pink Cactus — the house",
+          "url": "https://www.thepinkcactusknox.com/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-17T20:00:00-04:00",
+        "endDate": "2026-10-18T01:00:00-04:00",
+        "locationName": "The Pink Cactus",
+        "locationAddress": "1147 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "pink-cactus"
+        ],
+        "igBanner": [
+          "First Bass x Planet Doom at the Pink Cactus",
+          "Saturday, eight till one"
+        ]
+      }
+    },
+    {
+      "id": "quiet-entertainer-fbn",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/quiet_entertainer_decks.jpg",
+      "imageCaption": "Turntables, real-time remixing",
+      "title": "Quiet Entertainer warms up a Nashville album release at Fly by Night Saturday, with Kaspar and ro4l",
+      "deck": "A turntablist who bills his music as being for people who think and feel too much plays the seventies lounge on Sevier Avenue the week before his record comes out, with two local openers.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 17 · evening · the lounge is open 4 PM – 1 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Fly by Night · 906 Sevier Ave, Suite 126"
+        },
+        {
+          "label": "Who",
+          "value": "Quiet Entertainer (Nashville) · Kaspar · ro4l"
+        },
+        {
+          "label": "The occasion",
+          "value": "The pre-party for the Greg Again album release"
+        },
+        {
+          "label": "On the menu",
+          "value": "Creepy cocktails all month"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Quiet Entertainer is a Nashville DJ and producer who works turntables as instruments, remixing hip-hop and electronic music in real time, and he is bringing the show to Fly by Night on Saturday, October 17 as the pre-party for his album Greg Again. His own post calls it the warm-up before the release show in Nashville: come through, hear what I've been building. Local support comes from Kaspar and ro4l."
+        },
+        {
+          "type": "subhead",
+          "text": "At the lounge"
+        },
+        {
+          "type": "paragraph",
+          "text": "Fly by Night's October lineup post lists the night alongside a Thursday of disco and house and a Halloween ball at the end of the month, and the bar is running creepy cocktails all October. The lounge opens at four on Saturdays and runs until one; neither the venue nor the artist has posted a set time, so plan on a night-time show and ask at the bar."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Quiet Entertainer on Instagram — Fly by Night, Oct 17",
+          "url": "https://www.instagram.com/quiet.entertainer/p/DdwqIr8FOq9/"
+        },
+        {
+          "label": "Fly by Night's October lineup on Instagram",
+          "url": "https://www.instagram.com/dj._.ba/p/DeHkyqDxwij/"
+        },
+        {
+          "label": "Fly by Night on Instagram — creepy cocktails all month",
+          "url": "https://www.instagram.com/flybynightknox/p/DeSTqN_GEaa/"
+        },
+        {
+          "label": "Fly by Night — hours",
+          "url": "https://www.flybynightknox.com/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-17T20:00:00-04:00",
+        "locationName": "Fly by Night",
+        "locationAddress": "906 Sevier Ave Suite 126, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "fly-by-night"
+        ],
+        "igBanner": [
+          "Quiet Entertainer at Fly by Night",
+          "Saturday night, with Kaspar and ro4l"
+        ]
+      }
+    },
+    {
+      "id": "disco-demon-fbn",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/disco_demon_horns.jpg",
+      "imageCaption": "Free horns for the first twenty through the door",
+      "title": "Disco Demon Ahun plays funky disco and house at Fly by Night Thursday, five dollars at the door",
+      "deck": "The seventies cocktail lounge opens its Halloween month with a Thursday dance night: three hours of disco and house, five bucks, and devil horns for the first twenty people in.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Oct 15 · 9 PM – midnight"
+        },
+        {
+          "label": "Where",
+          "value": "Fly by Night · 906 Sevier Ave, Suite 126"
+        },
+        {
+          "label": "Cost",
+          "value": "$5 at the door · 21+"
+        },
+        {
+          "label": "The horns",
+          "value": "Free demon horns for the first 20 people"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 86 by day · 64 at night, the last warm one"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Ahun, the DJ behind the Disco Demon night, posted the details himself: Thursday, October 15, nine to midnight at 906 Sevier Avenue, five dollars at the door, twenty-one and up, with free demon horns for the first twenty people through it. Fly by Night's October lineup lists him first, promising funky disco and house, ahead of Saturday's Quiet Entertainer show and the Freaks Come Out at Night ball on the 30th."
+        },
+        {
+          "type": "subhead",
+          "text": "A warm night for it"
+        },
+        {
+          "type": "paragraph",
+          "text": "Thursday is the last of the warm days, sunny and 86 with a night in the low sixties, before the cold front arrives Friday. The bar has creepy cocktails on all month and opens at four, so dinner on the avenue, then the lounge at nine. The free hour in the karaoke rooms up the street at The Pink Cactus runs every Thursday in October, if the night wants a second act."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ahun on Instagram — Disco Demon at Fly by Night, Oct 15",
+          "url": "https://www.instagram.com/ahungryhungarian/p/DeR4zTbOELX/"
+        },
+        {
+          "label": "Fly by Night's October lineup on Instagram",
+          "url": "https://www.instagram.com/dj._.ba/p/DeHkyqDxwij/"
+        },
+        {
+          "label": "Fly by Night — hours",
+          "url": "https://www.flybynightknox.com/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-15T21:00:00-04:00",
+        "endDate": "2026-10-16T00:00:00-04:00",
+        "locationName": "Fly by Night",
+        "locationAddress": "906 Sevier Ave Suite 126, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "fly-by-night"
+        ],
+        "igBanner": [
+          "Disco Demon night at Fly by Night",
+          "Thursday, nine to midnight, five dollars"
+        ]
+      }
+    },
+    {
+      "id": "ktc-run-printshop",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/ktc_run_headlamp.jpg",
+      "imageCaption": "Three miles, then the wings",
+      "title": "A three-mile social run leaves Printshop at six Thursday, with dollar wings waiting at the end",
+      "deck": "Knoxville Track Club's trail runners meet at the brewery on Island Home Avenue for an easy out-and-back on the greenway toward Ijams Nature Center. Every pace is welcome, and wing night is the finish line.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Oct 15 · 6 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Printshop Beer Co. · 1532 Island Home Ave"
+        },
+        {
+          "label": "The route",
+          "value": "3 miles · 1.5 out and back on the greenway toward Ijams Nature Center"
+        },
+        {
+          "label": "Park",
+          "value": "The public lot under the bridge, next to Mighty Mud"
+        },
+        {
+          "label": "After",
+          "value": "$1 wings from Friends BBQ, 5 – 9 PM"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 86 · still warm at six"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The run's organizer posted the plan on the Printshop feed: Thursday, October 15 at six, a three-mile run on the greenway toward Ijams Nature Center, a mile and a half out and back, because the SoKno Rail Trail and Art Walk isn't quite ready for us yet. Park in the public lot under the bridge next to Mighty Mud, not at the brewery. All paces welcome."
+        },
+        {
+          "type": "subhead",
+          "text": "Why they run from a brewery"
+        },
+        {
+          "type": "paragraph",
+          "text": "It is a Knoxville Track Club trail-running social, a way into the club's upcoming trail races, a November one at Norris Dam State Park and a December one on the South Loop, over a beer afterward. The beer is Printshop's, and Thursday is wing night: Friends BBQ runs the smoker from five to nine with dollar wings, and the brewery takes ten percent off cases to go. It is sunny and 86, the last hot day of the week, so the run will be warm and the patio on the river after it will be the reward."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The run's organizer on Instagram — KTC social run from Printshop, Oct 15",
+          "url": "https://www.instagram.com/nhelton0/p/DeMvh71J-c9kbw6uHHYA1DYBb7bdRjw10Zkx-U0/"
+        },
+        {
+          "label": "Printshop Beer Co. on Instagram — the week's lineup, $1 wings Thursday",
+          "url": "https://www.instagram.com/printshopbeer/p/DeKRHjDlGW4/"
+        },
+        {
+          "label": "Printshop Beer Co. — specials",
+          "url": "https://printshopbeer.com/specials/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-15T18:00:00-04:00",
+        "locationName": "Printshop Beer Co.",
+        "locationAddress": "1532 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "printshop"
+        ],
+        "igBanner": [
+          "Social run from Printshop, dollar wings after",
+          "Thursday at six"
+        ]
+      }
+    },
+    {
+      "id": "trailhead-crawdaddy",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/crawdaddy_guitar.jpg",
+      "imageCaption": "Outdoors, under the patio lights",
+      "title": "Crawdaddy Jones plays the Trailhead patio Friday at seven, a week after the Scruffy Roots stage",
+      "deck": "The Americana act that opened last Sunday's festival on the Kern's lawn plays the smaller, closer room: Trailhead's outdoor stage on Island Home Avenue, with a new fall menu from the kitchen.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 16 · music at 7 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Trailhead Beer Market · 1317 Island Home Ave · outdoors"
+        },
+        {
+          "label": "Cost",
+          "value": "No cover listed"
+        },
+        {
+          "label": "Kitchen",
+          "value": "Gato Peligroso · new menu with a chile relleno smash burger and jerk chicken"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly sunny and 80 by day · the front arrives in the evening, down to 46 · a slight chance of a shower before 8"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Trailhead's October flyer puts Crawdaddy Jones on the outdoor stage on Friday, October 16, music at seven. The band played the free Scruffy Roots Fest on the Kern's lawn last Sunday, so this is the follow-up for anyone who caught a set there and wanted a closer one, on a beer market's patio a few blocks away."
+        },
+        {
+          "type": "subhead",
+          "text": "Soup season at the kitchen"
+        },
+        {
+          "type": "paragraph",
+          "text": "Gato Peligroso, the kitchen at Trailhead, posted a new menu last week with a chile relleno smash burger, and said the scotch bonnets are in from the garden, which means the jerk chicken is back. Friday is the day the weather turns: mostly sunny and 80 in the afternoon, then the cold front, with a slight chance of a shower before eight and a low of 46. The stage is outdoors; bring the jacket you haven't needed since April."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Trailhead Beer Market on Instagram — October live music flyer",
+          "url": "https://www.instagram.com/trailheadbeer/p/Dd92UvFBnV5/"
+        },
+        {
+          "label": "Gato Peligroso on Instagram — the new menu",
+          "url": "https://www.instagram.com/gatopeligrosokno/p/DeJ8KqzEUmB/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-16T19:00:00-04:00",
+        "locationName": "Trailhead Beer Market",
+        "locationAddress": "1317 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "trailhead"
+        ],
+        "igBanner": [
+          "Crawdaddy Jones on the Trailhead patio",
+          "Friday at seven"
+        ]
+      }
+    },
+    {
+      "id": "trailhead-greg-horne",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/greg_horne_fiddle.jpg",
+      "imageCaption": "Sunday music starts at four",
+      "title": "Greg Horne closes the weekend on the Trailhead patio Sunday at four",
+      "deck": "Trailhead's Sunday slot is the easy one: a Knoxville singer-songwriter and multi-instrumentalist on the outdoor stage in the late afternoon, sunny and 68, after the Fall Festival lets out.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Oct 18 · music at 4 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Trailhead Beer Market · 1317 Island Home Ave · outdoors"
+        },
+        {
+          "label": "Cost",
+          "value": "No cover listed"
+        },
+        {
+          "label": "Before it",
+          "value": "The Fall Festival at Kern's runs 2 – 4"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 68"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The last line of the weekend on Trailhead's October flyer is Greg Horne, Sunday, October 18, with Sunday music starting at four. Horne is a Knoxville songwriter who plays more instruments than most bands carry, and the Sunday patio slot at Trailhead is built for that kind of set: a beer, a chair, the sun going down behind Island Home Avenue."
+        },
+        {
+          "type": "subhead",
+          "text": "The Sunday shape"
+        },
+        {
+          "type": "paragraph",
+          "text": "It lines up with the rest of the day. The Fall Festival on the Kern's lawn runs two to four, the bluegrass jam at Mead's Quarry goes until five, and Trailhead is between the two; four o'clock is when the festival crowd is looking for somewhere to sit. Gato Peligroso's new fall menu is in the kitchen. Sunny and 68, with no front to worry about this time."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Trailhead Beer Market on Instagram — October live music flyer",
+          "url": "https://www.instagram.com/trailheadbeer/p/Dd92UvFBnV5/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-18T16:00:00-04:00",
+        "locationName": "Trailhead Beer Market",
+        "locationAddress": "1317 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "trailhead"
+        ],
+        "igBanner": [
+          "Greg Horne on the Trailhead patio",
+          "Sunday at four"
+        ]
+      }
+    },
+    {
+      "id": "kerns-hoedown-social",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/hoedown_cowgirl.jpg",
+      "imageCaption": "Line and country dancing till 11:30",
+      "title": "Cowtown Studios' Ho'Down Social brings four hours of line and country dancing to Kern's Friday night",
+      "deck": "The dance studio that teaches Knoxville to two-step sets up at the old bakery for a Friday night of line and country dancing, powered by the bar on the lawn. Boots optional, lessons built in.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 16 · 7:30 – 11:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Kern's · 2201 Kern's Rising Way · Peter's Market Bar"
+        },
+        {
+          "label": "Who",
+          "value": "Cowtown Studios, which also leads Sunday's line-dancing hour at the Fall Festival"
+        },
+        {
+          "label": "Again",
+          "value": "Fri Oct 30"
+        },
+        {
+          "label": "Weather",
+          "value": "The front comes through during the evening · 46 by the end"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Kern's posted the poster last week: Cowtown Studios presents the Ho'Down Social, powered by Peter's Market Bar, line and country dancing on Friday, October 16 and again on the 30th, from 7:30 to 11:30. The caption says it plainly, dust off your boots and dance with Cowtown Studios again. Kern's own hours run until eleven on Fridays, so the dancing is the last thing open on the property."
+        },
+        {
+          "type": "subhead",
+          "text": "The same crew, twice"
+        },
+        {
+          "type": "paragraph",
+          "text": "Cowtown Studios is the dance school running the two o'clock line-dancing hour at Sunday's Fall Festival on the same lawn, so a Friday night here is the long version and Sunday the sampler. Peter's Market Bar is the lawn-side bar; the food hall has twenty-odd vendors for dinner first. Friday is the night the weather turns, 80 in the afternoon and 46 by the time the last dance ends, so the layers go on between songs."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Kern's on Instagram — Ho'Down Social with Cowtown Studios",
+          "url": "https://www.instagram.com/kernsknox/p/DeH6Ms9IHA2/"
+        },
+        {
+          "label": "Kern's — hours",
+          "url": "https://kernsbakery.com/public-events/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-16T19:30:00-04:00",
+        "endDate": "2026-10-16T23:30:00-04:00",
+        "locationName": "Kern's",
+        "locationAddress": "2201 Kern's Rising Way, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "kerns"
+        ],
+        "igBanner": [
+          "Ho'Down Social: line dancing at Kern's",
+          "Friday, 7:30 to 11:30"
+        ]
+      }
+    },
+    {
+      "id": "starlight-paddle",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Fri",
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/starlight_paddle_night.jpg",
+      "imageCaption": "Kayaks, life jackets and headlamps are provided",
+      "title": "Starlight Paddle takes guided kayaks onto the Tennessee River after dark Friday and Saturday",
+      "deck": "Two hours on the river at night with an Ijams Nature Center naturalist, reading the sky and the bank by headlamp. Two nights to pick from, and Saturday's is the clear, cold one.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 16 and Sat Oct 17 · 7 – 9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams River Landing · 3507 Island Home Pike"
+        },
+        {
+          "label": "Cost",
+          "value": "$45 · ages 14+ · under 18 with an adult"
+        },
+        {
+          "label": "Provided",
+          "value": "Kayak, life jacket, headlamp"
+        },
+        {
+          "label": "Bring",
+          "value": "Water · warm layers · the online waiver, once a year"
+        },
+        {
+          "label": "Also",
+          "value": "Early Bird Paddle Sun Oct 18, 9 – 11 AM, $45, in the fall color"
+        },
+        {
+          "label": "Weather",
+          "value": "Fri: the front comes through, 46 and a slight shower chance before 8 · Sat: clear and 40"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Ijams Nature Center runs its Starlight Paddle twice this weekend, Friday and Saturday from seven to nine, out of the River Landing on Island Home Pike. Naturalists lead a two-hour guided paddle to uncover the secrets of the Tennessee River after dark, as the listing puts it, looking for the plants, animals and rock along the bank and learning the night sky overhead. Forty-five dollars, ages fourteen and up, with anyone under eighteen bringing an adult."
+        },
+        {
+          "type": "subhead",
+          "text": "Friday or Saturday"
+        },
+        {
+          "type": "paragraph",
+          "text": "The two nights are different nights. Friday is when the cold front crosses, with a slight chance of a shower before eight and the temperature falling toward 46. Saturday is behind it: clear, calm and cold, 40 by the end, with the best sky of the month. Kayaks, life jackets and headlamps are provided; warm layers, water and the once-a-year online waiver are on you. If a morning suits better, the Early Bird Paddle goes out Sunday from nine to eleven, same price, same landing, in the fall color."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Starlight Paddle, Oct 16",
+          "url": "https://www.ijams.org/event-details/starlight-paddle-2026-10-16-19-00"
+        },
+        {
+          "label": "Ijams Nature Center — Starlight Paddle, Oct 17",
+          "url": "https://www.ijams.org/event-details/starlight-paddle-2026-10-17-19-00"
+        },
+        {
+          "label": "Ijams Nature Center — Early Bird Paddle, Oct 18",
+          "url": "https://www.ijams.org/event-details/early-bird-paddle"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-16T19:00:00-04:00",
+        "endDate": "2026-10-16T21:00:00-04:00",
+        "locationName": "Ijams River Landing",
+        "locationAddress": "3507 Island Home Pike, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Starlight Paddle at Ijams Nature Center",
+          "Friday and Saturday, seven to nine"
+        ]
+      }
+    },
+    {
+      "id": "bluegrass-jam-quarry",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/bluegrass_jam_bass.jpg",
+      "imageCaption": "Acoustic instruments only; listeners welcome",
+      "title": "The East Tennessee Bluegrass Association jam fills Mead's Quarry with acoustic music Sunday, free",
+      "deck": "The third-Sunday jam moves to the quarry for October: a beginners' hour, then an open circle for anyone with a bluegrass instrument. Free to play, free to listen, with a cold front's worth of fresh air.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Oct 18 · 2 – 5 PM · beginners 2 – 3 · open jam 3 – 5"
+        },
+        {
+          "label": "Where",
+          "value": "Mead's Quarry · 3518 Island Home Ave · not the main visitor center"
+        },
+        {
+          "label": "Cost",
+          "value": "Free · open to the public"
+        },
+        {
+          "label": "Instruments",
+          "value": "Acoustic bluegrass instruments · no harmonicas or spoons at this time"
+        },
+        {
+          "label": "Parking",
+          "value": "$5 per vehicle at Ijams Nature Center lots · free for members"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 68"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The East Tennessee Bluegrass Association and Ijams Nature Center run a community jam on the third Sunday of every month, and the listing for October 18 is emphatic about one thing: this event will be held at Mead's Quarry, not up at the visitor center. Two to five, all skill levels. The first hour is the beginner jam, and from three the circle opens to every jammer who shows up."
+        },
+        {
+          "type": "subhead",
+          "text": "The rules of the circle"
+        },
+        {
+          "type": "paragraph",
+          "text": "Acoustic bluegrass instruments only, which the listing clarifies as no harmonicas or spoons at this time. Not a musician? The listing says come out and enjoy the music anyway; it is always free and open to the public. Sunday is sunny and 68 after the front, the quarry water will be the color it gets in October, and the Fall Festival on the Kern's lawn starts at the same hour a mile and a half north, so the afternoon has a choice in it."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — East Tennessee Bluegrass Association monthly jam, Oct 18",
+          "url": "https://www.ijams.org/event-details/special-event-east-tennessee-bluegrass-association-monthly-jam-2026-10-18-14-00"
+        },
+        {
+          "label": "East Tennessee Bluegrass Association",
+          "url": "https://www.etnba.org/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-18T14:00:00-04:00",
+        "endDate": "2026-10-18T17:00:00-04:00",
+        "locationName": "Mead's Quarry, Ijams Nature Center",
+        "locationAddress": "3518 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Free bluegrass jam at Mead's Quarry",
+          "Sunday, two to five"
+        ]
+      }
+    },
+    {
+      "id": "fall-fungi-id",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/fungi_magnifier.jpg",
+      "imageCaption": "A mile and a half of trail, with stops",
+      "title": "A fungi walk at Ijams Nature Center teaches beginners to read mushrooms and lichen Sunday",
+      "deck": "Two hours in the woods with a naturalist who calls himself a fun-guide, learning what the things on the logs are and what they do. Fifteen dollars, no experience needed, fourteen and up.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Oct 18 · 1 – 3 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$15 · ages 14+"
+        },
+        {
+          "label": "The walk",
+          "value": "Up to 1.5 miles on uneven trail, with stops"
+        },
+        {
+          "label": "Parking",
+          "value": "Free for participants · arrive 5 – 10 minutes early"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 68 · still damp underfoot from Friday's front"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The listing opens with a pun, fungi identification doesn't leave mush-room for guessing, and then gets serious: a two-hour beginner workshop on Sunday, October 18 from one to three, led by an Ijams naturalist, covering the basics of fungi and lichen anatomy, how to tell them apart and the pivotal role they play in the forest. Fifteen dollars, ages fourteen and up. A bracket fungus the staff found on the River Trail this week, the underside like a maze, was the park's own preview."
+        },
+        {
+          "type": "subhead",
+          "text": "On the trail"
+        },
+        {
+          "type": "paragraph",
+          "text": "Expect up to a mile and a half of walking over roots, rocks and gravel, with plenty of stopping. Parking is free for anyone in the program; get there five to ten minutes early. Sunday is sunny and 68 behind the cold front, which is good for walkers and, after Friday's rain chance, decent for the mushrooms. The same workshop repeats October 31 and in November if this Sunday is spoken for."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Fall Fungi ID: Beginner Workshop, Oct 18",
+          "url": "https://www.ijams.org/event-details/fall-fungi-id-beginner-workshop-2026-10-18-13-00"
+        },
+        {
+          "label": "Ijams Nature Center on Instagram — the bracket fungus on the River Trail",
+          "url": "https://www.instagram.com/ijamsnaturecenter/reel/DeXf1JCRPbS/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-18T13:00:00-04:00",
+        "endDate": "2026-10-18T15:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Fungi walk for beginners at Ijams Nature Center",
+          "Sunday, one to three"
+        ]
+      }
+    },
+    {
+      "id": "storytime-birds",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/storytime_binoculars.jpg",
+      "imageCaption": "Stories, crafts and the playscape, ten to noon",
+      "title": "Birds take over Saturday storytime at the Nature Playscape, free",
+      "deck": "The free Saturday morning in the woods at Mead's Quarry is about birds this week: books read aloud by volunteers, a bird craft, and the playscape to run around in. Five dollars to park, nothing to attend.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 17 · 10 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Playscape at Grayson Subaru Preserve · Mead's Quarry, 3518 Island Home Pike"
+        },
+        {
+          "label": "Cost",
+          "value": "Free · parking $5 per vehicle, free for Ijams members"
+        },
+        {
+          "label": "Parking",
+          "value": "Mead's Quarry main or overflow lots, then the signed connector trail"
+        },
+        {
+          "label": "Bring",
+          "value": "A blanket or chair, a snack, or just yourselves"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 62 · the first cool morning, 40 at dawn"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Storytime at the Ijams Nature Playscape runs every Saturday from ten to noon, and this week's theme is birds. Volunteer storytellers read a selection of books out in the woods, there is a themed craft, and the rest of the morning is the playscape itself, the natural play area at Grayson Subaru Preserve by Mead's Quarry. It is free; parking is five dollars a car, or nothing for members."
+        },
+        {
+          "type": "subhead",
+          "text": "The cold morning"
+        },
+        {
+          "type": "paragraph",
+          "text": "Saturday is the first real fall morning of the season, 40 at dawn and sunny, climbing to 62 by lunch, so this is a jackets-and-hats storytime. Park in the Mead's Quarry main or overflow lot and follow the signs along the short connector trail. An RSVP is not required but helps if the weather cancels it, and after last week's bird-count hike, the birds themselves should be around to point at."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Storytime at the Nature Playscape: Birds, Oct 17",
+          "url": "https://www.ijams.org/event-details/storytime-at-the-ijams-nature-playscape-birds"
+        },
+        {
+          "label": "Ijams Nature Center on Instagram — this week at Ijams",
+          "url": "https://www.instagram.com/ijamsnaturecenter/p/DeY-7Q-DVZt/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-17T10:00:00-04:00",
+        "endDate": "2026-10-17T12:00:00-04:00",
+        "locationName": "Ijams Nature Playscape at Grayson Subaru Preserve",
+        "locationAddress": "3518 Island Home Pike, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igBanner": [
+          "Free storytime about birds at Ijams Nature Center",
+          "Saturday, ten to noon"
+        ],
+        "standing": true,
+        "standingKey": "playscape-storytime"
+      }
+    },
+    {
+      "id": "scruffycat-ride",
+      "label": "Urban Wilderness",
+      "labelColor": "ink",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/scruffycat_muddy_grin.jpg",
+      "imageCaption": "Self-supported: you carry what you need",
+      "title": "ScruffyCat and ScrappyKitty send mountain bikers on a 100-mile tour of Knoxville's trails Saturday",
+      "deck": "A Darkhorse Race Productions adventure that links every trail in town into one huge day, with a 50-mile sampler and a 25-mile tour of the Urban Wilderness for the sensible. Then a bonfire.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 17 · a social hair-of-the-cat ride Sunday"
+        },
+        {
+          "label": "Start",
+          "value": "3000 McClure Lane"
+        },
+        {
+          "label": "Routes",
+          "value": "ScruffyCat 100 miles · ScrappyKitty 50 · SuperKitten 25"
+        },
+        {
+          "label": "Format",
+          "value": "Self-supported · GPX routes and maps provided · no marked course, no aid stations"
+        },
+        {
+          "label": "After",
+          "value": "Snacks, drinks, home-cooked food and a bonfire"
+        },
+        {
+          "label": "Register",
+          "value": "bikereg.com · the organizers need a headcount for the food"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 62 · 40 at the start"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "ScruffyCat and ScrappyKitty is a Knoxville mountain bike adventure put on by Darkhorse Race Productions on Saturday, October 17, and the Appalachian Mountain Bike Club's listing of it asks the right question first: is it a party, a challenge, an adventure? That's up to you. What is promised is a proper tour of Knoxville's Urban Wilderness, the dirty south, and beyond, and a party with bike friends into the night."
+        },
+        {
+          "type": "subhead",
+          "text": "Three cats"
+        },
+        {
+          "type": "paragraph",
+          "text": "The ScruffyCat was born of the idea of riding all the Knoxville trails in one route, and it happens to come out at about a hundred miles, new trail to old goat paths, linked by the best road connections through town. The ScrappyKitty is the fifty-mile sampler. The SuperKitten, twenty-five miles, is a tour of the Urban Wilderness highlights, created for younger cats or, as the listing says, the most sensible sorts. None of it is a marked course with aid stations: riders are self-sufficient, with GPX routes, maps for the tricky spots, a list of water stops and a good chance of trail magic."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "It starts from 3000 McClure Lane, and the finish is snacks, drinks, home-cooked food and a bonfire, with a social ride on Sunday to the one area of trail the hundred-miler misses. Start times and the rest of the details go out by email to people who register, and the organizers ask for that registration soon because the food is bought by headcount. Saturday is sunny and 62 with a 40-degree start, which is about perfect for a long day on a bike. If you are hiking Saturday, expect riders on every trail in the system."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Appalachian Mountain Bike Club — ScruffyCat and ScrappyKitty, Oct 17",
+          "url": "https://ambcknox.org/event/scruffycat-and-scrappykitty/"
+        },
+        {
+          "label": "BikeReg — registration",
+          "url": "https://www.bikereg.com/scruffycat-and-scrappykitty"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-17",
+        "locationName": "ScruffyCat and ScrappyKitty start",
+        "locationAddress": "3000 McClure Lane, Knoxville, TN 37920"
+      },
+      "social": {
+        "igBanner": [
+          "ScruffyCat: 100 miles of Knoxville trail",
+          "Saturday, from McClure Lane"
+        ],
+        "igBannerSkipCheck": true
+      }
+    },
+    {
+      "id": "catalyst-adaptive-ride",
+      "label": "Urban Wilderness",
+      "labelColor": "ink",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "image": "/assets/spots/catalyst_handcycle.jpg",
+      "imageCaption": "Reserve an adaptive bike when you register",
+      "title": "Catalyst Sports' adaptive mountain bike ride rolls out of Baker Creek Saturday morning",
+      "deck": "A morning on the Baker Creek trails for riders who use adaptive bikes, with the bikes provided and volunteers wanted. Register to ride or to help; the next one is Fall Fest in November.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 17 · 9:30 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Baker Creek Preserve · 3726 Sevier Heights Rd · meet on the right side of the building and lot"
+        },
+        {
+          "label": "Register",
+          "value": "catalystsports.org/knoxville · to ride or to volunteer · pick a bike when you register"
+        },
+        {
+          "label": "Next",
+          "value": "AMBC Fall Fest, Nov 6 – 8 · Tour de Lights, Dec 12"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 62 · 40 at the start"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Catalyst Sports runs an adaptive mountain bike program in Knoxville, and its October ride is Saturday, October 17 from 9:30 to noon at Baker Creek Preserve, the trailhead off Sevier Heights Road. The listing on the Appalachian Mountain Bike Club's calendar says to meet on the right side of the building complex and parking lot, and to register at catalystsports.org/knoxville, choosing an adaptive bike when you sign up if you need one reserved."
+        },
+        {
+          "type": "subhead",
+          "text": "Riders and volunteers"
+        },
+        {
+          "type": "paragraph",
+          "text": "Registration opens two weeks before each ride, so it is open now, and the program needs volunteers for every ride as much as it needs riders; the same form covers both. The rest of the 2026 calendar is the AMBC Fall Fest weekend in November and the Tour de Lights in December. Saturday morning is sunny and cold, 40 at the start and 62 by noon, and the ScruffyCat riders will be on the Baker Creek trails the same morning, so give a wave."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Appalachian Mountain Bike Club — Catalyst Sports adaptive MTB ride, Oct 17",
+          "url": "https://ambcknox.org/event/catalyst-sports-adaptive-mtb-ride-oct-2026/"
+        },
+        {
+          "label": "Catalyst Sports — Knoxville",
+          "url": "https://www.catalystsports.org/knoxville"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-17T09:30:00-04:00",
+        "endDate": "2026-10-17T12:00:00-04:00",
+        "locationName": "Baker Creek Preserve",
+        "locationAddress": "3726 Sevier Heights Rd, Knoxville, TN 37920"
+      },
+      "social": {
+        "igBanner": [
+          "Adaptive mountain bike ride at Baker Creek",
+          "Saturday, 9:30 to noon"
+        ],
+        "igBannerSkipCheck": true
+      }
+    },
+    {
+      "id": "specials-board",
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "image": "/assets/spots/specials_beer_bucket.jpg",
+      "imageCaption": "Buckets at six for the price of five on game day",
+      "title": "The specials board: Earl's runs its Vols board Saturday as Alabama comes to Neyland at 3:30",
+      "deck": "Down on Waterfront Drive, a different deal every day from open to close, and the biggest home game of the year on Saturday afternoon. The game-day board is the closest seat to the stadium on this side of the river.",
+      "facts": [
+        {
+          "label": "Thursday",
+          "value": "$10 Patrón mango margaritas"
+        },
+        {
+          "label": "Friday",
+          "value": "$9 spicy pineapple margaritas"
+        },
+        {
+          "label": "Saturday",
+          "value": "$8 house margaritas · the Vols board: $2 off drafts and pizza, $6 Orange Bliss, 6-for-5 beer buckets, $4 and $5 shots"
+        },
+        {
+          "label": "Sunday",
+          "value": "$7 mimosas and Bloody Marys"
+        },
+        {
+          "label": "Hours",
+          "value": "11 AM – 10 PM every day · 610 Waterfront Dr"
+        },
+        {
+          "label": "The games",
+          "value": "Alabama at Tennessee, Sat 3:30 PM · Titans at Colts, Sun 1 PM"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Earl's runs a different special every day of the week, eleven to ten, and the Thursday-to-Sunday run is Patrón mango ritas, spicy pineapple ritas, house margaritas and then mimosas and Bloody Marys. Saturday is a home game, and not a small one: Alabama at Tennessee, 3:30 kickoff at Neyland. Earl's lists its Vols board for game days: two dollars off drafts and pizza, six-dollar Orange Bliss cocktails, beer buckets at six for the price of five, and four- and five-dollar shots. Thursday is sunny and 86 for the river tables; by Saturday it is sunny and 62, and the patio will want a jacket. On Sunday the Titans are in Indianapolis at one, which lines up with the mimosas."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Earl's Knoxville — specials",
+          "url": "https://earlsknox.com/specials/"
+        },
+        {
+          "label": "University of Tennessee Athletics — 2026 football schedule",
+          "url": "https://utsports.com/sports/football/schedule/2026"
+        },
+        {
+          "label": "ESPN — Tennessee Titans schedule",
+          "url": "https://www.espn.com/nfl/team/schedule/_/name/ten"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "earls"
+        ],
+        "igBanner": [
+          "A different deal every day at Earl's",
+          "Saturday, the Vols board for Alabama at 3:30"
+        ],
+        "standing": true,
+        "standingKey": "earls-specials-board"
+      }
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen — a free Fall Festival on the Kern's lawn Sunday, dogs in costume on a runway at Hi-Wire, two nights at The 808, a starlight paddle on the river, a hundred-mile bike tour of every trail in town, and where the music is Thursday through Sunday.",
+      "duration": "05:14",
+      "src": "/audio/2026-10-14.mp3"
+    },
+    "calendar": [
+      {
+        "month": "OCT",
+        "day": "15",
+        "title": "Patrón mango ritas at Earl's",
+        "meta": "$10 · 11 AM – 10 PM · 610 Waterfront Dr",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "OCT",
+        "day": "15",
+        "title": "Social run from Printshop, $1 wings after",
+        "meta": "6 PM · 3 miles on the greenway · 1532 Island Home Ave",
+        "starred": false,
+        "href": "#ktc-run-printshop"
+      },
+      {
+        "month": "OCT",
+        "day": "15",
+        "title": "Disco Demon Ahun at Fly by Night",
+        "meta": "9 PM – midnight · $5 · 21+ · 906 Sevier Ave",
+        "starred": false,
+        "href": "#disco-demon-fbn"
+      },
+      {
+        "month": "OCT",
+        "day": "16",
+        "title": "Spicy pineapple ritas at Earl's",
+        "meta": "$9 · 11 AM – 10 PM · 610 Waterfront Dr",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "OCT",
+        "day": "16",
+        "title": "Crawdaddy Jones at Trailhead",
+        "meta": "Music at 7 PM · outdoors · 1317 Island Home Ave",
+        "starred": false,
+        "href": "#trailhead-crawdaddy"
+      },
+      {
+        "month": "OCT",
+        "day": "16",
+        "title": "GOODBYE JUNE + DANNY WORSNOP AT THE 808",
+        "meta": "7 PM · 18+ · 808 Sevier Ave",
+        "starred": true,
+        "href": "#goodbye-june-808"
+      },
+      {
+        "month": "OCT",
+        "day": "16",
+        "title": "Starlight Paddle from Ijams River Landing",
+        "meta": "7 – 9 PM · $45 · ages 14+ · 3507 Island Home Pike",
+        "starred": false,
+        "href": "#starlight-paddle"
+      },
+      {
+        "month": "OCT",
+        "day": "16",
+        "title": "Ho'Down Social: line dancing at Kern's",
+        "meta": "7:30 – 11:30 PM · Cowtown Studios · 2201 Kern's Rising Way",
+        "starred": false,
+        "href": "#kerns-hoedown-social"
+      },
+      {
+        "month": "OCT",
+        "day": "17",
+        "title": "Catalyst Sports adaptive MTB ride at Baker Creek",
+        "meta": "9:30 AM – noon · register to ride or volunteer · 3726 Sevier Heights Rd",
+        "starred": false,
+        "href": "#catalyst-adaptive-ride"
+      },
+      {
+        "month": "OCT",
+        "day": "17",
+        "title": "SCRUFFYCAT AND SCRAPPYKITTY: 100, 50 OR 25 MILES OF TRAIL",
+        "meta": "Self-supported · bonfire after · 3000 McClure Lane",
+        "starred": true,
+        "href": "#scruffycat-ride"
+      },
+      {
+        "month": "OCT",
+        "day": "17",
+        "title": "Storytime at the Nature Playscape: Birds",
+        "meta": "10 AM – noon · free · $5 parking · Mead's Quarry",
+        "starred": false,
+        "href": "#storytime-birds"
+      },
+      {
+        "month": "OCT",
+        "day": "17",
+        "title": "Vols board at Earl's: Alabama at Tennessee, 3:30",
+        "meta": "$2 off drafts and pizza · 6-for-5 buckets · 610 Waterfront Dr",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "OCT",
+        "day": "17",
+        "title": "Starlight Paddle, second night",
+        "meta": "7 – 9 PM · $45 · clear and cold · 3507 Island Home Pike",
+        "starred": false,
+        "href": "#starlight-paddle"
+      },
+      {
+        "month": "OCT",
+        "day": "17",
+        "title": "ALL MY EXES LIVE IN TEXAS: CLASSIC COUNTRY NIGHT AT THE 808",
+        "meta": "Doors 7 PM, show 8 · 18+ · 808 Sevier Ave",
+        "starred": true,
+        "href": "#all-my-exes-808"
+      },
+      {
+        "month": "OCT",
+        "day": "17",
+        "title": "Quiet Entertainer at Fly by Night",
+        "meta": "Evening · with Kaspar and ro4l · 906 Sevier Ave",
+        "starred": false,
+        "href": "#quiet-entertainer-fbn"
+      },
+      {
+        "month": "OCT",
+        "day": "17",
+        "title": "First Bass x Planet Doom at The Pink Cactus",
+        "meta": "8 PM – 1 AM · $20 · 18+ · 1147 Sevier Ave",
+        "starred": false,
+        "href": "#first-bass-pink-cactus"
+      },
+      {
+        "month": "OCT",
+        "day": "18",
+        "title": "Mimosas and Bloody Marys at Earl's",
+        "meta": "$7 · 11 AM – 10 PM · Titans at Colts, 1 PM",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "OCT",
+        "day": "18",
+        "title": "Fall Fungi ID beginner workshop at Ijams Nature Center",
+        "meta": "1 – 3 PM · $15 · ages 14+ · 2915 Island Home Ave",
+        "starred": false,
+        "href": "#fall-fungi-id"
+      },
+      {
+        "month": "OCT",
+        "day": "18",
+        "title": "KERN'S BAKERY FALL FESTIVAL ON THE LAWN",
+        "meta": "2 – 4 PM · free · line dancing, School of Rock, pumpkins · 2201 Kern's Rising Way",
+        "starred": true,
+        "href": "#kerns-fall-fest"
+      },
+      {
+        "month": "OCT",
+        "day": "18",
+        "title": "Bluegrass jam at Mead's Quarry",
+        "meta": "2 – 5 PM · free · acoustic instruments · 3518 Island Home Ave",
+        "starred": false,
+        "href": "#bluegrass-jam-quarry"
+      },
+      {
+        "month": "OCT",
+        "day": "18",
+        "title": "PUP-O-WEEN DOG COSTUME CONTEST AT HI-WIRE",
+        "meta": "2 – 5 PM · runway at 3 · $5 a dog for Small Breed Rescue · 2020 Barber St",
+        "starred": true,
+        "href": "#pup-o-ween-hiwire"
+      },
+      {
+        "month": "OCT",
+        "day": "18",
+        "title": "Greg Horne at Trailhead",
+        "meta": "Music at 4 PM · outdoors · 1317 Island Home Ave",
+        "starred": false,
+        "href": "#trailhead-greg-horne"
+      }
+    ]
+  }
+}

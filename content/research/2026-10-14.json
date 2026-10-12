@@ -1,0 +1,352 @@
+{
+  "_comment": "Research log for No. 18 (Thu-Sun Oct 15-18, 2026). Websites via scripts/research-sweep.mjs, Instagram read in the built-in browser with scripts/ig-scan.browser.js on 2026-10-12.",
+  "slug": "2026-10-14",
+  "researched": "2026-10-12",
+  "checked": {
+    "old-sevier-district": {
+      "how": "both",
+      "found": 3,
+      "note": "site: hours/parking only; ics empty for October. IG: last posts Oct 1-2 (gameday guide, October can't-miss list, Spooky SZN carousel read slide by slide: 10/18 Pup-O-Ween at Hi-Wire, 10/23 Spooky Streets, 10/30 silent disco, 10/31 Belltower and pub crawl). No weekend roundup since Oct 2."
+    },
+    "the-808": {
+      "how": "both",
+      "found": 3,
+      "note": "site schedule: Fri 10/16 Goodbye June + Danny Worsnop 7 PM 18+, Sat 10/17 All My Exes Live in Texas doors 7 show 8 18+; feed: Goodbye June post Oct 6, parking map Oct 8 (do not park across from Trailhead), Average Wieners on the patio at every show"
+    },
+    "alliance": {
+      "how": "both",
+      "found": 0,
+      "note": "feed's last week-ahead post was Oct 5 for Oct 6-11; nothing dated for Oct 15-18 yet; standing Tue salsa and Wed songwriter night reconfirmed by the venue's own post"
+    },
+    "hi-wire": {
+      "how": "web",
+      "found": 1,
+      "note": "IG age-gated, seen: 0 logged out; events page empty; the hub's Spooky SZN slide lists 10/18 Pup-O-Ween and the brewery's own SimpleTix page (hiwirebrewing.simpletix.com) confirms Oct 18 2026, 2-5 PM, $5 an entry for Small Breed Rescue of East Tennessee. Also 10/31 Drop Dead drag show there."
+    },
+    "fly-by-night": {
+      "how": "both",
+      "found": 3,
+      "note": "October lineup post (dj._.ba tagging the venue) plus the acts' own posts: Thu 10/15 Disco Demon Ahun 9-12 $5 21+, Sat 10/17 Quiet Entertainer pre-party with Kaspar and ro4l; creepy cocktails all month (venue post Oct 9)"
+    },
+    "printshop": {
+      "how": "both",
+      "found": 2,
+      "note": "/specials/ still dated Oct 6-10 (Tue $16 pitchers, Thu 10% cases, Fri $12 flights); feed: KTC social run Thu 10/15 6 PM posted by the run's organizer tagging the brewery, $1 wings; the venue's own week-ahead post for Oct 13-18 not up yet"
+    },
+    "trailhead": {
+      "how": "instagram",
+      "found": 3,
+      "note": "October flyer read in the post page: Fri 10/16 Crawdaddy Jones, Sun 10/18 Greg Horne; Fri/Sat music at 7, Sun at 4; Thu trivia 7; Gato Peligroso's new chile relleno smash burger and jerk chicken (Oct 6)"
+    },
+    "pink-cactus": {
+      "how": "both",
+      "found": 2,
+      "note": "venue's October list (Sep 30) plus the promoter's post: Sat 10/17 First Bass x Planet Doom 8 PM-1 AM $20 18+; free hour in the karaoke rooms every Thursday in October; Alt Mart Fri Nov 13"
+    },
+    "southside-garage": {
+      "how": "both",
+      "found": 1,
+      "note": "/specials/: Fri lunch at 11 with the Dia de torta, Sat open noon to midnight; /events/: Tue trivia; feed: Vols posts only"
+    },
+    "sevier-ave-burger": {
+      "how": "instagram",
+      "found": 1,
+      "note": "Monster Mash burger and Bad Apple drink of the month; Sunday brunch from 11 with half-off mimosas (Oct 11 post); Singo Wed 7"
+    },
+    "south-coast-pizza": {
+      "how": "both",
+      "found": 1,
+      "note": "Green Goblin pizza of the month (Oct 7); site has holiday dates only"
+    },
+    "redbud": {
+      "how": "both",
+      "found": 0,
+      "note": "happy hour Tue-Fri 4-6 reconfirmed; nothing dated"
+    },
+    "mighty-mud": {
+      "how": "both",
+      "found": 0,
+      "note": "one-night classes on the site; nothing dated this weekend"
+    },
+    "sokno-sourdough": {
+      "how": "both",
+      "found": 0,
+      "note": "fall break Oct 12-16; storefront back Tue Oct 20"
+    },
+    "borderland": {
+      "how": "both",
+      "found": 0,
+      "note": "Hedda Gabler closed Oct 3; John runs Oct 21-25; Best if Used By Oct 25"
+    },
+    "knoxville-theatre-club": {
+      "how": "both",
+      "found": 0,
+      "note": "cast photos from Hedda Gabler; nothing dated"
+    },
+    "old-sevier-market": {
+      "how": "both",
+      "found": 0,
+      "note": "open since Oct 10, 7-7 daily, 906 Sevier Ave Unit 130; nothing dated"
+    },
+    "angry-dumplings": {
+      "how": "instagram",
+      "found": 0,
+      "note": "Farragut location posts only; Sevier Ave still the 6 PM stop"
+    },
+    "honeybee": {
+      "how": "web",
+      "found": 0
+    },
+    "kerns": {
+      "how": "both",
+      "found": 4,
+      "note": "feed: Fall Festival Sun 10/18 (Oct 1 post with the schedule, Oct 11 post 'one week away', free), Ho'Down Social line and country dancing with Cowtown Studios Fri 10/16 7:30-11:30 (poster read in the post page), candle-making workshop Sun 10/18 1-3 sign-up required (no link or price), Practical Magic movie night Wed 10/14 (outside the window); the site has no dated events; the goat yoga and Boos & Booze leads from last week have no current post on the feed or the site"
+    },
+    "puckers": {
+      "how": "instagram",
+      "found": 0,
+      "note": "Oct 9 post was the Arkansas game-day list; nothing yet for Alabama; standing Happy Hour 11-5 and Pucker Hour 5-6 weekdays (Oct 5 post)"
+    },
+    "earls": {
+      "how": "both",
+      "found": 1,
+      "note": "/specials/: daily deals and the undated Game Day Special board; feed: newsletter posts only"
+    },
+    "ijams": {
+      "how": "both",
+      "found": 8,
+      "note": "calendar HTML slug grep then /event-details/: Thu 10/15 hooping (weekly), Fri+Sat 10/16-17 Starlight Paddle 7-9 $45 14+, Sat 10/17 Storytime Birds 10-noon free, Sat 10/17 member-only wildflower walk, Sun 10/18 Early Bird Paddle 9-11 $45, Sun 10/18 Fall Fungi ID 1-3 $15, Sun 10/18 ETBA bluegrass jam at Mead's Quarry 2-5 free, Sun 10/18 Self Care yoga 11:30 (weekly); feed's Oct 12 post points at the paddles and storytime"
+    },
+    "ambc": {
+      "how": "web",
+      "found": 2,
+      "note": "Sat 10/17 ScruffyCat and ScrappyKitty (Darkhorse, 100/50/25-mile routes from 3000 McClure Lane, bikereg), Sat 10/17 Catalyst Sports adaptive ride at Baker Creek 9:30-noon; Tue 10/20 social ride; Mon 10/26 meeting at SouthSide Garage"
+    },
+    "legacy-parks": {
+      "how": "both",
+      "found": 0,
+      "note": "the Oct 2 mural post ran last week; nothing new"
+    },
+    "sokno-taco": {
+      "how": "web",
+      "found": 0,
+      "note": "weekly specials unchanged (Thu Singo 7-9, Fri frozen margs, weekend brunch 10-2)"
+    },
+    "blank-news": {
+      "how": "web",
+      "found": 0,
+      "note": "search page: nothing new on the beat"
+    },
+    "inside-of-knoxville": {
+      "how": "instagram",
+      "found": 0,
+      "note": "site returns 403 to curl and to the fetcher; the feed's Oct 11 ten-day planner picks were all downtown or campus"
+    }
+  },
+  "leads": [
+    {
+      "date": "2026-10-18",
+      "what": "Kern's Bakery Fall Festival on the lawn: line dancing 2-3, School of Rock 3:15-4, pumpkin painting, axe throwing, vendors, free",
+      "source": "kerns",
+      "story": "kerns-fall-fest"
+    },
+    {
+      "date": "2026-10-16",
+      "what": "Ho'Down Social: line and country dancing with Cowtown Studios at Kern's, 7:30-11:30 PM",
+      "source": "kerns",
+      "story": "kerns-hoedown-social"
+    },
+    {
+      "date": "2026-10-18",
+      "what": "Candle-making workshop with Cannery Creek Candles at Kern's, 1-3 PM, sign-up required",
+      "source": "kerns",
+      "skipped": "the post gives no sign-up link or price, so readers could not act on it"
+    },
+    {
+      "date": "2026-10-15",
+      "what": "Boos & Booze cigar night at UpTop",
+      "source": "kerns",
+      "skipped": "no current post on the feed and nothing on the site this week"
+    },
+    {
+      "date": "2026-10-17",
+      "what": "Goat yoga on the Kern's lawn with Misfit Herd Zoo, 8:30 AM",
+      "source": "kerns",
+      "skipped": "no current post on the feed and nothing on the site this week"
+    },
+    {
+      "date": "2026-10-18",
+      "what": "Pup-O-Ween dog costume contest at Hi-Wire, 2-5 PM",
+      "source": "old-sevier-district",
+      "story": "pup-o-ween-hiwire"
+    },
+    {
+      "date": "2026-10-18",
+      "what": "Pup-O-Ween on the brewery's own SimpleTix page: check-in 2-2:45, runway at 3, $5 an entry for Small Breed Rescue of East Tennessee",
+      "source": "hi-wire",
+      "story": "pup-o-ween-hiwire"
+    },
+    {
+      "date": "2026-10-16",
+      "what": "Goodbye June and Danny Worsnop at The 808, 7 PM, 18+",
+      "source": "the-808",
+      "story": "goodbye-june-808"
+    },
+    {
+      "date": "2026-10-17",
+      "what": "All My Exes Live in Texas: Classic Country Night at The 808, doors 7, show 8, 18+",
+      "source": "the-808",
+      "story": "all-my-exes-808"
+    },
+    {
+      "date": "2026-10-15",
+      "what": "Disco Demon Ahun at Fly by Night, 9 PM-midnight, $5, 21+, free demon horns for the first 20",
+      "source": "fly-by-night",
+      "story": "disco-demon-fbn"
+    },
+    {
+      "date": "2026-10-17",
+      "what": "Quiet Entertainer album-release pre-party at Fly by Night with Kaspar and ro4l",
+      "source": "fly-by-night",
+      "story": "quiet-entertainer-fbn"
+    },
+    {
+      "date": "2026-10-15",
+      "what": "KTC social run from Printshop, 3 miles on the greenway, 6 PM, $1 wings after",
+      "source": "printshop",
+      "story": "ktc-run-printshop"
+    },
+    {
+      "date": "2026-10-15",
+      "what": "$1 wing night with Friends BBQ at Printshop 5-9",
+      "source": "printshop",
+      "skipped": "weekly special; in the party plan"
+    },
+    {
+      "date": "2026-10-16",
+      "what": "Crawdaddy Jones at Trailhead, 7 PM",
+      "source": "trailhead",
+      "story": "trailhead-crawdaddy"
+    },
+    {
+      "date": "2026-10-18",
+      "what": "Greg Horne at Trailhead, 4 PM",
+      "source": "trailhead",
+      "story": "trailhead-greg-horne"
+    },
+    {
+      "date": "2026-10-15",
+      "what": "Thursday trivia at Trailhead, 7 PM",
+      "source": "trailhead",
+      "skipped": "weekly; party plan"
+    },
+    {
+      "date": "2026-10-17",
+      "what": "First Bass x Planet Doom at The Pink Cactus, 8 PM-1 AM, $20, 18+, two stages",
+      "source": "pink-cactus",
+      "story": "first-bass-pink-cactus"
+    },
+    {
+      "date": "2026-10-15",
+      "what": "Free hour in the karaoke rooms at The Pink Cactus, Thursdays in October",
+      "source": "pink-cactus",
+      "skipped": "weekly deal; party plan"
+    },
+    {
+      "date": "2026-10-16",
+      "what": "SouthSide Garage opens for lunch at 11 with the Friday torta; Saturday noon to midnight",
+      "source": "southside-garage",
+      "skipped": "standing hours; party plan"
+    },
+    {
+      "date": "2026-10-15",
+      "what": "Monster Mash burger and Bad Apple drink of the month at Sevier Ave Burger Co.; Sunday brunch with half-off mimosas",
+      "source": "sevier-ave-burger",
+      "skipped": "month-long; party plan"
+    },
+    {
+      "date": "2026-10-15",
+      "what": "Green Goblin pizza of the month at South Coast Pizza",
+      "source": "south-coast-pizza",
+      "skipped": "month-long; party plan"
+    },
+    {
+      "date": "2026-10-16",
+      "what": "Starlight Paddle from Ijams River Landing, Fri and Sat 7-9 PM, $45, ages 14+",
+      "source": "ijams",
+      "story": "starlight-paddle"
+    },
+    {
+      "date": "2026-10-18",
+      "what": "Early Bird Paddle from Ijams River Landing, 9-11 AM, $45",
+      "source": "ijams",
+      "skipped": "second paddle the same weekend; one line inside the Starlight Paddle story"
+    },
+    {
+      "date": "2026-10-17",
+      "what": "Storytime at the Nature Playscape: Birds, 10-noon, free, $5 parking",
+      "source": "ijams",
+      "story": "storytime-birds"
+    },
+    {
+      "date": "2026-10-18",
+      "what": "Fall Fungi ID beginner workshop at Ijams Nature Center, 1-3 PM, $15, ages 14+",
+      "source": "ijams",
+      "story": "fall-fungi-id"
+    },
+    {
+      "date": "2026-10-18",
+      "what": "East Tennessee Bluegrass Association monthly jam at Mead's Quarry, 2-5 PM, free",
+      "source": "ijams",
+      "story": "bluegrass-jam-quarry"
+    },
+    {
+      "date": "2026-10-15",
+      "what": "Circles with Dizzy hooping, 6 PM",
+      "source": "ijams",
+      "skipped": "weekly class"
+    },
+    {
+      "date": "2026-10-18",
+      "what": "Self Care Sunday yoga, 11:30",
+      "source": "ijams",
+      "skipped": "weekly class"
+    },
+    {
+      "date": "2026-10-17",
+      "what": "Ijams member fall wildflower walk, 1 PM",
+      "source": "ijams",
+      "skipped": "members only"
+    },
+    {
+      "date": "2026-10-17",
+      "what": "ScruffyCat and ScrappyKitty mountain bike adventure from 3000 McClure Lane, 100, 50 and 25-mile routes, bonfire after",
+      "source": "ambc",
+      "story": "scruffycat-ride"
+    },
+    {
+      "date": "2026-10-17",
+      "what": "Catalyst Sports adaptive MTB ride at Baker Creek, 9:30-noon",
+      "source": "ambc",
+      "story": "catalyst-adaptive-ride"
+    },
+    {
+      "date": "2026-10-17",
+      "what": "Alabama at Tennessee, 3:30 PM, and Earl's game-day board",
+      "source": "earls",
+      "story": "specials-board"
+    },
+    {
+      "date": "2026-10-17",
+      "what": "Puckers game-day specials",
+      "source": "puckers",
+      "skipped": "the only post is dated to the Arkansas game; nothing yet for Alabama"
+    },
+    {
+      "date": "2026-10-18",
+      "what": "Sunday karaoke at Fly by Night",
+      "source": "fly-by-night",
+      "skipped": "no post for Oct 18; last confirmed by the host for Sept 27"
+    }
+  ]
+}
