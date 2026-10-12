@@ -1,0 +1,486 @@
+{
+ "run": 11,
+ "date": "2026-10-12",
+ "next": "2026-10-19",
+ "episode": 17,
+ "kicker": "Week of Oct 7 · episode No. 17 · read Oct 12",
+ "railKind": "156 followers · 54 reach a post",
+ "headline": "Four posts reached over a hundred people each. The week read 926.",
+ "verdicts": [
+  {
+   "label": "Growth",
+   "tone": "ok",
+   "text": "+45 followers, 111 to 156"
+  },
+  {
+   "label": "Reach",
+   "tone": "ok",
+   "text": "926 all week, was 47"
+  },
+  {
+   "label": "New people",
+   "tone": "ok",
+   "text": "660 non-followers reached, was 1"
+  },
+  {
+   "label": "Pipeline",
+   "tone": "ok",
+   "text": "17 of 17 posted, no retries"
+  }
+ ],
+ "tiles": [
+  {
+   "label": "Followers",
+   "value": "156",
+   "good": "up",
+   "series": [
+    46,
+    49,
+    59,
+    66,
+    74,
+    86,
+    95,
+    100,
+    101,
+    111,
+    156
+   ],
+   "vsLast": {
+    "dir": "up",
+    "tone": "ok",
+    "text": "+45 this week, best ever"
+   },
+   "vsBase": "46 on Aug 11"
+  },
+  {
+   "label": "Reach per post",
+   "value": "54",
+   "good": "up",
+   "series": [
+    16.1,
+    10.5,
+    10.5,
+    14.2,
+    10.4,
+    8.2,
+    8.1,
+    6.8,
+    7.8,
+    4.9,
+    5.9,
+    54.5
+   ],
+   "vsLast": {
+    "dir": "up",
+    "tone": "ok",
+    "text": "nine times last week, same age"
+   },
+   "vsBase": "10.5 in early Aug"
+  },
+  {
+   "label": "Reach, whole week",
+   "value": "926",
+   "good": "up",
+   "series": [
+    113,
+    84,
+    63,
+    128,
+    104,
+    106,
+    89,
+    41,
+    101,
+    69,
+    47,
+    926
+   ],
+   "vsLast": {
+    "dir": "up",
+    "tone": "ok",
+    "text": "seven times the old best, 128"
+   },
+   "vsBase": "best was 128, Aug 12"
+  },
+  {
+   "label": "People reached this week",
+   "value": "686",
+   "good": "up",
+   "series": [
+    19,
+    11,
+    21,
+    25,
+    20,
+    686
+   ],
+   "vsLast": {
+    "dir": "up",
+    "tone": "ok",
+    "text": "660 of them don't follow us"
+   },
+   "vsBase": "19 a month ago"
+  },
+  {
+   "label": "New people reached · 28 days",
+   "value": "675",
+   "good": "up",
+   "series": [
+    10,
+    10,
+    6,
+    9,
+    12,
+    13,
+    675
+   ],
+   "vsLast": {
+    "dir": "up",
+    "tone": "ok",
+    "text": "was 13 last Monday"
+   },
+   "vsBase": "10 a month ago"
+  }
+ ],
+ "tilesNote": "Lines run from July to now. Reach per post is read at the same age as last week's was (one to five days).",
+ "week": [
+  {
+   "id": "call-the-ear",
+   "day": "Wed",
+   "time": "09:00",
+   "reach": 14,
+   "title": "Call the Ear",
+   "img": "/insta/img/soknoear/2026-10-07_call-the-ear.jpg",
+   "group": "lead"
+  },
+  {
+   "id": "weekend-roundup",
+   "day": "Wed",
+   "time": "09:31",
+   "reach": 14,
+   "title": "Weekend roundup · 10 slides",
+   "img": "/insta/img/soknoear/2026-10-07_episode-drop.jpg",
+   "group": "lead"
+  },
+  {
+   "id": "old-sevier-market-opens",
+   "day": "Wed",
+   "time": "09:45",
+   "reach": 38,
+   "title": "Old Sevier Market opens",
+   "img": "/insta/img/soknoear/2026-10-07_old-sevier-market-opens.jpg"
+  },
+  {
+   "id": "kerns-second-mural",
+   "day": "Thu",
+   "time": "09:00",
+   "reach": 18,
+   "title": "Kern's second mural",
+   "img": "/insta/img/soknoear/2026-10-07_kerns-second-mural.jpg"
+  },
+  {
+   "id": "oakenfold-sold-out",
+   "day": "Thu",
+   "time": "15:00",
+   "reach": 18,
+   "title": "Oakenfold sold out at The 808",
+   "img": "/insta/img/soknoear/2026-10-07_oakenfold-sold-out.jpg"
+  },
+  {
+   "id": "dj-goblin-alliance",
+   "day": "Thu",
+   "time": "17:00",
+   "reach": 103,
+   "title": "DJ Goblin at Alliance",
+   "img": "/insta/img/soknoear/2026-10-07_dj-goblin-alliance.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "urban-wilderness-50k",
+   "day": "Thu",
+   "time": "19:00",
+   "reach": 10,
+   "title": "Urban Wilderness 50K",
+   "img": "/insta/img/soknoear/2026-10-07_urban-wilderness-50k.jpg"
+  },
+  {
+   "id": "trailhead-kimbro",
+   "day": "Fri",
+   "time": "11:00",
+   "reach": 9,
+   "title": "Daniel Kimbro at Trailhead",
+   "img": "/insta/img/soknoear/2026-10-07_trailhead-kimbro.jpg"
+  },
+  {
+   "id": "feral-kitty-release",
+   "day": "Fri",
+   "time": "13:00",
+   "reach": 286,
+   "title": "Feral Kitty at Fly by Night",
+   "img": "/insta/img/soknoear/2026-10-07_feral-kitty-release.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "storytime-flowers",
+   "day": "Fri",
+   "time": "15:00",
+   "reach": 9,
+   "title": "Flower storytime at Ijams",
+   "img": "/insta/img/soknoear/2026-10-07_storytime-flowers.jpg"
+  },
+  {
+   "id": "knox-ill",
+   "day": "Fri",
+   "time": "17:00",
+   "reach": 19,
+   "title": "KNOX-ILL at Printshop",
+   "img": "/insta/img/soknoear/2026-10-07_knox-ill.jpg"
+  },
+  {
+   "id": "big-day-birding",
+   "day": "Fri",
+   "time": "19:00",
+   "reach": 14,
+   "title": "Big Day birding at Ijams",
+   "img": "/insta/img/soknoear/2026-10-07_big-day-birding.jpg"
+  },
+  {
+   "id": "after-brunch-special",
+   "day": "Sat",
+   "time": "11:00",
+   "reach": 119,
+   "title": "Stand-up at the Pink Cactus",
+   "img": "/insta/img/soknoear/2026-10-07_after-brunch-special.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "dizzle-phunk",
+   "day": "Sat",
+   "time": "18:00",
+   "reach": 13,
+   "title": "Dizzle Phunk at Fly by Night",
+   "img": "/insta/img/soknoear/2026-10-07_dizzle-phunk.jpg"
+  },
+  {
+   "id": "scruffy-roots-fest",
+   "day": "Sun",
+   "time": "08:00",
+   "reach": 15,
+   "title": "Scruffy Roots Fest at Kern's",
+   "img": "/insta/img/soknoear/2026-10-07_scruffy-roots-fest.jpg"
+  },
+  {
+   "id": "vegan-bbq-printshop",
+   "day": "Sun",
+   "time": "10:00",
+   "reach": 211,
+   "title": "Vegan barbecue at Printshop",
+   "img": "/insta/img/soknoear/2026-10-07_vegan-bbq-printshop.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "trailhead-two-heads",
+   "day": "Sun",
+   "time": "13:00",
+   "reach": 16,
+   "title": "Two Heads at Trailhead",
+   "img": "/insta/img/soknoear/2026-10-07_trailhead-two-heads.jpg"
+  }
+ ],
+ "weekLegend": [
+  {
+   "group": "hot",
+   "label": "Over a hundred people"
+  },
+  {
+   "group": "lead",
+   "label": "The ad and the roundup"
+  },
+  {
+   "group": "plain",
+   "label": "Single posts, tagged in the image"
+  }
+ ],
+ "worked": [
+  {
+   "title": "Feral Kitty at Fly by Night",
+   "reach": 286,
+   "img": "/insta/img/soknoear/2026-10-07_feral-kitty-release.jpg",
+   "why": "A bar with its own crowd, tagged in the picture, our first post about it."
+  },
+  {
+   "title": "Vegan barbecue at Printshop",
+   "reach": 211,
+   "img": "/insta/img/soknoear/2026-10-07_vegan-bbq-printshop.jpg",
+   "why": "Sunday morning, a pop-up, the brewery tagged. Four people followed from this one post."
+  },
+  {
+   "title": "Stand-up at the Pink Cactus",
+   "reach": 119,
+   "img": "/insta/img/soknoear/2026-10-07_after-brunch-special.jpg",
+   "why": "Thirteen likes, the most ever. Twelve people read the story on the site."
+  }
+ ],
+ "didnt": [
+  {
+   "title": "Daniel Kimbro at Trailhead",
+   "reach": 9,
+   "img": "/insta/img/soknoear/2026-10-07_trailhead-kimbro.jpg",
+   "why": "Tagged, written to, posted at eleven on Friday. Trailhead's two posts read 9 and 16."
+  },
+  {
+   "title": "Flower storytime at Ijams",
+   "reach": 9,
+   "img": "/insta/img/soknoear/2026-10-07_storytime-flowers.jpg",
+   "why": "Ijams again: 38 posts, 9 reach a post. Its two this week read 9 and 14."
+  },
+  {
+   "title": "Urban Wilderness 50K",
+   "reach": 10,
+   "img": "/insta/img/soknoear/2026-10-07_urban-wilderness-50k.jpg",
+   "why": "The one story with nobody to tag. Nobody with an audience saw it."
+  }
+ ],
+ "learned": {
+  "title": "Who was tagged in the picture is what reached people",
+  "note": "Average reach a post in No. 17, by who the post was tagged to. Every venue got a note on Wednesday.",
+  "rows": [
+   {
+    "label": "Fly by Night, Printshop, Pink Cactus, Alliance",
+    "value": 125,
+    "note": "6 posts · bars we had never posted before",
+    "tone": "ok"
+   },
+   {
+    "label": "Old Sevier Market, The 808, Trailhead",
+    "value": 20,
+    "note": "4 posts · also new, also written to",
+    "tone": "ink"
+   },
+   {
+    "label": "Kern's and Ijams, the regulars",
+    "value": 14,
+    "note": "4 posts",
+    "tone": "ink"
+   },
+   {
+    "label": "No one tagged",
+    "value": 13,
+    "note": "3 posts · the ad, the roundup, the 50K",
+    "tone": "bad"
+   }
+  ]
+ },
+ "dials": [
+  {
+   "label": "Posts delivered",
+   "value": 17,
+   "max": 17,
+   "display": "17/17",
+   "note": "0 failed, 0 retries",
+   "tone": "ok"
+  },
+  {
+   "label": "Followers who saw a post",
+   "value": 23,
+   "max": 100,
+   "display": "23%",
+   "note": "36 of 156, this week",
+   "tone": "warn"
+  },
+  {
+   "label": "Reach that was new people",
+   "value": 95,
+   "max": 100,
+   "display": "95%",
+   "note": "675 of 713, in 28 days",
+   "tone": "ok"
+  }
+ ],
+ "bestEver": [
+  {
+   "title": "Feral Kitty at Fly by Night",
+   "reach": 286,
+   "img": "/insta/img/soknoear/2026-10-07_feral-kitty-release.jpg",
+   "why": "A release show at a cocktail lounge. Oct 9."
+  },
+  {
+   "title": "Vegan barbecue at Printshop",
+   "reach": 211,
+   "img": "/insta/img/soknoear/2026-10-07_vegan-bbq-printshop.jpg",
+   "why": "A pop-up at a brewery. Oct 11."
+  },
+  {
+   "title": "Stand-up at the Pink Cactus",
+   "reach": 119,
+   "img": "/insta/img/soknoear/2026-10-07_after-brunch-special.jpg",
+   "why": "Six comics for five dollars. Oct 10."
+  },
+  {
+   "title": "DJ Goblin at Alliance",
+   "reach": 103,
+   "img": "/insta/img/soknoear/2026-10-07_dj-goblin-alliance.jpg",
+   "why": "A DJ night at a brewery. Oct 8."
+  },
+  {
+   "title": "Old Sevier Market opens",
+   "reach": 38,
+   "img": "/insta/img/soknoear/2026-10-07_old-sevier-market-opens.jpg",
+   "why": "A grocery store opening. Oct 7."
+  },
+  {
+   "title": "Mimosas opens",
+   "reach": 22,
+   "img": "/insta/img/soknoear/2026-07-23_mimosas.jpg",
+   "why": "The old record. A new restaurant, Jul 25."
+  }
+ ],
+ "moves": [
+  {
+   "key": "weekly-reel",
+   "owner": "claude",
+   "title": "A weekly Reel from the audio briefing",
+   "why": "You said go, so it's built. The No. 17 cut is below, made in five seconds. All 131 posts have been stills; Reels are what Instagram shows strangers.",
+   "plan": "Built Mon Oct 12 (the No. 17 cut is above). The first one goes out Wed Oct 14 at 1 PM with No. 18 unless you say don't.",
+   "due": "2026-10-14",
+   "sample": {
+    "video": "/insta/img/soknoear/2026-10-12_reel-no17.mp4",
+    "poster": "/insta/img/soknoear/2026-10-12_reel-no17.jpg"
+   }
+  },
+  {
+   "key": "tag-the-artist",
+   "owner": "claude",
+   "title": "Tag the artist in the picture too",
+   "why": "You asked for it and the numbers agree: the four posts over a hundred were the ones where somebody with their own crowd was tagged.",
+   "plan": "From Wed Oct 14 every handle a story names (the venue, the band, the organizer) is tagged in the image, not only the venue. Say don't and it is the venue alone.",
+   "due": "2026-10-14"
+  },
+  {
+   "key": "call-the-ear-ad",
+   "owner": "andy",
+   "title": "The Call-the-Ear ad is out until the phone line changes",
+   "why": "You said no ad next week while you change the phone-in system. Only you can change the line, so this one is yours.",
+   "plan": "Held from Wed Oct 14 while you change the phone-in system. Mark Done when the new line works and the ad comes back the next Wednesday on its own."
+  }
+ ],
+ "done": [
+  {
+   "title": "Every venue post was tagged in the picture.",
+   "text": "Fourteen of fourteen, the first full week. Last Monday the measure was five new people reached; it was 660."
+  },
+  {
+   "title": "Every story got its own post.",
+   "text": "Seventeen posts, the most ever, and the lowest read 9. Last week's lowest was 4."
+  },
+  {
+   "title": "The roundup read 14, so it stays.",
+   "text": "It had to beat 6 by Oct 19 or go back to the card. It did. Still no saves, from anyone, ever."
+  },
+  {
+   "title": "The Reel is built and the ad is held.",
+   "text": "Your two answers from Friday night, both done. The Reel cut above is No. 17's; No. 18's gets made at publish."
+  }
+ ]
+}
