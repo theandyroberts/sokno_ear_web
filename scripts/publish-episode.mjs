@@ -110,6 +110,10 @@ if (doIg) {
   step("Building Instagram artwork");
   run("python3", ["scripts/ig-banners.py", slug]);
   run("python3", ["scripts/ig-promos.py", slug]);
+  // The weekly Reel, cut from the audio briefing (needs public/audio/<slug>.mp3 and the
+  // card above). A week without one still publishes; ig-queue.mjs says the Reel is missing.
+  try { run("python3", ["scripts/ig-reel.py", slug]); }
+  catch (e) { console.warn(`  (no Reel this week — ${String(e.message ?? e).split("\n")[0]})`); }
 }
 
 // ── 3. Commit + push whatever changed ───────────────────────────────────────

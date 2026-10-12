@@ -126,8 +126,9 @@ describe("Andy's switch", () => {
 });
 
 describe("the venue tagged in the image", () => {
-  it("tags every banner with a venue, by its first handle, on the band", () => {
-    expect(userTagsFor(["@kernsknox", "@legacyparks"])).toEqual([{ username: "kernsknox", ...USER_TAG_SPOT }]);
+  it("tags every banner with a venue on the band — alone at the centre, or first of several (since 2026-10-12)", () => {
+    expect(userTagsFor(["@kernsknox", "@legacyparks"], { everyone: false })).toEqual([{ username: "kernsknox", ...USER_TAG_SPOT }]);
+    expect(userTagsFor(["@kernsknox", "@legacyparks"])[0]).toMatchObject({ username: "kernsknox", y: USER_TAG_SPOT.y });
     expect(userTagsFor(["@ijamsnaturecenter"])).toEqual([{ username: "ijamsnaturecenter", x: 0.5, y: 0.88 }]);
   });
   it("leaves an untagged post alone", () => {

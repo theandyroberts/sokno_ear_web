@@ -14,7 +14,8 @@ import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, DAY_START_HOUR, placeDaySlo
 import { priorRunsById, pickRepeatsToDrop, standingKeyOf, MAX_REPEATS_PER_EPISODE } from "./ig-repeats.mjs";
 import { checkBanner } from "./ig-banner-check.mjs";
 import { buildRoundup, buildVenueRoundup, pickSingles, roundupIsOn, venueCarouselsOn, MAX_SINGLES_PER_VENUE } from "./ig-roundup.mjs";
-import { userTagsFor, imageTagsOn, abBucket } from "./ig-container.mjs";
+import { userTagsFor, imageTagsOn, artistTagsOn, adIsOn, abBucket } from "./ig-container.mjs";
+import { reelIsOn, buildReelPost } from "./ig-reel.mjs";
 
 const SITE = "https://soknoear.com";
 const BASE_HASHTAGS = "#SoKno #SouthKnoxville #Knoxville #SouthKnoxvilleEar";
@@ -117,9 +118,23 @@ function slotFor(story, dayDate) {
   return { date, hour };
 }
 
+const warnings = [];
+
+// Andy's answers from the dashboard, read before anything is built: they switch the
+// roundup, the image tags, the artist tags, the ad and the Reel (docs/IG-DASHBOARD.md).
+let moves = [];
+try {
+  const { hasStore, openStore } = await import("./pub-status-store.mjs");
+  if (hasStore()) {
+    const { listMoves } = await import("./pub-status-lib.mjs");
+    const db = await openStore();
+    moves = listMoves(db, { all: true });
+    db.close();
+  }
+} catch (e) { warnings.push(`could not read Andy's answers (${e.message}) — building with everything on`); }
+
 const stories = [{ ...episode.feature, __isFeature: true }, ...episode.stories];
 const posts = [];
-const warnings = [];
 const featureIds = new Set();
 
 for (const s of stories) {
@@ -160,8 +175,10 @@ for (const s of stories) {
   // mention. Three weeks of a 50/50 split (Sep 16 – Oct 4) read tagged 9.0 against
   // untagged 6.6 reach a post, ahead every week, and the account's weekly non-follower
   // reach tracked the number of tagged posts (7, 5, 1 with 4, 5, 1 of them). Decided
-  // in docs/ig-reviews/2026-10-05.md.
-  const userTags = userTagsFor(tags);
+  // in docs/ig-reviews/2026-10-05.md. Since 2026-10-12 every verified handle the story
+  // names goes in the picture, not only the venue (Andy: "tags the venue and artist";
+  // the No. 17 posts that reached hundreds were the ones with a tagged audience).
+  const userTags = userTagsFor(tags, { everyone: artistTagsOn(moves) });
 
   if (s.__isFeature) featureIds.add(s.id);
   posts.push({
@@ -220,17 +237,6 @@ const queuePath = path.join(process.cwd(), "content", "ig-queue", `${episode.slu
 let prevQueue = null;
 try { prevQueue = JSON.parse(fs.readFileSync(queuePath, "utf8")); } catch { /* first staging */ }
 const wentOutTheOldWay = Boolean(prevQueue?.posts?.some((p) => p.id === "episode-drop" && p.status !== "pending"));
-
-let moves = [];
-try {
-  const { hasStore, openStore } = await import("./pub-status-store.mjs");
-  if (hasStore()) {
-    const { listMoves } = await import("./pub-status-lib.mjs");
-    const db = await openStore();
-    moves = listMoves(db, { all: true });
-    db.close();
-  }
-} catch (e) { warnings.push(`could not read Andy's answers (${e.message}) — building with the roundup on`); }
 
 // Andy answering "Don't" to tagging every picture puts the old 50/50 split back.
 if (!imageTagsOn(moves)) {
@@ -392,9 +398,12 @@ const PROMOS = [
     ].join("\n"),
   },
 ];
+if (!adIsOn(moves)) warnings.push("the Call-the-Ear ad is held — Andy is changing the phone-in system (move call-the-ear-ad; his Done brings it back)");
 for (const pr of PROMOS) {
   const rel = `/assets/ig/${episode.slug}/${pr.id}.jpg`;
   if (!fs.existsSync(path.join(process.cwd(), "public", rel))) continue;
+  // Held while the phone line changes — but a restage never erases an ad that already went out.
+  if (pr.id === "call-the-ear" && !adIsOn(moves) && !prevQueue?.posts?.some((p) => p.id === pr.id && p.status && p.status !== "pending")) continue;
   if (pr.id === "episode-drop" && roundup) {
     // The roundup takes the episode card's place, and its slot, at the head of the drip.
     posts.push({
@@ -420,6 +429,29 @@ for (const pr of PROMOS) {
     leadOrder: pr.offset,
     status: "pending",
   });
+}
+
+// ── The weekly Reel (scripts/ig-reel.py cuts it at publish; scripts/ig-reel.mjs is the
+// entry). Publish day, 13:00, after the lead pair. Off on Andy's "Don't" to
+// `weekly-reel`, when there is no mp4, or when this week already went out before a
+// Reel was cut for it (restaging a posted week must never add a post to it).
+{
+  const reelRel = `/assets/ig/${episode.slug}/reel.mp4`;
+  const hasReel = fs.existsSync(path.join(process.cwd(), "public", reelRel));
+  const weekIsOut = Boolean(prevQueue?.posts?.some((p) => p.status === "posted"));
+  const hadReel = Boolean(prevQueue?.posts?.some((p) => p.id === "reel"));
+  if (!hasReel) warnings.push("no Reel — public/assets/ig/<slug>/reel.mp4 not built (python3 scripts/ig-reel.py)");
+  else if (!reelIsOn(moves)) warnings.push("Reel off — Andy answered “Don't” on the dashboard");
+  else if (weekIsOut && !hadReel) warnings.push("Reel not added — this week already went out without one");
+  else {
+    posts.push(buildReelPost({
+      episode,
+      videoUrl: `${SITE}${reelRel}`,
+      coverUrl: `${SITE}/assets/ig/${episode.slug}/reel.jpg`,
+      hashtags: BASE_HASHTAGS,
+      site: SITE,
+    }));
+  }
 }
 
 // Never let a burst out the door: past-due and tightly-packed slots get walked
