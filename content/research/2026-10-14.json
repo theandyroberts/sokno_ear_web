@@ -347,6 +347,12 @@
       "what": "Sunday karaoke at Fly by Night",
       "source": "fly-by-night",
       "skipped": "no post for Oct 18; last confirmed by the host for Sept 27"
+    },
+    {
+      "date": "2026-10-16",
+      "what": "The 808's parking map: street parking, the HoneyBee lot, the underpass lot; not across from Trailhead or in the Borderland lot",
+      "source": "the-808",
+      "story": "the-808-parking-map"
     }
   ]
 }

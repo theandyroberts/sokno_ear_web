@@ -368,7 +368,7 @@
         },
         {
           "label": "Parking",
-          "value": "The venue's map: street parking on Sevier Ave and its side streets, the HoneyBee free lot, and the public lot under the James White Parkway bridge off Island Home Ave · not across from Trailhead Beer Market, not the Borderland Tees lot next door"
+          "value": "See the venue's map, redrawn below: Sevier Ave street spots, the HoneyBee lot, the underpass lot off Island Home Ave · not the Borderland Tees lot, not across from Trailhead"
         },
         {
           "label": "Weather",
@@ -501,6 +501,88 @@
           "Classic country night at The 808",
           "Saturday, doors at seven"
         ]
+      }
+    },
+    {
+      "id": "the-808-parking-map",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri",
+        "Sat"
+      ],
+      "layout": "imageTop",
+      "image": "/assets/diagrams/the-808-parking.png",
+      "imageCaption": "Green is where the venue says to park; rust is where it says not to",
+      "title": "The 808 posts a parking map: street spots on Sevier Avenue, the HoneyBee lot, and the underpass lot off Island Home",
+      "deck": "Two shows this weekend and a two-week-old venue with no lot of its own. The venue's own map, redrawn here, settles where the car goes, and names the two places it does not.",
+      "facts": [
+        {
+          "label": "Park",
+          "value": "Street parking on Sevier Ave west of the venue and on Langford and Phillips Aves north of it · the HoneyBee free lot across Sevier Ave · the public gravel lot under the James White Parkway bridge, off Island Home Ave"
+        },
+        {
+          "label": "Don't",
+          "value": "The Borderland Tees lot next door, which tows · across Island Home Ave from Trailhead Beer Market"
+        },
+        {
+          "label": "The walk",
+          "value": "Underpass lot to the door, about ten minutes along Island Home and Sevier"
+        },
+        {
+          "label": "This weekend",
+          "value": "Goodbye June and Danny Worsnop Fri 7 PM · All My Exes Live in Texas Sat, doors 7"
+        },
+        {
+          "label": "Saturday",
+          "value": "Alabama at Tennessee ends around 7, as the doors open · the bridge will be slow"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The 808 opened on October 2 in a building that fronts Sevier Avenue with no parking lot of its own, and its first sold-out night taught the neighborhood where cars end up. Last Wednesday the venue posted a two-slide parking map and one request. The map above is that map redrawn: the streets are from OpenStreetMap, the green and the rust are the venue's."
+        },
+        {
+          "type": "subhead",
+          "text": "Where the green is"
+        },
+        {
+          "type": "paragraph",
+          "text": "Closest is the street parking along Sevier Avenue west of the venue and on Langford and Phillips Avenues, the two residential blocks between Sevier and the river. Across the avenue is the HoneyBee free lot, at the coffee shop. For the overflow, the map points down Island Home Avenue to the public gravel lot under the James White Parkway bridge, the one that sits between Trailhead Beer Market and Printshop; from there it is about a ten-minute walk back to the door."
+        },
+        {
+          "type": "subhead",
+          "text": "Where the rust is"
+        },
+        {
+          "type": "paragraph",
+          "text": "Two places. The Borderland Tees lot next door, which the venue has warned about since opening weekend and which tows. And the lot across Island Home Avenue from Trailhead Beer Market, which is the one request in the venue's caption: please refrain from parking across from Trailhead. Saturday adds a wrinkle: Alabama at Tennessee kicks off at 3:30 and ends about when the doors open at seven, so the bridge and Sevier Avenue will be full of game traffic at exactly the wrong moment. The underpass lot, reached from the Island Home side, avoids most of it."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The 808 on Instagram — parking update and map, Oct 8",
+          "url": "https://www.instagram.com/808knox/p/DePgcnxFGEw/"
+        },
+        {
+          "label": "The 808 on Instagram — opening-weekend parking notice (the Borderland lot)",
+          "url": "https://www.instagram.com/808knox/"
+        },
+        {
+          "label": "OpenStreetMap — street data for the drawing",
+          "url": "https://www.openstreetmap.org/#map=17/35.9585/-83.9060"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "the-808"
+        ],
+        "igBanner": [
+          "Where to park for The 808",
+          "Friday and Saturday shows"
+        ],
+        "igSkip": true
       }
     },
     {
@@ -1665,6 +1747,14 @@
         "meta": "Music at 7 PM · outdoors · 1317 Island Home Ave",
         "starred": false,
         "href": "#trailhead-crawdaddy"
+      },
+      {
+        "month": "OCT",
+        "day": "16",
+        "title": "Where to park for The 808, both nights",
+        "meta": "Sevier Ave street spots · HoneyBee lot · the underpass lot off Island Home",
+        "starred": false,
+        "href": "#the-808-parking-map"
       },
       {
         "month": "OCT",
