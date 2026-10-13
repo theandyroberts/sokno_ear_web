@@ -368,7 +368,7 @@
         },
         {
           "label": "Parking",
-          "value": "Use the venue's map · do not park across from Trailhead Beer Market or in the Borderland Tees lot"
+          "value": "The venue's map: street parking on Sevier Ave and its side streets, the HoneyBee free lot, and the public lot under the James White Parkway bridge off Island Home Ave · not across from Trailhead Beer Market, not the Borderland Tees lot next door"
         },
         {
           "label": "Weather",
@@ -386,7 +386,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Two things from the venue's feed this past week. Average Wieners now sets up on the patio at every show, so dinner can be a hot dog between sets. And the parking update: The 808 posted a map and asked people not to park across the street from Trailhead Beer Market, which sits on Island Home Avenue behind the venue. The Borderland Tees lot next door still tows. Friday is mostly sunny and 80, with a cold front arriving overnight; the walk back to the car will be a lot cooler than the walk in."
+          "text": "Two things from the venue's feed this past week. Average Wieners now sets up on the patio at every show, so dinner can be a hot dog between sets. And the parking update: The 808 posted a two-slide map. It marks street parking along Sevier Avenue and the side streets around the venue, the HoneyBee free lot across the avenue, and, for the overflow, the public gravel lot under the James White Parkway bridge off Island Home Avenue, a walk away between Trailhead Beer Market and Printshop. The one ask is not to park across the street from Trailhead down there. The Borderland Tees lot next door to the venue still tows. Friday is mostly sunny and 80, with a cold front arriving overnight; the walk back to the car will be a lot cooler than the walk in."
         }
       ],
       "sources": [
@@ -1622,7 +1622,7 @@
       "title": "Weekend Audio Briefing",
       "intro": "What's happening in SoKno this weekend.",
       "description": "Your weekend listen — a free Fall Festival on the Kern's lawn Sunday, dogs in costume on a runway at Hi-Wire, two nights at The 808, a starlight paddle on the river, a hundred-mile bike tour of every trail in town, and where the music is Thursday through Sunday.",
-      "duration": "04:56",
+      "duration": "05:13",
       "src": "/audio/2026-10-14.mp3"
     },
     "calendar": [
