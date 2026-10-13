@@ -175,7 +175,6 @@ for name,lat,lon,dx,dy in [('Trailhead',35.96052,-83.90005,26,16),('Printshop',3
     d.text((p[0]+dx,p[1]+dy),name,font=PT(34),fill=INK,stroke_width=4,stroke_fill=CREAM)
 
 # ---------- no-park marks ----------
-bl=(v[0]+50, v[1]+100); nomark(bl)   # the Borderland Tees lot: next door, the east side of Davenport Rd (Andy)      # the Borderland Tees lot, next door (east side of Davenport, Andy)
 tr=P(35.96052,-83.90005); nx=P(35.96018,-83.90000); nomark(nx)   # across Island Home Ave from Trailhead, the river side
 
 # ---------- callouts: each leader runs clear of the others ----------
@@ -183,7 +182,6 @@ callout((cx,cy-Wh*0.6),['Public lot under the James White Pkwy','gravel · where
 callout(nx,['Not across from Trailhead','the river side of Island Home Ave'],tx=1690,ty=880,color=RUST)
 lp=P(35.9603,-83.9058); callout(lp,['Street parking','Langford Ave and Phillips Ave,','the blocks north of the venue'],tx=lp[0]-700,ty=lp[1]-250,color=GREEN)
 sp=P(35.95700,-83.9105); callout((sp[0],sp[1]-40),['Street parking','along Sevier Ave west of the venue'],tx=70,ty=1370,color=GREEN)
-callout(bl,['Not here: Borderland Tees lot','next door to the venue · it tows'],tx=1420,ty=1190,color=RUST)
 callout((hb[0],hb[1]+50),['HoneyBee free lot','behind the coffee shop, across Sevier Ave'],tx=760,ty=1370,color=GREEN)
 
 # ---------- plate, arrow, scale ----------
@@ -192,6 +190,49 @@ b1=d.textbbox((0,0),t1,font=PT(64)); b2=d.textbbox((0,0),t2,font=SE(34)); pw=max
 d.rounded_rectangle([40,40,40+pw,230],radius=18,fill=PLATE,outline=INK,width=6)
 d.text((70,58),t1,font=PT(64),fill=INK); d.text((72,140),t2,font=SE(34),fill=FADED)
 d.line([(W-120,180),(W-120,70)],fill=INK,width=6); d.polygon([(W-120,50),(W-140,95),(W-100,95)],fill=INK); d.text((W-138,190),'N',font=PT(40),fill=INK)
-d.line([(W-420,H-80),(W-420+px_per_m*300,H-80)],fill=INK,width=8); d.text((W-420,H-130),'300 m',font=SE(34),fill=INK)
+d.line([(70,290),(70+px_per_m*300,290)],fill=INK,width=8); d.text((70,245),'300 m',font=SE(34),fill=INK)
 d.text((60,H-60),'Streets from OpenStreetMap · parking from The 808 (@808knox), Oct 8, 2026',font=SE(28),fill=FADED)
+
+# ---------- the Borderland block: a rust highlight on the map, and a zoomed inset ----------
+hx0,hy0,hx1,hy1 = v[0]-118, v[1]-70, v[0]+90, v[1]+95          # the block from Davenport Rd to just past the door
+IX0,IY0,IX1,IY1 = 1640, 1030, 2340, 1540                         # the inset panel, bottom right
+ov=Image.new('RGBA',(W,H),(0,0,0,0)); od=ImageDraw.Draw(ov)
+od.polygon([(hx1,hy0),(hx1,hy1),(IX0,IY1),(IX0,IY0)],fill=(169,74,52,38))   # the zoom wedge
+img.paste(Image.alpha_composite(img.convert('RGBA'),ov).convert('RGB'))
+d=ImageDraw.Draw(img)
+d.line([(hx1,hy0),(IX0,IY0)],fill=RUST,width=5); d.line([(hx1,hy1),(IX0,IY1)],fill=RUST,width=5)
+d.rounded_rectangle([hx0,hy0,hx1,hy1],radius=16,outline=RUST,width=9)
+# inset: same OSM data, 7x closer
+ILON0,ILON1=-83.90890,-83.90640; ILAT1=35.95855
+ik=(IX1-IX0)/(ILON1-ILON0)
+def IP(lat,lon): return (IX0+(lon-ILON0)*ik, IY0+(ILAT1-lat)*ik/cosl)
+d.rounded_rectangle([IX0,IY0,IX1,IY1],radius=14,fill=PLATE,outline=INK,width=8)
+inset_img=Image.new('RGB',(IX1-IX0,IY1-IY0),PLATE); idr=ImageDraw.Draw(inset_img)
+def IPl(lat,lon): x,y=IP(lat,lon); return (x-IX0,y-IY0)
+for t,pts,_ in ways:
+    if t.get('highway') in W_BY: idr.line([IPl(*p) for p in pts],fill=INK,width=W_BY[t['highway']]*2+10,joint='curve')
+for t,pts,_ in ways:
+    if t.get('highway') in W_BY: idr.line([IPl(*p) for p in pts],fill=ROAD,width=W_BY[t['highway']]*2,joint='curve')
+for t,pts,i in ways:
+    if 'building' in t: idr.polygon([IPl(*p) for p in pts],fill=(226,214,190),outline=INK)
+# the venue's footprint, the parcel west of it, and the rest
+for t,pts,i in ways:
+    if i=='1560919141': idr.polygon([IPl(*p) for p in pts],fill=(200,190,170),outline=INK)
+bb=[IPl(*p) for p in [pts for t,pts,i in ways if i=='429395054'][0]]
+bx0=min(p[0] for p in bb)-26; by0=min(p[1] for p in bb)-30; b808=[IPl(*p) for p in [pts for t,pts,i in ways if i=='1560919141'][0]]; bx1=min(p[0] for p in b808)-8; by1=max(p[1] for p in bb)+90
+idr.rounded_rectangle([bx0,by0,bx1,by1],radius=10,fill=(236,206,196),outline=RUST,width=8)
+idr.polygon(bb,fill=(226,214,190),outline=INK)
+cxm,cym=(bx0+bx1)/2,(by0+by1)/2+20
+idr.line([(cxm-34,cym-34),(cxm+34,cym+34)],fill=RUST,width=14); idr.line([(cxm-34,cym+34),(cxm+34,cym-34)],fill=RUST,width=14)
+img.paste(inset_img,(IX0,IY0)); d=ImageDraw.Draw(img)
+d.rounded_rectangle([IX0,IY0,IX1,IY1],radius=14,outline=INK,width=8)
+# inset labels
+sv=IP(35.95782,-83.90724); star(sv,40,INK,outline=CREAM); star(sv,24,CREAM,outline=INK)
+d.text((sv[0]-20,sv[1]+40),'THE 808',font=PT(40),fill=INK,stroke_width=4,stroke_fill=PLATE)
+d.text((IX0+24,IY1-96),'Borderland Tees lot',font=PT(34),fill=RUST,stroke_width=4,stroke_fill=PLATE)
+d.text((IX0+24,IY1-54),'no parking · it tows',font=SE(30),fill=RUST,stroke_width=4,stroke_fill=PLATE)
+a,b=IP(35.9580,-83.90880),IP(35.9584,-83.90660); text_along('Sevier Ave',IP(35.95818,-83.90800),IP(35.95845,-83.90700),SE(34),offset=-40)
+text_along('Davenport Rd',IP(35.9578,-83.90836),IP(35.9573,-83.90815),SE(34),offset=44)
+d.text((IX0+18,IY0+14),'The lot just west of the door',font=SE(28),fill=INK)
+
 img.save('park_map_full.png'); img.resize((1200,800),Image.LANCZOS).save('park_map_preview.png'); print('rendered')
