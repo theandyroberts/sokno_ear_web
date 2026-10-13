@@ -154,8 +154,8 @@ print('underpass lot at px',round(cx),round(cy),'hits',len(hits))
 # Suttree Landing's city lot (OSM outline): public, but not on the venue's map, so ink not green
 for t,pts,i in ways:
     if i=='686757700':
-        pp=poly(pts); d.polygon(pp,fill=(226,214,190),outline=INK); d.line(pp+[pp[0]],fill=INK,width=4); sc=P(35.96142,-83.90283)
-d.text((sc[0]-110,sc[1]-150),'Suttree Landing city lot',font=PT(32),fill=INK,stroke_width=3,stroke_fill=CREAM); d.text((sc[0]-110,sc[1]-112),'(public, but not on the venue map)',font=SE(26),fill=FADED,stroke_width=3,stroke_fill=CREAM)
+        pp=poly(pts); d.polygon(pp,fill=GREEN_FILL,outline=GREEN); d.line(pp+[pp[0]],fill=GREEN,width=6); sc=P(35.96142,-83.90283)
+d.text((sc[0]-110,sc[1]-150),'Suttree Landing city lot',font=PT(32),fill=GREEN,stroke_width=3,stroke_fill=CREAM); d.text((sc[0]-110,sc[1]-112),'public parking',font=SE(26),fill=INK,stroke_width=3,stroke_fill=CREAM)
 # HoneyBee's lot: behind the building, the side away from Sevier Ave (Andy, 2026-10-13)
 hbb=P(35.95737,-83.90896)                      # the coffee shop
 hb=(hbb[0]+px_per_m*30, hbb[1]+px_per_m*34)     # ~45 m behind it
@@ -175,7 +175,7 @@ for name,lat,lon,dx,dy in [('Trailhead',35.96052,-83.90005,26,16),('Printshop',3
     d.text((p[0]+dx,p[1]+dy),name,font=PT(34),fill=INK,stroke_width=4,stroke_fill=CREAM)
 
 # ---------- no-park marks ----------
-bl=P(35.95775,-83.90800); nomark(bl)                    # the Borderland Tees lot, next door
+bl=(v[0]+50, v[1]+100); nomark(bl)   # the Borderland Tees lot: next door, the east side of Davenport Rd (Andy)      # the Borderland Tees lot, next door (east side of Davenport, Andy)
 tr=P(35.96052,-83.90005); nx=P(35.96018,-83.90000); nomark(nx)   # across Island Home Ave from Trailhead, the river side
 
 # ---------- callouts: each leader runs clear of the others ----------
