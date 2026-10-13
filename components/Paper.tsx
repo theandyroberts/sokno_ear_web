@@ -9,7 +9,6 @@ import { Divider } from "@/components/ds/Divider.jsx";
 import { ArticleBody } from "@/components/ArticleBody";
 import { AudioBriefingPlayer } from "@/components/AudioBriefingPlayer";
 import { EventSubmitForm } from "@/components/EventSubmitForm";
-import { CallTheEarCard } from "@/components/CallTheEarCard";
 import { SubscribeForm } from "@/components/SubscribeForm";
 import { PartyMapCard } from "@/components/PartyMapCard";
 import { DirtySouthCard } from "@/components/DirtySouthCard";
@@ -247,12 +246,14 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
         </Page>
       )}
 
-      {/* TELL THE EAR — bottom of the read, just above the footer */}
+      {/* TELL THE EAR — bottom of the read, just above the footer. The phone-in card
+          (CallTheEarCard) sat beside the form until 2026-10-13; it is parked while its
+          bugs get fixed, and a second subscribe form takes the slot (Andy). */}
       <div style={{ borderTop: "var(--border-rule) double var(--ink-black)", padding: "32px 0 40px", marginTop: 8 }}>
         <Page>
           <div className="ear-twocol" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.6fr) minmax(0, 1fr)", gap: 28, alignItems: "start", maxWidth: 980, margin: "0 auto" }}>
             <EventSubmitForm />
-            <CallTheEarCard />
+            <SubscribeForm variant="band" />
           </div>
         </Page>
       </div>

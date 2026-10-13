@@ -48,7 +48,10 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
   (no "evening/morning" — we don't know when they'll listen). **Standing sign-off:
   "see you around SoKno!"** — emphasize the community, not the publication. Vary the
   opening line week to week; never reuse the previous week's open. (The never-a-"paper"
-  rule above applies here too.)
+  rule above applies here too.) **No weather report.** A forecast line inside a story that
+  needs it (an outdoor paddle, a patio show) is fine; a standing weather paragraph is not.
+  There are plenty of places to get the weather; the weatherman is not our gig (Andy,
+  2026-10-13 — Nos. 11–18 had closed with one).
 - **ONE HEADLINE = ONE STORY.** Never put two events under a single headline, and never
   write a venue/location roundup. Each subject is its own `Story` with its own headline,
   its own art, its own scanner card and its own anchor. If a venue has two events that

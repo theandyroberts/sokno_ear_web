@@ -13,25 +13,29 @@ const boxStyle: React.CSSProperties = {
   boxSizing: "border-box",
 };
 
-// Envelope, drawn in the Ear's ink line — the "delivered" of the heading.
-function EnvelopeMark() {
+// The courier: the Ear's dog carrying the week's episode in an envelope, drawn in
+// the house engraving. Replaced the line-art envelope on 2026-10-13 — the box was
+// easy to overlook (Andy). Served at 2x; the frame keeps it from crowding the copy.
+const COURIER = "/assets/subscribe_courier.jpg";
+
+function Courier({ size }: { size: number }) {
   return (
-    <svg aria-hidden viewBox="0 0 120 84" width="108" height="76" style={{ display: "block", margin: "2px auto 14px" }}>
-      <g fill="none" stroke="var(--ink-black)" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round">
-        <rect x="6" y="14" width="108" height="64" rx="4" fill="var(--paper-cream)" />
-        <path d="M6 18 L60 54 L114 18" />
-        <path d="M6 76 L46 44" />
-        <path d="M114 76 L74 44" />
-      </g>
-      <g fill="var(--rust)" stroke="var(--ink-black)" strokeWidth="1.5">
-        <circle cx="60" cy="54" r="9" />
-      </g>
-      <text x="60" y="58.5" textAnchor="middle" fontSize="11" fontFamily="var(--font-label)" fill="var(--paper-cream)">★</text>
-      <g stroke="var(--ink-faded)" strokeWidth="1.5" strokeLinecap="round">
-        <path d="M16 6 h18" /><path d="M13 10 h12" />
-        <path d="M86 6 h18" /><path d="M95 10 h12" />
-      </g>
-    </svg>
+    <img
+      src={COURIER}
+      alt=""
+      width={size}
+      height={size}
+      style={{
+        display: "block",
+        width: size,
+        height: size,
+        objectFit: "cover",
+        borderRadius: "var(--radius-sm)",
+        border: "var(--border-hair) solid var(--ink-black)",
+        background: "var(--paper-cream)",
+        flex: "0 0 auto",
+      }}
+    />
   );
 }
 
@@ -51,6 +55,15 @@ const copyStyle: React.CSSProperties = {
   lineHeight: 1.5,
   color: "var(--ink-black)",
   margin: "0 0 var(--space-4)",
+};
+
+const leadStyle: React.CSSProperties = {
+  fontFamily: "var(--font-body)",
+  fontWeight: 700,
+  fontSize: "1.2rem",
+  lineHeight: 1.25,
+  color: "var(--ink-black)",
+  margin: "0 0 10px",
 };
 
 const inputStyle: React.CSSProperties = {
@@ -98,10 +111,19 @@ const submitBtnStyle: React.CSSProperties = {
 
 type SubscribeState = "idle" | "busy" | "error" | "welcomed" | "already";
 
-export function SubscribeForm() {
+/**
+ * Two placements on the episode page (Andy, 2026-10-13):
+ *  - "well"  — beside the party map under the feature. The courier sits above the copy.
+ *  - "band"  — the bottom of the read, beside "Tell the Ear", where the phone-in card
+ *              used to be. The courier sits beside the copy and the pitch is the
+ *              second-chance one: you read this far, don't miss the next one.
+ * Each placement gets its own input id so two forms on one page stay valid HTML.
+ */
+export function SubscribeForm({ variant = "well" }: { variant?: "well" | "band" }) {
   const [email, setEmail] = React.useState("");
   const [company, setCompany] = React.useState(""); // honeypot
   const [state, setState] = React.useState<SubscribeState>("idle");
+  const inputId = variant === "band" ? "subscribe-email-band" : "subscribe-email";
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -148,47 +170,72 @@ export function SubscribeForm() {
     );
   }
 
+  const form = (
+    <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "var(--space-3, 12px)" }}>
+      <input
+        type="email"
+        id={inputId} name="subscribe-email" autoComplete="email"
+        placeholder="Your email address"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+        style={inputStyle}
+      />
+      {/* Honeypot — visually hidden, must not be filled by real users */}
+      <div style={honeypotStyle} aria-hidden="true">
+        <input
+          type="text"
+          name="company"
+          value={company}
+          onChange={(e) => setCompany(e.target.value)}
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+      <div>
+        <button type="submit" disabled={state === "busy"} style={{ ...submitBtnStyle, opacity: state === "busy" ? 0.6 : 1 }}>
+          {state === "busy" ? "Signing you up…" : variant === "band" ? "Subscribe, it's free" : "Subscribe"}
+        </button>
+      </div>
+      {state === "error" && (
+        <p style={{ ...copyStyle, margin: 0, color: "var(--rust)" }} role="alert">
+          Hmm — that didn&apos;t go through. Mind giving it another try in a moment?
+        </p>
+      )}
+    </form>
+  );
+
+  if (variant === "band") {
+    return (
+      <section style={boxStyle}>
+        <div style={headingStyle}>★ Don&apos;t miss next weekend</div>
+        <div style={{ display: "flex", gap: 16, alignItems: "flex-start", marginBottom: 6 }}>
+          <Courier size={96} />
+          <div>
+            <p style={leadStyle}>You read to the bottom. You&apos;re one of us now.</p>
+            <p style={{ ...copyStyle, margin: "0 0 10px" }}>
+              Put your email here and the next episode comes to you on Wednesday: the weekend&apos;s
+              plans, the audio briefing, every story. One email a week, free, no spam.
+            </p>
+          </div>
+        </div>
+        {form}
+      </section>
+    );
+  }
+
   return (
     <section style={boxStyle}>
-      <div style={headingStyle}>★ Get the Ear Delivered</div>
-      <EnvelopeMark />
-      <p style={copyStyle}>Sign up for the weekly dispatch — events and stories from around SoKno.</p>
+      <div style={headingStyle}>★ Get the Weekend Delivered</div>
+      <div style={{ display: "flex", justifyContent: "center", margin: "2px 0 14px" }}>
+        <Courier size={132} />
+      </div>
+      <p style={leadStyle}>A fresh episode every Wednesday. This dog brings it to your inbox.</p>
       <p style={copyStyle}>
-        One short email when a fresh episode is up: the weekend&apos;s calendar, the audio
-        briefing, and every story, in one place. No spam, ever.
+        One short email a week: the weekend&apos;s calendar, the audio briefing and every story
+        from around SoKno, Thursday through Sunday. Free, and nobody gets your address but us.
       </p>
-      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "var(--space-3, 12px)" }}>
-        <input
-          type="email"
-          id="subscribe-email" name="subscribe-email" autoComplete="email"
-          placeholder="Your email address"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          style={inputStyle}
-        />
-        {/* Honeypot — visually hidden, must not be filled by real users */}
-        <div style={honeypotStyle} aria-hidden="true">
-          <input
-            type="text"
-            name="company"
-            value={company}
-            onChange={(e) => setCompany(e.target.value)}
-            tabIndex={-1}
-            autoComplete="off"
-          />
-        </div>
-        <div>
-          <button type="submit" disabled={state === "busy"} style={{ ...submitBtnStyle, opacity: state === "busy" ? 0.6 : 1 }}>
-            {state === "busy" ? "Signing you up…" : "Subscribe"}
-          </button>
-        </div>
-        {state === "error" && (
-          <p style={{ ...copyStyle, margin: 0, color: "var(--rust)" }} role="alert">
-            Hmm — that didn&apos;t go through. Mind giving it another try in a moment?
-          </p>
-        )}
-      </form>
+      {form}
     </section>
   );
 }
