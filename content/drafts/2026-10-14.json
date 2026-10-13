@@ -513,21 +513,21 @@
       ],
       "layout": "imageTop",
       "image": "/assets/diagrams/the-808-parking.png",
-      "imageCaption": "Green is where the venue says to park; rust is where it says not to",
+      "imageCaption": "Green is where the venue says to park; rust is where it says not to. The outlined star is the door.",
       "title": "The 808 posts a parking map: street spots on Sevier Avenue, the HoneyBee lot, and the underpass lot off Island Home",
       "deck": "Two shows this weekend and a two-week-old venue with no lot of its own. The venue's own map, redrawn here, settles where the car goes, and names the two places it does not.",
       "facts": [
         {
           "label": "Park",
-          "value": "Street parking on Sevier Ave west of the venue and on Langford and Phillips Aves north of it · the HoneyBee free lot across Sevier Ave · the public gravel lot under the James White Parkway bridge, off Island Home Ave"
+          "value": "Street parking on Sevier Ave west of the venue and on Langford and Phillips Aves north of it · the HoneyBee free lot, behind the coffee shop across Sevier Ave · the public gravel lot under the James White Parkway bridge, where the parkway crosses Island Home Ave just past Trailhead"
         },
         {
           "label": "Don't",
-          "value": "The Borderland Tees lot next door, which tows · across Island Home Ave from Trailhead Beer Market"
+          "value": "The Borderland Tees lot next door, which tows · the river side of Island Home Ave across from Trailhead Beer Market"
         },
         {
           "label": "The walk",
-          "value": "Underpass lot to the door, about ten minutes along Island Home and Sevier"
+          "value": "Underpass lot to the door, about fifteen minutes along Island Home and Sevier"
         },
         {
           "label": "This weekend",
@@ -549,7 +549,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Closest is the street parking along Sevier Avenue west of the venue and on Langford and Phillips Avenues, the two residential blocks between Sevier and the river. Across the avenue is the HoneyBee free lot, at the coffee shop. For the overflow, the map points down Island Home Avenue to the public gravel lot under the James White Parkway bridge, the one that sits between Trailhead Beer Market and Printshop; from there it is about a ten-minute walk back to the door."
+          "text": "Closest is the street parking along Sevier Avenue west of the venue and on Langford and Phillips Avenues, the two residential blocks between Sevier and the river. Across the avenue is the HoneyBee free lot, the one behind the coffee shop. For the overflow, the map points down Island Home Avenue to the public gravel lot under the James White Parkway bridge, where the parkway crosses the avenue just past Trailhead Beer Market; from there it is about a fifteen-minute walk back to the door. The city's own lot at Suttree Landing is on the way and is public too, though the venue's map does not mark it."
         },
         {
           "type": "subhead",
@@ -557,7 +557,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Two places. The Borderland Tees lot next door, which the venue has warned about since opening weekend and which tows. And the lot across Island Home Avenue from Trailhead Beer Market, which is the one request in the venue's caption: please refrain from parking across from Trailhead. Saturday adds a wrinkle: Alabama at Tennessee kicks off at 3:30 and ends about when the doors open at seven, so the bridge and Sevier Avenue will be full of game traffic at exactly the wrong moment. The underpass lot, reached from the Island Home side, avoids most of it."
+          "text": "Two places. The Borderland Tees lot next door, which the venue has warned about since opening weekend and which tows. And the river side of Island Home Avenue across from Trailhead Beer Market, which is the one request in the venue's caption: please refrain from parking across from Trailhead. Saturday adds a wrinkle: Alabama at Tennessee kicks off at 3:30 and ends about when the doors open at seven, so the bridge and Sevier Avenue will be full of game traffic at exactly the wrong moment. The underpass lot, reached from the Island Home side, avoids most of it."
         }
       ],
       "sources": [
