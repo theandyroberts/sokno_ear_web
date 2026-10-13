@@ -1,7 +1,14 @@
 "use client";
 import * as React from "react";
+import { track } from "@/lib/track";
 
 type Props = { title?: string; intro: string; description: string; duration: string; src: string };
+
+/** The episode an audio file belongs to: "/audio/2026-10-14.mp3" → "2026-10-14". */
+function episodeOf(src: string): string {
+  const m = src.match(/([^/]+)\.[a-z0-9]+$/i);
+  return m ? m[1] : src;
+}
 
 export function AudioBriefingPlayer({
   title = "Weekend Audio Briefing", intro, description, duration, src,
@@ -11,6 +18,17 @@ export function AudioBriefingPlayer({
   const [hover, setHover] = React.useState(false);
   const [progress, setProgress] = React.useState(0);
   const [elapsed, setElapsed] = React.useState("00:00");
+
+  // Listening, in the web stats (Andy, 2026-10-13: "are people actually clicking play?").
+  // One `audio-play` per page load on the first press, `audio-half` once the listener
+  // is past the middle, `audio-finish` when the file runs out. Pausing and replaying
+  // within a visit don't count again, so a play is a person, not a fidget.
+  const sent = React.useRef({ play: false, half: false, finish: false });
+  const mark = (step: "play" | "half" | "finish") => {
+    if (sent.current[step]) return;
+    sent.current[step] = true;
+    track(`audio-${step}`, { episode: episodeOf(src) });
+  };
 
   const bars = React.useMemo(
     () => Array.from({ length: 52 }, (_, i) => 18 + Math.round(30 * Math.abs(Math.sin(i * 1.4) * Math.cos(i * 0.5)))),
@@ -25,12 +43,13 @@ export function AudioBriefingPlayer({
 
   const toggle = () => {
     const a = audioRef.current; if (!a) return;
-    if (a.paused) { a.play(); setPlaying(true); } else { a.pause(); setPlaying(false); }
+    if (a.paused) { a.play(); setPlaying(true); mark("play"); } else { a.pause(); setPlaying(false); }
   };
   const onTime = () => {
     const a = audioRef.current; if (!a || !a.duration) return;
     setProgress(a.currentTime / a.duration);
     setElapsed(fmt(a.currentTime));
+    if (a.currentTime / a.duration >= 0.5) mark("half");
   };
   const seek = (e: React.MouseEvent<HTMLDivElement>) => {
     const a = audioRef.current; if (!a || !a.duration) return;
@@ -47,7 +66,7 @@ export function AudioBriefingPlayer({
     <section style={{ background: "var(--paper-bright)", border: "var(--border-ink) solid var(--ink-black)",
       borderRadius: "var(--radius-md)", padding: "var(--space-5)", boxShadow: "var(--shadow-lift)" }}>
       <audio ref={audioRef} src={src} preload="metadata"
-        onTimeUpdate={onTime} onEnded={() => setPlaying(false)} />
+        onTimeUpdate={onTime} onEnded={() => { setPlaying(false); mark("finish"); }} />
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10,
         fontFamily: "var(--font-label)", fontSize: "var(--label-md)", letterSpacing: "var(--tracking-label)",
         textTransform: "uppercase", color: "var(--ink-black)", paddingBottom: 10, marginBottom: 14,

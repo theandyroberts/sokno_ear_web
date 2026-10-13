@@ -18,7 +18,12 @@
 //
 // Config lives in /var/www/soknoear/.env as UMAMI_BASE_URL / UMAMI_SHARE_URL, or
 // pass them in the environment. Metric types on this build: referrer, path,
-// browser, os, device, country, city, region, channel. (Not url, not utm_*.)
+// browser, os, device, country, city, region, channel, event. (Not url, not utm_*.)
+//
+// Events (since 2026-10-13): the audio player sends `audio-play` on the first press of
+// play in a visit, `audio-half` past the middle and `audio-finish` at the end, each with
+// the episode slug. `events(w)` returns them as { name, count }; the CLI prints them,
+// so the Monday review can say how many people listened, not just how many loaded the page.
 
 const DEFAULT_BASE = "https://stats.note15.com";
 const TZ = "America/New_York";
@@ -66,6 +71,8 @@ export async function connect({ base = process.env.UMAMI_BASE_URL || DEFAULT_BAS
     stats: (w) => get("stats", w),
     metrics: (w, type, limit = 20) => get("metrics", { ...w, type, limit }),
     pageviews: (w, unit = "day") => get("pageviews", { ...w, unit, timezone: TZ }),
+    /** Custom events in the window, most-fired first: [{ name, count }]. */
+    events: async (w, limit = 50) => (await get("metrics", { ...w, type: "event", limit })).map((r) => ({ name: r.x, count: r.y })),
   };
 }
 
@@ -84,4 +91,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     for (const r of rows) console.log(`    ${String(r.x ?? "(none)").padEnd(44)} ${r.y}`);
     console.log("");
   }
+  const events = await u.events(w);
+  console.log("  events (audio-play = pressed play once this visit · audio-half · audio-finish)");
+  if (!events.length) console.log("    (none yet)");
+  for (const e of events) console.log(`    ${String(e.name).padEnd(44)} ${e.count}`);
+  console.log("");
 }
