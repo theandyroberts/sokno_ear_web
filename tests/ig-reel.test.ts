@@ -14,10 +14,10 @@ describe("the weekly Reel", () => {
   });
 
   it("is one queue entry on publish day at one o'clock, carrying the video and its poster", () => {
-    const p = buildReelPost({ episode, videoUrl: "https://s/reel.mp4", coverUrl: "https://s/reel.jpg", hashtags: "#SoKno", seconds: 42.5 });
+    const p = buildReelPost({ episode, videoUrl: "https://s/reel.mp4", coverUrl: "https://s/reel.jpg", hashtags: "#SoKno", seconds: 88.4, stories: 16 });
     expect(p).toMatchObject({ id: "reel", title: "Weekly Reel (No. 18)", videoUrl: "https://s/reel.mp4", coverUrl: "https://s/reel.jpg", imageUrl: "https://s/reel.jpg", tags: [], dated: false, status: "pending" });
     expect(p.postAt).toBe(`2026-10-14T${REEL_HOUR}:00:00-04:00`);
-    expect(p.caption).toContain("43 seconds of the audio briefing · Oct 15–18");
+    expect(p.caption).toContain("16 things to do in South Knoxville · Oct 15–18 in 88 seconds. Sound on.");
     expect(p.caption).toContain("The Pink Cactus turns one.");
     expect(p.caption).toContain("episode No. 18 — link in bio");
     expect(p.caption.trim().endsWith("#SoKno")).toBe(true);

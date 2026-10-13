@@ -444,12 +444,16 @@ for (const pr of PROMOS) {
   else if (!reelIsOn(moves)) warnings.push("Reel off — Andy answered “Don't” on the dashboard");
   else if (weekIsOut && !hadReel) warnings.push("Reel not added — this week already went out without one");
   else {
+    let cut = {};
+    try { cut = JSON.parse(fs.readFileSync(path.join(process.cwd(), "public", "assets", "ig", episode.slug, "reel.json"), "utf8")); } catch { /* an older cut */ }
     posts.push(buildReelPost({
       episode,
       videoUrl: `${SITE}${reelRel}`,
       coverUrl: `${SITE}/assets/ig/${episode.slug}/reel.jpg`,
       hashtags: BASE_HASHTAGS,
       site: SITE,
+      seconds: cut.seconds,
+      stories: cut.stories,
     }));
   }
 }

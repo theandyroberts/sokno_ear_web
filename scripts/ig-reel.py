@@ -1,45 +1,61 @@
 #!/usr/bin/env python3
-"""Cut the week's Reel from the audio briefing.
+"""Cut the week's Reel: one quick quip per story, each over that story's artwork.
 
     python3 scripts/ig-reel.py <episode-slug>              → public/assets/ig/<slug>/reel.mp4 + reel.jpg
-    python3 scripts/ig-reel.py <episode-slug> --max 60     → cap the Reel at 60 seconds (default 60)
-    python3 scripts/ig-reel.py <episode-slug> --plan       → print the cut (paragraphs, banners, seconds), draw nothing
+    python3 scripts/ig-reel.py <episode-slug> --plan       → print the cut (quips, seconds), render nothing, no TTS
+    python3 scripts/ig-reel.py <episode-slug> --max 90     → cap the Reel at 90 seconds (default 120, so a 16-story week keeps every story)
 
-What it is: the briefing's open and as many story paragraphs as fit the cap, each
-over the banner of the story it is about, with the spoken sentence burned in under
-the picture. 1080×1920, 30 fps, H.264 + AAC — what Instagram's REELS container takes.
+What it is (Andy, 2026-10-13: "a quick quip about each of the featured events, and
+the screen changes to show the event artwork and info for each one"): a cover card
+and a one-line intro, then every story in the episode's order — its banner pushing
+in slowly, the when and where under it, the quip spoken and burned in — then the
+card again and a sign-off. 1080×1920, 30 fps, H.264 + AAC, what the REELS container
+takes. Roughly four seconds a story; a 16-story week runs about 75 s.
 
-How it is cut (the Oct 5 sample's recipe, docs/ig-reviews/2026-10-05.md):
-  · paragraphs come from the "Clean reading version" of content/audio-scripts/<slug>.md
-    (real spellings; the TTS section says "Severe Avenue")
-  · paragraph boundaries in the mp3: each one is expected from the paragraph's share of
-    the characters and snapped to the longest nearby pause from ffmpeg's silencedetect
-    (the script's 1.2 s breaks come out of the TTS at 0.8–1.0 s, sentence ends at 0.5–0.75)
-  · within a paragraph, sentences get time in proportion to their length
-  · each story paragraph takes the banner whose title shares the most words with it;
-    the open and the sign-off take the episode card
-  · the mini's ffmpeg has no drawtext, so every caption is a Pillow frame and the frames
-    go through ffmpeg's concat demuxer with their durations
+Where the quips come from, in order:
+  1. content/reel-scripts/<slug>.json   {"intro": "…", "outro": "…", "quips": {"<story id>": "…"}}
+     — written by the Tuesday draft task alongside the audio script
+  2. the story's `social.igQuip`
+  3. the banner's two lines, joined ("Old Sevier Market opens on Sevier Avenue. Saturday, seven in the morning.")
 
-Fonts and colours are the banners' own (scripts/ig-banners.py).
+The voice is the briefing's own ElevenLabs voice (`fnpVoGi5UsfmnuvEQTHG`, eleven_v3,
+the settings content/audio-scripts/ headers record), one call per quip so every
+segment's length is exact — no pause-hunting in a long take. The TTS respellings
+(SoKno → Sohno, Sevier → Severe, Ijams → Imes …) come from content/LEXICON.md; the
+burned-in caption keeps the real spelling. Audio is cached by text in data/reel-tts/
+(gitignored), so a rebuild only pays for lines that changed. The key is
+$ELEVENLABS_API_KEY or the macOS keychain item ELEVENLABS_API_KEY — the same place
+the ElevenLabs MCP reads it, so this runs wherever the briefing is rendered.
+
+Frames are drawn with Pillow and piped raw into ffmpeg (the mini's ffmpeg has no
+drawtext); the quip audio is laid on the timeline with adelay + amix.
 """
-import json, math, pathlib, re, subprocess, sys, tempfile
+import hashlib, json, math, os, pathlib, re, subprocess, sys, urllib.request
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 FONT_DIR = ROOT / "scripts" / "fonts"
+TTS_CACHE = ROOT / "data" / "reel-tts"
 
 W, H = 1080, 1920
 FPS = 30
 INK = "#171512"
 CREAM = "#F3E8D2"
-TEAL = "#7FAEA3"
 RUST = "#A94A34"
-GOLD = "#D8A725"
+GRAY = "#6B655C"
 
-MIN_SILENCE = 0.5          # every pause worth considering; paragraph breaks come out 0.8–1.0 s
-NOISE_DB = -30
-STOP = set("the and that with this from for are its it's into onto your you they them there their here have has had was were will been being than then also just about after before over under more most some into out off up down one two three four five six seven eight nine ten".split())
+VOICE_ID = "fnpVoGi5UsfmnuvEQTHG"
+MODEL_ID = "eleven_v3"
+VOICE_SETTINGS = {"stability": 0.5, "similarity_boost": 0.8}
+OUTPUT_FORMAT = "mp3_44100_192"
+
+LEAD_IN = 0.25      # silence before a quip starts, s
+TAIL = 0.35         # silence after it ends
+PUSH_IN = 0.06      # how far the artwork zooms across its segment
+MIN_STORIES = 3
+
+# Respellings the LEXICON doesn't carry as a table row (the audio-script headers do).
+EXTRA_TTS = {"Kern's": "Kerns", "Kerns'": "Kerns", "WDVX": "W D V X", "soknoear.com": "Sohno Ear dot com"}
 
 
 def font(name, size):
@@ -68,110 +84,6 @@ def draw_tracked_centered(d, y, text, f, fill, tr=0.0):
     return w
 
 
-# ── the script ────────────────────────────────────────────────────────────────
-def paragraphs(script_md: str):
-    """The spoken paragraphs, real spellings. Prefers the clean reading version."""
-    m = re.search(r"^## Clean reading version\s*$(.*?)(?=^## |\Z)", script_md, re.M | re.S)
-    if not m:
-        m = re.search(r"^## Script.*?$(.*?)(?=^## |^---\s*$|\Z)", script_md, re.M | re.S)
-    body = (m.group(1) if m else script_md).strip()
-    body = re.sub(r"^---\s*$", "", body, flags=re.M)
-    paras = [re.sub(r"\s+", " ", p).strip() for p in re.split(r"\n\s*\n", body)]
-    return [p for p in paras if p and not p.startswith(">") and not p.startswith("#")]
-
-
-def sentences(text):
-    out, buf = [], ""
-    for piece in re.split(r"(?<=[.!?])\s+(?=[A-Z\"“$0-9])", text):
-        piece = piece.strip()
-        if not piece:
-            continue
-        # keep very short fragments with their neighbour so a caption never flashes
-        if buf and len(piece) < 24:
-            buf = f"{buf} {piece}"
-            continue
-        if buf:
-            out.append(buf)
-        buf = piece
-    if buf:
-        out.append(buf)
-    return out
-
-
-# ── the audio ─────────────────────────────────────────────────────────────────
-def ffprobe_duration(mp3):
-    out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(mp3)],
-                         capture_output=True, text=True, check=True).stdout.strip()
-    return float(out)
-
-
-def silences(mp3):
-    """[(start, end), …] of every silence ≥ MIN_SILENCE, from ffmpeg's silencedetect."""
-    res = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", str(mp3), "-af",
-                          f"silencedetect=noise={NOISE_DB}dB:d={MIN_SILENCE}", "-f", "null", "-"],
-                         capture_output=True, text=True)
-    starts = [float(x) for x in re.findall(r"silence_start: ([\d.]+)", res.stderr)]
-    ends = [float(x) for x in re.findall(r"silence_end: ([\d.]+)", res.stderr)]
-    return list(zip(starts, ends))
-
-
-def paragraph_spans(paras, mp3):
-    """[(start, end)] per paragraph.
-
-    The TTS asks for a 1.2 s break between paragraphs and ElevenLabs v3 gives it
-    0.8–1.0 s, while a sentence end gets 0.5–0.75 s — close enough that a threshold
-    alone can't tell them apart. So each boundary is EXPECTED from the paragraph's
-    share of the characters (measured from the last boundary found, so drift doesn't
-    build), and then SNAPPED to the pause near that time that is longest after a small
-    penalty for distance. Returns (spans, how)."""
-    total = ffprobe_duration(mp3)
-    pauses = [s for s in silences(mp3) if s[0] > 0.5 and s[1] < total - 0.5]
-    chars = [len(p) for p in paras]
-    edges = [0.0]
-    snapped = 0
-    for i in range(len(paras) - 1):
-        left_chars = sum(chars[i:])
-        left_time = total - edges[-1]
-        expect = edges[-1] + left_time * chars[i] / left_chars
-        window = max(4.0, 0.3 * left_time * chars[i] / left_chars)
-        best, score = None, -1e9
-        for a, b in pauses:
-            mid = (a + b) / 2
-            if mid <= edges[-1] + 1.0 or abs(mid - expect) > window:
-                continue
-            sc = (b - a) - 0.02 * abs(mid - expect)
-            if sc > score:
-                best, score = mid, sc
-        if best is None:
-            edges.append(expect)
-        else:
-            edges.append(best)
-            snapped += 1
-    edges.append(total)
-    how = f"{snapped} of {len(paras) - 1} boundaries snapped to a pause"
-    return [(edges[i], edges[i + 1]) for i in range(len(paras))], how
-
-
-# ── the banners ───────────────────────────────────────────────────────────────
-def words(s):
-    return {w for w in re.findall(r"[a-z0-9']+", s.lower()) if len(w) >= 4 and w not in STOP}
-
-
-def banner_for(para, stories, used):
-    """The story whose title and banner lines share the most words with the paragraph."""
-    pw = words(para)
-    best, score = None, 0
-    for s in stories:
-        if s["id"] in used:
-            continue
-        sw = words(s.get("title", "")) | words(" ".join((s.get("social") or {}).get("igBanner") or []))
-        n = len(pw & sw)
-        if n > score:
-            best, score = s, n
-    return (best["id"], score) if best and score >= 2 else (None, score)
-
-
-# ── the frames ────────────────────────────────────────────────────────────────
 def wrap(d, text, f, max_w):
     lines, line = [], ""
     for w in text.split():
@@ -186,11 +98,112 @@ def wrap(d, text, f, max_w):
     return lines
 
 
-def frame(banner_path, caption, kicker, dst):
+# ── the words ─────────────────────────────────────────────────────────────────
+def tts_respellings():
+    """{"Sevier": "Severe", …} from the LEXICON's pronunciation table, plus EXTRA_TTS."""
+    out = dict(EXTRA_TTS)
+    try:
+        lex = (ROOT / "content" / "LEXICON.md").read_text()
+    except FileNotFoundError:
+        return out
+    for row in lex.splitlines():
+        if not row.startswith("|"):
+            continue
+        cells = [c.strip() for c in row.strip("|").split("|")]
+        if len(cells) < 3:
+            continue
+        name = re.sub(r"\*", "", cells[0]).strip()
+        name = re.sub(r"\s+(Ave|Avenue|Park)$", "", name)
+        m = re.search(r"spell it \*\*`([^`]+)`\*\*", row)
+        if name and m and name.lower() != m.group(1).lower():
+            out[name] = m.group(1)
+    return out
+
+
+def for_tts(text, respell):
+    for word, said in sorted(respell.items(), key=lambda kv: -len(kv[0])):
+        text = re.sub(rf"(?<![A-Za-z]){re.escape(word)}(?![A-Za-z])", said, text)
+    return text
+
+
+def fact(story, *labels):
+    for lab in labels:
+        for f in story.get("facts") or []:
+            if re.fullmatch(lab, str(f.get("label", "")), re.I):
+                return f.get("value")
+    return None
+
+
+def banner_quip(story):
+    lines = (story.get("social") or {}).get("igBanner") or []
+    if not lines:
+        return story.get("title", "")
+    first = lines[0].rstrip(".")
+    rest = (lines[1].strip().rstrip(".") if len(lines) > 1 else "")
+    rest = rest[:1].upper() + rest[1:] if rest else ""
+    return f"{first}. {rest}." if rest else f"{first}."
+
+
+def load_quips(slug):
+    p = ROOT / "content" / "reel-scripts" / f"{slug}.json"
+    return json.loads(p.read_text()) if p.exists() else {}
+
+
+# ── the voice ─────────────────────────────────────────────────────────────────
+def api_key():
+    k = os.environ.get("ELEVENLABS_API_KEY")
+    if k:
+        return k
+    try:
+        k = subprocess.run(["security", "find-generic-password", "-s", "ELEVENLABS_API_KEY", "-w"],
+                           capture_output=True, text=True).stdout.strip()
+    except FileNotFoundError:
+        k = ""
+    if not k:
+        sys.exit("no ElevenLabs key: set ELEVENLABS_API_KEY or add the keychain item ELEVENLABS_API_KEY")
+    return k
+
+
+def say(text, key):
+    """The mp3 for one line, from the cache or from ElevenLabs."""
+    TTS_CACHE.mkdir(parents=True, exist_ok=True)
+    h = hashlib.sha1(f"{VOICE_ID}|{MODEL_ID}|{json.dumps(VOICE_SETTINGS, sort_keys=True)}|{text}".encode()).hexdigest()[:16]
+    mp3 = TTS_CACHE / f"{h}.mp3"
+    if mp3.exists() and mp3.stat().st_size > 1000:
+        return mp3
+    body = json.dumps({"text": text, "model_id": MODEL_ID, "voice_settings": VOICE_SETTINGS}).encode()
+    req = urllib.request.Request(
+        f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}?output_format={OUTPUT_FORMAT}",
+        data=body, method="POST",
+        headers={"xi-api-key": key, "Content-Type": "application/json", "Accept": "audio/mpeg"},
+    )
+    with urllib.request.urlopen(req, timeout=120) as r:
+        mp3.write_bytes(r.read())
+    return mp3
+
+
+def duration(path):
+    out = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)],
+                         capture_output=True, text=True, check=True).stdout.strip()
+    return float(out)
+
+
+# ── the pictures ──────────────────────────────────────────────────────────────
+ART_W, ART_Y = 980, 240
+
+
+class Segment:
+    def __init__(self, kind, art, caption, said, info=None, counter=None):
+        self.kind, self.art, self.caption, self.said, self.info, self.counter = kind, art, caption, said, info, counter
+        self.mp3 = None
+        self.speech = 0.0     # seconds of speech
+        self.length = 0.0     # seconds on screen
+
+
+def chrome(kicker, counter):
+    """The static layer: masthead, foot. The art and the words go on a copy."""
     img = Image.new("RGB", (W, H), CREAM)
     d = ImageDraw.Draw(img)
-
-    # masthead: double ink rule, the kicker star-flanked, episode line
     d.rectangle([60, 70, W - 60, 76], fill=INK)
     d.rectangle([60, 82, W - 60, 85], fill=INK)
     f_k = font("SpecialElite-Regular.ttf", 40)
@@ -198,125 +211,186 @@ def frame(banner_path, caption, kicker, dst):
     star(d, (W - wk) / 2 - 44, 112 + 24, 15, RUST)
     star(d, (W + wk) / 2 + 44, 112 + 24, 15, RUST)
     f_e = font("SpecialElite-Regular.ttf", 30)
-    draw_tracked_centered(d, 172, kicker.upper(), f_e, RUST, tr=3)
-
-    # the banner, framed in ink
-    art = Image.open(banner_path).convert("RGB")
-    aw = 980
-    ah = round(art.size[1] * aw / art.size[0])
-    ah = min(ah, 1260)
-    art = art.resize((aw, ah), Image.LANCZOS)
-    ax, ay = (W - aw) // 2, 240
-    d.rectangle([ax - 6, ay - 6, ax + aw + 6, ay + ah + 6], fill=INK)
-    img.paste(art, (ax, ay))
-
-    # the spoken line
-    f_c = font("PTSerif-Bold.ttf", 46)
-    lines = wrap(d, caption, f_c, W - 2 * 90)
-    while len(lines) > 4:
-        f_c = font("PTSerif-Bold.ttf", f_c.size - 4)
-        lines = wrap(d, caption, f_c, W - 2 * 90)
-    lh = f_c.size * 1.28
-    top = ay + ah + 54
-    for i, line in enumerate(lines):
-        tw = d.textlength(line, font=f_c)
-        d.text(((W - tw) / 2, top + i * lh), line, font=f_c, fill=INK)
-
-    # foot
+    line = kicker.upper() + (f"   ·   {counter}" if counter else "")
+    draw_tracked_centered(d, 172, line, f_e, RUST, tr=3)
     d.rectangle([60, H - 118, W - 60, H - 112], fill=INK)
     f_f = font("SpecialElite-Regular.ttf", 28)
     draw_tracked_centered(d, H - 92, "HEAR THE WHOLE BRIEFING — LINK IN BIO", f_f, INK, tr=3)
+    return img
 
-    img.save(dst, "PNG", compress_level=1)
+
+def words_layer(base, art_h, caption, info):
+    """The caption and the when/where, drawn once per segment under the art box."""
+    img = base.copy()
+    d = ImageDraw.Draw(img)
+    y = ART_Y + art_h + 40
+    if info:
+        f_i = font("SpecialElite-Regular.ttf", 30)
+        for line in info[:2]:
+            line = line.upper()
+            f_use = f_i
+            while d.textlength(line, font=f_use) > W - 160 and f_use.size > 20:
+                f_use = font("SpecialElite-Regular.ttf", f_use.size - 2)
+            d.text(((W - d.textlength(line, font=f_use)) / 2, y), line, font=f_use, fill=RUST)
+            y += f_use.size * 1.45
+        y += 14
+    f_c = font("PTSerif-Bold.ttf", 46)
+    lines = wrap(d, caption, f_c, W - 2 * 90)
+    while len(lines) > 4 and f_c.size > 30:
+        f_c = font("PTSerif-Bold.ttf", f_c.size - 4)
+        lines = wrap(d, caption, f_c, W - 2 * 90)
+    lh = f_c.size * 1.28
+    for i, line in enumerate(lines):
+        d.text(((W - d.textlength(line, font=f_c)) / 2, y + i * lh), line, font=f_c, fill=INK)
+    return img
+
+
+def art_frames(src, n_frames):
+    """Yield the art box for each frame: a slow push-in on the picture."""
+    art = Image.open(src).convert("RGB")
+    aw, ah = art.size
+    box_h = min(round(ah * ART_W / aw), 1225)
+    box_w = ART_W
+    # work from a 1.5× master so the zoomed crop never upsamples
+    master = art.resize((round(box_w * 1.5), round(box_h * 1.5)), Image.LANCZOS)
+    mw, mh = master.size
+    for i in range(n_frames):
+        z = 1 + PUSH_IN * (i / max(1, n_frames - 1))
+        cw, ch = mw / z, mh / z
+        left, top = (mw - cw) / 2, (mh - ch) / 2
+        yield box_h, master.crop((left, top, left + cw, top + ch)).resize((box_w, box_h), Image.BILINEAR)
+
+
+def render(segments, kicker, out_mp4, out_jpg, total):
+    cmd = [
+        "ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
+        "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
+    ]
+    filters, labels, t = [], [], 0.0
+    for i, s in enumerate(segments):
+        cmd += ["-i", str(s.mp3)]
+        ms = round((t + LEAD_IN) * 1000)
+        filters.append(f"[{i + 1}:a]adelay={ms}|{ms}[a{i}]")
+        labels.append(f"[a{i}]")
+        t += s.length
+    filters.append(f"{''.join(labels)}amix=inputs={len(segments)}:normalize=0:duration=longest,apad[a]")
+    cmd += [
+        "-filter_complex", ";".join(filters), "-map", "0:v", "-map", "[a]",
+        "-t", f"{total:.3f}",
+        "-c:v", "libx264", "-preset", "medium", "-crf", "23", "-pix_fmt", "yuv420p",
+        "-c:a", "aac", "-b:a", "160k", "-ar", "44100",
+        "-movflags", "+faststart", str(out_mp4),
+    ]
+    proc = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+    poster = None
+    n_total = 0
+    for s in segments:
+        n = max(1, round(s.length * FPS))
+        base = chrome(kicker, s.counter)
+        first = True
+        for box_h, art in art_frames(s.art, n):
+            if first:
+                words = words_layer(base, box_h, s.caption, s.info)
+                first = False
+            frame = words.copy()
+            ax = (W - ART_W) // 2
+            d = ImageDraw.Draw(frame)
+            d.rectangle([ax - 6, ART_Y - 6, ax + ART_W + 6, ART_Y + box_h + 6], fill=INK)
+            frame.paste(art, (ax, ART_Y))
+            if poster is None and s.kind == "story":
+                poster = frame.copy()
+            proc.stdin.write(frame.tobytes())
+            n_total += 1
+    proc.stdin.close()
+    if proc.wait() != 0:
+        sys.exit("ffmpeg failed")
+    (poster or frame).save(out_jpg, "JPEG", quality=88)
+    return n_total
 
 
 # ── the cut ───────────────────────────────────────────────────────────────────
-def plan_cut(episode, paras, spans, banners_dir, max_s):
-    """Which paragraphs go in, over which banner. Always the open and the first story."""
-    stories = [episode["feature"], *episode["stories"]]
-    cover = banners_dir / "episode-drop.jpg"
-    used = set()
-    cut = []
-    for i, (para, (a, b)) in enumerate(zip(paras, spans)):
-        is_open = i == 0
-        is_last = i == len(paras) - 1
-        if not is_open and i > 1 and b > max_s:
-            break
-        if is_open or is_last:
-            banner, why = cover, "card"
-        else:
-            sid, score = banner_for(para, stories, used)
-            if sid and (banners_dir / f"{sid}.jpg").exists():
-                banner, why = banners_dir / f"{sid}.jpg", f"{sid} ({score} words)"
-                used.add(sid)
-            else:
-                banner, why = (cut[-1]["banner"] if cut else cover), "kept the last picture"
-        cut.append({"i": i, "text": para, "start": a, "end": b, "banner": banner, "why": why})
-    return cut
+def load_episode(slug):
+    for d in ("episodes", "drafts"):
+        p = ROOT / "content" / d / f"{slug}.json"
+        if p.exists():
+            return json.loads(p.read_text())
+    sys.exit(f"no episode {slug} in content/episodes or content/drafts")
 
 
-def build(slug, max_s=60, plan_only=False):
-    ep = json.loads((ROOT / "content" / "episodes" / f"{slug}.json").read_text())
-    script = (ROOT / "content" / "audio-scripts" / f"{slug}.md").read_text()
-    mp3 = ROOT / "public" / "audio" / f"{slug}.mp3"
-    banners_dir = ROOT / "public" / "assets" / "ig" / slug
-    out_mp4 = banners_dir / "reel.mp4"
-    out_jpg = banners_dir / "reel.jpg"
-    if not mp3.exists():
-        sys.exit(f"no audio at {mp3}")
-    if not (banners_dir / "episode-drop.jpg").exists():
-        sys.exit(f"no episode card in {banners_dir} (run scripts/ig-promos.py first)")
-
-    paras = paragraphs(script)
-    spans, how = paragraph_spans(paras, mp3)
-    cut = plan_cut(ep, paras, spans, banners_dir, max_s)
-    end = cut[-1]["end"]
+def plan(slug, max_s):
+    ep = load_episode(slug)
+    art_dir = ROOT / "public" / "assets" / "ig" / slug
+    cover = art_dir / "episode-drop.jpg"
+    if not cover.exists():
+        sys.exit(f"no episode card in {art_dir} (run scripts/ig-promos.py first)")
+    quips = load_quips(slug)
+    stories = [ep["feature"], *ep["stories"]]
+    picks = []
+    for s in stories:
+        if (s.get("social") or {}).get("igSkip"):
+            continue
+        art = art_dir / f"{s['id']}.jpg"
+        if not art.exists():
+            continue
+        q = (quips.get("quips") or {}).get(s["id"]) or (s.get("social") or {}).get("igQuip") or banner_quip(s)
+        when = fact(s, "when", "curtain|kickoff|showtime", "(mon|tue|wed|thu|fri|sat|sun).*")
+        where = fact(s, "where", "venue", "start")
+        info = [x for x in (when, where and where.split(" · ")[0]) if x]
+        picks.append(Segment("story", art, q.strip(), q.strip(), info))
+    n = len(picks)
+    intro = quips.get("intro") or f"{n} things to do in South Knoxville this weekend."
+    outro = quips.get("outro") or "That's the weekend. The whole briefing is at soknoear.com. Link in bio."
+    segs = [Segment("intro", cover, intro, intro), *picks, Segment("outro", cover, outro, outro)]
     kicker = f"No. {ep['number']} · {ep.get('shortDate', ep['date'])}"
+    return ep, segs, kicker
 
-    print(f"reel for {slug}: {len(cut)} of {len(paras)} paragraphs, {end:.1f}s, boundaries {how}")
-    for c in cut:
-        print(f"  {c['start']:6.1f}–{c['end']:6.1f}  {c['banner'].name:32} {c['why']:28} {c['text'][:60]}…")
+
+def build(slug, max_s=90, plan_only=False):
+    ep, segs, kicker = plan(slug, max_s)
+    respell = tts_respellings()
+    for s in segs:
+        s.said = for_tts(s.said, respell)
+
     if plan_only:
+        # rough timing without the voice: ~15 characters a second plus the pads
+        print(f"reel for {slug}: {len(segs) - 2} stories (plan — no audio rendered)")
+        for s in segs:
+            est = len(s.said) / 15 + LEAD_IN + TAIL
+            print(f"  {est:5.1f}s  {s.art.name:32} {s.caption[:60]}…" + (f"   [tts: {s.said[:50]}…]" if s.said != s.caption else ""))
         return
 
-    with tempfile.TemporaryDirectory() as tmp:
-        tmp = pathlib.Path(tmp)
-        listing = []
-        n = 0
-        poster = None
-        for c in cut:
-            sents = sentences(c["text"])
-            total_chars = sum(len(s) for s in sents)
-            t = c["start"]
-            for s in sents:
-                dur = (c["end"] - c["start"]) * len(s) / total_chars
-                png = tmp / f"f{n:04d}.png"
-                frame(c["banner"], s, kicker, png)
-                listing.append(f"file '{png}'\nduration {dur:.3f}")
-                if poster is None and c["i"] == 1:
-                    poster = png
-                n += 1
-        # concat wants the last file repeated so its duration is honoured
-        listing.append(f"file '{tmp / f'f{n - 1:04d}.png'}'")
-        (tmp / "list.txt").write_text("\n".join(listing) + "\n")
+    key = api_key()
+    for s in segs:
+        s.mp3 = say(s.said, key)
+        s.speech = duration(s.mp3)
+        s.length = LEAD_IN + s.speech + TAIL
 
-        fade_at = max(0.0, end - 0.6)
-        subprocess.run([
-            "ffmpeg", "-y", "-hide_banner", "-loglevel", "error",
-            "-f", "concat", "-safe", "0", "-i", str(tmp / "list.txt"),
-            "-i", str(mp3),
-            "-t", f"{end:.3f}",
-            "-vf", f"fps={FPS},format=yuv420p",
-            "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-pix_fmt", "yuv420p",
-            "-af", f"afade=t=out:st={fade_at:.3f}:d=0.6",
-            "-c:a", "aac", "-b:a", "160k", "-ar", "44100",
-            "-movflags", "+faststart", "-shortest",
-            str(out_mp4),
-        ], check=True)
-        Image.open(poster or tmp / "f0000.png").convert("RGB").save(out_jpg, "JPEG", quality=88)
+    # Fit the cap: keep the intro, the outro and the stories in order while they fit.
+    stories = [s for s in segs if s.kind == "story"]
+    fixed = segs[0].length + segs[-1].length
+    kept, t = [], fixed
+    for s in stories:
+        if t + s.length > max_s and len(kept) >= MIN_STORIES:
+            break
+        kept.append(s)
+        t += s.length
+    dropped = len(stories) - len(kept)
+    segs = [segs[0], *kept, segs[-1]]
+    for i, s in enumerate(kept):
+        s.counter = f"{i + 1} of {len(kept)}"
+    total = sum(s.length for s in segs)
 
+    print(f"reel for {slug}: {len(kept)} stories, {total:.1f}s" + (f" ({dropped} left out by the {max_s:.0f}s cap)" if dropped else ""))
+    for s in segs:
+        print(f"  {s.length:5.1f}s  {s.art.name:32} {s.caption[:64]}")
+
+    art_dir = ROOT / "public" / "assets" / "ig" / slug
+    out_mp4, out_jpg = art_dir / "reel.mp4", art_dir / "reel.jpg"
+    n = render(segs, kicker, out_mp4, out_jpg, total)
     size = out_mp4.stat().st_size / 1e6
-    print(f"  ✓ {out_mp4.relative_to(ROOT)}  ({end:.1f}s, {size:.1f} MB, {n} frames)")
+    # What the queue's caption says about the cut (scripts/ig-queue.mjs reads this).
+    (art_dir / "reel.json").write_text(json.dumps({"seconds": round(total, 1), "stories": len(kept), "frames": n}) + "\n")
+    print(f"  ✓ {out_mp4.relative_to(ROOT)}  ({total:.1f}s, {size:.1f} MB, {n} frames)")
     print(f"  ✓ {out_jpg.relative_to(ROOT)}")
 
 
@@ -324,7 +398,8 @@ if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     if not args:
         sys.exit(__doc__)
-    max_s = 60
+    max_s = 120
     if "--max" in sys.argv:
         max_s = float(sys.argv[sys.argv.index("--max") + 1])
+        args = [a for a in args if a != sys.argv[sys.argv.index("--max") + 1]]
     build(args[0], max_s=max_s, plan_only="--plan" in sys.argv)

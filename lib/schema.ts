@@ -47,6 +47,10 @@ export const EventDetails = z.object({
 export const Social = z.object({
   igTags: z.array(z.string()).optional(),
   igPromo: z.string().optional(),
+  /** One spoken line for the week's Reel (scripts/ig-reel.py): said in the briefing's
+   *  voice over this story's artwork and burned in. Under about fifteen words, real
+   *  spellings. content/reel-scripts/<slug>.json overrides it; the banner lines are the fallback. */
+  igQuip: z.string().optional(),
   igSkip: z.boolean().optional(),
   /** Two banner lines composited onto the IG image: ["Earl's Happy Hour!", "Two ritas, two nights"].
    *  Line 2 renders ALL CAPS. scripts/ig-banners.py rasterizes real type — never AI-generated text. */

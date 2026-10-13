@@ -1,0 +1,23 @@
+{
+  "_comment": "One spoken quip per story for the week's Reel (scripts/ig-reel.py). Real spellings; the script applies the LEXICON's TTS respellings itself. Keep each under about fifteen words — it is said and shown.",
+  "intro": "Sixteen things in South Knoxville this weekend. Quick, before they sell out.",
+  "outro": "That's the weekend. The whole briefing is at soknoear.com. Link in bio.",
+  "quips": {
+    "old-sevier-market-opens": "The grocery store with onions in it opens Saturday at seven. Sevier Avenue finally has one.",
+    "scruffy-roots-fest": "Six Americana acts on the Kern's lawn Sunday, free. Bring a chair.",
+    "knox-ill": "Graffiti writers paint Printshop live for twelve hours Saturday. There's a lager brewed for it.",
+    "urban-wilderness-50k": "Thirty-one miles through seven parks, Saturday at seven thirty. Expect runners on the trails.",
+    "oakenfold-sold-out": "Paul Oakenfold sold out The 808 Thursday, a week after the place opened.",
+    "dj-goblin-alliance": "A DJ called Goblin turns Alliance Brewing into a dance floor Thursday at eight.",
+    "feral-kitty-release": "Feral Kitty lets its new music out of the box Friday night at Fly by Night.",
+    "dizzle-phunk": "Saturday night a new DJ, Dizzle Phunk, keeps Fly by Night dancing till one.",
+    "after-brunch-special": "Six comics for five dollars at the Pink Cactus, Saturday at two thirty.",
+    "trailhead-kimbro": "Daniel Kimbro's upright bass on the Trailhead patio, Friday at seven.",
+    "trailhead-two-heads": "Two Heads Are Better Than One close the weekend at Trailhead, Sunday at four.",
+    "big-day-birding": "Count the fall migrants with a naturalist at Ijams Nature Center, Saturday at eight.",
+    "storytime-flowers": "Free flower storytime at the Nature Playscape, Saturday at ten.",
+    "kerns-second-mural": "Anna Charney is painting wildflowers on the back of Kern's. Free to watch, any day.",
+    "vegan-bbq-printshop": "Southern Fried Vegan smokes a barbecue pop-up at Printshop, Sunday one to four.",
+    "specials-board": "Earl's game-day board for the Vols: two dollars off drafts, buckets at six for five."
+  }
+}

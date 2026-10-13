@@ -441,12 +441,12 @@
    "key": "weekly-reel",
    "owner": "claude",
    "title": "A weekly Reel from the audio briefing",
-   "why": "You said go, so it's built. The No. 17 cut is below, made in five seconds. All 131 posts have been stills; Reels are what Instagram shows strangers.",
-   "plan": "Built Mon Oct 12 (the No. 17 cut is above). The first one goes out Wed Oct 14 at 1 PM with No. 18 unless you say don't.",
+   "why": "You said go and asked for quips, so it's rebuilt: one quick line a story over its artwork, in the briefing's voice. The No. 17 cut is below.",
+   "plan": "Rebuilt Tue Oct 13 as a quip a story (the No. 17 cut is above). The first one goes out Wed Oct 14 at 1 PM with No. 18 unless you say don't.",
    "due": "2026-10-14",
    "sample": {
-    "video": "/insta/img/soknoear/2026-10-12_reel-no17.mp4",
-    "poster": "/insta/img/soknoear/2026-10-12_reel-no17.jpg"
+    "video": "/insta/img/soknoear/2026-10-13_reel-no17.mp4",
+    "poster": "/insta/img/soknoear/2026-10-13_reel-no17.jpg"
    }
   },
   {
@@ -480,7 +480,7 @@
   },
   {
    "title": "The Reel is built and the ad is held.",
-   "text": "Your two answers from Friday night, both done. The Reel cut above is No. 17's; No. 18's gets made at publish."
+   "text": "Both Friday answers done. The Reel above is a quip a story over its artwork; No. 18's gets cut at publish."
   }
  ]
 }

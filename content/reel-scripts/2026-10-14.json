@@ -1,0 +1,25 @@
+{
+  "_comment": "One spoken quip per story for the week's Reel (scripts/ig-reel.py). Real spellings; the script applies the LEXICON's TTS respellings itself. Keep each under about fifteen words — it is said and shown.",
+  "intro": "Eighteen things in South Knoxville this weekend. Here they are, fast.",
+  "outro": "That's the weekend. The whole briefing is at soknoear.com. Link in bio.",
+  "quips": {
+    "kerns-fall-fest": "Line dancing, a School of Rock set and a free Fall Festival on the Kern's lawn, Sunday two to four.",
+    "pup-o-ween-hiwire": "Dogs in costume walk a runway at Hi-Wire Sunday. The runway is at three.",
+    "goodbye-june-808": "Goodbye June and Danny Worsnop, a blues-rock double bill at The 808, Friday at seven.",
+    "all-my-exes-808": "All My Exes Live in Texas turns The 808 into a classic-country dance hall Saturday.",
+    "first-bass-pink-cactus": "Ten DJs on two stages at the Pink Cactus Saturday, eight till one.",
+    "quiet-entertainer-fbn": "Quiet Entertainer warms up a Nashville album release at Fly by Night Saturday night.",
+    "disco-demon-fbn": "Disco Demon Ahun plays funky disco and house at Fly by Night Thursday, five dollars.",
+    "ktc-run-printshop": "A three-mile social run leaves Printshop Thursday at six. Dollar wings after.",
+    "trailhead-crawdaddy": "Crawdaddy Jones on the Trailhead patio, Friday at seven.",
+    "trailhead-greg-horne": "Greg Horne closes the weekend on the Trailhead patio, Sunday at four.",
+    "kerns-hoedown-social": "The Ho'Down Social: four hours of line dancing at Kern's, Friday from seven thirty.",
+    "starlight-paddle": "Guided kayaks on the river after dark at Ijams Nature Center, Friday and Saturday at seven.",
+    "bluegrass-jam-quarry": "A free bluegrass jam fills Mead's Quarry Sunday, two to five. Beginners first.",
+    "fall-fungi-id": "Learn to read mushrooms on a fungi walk at Ijams Nature Center, Sunday at one.",
+    "storytime-birds": "Birds take over the free storytime at the Nature Playscape, Saturday at ten.",
+    "scruffycat-ride": "ScruffyCat sends mountain bikers on a hundred miles of Knoxville trail, Saturday from McClure Lane.",
+    "catalyst-adaptive-ride": "Catalyst Sports' adaptive mountain bike ride rolls out of Baker Creek Saturday at nine thirty.",
+    "specials-board": "Earl's runs its Vols board for Alabama on Saturday. Kickoff is three thirty."
+  }
+}

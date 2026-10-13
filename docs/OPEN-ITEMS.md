@@ -36,13 +36,19 @@ retired; where an old one appears below, its name is beside it. Things Andy can 
 ### 1. The first Reel goes out Wednesday — read it Oct 19
 **Opened:** 2026-09-28 · **Age: 14 days** (as of 2026-10-12) · **Claude's** · **Move:** `weekly-reel` · **Due: Wed 2026-10-14**
 
-**2026-10-12:** built and deployed (`2010aed`). `scripts/ig-reel.py` cuts the mp4 at publish
-(the No. 17 cut: 42 s, committed, on the dashboard as run 11's sample); `ig-container.mjs`
-publishes a `REELS` container with a six-minute processing wait; `ig-reel.mjs` is the queue
-entry, publish day 13:00; `ig-queue.mjs` adds it unless Andy answers "Don't". Proved against
-the live API: a container for the No. 17 mp4 reached `FINISHED` in 30 s and was left
-unpublished. Andy answered **go** on 2026-10-09. The move stays open until the first one has
-posted and been read. Recipe and measures in `docs/ig-reviews/2026-10-12.md`.
+**2026-10-12:** built and deployed (`2010aed`): `ig-container.mjs` publishes a `REELS`
+container with a six-minute processing wait; `ig-reel.mjs` is the queue entry, publish day
+13:00; `ig-queue.mjs` adds it unless Andy answers "Don't". Proved against the live API: a
+container for the No. 17 mp4 reached `FINISHED` in 30 s and was left unpublished.
+**2026-10-13:** Andy called the first cut (the briefing's open + feature over one banner)
+"static and boring" and asked for "a quick quip about each of the featured events" with the
+screen changing to each one's artwork and info. Recut that night: `scripts/ig-reel.py` is now
+a montage — one quip a story in the briefing's voice (one ElevenLabs call per line, cached),
+the banner pushing in, when/where under it, a counter. Quips come from
+`content/reel-scripts/<slug>.json`, which the Tuesday task now writes (step 3a); No. 17's and
+No. 18's are written. No. 17: 16 stories, 99 s, on the dashboard as run 11's sample. Andy
+answered **go** on 2026-10-09. The move stays open until the first one has posted and been
+read. Recipe and measures in `docs/ig-reviews/2026-10-12.md`.
 
 *To do, Mon Oct 19:* confirm `ig-post:reel` ticked on the desk; its reach, views, follows
 against the week's stills; which insight metrics the API returns for a Reel (`plays`?).
