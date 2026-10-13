@@ -162,8 +162,43 @@ hb=(hbb[0]+px_per_m*30, hbb[1]+px_per_m*34)     # ~45 m behind it
 d.rounded_rectangle([hb[0]-70,hb[1]-50,hb[0]+70,hb[1]+50],radius=12,fill=GREEN_FILL,outline=GREEN,width=6)
 d.rounded_rectangle([hbb[0]-34,hbb[1]-24,hbb[0]+34,hbb[1]+24],radius=6,fill=ROAD,outline=INK,width=3)
 d.text((hbb[0]-290,hbb[1]+40),'HoneyBee Coffee',font=PT(30),fill=INK,stroke_width=3,stroke_fill=CREAM)
-# street parking
-green_stroke('Sevier Avenue Southeast',35.9571,-83.9101,35.9580,-83.9078,side=-1); green_stroke('Sevier Avenue Southeast',35.95655,-83.9118,35.95711,-83.91007,side=-1)
+# street parking and the lots the venue's second slide marks (read at full size, 2026-10-13)
+def on_way(name, lon):
+    """The point on a named road at a given longitude (first way that spans it)."""
+    for t,pts,i in ways:
+        if t.get('name')!=name or 'highway' not in t: continue
+        for q in range(len(pts)-1):
+            a,b=pts[q],pts[q+1]
+            if (a[1]-lon)*(b[1]-lon)<=0 and a[1]!=b[1]:
+                f=(lon-a[1])/(b[1]-a[1]); return (a[0]+(b[0]-a[0])*f, lon)
+    return None
+def lot_between(south, north, lon0, lon1, inset_m=8):
+    """A lot filling the block between two roads across a longitude range, pulled in from both kerbs."""
+    top=[on_way(north,lon) for lon in (lon0,lon1)]; bot=[on_way(south,lon) for lon in (lon0,lon1)]
+    pp=[P(*bot[0]),P(*bot[1]),P(*top[1]),P(*top[0])]
+    cx=sum(p[0] for p in pp)/4; cy=sum(p[1] for p in pp)/4
+    pp=[(cx+(x-cx)*0.86, cy+(y-cy)*0.74) for x,y in pp]
+    d.polygon(pp,fill=GREEN_FILL,outline=GREEN); d.line(pp+[pp[0]],fill=GREEN,width=6,joint='curve'); return (cx,cy)
+# west end: two lots between Sevier Ave and Council Pl, west of Dawson St, and street parking on Sevier's south side from the Gay St roundabout to Dawson St
+cl1=lot_between('Sevier Avenue Southeast','Council Place Southeast',-83.91335,-83.91185)
+cl2=lot_between('Sevier Avenue Southeast','Council Place Southeast',-83.91170,-83.91130,)
+green_stroke('Sevier Avenue Southeast',35.9562,-83.91320,35.95659,-83.91141,side=1)
+# the Davenport corner: a lot on the north side of Sevier Ave at Davenport Rd
+sa_,sb_=seg_of('Sevier Avenue Southeast',35.9588,-83.90845); su_=(sb_[0]-sa_[0],sb_[1]-sa_[1]); L_=math.hypot(*su_); su_=(su_[0]/L_,su_[1]/L_)
+if su_[0]<0: su_=(-su_[0],-su_[1])
+sn_=(-su_[1],su_[0])
+if sn_[1]>0: sn_=(-sn_[0],-sn_[1])    # toward the river (north)
+jd=P(35.9588,-83.90845)                # Davenport Rd at Sevier Ave
+def rr(c,u,n,a0,a1,b0,b1): return [(c[0]+u[0]*a+n[0]*b, c[1]+u[1]*a+n[1]*b) for a,b in ((a0,b0),(a1,b0),(a1,b1),(a0,b1))]
+corner=rr(jd,su_,sn_,-px_per_m*68,-px_per_m*12,px_per_m*14,px_per_m*58)
+d.polygon(corner,fill=GREEN_FILL,outline=GREEN); d.line(corner+[corner[0]],fill=GREEN,width=6,joint='curve')
+corner_c=(sum(p[0] for p in corner)/4, sum(p[1] for p in corner)/4)
+# Johnson Architecture's lot: east of Davenport Rd, south of the venue
+ss_=(-sn_[0],-sn_[1])
+john=rr(jd,su_,ss_,px_per_m*10,px_per_m*52,px_per_m*58,px_per_m*100)
+d.polygon(john,fill=GREEN_FILL,outline=GREEN); d.line(john+[john[0]],fill=GREEN,width=6,joint='curve')
+john_c=(sum(p[0] for p in john)/4, sum(p[1] for p in john)/4)
+# the blocks north of the venue
 green_stroke('Langford Avenue Southeast',35.9597,-83.90765,35.96086,-83.904,side=1)
 green_stroke('Phillips Avenue Southeast',35.9588,-83.90845,35.96086,-83.904,side=-1); green_stroke('Phillips Avenue Southeast',35.96086,-83.904,35.96119,-83.90004,side=-1)
 
@@ -180,9 +215,12 @@ tr=P(35.96052,-83.90005); nx=P(35.96018,-83.90000); nomark(nx)   # across Island
 # ---------- callouts: each leader runs clear of the others ----------
 callout((cx,cy-Wh*0.6),['Public lot under the James White Pkwy','gravel · where the parkway crosses Island Home Ave','the overflow for shows · about a fifteen-minute walk'],tx=1180,ty=60,color=GREEN)
 callout(nx,['Not across from Trailhead','the river side of Island Home Ave'],tx=1690,ty=880,color=RUST)
-lp=P(35.9603,-83.9058); callout(lp,['Street parking','Langford Ave and Phillips Ave,','the blocks north of the venue'],tx=lp[0]-700,ty=lp[1]-250,color=GREEN)
-sp=P(35.95700,-83.9105); callout((sp[0],sp[1]-40),['Street parking','along Sevier Ave west of the venue'],tx=70,ty=1370,color=GREEN)
-callout((hb[0],hb[1]+50),['HoneyBee free lot','behind the coffee shop, across Sevier Ave'],tx=760,ty=1370,color=GREEN)
+lp=P(35.9603,-83.9058); callout(lp,['Street parking','Langford Ave and Phillips Ave,','the blocks north of the venue'],tx=960,ty=400,color=GREEN)
+callout((hb[0],hb[1]+50),['HoneyBee free lot','behind the coffee shop'],tx=700,ty=1370,color=GREEN)
+callout(cl1,['Two lots off Council Pl','between Sevier Ave and Council Pl, west of Dawson St'],tx=70,ty=300,color=GREEN)
+sw=P(35.9564,-83.9123); callout((sw[0],sw[1]+30),['Street parking','the south side of Sevier Ave, Gay St to Dawson St'],tx=70,ty=430,color=GREEN)
+callout(corner_c,['Lot at Sevier Ave and Davenport Rd','the north corner, beside the industrial building'],tx=70,ty=560,color=GREEN)
+callout(john_c,['Johnson Architecture lot','south of the door, off Davenport'],tx=1110,ty=1370,color=GREEN)
 
 # ---------- plate, arrow, scale ----------
 t1='WHERE TO PARK FOR THE 808'; t2="Green: park here · Rust: not here · from the venue's own map"
@@ -194,14 +232,21 @@ d.line([(70,290),(70+px_per_m*300,290)],fill=INK,width=8); d.text((70,245),'300 
 d.text((60,H-60),'Streets from OpenStreetMap · parking from The 808 (@808knox), Oct 8, 2026',font=SE(28),fill=FADED)
 
 # ---------- the Borderland block: a rust highlight on the map, and a zoomed inset ----------
-hx0,hy0,hx1,hy1 = v[0]-118, v[1]-70, v[0]+90, v[1]+95          # the block from Davenport Rd to just past the door
+# Sevier Ave's bearing at the door, so the rectangles run with the street (Andy, 2026-10-13)
+sa,sb=seg_of('Sevier Avenue Southeast',35.95782,-83.90724); su=(sb[0]-sa[0],sb[1]-sa[1]); L=math.hypot(*su); su=(su[0]/L,su[1]/L)
+if su[0]<0: su=(-su[0],-su[1])
+sv_=( -su[1], su[0])            # perpendicular, pointing to the south-east side (away from the river)
+if sv_[1]<0: sv_=(-sv_[0],-sv_[1])
+def rrect(c,ux,uy,vx,vy,a0,a1,b0,b1):
+    return [(c[0]+ux*a+vx*b, c[1]+uy*a+vy*b) for a,b in ((a0,b0),(a1,b0),(a1,b1),(a0,b1))]
+hl=rrect(v,su[0],su[1],sv_[0],sv_[1],-112,80,-40,120)
 IX0,IY0,IX1,IY1 = 1640, 1030, 2340, 1540                         # the inset panel, bottom right
 ov=Image.new('RGBA',(W,H),(0,0,0,0)); od=ImageDraw.Draw(ov)
-od.polygon([(hx1,hy0),(hx1,hy1),(IX0,IY1),(IX0,IY0)],fill=(169,74,52,38))   # the zoom wedge
+od.polygon([hl[1],hl[2],(IX0,IY1),(IX0,IY0)],fill=(169,74,52,38))   # the zoom wedge
 img.paste(Image.alpha_composite(img.convert('RGBA'),ov).convert('RGB'))
 d=ImageDraw.Draw(img)
-d.line([(hx1,hy0),(IX0,IY0)],fill=RUST,width=5); d.line([(hx1,hy1),(IX0,IY1)],fill=RUST,width=5)
-d.rounded_rectangle([hx0,hy0,hx1,hy1],radius=16,outline=RUST,width=9)
+d.line([hl[1],(IX0,IY0)],fill=RUST,width=5); d.line([hl[2],(IX0,IY1)],fill=RUST,width=5)
+d.line(hl+[hl[0]],fill=RUST,width=9,joint='curve')
 # inset: same OSM data, 7x closer
 ILON0,ILON1=-83.90890,-83.90640; ILAT1=35.95855
 ik=(IX1-IX0)/(ILON1-ILON0)
@@ -219,10 +264,23 @@ for t,pts,i in ways:
 for t,pts,i in ways:
     if i=='1560919141': idr.polygon([IPl(*p) for p in pts],fill=(200,190,170),outline=INK)
 bb=[IPl(*p) for p in [pts for t,pts,i in ways if i=='429395054'][0]]
-bx0=min(p[0] for p in bb)-26; by0=min(p[1] for p in bb)-30; b808=[IPl(*p) for p in [pts for t,pts,i in ways if i=='1560919141'][0]]; bx1=min(p[0] for p in b808)-8; by1=max(p[1] for p in bb)+90
-idr.rounded_rectangle([bx0,by0,bx1,by1],radius=10,fill=(236,206,196),outline=RUST,width=8)
+b808=[IPl(*p) for p in [pts for t,pts,i in ways if i=='1560919141'][0]]
+# street frame in inset pixels: u along Sevier Ave, w away from it (south-east)
+ia,ib=IPl(*[pts for t,pts,i in ways if i=='49830950'][0][0]),None
+segs_s=[pts for t,pts,i in ways if i=='49830950'][0]
+best=min(range(len(segs_s)-1),key=lambda q:(segs_s[q][0]-35.95782)**2+((segs_s[q][1]+83.90724)*cosl)**2)
+pa,pb=IPl(*segs_s[best]),IPl(*segs_s[best+1]); u=(pb[0]-pa[0],pb[1]-pa[1]); L=math.hypot(*u); u=(u[0]/L,u[1]/L)
+if u[0]<0: u=(-u[0],-u[1])
+w=(-u[1],u[0])
+if w[1]<0: w=(-w[0],-w[1])
+dot=lambda p,q:(p[0]-pa[0])*q[0]+(p[1]-pa[1])*q[1]
+a0=min(dot(p,u) for p in bb)-30; a1=min(dot(p,u) for p in b808)-10      # from the building's west edge to the venue's west wall
+b0=W_BY['secondary']+14; b1=max(dot(p,w) for p in bb)+110               # from the kerb of Sevier Ave to the back of the parcel
+corner=lambda a,b:(pa[0]+u[0]*a+w[0]*b, pa[1]+u[1]*a+w[1]*b)
+parcel=[corner(a0,b0),corner(a1,b0),corner(a1,b1),corner(a0,b1)]
+idr.polygon(parcel,fill=(236,206,196),outline=RUST); idr.line(parcel+[parcel[0]],fill=RUST,width=8,joint='curve')
 idr.polygon(bb,fill=(226,214,190),outline=INK)
-cxm,cym=(bx0+bx1)/2,(by0+by1)/2+20
+cxm,cym=corner((a0+a1)/2,(b0+b1)/2+10)
 idr.line([(cxm-34,cym-34),(cxm+34,cym+34)],fill=RUST,width=14); idr.line([(cxm-34,cym+34),(cxm+34,cym-34)],fill=RUST,width=14)
 img.paste(inset_img,(IX0,IY0)); d=ImageDraw.Draw(img)
 d.rounded_rectangle([IX0,IY0,IX1,IY1],radius=14,outline=INK,width=8)
