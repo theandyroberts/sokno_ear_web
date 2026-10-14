@@ -76,8 +76,11 @@ function LogoTile({ logo, brand, fontClass, tilt, dimmed }: {
         <span
           className={fontClass}
           style={{
-            fontSize: "0.62rem", lineHeight: 1.05, textAlign: "center",
-            textTransform: "uppercase", letterSpacing: "0.02em", color: INK,
+            // Bigger and bolder than the row text, so a venue without a logo still
+            // gets a mark, not a label (Andy, 2026-10-14: "larger and more interesting").
+            fontSize: "clamp(1.4rem, 3.4vw, 2.2rem)", lineHeight: 0.95, textAlign: "center", padding: "0 6px",
+            textTransform: "uppercase", letterSpacing: "0.03em", color: INK,
+            transform: "rotate(-3deg)", textShadow: "2px 2px 0 rgba(23,21,18,0.18)",
           }}
         >
           {brand}

@@ -512,18 +512,18 @@
         "Sat"
       ],
       "layout": "imageTop",
-      "image": "/assets/diagrams/the-808-parking.png",
-      "imageCaption": "Green is where the venue says to park; rust is where it says not to. The inset is the block at the door: the Borderland Tees lot is the parcel just west of it.",
-      "title": "The 808 posts a parking map: street spots on Sevier Avenue, the HoneyBee lot, and the underpass lot off Island Home",
+      "image": "/assets/diagrams/the-808-parking.svg",
+      "imageCaption": "Tap or click the map to open it full screen and zoom. Green curb marks are street parking; P is a lot; $ is a paid lot; X is no parking.",
+      "title": "The 808 posts a parking map: lots and street parking around Sevier Avenue, and the two places not to park",
       "deck": "Two shows this weekend and a two-week-old venue with no lot of its own. The venue's own map, redrawn here, settles where the car goes, and names the two places it does not.",
       "facts": [
         {
           "label": "Park",
-          "value": "The lot on the north corner of Sevier Ave and Davenport Rd · the HoneyBee free lot, behind the coffee shop · the Johnson Architecture lot south of the door, off Davenport · street parking on Langford and Phillips Aves north of the venue · two lots between Sevier Ave and Council Pl west of Dawson St, and street parking on that stretch of Sevier · the Suttree Landing city lot · the public gravel lot under the James White Parkway bridge, where it crosses Island Home Ave just past Trailhead"
+          "value": "The lot at Sevier Ave and Davenport Rd · the HoneyBee free lot, behind the coffee shop · the Johnson Architecture lot south of the door, off Davenport (paid) · street parking on Langford and Phillips Aves, where posted; resident-permit rules apply · two lots off Council Pl and street parking on that stretch of Sevier · the Suttree Landing city lot · the public lot under the James White Parkway at Island Home Ave"
         },
         {
           "label": "Don't",
-          "value": "The Borderland Tees lot next door, which tows · the river side of Island Home Ave across from Trailhead Beer Market"
+          "value": "The Borderland Tees lot, the private lot immediately west of The 808, which tows · the apartments across Island Home Ave from Trailhead Beer Market"
         },
         {
           "label": "The walk",
@@ -541,7 +541,7 @@
       "body": [
         {
           "type": "paragraph",
-          "text": "The 808 opened on October 2 in a building that fronts Sevier Avenue with no parking lot of its own, and its first sold-out night taught the neighborhood where cars end up. Last Wednesday the venue posted a two-slide parking map and one request. The map above is that map redrawn: the streets are from OpenStreetMap, the green and the rust are the venue's."
+          "text": "The 808 opened on October 2 in a building that fronts Sevier Avenue with no parking lot of its own, and its first sold-out night taught the neighborhood where cars end up. Last Wednesday the venue posted a two-slide parking map and one request. The map above is that map redrawn: green curb marks are street parking in marked spaces, not whole streets; a P is a lot, a $ a paid one, an X a place not to park. Click or tap it to open it full screen and zoom in."
         },
         {
           "type": "subhead",
@@ -549,7 +549,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Closest are three lots the map marks around the door: the lot on the north corner of Sevier Avenue and Davenport Road, beside the industrial building; the HoneyBee free lot, behind the coffee shop across the avenue; and the Johnson Architecture lot south of the venue, off Davenport. The street parking the map marks is on Langford and Phillips Avenues, the two residential blocks between Sevier and the river, and farther west along Sevier between the Gay Street roundabout and Dawson Street, where two more lots sit between Sevier and Council Place. For the overflow, the map points down Island Home Avenue to the public gravel lot under the James White Parkway bridge, where the parkway crosses the avenue just past Trailhead Beer Market; from there it is about a fifteen-minute walk back to the door. The city's public lot at Suttree Landing is on the way and works too."
+          "text": "Closest are three lots the map marks around the door: the lot at Sevier Avenue and Davenport Road, the HoneyBee free lot behind the coffee shop across the avenue, and the Johnson Architecture lot south of the venue off Davenport, which is a paid lot. The street parking the map marks is on Langford and Phillips Avenues, the two residential blocks between Sevier and the river, where posted signs and resident-permit rules apply, and farther west along Sevier near Council Place, where two more lots sit. For the overflow, the map points down Island Home Avenue to the public lot under the James White Parkway, where it crosses the avenue just past Trailhead Beer Market; from there it is about a fifteen-minute walk back to the door. The city's public lot at Suttree Landing is on the way and works too."
         },
         {
           "type": "subhead",
@@ -557,7 +557,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Two places. The Borderland Tees lot next door, which the venue has warned about since opening weekend and which tows. And the river side of Island Home Avenue across from Trailhead Beer Market, which is the one request in the venue's caption: please refrain from parking across from Trailhead. Saturday adds a wrinkle: Alabama at Tennessee kicks off at 3:30 and ends about when the doors open at seven, so the bridge and Sevier Avenue will be full of game traffic at exactly the wrong moment. The underpass lot, reached from the Island Home side, avoids most of it."
+          "text": "Two places. The Borderland Tees lot, the private lot immediately west of The 808, which the venue has warned about since opening weekend and which tows; the detail panel on the map shows exactly which parcel it is. And the apartments on the river side of Island Home Avenue across from Trailhead Beer Market, which is the one request in the venue's caption: please refrain from parking across from Trailhead. Saturday adds a wrinkle: Alabama at Tennessee kicks off at 3:30 and ends about when the doors open at seven, so the bridge and Sevier Avenue will be full of game traffic at exactly the wrong moment. The lots reached from the Island Home side avoid most of it."
         }
       ],
       "sources": [
@@ -570,8 +570,7 @@
           "url": "https://www.instagram.com/808knox/"
         },
         {
-          "label": "OpenStreetMap — street data for the drawing",
-          "url": "https://www.openstreetmap.org/#map=17/35.9585/-83.9060"
+          "label": "Map drawn by The South Knoxville Ear from the venue's posted map; lot symbols are approximate, not property lines"
         }
       ],
       "social": {
@@ -583,7 +582,8 @@
           "Friday and Saturday shows"
         ],
         "igSkip": true
-      }
+      },
+      "imageZoom": true
     },
     {
       "id": "first-bass-pink-cactus",

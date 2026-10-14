@@ -204,6 +204,21 @@
       "treatment": "ink-recolor",
       "fetched": "2026-10-06",
       "confidence": "high"
+    },
+    "fly-by-night": {
+      "name": "Fly by Night",
+      "match": [
+        "Fly by Night",
+        "Fly By Night"
+      ],
+      "site": "https://www.flybynightknox.com/",
+      "logo": "/assets/venues/fly-by-night.svg",
+      "source": "https://cdn.prod.website-files.com/644b370ea1ed9cd5259af021/645af7c4046e97c61eaebdfe_Horiz-dark.svg",
+      "sourceNote": "the horizontal wordmark the lounge's own site loads in its header (alt text 'Fly By Night (Logo)')",
+      "treatment": "as-is",
+      "fetched": "2026-10-14",
+      "confidence": "high",
+      "note": "Dark brown (#47372A) lettering on transparent, 360x76, so it sits on the cream chip untouched. Andy asked for it 2026-10-14."
     }
   }
 }

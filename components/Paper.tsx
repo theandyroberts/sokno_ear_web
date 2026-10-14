@@ -116,7 +116,7 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
       {withDivider && <Divider ornament="star" />}
       <section id={s.id} style={{ padding: "24px 0" }}>
         <SectionHeader>{s.label}</SectionHeader>
-        <Article id={s.id} label={s.label} labelColor={s.labelColor} days={s.days} image={s.image} imageCaption={s.imageCaption} title={s.title} deck={s.deck} facts={s.facts} layout={s.layout}>
+        <Article id={s.id} label={s.label} labelColor={s.labelColor} days={s.days} image={s.image} imageCaption={s.imageCaption} imageZoom={s.imageZoom} title={s.title} deck={s.deck} facts={s.facts} layout={s.layout}>
           <ArticleBody blocks={s.body} />
           <ArticleSources sources={s.sources} />
           {permalinks && <ShareStory slug={episode.slug} id={s.id} title={s.title} />}
@@ -174,7 +174,7 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
         <Page>
           <div className="ear-twocol" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.9fr) minmax(0, 1fr)", gap: 36, alignItems: "start" }}>
             <div className="ear-maincol">
-              <Article id={feature.id} label={feature.label} labelColor={feature.labelColor} days={feature.days} image={feature.image} imageCaption={feature.imageCaption} title={feature.title} deck={feature.deck} facts={feature.facts} layout={feature.layout}>
+              <Article id={feature.id} label={feature.label} labelColor={feature.labelColor} days={feature.days} image={feature.image} imageCaption={feature.imageCaption} imageZoom={feature.imageZoom} title={feature.title} deck={feature.deck} facts={feature.facts} layout={feature.layout}>
                 <ArticleBody blocks={feature.body} />
                 <ArticleSources sources={feature.sources} />
                 {permalinks && <ShareStory slug={episode.slug} id={feature.id} title={feature.title} />}

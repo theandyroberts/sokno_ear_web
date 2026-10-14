@@ -17,6 +17,8 @@ export interface ArticleProps {
   /** Lead image / engraving URL, framed like a printed clipping. */
   image?: string;
   imageCaption?: string;
+  /** Opens the image full screen on a click, with zoom and pan — for maps and diagrams. @default false */
+  imageZoom?: boolean;
   title: React.ReactNode;
   /** One- or two-sentence deck explaining why the story matters. */
   deck?: React.ReactNode;

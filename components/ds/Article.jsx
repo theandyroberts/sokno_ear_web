@@ -1,5 +1,6 @@
 import React from "react";
 import { Tag } from "./Tag.jsx";
+import { ZoomableImage } from "../ZoomableImage";
 
 /**
  * Article — a full inline story for the one-page weekly paper. Everything is
@@ -18,6 +19,7 @@ export function Article({
   days,
   image,
   imageCaption,
+  imageZoom = false,
   title,
   deck,
   facts = [],
@@ -49,11 +51,20 @@ export function Article({
           boxShadow: "var(--shadow-lift)",
         }}
       >
-        <img
-          src={image}
-          alt=""
-          style={{ width: "100%", display: "block", borderRadius: "calc(var(--radius-md) - 4px)", filter: "saturate(0.9) contrast(1.05)" }}
-        />
+        {imageZoom ? (
+          <ZoomableImage
+            src={image}
+            alt=""
+            title={typeof title === "string" ? title : undefined}
+            style={{ width: "100%", display: "block", borderRadius: "calc(var(--radius-md) - 4px)" }}
+          />
+        ) : (
+          <img
+            src={image}
+            alt=""
+            style={{ width: "100%", display: "block", borderRadius: "calc(var(--radius-md) - 4px)", filter: "saturate(0.9) contrast(1.05)" }}
+          />
+        )}
       </div>
       {imageCaption && (
         <figcaption

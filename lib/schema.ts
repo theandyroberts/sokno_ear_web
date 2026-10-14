@@ -74,6 +74,8 @@ export const StorySchema = z.object({
   layout: Layout.default("imageLeft"),
   image: z.string().optional(),
   imageCaption: z.string().optional(),
+  /** A click opens the image full screen with zoom and pan: maps, diagrams, anything with detail. */
+  imageZoom: z.boolean().optional(),
   title: z.string(),
   deck: z.string().optional(),
   facts: z.array(Fact).default([]),
