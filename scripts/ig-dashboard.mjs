@@ -148,7 +148,7 @@ ${m.sample ? `    <video class="g-sample" controls playsinline preload="none" po
       <div class="g-note"><input type="text" maxlength="400" placeholder="Or tell me something about it" aria-label="A note about ${esc(m.title)}"><button type="button" data-send>Send</button></div>
       <div class="g-err" hidden>Couldn&rsquo;t save that. Try again.</div>
     </div>
-    <p class="g-locked">Open this page from the link on your publishing desk to answer here.</p>
+    <p class="g-locked">Open this page from the link on your dashboard to answer here.</p>
   </div>
 </article>`;
 }
@@ -355,7 +355,7 @@ export const JS = `
   var WORD = { go: "Go ahead", no: "Don\\u2019t", done: "Done", later: "Not this week" };
   var key = null;
   try {
-    // The key arrives once in the fragment (from the desk's link), then lives here.
+    // The key arrives once in the fragment (from the dashboard's link), then lives here.
     var m = /(?:^|[#&])k=([^&]+)/.exec(window.location.hash);
     if (m) { localStorage.setItem("ear_k", decodeURIComponent(m[1])); history.replaceState(null, "", window.location.pathname); }
     key = localStorage.getItem("ear_k");

@@ -1,12 +1,14 @@
 #!/usr/bin/env node
-// The publishing desk from the command line. The page is soknoear.com/desk/<token>.
+// The dashboard from the command line. The page is soknoear.com/dashboard (the old
+// soknoear.com/desk/<token> link still works and signs a device in).
 //
 //   node scripts/pub-status.mjs show                    this week's checklist, in the terminal
 //   node scripts/pub-status.mjs sync                    re-read the files, refresh this week + next
 //   node scripts/pub-status.mjs done <task> [--note "…"] [--by claude|andy|pipeline]
 //   node scripts/pub-status.mjs note <task> "…"         leave a note without ticking the box
 //   node scripts/pub-status.mjs undo <task>             remove a mark (evidence can't be undone)
-//   node scripts/pub-status.mjs url                     print the desk's address
+//   node scripts/pub-status.mjs url                     print the dashboard's address
+//   node scripts/pub-status.mjs pass [--renew]          the dashboard's sign-in passphrase
 //   node scripts/pub-status.mjs url --insta             the Instagram dashboard, with the key for its buttons
 //   node scripts/pub-status.mjs moves                   open moves and what Andy answered (READ THIS FIRST)
 //   node scripts/pub-status.mjs move <key> --title "…" --owner claude|andy [--plan "…"] [--due YYYY-MM-DD]
@@ -22,7 +24,7 @@
 // venue-drafts · venue-sent:<venue-key> · publish-check · ig-post:<story-id>
 // (docs/PUBLISHING-DESK.md says which are evidence and which need a mark.)
 import { execFileSync } from "node:child_process";
-import { hasStore, openStore, sync, mark, unmark, deskUrl, dashboardUrl } from "./pub-status-store.mjs";
+import { hasStore, openStore, sync, mark, unmark, deskUrl, dashboardUrl, dashboardPass } from "./pub-status-store.mjs";
 import { mergeMarks, weekOf, todayET, CHANNELS, listMoves, pendingAnswers, putMove, handleMove, closeMove } from "./pub-status-lib.mjs";
 
 const argv = process.argv.slice(2);
@@ -88,6 +90,7 @@ switch (cmd) {
     break;
   }
   case "url": console.log(argv.includes("--insta") ? await dashboardUrl() : await deskUrl()); break;
+  case "pass": console.log(await dashboardPass({ renew: argv.includes("--renew") })); break;
   case "moves": {
     const db = await openStore();
     const moves = listMoves(db);
@@ -122,5 +125,5 @@ switch (cmd) {
     break;
   }
   default:
-    console.error("usage: node scripts/pub-status.mjs [show|sync|done|note|undo|url|moves|move|handled|close] …"); process.exit(1);
+    console.error("usage: node scripts/pub-status.mjs [show|sync|done|note|undo|url|pass|moves|move|handled|close] …"); process.exit(1);
 }
