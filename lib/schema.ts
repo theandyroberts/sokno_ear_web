@@ -26,7 +26,11 @@ export const Block = z.union([
   }),
 ]);
 
-export const Fact = z.object({ label: z.string(), value: z.string() });
+// A fact can point somewhere: `href` makes the value a link (an in-page "#story-id"
+// resolves to the story's own page on a permalink), and `zoom` names an image that a
+// small "open the map" control pops full screen, no thumbnail needed. (Andy, 2026-10-14:
+// the two 808 show stories carry a Parking row that links down to the parking map.)
+export const Fact = z.object({ label: z.string(), value: z.string(), href: z.string().optional(), zoom: z.string().optional() });
 
 // Attribution for the end of an article. url present -> link; url absent -> plain
 // credit text (e.g. "Info from A. Roberts" for a tip with no link).

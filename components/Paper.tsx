@@ -10,6 +10,7 @@ import { ArticleBody } from "@/components/ArticleBody";
 import { AudioBriefingPlayer } from "@/components/AudioBriefingPlayer";
 import { EventSubmitForm } from "@/components/EventSubmitForm";
 import { SubscribeForm } from "@/components/SubscribeForm";
+import { ZoomableImage } from "@/components/ZoomableImage";
 import { PartyMapCard } from "@/components/PartyMapCard";
 import { DirtySouthCard } from "@/components/DirtySouthCard";
 import { ArticleSources } from "@/components/ArticleSources";
@@ -43,6 +44,29 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
   // anchors don't exist — send those links to the episode page instead.
   const resolveHref = (href?: string) =>
     storyView && href?.startsWith("#") ? `/${episode.slug}${href}` : href;
+
+  // A fact with `href` reads as a link; one with `zoom` also gets an "open the map"
+  // control that pops that image full screen (Andy, 2026-10-14: the 808 show stories
+  // point at the parking map from their facts box instead of making readers scroll).
+  const factNodes = (facts: Episode["stories"][number]["facts"]) =>
+    facts.map((f) =>
+      f.href || f.zoom
+        ? {
+            label: f.label,
+            value: (
+              <>
+                {f.href ? <a href={resolveHref(f.href)} style={{ color: "var(--rust)" }}>{f.value}</a> : f.value}
+                {f.zoom && (
+                  <>
+                    {" · "}
+                    <ZoomableImage src={f.zoom} link="open the map" title={f.value} />
+                  </>
+                )}
+              </>
+            ),
+          }
+        : f,
+    );
 
   // Nav: Top + unique story labels (first occurrence) + Listen (if audio)
   const seen = new Set<string>();
@@ -116,7 +140,7 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
       {withDivider && <Divider ornament="star" />}
       <section id={s.id} style={{ padding: "24px 0" }}>
         <SectionHeader>{s.label}</SectionHeader>
-        <Article id={s.id} label={s.label} labelColor={s.labelColor} days={s.days} image={s.image} imageCaption={s.imageCaption} imageZoom={s.imageZoom} title={s.title} deck={s.deck} facts={s.facts} layout={s.layout}>
+        <Article id={s.id} label={s.label} labelColor={s.labelColor} days={s.days} image={s.image} imageCaption={s.imageCaption} imageZoom={s.imageZoom} title={s.title} deck={s.deck} facts={factNodes(s.facts)} layout={s.layout}>
           <ArticleBody blocks={s.body} />
           <ArticleSources sources={s.sources} />
           {permalinks && <ShareStory slug={episode.slug} id={s.id} title={s.title} />}
@@ -174,7 +198,7 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
         <Page>
           <div className="ear-twocol" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.9fr) minmax(0, 1fr)", gap: 36, alignItems: "start" }}>
             <div className="ear-maincol">
-              <Article id={feature.id} label={feature.label} labelColor={feature.labelColor} days={feature.days} image={feature.image} imageCaption={feature.imageCaption} imageZoom={feature.imageZoom} title={feature.title} deck={feature.deck} facts={feature.facts} layout={feature.layout}>
+              <Article id={feature.id} label={feature.label} labelColor={feature.labelColor} days={feature.days} image={feature.image} imageCaption={feature.imageCaption} imageZoom={feature.imageZoom} title={feature.title} deck={feature.deck} facts={factNodes(feature.facts)} layout={feature.layout}>
                 <ArticleBody blocks={feature.body} />
                 <ArticleSources sources={feature.sources} />
                 {permalinks && <ShareStory slug={episode.slug} id={feature.id} title={feature.title} />}

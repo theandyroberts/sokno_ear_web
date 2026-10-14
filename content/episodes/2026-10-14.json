@@ -368,11 +368,9 @@
         },
         {
           "label": "Parking",
-          "value": "See the venue's map, redrawn below: Sevier Ave street spots, the HoneyBee lot, the underpass lot off Island Home Ave · not the Borderland Tees lot, not across from Trailhead"
-        },
-        {
-          "label": "Weather",
-          "value": "Mostly sunny and 80, then the front: 46 overnight"
+          "value": "See the parking map: the lots, the street spots and the two places not to park",
+          "href": "#the-808-parking-map",
+          "zoom": "/assets/diagrams/the-808-parking.svg"
         }
       ],
       "body": [
@@ -386,7 +384,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Two things from the venue's feed this past week. Average Wieners now sets up on the patio at every show, so dinner can be a hot dog between sets. And the parking update: The 808 posted a two-slide map. It marks street parking along Sevier Avenue and the side streets around the venue, the HoneyBee free lot across the avenue, and, for the overflow, the public gravel lot under the James White Parkway bridge off Island Home Avenue, a walk away between Trailhead Beer Market and Printshop. The one ask is not to park across the street from Trailhead down there. The Borderland Tees lot next door to the venue still tows. Friday is mostly sunny and 80, with a cold front arriving overnight; the walk back to the car will be a lot cooler than the walk in."
+          "text": "Two things from the venue's feed this past week. Average Wieners now sets up on the patio at every show, so dinner can be a hot dog between sets. And parking: the venue posted a map, and the Ear redrew it as its own story below, with the lots, the street spots, and the two places not to park. The Parking row above links to it."
         }
       ],
       "sources": [
@@ -456,8 +454,10 @@
           "value": "Alabama at Tennessee, 3:30 PM kickoff at Neyland"
         },
         {
-          "label": "Weather",
-          "value": "Sunny and 62 · clear and 40 overnight"
+          "label": "Parking",
+          "value": "See the parking map: the lots, the street spots and the two places not to park",
+          "href": "#the-808-parking-map",
+          "zoom": "/assets/diagrams/the-808-parking.svg"
         }
       ],
       "body": [
@@ -471,7 +471,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Alabama kicks off at Neyland at 3:30 Saturday, which puts the final whistle somewhere around seven, the same minute the doors open on Sevier Avenue. The bridge traffic will be heavy at exactly that hour; walking over from a game-day room in Old Sevier is faster than driving anything. Average Wieners is on the patio, the parking rules from Friday still hold, and the night is clear and cold, down to 40 by the time the last song ends."
+          "text": "Alabama kicks off at Neyland at 3:30 Saturday, which puts the final whistle somewhere around seven, the same minute the doors open on Sevier Avenue. The bridge traffic will be heavy at exactly that hour; walking over from a game-day room in Old Sevier is faster than driving anything. Average Wieners is on the patio, and the parking map in the story below says where the car goes; the Parking row above links to it."
         }
       ],
       "sources": [

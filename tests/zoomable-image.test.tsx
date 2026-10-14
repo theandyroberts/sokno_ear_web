@@ -46,3 +46,13 @@ describe("ZoomableImage", () => {
     expect(screen.getByRole("button", { name: /expand/i })).toBeInTheDocument();
   });
 });
+
+// A facts-row control: the same viewer behind a text link, no thumbnail (Andy, 2026-10-14).
+describe("ZoomableImage as a link", () => {
+  it("renders the link words and opens the viewer on click", () => {
+    render(<ZoomableImage src="/assets/diagrams/the-808-parking.svg" link="open the map" title="Parking" />);
+    expect(document.querySelector("img")).toBeNull();
+    fireEvent.click(screen.getByRole("button", { name: /expand parking/i }));
+    expect(screen.getByRole("dialog", { name: "Parking" })).toBeInTheDocument();
+  });
+});

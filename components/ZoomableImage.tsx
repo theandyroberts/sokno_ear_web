@@ -12,11 +12,19 @@ import { track } from "@/lib/track";
  * Touch: pinch to zoom, one finger to pan. Keyboard: Esc closes, + and - zoom.
  * An "Open the file" link gives the browser's own zoom as a fallback.
  */
-type Props = { src: string; alt?: string; style?: React.CSSProperties; title?: string };
+type Props = {
+  src: string;
+  alt?: string;
+  style?: React.CSSProperties;
+  title?: string;
+  /** Render a text link with these words instead of the image itself; the click still
+   *  opens the full-screen viewer. For a facts-row "open the map" beside a story link. */
+  link?: string;
+};
 
 const MIN = 1, MAX = 8;
 
-export function ZoomableImage({ src, alt = "", style, title }: Props) {
+export function ZoomableImage({ src, alt = "", style, title, link }: Props) {
   const [open, setOpen] = React.useState(false);
   const [scale, setScale] = React.useState(1);
   const [tx, setTx] = React.useState(0);
@@ -114,6 +122,19 @@ export function ZoomableImage({ src, alt = "", style, title }: Props) {
 
   return (
     <>
+      {link ? (
+        <button
+          type="button"
+          onClick={show}
+          aria-label={`Expand ${title ?? "the image"} to full screen`}
+          style={{
+            font: "inherit", color: "var(--rust)", background: "transparent", border: 0, padding: 0, cursor: "zoom-in",
+            textDecoration: "underline", textUnderlineOffset: "2px",
+          }}
+        >
+          {link}
+        </button>
+      ) : (
       <button
         type="button"
         onClick={show}
@@ -132,6 +153,7 @@ export function ZoomableImage({ src, alt = "", style, title }: Props) {
           ⤢ Tap to expand and zoom
         </span>
       </button>
+      )}
 
       {open && (
         <div
