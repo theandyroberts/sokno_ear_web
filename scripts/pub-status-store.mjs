@@ -113,7 +113,7 @@ export async function unmark({ date, task, db } = {}) {
   return week;
 }
 
-/** The dashboard's address. A device signs in once with the passphrase (see dashboardPass). */
+/** The dashboard's address. Open to anyone; no sign-in. */
 export async function deskUrl() {
   return `${SITE}/dashboard`;
 }
@@ -129,20 +129,6 @@ export async function deskTokenUrl(/** @type {{db?: any}} */ { db } = {}) {
   }
   if (own) db.close();
   return `${SITE}/desk/${row.value}`;
-}
-
-/** The dashboard's passphrase: four short words, made once, kept in the DB. */
-export async function dashboardPass(/** @type {{db?: any, renew?: boolean}} */ { db, renew = false } = {}) {
-  const own = !db;
-  db ??= await openStore();
-  let row = renew ? null : db.prepare("SELECT value FROM pub_meta WHERE key = 'dashboard_pass'").get();
-  if (!row) {
-    const W = "acorn badger banjo barn bison bluff brook cabin canoe cedar cider clover comet cove creek dahlia dune ember fern fiddle finch fox gable garnet harbor hazel heron hickory holler kayak kettle lantern laurel maple marble meadow mesa moss otter owl paddle pecan pine porch quarry quilt raven ridge river robin sassafras sparrow sumac sycamore thistle thunder trail trestle tulip walnut willow wren".split(" ");
-    row = { value: Array.from({ length: 4 }, () => W[crypto.randomInt(W.length)]).join(" ") };
-    db.prepare("INSERT INTO pub_meta (key, value) VALUES ('dashboard_pass', ?) ON CONFLICT(key) DO UPDATE SET value=excluded.value").run(row.value);
-  }
-  if (own) db.close();
-  return row.value;
 }
 
 /** Where the Instagram dashboard lives. Public page; the answer buttons need the key. */

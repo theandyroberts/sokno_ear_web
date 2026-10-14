@@ -23,23 +23,11 @@ export function isDeskToken(d: Database.Database, token: string): boolean {
   return a.length === b.length && crypto.timingSafeEqual(a, b);
 }
 
-/** The dashboard's passphrase (`node scripts/pub-status.mjs pass`). Spaces and case don't matter. */
-export function isDashboardPass(d: Database.Database, pass: string): boolean {
-  const row = prepared(d).prepare("SELECT value FROM pub_meta WHERE key = 'dashboard_pass'").get() as { value: string } | undefined;
-  const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
-  if (!row || !pass) return false;
-  const a = crypto.createHash("sha256").update(norm(row.value)).digest(), b = crypto.createHash("sha256").update(norm(pass)).digest();
-  return crypto.timingSafeEqual(a, b);
-}
-
-/** The token a signed-in device carries in its cookie; null before one is issued. */
+/** The token the page's tick buttons send to /api/desk; null before one is issued. */
 export function deskToken(d: Database.Database): string | null {
   const row = prepared(d).prepare("SELECT value FROM pub_meta WHERE key = 'desk_token'").get() as { value: string } | undefined;
   return row?.value ?? null;
 }
-
-/** The cookie a signed-in device keeps (httpOnly, a year). */
-export const DASH_COOKIE = "ear_dash";
 
 export const isWeek = (s: unknown): s is string => typeof s === "string" && /^\d{4}-\d\d-\d\d$/.test(s) && !Number.isNaN(Date.parse(s));
 

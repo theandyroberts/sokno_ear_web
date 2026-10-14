@@ -65,10 +65,3 @@ export function DeskRefresh({ seconds = 60 }: { seconds?: number }) {
   return null;
 }
 
-/** Opening the old /desk/<token> link signs this device in to /dashboard too. */
-export function RememberDevice({ token }: { token: string }) {
-  useEffect(() => {
-    fetch("/api/dashboard/login", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ token }) }).catch(() => {});
-  }, [token]);
-  return null;
-}
