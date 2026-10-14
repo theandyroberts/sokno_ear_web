@@ -12,14 +12,15 @@ export async function POST(req: Request) {
   const tok = String(body?.token ?? "");
   const ok = isDashboardPass(store, pass) || isDeskToken(store, tok);
   const token = deskToken(store);
-  const back = new URL("/dashboard", req.url);
+  // A relative Location: behind the proxy req.url is the app's own localhost address.
+  const back = (q = "") => new NextResponse(null, { status: 303, headers: { Location: `/dashboard${q}` } });
 
   if (!ok || !token) {
     await new Promise((r) => setTimeout(r, 1500)); // slow down guessing
-    if (form) { back.searchParams.set("wrong", "1"); return NextResponse.redirect(back, 303); }
+    if (form) return back("?wrong=1");
     return NextResponse.json({ error: "not found" }, { status: 404 });
   }
-  const res = form ? NextResponse.redirect(back, 303) : NextResponse.json({ ok: true });
+  const res = form ? back() : NextResponse.json({ ok: true });
   res.cookies.set(DASH_COOKIE, token, { httpOnly: true, secure: true, sameSite: "lax", path: "/", maxAge: 365 * 24 * 3600 });
   return res;
 }
