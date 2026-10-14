@@ -1,7 +1,7 @@
-# The publishing desk
+# The dashboard
 
 One page for the whole week: every step, every channel, a box for each.
-**soknoear.com/desk/&lt;token&gt;** — get the address with `node scripts/pub-status.mjs url`.
+**soknoear.com/dashboard&lt;token&gt;** — get the address with `node scripts/pub-status.mjs url`.
 
 ## Why it exists
 
@@ -97,7 +97,7 @@ To change the address: `sqlite3 /var/lib/soknoear/ear.db "DELETE FROM pub_meta W
 - **Evidence is read from the deployed repo.** A draft committed on the Mac mini but not
   deployed leaves `draft` empty. That is correct: /next doesn't show it either.
 - **The heartbeat is the Instagram cron.** If `ig-post.mjs` exits early — it does when
-  `content/ig-queue/` doesn't exist at all — the desk only syncs when something else
+  `content/ig-queue/` doesn't exist at all — the dashboard only syncs when something else
   calls it. With any queue on disk, it reaches the end.
 - **A week with no episode still has a page.** It shows the bare plan with nothing
   ticked, and the episode number it expects.

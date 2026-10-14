@@ -1,15 +1,15 @@
 ---
 name: publishing-desk
-description: Use whenever you do, finish, or check any step of The South Knoxville Ear's weekly publishing — research, the episode draft, audio, the Dirty South party plan, publishing, the newsletter, the party notice, the Instagram drip, venue notes, the Monday Instagram review — or when Andy asks what's done or what's left. Nothing on the desk waits on Andy; the rare thing Claude needs his yes for is an "AI needs to ask for permission" item. Covers how to read the publishing desk and how to tick its boxes.
+description: Use whenever you do, finish, or check any step of The South Knoxville Ear's weekly publishing — research, the episode draft, audio, the Dirty South party plan, publishing, the newsletter, the party notice, the Instagram drip, venue notes, the Monday Instagram review — or when Andy asks what's done or what's left. Nothing on the dashboard waits on Andy; the rare thing Claude needs his yes for is an "AI needs to ask for permission" item. Covers how to read the dashboard and how to tick its boxes.
 ---
 
-# The publishing desk
+# The dashboard
 
-One page shows the whole week: **soknoear.com/desk/<token>**. Get the address with
+One page shows the whole week: **soknoear.com/dashboard**. Get the address with
 `node scripts/pub-status.mjs url`. It is private by address — don't paste the token
 into commits, docs, or anything public.
 
-The desk has a box for every step of the week, Monday to Sunday, across four channels:
+The dashboard has a box for every step of the week, Monday to Sunday, across four channels:
 SoKnoEar.com, the Dirty South party page, Instagram, and venue notes. **Your job is to
 leave it true.** A box that stays empty after the work is done is a lie Andy will act on.
 
@@ -51,7 +51,7 @@ without it, the week is today's. `--by` defaults to `claude`.
 
 ## Which boxes tick themselves, and which need you
 
-**Evidence boxes tick themselves.** The pipeline's own files prove them, and the desk
+**Evidence boxes tick themselves.** The pipeline's own files prove them, and the dashboard
 re-reads those files every 15 minutes (the Instagram poster's cron tick) and at the end
 of every publish. Never mark these; if one is empty, the work isn't done or didn't land.
 
@@ -91,12 +91,12 @@ mini proves nothing — commit, push, and redeploy, then `sync`.
 2. **Put the number in the note.** "sent 7 of 7", "No. 16, feature + 4 stories",
    "3 channels out, newsletter still preview". A bare tick tells Andy nothing.
 3. **A failure is a note, not a tick.** If a step failed or was skipped, leave the box
-   empty and `note` why. The desk turns an empty box past its day into a rust "late" flag;
+   empty and `note` why. The dashboard turns an empty box past its day into a rust "late" flag;
    that is the correct picture.
 4. **Finish with `show`, and give the link.** At the end of any publishing task, run
    `show`. If it lists anything under "AI needs to ask for permission", put each question
-   in your message to Andy, soonest deadline first, with the desk link from `url`. Never
-   say "the desk" without the link.
+   in your message to Andy, soonest deadline first, with the dashboard link from `url`. Never
+   say "the dashboard" without the link.
 5. **Never tick `site-live`, the newsletter, or the party notice by hand to make the page
    look finished.** The boxes follow the act. Publishing is Andy's "run it". The list
    sends are yours and go out at the publish.
