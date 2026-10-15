@@ -8,6 +8,44 @@ entry.
 
 ---
 
+## 2026-10-15
+
+Fifth check. Deltas vs. 2026-10-01. Site-side half is clean; **Search Console
+was not reachable** (fourth miss in five checks). Nothing needed fixing, so
+nothing was changed or deployed.
+
+### Site-side audit
+
+| Check | Result | Delta |
+| --- | --- | --- |
+| `sitemap.xml` | 200, 27,393 bytes, **174 URLs** | +39 URLs (+6,266 bytes) |
+| Sitemap composition | 4 static + 18 episodes + 152 story permalinks | **+2 episodes** (`/2026-10-07`, `/2026-10-14`), **+37 stories** |
+| `lastmod` range | 2026-06-20 → 2026-10-14 | tracks the latest episode ✓ |
+| Full sweep of all 174 sitemap URLs | **174/174 200**, **174/174 `index, follow`**, **174/174 canonical** | — |
+| Spot-check 5 random URLs | `/2026-09-09/vols-at-puckers`, `/2026-10-14/scruffycat-ride`, `/2026-09-23/puckers-texas`, `/2026-10-07/storytime-flowers`, `/2026-09-30/first-friday` → all 200 | — |
+| `robots.txt` | `Allow: /`, `Disallow: /next`, `Disallow: /draft/`, `Disallow: /desk/`, `Host:`, `Sitemap:` | unchanged |
+| Canonical — homepage | `https://soknoear.com` | ✓ |
+| Canonical — latest episode `/2026-10-14` | `https://soknoear.com` (deliberate) | ✓ |
+| Canonical — older episodes (17) | self, all 17 | ✓ |
+| Canonical — non-feature stories | self, **all 152** (sweep) | ✓ |
+| Canonical — feature permalinks `/2026-10-14/kerns-fall-fest`, `/2026-10-07/old-sevier-market-opens` | their episode pages, absent from sitemap | ✓ |
+| `NewsArticle` JSON-LD | Present on **all 152** story pages (sweep) | ✓ |
+| Noindex audit | `/next`, `/draft/*` → 404 + `noindex`; `/desk/` → 308 → `/desk` 404; `/dashboard` 200 + `noindex, nofollow`, not in sitemap. Nothing in the sitemap is noindexed | ✓ (`/dashboard` is new since last check and correctly kept out) |
+| `www.soknoear.com` → apex | `https://www./`, `https://www./archive`, `http://www./about` → 301 apex; `http://` apex → 301 https | ✓ **still fixed** (since 2026-09-15) |
+| `/stats/script.js` | 200 — tracker not blocked | ✓ |
+
+Growth is ~20 URLs a week now (episodes carry ~18 stories), against the ~5/week
+the check was written for. All real content; same duplicate-recurring-event
+watch as last time once GSC is readable.
+
+### Search Console
+
+**Not collected.** No Chrome extension connected (`list_connected_browsers`
+empty); the Browser pane bounced to Google sign-in. Open item 4 in
+`docs/OPEN-ITEMS.md`.
+
+---
+
 ## 2026-10-01
 
 Fourth check. Deltas vs. 2026-09-15. Site-side half is clean; **Search Console

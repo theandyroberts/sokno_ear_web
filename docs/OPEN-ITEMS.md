@@ -83,8 +83,11 @@ with no run in between. Physically his: the phone system. When the ad is back, c
 with the date and what the new line is.
 
 ### 4. Search Console is unreadable from the Mac mini
-**Opened:** 2026-08-15 · **Age: 58 days** (as of 2026-10-12) · **Missed 3 of 4 SEO checks**
+**Opened:** 2026-08-15 · **Age: 61 days** (as of 2026-10-15) · **Missed 4 of 5 SEO checks**
 · **Needs Andy** · not blocking — no push (the site-side half covers breakage; this only costs the crawl numbers)
+
+**2026-10-15:** missed again (4 of 5) — no Chrome extension connected, Browser pane
+signed out. Sitemap is 174 URLs (+39 since 2026-10-01); site-side sweep all clean.
 
 **2026-10-01:** missed again — no Chrome extension connected, Browser pane signed out.
 Sitemap is now 135 URLs (+41 since 2026-09-15), so the uncrawled-share question has
