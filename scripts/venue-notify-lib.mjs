@@ -125,6 +125,17 @@ export function renderMessage({ episode, name, contact = {}, stories, first = fa
     ? `It ${over ? "went" : "also goes"} out on Instagram ${over ? "" : "over the weekend "}from @soknoear${igTag}, too.`
     : `The week's picks ${over ? "went" : "go"} out on Instagram ${over ? "" : "over the weekend "}from @soknoear${igTag}, too.`;
 
+  // The weekly note to a venue we already know is a hello and one link (Andy,
+  // 2026-10-15: "much shorter than the initial notes... just say hi and here's the link").
+  if (!first) {
+    const url = storyUrl(episode, stories[0]);
+    const line = n === 1 ? `${name} is in this week's South Knoxville Ear.` : `${name} has ${n} stories in this week's South Knoxville Ear.`;
+    const text = [who, "", `${line} Here's the link:`, "", url, "", "Share anything you like.", "", "Andy"].join("\n");
+    const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    const html = `<div style="font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.55;color:#171512;">${esc(who)}<br><br>${esc(line)} Here's the link:<br><br><a href="${url}" style="color:#A94A34;">${url}</a><br><br>Share anything you like.<br><br>Andy</div>`;
+    return { subject: `${name} is in this week's South Knoxville Ear`, text, html };
+  }
+
   const lines = [];
   if (first) {
     lines.push(

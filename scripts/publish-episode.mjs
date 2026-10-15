@@ -14,7 +14,7 @@
 //   node scripts/publish-episode.mjs --instagram         → just build/deploy/queue the drip
 //   node scripts/publish-episode.mjs --status            → report what's done, change nothing
 //   --venues send|preview|skip   the weekly "you're in the Ear" note to each venue
-//                                (default preview; first contacts are always drafts for Andy)
+//                                (default send, Andy 2026-10-15; first contacts are always drafts for Andy)
 //   --slug YYYY-MM-DD   target a specific episode (default: newest draft, else newest episode)
 //   --dry-run           print every command without running it
 //
@@ -44,7 +44,7 @@ if (!["preview", "send", "skip"].includes(dspartyMode)) {
   console.error(`--dsparty must be preview|send|skip (got ${dspartyMode})`);
   process.exit(1);
 }
-const venuesMode = val("--venues") ?? "preview";
+const venuesMode = val("--venues") ?? "send";
 if (!["preview", "send", "skip"].includes(venuesMode)) {
   console.error(`--venues must be preview|send|skip (got ${venuesMode})`);
   process.exit(1);
