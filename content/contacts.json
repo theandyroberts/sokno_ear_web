@@ -603,6 +603,40 @@
       "introduced": "2026-10-14",
       "source": "https://808knox.com/",
       "notes": "808 Sevier Ave, opened 2026-10-02. No email published; the site has a contact form with topics (General Info, Press & Marketing). Reach by Instagram DM or the form. Added 2026-10-06 (No. 16 opening, No. 17 Oakenfold sell-out). 2026-10-07: still no email anywhere — not on 808knox.com or /contact (form only, topics General Info / Press & Marketing), Instagram bio, or press. Talent buyer is Collin Stover (WATE). Route: the form at https://808knox.com/contact/ or Instagram DM. 2026-10-11: Andy is meeting the 808 owners the week of Oct 12 and hopes to get their social media person's email there. Once he has it, set email/to and send the next first note. 2026-10-14: Andy DM'd @808knox the week of Oct 5 with no reply; a shorter follow-up DM for No. 18 is drafted (the email text was too long for Instagram). 2026-10-15: Andy sent the short follow-up DM to @808knox for No. 18 (ticked on the dashboard Oct 14). Still no email; weekly notes stay DM drafts until he gets one."
+    },
+    "borderland-tees": {
+      "name": "Borderland Tees and the Borderland Playhouse",
+      "match": [
+        "Borderland"
+      ],
+      "instagram": "@borderlandtees",
+      "website": "https://borderlandtees.com/",
+      "contactPage": "https://borderlandtees.com/playhouse",
+      "email": "borderlandtees@gmail.com",
+      "to": null,
+      "phone": "(865) 414-7163",
+      "people": [],
+      "salutation": "Hiya Borderland team,",
+      "introduced": null,
+      "source": "https://borderlandtees.com/",
+      "notes": "802 Sevier Ave: the T-shirt shop and the playhouse inside it. Email and phone are on the shop's home page. Runs at the playhouse are produced by outside companies (Knoxville Theatre Club, Free Spirit Theatre); the playhouse page says to contact Knoxville Theatre Club for inquiries (info@knoxvilletheatreclub.org). Added 2026-10-19 (No. 19: John, Best if Used By; three Borderland stories matched no contact at the publish)."
+    },
+    "old-sevier-district": {
+      "name": "Old Sevier District",
+      "match": [
+        "Old Sevier District"
+      ],
+      "instagram": "@oldsevierdistrict",
+      "website": "https://oldsevierdistrict.org/",
+      "contactPage": "https://oldsevierdistrict.org/contact",
+      "email": null,
+      "to": null,
+      "phone": null,
+      "people": [],
+      "salutation": "Hiya Old Sevier,",
+      "introduced": null,
+      "source": "https://oldsevierdistrict.org/",
+      "notes": "The merchants' association, the hub of the beat. No email on the site; /contact is a form and the newsletter block is unconfigured. Route: Instagram DM (under 900 chars, one link, ask for their social person's email). Added 2026-10-19 (No. 19 feature, Spooky Streets, matched no contact at the publish)."
     }
   }
 }
