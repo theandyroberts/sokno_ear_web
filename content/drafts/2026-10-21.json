@@ -17,7 +17,7 @@
     "days": [
       "Fri"
     ],
-    "layout": "textOnly",
+    "layout": "imageTop",
     "title": "Spooky Streets shuts part of Sevier Avenue for trick-or-treating Friday evening",
     "deck": "The Old Sevier District closes a stretch of its main street for a family Halloween: costumes, candy at the shop doors, a bounce house and a dance party, free, from five until half past seven.",
     "facts": [
@@ -115,7 +115,9 @@
         "Spooky Streets: trick-or-treating on Sevier Avenue",
         "Friday, five to seven thirty, free"
       ]
-    }
+    },
+    "image": "/assets/spots/spooky_streets_bucket.jpg",
+    "imageCaption": "Trick-or-treating runs the closed stretch of Sevier Avenue from five"
   },
   "scanner": [
     {
@@ -125,7 +127,7 @@
         "Fri"
       ],
       "hot": true,
-      "image": "/assets/possum_street_art.png",
+      "image": "/assets/spots/spooky_streets_bucket.jpg",
       "title": "Spooky Streets on Sevier Avenue",
       "blurb": "Part of the street closes for trick-or-treating, a bounce house and a dance party, five to seven thirty, free.",
       "cue": "Jump to story",
@@ -138,7 +140,7 @@
         "Sun"
       ],
       "hot": true,
-      "image": "/assets/possum_street_art.png",
+      "image": "/assets/spots/scruffy_mandolin.jpg",
       "title": "Scruffy Roots Fest, the new date",
       "blurb": "Six Americana acts on the Kern's lawn from one to seven thirty, free. Bring a chair.",
       "cue": "Jump to story",
@@ -151,7 +153,7 @@
         "Sat"
       ],
       "hot": true,
-      "image": "/assets/possum_street_art.png",
+      "image": "/assets/spots/owl_puppet_lantern.jpg",
       "title": "Enchanted Forest at Mead's Quarry",
       "blurb": "Life-size puppets, animal ambassadors and candy in the woods, three to eight. Timed entry, ten dollars.",
       "cue": "Jump to story",
@@ -167,7 +169,7 @@
         "Sun"
       ],
       "hot": false,
-      "image": "/assets/possum_street_art.png",
+      "image": "/assets/spots/john_doll_shelf.jpg",
       "title": "John, by Annie Baker, at the Borderland Playhouse",
       "blurb": "Free Spirit Theatre's four-night run in the little theater inside Borderland Tees. Twenty dollars.",
       "cue": "Jump to story",
@@ -180,7 +182,7 @@
         "Fri"
       ],
       "hot": false,
-      "image": "/assets/possum_street_art.png",
+      "image": "/assets/spots/dnb_sneakers_jump.jpg",
       "title": "Drum and bass at The Pink Cactus",
       "blurb": "The Big Pink House Party gives a whole night to drum and bass, nine till late, twenty-one and up.",
       "cue": "Jump to story",
@@ -193,7 +195,7 @@
         "Thu"
       ],
       "hot": false,
-      "image": "/assets/possum_street_art.png",
+      "image": "/assets/spots/sapling_gloved_hands.jpg",
       "title": "Plant 37 trees on the SoKno Rail Trail",
       "blurb": "Thursday morning on Island Home Avenue with Legacy Parks and Trees Knoxville. Register free.",
       "cue": "Jump to story",
@@ -206,7 +208,7 @@
         "Sun"
       ],
       "hot": false,
-      "image": "/assets/possum_street_art.png",
+      "image": "/assets/spots/paddle_moon_drips.jpg",
       "title": "The last paddle of the season, under the Hunter Moon",
       "blurb": "Two guided hours on the river Sunday at six thirty, forty-five dollars. A full-moon hike leaves at the same time.",
       "cue": "Jump to story",
@@ -219,7 +221,7 @@
         "Sat"
       ],
       "hot": false,
-      "image": "/assets/possum_street_art.png",
+      "image": "/assets/spots/earls_bloody_mary.jpg",
       "title": "The Vols at South Carolina, and the board at Earl's",
       "blurb": "A 3:30 kickoff in Columbia and the game-day board on Waterfront Drive: two dollars off drafts and pizza.",
       "cue": "Jump to story",
@@ -234,7 +236,7 @@
       "days": [
         "Sun"
       ],
-      "layout": "textOnly",
+      "layout": "imageLeft",
       "title": "Scruffy Roots Fest lands on its new date: six Americana acts on the Kern's lawn Sunday, free",
       "deck": "WDVX's free festival of East Tennessee Americana has a second date on the old bakery's lawn and a new lineup to go with it: six and a half hours of music, no ticket, bring a chair.",
       "facts": [
@@ -355,7 +357,9 @@
           "Scruffy Roots Fest on the Kern's lawn, free",
           "Sunday, one to seven thirty, the new date"
         ]
-      }
+      },
+      "image": "/assets/spots/scruffy_mandolin.jpg",
+      "imageCaption": "Six acts, six and a half hours, bring a chair"
     },
     {
       "id": "john-borderland",
@@ -367,7 +371,7 @@
         "Sat",
         "Sun"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "title": "Free Spirit Theatre stages Annie Baker's John at the Borderland Playhouse, Thursday through Sunday",
       "deck": "A young couple check into a Gettysburg bed-and-breakfast whose owner collects dolls, in a slow, strange, funny play by the writer who won the Pulitzer for The Flick. Four nights in the little theater inside a T-shirt shop.",
       "facts": [
@@ -445,7 +449,9 @@
           "John, by Annie Baker, at the Borderland Playhouse",
           "Thursday to Sunday, twenty dollars"
         ]
-      }
+      },
+      "image": "/assets/spots/john_doll_shelf.jpg",
+      "imageCaption": "The innkeeper collects dolls; the play runs four nights"
     },
     {
       "id": "best-if-used-by",
@@ -454,7 +460,7 @@
       "days": [
         "Sun"
       ],
-      "layout": "textOnly",
+      "layout": "imageLeft",
       "title": "Best if Used By, a free one-night readers' theatre, closes the weekend at the Borderland Playhouse Sunday",
       "deck": "Two actors, scripts in hand, one performance and no ticket: a reading of Doug Brendel's play in the Sevier Avenue theater, a few hours after the matinee of John lets out.",
       "facts": [
@@ -511,7 +517,9 @@
           "Free readers' theatre at the Borderland Playhouse",
           "Sunday at seven"
         ]
-      }
+      },
+      "image": "/assets/spots/readers_theatre_stand.jpg",
+      "imageCaption": "Two actors, scripts in hand, one free reading"
     },
     {
       "id": "big-pink-house-party",
@@ -520,7 +528,7 @@
       "days": [
         "Fri"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "title": "The Big Pink House Party gives a whole night to drum and bass at The Pink Cactus Friday",
       "deck": "Volume five of the pink house's party series switches to drum and bass for the first time, with three DJs from nine until late. Ten dollars online, twenty-one and up, and it starts right after Spooky Streets ends.",
       "facts": [
@@ -594,7 +602,9 @@
           "Drum and bass at The Pink Cactus",
           "Friday at nine, ten dollars online"
         ]
-      }
+      },
+      "image": "/assets/spots/dnb_sneakers_jump.jpg",
+      "imageCaption": "Drum and bass for the first time, nine till late"
     },
     {
       "id": "industrial-night-fbn",
@@ -603,7 +613,7 @@
       "days": [
         "Thu"
       ],
-      "layout": "textOnly",
+      "layout": "imageLeft",
       "title": "Captain Ed and FreQ-K play industrial slammers at Fly by Night Thursday",
       "deck": "The seventies cocktail lounge on Sevier Avenue goes gothic for a night: two DJs, industrial music, and the creepy cocktail list the bar is running all October.",
       "facts": [
@@ -666,7 +676,9 @@
           "Industrial night at Fly by Night",
           "Thursday, Captain Ed and FreQ-K"
         ]
-      }
+      },
+      "image": "/assets/spots/industrial_goth_dj.jpg",
+      "imageCaption": "Two DJs and the creepy cocktail list, Thursday"
     },
     {
       "id": "vampire-night-fbn",
@@ -675,7 +687,7 @@
       "days": [
         "Sat"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "title": "A vampire night for the sapphic crowd returns to Fly by Night Saturday, with DJ Iris at ten",
       "deck": "The host's second queer vampire soirée at the Sevier Avenue lounge: drinks and mingling for the lesbian and sapphic community, a strict fangs-and-capes dress code, and a dance from ten.",
       "facts": [
@@ -733,7 +745,9 @@
           "A vampire night for the sapphic crowd at Fly by Night",
           "Saturday, DJ Iris at ten"
         ]
-      }
+      },
+      "image": "/assets/spots/vampire_martini_toast.jpg",
+      "imageCaption": "Fangs and capes are the dress code, DJ Iris at ten"
     },
     {
       "id": "trailhead-rodney-lee",
@@ -742,7 +756,7 @@
       "days": [
         "Fri"
       ],
-      "layout": "textOnly",
+      "layout": "imageLeft",
       "title": "Rodney Lee and Corey Kimbro play the Trailhead patio Friday at seven",
       "deck": "The beer market's outdoor stage on Island Home Avenue has a duo for Friday night, a short walk from the Spooky Streets closure and a free show as always.",
       "facts": [
@@ -807,7 +821,9 @@
           "Rodney Lee and Corey Kimbro at Trailhead",
           "Friday at seven, outdoors, free"
         ]
-      }
+      },
+      "image": "/assets/spots/patio_guitar_dusk.jpg",
+      "imageCaption": "A free duo on the patio Friday at seven"
     },
     {
       "id": "trailhead-lonetones",
@@ -816,7 +832,7 @@
       "days": [
         "Sun"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "title": "The Lonetones close the weekend on the Trailhead patio Sunday at four",
       "deck": "Knoxville's mountain indie folk-pop band, in their own words, plays the beer market's Sunday afternoon slot outdoors, free, on the last sunny day of a four-day run.",
       "facts": [
@@ -882,7 +898,9 @@
           "The Lonetones on the Trailhead patio",
           "Sunday at four, free"
         ]
-      }
+      },
+      "image": "/assets/spots/lonetones_tambourine.jpg",
+      "imageCaption": "Mountain indie folk-pop, Sunday at four, free"
     },
     {
       "id": "rail-trail-tree-planting",
@@ -891,7 +909,7 @@
       "days": [
         "Thu"
       ],
-      "layout": "textOnly",
+      "layout": "imageLeft",
       "title": "Volunteers plant 37 trees along the SoKno Rail Trail and Art Walk Thursday morning",
       "deck": "Legacy Parks and Trees Knoxville need hands on Island Home Avenue to put flowering native trees along the new trail before it opens. Three hours, gloves optional, registration free.",
       "facts": [
@@ -970,7 +988,9 @@
           "Plant 37 trees on the SoKno Rail Trail",
           "Thursday, nine to noon, register free"
         ]
-      }
+      },
+      "image": "/assets/spots/sapling_gloved_hands.jpg",
+      "imageCaption": "Thirty-seven native trees go in Thursday morning"
     },
     {
       "id": "monsters-workshop-kerns",
@@ -979,7 +999,7 @@
       "days": [
         "Thu"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "title": "Kids sew their own monsters at Kern's Thursday, in costume, for The Restoration House",
       "deck": "A beginner sewing workshop for children in Halloween costumes, with a costume contest, treat bags and every dollar to a nonprofit that houses single mothers and their kids.",
       "facts": [
@@ -1050,7 +1070,9 @@
           "Sew a monster at Kern's, for a cause",
           "Thursday, five thirty to seven thirty"
         ]
-      }
+      },
+      "image": "/assets/spots/felt_monster_needle.jpg",
+      "imageCaption": "Beginner sewing for kids in costume, Thursday"
     },
     {
       "id": "printshop-vols-pints",
@@ -1059,7 +1081,7 @@
       "days": [
         "Sat"
       ],
-      "layout": "textOnly",
+      "layout": "imageLeft",
       "title": "Printshop takes a dollar off pints for the whole Vols game Saturday, from the pregame to the final whistle",
       "deck": "Tennessee plays at South Carolina at 3:30, and the riverfront brewery on Island Home Avenue has the big screen on and the pint price down for as long as the game lasts.",
       "facts": [
@@ -1124,7 +1146,9 @@
           "A dollar off pints for the Vols game at Printshop",
           "Saturday, from three till the final whistle"
         ]
-      }
+      },
+      "image": "/assets/spots/tap_pint_football.jpg",
+      "imageCaption": "A dollar off pints from the pregame to the final whistle"
     },
     {
       "id": "enchanted-forest",
@@ -1133,7 +1157,7 @@
       "days": [
         "Sat"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "title": "The Enchanted Forest brings life-size puppets and animal ambassadors to Mead's Quarry Saturday, ten dollars a person",
       "deck": "Ijams Nature Center's family Halloween: a costumed walk through the woods where the critters are puppets, the owls are real and the candy is in bags to take home. Timed entry from three.",
       "facts": [
@@ -1223,7 +1247,9 @@
           "Enchanted Forest at Ijams Nature Center",
           "Saturday, three to eight, ten dollars"
         ]
-      }
+      },
+      "image": "/assets/spots/owl_puppet_lantern.jpg",
+      "imageCaption": "Life-size puppets in the woods, timed entry, ten dollars"
     },
     {
       "id": "mischief-night",
@@ -1232,7 +1258,7 @@
       "days": [
         "Fri"
       ],
-      "layout": "textOnly",
+      "layout": "imageLeft",
       "title": "Mischief Night takes a guided hike into the dark at Ijams Nature Center Friday, with the nocturnal animals up close",
       "deck": "The park's after-dark series goes Halloween: meet the night-shift animal ambassadors, then walk a mile of trail by headlamp to find out what the raccoons and owls get up to.",
       "facts": [
@@ -1302,7 +1328,9 @@
           "Mischief Night at Ijams Nature Center",
           "Friday at seven, fifteen dollars"
         ]
-      }
+      },
+      "image": "/assets/spots/raccoon_headlamp.jpg",
+      "imageCaption": "A mile of trail by headlamp after meeting the night animals"
     },
     {
       "id": "hunter-moon-paddle",
@@ -1311,7 +1339,7 @@
       "days": [
         "Sun"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "title": "The Full Moon Paddle under the Hunter Moon is the last paddle of the season at Ijams Nature Center Sunday",
       "deck": "Two guided hours on the Tennessee River after dark with a naturalist, kayak and headlamp provided, under October's full moon. The park's listing marks it the last available date of the year.",
       "facts": [
@@ -1389,7 +1417,9 @@
           "Last paddle of the season under the Hunter Moon",
           "Sunday at six thirty, Ijams Nature Center"
         ]
-      }
+      },
+      "image": "/assets/spots/paddle_moon_drips.jpg",
+      "imageCaption": "The last guided paddle of the season, Sunday at six thirty"
     },
     {
       "id": "crossword-play",
@@ -1398,7 +1428,7 @@
       "days": [
         "Sun"
       ],
-      "layout": "textOnly",
+      "layout": "imageLeft",
       "title": "The Crossword Play builds a puzzle in front of the audience at Ijams Nature Center Sunday afternoon",
       "deck": "A one-woman play that is also a crossword-construction seminar: meet the Puzzlemaker, watch a grid get built live, and see how a puzzle changes a life. Ninety minutes at two.",
       "facts": [
@@ -1456,7 +1486,9 @@
           "The Crossword Play at Ijams Nature Center",
           "Sunday at two"
         ]
-      }
+      },
+      "image": "/assets/spots/crossword_pencil.jpg",
+      "imageCaption": "A puzzle gets built live in front of the audience"
     },
     {
       "id": "specials-board",
@@ -1468,7 +1500,7 @@
         "Sat",
         "Sun"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "title": "The specials board: Earl's game-day board for the Vols at South Carolina Saturday, and a different deal every day on Waterfront Drive",
       "deck": "Down by the river, the week's run is mango ritas, spicy ritas, house margaritas and then mimosas, with the Vols board on Saturday afternoon for an away game that kicks off at 3:30.",
       "facts": [
@@ -1530,7 +1562,9 @@
         ],
         "standing": true,
         "standingKey": "earls-specials-board"
-      }
+      },
+      "image": "/assets/spots/earls_bloody_mary.jpg",
+      "imageCaption": "The Vols board Saturday, ritas and mimosas the rest of the week"
     }
   ],
   "sidebar": {
