@@ -50,6 +50,12 @@ export const EventDetails = z.object({
 // content/ig-handles.json. `igPromo` overrides the auto-built caption lede.
 export const Social = z.object({
   igTags: z.array(z.string()).optional(),
+  /** The act in the story — the band, DJ, comic, promoter or organizer with its own
+   *  crowd — as a key into content/ig-handles.json, which must also be in `igTags` so the
+   *  picture tags them; or `{ none: "why" }` when the story has no act (a trail ride, a
+   *  market). Required from No. 19 on: scripts/research-check.mjs refuses a draft without it.
+   *  Andy, 2026-10-09: "tags the venue and artist"; No. 18 carried no act at all. */
+  igAct: z.union([z.object({ key: z.string().min(1) }), z.object({ none: z.string().min(3) })]).optional(),
   igPromo: z.string().optional(),
   /** One spoken line for the week's Reel (scripts/ig-reel.py): said in the briefing's
    *  voice over this story's artwork and burned in. Under about fifteen words, real

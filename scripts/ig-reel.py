@@ -3,7 +3,8 @@
 
     python3 scripts/ig-reel.py <episode-slug>              → public/assets/ig/<slug>/reel.mp4 + reel.jpg
     python3 scripts/ig-reel.py <episode-slug> --plan       → print the cut (quips, seconds), render nothing, no TTS
-    python3 scripts/ig-reel.py <episode-slug> --max 90     → cap the Reel at 90 seconds (default 120, so a 16-story week keeps every story)
+    python3 scripts/ig-reel.py <episode-slug> --max 120    → cap the Reel at 120 seconds (the default is 45: the first
+                                                            116-second cut read 19 people, 12 seconds watched, 68% skipped)
 
 What it is (Andy, 2026-10-13: "a quick quip about each of the featured events, and
 the screen changes to show the event artwork and info for each one"): a cover card
@@ -53,6 +54,9 @@ LEAD_IN = 0.25      # silence before a quip starts, s
 TAIL = 0.35         # silence after it ends
 PUSH_IN = 0.06      # how far the artwork zooms across its segment
 MIN_STORIES = 3
+REEL_MAX_S = 45     # the default cap. A capped cut keeps the feature and spreads the rest across the weekend's days
+NUM = {1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine", 10: "Ten", 11: "eleven", 12: "twelve", 13: "thirteen", 14: "fourteen", 15: "fifteen", 16: "sixteen", 17: "seventeen", 18: "eighteen", 19: "nineteen", 20: "twenty"}
+DAY_ORDER = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue", "Wed"]
 
 # Respellings the LEXICON doesn't carry as a table row (the audio-script headers do).
 EXTRA_TTS = {"Kern's": "Kerns", "Kerns'": "Kerns", "WDVX": "W D V X", "soknoear.com": "Sohno Ear dot com"}
@@ -193,8 +197,9 @@ ART_W, ART_Y = 980, 240
 
 
 class Segment:
-    def __init__(self, kind, art, caption, said, info=None, counter=None):
+    def __init__(self, kind, art, caption, said, info=None, counter=None, day=None, feature=False):
         self.kind, self.art, self.caption, self.said, self.info, self.counter = kind, art, caption, said, info, counter
+        self.day, self.feature = day, feature
         self.mp3 = None
         self.speech = 0.0     # seconds of speech
         self.length = 0.0     # seconds on screen
@@ -327,6 +332,7 @@ def plan(slug, max_s):
     stories = [ep["feature"], *ep["stories"]]
     picks = []
     for s in stories:
+        is_feature = s is ep["feature"]
         if (s.get("social") or {}).get("igSkip"):
             continue
         art = art_dir / f"{s['id']}.jpg"
@@ -336,7 +342,8 @@ def plan(slug, max_s):
         when = fact(s, "when", "curtain|kickoff|showtime", "(mon|tue|wed|thu|fri|sat|sun).*")
         where = fact(s, "where", "venue", "start")
         info = [x for x in (when, where and where.split(" · ")[0]) if x]
-        picks.append(Segment("story", art, q.strip(), q.strip(), info))
+        day = next((d for d in (s.get("days") or []) if d in DAY_ORDER), None)
+        picks.append(Segment("story", art, q.strip(), q.strip(), info, day=day, feature=is_feature))
     n = len(picks)
     intro = quips.get("intro") or f"{n} things to do in South Knoxville this weekend."
     outro = quips.get("outro") or "That's the weekend. The whole briefing is at soknoear.com. Link in bio."
@@ -345,7 +352,28 @@ def plan(slug, max_s):
     return ep, segs, kicker
 
 
-def build(slug, max_s=90, plan_only=False):
+def reel_priority(stories):
+    """The order a cap takes stories in: the feature, then round-robin across the
+    weekend's days (Thu, Fri, Sat, Sun) in episode order, then anything undated."""
+    feature = [s for s in stories if s.feature]
+    rest = [s for s in stories if not s.feature]
+    by_day = {d: [s for s in rest if s.day == d] for d in DAY_ORDER}
+    undated = [s for s in rest if s.day not in DAY_ORDER]
+    out = list(feature)
+    while any(by_day.values()):
+        for d in DAY_ORDER:
+            if by_day[d]:
+                out.append(by_day[d].pop(0))
+    return out + undated
+
+
+def reel_order(kept, stories):
+    """How the kept stories play: the feature, then by day, ties in episode order."""
+    idx = {id(s): i for i, s in enumerate(stories)}
+    return sorted(kept, key=lambda s: (0 if s.feature else 1, DAY_ORDER.index(s.day) if s.day in DAY_ORDER else len(DAY_ORDER), idx[id(s)]))
+
+
+def build(slug, max_s=REEL_MAX_S, plan_only=False):
     ep, segs, kicker = plan(slug, max_s)
     respell = tts_respellings()
     for s in segs:
@@ -353,10 +381,12 @@ def build(slug, max_s=90, plan_only=False):
 
     if plan_only:
         # rough timing without the voice: ~15 characters a second plus the pads
-        print(f"reel for {slug}: {len(segs) - 2} stories (plan — no audio rendered)")
-        for s in segs:
+        stories = [s for s in segs if s.kind == "story"]
+        print(f"reel for {slug}: {len(stories)} stories (plan — no audio rendered; a {max_s:.0f}s cap takes them in this order)")
+        for s in [segs[0], *reel_priority(stories), segs[-1]]:
             est = len(s.said) / 15 + LEAD_IN + TAIL
-            print(f"  {est:5.1f}s  {s.art.name:32} {s.caption[:60]}…" + (f"   [tts: {s.said[:50]}…]" if s.said != s.caption else ""))
+            tag = "feature" if s.feature else (s.day or "")
+            print(f"  {est:5.1f}s  {tag:7} {s.art.name:32} {s.caption[:60]}…" + (f"   [tts: {s.said[:50]}…]" if s.said != s.caption else ""))
         return
 
     key = api_key()
@@ -365,16 +395,27 @@ def build(slug, max_s=90, plan_only=False):
         s.speech = duration(s.mp3)
         s.length = LEAD_IN + s.speech + TAIL
 
-    # Fit the cap: keep the intro, the outro and the stories in order while they fit.
+    # Fit the cap: the intro and the outro always, then stories in priority order
+    # while they fit (the feature first, then one from each weekend day in turn, so a
+    # short cut still covers Thursday to Sunday). What's kept plays in day order.
     stories = [s for s in segs if s.kind == "story"]
     fixed = segs[0].length + segs[-1].length
     kept, t = [], fixed
-    for s in stories:
+    for s in reel_priority(stories):
         if t + s.length > max_s and len(kept) >= MIN_STORIES:
-            break
+            continue
         kept.append(s)
         t += s.length
+    kept = reel_order(kept, stories)
     dropped = len(stories) - len(kept)
+    if dropped:
+        # The written intro counts every story; a trimmed cut says how many it shows
+        # and where the rest are (Andy: say soknoear.com in the middle and at the end).
+        intro = f"{NUM[len(kept)]} of the {NUM.get(len(stories), len(stories))} things in South Knoxville this weekend. All of them at soknoear.com."
+        segs[0].caption, segs[0].said = intro, for_tts(intro, respell)
+        segs[0].mp3 = say(segs[0].said, key)
+        segs[0].speech = duration(segs[0].mp3)
+        segs[0].length = LEAD_IN + segs[0].speech + TAIL
     segs = [segs[0], *kept, segs[-1]]
     for i, s in enumerate(kept):
         s.counter = f"{i + 1} of {len(kept)}"
@@ -398,7 +439,7 @@ if __name__ == "__main__":
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     if not args:
         sys.exit(__doc__)
-    max_s = 120
+    max_s = REEL_MAX_S
     if "--max" in sys.argv:
         max_s = float(sys.argv[sys.argv.index("--max") + 1])
         args = [a for a in args if a != sys.argv[sys.argv.index("--max") + 1]]

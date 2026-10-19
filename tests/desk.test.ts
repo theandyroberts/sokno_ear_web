@@ -6,7 +6,7 @@ import path from "node:path";
 import Database from "better-sqlite3";
 import { getDeskWeek, isDeskToken, setDeskMark, isWeek } from "../lib/desk";
 import { deriveWeek, SCHEMA } from "../scripts/pub-status-lib.mjs";
-import { sync, mark, deskUrl, gatherFacts } from "../scripts/pub-status-store.mjs";
+import { sync, mark, deskUrl, deskTokenUrl, gatherFacts } from "../scripts/pub-status-store.mjs";
 
 const now = new Date("2026-09-25T12:00:00-04:00").getTime();
 const episode = { slug: "2026-09-23", date: "2026-09-23", number: 15, shortDate: "Sep 24–27", feature: { id: "jam", title: "End of summer jam" }, stories: [] };
@@ -116,9 +116,12 @@ describe("the store, against a repo on disk", () => {
     const merged = getDeskWeek(store, "2026-09-23", now);
     expect(merged.days.flatMap((d) => d.items).find((i) => i.id === "newsletter")).toMatchObject({ done: true, detail: "sent 7 of 7" });
     expect(merged.days.flatMap((d) => d.items).find((i) => i.id === "ig-post:jam")!.done).toBe(true);
-    const url = await deskUrl({ db: store });
+    // Since 2026-10-16 the dashboard just opens (Andy: a login is overkill); the old
+    // tokened /desk/<token> link still signs a device in and is still stable.
+    expect(await deskUrl({ db: store })).toBe("https://soknoear.com/dashboard");
+    const url = await deskTokenUrl({ db: store });
     expect(url).toMatch(/^https:\/\/soknoear\.com\/desk\/[\w-]{20,}$/);
-    expect(await deskUrl({ db: store })).toBe(url);
+    expect(await deskTokenUrl({ db: store })).toBe(url);
     expect(isDeskToken(store, url.split("/").pop()!)).toBe(true);
   });
 });

@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, it, expect } from "vitest";
-import { reelIsOn, buildReelPost, REEL_HOUR } from "../scripts/ig-reel.mjs";
+import { reelIsOn, buildReelPost, REEL_HOUR, reelMaxSeconds, REEL_SECONDS, SHORT_REEL_MOVE } from "../scripts/ig-reel.mjs";
 import { publishPost, userTagsFor, artistTagsOn, adIsOn, CONTAINER_WAIT, MAX_IMAGE_TAGS } from "../scripts/ig-container.mjs";
 
 const episode = { number: 18, shortDate: "Oct 15–18", date: "2026-10-14", feature: { title: "The Pink Cactus turns one" } };
@@ -11,6 +11,13 @@ describe("the weekly Reel", () => {
     expect(reelIsOn(undefined)).toBe(true);
     expect(reelIsOn([{ key: "weekly-reel", answer: "go", note: "no ad next week" }])).toBe(true);
     expect(reelIsOn([{ key: "weekly-reel", answer: "no" }])).toBe(false);
+  });
+
+  it("is cut to 45 seconds unless Andy said Don't to the shorter Reel", () => {
+    expect(reelMaxSeconds([])).toBe(45);
+    expect(reelMaxSeconds([{ key: SHORT_REEL_MOVE, answer: "go" }])).toBe(REEL_SECONDS.short);
+    expect(reelMaxSeconds([{ key: SHORT_REEL_MOVE, answer: "no" }])).toBe(REEL_SECONDS.full);
+    expect(reelMaxSeconds([{ key: "weekly-reel", answer: "no" }])).toBe(45);
   });
 
   it("is one queue entry on publish day at one o'clock, carrying the video and its poster", () => {

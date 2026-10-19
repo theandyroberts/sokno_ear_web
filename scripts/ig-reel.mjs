@@ -12,6 +12,14 @@
 export const REEL_MOVE = "weekly-reel";
 /** When the Reel posts on publish day: after the lead pair, in the hour that reads best for stills (13:00, 35 reach a post since Aug 11). */
 export const REEL_HOUR = 13;
+/** The cut's length. 45 s from No. 19 (the 116-second No. 18 cut read 19 people, 12 s
+ *  watched on average, 68% skipped); Andy's "Don't" on the dashboard keeps the full cut. */
+export const SHORT_REEL_MOVE = "shorter-reel";
+export const REEL_SECONDS = { short: 45, full: 120 };
+export function reelMaxSeconds(moves) {
+  const no = (moves ?? []).some((m) => m.key === SHORT_REEL_MOVE && m.answer === "no");
+  return no ? REEL_SECONDS.full : REEL_SECONDS.short;
+}
 
 /** Off only if Andy said no. No answer, "go", or no store at all means on. */
 export function reelIsOn(moves) {

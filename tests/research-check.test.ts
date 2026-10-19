@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import fs from "node:fs";
 import path from "node:path";
-import { checkResearch, districtTable } from "../scripts/research-lib.mjs";
+import { checkResearch, districtTable, ACT_GATE_FROM } from "../scripts/research-lib.mjs";
 
 const registry = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../content/sources.json"), "utf8"));
 const story = (id: string, label: string) => ({ id, label });
@@ -64,5 +64,39 @@ describe("checkResearch", () => {
     const base = { checked: allChecked(), leads: [hubLead] };
     expect(checkResearch(registry, base, thin).errors).toHaveLength(1);
     expect(checkResearch(registry, { ...base, quiet: { "Old Sevier": "district feed had only the gameday guide" } }, thin).errors).toEqual([]);
+  });
+});
+
+describe("the act in the picture (from No. 19)", () => {
+  const handles = { "fly-by-night": {}, ahun: {} };
+  const withActs = {
+    date: ACT_GATE_FROM,
+    feature: { id: "f", label: "Old Sevier", social: { igTags: ["fly-by-night", "ahun"], igAct: { key: "ahun" } } },
+    stories: [
+      { id: "a", label: "Old Sevier", social: { igTags: ["fly-by-night"], igAct: { none: "a trivia night, no act" } } },
+      { id: "b", label: "Old Sevier", social: { igTags: ["printshop"], igAct: { none: "a social run" } } },
+      { id: "c", label: "Ijams Nature Center", social: { igAct: { none: "a guided walk" } } },
+      { id: "d", label: "Kern's", social: { igAct: { none: "a market" } } },
+      { id: "e", label: "Suttree Landing", social: { igAct: { none: "a park clean-up" } } },
+    ],
+  };
+  const log = { checked: allChecked(), leads: [hubLead] };
+
+  it("passes when every story names its act or says there is none", () => {
+    expect(checkResearch(registry, log, withActs, handles).errors).toEqual([]);
+  });
+  it("refuses a story that says nothing about its act", () => {
+    const ep = { ...withActs, stories: [...withActs.stories, { id: "x", label: "Old Sevier", social: { igTags: ["fly-by-night"] } }] };
+    expect(checkResearch(registry, log, ep, handles).errors.join("\n")).toMatch(/x: no social.igAct/);
+  });
+  it("refuses an act that the picture would not tag, or that the registry does not know", () => {
+    const untagged = { ...withActs, feature: { ...withActs.feature, social: { igTags: ["fly-by-night"], igAct: { key: "ahun" } } } };
+    expect(checkResearch(registry, log, untagged, handles).errors.join("\n")).toMatch(/not in social.igTags/);
+    const unknown = { ...withActs, feature: { ...withActs.feature, social: { igTags: ["fly-by-night", "nobody"], igAct: { key: "nobody" } } } };
+    expect(checkResearch(registry, log, unknown, handles).errors.join("\n")).toMatch(/not in content\/ig-handles.json/);
+  });
+  it("leaves the weeks before the gate alone", () => {
+    const old = { ...balanced, date: "2026-10-14" };
+    expect(checkResearch(registry, log, old, handles).errors).toEqual([]);
   });
 });

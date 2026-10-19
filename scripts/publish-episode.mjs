@@ -70,6 +70,17 @@ const isPublished = fs.existsSync(path.join(EPISODES, `${slug}.json`));
 if (!isDraft && !isPublished) { console.error(`no episode ${slug} in drafts or episodes`); process.exit(1); }
 
 const step = (msg) => console.log(`\n━━ ${msg}`);
+/** Andy's answers from the dashboard, or [] when the desk's store isn't here. */
+async function deskMoves() {
+  try {
+    const { hasStore, openStore } = await import("./pub-status-store.mjs");
+    if (!hasStore()) return [];
+    const { listMoves } = await import("./pub-status-lib.mjs");
+    const db = await openStore();
+    try { return listMoves(db, { all: true }); } finally { db.close(); }
+  } catch (e) { console.warn(`  (could not read Andy's answers: ${e.message})`); return []; }
+}
+
 function run(cmd, args, opts = {}) {
   const shown = `${cmd} ${args.join(" ")}`;
   if (DRY) { console.log(`  [dry-run] ${shown}`); return ""; }
@@ -112,7 +123,11 @@ if (doIg) {
   run("python3", ["scripts/ig-promos.py", slug]);
   // The weekly Reel, cut from the audio briefing (needs public/audio/<slug>.mp3 and the
   // card above). A week without one still publishes; ig-queue.mjs says the Reel is missing.
-  try { run("python3", ["scripts/ig-reel.py", slug]); }
+  try {
+    // 45 seconds unless Andy answered "Don't" on the shorter-Reel move (scripts/ig-reel.mjs).
+    const { reelMaxSeconds } = await import("./ig-reel.mjs");
+    run("python3", ["scripts/ig-reel.py", slug, "--max", String(reelMaxSeconds(await deskMoves()))]);
+  }
   catch (e) { console.warn(`  (no Reel this week — ${String(e.message ?? e).split("\n")[0]})`); }
 }
 

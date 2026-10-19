@@ -25,7 +25,10 @@ export function districtTable(episode) {
  * @param {any} episode  the draft
  * @returns {{ errors: string[], warnings: string[], table: Record<string, number> }}
  */
-export function checkResearch(registry, log, episode) {
+/** Episodes from this date on must say who the act is (or that there is none). */
+export const ACT_GATE_FROM = "2026-10-21";
+
+export function checkResearch(registry, log, episode, handles = null) {
   const errors = [];
   const warnings = [];
   const rules = registry._rules ?? {};
@@ -79,6 +82,24 @@ export function checkResearch(registry, log, episode) {
     const why = log.quiet?.["Old Sevier"];
     if (why) warnings.push(`Old Sevier has ${oldSevier} stories (logged as a quiet week: ${why})`);
     else errors.push(`Old Sevier has ${oldSevier} stories; it needs at least ${rules.oldSevierMinStories}, or a reason under "quiet" in the log`);
+  }
+
+  // 4. Every story names its act, or says there is none (Andy, 2026-10-09: "tags the
+  //    venue and artist"). No. 18 ran the artist-tag code with no artist in any story:
+  //    the rule was in the task and nothing refused a draft that skipped it. This does.
+  if (String(episode.date ?? "") >= ACT_GATE_FROM) {
+    for (const s of allStories(episode)) {
+      const social = s.social ?? {};
+      const act = social.igAct;
+      if (!act || typeof act !== "object") {
+        errors.push(`${s.id}: no social.igAct — name the act's handle key ({ key }) or say why there is none ({ none: "…" })`);
+      } else if (act.key) {
+        if (!(social.igTags ?? []).includes(act.key)) errors.push(`${s.id}: the act "${act.key}" is not in social.igTags, so the picture won't tag them`);
+        if (handles && !handles[act.key]) errors.push(`${s.id}: the act "${act.key}" is not in content/ig-handles.json — add it, verified from the venue's post or the act's own profile`);
+      } else if (!act.none || String(act.none).trim().length < 3) {
+        errors.push(`${s.id}: social.igAct needs a key or a reason under "none"`);
+      }
+    }
   }
 
   return { errors, warnings, table };

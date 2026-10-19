@@ -18,8 +18,9 @@ const episode = read(path.join(root, "content/drafts", `${slug}.json`)) ?? read(
 if (!episode) { console.error(`no episode ${slug} in content/drafts or content/episodes`); process.exit(1); }
 const registry = read(path.join(root, "content/sources.json"));
 const log = read(path.join(root, "content/research", `${slug}.json`));
+const handles = read(path.join(root, "content/ig-handles.json"))?.handles ?? null;
 
-const { errors, warnings, table } = checkResearch(registry, log, episode);
+const { errors, warnings, table } = checkResearch(registry, log, episode, handles);
 console.log(`research check · ${slug} · No. ${episode.number}`);
 console.log("stories by place: " + Object.entries(table).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${k} ${v}`).join(" · "));
 if (log) console.log(`sources checked: ${Object.keys(log.checked ?? {}).length} of ${registry.sources.filter((s) => s.weekly !== false).length} · leads: ${(log.leads ?? []).length}`);

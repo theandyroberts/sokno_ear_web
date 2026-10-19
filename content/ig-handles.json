@@ -153,6 +153,13 @@
       "name": "Old Sevier Market",
       "verified": "tagged by the Old Sevier District's own October can't-miss post (2026-10-01); live profile read 2026-10-05: 'Old Sevier Market — Grocery Store Coming Soon To Sevier Ave', linktr.ee/oldseviermarket; the store's site links its socials",
       "confidence": "high"
+    },
+    "ahun": {
+      "handle": "@ahungryhungarian",
+      "name": "Ahun (DJ, the Disco Demon night at Fly by Night)",
+      "kind": "act",
+      "verified": "his own post announcing Disco Demon at Fly by Night, Oct 15 (the source of No. 18's story): instagram.com/ahungryhungarian/p/DeR4zTbOELX/",
+      "confidence": "high"
     }
   }
 }

@@ -1,0 +1,505 @@
+{
+ "run": 12,
+ "date": "2026-10-19",
+ "next": "2026-10-26",
+ "episode": 18,
+ "kicker": "Week of Oct 14 · episode No. 18 · read Oct 19",
+ "railKind": "195 followers · 38 reach a post",
+ "headline": "Two posts over a hundred, 675 all week. The Reel went nowhere.",
+ "verdicts": [
+  {
+   "label": "Growth",
+   "tone": "ok",
+   "text": "+39 followers, 156 to 195"
+  },
+  {
+   "label": "Reach",
+   "tone": "warn",
+   "text": "675 all week, was 926"
+  },
+  {
+   "label": "The Reel",
+   "tone": "bad",
+   "text": "19 people, 68% skipped it"
+  },
+  {
+   "label": "Pipeline",
+   "tone": "ok",
+   "text": "18 of 18 posted, no retries"
+  }
+ ],
+ "tiles": [
+  {
+   "label": "Followers",
+   "value": "195",
+   "good": "up",
+   "series": [
+    46,
+    49,
+    59,
+    66,
+    74,
+    86,
+    95,
+    100,
+    101,
+    111,
+    156,
+    195
+   ],
+   "vsLast": {
+    "dir": "up",
+    "tone": "ok",
+    "text": "+39, second-best week ever"
+   },
+   "vsBase": "46 on Aug 11"
+  },
+  {
+   "label": "Reach per post",
+   "value": "38",
+   "good": "up",
+   "series": [
+    16.1,
+    10.5,
+    10.5,
+    14.2,
+    10.4,
+    8.2,
+    8.1,
+    6.8,
+    7.8,
+    4.9,
+    5.9,
+    54.5,
+    37.5
+   ],
+   "vsLast": {
+    "dir": "down",
+    "tone": "warn",
+    "text": "54 last week, same age"
+   },
+   "vsBase": "10.5 in early Aug"
+  },
+  {
+   "label": "Reach, whole week",
+   "value": "675",
+   "good": "up",
+   "series": [
+    113,
+    84,
+    63,
+    128,
+    104,
+    106,
+    89,
+    41,
+    101,
+    69,
+    47,
+    926,
+    675
+   ],
+   "vsLast": {
+    "dir": "down",
+    "tone": "warn",
+    "text": "926 last week; two posts over 100"
+   },
+   "vsBase": "best before October was 128"
+  },
+  {
+   "label": "People reached this week",
+   "value": "517",
+   "good": "up",
+   "series": [
+    19,
+    11,
+    21,
+    25,
+    20,
+    686,
+    517
+   ],
+   "vsLast": {
+    "dir": "down",
+    "tone": "warn",
+    "text": "476 of them don't follow us"
+   },
+   "vsBase": "19 a month ago"
+  },
+  {
+   "label": "New people reached · 28 days",
+   "value": "1,059",
+   "good": "up",
+   "series": [
+    10,
+    10,
+    6,
+    9,
+    12,
+    13,
+    675,
+    1059
+   ],
+   "vsLast": {
+    "dir": "up",
+    "tone": "ok",
+    "text": "was 675 last Monday"
+   },
+   "vsBase": "10 a month ago"
+  }
+ ],
+ "tilesNote": "Lines run from July to now. Reach per post is read at the same age as last week's was (one to five days).",
+ "week": [
+  {
+   "id": "weekend-roundup",
+   "day": "Wed",
+   "time": "09:16",
+   "reach": 68,
+   "title": "Weekend roundup · 9 stories",
+   "img": "/insta/img/soknoear/2026-10-14_episode-drop.jpg",
+   "group": "lead"
+  },
+  {
+   "id": "kerns-fall-fest",
+   "day": "Wed",
+   "time": "09:30",
+   "reach": 285,
+   "title": "Kern's Fall Festival",
+   "img": "/insta/img/soknoear/2026-10-14_kerns-fall-fest.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "reel",
+   "day": "Wed",
+   "time": "13:00",
+   "reach": 19,
+   "title": "The Reel · 18 stories, 116 seconds",
+   "img": "/insta/img/soknoear/2026-10-14_reel.jpg",
+   "group": "lead"
+  },
+  {
+   "id": "ktc-run-printshop",
+   "day": "Thu",
+   "time": "15:00",
+   "reach": 119,
+   "title": "Social run from Printshop",
+   "img": "/insta/img/soknoear/2026-10-14_ktc-run-printshop.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "disco-demon-fbn",
+   "day": "Thu",
+   "time": "18:00",
+   "reach": 11,
+   "title": "Disco Demon at Fly by Night",
+   "img": "/insta/img/soknoear/2026-10-14_disco-demon-fbn.jpg"
+  },
+  {
+   "id": "trailhead-crawdaddy",
+   "day": "Fri",
+   "time": "10:00",
+   "reach": 6,
+   "title": "Crawdaddy Jones at Trailhead",
+   "img": "/insta/img/soknoear/2026-10-14_trailhead-crawdaddy.jpg"
+  },
+  {
+   "id": "starlight-paddle",
+   "day": "Fri",
+   "time": "12:00",
+   "reach": 15,
+   "title": "Starlight Paddle at Ijams",
+   "img": "/insta/img/soknoear/2026-10-14_starlight-paddle.jpg"
+  },
+  {
+   "id": "kerns-hoedown-social",
+   "day": "Fri",
+   "time": "14:00",
+   "reach": 14,
+   "title": "Ho'Down Social at Kern's",
+   "img": "/insta/img/soknoear/2026-10-14_kerns-hoedown-social.jpg"
+  },
+  {
+   "id": "goodbye-june-808",
+   "day": "Fri",
+   "time": "16:00",
+   "reach": 17,
+   "title": "Goodbye June at The 808",
+   "img": "/insta/img/soknoear/2026-10-14_goodbye-june-808.jpg"
+  },
+  {
+   "id": "catalyst-adaptive-ride",
+   "day": "Fri",
+   "time": "19:00",
+   "reach": 11,
+   "title": "Catalyst adaptive ride",
+   "img": "/insta/img/soknoear/2026-10-14_catalyst-adaptive-ride.jpg"
+  },
+  {
+   "id": "all-my-exes-808",
+   "day": "Sat",
+   "time": "11:00",
+   "reach": 11,
+   "title": "All My Exes at The 808",
+   "img": "/insta/img/soknoear/2026-10-14_all-my-exes-808.jpg"
+  },
+  {
+   "id": "scruffycat-ride",
+   "day": "Sat",
+   "time": "13:00",
+   "reach": 13,
+   "title": "ScruffyCat 100-mile ride",
+   "img": "/insta/img/soknoear/2026-10-14_scruffycat-ride.jpg"
+  },
+  {
+   "id": "quiet-entertainer-fbn",
+   "day": "Sat",
+   "time": "15:00",
+   "reach": 8,
+   "title": "Quiet Entertainer at Fly by Night",
+   "img": "/insta/img/soknoear/2026-10-14_quiet-entertainer-fbn.jpg"
+  },
+  {
+   "id": "first-bass-pink-cactus",
+   "day": "Sat",
+   "time": "17:00",
+   "reach": 10,
+   "title": "First Bass at the Pink Cactus",
+   "img": "/insta/img/soknoear/2026-10-14_first-bass-pink-cactus.jpg"
+  },
+  {
+   "id": "fall-fungi-id",
+   "day": "Sat",
+   "time": "21:00",
+   "reach": 21,
+   "title": "Fungi walk at Ijams",
+   "img": "/insta/img/soknoear/2026-10-14_fall-fungi-id.jpg"
+  },
+  {
+   "id": "pup-o-ween-hiwire",
+   "day": "Sun",
+   "time": "09:00",
+   "reach": 11,
+   "title": "Pup-O-Ween at Hi-Wire",
+   "img": "/insta/img/soknoear/2026-10-14_pup-o-ween-hiwire.jpg"
+  },
+  {
+   "id": "bluegrass-jam-quarry",
+   "day": "Sun",
+   "time": "11:00",
+   "reach": 29,
+   "title": "Bluegrass jam at Mead's Quarry",
+   "img": "/insta/img/soknoear/2026-10-14_bluegrass-jam-quarry.jpg"
+  },
+  {
+   "id": "trailhead-greg-horne",
+   "day": "Sun",
+   "time": "13:00",
+   "reach": 7,
+   "title": "Greg Horne at Trailhead",
+   "img": "/insta/img/soknoear/2026-10-14_trailhead-greg-horne.jpg"
+  }
+ ],
+ "weekLegend": [
+  {
+   "group": "hot",
+   "label": "Over a hundred people"
+  },
+  {
+   "group": "lead",
+   "label": "The roundup and the Reel"
+  },
+  {
+   "group": "plain",
+   "label": "Single posts, the venue tagged in the image"
+  }
+ ],
+ "worked": [
+  {
+   "title": "Kern's Fall Festival",
+   "reach": 285,
+   "img": "/insta/img/soknoear/2026-10-14_kerns-fall-fest.jpg",
+   "why": "Kern's put it in its own story: five shares, the most ever. Free, Sunday, the feature."
+  },
+  {
+   "title": "Social run from Printshop",
+   "reach": 119,
+   "img": "/insta/img/soknoear/2026-10-14_ktc-run-printshop.jpg",
+   "why": "Printshop passed it on again, two for two. A Thursday run with dollar wings."
+  },
+  {
+   "title": "Weekend roundup",
+   "reach": 68,
+   "img": "/insta/img/soknoear/2026-10-14_episode-drop.jpg",
+   "why": "Its best ever, from 14. Five profile visits and a follow. Nine venues in the caption."
+  }
+ ],
+ "didnt": [
+  {
+   "title": "The Reel",
+   "reach": 19,
+   "img": "/insta/img/soknoear/2026-10-14_reel.jpg",
+   "why": "116 seconds. People watched twelve on average and 68% skipped it. Cut to 45 from Wednesday."
+  },
+  {
+   "title": "Crawdaddy Jones at Trailhead",
+   "reach": 6,
+   "img": "/insta/img/soknoear/2026-10-14_trailhead-crawdaddy.jpg",
+   "why": "Trailhead's five posts have read 6 to 16. Tagged, written to, Friday at ten."
+  },
+  {
+   "title": "Quiet Entertainer at Fly by Night",
+   "reach": 8,
+   "img": "/insta/img/soknoear/2026-10-14_quiet-entertainer-fbn.jpg",
+   "why": "Fly by Night didn't pass this one on. Its posts read 293, or under 25."
+  }
+ ],
+ "learned": {
+  "title": "A post travels when the venue passes it on. Nothing else moves it",
+  "note": "Average reach a post over the last two weeks, 35 posts, by what happened after it went up. A share is the venue putting it in its own story.",
+  "rows": [
+   {
+    "label": "The venue shared it",
+    "value": 153,
+    "note": "8 posts · six of them over a hundred",
+    "tone": "ok"
+   },
+   {
+    "label": "Tagged in the picture, not shared",
+    "value": 19,
+    "note": "20 posts · the band the account has always lived in",
+    "tone": "ink"
+   },
+   {
+    "label": "The roundup, the ad, the Reel",
+    "value": 34,
+    "note": "4 posts",
+    "tone": "ink"
+   },
+   {
+    "label": "Nobody to tag",
+    "value": 13,
+    "note": "3 posts",
+    "tone": "bad"
+   }
+  ]
+ },
+ "dials": [
+  {
+   "label": "Posts delivered",
+   "value": 18,
+   "max": 18,
+   "display": "18/18",
+   "note": "0 failed, 0 retries",
+   "tone": "ok"
+  },
+  {
+   "label": "Followers who saw a post",
+   "value": 24,
+   "max": 100,
+   "display": "24%",
+   "note": "46 of 195, this week",
+   "tone": "warn"
+  },
+  {
+   "label": "Reach that was new people",
+   "value": 95,
+   "max": 100,
+   "display": "95%",
+   "note": "1,059 of 1,114, in 28 days",
+   "tone": "ok"
+  },
+  {
+   "label": "Of the Reel that got watched",
+   "value": 10,
+   "max": 100,
+   "display": "10%",
+   "note": "12 of 116 seconds, on average",
+   "tone": "bad"
+  }
+ ],
+ "bestEver": [
+  {
+   "title": "Feral Kitty at Fly by Night",
+   "reach": 293,
+   "img": "/insta/img/soknoear/2026-10-07_feral-kitty-release.jpg",
+   "why": "A release show at a cocktail lounge. Oct 9."
+  },
+  {
+   "title": "Kern's Fall Festival",
+   "reach": 285,
+   "img": "/insta/img/soknoear/2026-10-14_kerns-fall-fest.jpg",
+   "why": "A free fair on the bakery lawn. Oct 14."
+  },
+  {
+   "title": "Vegan barbecue at Printshop",
+   "reach": 237,
+   "img": "/insta/img/soknoear/2026-10-07_vegan-bbq-printshop.jpg",
+   "why": "A pop-up at a brewery. Oct 11."
+  },
+  {
+   "title": "Stand-up at the Pink Cactus",
+   "reach": 129,
+   "img": "/insta/img/soknoear/2026-10-07_after-brunch-special.jpg",
+   "why": "Six comics for five dollars. Oct 10."
+  },
+  {
+   "title": "Social run from Printshop",
+   "reach": 119,
+   "img": "/insta/img/soknoear/2026-10-14_ktc-run-printshop.jpg",
+   "why": "Three miles and dollar wings. Oct 15."
+  },
+  {
+   "title": "DJ Goblin at Alliance",
+   "reach": 107,
+   "img": "/insta/img/soknoear/2026-10-07_dj-goblin-alliance.jpg",
+   "why": "A DJ night at a brewery. Oct 8."
+  }
+ ],
+ "moves": [
+  {
+   "key": "shorter-reel",
+   "owner": "claude",
+   "title": "The Reel is cut to 45 seconds",
+   "why": "The first Reel reached 19 people and they watched twelve seconds of 116. A 45-second cut, the feature and one thing a day, gives Instagram something people finish.",
+   "plan": "From Wed Oct 21 the Reel is the feature and one thing a day, Thursday to Sunday, in 45 seconds; the intro says the rest are at soknoear.com. Say don't and it stays the full cut.",
+   "due": "2026-10-21",
+   "sample": {
+    "video": "/insta/img/soknoear/2026-10-19_reel-no18-45s.mp4",
+    "poster": "/insta/img/soknoear/2026-10-19_reel-no18-45s.jpg"
+   }
+  },
+  {
+   "key": "tag-the-artist",
+   "owner": "claude",
+   "title": "Tag the artist in the picture too",
+   "why": "You said go, but Wednesday tagged only venues: the draft never named an act. The draft is refused until every story names its act or says there's none.",
+   "plan": "Wednesday's posts tagged nobody but venues: the draft never carried an act. From the No. 19 draft (Tue Oct 20) every story names its act's handle or says there is none, or the draft is refused. Say don't and it is the venue alone.",
+   "due": "2026-10-21"
+  },
+  {
+   "key": "call-the-ear-ad",
+   "owner": "andy",
+   "title": "The Call-the-Ear ad is out until the phone line changes",
+   "why": "You said no ad while you change the phone-in system. It sat out this week. Only you can change the line, so this one stays yours.",
+   "plan": "Held from Wed Oct 14 while you change the phone-in system. Mark Done when the new line works and the ad comes back the next Wednesday on its own."
+  }
+ ],
+ "done": [
+  {
+   "title": "Eighteen of eighteen posted, no retries.",
+   "text": "The most in a week again. The ad sat out as you asked. First notes went to The 808 and Hi-Wire on Wednesday."
+  },
+  {
+   "title": "The first Reel went out Wednesday at one.",
+   "text": "116 seconds, 18 stories. It reached 19 people. The 45-second cut above is the fix; the voice lines are already paid for."
+  },
+  {
+   "title": "No. 17 kept growing.",
+   "text": "926 last Monday, 1,093 now. A loud week lifts the posts behind it; followers who saw a post went from 23% to 24%."
+  },
+  {
+   "title": "The roundup read 68, its best.",
+   "text": "It read 14 and 32 before. Five profile visits and one follow came from it. Still no saves, from anyone, ever."
+  }
+ ]
+}

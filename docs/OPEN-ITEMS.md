@@ -33,54 +33,54 @@ tickets the Instagram reviews used until 2026-09-28 (A1–A16) meant nothing to 
 retired; where an old one appears below, its name is beside it. Things Andy can answer are
 **moves** on the dashboard (`node scripts/pub-status.mjs moves`).
 
-### 1. The first Reel goes out Wednesday — read it Oct 19
-**Opened:** 2026-09-28 · **Age: 14 days** (as of 2026-10-12) · **Claude's** · **Move:** `weekly-reel` · **Due: Wed 2026-10-14**
+### 1. The Reel is cut to 45 seconds — first short cut Wed Oct 21, read it Oct 26
+**Opened:** 2026-10-19 · **Claude's** · **Move:** `shorter-reel` · **Due: Wed 2026-10-21**
 
-**2026-10-12:** built and deployed (`2010aed`): `ig-container.mjs` publishes a `REELS`
-container with a six-minute processing wait; `ig-reel.mjs` is the queue entry, publish day
-13:00; `ig-queue.mjs` adds it unless Andy answers "Don't". Proved against the live API: a
-container for the No. 17 mp4 reached `FINISHED` in 30 s and was left unpublished.
-**2026-10-13:** Andy called the first cut (the briefing's open + feature over one banner)
-"static and boring" and asked for "a quick quip about each of the featured events" with the
-screen changing to each one's artwork and info. Recut that night: `scripts/ig-reel.py` is now
-a montage — one quip a story in the briefing's voice (one ElevenLabs call per line, cached),
-the banner pushing in, when/where under it, a counter. Quips come from
-`content/reel-scripts/<slug>.json`, which the Tuesday task now writes (step 3a); No. 17's and
-No. 18's are written. No. 17: 16 stories, 99 s, on the dashboard as run 11's sample. Andy
-answered **go** on 2026-10-09. The move stays open until the first one has posted and been
-read. Recipe and measures in `docs/ig-reviews/2026-10-12.md`.
+The first Reel (No. 18, 116 s, 18 stories) posted Oct 14 at 1 PM as designed and read **19
+reach, 21 views, 11.8 s average watch, 68.4% skip rate**, the lowest post of the week bar
+three. Shipped this run: `scripts/ig-reel.py` caps at 45 s by default, taking the feature
+then one story a day Thu–Sun (`reel_priority`), playing them in day order, and re-saying the
+intro as "Five of the eighteen things … all of them at soknoear.com"; `reelMaxSeconds(moves)`
+in `ig-reel.mjs` makes Andy's "Don't" the full 120 s cut, read by `publish-episode.mjs`. The
+No. 18 cut at 45 s is on the dashboard as the sample. Recipe and numbers in
+`docs/ig-reviews/2026-10-19.md`.
 
-*To do, Mon Oct 19:* confirm `ig-post:reel` ticked on the desk; its reach, views, follows
-against the week's stills; which insight metrics the API returns for a Reel (`plays`?).
-A "Don't" from Andy closes this item instead.
+*Measures, Oct 26:* reach against 19 and against the week's stills; average watch over 20 s;
+skip rate under 50%; a follow. The move closes when the short cut has posted and been read.
 
-### 2. Tag the artist in the picture too — live Wednesday, read it Oct 19
-**Opened:** 2026-10-12 · **Claude's** · **Move:** `tag-the-artist` · **Due: Wed 2026-10-14**
+### 2. Tag the artist in the picture too — now a gate on the draft, read it Oct 26
+**Opened:** 2026-10-12 · **Age: 7 days** (as of 2026-10-19) · **Claude's** · **Move:** `tag-the-artist` · **Due: Wed 2026-10-21**
 
-Andy, 2026-10-09: "tags the venue and artist." The No. 17 numbers say the same: the four
+**2026-10-19:** the measure read **0 of 9**: every No. 18 `userTags` held the venue alone. The
+code was right (`userTagsFor`, everyone on); the Tuesday draft task ran with step 1h in it and
+added no act handle to any story or to the registry, though the Disco Demon DJ's own post
+(`@ahungryhungarian`) was that story's first source. Shipped: `social.igAct` is required from
+episodes dated 2026-10-21 — `{ key }` (also in `igTags`, also in `content/ig-handles.json`) or
+`{ none: "why" }` — and `scripts/research-check.mjs` refuses a draft without it (check 4 in
+`research-lib.mjs`, four tests). `ahun` → `@ahungryhungarian` is the first act in the registry.
+The Tuesday task's step 1h names the field.
+
+Andy, 2026-10-09: "tags the venue and artist." The No. 17 numbers said the same: the four
 posts that reached 103–286 people were the ones where an account with its own crowd was
-tagged in the image (Fly by Night, Printshop, the Pink Cactus, Alliance); the band, the DJ
-and the comics those posts named had handles the drip never carried.
+tagged in the image.
 
-Shipped 2026-10-12: `userTagsFor` tags every verified handle a story names, venue first,
-spread along the band (`artistTagsOn`; "Don't" = venue alone). The Tuesday draft task
-(step 1h) now finds and verifies the act's handle and adds it to `content/ig-handles.json`
-and `social.igTags` after the venue.
-
-*Measures, Oct 19:* every No. 18 story with a named act carries its handle in `userTags`;
-posts beating 38 (this week's fifth-best); window non-follower reach above 100 without one
-post over 200. *Risk:* an act's handle guessed from a name tags a stranger — the registry
-rule (confirmed from the venue's post or the act's profile) is the guard.
+*Measures, Oct 26:* every No. 19 story has `igAct`; how many carry a key; whether a post with
+an act tagged in the image beats the tagged-not-shared band (19 over the last two weeks).
+*Risk:* an act's handle guessed from a name tags a stranger — the registry rule (confirmed from
+the venue's post or the act's profile) is the guard, and the check refuses a key the registry
+doesn't know.
 
 ### 3. The Call-the-Ear ad is held until the phone line changes
-**Opened:** 2026-10-12 · **Andy's** · **Move:** `call-the-ear-ad` · not blocking — no push
+**Opened:** 2026-10-12 · **Age: 7 days** (as of 2026-10-19) · **Andy's** · **Move:** `call-the-ear-ad` · not blocking — no push
+
+**2026-10-19:** held through No. 18 as asked (`adIsOn(moves)`); no answer yet. The drip lost
+nothing (the ad read 11.9 a post lifetime).
 
 Andy, 2026-10-09: "Let's not post the 'know the future' post next week. I need to change the
-phone-in system." The ad (`THE EAR SEES THE FUTURE`, 865-252-6500) is out of the No. 18 drip
-and stays out while the move is open: `adIsOn(moves)` in `ig-container.mjs`, read by
-`ig-queue.mjs` at staging. His **Done** on the dashboard brings it back the next Wednesday
-with no run in between. Physically his: the phone system. When the ad is back, close this
-with the date and what the new line is.
+phone-in system." The ad (`THE EAR SEES THE FUTURE`, 865-252-6500) stays out while the move is
+open: `ig-queue.mjs` reads it at staging. His **Done** on the dashboard brings it back the next
+Wednesday with no run in between. Physically his: the phone system. When the ad is back, close
+this with the date and what the new line is.
 
 ### 4. Search Console is unreadable from the Mac mini
 **Opened:** 2026-08-15 · **Age: 61 days** (as of 2026-10-15) · **Missed 4 of 5 SEO checks**
@@ -111,6 +111,7 @@ fires (1st and 15th), or open Search Console and paste the Page indexing numbers
 
 | Item | Opened | Closed | What fixed it |
 | --- | --- | --- | --- |
+| The first Reel goes out Wednesday (built Oct 12, recut Oct 13 as a quip a story) | 2026-09-28 | 2026-10-19 | Posted Oct 14 at 1 PM with No. 18 through the REELS container path, first time, no retry. Read Oct 19: 19 reach, 11.8 s watched of 116, 68% skipped — the cut was too long, so it is 45 s from Oct 21 (item 1 above); `docs/ig-reviews/2026-10-19.md` |
 | Fewer posts reached fewer people — the roundup week (47 reach on 8 posts, 1 non-follower) and its fixes | 2026-10-05 | 2026-10-12 | Every story back to a single post and every venue post tagged in the image, both live Oct 7. No. 17: 17 posts, 926 reach, lowest 9, 660 non-followers, 14 of 14 tagged, the roundup read 14 (needed 6 — it stays). Every measure cleared; `docs/ig-reviews/2026-10-12.md` |
 | **Venue outreach**: the venues had never heard from the Ear (carried through 9 Instagram reviews, 48 days at the last) | 2026-08-11 | 2026-10-03 | Andy sent the five first notes himself: Legacy Parks Sep 29, Earl's, Ijams and Kern's Oct 1, Puckers Oct 3 (Instagram DM). `content/contacts.json` records each as `introduced`; `scripts/venue-notify.mjs` sends their weekly note itself from the No. 17 publish. Still to come: the first reshare |
 | The image-tag test (`user_tags`, 50/50 by story id, Sep 16 – Oct 4) | 2026-09-07 | 2026-10-05 | Decided: tagged 9.0 against untagged 6.6 reach a post over three weeks, ahead every week; every venue post is now tagged in the image (`userTagsFor`). The split is kept behind Andy's "Don't" |
