@@ -70,19 +70,7 @@ an act tagged in the image beats the tagged-not-shared band (19 over the last tw
 the venue's post or the act's profile) is the guard, and the check refuses a key the registry
 doesn't know.
 
-### 3. The Call-the-Ear ad is held until the phone line changes
-**Opened:** 2026-10-12 · **Age: 7 days** (as of 2026-10-19) · **Andy's** · **Move:** `call-the-ear-ad` · not blocking — no push
-
-**2026-10-19:** held through No. 18 as asked (`adIsOn(moves)`); no answer yet. The drip lost
-nothing (the ad read 11.9 a post lifetime).
-
-Andy, 2026-10-09: "Let's not post the 'know the future' post next week. I need to change the
-phone-in system." The ad (`THE EAR SEES THE FUTURE`, 865-252-6500) stays out while the move is
-open: `ig-queue.mjs` reads it at staging. His **Done** on the dashboard brings it back the next
-Wednesday with no run in between. Physically his: the phone system. When the ad is back, close
-this with the date and what the new line is.
-
-### 4. Search Console is unreadable from the Mac mini
+### 3. Search Console is unreadable from the Mac mini
 **Opened:** 2026-08-15 · **Age: 61 days** (as of 2026-10-15) · **Missed 4 of 5 SEO checks**
 · **Needs Andy** · not blocking — no push (the site-side half covers breakage; this only costs the crawl numbers)
 
@@ -111,6 +99,7 @@ fires (1st and 15th), or open Search Console and paste the Page indexing numbers
 
 | Item | Opened | Closed | What fixed it |
 | --- | --- | --- | --- |
+| The Call-the-Ear ad, held while the phone line changes (was a move and an open item) | 2026-10-12 | 2026-10-19 | Not an open item: Andy decided it once (Oct 9) and said so again Oct 19 when the review asked. `AD_HELD = true` in `scripts/ig-container.mjs` keeps the ad out of every staging until he says turn it back on; the move is closed; no review asks about it |
 | The first Reel goes out Wednesday (built Oct 12, recut Oct 13 as a quip a story) | 2026-09-28 | 2026-10-19 | Posted Oct 14 at 1 PM with No. 18 through the REELS container path, first time, no retry. Read Oct 19: 19 reach, 11.8 s watched of 116, 68% skipped — the cut was too long, so it is 45 s from Oct 21 (item 1 above); `docs/ig-reviews/2026-10-19.md` |
 | Fewer posts reached fewer people — the roundup week (47 reach on 8 posts, 1 non-follower) and its fixes | 2026-10-05 | 2026-10-12 | Every story back to a single post and every venue post tagged in the image, both live Oct 7. No. 17: 17 posts, 926 reach, lowest 9, 660 non-followers, 14 of 14 tagged, the roundup read 14 (needed 6 — it stays). Every measure cleared; `docs/ig-reviews/2026-10-12.md` |
 | **Venue outreach**: the venues had never heard from the Ear (carried through 9 Instagram reviews, 48 days at the last) | 2026-08-11 | 2026-10-03 | Andy sent the five first notes himself: Legacy Parks Sep 29, Earl's, Ijams and Kern's Oct 1, Puckers Oct 3 (Instagram DM). `content/contacts.json` records each as `introduced`; `scripts/venue-notify.mjs` sends their weekly note itself from the No. 17 publish. Still to come: the first reshare |

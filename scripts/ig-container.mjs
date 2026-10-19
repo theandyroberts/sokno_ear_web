@@ -25,8 +25,15 @@ export const USER_TAG_SPOT = { x: 0.5, y: 0.88 };
 export const TAG_EVERY_POST_MOVE = "tag-every-post";
 /** The move that put the artist in the picture too: "Tag the artist in the picture too" (2026-10-12). */
 export const TAG_THE_ARTIST_MOVE = "tag-the-artist";
-/** The move that holds the weekly ad while the phone line changes: "The Call-the-Ear ad is out" (2026-10-12). */
+/** The move that first held the weekly ad (2026-10-12); kept so an old answer still reads. */
 export const AD_MOVE = "call-the-ear-ad";
+/**
+ * The Call-the-Ear ad is OFF until Andy says to turn it back on. His decision, made once
+ * (2026-10-09: "I need to change the phone-in system"; 2026-10-19: "keep it off until I
+ * tell you to turn it back on"). It is not a move, not a question, and no review asks
+ * about it. When he says so, flip this to false and the ad is back on the next staging.
+ */
+export const AD_HELD = true;
 /** Instagram allows 20 tags on an image; a banner never needs more than this. */
 export const MAX_IMAGE_TAGS = 5;
 
@@ -46,7 +53,8 @@ export function artistTagsOn(moves) {
  * the hold is Andy's move `call-the-ear-ad`, and his "Done" on it brings the ad back
  * the next Wednesday with no run in between. No move, or a closed one, means on.
  */
-export function adIsOn(moves) {
+export function adIsOn(moves, { held = AD_HELD } = {}) {
+  if (held) return false;
   return !(moves ?? []).some((m) => m.key === AD_MOVE && !m.closedAt && m.answer !== "done");
 }
 

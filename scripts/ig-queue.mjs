@@ -398,7 +398,7 @@ const PROMOS = [
     ].join("\n"),
   },
 ];
-if (!adIsOn(moves)) warnings.push("the Call-the-Ear ad is held — Andy is changing the phone-in system (move call-the-ear-ad; his Done brings it back)");
+if (!adIsOn(moves)) warnings.push("the Call-the-Ear ad is off until Andy says otherwise (AD_HELD in ig-container.mjs)");
 for (const pr of PROMOS) {
   const rel = `/assets/ig/${episode.slug}/${pr.id}.jpg`;
   if (!fs.existsSync(path.join(process.cwd(), "public", rel))) continue;

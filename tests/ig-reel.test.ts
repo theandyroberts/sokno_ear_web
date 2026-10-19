@@ -92,13 +92,18 @@ describe("the artist in the picture too", () => {
 });
 
 describe("the Call-the-Ear ad while the phone line changes", () => {
+  const on = { held: false };
   it("runs when there is no hold, and once Andy marks the hold Done or it is closed", () => {
-    expect(adIsOn([])).toBe(true);
-    expect(adIsOn([{ key: "call-the-ear-ad", answer: "done" }])).toBe(true);
-    expect(adIsOn([{ key: "call-the-ear-ad", answer: null, closedAt: "2026-11-01T00:00:00Z" }])).toBe(true);
+    // Andy's standing decision (2026-10-19): the ad stays off until he says otherwise.
+    expect(adIsOn([])).toBe(false);
+    expect(adIsOn([{ key: "call-the-ear-ad", answer: "done" }])).toBe(false);
+    // Once AD_HELD is flipped, the old move's answer still reads.
+    expect(adIsOn([], on)).toBe(true);
+    expect(adIsOn([{ key: "call-the-ear-ad", answer: "done" }], on)).toBe(true);
+    expect(adIsOn([{ key: "call-the-ear-ad", answer: null, closedAt: "2026-11-01T00:00:00Z" }], on)).toBe(true);
   });
   it("is held while the hold is open and unanswered, or answered Not this week", () => {
-    expect(adIsOn([{ key: "call-the-ear-ad", answer: null }])).toBe(false);
-    expect(adIsOn([{ key: "call-the-ear-ad", answer: "later" }])).toBe(false);
+    expect(adIsOn([{ key: "call-the-ear-ad", answer: null }], on)).toBe(false);
+    expect(adIsOn([{ key: "call-the-ear-ad", answer: "later" }], on)).toBe(false);
   });
 });
