@@ -160,6 +160,55 @@
       "kind": "act",
       "verified": "his own post announcing Disco Demon at Fly by Night, Oct 15 (the source of No. 18's story): instagram.com/ahungryhungarian/p/DeR4zTbOELX/",
       "confidence": "high"
+    },
+    "lonetones": {
+      "handle": "@thelonetones",
+      "name": "The Lonetones",
+      "kind": "act",
+      "verified": "live profile read 2026-10-19: 'The Lonetones — Mountain Indie Folk-Pop from Knoxville, TN', links thelonetones.com; named on Trailhead's own October flyer (instagram.com/p/Dd92UvFBnV5/)",
+      "confidence": "high"
+    },
+    "tjo": {
+      "handle": "@tjo.bpm",
+      "name": "TJO (DJ; The Big Pink House Party at The Pink Cactus)",
+      "kind": "act",
+      "verified": "tagged in The Pink Cactus's own October list (instagram.com/thepinkcactusknox/p/Dd6tuR1lts4/); his own post announcing Vol. 5 on Oct 23 (instagram.com/tjo.bpm/p/Dd6mZ5rR6qp/); live profile 'its pronounced tee-joe — Musician, Friendly Neighbourhood DJ, Knoxville TN', followed by @thepinkcactusknox",
+      "confidence": "high"
+    },
+    "captain-ed": {
+      "handle": "@captain___ed",
+      "name": "Captain Ed (DJ, Fly by Night's industrial night)",
+      "kind": "act",
+      "verified": "tagged in Fly by Night's October lineup post (instagram.com/dj._.ba/p/DeHkyqDxwij/, a collab post on the venue's grid); live profile read 2026-10-19: 'Ed McDaniel — Starts riots on the dance floor', followed by @oldsevierdistrict and @alliancebrewing",
+      "confidence": "high"
+    },
+    "freqk": {
+      "handle": "@freqk.music",
+      "name": "FreQ-K (DJ, Fly by Night's industrial night)",
+      "kind": "act",
+      "verified": "tagged in Fly by Night's October lineup post (instagram.com/dj._.ba/p/DeHkyqDxwij/); live profile read 2026-10-19: 'FreQ-K — frequency designer'",
+      "confidence": "high"
+    },
+    "vampire-host": {
+      "handle": "@stephaniefranklinmarr",
+      "name": "Stephanie (host of the sapphic vampire night at Fly by Night)",
+      "kind": "act",
+      "verified": "her own collab post on Fly by Night's grid announcing Oct 24 (instagram.com/stephaniefranklinmarr/p/DeYJhdLxf64/); live profile 'stephanie — hostess with the most-ish'",
+      "confidence": "high"
+    },
+    "monsters-made-with-love": {
+      "handle": "@monstersmadewithlove",
+      "name": "Monsters Made with Love (sewing workshops)",
+      "kind": "act",
+      "verified": "her own reel tagging @kernsknox for Oct 22 (instagram.com/monstersmadewithlove/reel/DepSi17t6aG/); Kern's own post names the workshop; live profile links monstersmadewithlove.com, followed by @kernsknox",
+      "confidence": "high"
+    },
+    "trees-knoxville": {
+      "handle": "@treesknoxville",
+      "name": "Trees Knoxville",
+      "kind": "act",
+      "verified": "tagged by Inside of Knoxville's Old Sevier update (instagram.com/insideofknoxville/p/DeckCwKEXww/) for the Oct 22 Rail Trail planting; live profile 'Trees Knoxville — Nonprofit organization', links linktr.ee/treesknoxville; the planting is on treesknoxville.org/event/tree-planting-sokno-rail-trail-and-art-walk/",
+      "confidence": "high"
     }
   }
 }

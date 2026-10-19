@@ -1,0 +1,24 @@
+{
+  "_comment": "One spoken quip per story for the week's Reel (scripts/ig-reel.py). Real spellings; the script applies the LEXICON's TTS respellings itself. Keep each under about fifteen words — it is said and shown.",
+  "intro": "Seventeen things in South Knoxville this weekend. Costumes optional, mostly.",
+  "outro": "That's the weekend. The whole briefing is at soknoear.com. Link in bio.",
+  "quips": {
+    "spooky-streets": "Sevier Avenue closes for trick-or-treating Friday, five to seven thirty. Free.",
+    "scruffy-roots-fest-oct-25": "Scruffy Roots Fest got its new date: six acts on the Kern's lawn Sunday, free.",
+    "john-borderland": "Annie Baker's John opens at the Borderland Playhouse Thursday. Twenty dollars, four nights.",
+    "best-if-used-by": "A free readers' theatre closes the weekend at the Borderland Playhouse, Sunday at seven.",
+    "big-pink-house-party": "A whole night of drum and bass at the Pink Cactus Friday at nine.",
+    "industrial-night-fbn": "Captain Ed and FreQ-K play industrial slammers at Fly by Night Thursday.",
+    "vampire-night-fbn": "A vampire night for the sapphic crowd at Fly by Night Saturday. Fangs required.",
+    "trailhead-rodney-lee": "Rodney Lee and Corey Kimbro on the Trailhead patio, Friday at seven.",
+    "trailhead-lonetones": "The Lonetones close the weekend on the Trailhead patio, Sunday at four.",
+    "rail-trail-tree-planting": "Plant thirty-seven trees on the SoKno Rail Trail Thursday morning. Register free.",
+    "monsters-workshop-kerns": "Kids in costume sew their own monsters at Kern's Thursday, for a cause.",
+    "printshop-vols-pints": "A dollar off pints at Printshop for the whole Vols game Saturday, from three.",
+    "enchanted-forest": "Life-size puppets and candy in the woods: the Enchanted Forest at Ijams Nature Center, Saturday.",
+    "mischief-night": "Mischief Night: a headlamp hike with the nocturnal animals at Ijams Nature Center, Friday at seven.",
+    "hunter-moon-paddle": "The last paddle of the season, under the Hunter Moon, Sunday at six thirty.",
+    "crossword-play": "A crossword gets built live on stage at Ijams Nature Center, Sunday at two.",
+    "specials-board": "Earl's runs its Vols board for South Carolina on Saturday. Kickoff is three thirty."
+  }
+}

@@ -1,0 +1,1731 @@
+{
+  "slug": "2026-10-21",
+  "volume": 1,
+  "number": 19,
+  "episode": "Weekend Episode",
+  "date": "2026-10-21",
+  "dateLabel": "Thu–Sun, Oct 22–25, 2026",
+  "shortDate": "Oct 22–25",
+  "place": "South Knoxville, TN",
+  "newsletter": {
+    "subject": "Trick-or-treating on a closed Sevier Avenue — and Scruffy Roots Fest gets its new date"
+  },
+  "feature": {
+    "id": "spooky-streets",
+    "label": "Old Sevier",
+    "labelColor": "rust",
+    "days": [
+      "Fri"
+    ],
+    "layout": "textOnly",
+    "title": "Spooky Streets shuts part of Sevier Avenue for trick-or-treating Friday evening",
+    "deck": "The Old Sevier District closes a stretch of its main street for a family Halloween: costumes, candy at the shop doors, a bounce house and a dance party, free, from five until half past seven.",
+    "facts": [
+      {
+        "label": "When",
+        "value": "Fri Oct 23 · 5 – 7:30 PM"
+      },
+      {
+        "label": "Where",
+        "value": "Sevier Avenue, the Old Sevier District · part of the street closed to cars, with pedestrian-only areas on the map"
+      },
+      {
+        "label": "Cost",
+        "value": "Free"
+      },
+      {
+        "label": "For the kids",
+        "value": "Trick-or-treating at participating businesses · a bounce house · face painting · crafts and games · a dance party with DJ LL"
+      },
+      {
+        "label": "Vendors",
+        "value": "More than a dozen local makers: handmade goods, vintage, jewelry, books, sweet treats"
+      },
+      {
+        "label": "Deal",
+        "value": "Redbud Kitchen: buy an adult entrée, get a kids' meal half off during the event"
+      },
+      {
+        "label": "Presented by",
+        "value": "United Way of Greater Knoxville · South Knox Elementary PTO · Old Sevier District"
+      },
+      {
+        "label": "Same night",
+        "value": "John at the Borderland Playhouse starts at 8 instead of 7:30 because of the closure"
+      },
+      {
+        "label": "Weather",
+        "value": "Sunny and 73, falling through the 50s after dark"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "The Old Sevier District has thrown pub crawls and a Pride on Sevier Avenue, but Friday is the first time it is closing part of the street for the kids. Spooky Streets, posted by the merchants' association last Wednesday, runs from five to seven thirty on October 23: trick-or-treating at the businesses up and down the avenue, with the pedestrian-only stretch marked on the event map, and a line of family activities in between. Admission is free, and the association is calling it a community-wide celebration with the United Way of Greater Knoxville and the South Knox Elementary PTO."
+      },
+      {
+        "type": "subhead",
+        "text": "Up and down the avenue"
+      },
+      {
+        "type": "paragraph",
+        "text": "The district's post lists a bounce house, face painting, crafts, games and a dance party with DJ LL, plus more than a dozen local vendors selling handmade goods, vintage finds, jewelry, books and sweets along the route. The map on the second slide marks the stops: shops and restaurants on both sides of Sevier, a trunk-or-treat with a hot dog truck and balloon animals at City Church, and the blocks where cars are out and costumes are in. Redbud Kitchen is in on it with a dinner deal: buy an adult entrée during the event and a kids' meal is half off."
+      },
+      {
+        "type": "subhead",
+        "text": "The practical part"
+      },
+      {
+        "type": "paragraph",
+        "text": "With the avenue partly closed, plan to park once and walk. The district's own parking page points to the Riverwalk Garage at the west end, the gravel lot under the James White Parkway bridge at the east end, the public lot at the east end of Suttree Landing Park and street parking on the side streets. It is sunny and 73 on Friday and drops through the 50s once the sun goes down, so a layer under the costume. If the kids are done by seven thirty and the grown-ups are not, the Borderland Playhouse curtain on the same block moved to eight for the night, and the Pink Cactus goes drum and bass at nine."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Old Sevier District on Instagram — Spooky Streets, Oct 23 (caption and the event map)",
+        "url": "https://www.instagram.com/oldsevierdistrict/p/Dee_w9qls0T/"
+      },
+      {
+        "label": "Old Sevier District — where to park",
+        "url": "https://oldsevierdistrict.org/"
+      },
+      {
+        "label": "Free Spirit Theatre — John tickets (Friday at 8 due to the street closure)",
+        "url": "https://www.freespirittheatre.org/tickets.html"
+      },
+      {
+        "label": "National Weather Service — Knoxville forecast",
+        "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+      }
+    ],
+    "event": {
+      "startDate": "2026-10-23T17:00:00-04:00",
+      "endDate": "2026-10-23T19:30:00-04:00",
+      "locationName": "Old Sevier District",
+      "locationAddress": "Sevier Ave, Knoxville, TN 37920"
+    },
+    "social": {
+      "igTags": [
+        "old-sevier"
+      ],
+      "igAct": {
+        "key": "old-sevier"
+      },
+      "igBanner": [
+        "Spooky Streets: trick-or-treating on Sevier Avenue",
+        "Friday, five to seven thirty, free"
+      ]
+    }
+  },
+  "scanner": [
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "hot": true,
+      "image": "/assets/possum_street_art.png",
+      "title": "Spooky Streets on Sevier Avenue",
+      "blurb": "Part of the street closes for trick-or-treating, a bounce house and a dance party, five to seven thirty, free.",
+      "cue": "Jump to story",
+      "href": "#spooky-streets"
+    },
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Sun"
+      ],
+      "hot": true,
+      "image": "/assets/possum_street_art.png",
+      "title": "Scruffy Roots Fest, the new date",
+      "blurb": "Six Americana acts on the Kern's lawn from one to seven thirty, free. Bring a chair.",
+      "cue": "Jump to story",
+      "href": "#scruffy-roots-fest-oct-25"
+    },
+    {
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/possum_street_art.png",
+      "title": "Enchanted Forest at Mead's Quarry",
+      "blurb": "Life-size puppets, animal ambassadors and candy in the woods, three to eight. Timed entry, ten dollars.",
+      "cue": "Jump to story",
+      "href": "#enchanted-forest"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "hot": false,
+      "image": "/assets/possum_street_art.png",
+      "title": "John, by Annie Baker, at the Borderland Playhouse",
+      "blurb": "Free Spirit Theatre's four-night run in the little theater inside Borderland Tees. Twenty dollars.",
+      "cue": "Jump to story",
+      "href": "#john-borderland"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "hot": false,
+      "image": "/assets/possum_street_art.png",
+      "title": "Drum and bass at The Pink Cactus",
+      "blurb": "The Big Pink House Party gives a whole night to drum and bass, nine till late, twenty-one and up.",
+      "cue": "Jump to story",
+      "href": "#big-pink-house-party"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "hot": false,
+      "image": "/assets/possum_street_art.png",
+      "title": "Plant 37 trees on the SoKno Rail Trail",
+      "blurb": "Thursday morning on Island Home Avenue with Legacy Parks and Trees Knoxville. Register free.",
+      "cue": "Jump to story",
+      "href": "#rail-trail-tree-planting"
+    },
+    {
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "hot": false,
+      "image": "/assets/possum_street_art.png",
+      "title": "The last paddle of the season, under the Hunter Moon",
+      "blurb": "Two guided hours on the river Sunday at six thirty, forty-five dollars. A full-moon hike leaves at the same time.",
+      "cue": "Jump to story",
+      "href": "#hunter-moon-paddle"
+    },
+    {
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/possum_street_art.png",
+      "title": "The Vols at South Carolina, and the board at Earl's",
+      "blurb": "A 3:30 kickoff in Columbia and the game-day board on Waterfront Drive: two dollars off drafts and pizza.",
+      "cue": "Jump to story",
+      "href": "#specials-board"
+    }
+  ],
+  "stories": [
+    {
+      "id": "scruffy-roots-fest-oct-25",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Sun"
+      ],
+      "layout": "textOnly",
+      "title": "Scruffy Roots Fest lands on its new date: six Americana acts on the Kern's lawn Sunday, free",
+      "deck": "WDVX's free festival of East Tennessee Americana has a second date on the old bakery's lawn and a new lineup to go with it: six and a half hours of music, no ticket, bring a chair.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Oct 25 · gates noon · music 1 – 7:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The lawn at Kern's · 2201 Kern's Rising Way"
+        },
+        {
+          "label": "Cost",
+          "value": "Free"
+        },
+        {
+          "label": "Lineup",
+          "value": "Texas Tony & the Tornado Ramblers · Free Rein Bluegrass · Lazarus Lake · EmiSunshine · Yer Flowers · Big Pink"
+        },
+        {
+          "label": "Bring",
+          "value": "A lawn chair"
+        },
+        {
+          "label": "Food & drink",
+          "value": "Vendors, food and drinks on site · the food hall is open 9 AM – 9 PM Sunday"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 73"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Scruffy Roots Fest, WDVX's free celebration of East Tennessee Americana, has a new date on the lawn at Kern's: Sunday, October 25, gates at noon and music from one to seven thirty. The poster Kern's put up last Tuesday stamps it New Date and Second Annual, and the station's event page carries the schedule. Nobody pays to get in."
+        },
+        {
+          "type": "subhead",
+          "text": "Six sets, on the hour"
+        },
+        {
+          "type": "paragraph",
+          "text": "Texas Tony & the Tornado Ramblers open at one, Free Rein Bluegrass play at two, and Lazarus Lake, the Knoxville alt-country band led by songwriter Michael Jones, take the stage at three. EmiSunshine, who has played the Grand Ole Opry sixteen times and is still only twenty-two, is on at four. Yer Flowers play the hour from five, and Big Pink close the day from a quarter past six to seven thirty."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "WDVX says to bring a lawn chair and hang out for the day; vendors, food and drinks are on site, and the food hall behind the lawn is open nine to nine. Sunday is sunny and 73, the fourth clear day in a row, so the grass will be dry. The Titans host the Browns at one if someone in your party needs a screen; the bars inside have them."
+        },
+        {
+          "type": "agenda",
+          "title": "Sunday on the lawn",
+          "rows": [
+            {
+              "time": "1:00 PM",
+              "what": "Texas Tony & the Tornado Ramblers"
+            },
+            {
+              "time": "2:00 PM",
+              "what": "Free Rein Bluegrass"
+            },
+            {
+              "time": "3:00 PM",
+              "what": "Lazarus Lake"
+            },
+            {
+              "time": "4:00 PM",
+              "what": "EmiSunshine"
+            },
+            {
+              "time": "5:00 PM",
+              "what": "Yer Flowers"
+            },
+            {
+              "time": "6:15 PM",
+              "what": "Big Pink"
+            }
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "WDVX — Scruffy Roots Fest, Kern's Food Hall, Oct 25 (the schedule)",
+          "url": "https://wdvx.com/event/scruffy-roots-fest-kerns-food-hall-10-11/"
+        },
+        {
+          "label": "Kern's on Instagram — the new-date poster",
+          "url": "https://www.instagram.com/kernsknox/p/DecK3ochXqS/"
+        },
+        {
+          "label": "Kern's on Instagram — Lazarus Lake and EmiSunshine",
+          "url": "https://www.instagram.com/kernsknox/p/Dd9LnaciN7P/"
+        },
+        {
+          "label": "Kern's — hours",
+          "url": "https://kernsbakery.com/public-events/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-25T13:00:00-04:00",
+        "endDate": "2026-10-25T19:30:00-04:00",
+        "locationName": "Kern's",
+        "locationAddress": "2201 Kern's Rising Way, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "kerns",
+          "wdvx"
+        ],
+        "igAct": {
+          "key": "wdvx"
+        },
+        "igBanner": [
+          "Scruffy Roots Fest on the Kern's lawn, free",
+          "Sunday, one to seven thirty, the new date"
+        ]
+      }
+    },
+    {
+      "id": "john-borderland",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "textOnly",
+      "title": "Free Spirit Theatre stages Annie Baker's John at the Borderland Playhouse, Thursday through Sunday",
+      "deck": "A young couple check into a Gettysburg bed-and-breakfast whose owner collects dolls, in a slow, strange, funny play by the writer who won the Pulitzer for The Flick. Four nights in the little theater inside a T-shirt shop.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Oct 22 · 7:30 PM — Fri Oct 23 · 8 PM (the street is closed for Spooky Streets) — Sat Oct 24 · 7:30 PM — Sun Oct 25 · 2 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Borderland Playhouse · inside Borderland Tees · 802 Sevier Ave"
+        },
+        {
+          "label": "Tickets",
+          "value": "$20 general admission on Ticketbud · all sales final, but a ticket can be moved to another night if seats are open"
+        },
+        {
+          "label": "Run time",
+          "value": "The ticket listing blocks three hours"
+        },
+        {
+          "label": "Company",
+          "value": "Free Spirit Theatre"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The Borderland Playhouse, the small theater Borderland Tees built in the middle of its warehouse last year, has its next run this week: John, by Annie Baker, produced by Free Spirit Theatre. The playhouse's page lists the dates, and Free Spirit's ticket page has the detail: Thursday and Saturday at seven thirty, Friday at eight because Sevier Avenue is closed for Spooky Streets until seven thirty, and a Sunday matinee at two. General admission is twenty dollars."
+        },
+        {
+          "type": "subhead",
+          "text": "The play"
+        },
+        {
+          "type": "paragraph",
+          "text": "Baker won the Pulitzer Prize for Drama for The Flick, and John is the one she wrote next: a young couple from Brooklyn spend a late-November weekend at a bed-and-breakfast in Gettysburg run by an older woman with a house full of dolls and a blind friend who drops by. Not much happens and all of it matters; the ticket listing blocks three hours, which is about right for a Baker play. It is the playhouse's first show since Hedda Gabler closed on October 3."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "Seating is first come, first served, so book online and arrive early. The yellow building with the possum painted on it is the one; the theater is through the shop. On Friday, park once for Spooky Streets and stay; the curtain is at eight."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Borderland Tees — the Playhouse (dates)",
+          "url": "https://borderlandtees.com/playhouse"
+        },
+        {
+          "label": "Free Spirit Theatre — tickets for John",
+          "url": "https://www.freespirittheatre.org/tickets.html"
+        },
+        {
+          "label": "Ticketbud — Thursday, Oct 22, $20",
+          "url": "https://ticketbud.com/events/4628003a-b149-11f1-92ac-42010a71701f"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-22T19:30:00-04:00",
+        "endDate": "2026-10-25T17:00:00-04:00",
+        "locationName": "Borderland Playhouse",
+        "locationAddress": "802 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "borderland-tees"
+        ],
+        "igAct": {
+          "none": "Free Spirit Theatre has no Instagram handle on its own site or on the playhouse page; the venue is tagged"
+        },
+        "igBanner": [
+          "John, by Annie Baker, at the Borderland Playhouse",
+          "Thursday to Sunday, twenty dollars"
+        ]
+      }
+    },
+    {
+      "id": "best-if-used-by",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "layout": "textOnly",
+      "title": "Best if Used By, a free one-night readers' theatre, closes the weekend at the Borderland Playhouse Sunday",
+      "deck": "Two actors, scripts in hand, one performance and no ticket: a reading of Doug Brendel's play in the Sevier Avenue theater, a few hours after the matinee of John lets out.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Oct 25 · 7 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Borderland Playhouse · 802 Sevier Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "Free"
+        },
+        {
+          "label": "Who",
+          "value": "Directed by Marty Ragsdale · starring Chevy Anz and Carol Goans"
+        },
+        {
+          "label": "The play",
+          "value": "Best if Used By, by Doug Brendel"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The Borderland Playhouse's page lists a second thing this week, and it costs nothing: Best if Used By, by Doug Brendel, a one-night-only readers' theatre production directed by Marty Ragsdale and starring Chevy Anz and Carol Goans, Sunday at seven. A readers' theatre is the play read aloud from the script, on its feet but without sets or costumes, which is how new work and small casts get heard. The playhouse has been hosting table readings of local works in progress through Next Rung Productions, and this is the public-facing version of that habit."
+        },
+        {
+          "type": "paragraph",
+          "text": "It follows the two o'clock matinee of John in the same room, so the Sunday at 802 Sevier Avenue runs from the afternoon into the evening with a dinner break on the avenue in between. No reservation is listed; arrive early for a seat."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Borderland Tees — the Playhouse",
+          "url": "https://borderlandtees.com/playhouse"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-25T19:00:00-04:00",
+        "locationName": "Borderland Playhouse",
+        "locationAddress": "802 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "borderland-tees"
+        ],
+        "igAct": {
+          "none": "a one-night reading; the director and the two actors have no verified handles"
+        },
+        "igBanner": [
+          "Free readers' theatre at the Borderland Playhouse",
+          "Sunday at seven"
+        ]
+      }
+    },
+    {
+      "id": "big-pink-house-party",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "textOnly",
+      "title": "The Big Pink House Party gives a whole night to drum and bass at The Pink Cactus Friday",
+      "deck": "Volume five of the pink house's party series switches to drum and bass for the first time, with three DJs from nine until late. Ten dollars online, twenty-one and up, and it starts right after Spooky Streets ends.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 23 · 9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The Pink Cactus · 1147 Sevier Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$10 online · $15 at the door · 21+"
+        },
+        {
+          "label": "DJs",
+          "value": "Andrew Fetch · BLINDSIDE (TJO's drum-and-bass alias) · Bounce Back"
+        },
+        {
+          "label": "Tickets",
+          "value": "The link in @tjo.bpm's bio"
+        },
+        {
+          "label": "Earlier",
+          "value": "Spooky Streets on the same avenue, 5 – 7:30"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The Pink Cactus put The Big Pink House Party Vol. 5 on its October list at the end of September, and TJO, the DJ behind the series, filled in the rest: drum and bass nights don't come around here often enough, so volume five gives the whole night to the genre. Andrew Fetch, BLINDSIDE, which is TJO's own drum-and-bass alias, and Bounce Back play from nine on Friday, October 23. Tickets are ten dollars online and fifteen at the door, twenty-one and up."
+        },
+        {
+          "type": "subhead",
+          "text": "The pink house"
+        },
+        {
+          "type": "paragraph",
+          "text": "The bar downstairs serves Latin-inspired food and cocktails, the front-yard patio has covered seating and yard games, and the private karaoke rooms upstairs book separately. Friday is the night the district closes the avenue for Spooky Streets until seven thirty, so the sidewalks will be full of costumes when the doors open an hour and a half later; the parking lots at either end of the district are the easy ones."
+        }
+      ],
+      "sources": [
+        {
+          "label": "TJO on Instagram — The Big Pink House Party Vol. 5, Oct 23",
+          "url": "https://www.instagram.com/tjo.bpm/p/Dd6mZ5rR6qp/"
+        },
+        {
+          "label": "The Pink Cactus on Instagram — October at the pink house",
+          "url": "https://www.instagram.com/thepinkcactusknox/p/Dd6tuR1lts4/"
+        },
+        {
+          "label": "The Pink Cactus — the house",
+          "url": "https://www.thepinkcactusknox.com/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-23T21:00:00-04:00",
+        "locationName": "The Pink Cactus",
+        "locationAddress": "1147 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "pink-cactus",
+          "tjo"
+        ],
+        "igAct": {
+          "key": "tjo"
+        },
+        "igBanner": [
+          "Drum and bass at The Pink Cactus",
+          "Friday at nine, ten dollars online"
+        ]
+      }
+    },
+    {
+      "id": "industrial-night-fbn",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "textOnly",
+      "title": "Captain Ed and FreQ-K play industrial slammers at Fly by Night Thursday",
+      "deck": "The seventies cocktail lounge on Sevier Avenue goes gothic for a night: two DJs, industrial music, and the creepy cocktail list the bar is running all October.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Oct 22 · evening · the lounge is open 4 PM – 1 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Fly by Night · 906 Sevier Ave, Suite 126"
+        },
+        {
+          "label": "Who",
+          "value": "Captain Ed · FreQ-K"
+        },
+        {
+          "label": "On the menu",
+          "value": "Creepy cocktails all month"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Fly by Night's October lineup, posted at the start of the month, puts Captain Ed and FreQ-K in the lounge on Thursday, October 22, playing what the post calls industrial slammers: get gothic is the instruction. Captain Ed is Ed McDaniel, whose own profile promises to start riots on the dance floor; FreQ-K bills himself as a frequency designer. It is the third of the lounge's five October nights, after the disco and the album pre-party, and before Wax Museum's spooky vinyl on the 29th and the Freaks Come Out at Night ball on the 30th."
+        },
+        {
+          "type": "paragraph",
+          "text": "The lounge opens at four on Thursdays and runs until one, and neither the venue nor the DJs have posted a set time, so plan on a night-time show and ask at the bar. The creepy cocktail list is on all month."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Fly by Night's October lineup on Instagram",
+          "url": "https://www.instagram.com/dj._.ba/p/DeHkyqDxwij/"
+        },
+        {
+          "label": "Fly by Night on Instagram — creepy cocktails all month",
+          "url": "https://www.instagram.com/flybynightknox/p/DeSTqN_GEaa/"
+        },
+        {
+          "label": "Fly by Night — hours",
+          "url": "https://www.flybynightknox.com/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-22T21:00:00-04:00",
+        "locationName": "Fly by Night",
+        "locationAddress": "906 Sevier Ave Suite 126, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "fly-by-night",
+          "captain-ed",
+          "freqk"
+        ],
+        "igAct": {
+          "key": "captain-ed"
+        },
+        "igBanner": [
+          "Industrial night at Fly by Night",
+          "Thursday, Captain Ed and FreQ-K"
+        ]
+      }
+    },
+    {
+      "id": "vampire-night-fbn",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "textOnly",
+      "title": "A vampire night for the sapphic crowd returns to Fly by Night Saturday, with DJ Iris at ten",
+      "deck": "The host's second queer vampire soirée at the Sevier Avenue lounge: drinks and mingling for the lesbian and sapphic community, a strict fangs-and-capes dress code, and a dance from ten.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 24 · evening · DJ Iris at 10 PM · the lounge is open 4 PM – 1 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Fly by Night · 906 Sevier Ave, Suite 126"
+        },
+        {
+          "label": "For",
+          "value": "The lesbian and sapphic community, per the host"
+        },
+        {
+          "label": "Dress code",
+          "value": "Your best vampire: leather raver, blood countess, Nosferatu, or just a good outfit with fangs"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "We're back, the host's post on Fly by Night's feed begins, and the back is from an earlier edition that drew a crowd: on Saturday, October 24 the lounge hosts a vampire party intended, in the host's words, for Knoxville's lesbian and sapphic community to sip, stalk the night and maybe find a fiendish friend or two before Halloween. There is time to mix and mingle and have a drink, and at ten the lounge's own DJ Iris plays, as the post puts it, a danse macabre for the ages."
+        },
+        {
+          "type": "paragraph",
+          "text": "The dress code is the point: find the hottest possible vampire inside you and let it out, whether that is a leather-clad raver, a blood countess, Nosferatu or a really good outfit with fangs. Come cute or come scary, just come thirsty. The lounge opens at four on Saturdays and closes at one; the creepy cocktails are on all month."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The host on Instagram, posted with Fly by Night — Saturday, Oct 24",
+          "url": "https://www.instagram.com/stephaniefranklinmarr/p/DeYJhdLxf64/"
+        },
+        {
+          "label": "Fly by Night — hours",
+          "url": "https://www.flybynightknox.com/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-24T20:00:00-04:00",
+        "locationName": "Fly by Night",
+        "locationAddress": "906 Sevier Ave Suite 126, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "fly-by-night",
+          "vampire-host"
+        ],
+        "igAct": {
+          "key": "vampire-host"
+        },
+        "igBanner": [
+          "A vampire night for the sapphic crowd at Fly by Night",
+          "Saturday, DJ Iris at ten"
+        ]
+      }
+    },
+    {
+      "id": "trailhead-rodney-lee",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "textOnly",
+      "title": "Rodney Lee and Corey Kimbro play the Trailhead patio Friday at seven",
+      "deck": "The beer market's outdoor stage on Island Home Avenue has a duo for Friday night, a short walk from the Spooky Streets closure and a free show as always.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 23 · music at 7 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Trailhead Beer Market · 1317 Island Home Ave · outdoors"
+        },
+        {
+          "label": "Cost",
+          "value": "Free"
+        },
+        {
+          "label": "Kitchen",
+          "value": "Gato Peligroso: the new Southern Hospitality burger with house pimento cheese, candied bacon and cider onions; the pulled-pork sandwich and Brunswick stew"
+        },
+        {
+          "label": "Weather",
+          "value": "Clear, 60s at seven and 44 overnight"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Trailhead's October flyer lists Rodney Lee and Corey Kimbro for Friday, October 23, and the flyer's standing rule applies: Friday and Saturday music starts at seven, outdoors, free. The flyer is the whole announcement, so the pairing will have to introduce itself on the patio. It is the beer market's last Friday show before Jake Smith Trio on the 30th and Four Legged Dog on Halloween."
+        },
+        {
+          "type": "paragraph",
+          "text": "Gato Peligroso, the kitchen in the back, is trying out a Southern Hospitality burger this week with house-made pimento cheese, candied bacon and apple-cider caramelized onions, alongside the barbecue pulled-pork sandwich and Brunswick stew. Friday is clear and in the sixties at seven, dropping to 44 overnight, so the patio heaters will earn their keep by the second set. Island Home Avenue is outside the Spooky Streets closure, but the gravel lot under the bridge will be the district's overflow lot that night."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Trailhead Beer Market on Instagram — October flyer",
+          "url": "https://www.instagram.com/trailheadbeer/p/Dd92UvFBnV5/"
+        },
+        {
+          "label": "Gato Peligroso on Instagram — the Southern Hospitality burger",
+          "url": "https://www.instagram.com/gatopeligrosokno/p/DecSklREcIk/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-23T19:00:00-04:00",
+        "locationName": "Trailhead Beer Market",
+        "locationAddress": "1317 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "trailhead"
+        ],
+        "igAct": {
+          "none": "Rodney Lee and Corey Kimbro are named only on the venue's flyer; no handle could be confirmed"
+        },
+        "igBanner": [
+          "Rodney Lee and Corey Kimbro at Trailhead",
+          "Friday at seven, outdoors, free"
+        ]
+      }
+    },
+    {
+      "id": "trailhead-lonetones",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "layout": "textOnly",
+      "title": "The Lonetones close the weekend on the Trailhead patio Sunday at four",
+      "deck": "Knoxville's mountain indie folk-pop band, in their own words, plays the beer market's Sunday afternoon slot outdoors, free, on the last sunny day of a four-day run.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Oct 25 · music at 4 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Trailhead Beer Market · 1317 Island Home Ave · outdoors"
+        },
+        {
+          "label": "Cost",
+          "value": "Free"
+        },
+        {
+          "label": "Who",
+          "value": "The Lonetones · thelonetones.com"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 73"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Sunday music at Trailhead starts at four, and on October 25 it is The Lonetones, the Knoxville band whose own profile calls their sound mountain indie folk-pop. They are on the beer market's October flyer between Rodney Lee and Corey Kimbro on Friday and the Ben Garnett Trio with Daniel Kimbro the following Tuesday, and like every show on that patio, it is free."
+        },
+        {
+          "type": "paragraph",
+          "text": "Sunday is sunny and 73, the last of four clear days, so the outdoor stage gets the good one. Scruffy Roots Fest is on the Kern's lawn from one to seven thirty the same afternoon, a ten-minute walk away; the two patios are close enough to split the day."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Trailhead Beer Market on Instagram — October flyer",
+          "url": "https://www.instagram.com/trailheadbeer/p/Dd92UvFBnV5/"
+        },
+        {
+          "label": "The Lonetones on Instagram",
+          "url": "https://www.instagram.com/thelonetones/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-25T16:00:00-04:00",
+        "locationName": "Trailhead Beer Market",
+        "locationAddress": "1317 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "trailhead",
+          "lonetones"
+        ],
+        "igAct": {
+          "key": "lonetones"
+        },
+        "igBanner": [
+          "The Lonetones on the Trailhead patio",
+          "Sunday at four, free"
+        ]
+      }
+    },
+    {
+      "id": "rail-trail-tree-planting",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "textOnly",
+      "title": "Volunteers plant 37 trees along the SoKno Rail Trail and Art Walk Thursday morning",
+      "deck": "Legacy Parks and Trees Knoxville need hands on Island Home Avenue to put flowering native trees along the new trail before it opens. Three hours, gloves optional, registration free.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Oct 22 · 9 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "River's Edge Apartments · 1701 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "Free to register · optional $10 or $25 donation"
+        },
+        {
+          "label": "Register",
+          "value": "treesknoxville.org · 29 spots were open on Monday"
+        },
+        {
+          "label": "The trail",
+          "value": "3.8 miles for walkers and bikes, Chapman Highway to Ijams Nature Center, with murals and sculptures along the way"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny, 44 at nine and 73 by noon"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The SoKno Rail Trail and Art Walk, the 3.8-mile walking and biking trail Legacy Parks Foundation is building along the old rail line from Chapman Highway to Ijams Nature Center, gets its trees on Thursday. Legacy Parks' post asks for help planting 37 flowering native trees along a stretch of the trail from nine to noon on October 22, and Trees Knoxville's event page puts the meeting point at the River's Edge Apartments, 1701 Island Home Avenue, two blocks past Printshop Beer Co."
+        },
+        {
+          "type": "subhead",
+          "text": "Sign up, then dig"
+        },
+        {
+          "type": "paragraph",
+          "text": "Registration is free on Trees Knoxville's site, with a ten- or twenty-five-dollar donation optional, and the page showed twenty-nine spots left on Monday. The Mortgage Gallery and Realty Executives South are the sponsors. The trail is the one with the Anna Charney and Naomi Haverland murals on the back of Kern's; the trees are the next layer. Thursday starts at 44 and is 73 and sunny by the time the last hole is filled."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Trees Knoxville — Tree Planting: SoKno Rail Trail and Art Walk, Oct 22 (registration)",
+          "url": "https://treesknoxville.org/event/tree-planting-sokno-rail-trail-and-art-walk/"
+        },
+        {
+          "label": "Legacy Parks on Instagram — tree planting day",
+          "url": "https://www.instagram.com/legacyparks/p/Deco_1ZI-B2/"
+        },
+        {
+          "label": "Legacy Parks — the SoKno Rail Trail and Art Walk",
+          "url": "https://legacyparks.org/about-us/current-projects/sokno-rail-trail-and-art-walk/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-22T09:00:00-04:00",
+        "endDate": "2026-10-22T12:00:00-04:00",
+        "locationName": "SoKno Rail Trail and Art Walk, River's Edge Apartments",
+        "locationAddress": "1701 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "legacy-parks",
+          "trees-knoxville"
+        ],
+        "igAct": {
+          "key": "trees-knoxville"
+        },
+        "igBanner": [
+          "Plant 37 trees on the SoKno Rail Trail",
+          "Thursday, nine to noon, register free"
+        ]
+      }
+    },
+    {
+      "id": "monsters-workshop-kerns",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Thu"
+      ],
+      "layout": "textOnly",
+      "title": "Kids sew their own monsters at Kern's Thursday, in costume, for The Restoration House",
+      "deck": "A beginner sewing workshop for children in Halloween costumes, with a costume contest, treat bags and every dollar to a nonprofit that houses single mothers and their kids.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Oct 22 · 5:30 – 7:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Kern's · 2201 Kern's Rising Way"
+        },
+        {
+          "label": "Cost",
+          "value": "$50 per creator · the link in Kern's bio"
+        },
+        {
+          "label": "Ages",
+          "value": "5 – 7 with a participating parent · 8 and up work on their own · non-participating children stay in a stroller"
+        },
+        {
+          "label": "The prize",
+          "value": "A costume contest with Dollywood passes"
+        },
+        {
+          "label": "Benefits",
+          "value": "The Restoration House, housing and programs for single-mother families in Knoxville"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Monsters Made with Love, a Knoxville maker whose workshops teach beginner sewing by way of perfectly imperfect stuffed monsters, brings one to Kern's on Thursday, October 22 from five thirty to seven thirty. Kern's post calls it the Monsters Made with Love Halloween Workshop: kids come in costume, learn enough hand sewing to make a stuffed monster or a heart to take home, get a treat bag, and enter a costume contest whose prize is Dollywood passes."
+        },
+        {
+          "type": "paragraph",
+          "text": "Tickets are fifty dollars per creator through the link in Kern's bio, and the proceeds go to The Restoration House, the Knoxville nonprofit that supports single mothers and their children with housing, advocacy and enrichment programs. Ages five to seven need a parent sewing alongside; eight and up work on their own with the maker. Space is limited, and the food hall around it is open until ten on Thursdays for dinner after."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Kern's on Instagram — Monsters Made with Love Halloween Workshop, Oct 22",
+          "url": "https://www.instagram.com/kernsknox/p/DeH-FacBgGP/"
+        },
+        {
+          "label": "Monsters Made with Love on Instagram — Thursday at Kern's",
+          "url": "https://www.instagram.com/monstersmadewithlove/reel/DepSi17t6aG/"
+        },
+        {
+          "label": "Monsters Made with Love — public workshops (5:30 – 7:30)",
+          "url": "https://monstersmadewithlove.com/types-of-workshops/workshops-open-to-the-public"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-22T17:30:00-04:00",
+        "endDate": "2026-10-22T19:30:00-04:00",
+        "locationName": "Kern's",
+        "locationAddress": "2201 Kern's Rising Way, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "kerns",
+          "monsters-made-with-love"
+        ],
+        "igAct": {
+          "key": "monsters-made-with-love"
+        },
+        "igBanner": [
+          "Sew a monster at Kern's, for a cause",
+          "Thursday, five thirty to seven thirty"
+        ]
+      }
+    },
+    {
+      "id": "printshop-vols-pints",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "textOnly",
+      "title": "Printshop takes a dollar off pints for the whole Vols game Saturday, from the pregame to the final whistle",
+      "deck": "Tennessee plays at South Carolina at 3:30, and the riverfront brewery on Island Home Avenue has the big screen on and the pint price down for as long as the game lasts.",
+      "facts": [
+        {
+          "label": "Saturday",
+          "value": "$1 off pints from 30 minutes before kickoff until the final whistle · Tennessee at South Carolina, 3:30 PM"
+        },
+        {
+          "label": "Friday",
+          "value": "$12 flights all day, noon – 9"
+        },
+        {
+          "label": "Thursday",
+          "value": "10% off cases to go, 4 – 9"
+        },
+        {
+          "label": "Where",
+          "value": "Printshop Beer Co. · 1532 Island Home Ave"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 73 for the patio"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Printshop's specials page for the week lists a game-day deal for Saturday, October 24: a dollar off pints from thirty minutes before the Vols kick off until the final whistle. Tennessee is at South Carolina at 3:30, so the deal runs from three until the game ends, with the big screen on in the taproom and the patio open on a sunny 73-degree afternoon over the river."
+        },
+        {
+          "type": "paragraph",
+          "text": "The rest of the week's board is the usual: ten percent off cases, mixed ones included, on Thursday from four to nine, and twelve-dollar flights of four all day Friday from noon to nine. The brewery's gallery this month is all Dolly Parton, paintings by local artists, which is worth a lap with the pint."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Printshop Beer Co. — specials",
+          "url": "https://printshopbeer.com/specials/"
+        },
+        {
+          "label": "University of Tennessee Athletics — 2026 football schedule",
+          "url": "https://utsports.com/sports/football/schedule/2026"
+        },
+        {
+          "label": "Printshop Beer Co. on Instagram — the Dolly gallery",
+          "url": "https://www.instagram.com/printshopbeer/p/DeKRHjDlGW4/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-24T15:00:00-04:00",
+        "locationName": "Printshop Beer Co.",
+        "locationAddress": "1532 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "printshop"
+        ],
+        "igAct": {
+          "none": "a taproom special with no act"
+        },
+        "igBanner": [
+          "A dollar off pints for the Vols game at Printshop",
+          "Saturday, from three till the final whistle"
+        ]
+      }
+    },
+    {
+      "id": "enchanted-forest",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "textOnly",
+      "title": "The Enchanted Forest brings life-size puppets and animal ambassadors to Mead's Quarry Saturday, ten dollars a person",
+      "deck": "Ijams Nature Center's family Halloween: a costumed walk through the woods where the critters are puppets, the owls are real and the candy is in bags to take home. Timed entry from three.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 24 · 3 – 8 PM · timed entry, arrive at the time on the ticket"
+        },
+        {
+          "label": "Where",
+          "value": "Mead's Quarry at Ijams Nature Center · 3526 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$10 a person · $30 for up to four · $40 for up to six · under 2 free · buy online"
+        },
+        {
+          "label": "Wear",
+          "value": "A costume"
+        },
+        {
+          "label": "On the trail",
+          "value": "Ijams animal ambassadors · life-size puppets of native critters by Cattywampus Puppet Council · Halloween crafts · self-carving pumpkins · candy and goodies to take home"
+        },
+        {
+          "label": "That morning",
+          "value": "Storytime at the Playscape, 10 – noon, is fairy tales, free, as a warm-up"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 73, 50s by the last entry"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The forest comes to life at Mead's Quarry on Saturday, October 24, which is how Ijams Nature Center describes its Enchanted Forest: come in costume and walk the woods meeting the park's animal ambassadors and, for one night only, magical life-size puppets of native critters, with candy and goodies to take home. The park's weekend post adds Halloween crafts and self-carving pumpkins. Cattywampus Puppet Council, the Knoxville puppet troupe, built the critters and lends the hands."
+        },
+        {
+          "type": "subhead",
+          "text": "Timed entry"
+        },
+        {
+          "type": "paragraph",
+          "text": "Tickets are sold by entry time, on the half hour from three, and the park asks that you arrive at the time on your ticket. An individual ticket is ten dollars, a group of up to four is thirty, a group of up to six is forty, and children under two are free. The event runs until eight, so the late slots are the dark ones, which is the point."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mead's Quarry is the Island Home Avenue entrance, not the visitor center. Saturday is sunny and 73 and drops into the 50s by the last entries, so a layer under the costume. Earlier that day the free Saturday storytime at the Nature Playscape, ten to noon, is on fairy tales, which the park's own listing calls the warm-up for the forest."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Ijams Enchanted Forest, Oct 24 (tickets)",
+          "url": "https://www.ijams.org/event-details/ijams-enchanted-forest"
+        },
+        {
+          "label": "Ijams Nature Center on Instagram — Enchanted Forest next weekend",
+          "url": "https://www.instagram.com/ijamsnaturecenter/p/DepGToQEdom/"
+        },
+        {
+          "label": "Ijams Nature Center — Storytime at Jo's Grove: Fairytales, Oct 24",
+          "url": "https://www.ijams.org/event-details/storytime-at-jos-grove-fairytales"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-24T15:00:00-04:00",
+        "endDate": "2026-10-24T20:00:00-04:00",
+        "locationName": "Mead's Quarry, Ijams Nature Center",
+        "locationAddress": "3526 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "the park's own event; Cattywampus Puppet Council has no handle confirmed from the park's page or post"
+        },
+        "igBanner": [
+          "Enchanted Forest at Ijams Nature Center",
+          "Saturday, three to eight, ten dollars"
+        ]
+      }
+    },
+    {
+      "id": "mischief-night",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "layout": "textOnly",
+      "title": "Mischief Night takes a guided hike into the dark at Ijams Nature Center Friday, with the nocturnal animals up close",
+      "deck": "The park's after-dark series goes Halloween: meet the night-shift animal ambassadors, then walk a mile of trail by headlamp to find out what the raccoons and owls get up to.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 23 · 7 – 9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$15 · register online"
+        },
+        {
+          "label": "Ages",
+          "value": "6 and up"
+        },
+        {
+          "label": "The walk",
+          "value": "Up to a mile on uneven trail with stops · a waiver, once a year, at ijams.org/waiver"
+        },
+        {
+          "label": "Weather",
+          "value": "Clear, 50s at seven, 44 overnight"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Ijams After Dark is the park's evening program series, and the October 23 edition is Mischief Night: adventure into the dark with Ijams naturalists, the listing says, and chat about all things mischievous and nocturnal. Participants meet some of the park's nocturnal animal ambassadors, learn about the not-so-creepy critters that have the woods at night, and take a guided night hike on the trails with the Halloween theme of what those critters get up to."
+        },
+        {
+          "type": "paragraph",
+          "text": "It is fifteen dollars, for ages six and up, from seven to nine on Friday, and the hike covers up to a mile over rocks, roots and gravel with stopping points. Every participant needs the park's assumption-of-risk form on file once a year. Friday night is clear and in the 50s at seven, falling to 44 overnight, which is good owl weather and jacket weather. It is the same hour as Spooky Streets on Sevier Avenue, so this is the one for a family that would rather have the woods than the crowd."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Ijams After Dark: Mischief Night, Oct 23",
+          "url": "https://www.ijams.org/event-details/ijams-after-dark-mischief-night"
+        },
+        {
+          "label": "Ijams Nature Center on Instagram — Hallo-week",
+          "url": "https://www.instagram.com/ijamsnaturecenter/p/DerGd0zDTJs/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-23T19:00:00-04:00",
+        "endDate": "2026-10-23T21:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "led by the park's naturalists; no act"
+        },
+        "igBanner": [
+          "Mischief Night at Ijams Nature Center",
+          "Friday at seven, fifteen dollars"
+        ]
+      }
+    },
+    {
+      "id": "hunter-moon-paddle",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "textOnly",
+      "title": "The Full Moon Paddle under the Hunter Moon is the last paddle of the season at Ijams Nature Center Sunday",
+      "deck": "Two guided hours on the Tennessee River after dark with a naturalist, kayak and headlamp provided, under October's full moon. The park's listing marks it the last available date of the year.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Oct 25 · 6:30 – 8:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams River Landing · 3507 Island Home Pike"
+        },
+        {
+          "label": "Cost",
+          "value": "$45 · register online"
+        },
+        {
+          "label": "Ages",
+          "value": "14 and up · under 18 with an adult"
+        },
+        {
+          "label": "Provided",
+          "value": "Kayaks, PFDs and headlamps · bring water and warm layers"
+        },
+        {
+          "label": "On foot instead",
+          "value": "The Full Moon Hike leaves the visitor center at the same time: 6:30 – 8, $15, ages 10+, up to two miles with blacklights"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly clear, 60s at launch and 47 overnight"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Ijams Nature Center's paddle program ends for the year on Sunday, October 25 with the Full Moon Paddle: Celebrating the Hunter Moon, a two-hour guided trip from Ijams River Landing from six thirty to eight thirty, and the park's listing marks it the last available date. Naturalists lead the group out to uncover the secrets of the Tennessee River after dark and read the night sky, looking for plants, animals and geology along the bank by moonlight."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "It is forty-five dollars, ages fourteen and up with anyone under eighteen accompanied by an adult, and the park provides the kayak, the life jacket and the headlamp; you bring water and clothes for a night that starts in the 60s and ends near 47. A once-a-year liability waiver is on the park's site. The trip meets at the boat landing on Island Home Pike, not the visitor center. If the river is not your thing, the Full Moon Hike leaves the visitor center at the same half hour: ninety minutes and up to two miles of trail by blacklight and headlamp, fifteen dollars, ages ten and up."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Full Moon Paddle: Celebrating the Hunter Moon, Oct 25",
+          "url": "https://www.ijams.org/event-details/full-moon-paddle-celebrating-the-hunter-moon-2026-10-25-18-30"
+        },
+        {
+          "label": "Ijams Nature Center — Full Moon Hike: Celebrating the Hunter Moon, Oct 25",
+          "url": "https://www.ijams.org/event-details/full-moon-hike-celebrating-the-hunter-moon-2026-10-25-18-30"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-25T18:30:00-04:00",
+        "endDate": "2026-10-25T20:30:00-04:00",
+        "locationName": "Ijams River Landing",
+        "locationAddress": "3507 Island Home Pike, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "led by the park's naturalists; no act"
+        },
+        "igBanner": [
+          "Last paddle of the season under the Hunter Moon",
+          "Sunday at six thirty, Ijams Nature Center"
+        ]
+      }
+    },
+    {
+      "id": "crossword-play",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "textOnly",
+      "title": "The Crossword Play builds a puzzle in front of the audience at Ijams Nature Center Sunday afternoon",
+      "deck": "A one-woman play that is also a crossword-construction seminar: meet the Puzzlemaker, watch a grid get built live, and see how a puzzle changes a life. Ninety minutes at two.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Oct 25 · 2 – 3:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center · 2915 Island Home Ave"
+        },
+        {
+          "label": "Register",
+          "value": "On the park's calendar; no price is listed"
+        },
+        {
+          "label": "The play",
+          "value": "The Crossword Play (or Ezmeralda's Gift) by Donna Hoke · directed by Daniel Bird Tobin · performed by Erika Lee Sengstack"
+        },
+        {
+          "label": "Company",
+          "value": "Potential Energy Theatre"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "See a play. Meet a stranger. Have a conversation. That is the park's three-line pitch for The Crossword Play, which Potential Energy Theatre brings to Ijams Nature Center on Sunday, October 25 at two. The full title is The Crossword Play (or Ezmeralda's Gift), by Donna Hoke, directed by Daniel Bird Tobin and performed by Erika Lee Sengstack, and the listing calls it a combination theatrical play and puzzle-making seminar: you meet the Puzzlemaker, watch a crossword constructed in front of you and learn how to make one, and along the way experience how a puzzle can change a life."
+        },
+        {
+          "type": "paragraph",
+          "text": "It runs ninety minutes, to three thirty, at the visitor center on Island Home Avenue. The park asks you to register on its calendar; no ticket price is listed. The Scruffy Roots Fest at Kern's is playing the same afternoon, a ten-minute drive back toward the river, if the day wants music after the puzzle."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — SPECIAL EVENT: The Crossword Play, Oct 25",
+          "url": "https://www.ijams.org/event-details/special-event-the-crossword-play"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-25T14:00:00-04:00",
+        "endDate": "2026-10-25T15:30:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "Potential Energy Theatre has no handle confirmed from the park's listing"
+        },
+        "igBanner": [
+          "The Crossword Play at Ijams Nature Center",
+          "Sunday at two"
+        ]
+      }
+    },
+    {
+      "id": "specials-board",
+      "label": "Suttree Landing",
+      "labelColor": "gold",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "textOnly",
+      "title": "The specials board: Earl's game-day board for the Vols at South Carolina Saturday, and a different deal every day on Waterfront Drive",
+      "deck": "Down by the river, the week's run is mango ritas, spicy ritas, house margaritas and then mimosas, with the Vols board on Saturday afternoon for an away game that kicks off at 3:30.",
+      "facts": [
+        {
+          "label": "Thursday",
+          "value": "$10 Patrón mango margaritas"
+        },
+        {
+          "label": "Friday",
+          "value": "$9 spicy pineapple margaritas"
+        },
+        {
+          "label": "Saturday",
+          "value": "$8 house margaritas · the game-day board: $2 off drafts and pizza, $6 Orange Bliss, 6-for-5 beer buckets, $4 and $5 shots"
+        },
+        {
+          "label": "Sunday",
+          "value": "$7 mimosas and Bloody Marys"
+        },
+        {
+          "label": "Hours",
+          "value": "11 AM – 10 PM every day · 610 Waterfront Dr"
+        },
+        {
+          "label": "The games",
+          "value": "Tennessee at South Carolina, Sat 3:30 PM · Browns at Titans, Sun 1 PM"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Earl's runs a different special every day of the week from eleven to ten, and the Thursday-to-Sunday run is Patrón mango ritas, spicy pineapple ritas, house margaritas and then mimosas and Bloody Marys. Saturday the Vols are on the road at South Carolina, 3:30 kickoff, and the board Earl's lists for game days is the one to watch it on: two dollars off drafts and pizza, six-dollar Orange Bliss cocktails, beer buckets at six for the price of five, and four- and five-dollar shots. Every day of the stretch is sunny and 73, so the river tables are open through Sunday, when the Titans host the Browns at one and the mimosas are seven dollars."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Earl's Knoxville — specials and the game-day board",
+          "url": "https://earlsknox.com/specials/"
+        },
+        {
+          "label": "University of Tennessee Athletics — 2026 football schedule",
+          "url": "https://utsports.com/sports/football/schedule/2026"
+        },
+        {
+          "label": "ESPN — Tennessee Titans schedule",
+          "url": "https://www.espn.com/nfl/team/schedule/_/name/ten"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "earls"
+        ],
+        "igAct": {
+          "none": "a specials board; no act"
+        },
+        "igBanner": [
+          "A different deal every day at Earl's",
+          "Saturday, the Vols board for South Carolina at 3:30"
+        ],
+        "standing": true,
+        "standingKey": "earls-specials-board"
+      }
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "What's happening in SoKno this weekend.",
+      "description": "Your weekend listen — Sevier Avenue closes for trick-or-treating Friday, Scruffy Roots Fest gets its new date on the Kern's lawn, Annie Baker's John opens at the Borderland Playhouse, the Enchanted Forest at Mead's Quarry, the last paddle of the season, and where the music is Thursday through Sunday.",
+      "duration": "05:55",
+      "src": "/audio/2026-10-21.mp3"
+    },
+    "calendar": [
+      {
+        "month": "OCT",
+        "day": "22",
+        "title": "Tree planting on the SoKno Rail Trail",
+        "meta": "9 AM – noon · free · 1701 Island Home Ave",
+        "starred": false,
+        "href": "#rail-trail-tree-planting"
+      },
+      {
+        "month": "OCT",
+        "day": "22",
+        "title": "Patrón mango ritas at Earl's",
+        "meta": "$10 · 11 AM – 10 PM · 610 Waterfront Dr",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "OCT",
+        "day": "22",
+        "title": "Monsters Made with Love workshop at Kern's",
+        "meta": "5:30 – 7:30 PM · $50 · kids in costume · 2201 Kern's Rising Way",
+        "starred": false,
+        "href": "#monsters-workshop-kerns"
+      },
+      {
+        "month": "OCT",
+        "day": "22",
+        "title": "JOHN OPENS AT THE BORDERLAND PLAYHOUSE",
+        "meta": "7:30 PM · $20 · 802 Sevier Ave",
+        "starred": true,
+        "href": "#john-borderland"
+      },
+      {
+        "month": "OCT",
+        "day": "22",
+        "title": "Captain Ed and FreQ-K at Fly by Night",
+        "meta": "Evening · industrial · 906 Sevier Ave",
+        "starred": false,
+        "href": "#industrial-night-fbn"
+      },
+      {
+        "month": "OCT",
+        "day": "23",
+        "title": "Spicy pineapple ritas at Earl's",
+        "meta": "$9 · 11 AM – 10 PM · 610 Waterfront Dr",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "OCT",
+        "day": "23",
+        "title": "SPOOKY STREETS ON SEVIER AVENUE",
+        "meta": "5 – 7:30 PM · free · part of the street closed · trick-or-treating",
+        "starred": true,
+        "href": "#spooky-streets"
+      },
+      {
+        "month": "OCT",
+        "day": "23",
+        "title": "Rodney Lee and Corey Kimbro at Trailhead",
+        "meta": "Music at 7 PM · outdoors · 1317 Island Home Ave",
+        "starred": false,
+        "href": "#trailhead-rodney-lee"
+      },
+      {
+        "month": "OCT",
+        "day": "23",
+        "title": "Mischief Night at Ijams Nature Center",
+        "meta": "7 – 9 PM · $15 · ages 6+ · 2915 Island Home Ave",
+        "starred": false,
+        "href": "#mischief-night"
+      },
+      {
+        "month": "OCT",
+        "day": "23",
+        "title": "John at the Borderland Playhouse",
+        "meta": "8 PM (street closure) · $20 · 802 Sevier Ave",
+        "starred": false,
+        "href": "#john-borderland"
+      },
+      {
+        "month": "OCT",
+        "day": "23",
+        "title": "The Big Pink House Party: drum and bass",
+        "meta": "9 PM · $10 online, $15 door · 21+ · 1147 Sevier Ave",
+        "starred": false,
+        "href": "#big-pink-house-party"
+      },
+      {
+        "month": "OCT",
+        "day": "24",
+        "title": "Storytime, then the Enchanted Forest at Mead's Quarry",
+        "meta": "Storytime 10 – noon free · Enchanted Forest 3 – 8 PM, $10, timed entry · 3526 Island Home Ave",
+        "starred": true,
+        "href": "#enchanted-forest"
+      },
+      {
+        "month": "OCT",
+        "day": "24",
+        "title": "Vols pint deal at Printshop: Tennessee at South Carolina",
+        "meta": "$1 off pints from 3 PM to the final whistle · 1532 Island Home Ave",
+        "starred": false,
+        "href": "#printshop-vols-pints"
+      },
+      {
+        "month": "OCT",
+        "day": "24",
+        "title": "Vols board at Earl's: Tennessee at South Carolina, 3:30",
+        "meta": "$2 off drafts and pizza · 6-for-5 buckets · 610 Waterfront Dr",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "OCT",
+        "day": "24",
+        "title": "John at the Borderland Playhouse",
+        "meta": "7:30 PM · $20 · 802 Sevier Ave",
+        "starred": false,
+        "href": "#john-borderland"
+      },
+      {
+        "month": "OCT",
+        "day": "24",
+        "title": "Vampire night for the sapphic crowd at Fly by Night",
+        "meta": "DJ Iris at 10 PM · fangs required · 906 Sevier Ave",
+        "starred": false,
+        "href": "#vampire-night-fbn"
+      },
+      {
+        "month": "OCT",
+        "day": "25",
+        "title": "Mimosas and Bloody Marys at Earl's",
+        "meta": "$7 · 11 AM – 10 PM · Browns at Titans, 1 PM",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "OCT",
+        "day": "25",
+        "title": "SCRUFFY ROOTS FEST ON THE KERN'S LAWN, THE NEW DATE",
+        "meta": "1 – 7:30 PM · free · six acts · 2201 Kern's Rising Way",
+        "starred": true,
+        "href": "#scruffy-roots-fest-oct-25"
+      },
+      {
+        "month": "OCT",
+        "day": "25",
+        "title": "John, Sunday matinee at the Borderland Playhouse",
+        "meta": "2 PM · $20 · 802 Sevier Ave",
+        "starred": false,
+        "href": "#john-borderland"
+      },
+      {
+        "month": "OCT",
+        "day": "25",
+        "title": "The Crossword Play at Ijams Nature Center",
+        "meta": "2 – 3:30 PM · register · 2915 Island Home Ave",
+        "starred": false,
+        "href": "#crossword-play"
+      },
+      {
+        "month": "OCT",
+        "day": "25",
+        "title": "The Lonetones at Trailhead",
+        "meta": "Music at 4 PM · outdoors · 1317 Island Home Ave",
+        "starred": false,
+        "href": "#trailhead-lonetones"
+      },
+      {
+        "month": "OCT",
+        "day": "25",
+        "title": "Full Moon Paddle, the last of the season",
+        "meta": "6:30 – 8:30 PM · $45 · ages 14+ · 3507 Island Home Pike · hike at the same hour, $15",
+        "starred": false,
+        "href": "#hunter-moon-paddle"
+      },
+      {
+        "month": "OCT",
+        "day": "25",
+        "title": "Best if Used By, free readers' theatre",
+        "meta": "7 PM · free · Borderland Playhouse, 802 Sevier Ave",
+        "starred": false,
+        "href": "#best-if-used-by"
+      }
+    ]
+  }
+}
