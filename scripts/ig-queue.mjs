@@ -10,7 +10,7 @@
 process.env.TZ = "America/New_York"; // all slot math is SoKno-local
 import fs from "node:fs";
 import path from "node:path";
-import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, DAY_START_HOUR, placeDaySlots, SAME_DAY_GAP_H, MAX_VENUE_POSTS_PER_DAY } from "./ig-schedule.mjs";
+import { spaceOutPosts, MIN_GAP_MIN, nextDaylightSlot, placeDaySlots, SAME_DAY_GAP_H, MAX_VENUE_POSTS_PER_DAY } from "./ig-schedule.mjs";
 import { priorRunsById, pickRepeatsToDrop, standingKeyOf, MAX_REPEATS_PER_EPISODE } from "./ig-repeats.mjs";
 import { checkBanner } from "./ig-banner-check.mjs";
 import { buildRoundup, buildVenueRoundup, pickSingles, roundupIsOn, venueCarouselsOn, MAX_SINGLES_PER_VENUE } from "./ig-roundup.mjs";
@@ -337,32 +337,13 @@ else {
 // ── Weekly promo pair (scripts/ig-promos.py). These OPEN the drip — they announce the
 // episode and the tip line, so they must land before the stories they introduce.
 // spaceOutPosts honours `lead`/`leadOrder` regardless of the clock times below.
-// The promo pair used to be stamped with the clock at build time, so a publish that
-// ran after midnight opened the whole drip at 01:45 in the morning. Floor it to the
-// episode's own publish day and the daytime window instead; `lead`/`leadOrder` still
-// decide the order, so the minute here only has to be sane.
-// A9: aim, don't just floor. The old version took max(now, publishDay 09:00) and
-// walked it into the 09:00–20:00 band, so a 16:55 publish opened the drip at 17:00 —
-// the second-worst cell in the slot table. Now it targets the next 09:00–13:00
-// window instead, which on a late publish means the following morning.
-//
-// The ceiling matters: leads are placed first and spaceOutPosts walks everything
-// after them, so a lead pushed to tomorrow morning would drag tonight's stories
-// along with it. Clamp the target to just before the earliest story so the cards
-// still open the run without displacing the run.
-const earliestStoryMs = posts.length
-  ? Math.min(...posts.map((p) => new Date(p.postAt).getTime()))
-  : Infinity;
-// Room for the two lead cards plus a gap before the first story.
-const promoCeiling = earliestStoryMs === Infinity
-  ? Infinity
-  : earliestStoryMs - 3 * MIN_GAP_MIN * 60000;
-
+// Andy (2026-10-21): the new-episode post goes up with the episode. This runs at
+// publish, so "now" is when the site went live; No. 19 published Monday 16:37 and
+// its roundup waited for Wednesday 09:01, a day and a half behind the site. The only
+// floor left is the daytime band, so an after-midnight publish (No. 12 opened at
+// 01:45) still waits for 09:00. spaceOutPosts adds the LEAD_MIN grace after approval.
 function isoPromoSlot(min) {
-  const openAt = new Date(`${episode.date}T12:00:00-04:00`);
-  openAt.setHours(DAY_START_HOUR, 0, 0, 0);
-  const floor = Math.max(Date.now(), openAt.getTime());
-  const d = new Date(nextLeadWindow(floor, promoCeiling) + min * 60000);
+  const d = new Date(nextDaylightSlot(Date.now()) + min * 60000);
   const p = (n) => String(n).padStart(2, "0");
   return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}:00-04:00`;
 }
