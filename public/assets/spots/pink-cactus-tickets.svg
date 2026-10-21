@@ -650,7 +650,6 @@
   <rect x="60" y="48" width="680" height="344" rx="30" fill="none" stroke="#A15B43" stroke-width="11"/>
   <path d="M151 57v326M649 57v326" fill="none" stroke="#A15B43" stroke-width="9" stroke-dasharray="17 14"/>
   <g fill="#171512" text-anchor="middle" mask="url(#worn-ink)">
-    <text x="400" y="112" font-family="Georgia,serif" font-size="32" font-style="italic">click to</text>
     <g font-family="Rockwell, 'DejaVu Serif', Georgia, serif" font-weight="900">
       <text x="400" y="230" font-size="140" textLength="330" lengthAdjust="spacingAndGlyphs">GET</text>
       <text x="400" y="346" font-size="110" textLength="465" lengthAdjust="spacingAndGlyphs">TICKETS</text>
