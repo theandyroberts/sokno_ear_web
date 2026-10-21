@@ -76,6 +76,13 @@ export const Social = z.object({
   standingKey: z.string().optional(),
 });
 
+// A reusable venue ticket button, placed immediately below the story deck.
+export const Ticket = z.object({
+  href: z.string().url().regex(/^https?:\/\//),
+  image: z.string().min(1),
+  alt: z.string().min(1),
+});
+
 export const StorySchema = z.object({
   id: z.string(),
   label: z.string(),
@@ -86,6 +93,7 @@ export const StorySchema = z.object({
   imageCaption: z.string().optional(),
   /** A click opens the image full screen with zoom and pan: maps, diagrams, anything with detail. */
   imageZoom: z.boolean().optional(),
+  ticket: Ticket.optional(),
   title: z.string(),
   deck: z.string().optional(),
   facts: z.array(Fact).default([]),

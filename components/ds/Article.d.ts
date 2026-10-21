@@ -19,6 +19,8 @@ export interface ArticleProps {
   imageCaption?: string;
   /** Opens the image full screen on a click, with zoom and pan — for maps and diagrams. @default false */
   imageZoom?: boolean;
+  /** Compact ticket link immediately below the headline/deck. */
+  ticket?: { href: string; image: string; alt: string };
   title: React.ReactNode;
   /** One- or two-sentence deck explaining why the story matters. */
   deck?: React.ReactNode;

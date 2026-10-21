@@ -550,7 +550,8 @@
         },
         {
           "label": "Tickets",
-          "value": "The link in @tjo.bpm's bio"
+          "value": "Get tickets for Big Pink House Party Vol. 5",
+          "href": "https://toast.app/r/the-pink-cactus/experiences/big-pink-house-party-vol-5?utm_source=toast.app&partySize=2&date=2026-10-23&time=21%3A00"
         },
         {
           "label": "Earlier",
@@ -604,7 +605,12 @@
         ]
       },
       "image": "/assets/spots/dnb_sneakers_jump.jpg",
-      "imageCaption": "Drum and bass for the first time, nine till late"
+      "imageCaption": "Drum and bass for the first time, nine till late",
+      "ticket": {
+        "href": "https://toast.app/r/the-pink-cactus/experiences/big-pink-house-party-vol-5?utm_source=toast.app&partySize=2&date=2026-10-23&time=21%3A00",
+        "image": "/assets/spots/pink-cactus-tickets.svg",
+        "alt": "Get tickets at The Pink Cactus"
+      }
     },
     {
       "id": "industrial-night-fbn",

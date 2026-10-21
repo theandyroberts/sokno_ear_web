@@ -1,6 +1,7 @@
 import React from "react";
 import { Tag } from "./Tag.jsx";
 import { ZoomableImage } from "../ZoomableImage";
+import { TicketLink } from "../TicketLink";
 
 /**
  * Article — a full inline story for the one-page weekly paper. Everything is
@@ -20,6 +21,7 @@ export function Article({
   image,
   imageCaption,
   imageZoom = false,
+  ticket,
   title,
   deck,
   facts = [],
@@ -120,6 +122,8 @@ export function Article({
           {deck}
         </p>
       )}
+
+      {ticket && <TicketLink {...ticket} />}
 
       {isHero && figure}
 

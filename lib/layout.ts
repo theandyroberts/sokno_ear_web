@@ -48,7 +48,8 @@ function storyChars(s: Story): number {
 /** Rendered height of a story in the feature column, in px. */
 export function estimateStoryHeight(s: Story): number {
   const image = s.layout === "imageTop" || s.layout === "banner" ? IMAGE_TOP_EXTRA : 0;
-  return Math.round(STORY_BASE + STORY_PER_CHAR * storyChars(s) + image);
+  const ticket = s.ticket ? 240 : 0; // compact 360px ticket, caption and spacing
+  return Math.round(STORY_BASE + STORY_PER_CHAR * storyChars(s) + image + ticket);
 }
 
 /** Rendered height of the sidebar beside the feature, in px. */

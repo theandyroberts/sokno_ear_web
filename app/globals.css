@@ -130,3 +130,17 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
      more about the stop than a generic fork-and-knife does. */
   .ds-cat { display: none; }
 }
+
+/* Reusable venue ticket: a compact, obvious link above the article facts. */
+.ear-ticket { width: 100%; max-width: 360px; margin: 0 0 20px; }
+.ear-ticket-link { display: block; color: var(--rust); border-radius: 12px; text-decoration: none; }
+.ear-ticket-link img { display: block; width: 100%; height: auto; transition: transform 100ms ease, filter 100ms ease; }
+.ear-ticket-caption { display: block; margin-top: 3px; font-family: var(--font-body); font-size: 14px; text-align: center; text-decoration: underline; text-underline-offset: 3px; }
+.ear-ticket-caption > span:last-child { font-size: 12px; }
+.ear-ticket-link:hover img { transform: rotate(-1deg) translateY(-2px); filter: contrast(1.08); }
+.ear-ticket-link:hover { color: var(--ink-black); }
+.ear-ticket-link:focus-visible { outline: 3px solid var(--rust); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) {
+  .ear-ticket-link img { transition: none; }
+  .ear-ticket-link:hover img { transform: none; }
+}
