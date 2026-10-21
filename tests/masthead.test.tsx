@@ -12,6 +12,7 @@ describe("Masthead", () => {
         sections={[{ id: "events", label: "Events" }]}
       />
     );
+    expect(screen.getByRole("link", { name: "The South Knoxville Ear home" })).toHaveAttribute("href", "/");
     expect(screen.getByText(/Weekend Episode/)).toBeInTheDocument();
     const link = screen.getByRole("link", { name: "Events" });
     expect(link.getAttribute("href")).toBe("#events");

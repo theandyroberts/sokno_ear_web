@@ -101,7 +101,9 @@ describe("DirtySouth checklist", () => {
   });
   it("escape hatches back to the Ear exist top and bottom", () => {
     render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" />);
-    const home = screen.getAllByRole("link", { name: /read this week's episode/i });
+    const invitation = screen.getByRole("link", { name: "SOUTH KNOXVILLE EVENTS AND RUMORS -- GO TO THIS WEEK'S EPISODE" });
+    expect(invitation).toHaveAttribute("href", "/");
+    const home = screen.getAllByRole("link", { name: /(?:go to|read) this week's episode/i });
     expect(home.length).toBeGreaterThanOrEqual(2);
     home.forEach((a) => expect(a).toHaveAttribute("href", "/"));
   });

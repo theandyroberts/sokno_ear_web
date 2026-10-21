@@ -1,4 +1,5 @@
 import * as React from "react";
+import Link from "next/link";
 import type { Episode } from "@/lib/schema";
 import { Masthead } from "@/components/Masthead";
 import { Article } from "@/components/ds/Article.jsx";
@@ -160,9 +161,9 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
   );
 
   return (
-    <main id="top">
+    <main id="top" className={storyView ? "ear-story-view" : undefined}>
       <JsonLd episode={episode} storyUrl={storyView ? `https://soknoear.com/${episode.slug}/${feature.id}` : undefined} />
-      <Masthead volLine={volLine} dateline={dateline} shortDate={shortDate} sections={sections} days={episodeDays} />
+      <Masthead volLine={volLine} dateline={dateline} shortDate={shortDate} sections={sections} days={storyView ? undefined : episodeDays} />
 
       {/* Phones: the Dirty South doorway rides directly under the header (see globals.css) */}
       <div className="ds-card-mobile">
@@ -174,7 +175,7 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
       {/* DAY BOARD — when a single day is picked, the calendar steps out of the sidebar and
           runs full width directly under the nav, so the chosen day always has something
           above the fold even if the feature isn't on that day. Hidden on "All". */}
-      {episodeDays.length > 0 && (
+      {!storyView && episodeDays.length > 0 && (
         <div className="ear-dayboard" style={{ background: "var(--paper-shadow)", borderBottom: "var(--border-rule) double var(--ink-black)", padding: "20px 0 24px" }}>
           <Page>
             <section style={{ background: "var(--paper-bright)", border: "var(--border-ink) solid var(--ink-black)", borderRadius: "var(--radius-md)", overflow: "hidden", boxShadow: "var(--shadow-lift)" }}>
@@ -196,7 +197,7 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
       {/* FEATURE BAND */}
       <div id="events" data-days={daysAttr(feature.days)} style={{ borderBottom: "var(--border-rule) double var(--ink-black)", padding: "28px 0 32px" }}>
         <Page>
-          <div className="ear-twocol" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.9fr) minmax(0, 1fr)", gap: 36, alignItems: "start" }}>
+          <div className={`ear-twocol${storyView ? " ear-story-columns" : ""}`} style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.9fr) minmax(0, 1fr)", gap: 36, alignItems: "start" }}>
             <div className="ear-maincol">
               <Article id={feature.id} label={feature.label} labelColor={feature.labelColor} days={feature.days} image={feature.image} imageCaption={feature.imageCaption} imageZoom={feature.imageZoom} ticket={feature.ticket} title={feature.title} deck={feature.deck} facts={factNodes(feature.facts)} layout={feature.layout}>
                 <ArticleBody blocks={feature.body} />
@@ -205,23 +206,30 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
               </Article>
               {lifted.map((s) => renderStory(s, true))}
             </div>
-            <aside id="listen" style={{ display: "flex", flexDirection: "column", gap: 22, position: "sticky", top: 16 }}>
+            <aside id="listen" style={{ display: "flex", flexDirection: "column", gap: 22, position: storyView ? "static" : "sticky", top: 16 }}>
               <div className="ds-card-desktop">
                 <DirtySouthCard />
               </div>
+              {storyView && <SubscribeForm variant="sidebar" />}
               {sidebar.audio && (
                 <AudioBriefingPlayer title={sidebar.audio.title} intro={sidebar.audio.intro} description={sidebar.audio.description} duration={sidebar.audio.duration} src={sidebar.audio.src} />
               )}
-              <div className="ear-soon-aside">
-              <Well title="What's Happening Soon">
-                {renderCalendar()}
-                {sidebar.calendar.some((c) => c.starred) && (
-                  <div style={{ padding: "8px 4px 4px", fontFamily: "var(--font-label)", fontSize: "var(--label-sm)", letterSpacing: "var(--tracking-label)", textTransform: "uppercase", color: "var(--ink-faded)", textAlign: "right" }}>
-                    <span aria-hidden style={{ color: "var(--rust)" }}>★</span> don&rsquo;t miss it
-                  </div>
-                )}
-              </Well>
-              </div>
+              {storyView ? (
+                <Link className="ear-home-link" href="/">
+                  Home <span aria-hidden="true">→</span>
+                </Link>
+              ) : (
+                <div className="ear-soon-aside">
+                <Well title="What's Happening Soon">
+                  {renderCalendar()}
+                  {sidebar.calendar.some((c) => c.starred) && (
+                    <div style={{ padding: "8px 4px 4px", fontFamily: "var(--font-label)", fontSize: "var(--label-sm)", letterSpacing: "var(--tracking-label)", textTransform: "uppercase", color: "var(--ink-faded)", textAlign: "right" }}>
+                      <span aria-hidden style={{ color: "var(--rust)" }}>★</span> don&rsquo;t miss it
+                    </div>
+                  )}
+                </Well>
+                </div>
+              )}
             </aside>
           </div>
           {/* Below the feature: the map card and the signup ride side by side under the
@@ -254,7 +262,7 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
           siblings render as teaser cards linking to their own pages, so each story
           page is mostly its own story (that's what lets them rank individually). */}
       {storyView ? (
-        <div style={{ padding: "30px 0" }}>
+        <div className="ear-more-stories" style={{ padding: "30px 0" }}>
           <Page>
             <SectionHeader>More From This Weekend</SectionHeader>
             <div className="ear-scanner" style={{ display: "grid", gap: 16, "--scanner-cols": stories.length <= 5 ? Math.max(stories.length, 1) : (stories.length % 4 === 1 ? 5 : 4) } as React.CSSProperties}>

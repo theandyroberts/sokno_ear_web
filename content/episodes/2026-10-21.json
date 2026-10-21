@@ -570,6 +570,15 @@
         {
           "type": "paragraph",
           "text": "The bar downstairs serves Latin-inspired food and cocktails, the front-yard patio has covered seating and yard games, and the private karaoke rooms upstairs book separately. Friday is the night the district closes the avenue for Spooky Streets until seven thirty, so the sidewalks will be full of costumes when the doors open an hour and a half later; the parking lots at either end of the district are the easy ones."
+        },
+        {
+          "type": "paragraph",
+          "runs": [
+            {
+              "text": "Get tickets",
+              "href": "https://toast.app/r/the-pink-cactus/experiences/big-pink-house-party-vol-5?utm_source=toast.app&partySize=2&date=2026-10-23&time=21%3A00"
+            }
+          ]
         }
       ],
       "sources": [

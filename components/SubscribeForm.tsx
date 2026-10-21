@@ -117,13 +117,14 @@ type SubscribeState = "idle" | "busy" | "error" | "welcomed" | "already";
  *  - "band"  — the bottom of the read, beside "Tell the Ear", where the phone-in card
  *              used to be. The courier sits beside the copy and the pitch is the
  *              second-chance one: you read this far, don't miss the next one.
- * Each placement gets its own input id so two forms on one page stay valid HTML.
+ *  - "sidebar" — a compact signup on standalone articles, above the audio briefing.
+ * Each placement gets its own input id so repeated forms stay valid HTML.
  */
-export function SubscribeForm({ variant = "well" }: { variant?: "well" | "band" }) {
+export function SubscribeForm({ variant = "well" }: { variant?: "well" | "band" | "sidebar" }) {
   const [email, setEmail] = React.useState("");
   const [company, setCompany] = React.useState(""); // honeypot
   const [state, setState] = React.useState<SubscribeState>("idle");
-  const inputId = variant === "band" ? "subscribe-email-band" : "subscribe-email";
+  const inputId = variant === "well" ? "subscribe-email" : `subscribe-email-${variant}`;
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -173,7 +174,7 @@ export function SubscribeForm({ variant = "well" }: { variant?: "well" | "band" 
   const form = (
     <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "var(--space-3, 12px)" }}>
       <input
-        type="email"
+        type="email" aria-label="Email address"
         id={inputId} name="subscribe-email" autoComplete="email"
         placeholder="Your email address"
         value={email}
@@ -204,6 +205,18 @@ export function SubscribeForm({ variant = "well" }: { variant?: "well" | "band" 
       )}
     </form>
   );
+
+  if (variant === "sidebar") {
+    return (
+      <section style={{ ...boxStyle, height: "auto" }}>
+        <div style={headingStyle}>★ Get the Weekend Delivered</div>
+        <p style={copyStyle}>
+          One free email each Wednesday: the weekend’s events, stories and audio briefing.
+        </p>
+        {form}
+      </section>
+    );
+  }
 
   if (variant === "band") {
     return (

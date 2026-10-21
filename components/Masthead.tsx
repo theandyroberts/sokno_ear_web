@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Link from "next/link";
 
 interface Section {
   id: string;
@@ -97,11 +98,13 @@ export function Masthead({ volLine, dateline, shortDate, sections, days }: Masth
       </div>
 
       <div style={{ background: "var(--paper-cream)", padding: "18px 16px 14px", textAlign: "center" }}>
-        <img
-          src="/assets/masthead.jpg"
-          alt="The South Knoxville Ear — We Hear Things."
-          style={{ width: "100%", maxWidth: 1180, height: "auto", margin: "0 auto" }}
-        />
+        <Link className="ear-masthead-link" href="/" aria-label="The South Knoxville Ear home">
+          <img
+            src="/assets/masthead.jpg"
+            alt="The South Knoxville Ear — We Hear Things."
+            style={{ width: "100%", maxWidth: 1180, height: "auto", margin: "0 auto" }}
+          />
+        </Link>
       </div>
 
       <div

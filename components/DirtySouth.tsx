@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Link from "next/link";
 import type { NightDay, NightItem, Sponsor } from "@/lib/nightlife";
 import { NightIcon, type NightCat } from "@/components/DirtySouthIcons";
 
@@ -254,17 +255,11 @@ export function DirtySouth({
 
   return (
     <div style={{ background: GREEN, minHeight: "100vh", color: INK }}>
-      {/* top escape hatch back to the planners' side */}
-      <a
-        href="/"
-        style={{
-          display: "block", background: INK, color: GREEN, textDecoration: "none",
-          padding: "10px 16px", fontFamily: "var(--font-label)", fontSize: "0.72rem",
-          letterSpacing: "0.14em", textTransform: "uppercase",
-        }}
-      >
-        ★ The South Knoxville Ear — read this week&apos;s episode →
-      </a>
+      {/* The homepage always serves the current week's episode. */}
+      <Link className="ds-superheader" href="/">
+        SOUTH KNOXVILLE EVENTS AND RUMORS{" "}
+        <span style={{ whiteSpace: "nowrap" }}>-- GO TO THIS WEEK&apos;S EPISODE</span>
+      </Link>
 
       <div style={{ maxWidth: 720, margin: "0 auto", padding: "28px 20px 40px" }}>
         <h1

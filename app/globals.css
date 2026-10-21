@@ -144,3 +144,40 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
   .ear-ticket-link img { transition: none; }
   .ear-ticket-link:hover img { transform: none; }
 }
+
+/* Standalone article routes have a compact sidebar, with no day-by-day roster.
+   Keep tablets in two columns; the full issue retains its existing breakpoint. */
+.ear-story-columns > * { min-width: 0; }
+.ear-story-view .ear-home-link {
+  display: block; padding: 16px 18px;
+  border: var(--border-ink) solid var(--ink-black); border-radius: var(--radius-sm);
+  color: var(--green-bridge); background: var(--paper-bright);
+  font-family: var(--font-label); font-weight: 400;
+  text-underline-offset: 4px;
+}
+.ear-story-view .ear-home-link:hover { color: var(--ink-black); }
+.ear-story-view .ear-home-link:focus-visible,
+.ear-story-view #subscribe-email-sidebar:focus-visible {
+  outline: 3px solid var(--rust) !important; outline-offset: 3px;
+}
+.ear-story-view .ear-more-stories h2 { white-space: normal !important; text-align: center; }
+@media (min-width: 768px) {
+  .ear-story-view .ear-story-columns {
+    grid-template-columns: minmax(0, 1.9fr) minmax(260px, 1fr) !important;
+    gap: 24px !important;
+  }
+  .ear-story-view .ds-card-mobile { display: none; }
+  .ear-story-view .ds-card-desktop { display: block; }
+}
+
+/* Navigation remains easy to find without competing with the article. */
+.ear-masthead-link { display: block; max-width: 1180px; margin: 0 auto; }
+.ear-masthead-link:focus-visible { outline: 3px solid var(--green-bridge); outline-offset: 4px; }
+.ds-superheader {
+  display: block; box-sizing: border-box; min-height: 64px;
+  background: #131309; color: #CDE24A; text-decoration: none;
+  padding: 18px clamp(16px, 3vw, 28px);
+  font-family: var(--font-label); font-size: clamp(1rem, 1.8vw, 1.25rem);
+  line-height: 1.45; letter-spacing: 0.06em; text-transform: uppercase;
+}
+.ds-superheader:focus-visible { outline: 3px solid currentColor; outline-offset: -5px; }
