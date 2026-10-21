@@ -35,6 +35,22 @@ describe("DirtySouth checklist", () => {
     fireEvent.click(screen.getByRole("tab", { name: "Sun" }));
     expect(screen.getByText("Sunday night")).toBeInTheDocument();
   });
+  it("shows the booking ticket only on the Friday Pink Cactus event, separate from its article link", () => {
+    render(<DirtySouth days={nightlife.days} defaultDay="Fri" weekend={nightlife.weekend} fontClass="" />);
+    const item = nightlife.days.Fri.find((i) => i.id === "fri-pinkcactus")!;
+    expect(item.time).toBe("9:00 PM");
+    const ticket = screen.getByRole("link", { name: "Get tickets at The Pink Cactus (opens in a new tab)" });
+    expect(ticket).toHaveAttribute("href", item.ticket!.href);
+    expect(ticket).toHaveAttribute("target", "_blank");
+    expect(ticket).toHaveAttribute("rel", "noopener noreferrer");
+    expect(ticket.closest(".ds-listing")).toHaveTextContent(item.headline);
+    expect(ticket.parentElement?.closest("a")).toBeNull();
+    expect(ticket.querySelector(".ear-ticket-caption")).toBeNull();
+    expect(screen.getByRole("link", { name: /9:00 PM.*The Big Pink House Party/i })).toHaveAttribute("href", item.href);
+    expect(screen.getByAltText("Get tickets at The Pink Cactus")).toHaveAttribute("src", "/assets/spots/pink-cactus-tickets-dirty-south.svg");
+    fireEvent.click(screen.getByRole("tab", { name: "Sat" }));
+    expect(screen.queryByRole("link", { name: /Get tickets at The Pink Cactus/i })).not.toBeInTheDocument();
+  });
   it("checking a box persists to localStorage scoped to this weekend; tapping a link marks it done", () => {
     render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" />);
     const first = nightlife.days.Thu[0];

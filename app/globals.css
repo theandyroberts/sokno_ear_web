@@ -119,12 +119,14 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
    2.5x the original 112x74 — Andy, 2026-10-06: "give the venues a bit more
    love." The headline keeps ~290px beside it in the 720px column. */
 .ds-logo { width: 280px; height: 185px; }
+.ds-listing { flex: 1; min-width: 0; }
+.ds-listing .ear-ticket { max-width: 220px; margin: 14px 0 0; }
 @media (max-width: 560px) {
   /* A phone can't carry the checkbox, the headline AND a 2.5x chip across
      375px, so the row wraps: the headline takes the first line and the chip
      sits under it, indented past the checkbox, still 2.5x the old phone size. */
   .ds-row { flex-wrap: wrap; }
-  .ds-row > a { flex: 1 1 160px; }
+  .ds-row > .ds-listing { flex: 1 1 160px; }
   .ds-logo { width: 180px; height: 125px; padding: 6px !important; margin-left: 48px; }
   /* The category stamp went when the logo arrived: the venue's own mark says
      more about the stop than a generic fork-and-knife does. */

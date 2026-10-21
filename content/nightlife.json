@@ -166,7 +166,12 @@
         "headline": "The Big Pink House Party: all drum and bass",
         "sub": "Andrew Fetch, BLINDSIDE, Bounce Back · $10 online, $15 door · 21+ · 1147 Sevier Ave",
         "cat": "dance",
-        "href": "/2026-10-21/big-pink-house-party"
+        "href": "/2026-10-21/big-pink-house-party",
+        "ticket": {
+          "href": "https://toast.app/r/the-pink-cactus/experiences/big-pink-house-party-vol-5?utm_source=toast.app&partySize=2&date=2026-10-23&time=21%3A00",
+          "image": "/assets/spots/pink-cactus-tickets-dirty-south.svg",
+          "alt": "Get tickets at The Pink Cactus"
+        }
       }
     ],
     "Sat": [

@@ -1,4 +1,6 @@
 import fs from "node:fs";
+import type { z } from "zod";
+import type { Ticket } from "@/lib/schema";
 import path from "node:path";
 import { matchVenue, type VenueRegistry } from "@/lib/venues";
 
@@ -11,6 +13,8 @@ export type NightItem = {
   headline: string;
   sub?: string;
   href: string;
+  /** Optional booking button for this specific event. */
+  ticket?: z.infer<typeof Ticket>;
   /** Icon anchor: food | drink | music | dance | mic | star */
   cat?: string;
   /** Filled in at render time from content/venues.json — never stored in the

@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import Link from "next/link";
+import { TicketLink } from "@/components/TicketLink";
 import type { NightDay, NightItem, Sponsor } from "@/lib/nightlife";
 import { NightIcon, type NightCat } from "@/components/DirtySouthIcons";
 
@@ -375,21 +376,24 @@ export function DirtySouth({
                   <span className="ds-cat" style={{ marginTop: 3, opacity: done ? 0.55 : 1 }}>
                     <NightIcon cat={(item.cat ?? "star") as NightCat} size={30} rotate={idx % 2 ? 4 : -4} />
                   </span>
-                  <a
-                    href={item.href}
-                    {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                    onClick={() => mark(item.id, true)}
-                    style={{ textDecoration: "none", color: INK, flex: 1, opacity: done ? 0.55 : 1 }}
-                  >
-                    <div className={fontClass} style={{ fontSize: "1.35rem", lineHeight: 1.1, textTransform: "uppercase" }}>
-                      <span style={{ fontSize: "0.78em", opacity: 0.85 }}>{item.time}</span>{" "}
-                      — {item.headline}
-                    </div>
-                    <div style={{ fontFamily: "var(--font-label)", fontSize: "0.74rem", letterSpacing: "0.08em", textTransform: "uppercase", marginTop: 5 }}>
-                      <strong style={{ fontWeight: 800 }}>{item.venue}</strong>
-                      {item.sub ? <span style={{ opacity: 0.75 }}> · {item.sub}</span> : null}
-                    </div>
-                  </a>
+                  <div className="ds-listing">
+                    <a
+                      href={item.href}
+                      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      onClick={() => mark(item.id, true)}
+                      style={{ display: "block", textDecoration: "none", color: INK, opacity: done ? 0.55 : 1 }}
+                    >
+                      <div className={fontClass} style={{ fontSize: "1.35rem", lineHeight: 1.1, textTransform: "uppercase" }}>
+                        <span style={{ fontSize: "0.78em", opacity: 0.85 }}>{item.time}</span>{" "}
+                        — {item.headline}
+                      </div>
+                      <div style={{ fontFamily: "var(--font-label)", fontSize: "0.74rem", letterSpacing: "0.08em", textTransform: "uppercase", marginTop: 5 }}>
+                        <strong style={{ fontWeight: 800 }}>{item.venue}</strong>
+                        {item.sub ? <span style={{ opacity: 0.75 }}> · {item.sub}</span> : null}
+                      </div>
+                    </a>
+                    {item.ticket && <TicketLink {...item.ticket} showCaption={false} />}
+                  </div>
                   <LogoTile
                     logo={item.logo}
                     brand={item.brand ?? item.venue.split(" · ")[0]}
