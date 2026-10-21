@@ -9,6 +9,9 @@ Writes to public/assets/ig/<slug>/:
                       a divider between weeks in the grid.
   call-the-ear.jpg  — the synthwave "call in your events" ad matching the site's
                       Ear-sees-the-future card: neon on dark violet, big phone number.
+  teaser.jpg        — the week's engravings as a contact sheet, no text at all: a
+                      guess-what's-on puzzle that posts after the roundup and before
+                      the single stories (Andy, 2026-10-21).
 
 scripts/ig-queue.mjs schedules both at staging time (episode drop = publish moment).
 All text is rasterized real type — never AI-generated lettering.
@@ -177,6 +180,48 @@ def call_the_ear(dst):
     img.convert("RGB").save(dst, "JPEG", quality=90)
     print(f"  ✓ {dst.name}  ({W}x{H})")
 
+TEASER_COLS, TEASER_ROWS, TEASER_GAP = 3, 4, 8
+
+def teaser_picks(ep, n):
+    """The feature first, then one story per venue label in turn, so the sheet shows
+    the whole week rather than four of one bar's nights."""
+    items = [ep["feature"], *ep["stories"]]
+    seen, picks, lanes = set(), [], {}
+    for s in items:
+        img = s.get("image")
+        if not img or img in seen:
+            continue
+        seen.add(img)
+        lanes.setdefault(s.get("label") or s["id"], []).append(img)
+    while len(picks) < n and any(lanes.values()):
+        for lane in lanes.values():
+            if lane and len(picks) < n:
+                picks.append(lane.pop(0))
+    return picks
+
+def cover_crop(im, w, h):
+    sw, sh = im.size
+    scale = max(w / sw, h / sh)
+    im = im.resize((math.ceil(sw * scale), math.ceil(sh * scale)), Image.LANCZOS)
+    x, y = (im.width - w) // 2, (im.height - h) // 2
+    return im.crop((x, y, x + w, y + h))
+
+def teaser(ep, dst):
+    picks = teaser_picks(ep, TEASER_COLS * TEASER_ROWS)
+    if len(picks) < TEASER_COLS * TEASER_ROWS:
+        print(f"  – teaser.jpg skipped: only {len(picks)} distinct images")
+        return
+    img = Image.new("RGB", (W, H), CREAM)
+    g = TEASER_GAP
+    cw = (W - g * (TEASER_COLS + 1)) // TEASER_COLS
+    ch = (H - g * (TEASER_ROWS + 1)) // TEASER_ROWS
+    for i, rel in enumerate(picks):
+        tile = Image.open(ROOT / "public" / rel.lstrip("/")).convert("RGB")
+        r, c = divmod(i, TEASER_COLS)
+        img.paste(cover_crop(tile, cw, ch), (g + c * (cw + g), g + r * (ch + g)))
+    img.save(dst, "JPEG", quality=90)
+    print(f"  ✓ {dst.name}  ({W}x{H}, {len(picks)} engravings)")
+
 def main():
     slug = sys.argv[1]
     ep = json.loads((ROOT / "content" / "episodes" / f"{slug}.json").read_text())
@@ -184,6 +229,7 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     episode_drop(ep, out / "episode-drop.jpg")
     call_the_ear(out / "call-the-ear.jpg")
+    teaser(ep, out / "teaser.jpg")
 
 if __name__ == "__main__":
     main()

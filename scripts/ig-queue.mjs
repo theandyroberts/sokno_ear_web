@@ -426,6 +426,35 @@ for (const pr of PROMOS) {
   });
 }
 
+// ── The teaser (scripts/ig-promos.py → teaser.jpg). The week's engravings as one
+// contact sheet with no text: a guess-what's-on puzzle that follows the new-episode
+// post and comes before the single stories (Andy, 2026-10-21). Four hours after the
+// lead card, pulled earlier if a story is due sooner; leadOrder keeps it second.
+const TEASER_LINES = [
+  "Everything happening in SoKno this week, in one picture. How many can you guess?",
+  "Guess what's up in the Dirty South this weekend.",
+  "A dozen things happening in South Knoxville this week. Can you name them all?",
+  "Something for every night in SoKno this week. Guess what's on.",
+];
+if (fs.existsSync(path.join(promoDir, "teaser.jpg"))) {
+  const leadAt = new Date(isoPromoSlot(1)).getTime();
+  const at = Math.max(leadAt + MIN_GAP_MIN * 60000, Math.min(leadAt + 4 * 3600000, earliestStoryMs - MIN_GAP_MIN * 60000));
+  const d = new Date(at);
+  const p2 = (n) => String(n).padStart(2, "0");
+  posts.push({
+    id: "teaser",
+    title: `Guess the week (No. ${episode.number})`,
+    postAt: `${d.getFullYear()}-${p2(d.getMonth() + 1)}-${p2(d.getDate())}T${p2(d.getHours())}:${p2(d.getMinutes())}:00-04:00`,
+    imageUrl: `${SITE}/assets/ig/${episode.slug}/teaser.jpg`,
+    permalink: SITE,
+    caption: [TEASER_LINES[episode.number % TEASER_LINES.length], "", "Go to SoKnoEar.com for the details.", "", BASE_HASHTAGS].join("\n"),
+    tags: [],
+    lead: true,
+    leadOrder: 2,
+    status: "pending",
+  });
+}
+
 // ── The weekly Reel (scripts/ig-reel.py cuts it at publish; scripts/ig-reel.mjs is the
 // entry). Publish day, 13:00, after the lead pair. Off on Andy's "Don't" to
 // `weekly-reel`, when there is no mp4, or when this week already went out before a
