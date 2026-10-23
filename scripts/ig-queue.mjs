@@ -10,7 +10,7 @@
 process.env.TZ = "America/New_York"; // all slot math is SoKno-local
 import fs from "node:fs";
 import path from "node:path";
-import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, placeDaySlots, SAME_DAY_GAP_H, MAX_VENUE_POSTS_PER_DAY } from "./ig-schedule.mjs";
+import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, placeDaySlots, assignTimingArms, SAME_DAY_GAP_H, MAX_VENUE_POSTS_PER_DAY } from "./ig-schedule.mjs";
 import { priorRunsById, pickRepeatsToDrop, standingKeyOf, MAX_REPEATS_PER_EPISODE } from "./ig-repeats.mjs";
 import { checkBanner } from "./ig-banner-check.mjs";
 import { buildRoundup, buildVenueRoundup, pickSingles, roundupIsOn, venueCarouselsOn, MAX_SINGLES_PER_VENUE } from "./ig-roundup.mjs";
@@ -295,6 +295,25 @@ else {
       warnings.push(`${handle}: ${MAX_SINGLES_PER_VENUE} single posts this week, and ${vr.stories.length} more in one carousel (${vr.stories.join(", ")})`);
     }
   }
+}
+
+// ── The timing test: half the dated posts go out the day before (assignTimingArms in
+// scripts/ig-schedule.mjs). Runs before the spacing pass so an early post is spaced
+// against whatever else is on its new day. The arm is kept on the post for the
+// Monday review, which compares shares and reach between the two.
+{
+  const dated = posts.filter((p) => p.dated);
+  const arms = assignTimingArms(
+    dated.map((p) => ({ key: p.id, day: p.postAt.slice(0, 10), hour: Number(p.postAt.slice(11, 13)), venue: p.tags[0]?.toLowerCase() })),
+    { floorDay: episode.date, flip: Number(episode.number) % 2 === 1 },
+  );
+  for (const p of dated) {
+    const a = arms.get(p.id);
+    p.timingArm = a.arm;
+    p.postAt = `${a.day}T${String(a.hour).padStart(2, "0")}:00:00-04:00`;
+  }
+  const n = (arm) => dated.filter((p) => p.timingArm === arm).length;
+  warnings.push(`timing test: ${n("early")} posts the day before, ${n("day-of")} day-of${n("no-room") ? `, ${n("no-room")} too close to publish to move` : ""}`);
 }
 
 // ── Same-day spacing (A15) and the venue cap (A16). Stories were stamped with the

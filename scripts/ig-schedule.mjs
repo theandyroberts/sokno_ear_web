@@ -228,3 +228,49 @@ export function placeDaySlots(items, opts = {}) {
   }
   return out;
 }
+
+/**
+ * The timing test (Andy, 2026-10-23: "the Insta posts all seem to be going out
+ * day-of… test sending some out earlier so the venue and artist have time to
+ * reshare"). Every dated post used to go out ~3h before doors on the day, so the
+ * record could not say whether a day's notice gets more reshares; the only posts that
+ * ever went out days ahead were features. Half the dated posts now go out exactly 24
+ * hours before their day-of slot (same hour, day before), so the only thing the arms
+ * differ in is the notice; the other half stay as they were. A first cut moved them
+ * to 11:00 the day before and crowded publish-day morning: the feature got pushed to
+ * Tuesday night.
+ *
+ * Split by venue so a venue's willingness to reshare lands in both arms: posts are
+ * sorted by venue, then time, and alternate. `flip` swaps the arms (the builder passes
+ * the episode number's parity) so a venue with one post a week gets both over two
+ * weeks. A post whose day before is earlier than `floorDay` (publish day) can't go
+ * early and stays day-of, outside the test.
+ *
+ * Pure and timezone-free, like placeDaySlots: days are "YYYY-MM-DD", hours local.
+ *
+ * @param {Array<{key: string, day: string, hour: number, venue?: string}>} items  the dated posts
+ * @param {{floorDay?: string, flip?: boolean}} [opts]
+ * @returns {Map<string, {arm: "early"|"day-of"|"no-room", day: string, hour: number}>}
+ */
+export function assignTimingArms(items, opts = {}) {
+  const { floorDay, flip = false } = opts;
+  const dayBefore = (day) => {
+    const [y, m, d] = day.split("-").map(Number);
+    return new Date(Date.UTC(y, m - 1, d - 1)).toISOString().slice(0, 10);
+  };
+  const out = new Map();
+  const eligible = [];
+  for (const it of items) {
+    if (floorDay && dayBefore(it.day) < floorDay) out.set(it.key, { arm: "no-room", day: it.day, hour: it.hour });
+    else eligible.push(it);
+  }
+  eligible.sort((a, b) =>
+    (a.venue ?? "~").localeCompare(b.venue ?? "~") || a.day.localeCompare(b.day) || a.hour - b.hour || a.key.localeCompare(b.key));
+  eligible.forEach((it, i) => {
+    const early = (i % 2 === 0) !== flip;
+    out.set(it.key, early
+      ? { arm: "early", day: dayBefore(it.day), hour: it.hour }
+      : { arm: "day-of", day: it.day, hour: it.hour });
+  });
+  return out;
+}
