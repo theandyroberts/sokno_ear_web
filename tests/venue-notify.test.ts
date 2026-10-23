@@ -1,5 +1,27 @@
 import { describe, it, expect } from "vitest";
-import { resolveVenues, planNotifications, renderMessage, upcomingStories, lastEventDay, SIGNATURE } from "../scripts/venue-notify-lib.mjs";
+import { resolveVenues, planNotifications, renderMessage, upcomingStories, lastEventDay, SIGNATURE, outreachBcc } from "../scripts/venue-notify-lib.mjs";
+
+describe("outreachBcc", () => {
+  it.each([
+    "venue@example.com",
+    ["first@example.com", "second@example.com"],
+    "not-andy@note15.com",
+    "andy@note15.com.example.org",
+    "andy@updates.note15.com",
+    '"For, andy@note15.com, review" <venue@example.com>',
+  ].map((to) => [to]))("copies Andy for other recipients: %j", (to) => {
+    expect(outreachBcc(to)).toEqual(["andy@note15.com"]);
+  });
+  it.each([
+    "andy@note15.com",
+    " ANDY@NOTE15.COM ",
+    "Andy Roberts <Andy@Note15.com>",
+    ["venue@example.com", "Andy Roberts <andy@note15.com>"],
+    'Venue <venue@example.com>, "Roberts, Andy" <ANDY@NOTE15.COM>',
+  ].map((to) => [to]))("avoids a second copy when Andy is already in To: %j", (to) => {
+    expect(outreachBcc(to)).toBeUndefined();
+  });
+});
 
 const contacts: Record<string, any> = {
   ijams: { name: "Ijams Nature Center", match: ["Ijams"], instagram: "@ijamsnaturecenter", email: "info@ijams.org", introduced: null },

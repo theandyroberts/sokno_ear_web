@@ -1,8 +1,9 @@
 // Tell every venue in an episode that it's in the Ear. Runs on the VPS at publish.
 //
 //   node scripts/venue-notify.mjs [--slug YYYY-MM-DD]   → plan only; writes drafts, sends nothing
-//   node scripts/venue-notify.mjs preview               → every note goes to PREVIEW_TO (Andy) only
+//   node scripts/venue-notify.mjs preview               → every note goes to PREVIEW_TO (defaults to Andy)
 //   node scripts/venue-notify.mjs send                  → send to introduced venues; drafts for the rest
+// Every send BCCs andy@note15.com unless Andy is already in To.
 //
 // Who gets what is decided in venue-notify-lib.mjs. In short: a venue with an
 // `introduced` date in content/contacts.json gets the weekly note automatically;
@@ -18,7 +19,7 @@
 // Mac mini reads that over ssh and creates the Gmail drafts through the connector.
 import fs from "node:fs";
 import path from "node:path";
-import { resolveVenues, planNotifications, renderMessage, upcomingStories, lastEventDay } from "./venue-notify-lib.mjs";
+import { resolveVenues, planNotifications, renderMessage, upcomingStories, lastEventDay, outreachBcc } from "./venue-notify-lib.mjs";
 
 const mode = process.argv[2] && !process.argv[2].startsWith("--") ? process.argv[2] : "plan";
 if (!["plan", "preview", "send"].includes(mode)) {
@@ -79,7 +80,7 @@ for (const p of plan) {
   if (mode === "plan") { console.log(`  → ${label} · would send to ${p.to}`); continue; }
   const to = mode === "preview" ? PREVIEW_TO : p.to;
   try {
-    const r = await resend.emails.send({ from: FROM, to, replyTo: REPLY_TO, subject: mode === "preview" ? `[preview → ${p.to}] ${msg.subject}` : msg.subject, text: msg.text, html: msg.html });
+    const r = await resend.emails.send({ from: FROM, to, bcc: outreachBcc(to), replyTo: REPLY_TO, subject: mode === "preview" ? `[preview → ${p.to}] ${msg.subject}` : msg.subject, text: msg.text, html: msg.html });
     if (r.error) throw new Error(r.error.message ?? JSON.stringify(r.error));
     console.log(`  ✓ ${label} · sent to ${to}${mode === "preview" ? " (preview)" : ""}`);
     if (mode === "send") { sentLog[p.key] = { to, at: new Date().toISOString(), id: r.data?.id ?? null }; fs.writeFileSync(logPath, JSON.stringify(sentLog, null, 2) + "\n"); }

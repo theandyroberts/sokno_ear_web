@@ -9,6 +9,17 @@
 export const SITE = "https://soknoear.com";
 export const IG_PROFILE = "https://www.instagram.com/soknoear/";
 
+// Andy gets a copy of each outreach send unless he is already a recipient
+// (including the default preview). Reply-To alone does not deliver a copy.
+export function outreachBcc(to) {
+  const andy = "andy@note15.com";
+  const recipients = (Array.isArray(to) ? to : [to])
+    // Keep quoted display names together when accepting a recipient list.
+    .flatMap((value) => String(value ?? "").match(/(?:"(?:\\.|[^"\\])*"|<[^<>]*>|[^,;])+/g) ?? [])
+    .map((value) => (value.match(/<([^<>]+)>/)?.[1] ?? value).trim().toLowerCase());
+  return recipients.includes(andy) ? undefined : [andy];
+}
+
 export const SIGNATURE = [
   "Andy Roberts",
   "",
