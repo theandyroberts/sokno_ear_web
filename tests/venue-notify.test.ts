@@ -70,7 +70,7 @@ describe("renderMessage", () => {
   it("keeps the weekly note to a hello and one link", () => {
     const { text, html, subject } = renderMessage({ episode, name: "Ijams Nature Center", contact: contacts.ijams, stories: venues.get("ijams")!.stories , now });
     expect(subject).toBe("Ijams Nature Center is in this week's South Knoxville Ear");
-    expect(text).toBe("Hiya Ijams Nature Center team,\n\nIjams Nature Center has 2 stories in this week's South Knoxville Ear. Here's the link:\n\nhttps://soknoear.com/2026-09-16/lotr-lawn\n\nShare anything you like.\n\nAndy");
+    expect(text).toBe("Hiya Ijams Nature Center team,\n\nIjams Nature Center has 2 stories in this week's South Knoxville Ear. Here's one of them:\n\nhttps://soknoear.com/2026-09-16/lotr-lawn\n\nShare anything you like, it would be a big help.\n\nAndy");
     expect(html).toContain('href="https://soknoear.com/2026-09-16/lotr-lawn"');
     expect(text).not.toContain("caving-trip");
   });
@@ -82,7 +82,9 @@ describe("renderMessage", () => {
     const { text, subject } = renderMessage({ episode, name: "Ijams Nature Center", contact: contacts.ijams, stories: venues.get("ijams")!.stories, first: true , now });
     expect(subject).toBe("I featured Ijams Nature Center in this week's South Knoxville Ear");
     expect(text).toContain("I edit The South Knoxville Ear");
-    expect(text).toContain("we'd love a repost");
+    expect(text).toContain("We'd love a repost");
+    expect(text).toContain("it would be a big help");
+    expect(text).not.toContain("yours to share");
     expect(text).toContain("call or text me directly at 310-292-4925");
     expect(text).not.toContain("tip line");
     expect(text).toContain("2 stories about you");

@@ -111,6 +111,8 @@ const storyUrl = (episode, s) => `${SITE}/${episode.slug}/${s.id}`;
  * with an HTML twin that is the same words, linked. `first` is the introduction
  * variant Andy sends himself.
  */
+const ASK = "Share anything you like, it would be a big help.";
+
 export function renderMessage({ episode, name, contact = {}, stories, first = false, now = Date.now() }) {
   const who = contact.salutation ?? (contact.people?.[0]?.name ? `Hi ${contact.people[0].name.split(" ")[0]},` : `Hiya ${name} team,`);
   const ep = `No. ${episode.number}`;
@@ -127,12 +129,16 @@ export function renderMessage({ episode, name, contact = {}, stories, first = fa
 
   // The weekly note to a venue we already know is a hello and one link (Andy,
   // 2026-10-15: "much shorter than the initial notes... just say hi and here's the link").
+  // We're asking for their help, so the ask says so (Andy, 2026-10-23: "share anything
+  // you like, it would be a big help"); "Share anything you like." alone left Printshop
+  // asking what sharing meant.
   if (!first) {
     const url = storyUrl(episode, stories[0]);
     const line = n === 1 ? `${name} is in this week's South Knoxville Ear.` : `${name} has ${n} stories in this week's South Knoxville Ear.`;
-    const text = [who, "", `${line} Here's the link:`, "", url, "", "Share anything you like.", "", "Andy"].join("\n");
+    const intro = n === 1 ? "Here's the link:" : "Here's one of them:";
+    const text = [who, "", `${line} ${intro}`, "", url, "", ASK, "", "Andy"].join("\n");
     const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    const html = `<div style="font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.55;color:#171512;">${esc(who)}<br><br>${esc(line)} Here's the link:<br><br><a href="${url}" style="color:#A94A34;">${url}</a><br><br>Share anything you like.<br><br>Andy</div>`;
+    const html = `<div style="font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.55;color:#171512;">${esc(who)}<br><br>${esc(line)} ${intro}<br><br><a href="${url}" style="color:#A94A34;">${url}</a><br><br>${ASK}<br><br>Andy</div>`;
     return { subject: `${name} is in this week's South Knoxville Ear`, text, html };
   }
 
@@ -154,7 +160,7 @@ export function renderMessage({ episode, name, contact = {}, stories, first = fa
   for (const s of stories) lines.push(`  • ${s.title}`, `    ${storyUrl(episode, s)}`);
   lines.push(
     "",
-    `${igLine} Everything we publish about you is yours to share — and we'd love a repost, a story, a link, whatever's useful.`,
+    `${igLine} We'd love a repost, a story, a link. ${ASK}`,
     "",
     "If we've got a detail wrong, or there's something coming up you'd like us to know about, just reply to this email. You can also call or text me directly at 310-292-4925.",
     "",
@@ -174,7 +180,7 @@ export function renderMessage({ episode, name, contact = {}, stories, first = fa
 ${p(esc(who))}
 ${p(body)}
 <ul style="margin:0 0 14px 20px;padding:0;font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.5;">${list}</ul>
-${p(`${esc(igLine).replace("@soknoear", `<a href="${IG_PROFILE}" style="color:#A94A34;">@soknoear</a>`)} Everything we publish about you is yours to share — and we'd love a repost, a story, a link, whatever's useful.`)}
+${p(`${esc(igLine).replace("@soknoear", `<a href="${IG_PROFILE}" style="color:#A94A34;">@soknoear</a>`)} We'd love a repost, a story, a link. ${ASK}`)}
 ${p(`If we've got a detail wrong, or there's something coming up you'd like us to know about, just reply to this email. You can also call or text me directly at 310-292-4925.`)}
 ${p(first ? "Thanks for giving the neighborhood things to do." : "Thanks, as always, for keeping South Knoxville interesting.")}
 ${p(SIGNATURE.split("\n").map(esc).join("<br>"))}
