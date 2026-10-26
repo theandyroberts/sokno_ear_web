@@ -252,6 +252,14 @@ export function placeDaySlots(items, opts = {}) {
  * @param {{floorDay?: string, flip?: boolean}} [opts]
  * @returns {Map<string, {arm: "early"|"day-of"|"no-room", day: string, hour: number}>}
  */
+/** The dashboard move that runs the timing test. Andy's "Don't" puts every dated post
+ *  back to its day-of slot and the review's arm table stays empty for that week. */
+export const EARLY_POSTS_MOVE = "early-posts";
+
+export function earlyPostsOn(moves) {
+  return !(moves ?? []).some((m) => m.key === EARLY_POSTS_MOVE && m.answer === "no");
+}
+
 export function assignTimingArms(items, opts = {}) {
   const { floorDay, flip = false } = opts;
   const dayBefore = (day) => {

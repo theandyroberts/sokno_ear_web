@@ -10,7 +10,7 @@
 process.env.TZ = "America/New_York"; // all slot math is SoKno-local
 import fs from "node:fs";
 import path from "node:path";
-import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, placeDaySlots, assignTimingArms, SAME_DAY_GAP_H, MAX_VENUE_POSTS_PER_DAY } from "./ig-schedule.mjs";
+import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, placeDaySlots, assignTimingArms, earlyPostsOn, SAME_DAY_GAP_H, MAX_VENUE_POSTS_PER_DAY } from "./ig-schedule.mjs";
 import { priorRunsById, pickRepeatsToDrop, standingKeyOf, MAX_REPEATS_PER_EPISODE } from "./ig-repeats.mjs";
 import { checkBanner } from "./ig-banner-check.mjs";
 import { buildRoundup, buildVenueRoundup, pickSingles, roundupIsOn, venueCarouselsOn, MAX_SINGLES_PER_VENUE } from "./ig-roundup.mjs";
@@ -300,8 +300,10 @@ else {
 // ── The timing test: half the dated posts go out the day before (assignTimingArms in
 // scripts/ig-schedule.mjs). Runs before the spacing pass so an early post is spaced
 // against whatever else is on its new day. The arm is kept on the post for the
-// Monday review, which compares shares and reach between the two.
-{
+// Monday review, which compares shares and reach between the two. Andy's "Don't" on
+// the dashboard move `early-posts` leaves every dated post at its day-of slot.
+if (!earlyPostsOn(moves)) warnings.push("timing test off — Andy answered “Don't” on the dashboard; every dated post goes out day-of");
+else {
   const dated = posts.filter((p) => p.dated);
   const arms = assignTimingArms(
     dated.map((p) => ({ key: p.id, day: p.postAt.slice(0, 10), hour: Number(p.postAt.slice(11, 13)), venue: p.tags[0]?.toLowerCase() })),

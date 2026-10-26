@@ -125,8 +125,10 @@ if (doIg) {
   // card above). A week without one still publishes; ig-queue.mjs says the Reel is missing.
   try {
     // 45 seconds unless Andy answered "Don't" on the shorter-Reel move (scripts/ig-reel.mjs).
-    const { reelMaxSeconds } = await import("./ig-reel.mjs");
-    run("python3", ["scripts/ig-reel.py", slug, "--max", String(reelMaxSeconds(await deskMoves()))]);
+    // Opens on the feature's quip unless Andy answered "Don't" on reel-opens-on-the-story.
+    const { reelMaxSeconds, reelOpensOnStory } = await import("./ig-reel.mjs");
+    const moves = await deskMoves();
+    run("python3", ["scripts/ig-reel.py", slug, "--max", String(reelMaxSeconds(moves)), ...(reelOpensOnStory(moves) ? [] : ["--title-first"])]);
   }
   catch (e) { console.warn(`  (no Reel this week — ${String(e.message ?? e).split("\n")[0]})`); }
 }

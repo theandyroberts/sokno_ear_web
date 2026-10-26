@@ -1,6 +1,8 @@
 // @vitest-environment node
 import { describe, it, expect } from "vitest";
-import { reelIsOn, buildReelPost, REEL_HOUR, reelMaxSeconds, REEL_SECONDS, SHORT_REEL_MOVE } from "../scripts/ig-reel.mjs";
+import { reelIsOn, buildReelPost, REEL_HOUR, reelMaxSeconds, REEL_SECONDS, SHORT_REEL_MOVE, reelOpensOnStory, REEL_OPEN_MOVE } from "../scripts/ig-reel.mjs";
+import { execFileSync } from "node:child_process";
+import path from "node:path";
 import { publishPost, userTagsFor, artistTagsOn, adIsOn, CONTAINER_WAIT, MAX_IMAGE_TAGS } from "../scripts/ig-container.mjs";
 
 const episode = { number: 18, shortDate: "Oct 15–18", date: "2026-10-14", feature: { title: "The Pink Cactus turns one" } };
@@ -105,5 +107,49 @@ describe("the Call-the-Ear ad while the phone line changes", () => {
   it("is held while the hold is open and unanswered, or answered Not this week", () => {
     expect(adIsOn([{ key: "call-the-ear-ad", answer: null }], on)).toBe(false);
     expect(adIsOn([{ key: "call-the-ear-ad", answer: "later" }], on)).toBe(false);
+  });
+});
+
+describe("the Reel opens on the feature", () => {
+  it("does unless Andy said Don't", () => {
+    expect(reelOpensOnStory([])).toBe(true);
+    expect(reelOpensOnStory(undefined)).toBe(true);
+    expect(reelOpensOnStory([{ key: REEL_OPEN_MOVE, answer: "go" }])).toBe(true);
+    expect(reelOpensOnStory([{ key: REEL_OPEN_MOVE, answer: "no" }])).toBe(false);
+  });
+
+  // cut_order and bridge_text live in scripts/ig-reel.py, beside the cut. Ask Python.
+  const script = path.join(__dirname, "..", "scripts", "ig-reel.py");
+  let python = true;
+  try { execFileSync("python3", ["-c", "import PIL"], { stdio: "ignore" }); } catch { python = false; }
+  function ask(expr: string): unknown {
+    const code = [
+      "import importlib.util, json, sys",
+      `spec = importlib.util.spec_from_file_location("igr", ${JSON.stringify(script)})`,
+      "m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)",
+      "S = lambda name, feature=False: m.Segment('story', name, name, name, feature=feature)",
+      "intro = m.Segment('intro', 'cover', 'intro', 'intro'); outro = m.Segment('outro', 'cover', 'outro', 'outro')",
+      `print(json.dumps(${expr}))`,
+    ].join("\n");
+    return JSON.parse(execFileSync("python3", ["-c", code], { encoding: "utf8" }));
+  }
+
+  it.skipIf(!python)("plays the feature, then the title card as the bridge, then the rest, then the sign-off", () => {
+    expect(ask("[s.art for s in m.cut_order(intro, [S('feature', True), S('thu'), S('sat')], outro)]"))
+      .toEqual(["feature", "cover", "thu", "sat", "cover"]);
+  });
+
+  it.skipIf(!python)("keeps the title card first when asked, or when no feature was kept", () => {
+    expect(ask("[s.art for s in m.cut_order(intro, [S('feature', True), S('thu')], outro, story_first=False)]"))
+      .toEqual(["cover", "feature", "thu", "cover"]);
+    expect(ask("[s.art for s in m.cut_order(intro, [S('thu'), S('sat')], outro)]"))
+      .toEqual(["cover", "thu", "sat", "cover"]);
+  });
+
+  it.skipIf(!python)("has the title card count the rest and say where they all are", () => {
+    expect(ask("m.bridge_text(6, 16)")).toBe("Five more of the sixteen things in South Knoxville this weekend. All of them at soknoear.com.");
+    expect(ask("m.bridge_text(4, 4)")).toBe("Three more things to do in South Knoxville this weekend. All of them at soknoear.com.");
+    expect(ask("m.bridge_text(6, 16, story_first=False)")).toBe("Six of the sixteen things in South Knoxville this weekend. All of them at soknoear.com.");
+    expect(ask("m.bridge_text(4, 4, story_first=False)")).toBeNull();
   });
 });

@@ -21,6 +21,15 @@ export function reelMaxSeconds(moves) {
   return no ? REEL_SECONDS.full : REEL_SECONDS.short;
 }
 
+/** The move that opens the Reel on the feature's quip instead of the title card (the
+ *  review of 2026-10-26: both Reels lost the viewer at 11 seconds whether they ran 116 s
+ *  or 46, so the title card is what got skipped). Andy's "Don't" puts the title card first. */
+export const REEL_OPEN_MOVE = "reel-opens-on-the-story";
+
+export function reelOpensOnStory(moves) {
+  return !(moves ?? []).some((m) => m.key === REEL_OPEN_MOVE && m.answer === "no");
+}
+
 /** Off only if Andy said no. No answer, "go", or no store at all means on. */
 export function reelIsOn(moves) {
   return !(moves ?? []).some((m) => m.key === REEL_MOVE && m.answer === "no");

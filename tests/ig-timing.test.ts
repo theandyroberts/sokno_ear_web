@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { assignTimingArms } from "../scripts/ig-schedule.mjs";
+import { assignTimingArms, earlyPostsOn, EARLY_POSTS_MOVE } from "../scripts/ig-schedule.mjs";
 
 const post = (key: string, day: string, hour: number, venue?: string) => ({ key, day, hour, venue });
 
@@ -46,5 +46,15 @@ describe("assignTimingArms", () => {
   it("crosses a month end", () => {
     const out = assignTimingArms([post("a", "2026-11-01", 11, "@x")], { floorDay: "2026-10-28" });
     expect(out.get("a")).toEqual({ arm: "early", day: "2026-10-31", hour: 11 });
+  });
+});
+
+describe("earlyPostsOn", () => {
+  it("runs the test unless Andy answered Don't on the dashboard", () => {
+    expect(earlyPostsOn([])).toBe(true);
+    expect(earlyPostsOn(undefined)).toBe(true);
+    expect(earlyPostsOn([{ key: EARLY_POSTS_MOVE, answer: "go" }])).toBe(true);
+    expect(earlyPostsOn([{ key: "weekend-roundup", answer: "no" }])).toBe(true);
+    expect(earlyPostsOn([{ key: EARLY_POSTS_MOVE, answer: "no" }])).toBe(false);
   });
 });

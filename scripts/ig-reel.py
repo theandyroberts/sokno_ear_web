@@ -5,6 +5,10 @@
     python3 scripts/ig-reel.py <episode-slug> --plan       → print the cut (quips, seconds), render nothing, no TTS
     python3 scripts/ig-reel.py <episode-slug> --max 120    → cap the Reel at 120 seconds (the default is 45: the first
                                                             116-second cut read 19 people, 12 seconds watched, 68% skipped)
+    python3 scripts/ig-reel.py <episode-slug> --title-first → open on the title card as the first two Reels did. The default
+                                                            since Oct 28 opens on the feature's quip (both Reels lost the
+                                                            viewer at 11 seconds whatever their length: the opening is the
+                                                            problem, so the title card plays second, as the bridge)
 
 What it is (Andy, 2026-10-13: "a quick quip about each of the featured events, and
 the screen changes to show the event artwork and info for each one"): a cover card
@@ -373,7 +377,35 @@ def reel_order(kept, stories):
     return sorted(kept, key=lambda s: (0 if s.feature else 1, DAY_ORDER.index(s.day) if s.day in DAY_ORDER else len(DAY_ORDER), idx[id(s)]))
 
 
-def build(slug, max_s=REEL_MAX_S, plan_only=False):
+def cut_order(intro, kept, outro, story_first=True):
+    """How the cut plays. The default since Oct 28 (the review of Oct 26) opens on the
+    feature's quip: the first two Reels lost the viewer at 11 seconds whether they ran
+    116 s or 46, so the title card is what people skipped. It plays second, as the
+    bridge that says where the rest are, then the other stories, then the sign-off.
+    `story_first=False` is the old order: title card, stories, sign-off."""
+    feature = next((s for s in kept if s.feature), None)
+    if not story_first or feature is None:
+        return [intro, *kept, outro]
+    rest = [s for s in kept if s is not feature]
+    return [feature, intro, *rest, outro]
+
+
+def bridge_text(n_kept, n_all, story_first=True):
+    """What the title card says. Opening on the feature, it counts the rest ("Five more
+    of the sixteen things … All of them at soknoear.com" — Andy: say soknoear.com in the
+    middle and at the end). Title first, it counts everything it shows."""
+    num = lambda n: NUM.get(n, str(n))
+    if story_first:
+        more = n_kept - 1
+        if n_kept < n_all:
+            return f"{num(more)} more of the {num(n_all)} things in South Knoxville this weekend. All of them at soknoear.com."
+        return f"{num(more)} more things to do in South Knoxville this weekend. All of them at soknoear.com."
+    if n_kept < n_all:
+        return f"{num(n_kept)} of the {num(n_all)} things in South Knoxville this weekend. All of them at soknoear.com."
+    return None
+
+
+def build(slug, max_s=REEL_MAX_S, plan_only=False, story_first=True):
     ep, segs, kicker = plan(slug, max_s)
     respell = tts_respellings()
     for s in segs:
@@ -382,7 +414,8 @@ def build(slug, max_s=REEL_MAX_S, plan_only=False):
     if plan_only:
         # rough timing without the voice: ~15 characters a second plus the pads
         stories = [s for s in segs if s.kind == "story"]
-        print(f"reel for {slug}: {len(stories)} stories (plan — no audio rendered; a {max_s:.0f}s cap takes them in this order)")
+        print(f"reel for {slug}: {len(stories)} stories (plan — no audio rendered; a {max_s:.0f}s cap takes them in this order; "
+              f"it opens on {'the feature' if story_first else 'the title card'})")
         for s in [segs[0], *reel_priority(stories), segs[-1]]:
             est = len(s.said) / 15 + LEAD_IN + TAIL
             tag = "feature" if s.feature else (s.day or "")
@@ -408,15 +441,16 @@ def build(slug, max_s=REEL_MAX_S, plan_only=False):
         t += s.length
     kept = reel_order(kept, stories)
     dropped = len(stories) - len(kept)
-    if dropped:
-        # The written intro counts every story; a trimmed cut says how many it shows
-        # and where the rest are (Andy: say soknoear.com in the middle and at the end).
-        intro = f"{NUM[len(kept)]} of the {NUM.get(len(stories), len(stories))} things in South Knoxville this weekend. All of them at soknoear.com."
-        segs[0].caption, segs[0].said = intro, for_tts(intro, respell)
+    # The written intro counts every story. Opening on the feature, the title card is
+    # the bridge and counts the rest; a trimmed cut says how many it shows and where the
+    # rest are (Andy: say soknoear.com in the middle and at the end).
+    bridge = bridge_text(len(kept), len(stories), story_first and any(s.feature for s in kept))
+    if bridge:
+        segs[0].caption, segs[0].said = bridge, for_tts(bridge, respell)
         segs[0].mp3 = say(segs[0].said, key)
         segs[0].speech = duration(segs[0].mp3)
         segs[0].length = LEAD_IN + segs[0].speech + TAIL
-    segs = [segs[0], *kept, segs[-1]]
+    segs = cut_order(segs[0], kept, segs[-1], story_first)
     for i, s in enumerate(kept):
         s.counter = f"{i + 1} of {len(kept)}"
     total = sum(s.length for s in segs)
@@ -443,4 +477,4 @@ if __name__ == "__main__":
     if "--max" in sys.argv:
         max_s = float(sys.argv[sys.argv.index("--max") + 1])
         args = [a for a in args if a != sys.argv[sys.argv.index("--max") + 1]]
-    build(args[0], max_s=max_s, plan_only="--plan" in sys.argv)
+    build(args[0], max_s=max_s, plan_only="--plan" in sys.argv, story_first="--title-first" not in sys.argv)
