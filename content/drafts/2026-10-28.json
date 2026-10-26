@@ -17,7 +17,7 @@
     "days": [
       "Sat"
     ],
-    "layout": "textOnly",
+    "layout": "imageTop",
     "title": "The Old Sevier Halloween Pub Crawl puts eleven neighborhood stops on one passport Saturday",
     "deck": "Halloween lands on a Saturday, and the merchants' association is turning the whole avenue into the party: a free passport, a costume, and a coffee roaster, a pizza place and a cocktail lounge on the same route.",
     "facts": [
@@ -119,7 +119,8 @@
         "Saturday, all day, free to play"
       ],
       "igBannerSkipCheck": true
-    }
+    },
+    "image": "/assets/spots/no20_pub_crawl_passport.jpg"
   },
   "scanner": [
     {
@@ -129,7 +130,7 @@
         "Sat"
       ],
       "hot": true,
-      "image": "/assets/possum_street_art.png",
+      "image": "/assets/spots/no20_pub_crawl_passport.jpg",
       "title": "Eleven stops, one passport: the Halloween Pub Crawl",
       "blurb": "Costumes on, six stamps enter the prize drawing, free to play.",
       "href": "#halloween-pub-crawl"
@@ -141,7 +142,7 @@
         "Fri"
       ],
       "hot": true,
-      "image": "/assets/possum_street_art.png",
+      "image": "/assets/spots/no20_starlight_paddle_headlamp.jpg",
       "title": "A guided paddle on the river under the stars",
       "blurb": "Kayak and headlamp provided, 7 to 9, $45.",
       "href": "#starlight-paddle"
@@ -153,7 +154,7 @@
         "Fri"
       ],
       "hot": false,
-      "image": "/assets/possum_street_art.png",
+      "image": "/assets/spots/no20_mechanical_bull_rider.jpg",
       "title": "Line dancing, a mechanical bull and a Thriller lesson on the lawn",
       "blurb": "The Ho'Down's costume winners take a $500 gift card at nine.",
       "href": "#kerns-hodown"
@@ -165,7 +166,7 @@
         "Thu"
       ],
       "hot": false,
-      "image": "/assets/possum_street_art.png",
+      "image": "/assets/spots/no20_pumpkin_beer_pong.jpg",
       "title": "Boos & Brews at Puckers: pumpkin beer pong and a cash costume prize",
       "blurb": "Thursday 5:30 to 9:30, a live DJ, shot roulette.",
       "href": "#puckers-boos-and-brews"
@@ -177,7 +178,7 @@
         "Sat"
       ],
       "hot": false,
-      "image": "/assets/possum_street_art.png",
+      "image": "/assets/spots/no20_bat_puppet_storytime.jpg",
       "title": "Free bat storytime at the Nature Playscape",
       "blurb": "Halloween morning, 10 to noon, for the little ones.",
       "href": "#playscape-storytime-bats"
@@ -189,7 +190,7 @@
         "Sat"
       ],
       "hot": true,
-      "image": "/assets/possum_street_art.png",
+      "image": "/assets/spots/no20_drag_queen_wink.jpg",
       "title": "Drop Dead: Hi-Wire's Halloween drag show and costume contest",
       "blurb": "Saturday 9 to 11:30, tickets under ten dollars.",
       "href": "#drop-dead-drag-hiwire"
@@ -201,7 +202,7 @@
         "Fri"
       ],
       "hot": false,
-      "image": "/assets/possum_street_art.png",
+      "image": "/assets/spots/no20_glow_stick_hands.jpg",
       "title": "A free 90s rave at The 808",
       "blurb": "Psychonaut, doors at 7, 18 and up, no ticket.",
       "href": "#808-90s-rave"
@@ -213,7 +214,7 @@
         "Sun"
       ],
       "hot": false,
-      "image": "/assets/possum_street_art.png",
+      "image": "/assets/spots/no20_catrina_face_paint.jpg",
       "title": "Día de los Muertos at the Pink Cactus",
       "blurb": "Free cumbia class, catrina face paint and an ofrenda, 5 to 9.",
       "href": "#dia-de-los-muertos-pink-cactus"
@@ -227,7 +228,7 @@
       "days": [
         "Thu"
       ],
-      "layout": "textOnly",
+      "layout": "imageLeft",
       "title": "Puckers throws Boos & Brews Thursday: a cash-prize costume contest, pumpkin beer pong and shot roulette",
       "deck": "The sports grill across the river from Neyland gets the weekend started two days early, with a live DJ and a costume contest that pays out in cash.",
       "facts": [
@@ -281,7 +282,8 @@
           "Boos & Brews at Puckers: costume contest, pumpkin beer pong",
           "Thursday, five thirty to nine thirty"
         ]
-      }
+      },
+      "image": "/assets/spots/no20_pumpkin_beer_pong.jpg"
     },
     {
       "id": "wax-museum-fbn",
@@ -290,7 +292,7 @@
       "days": [
         "Thu"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "title": "Wax Museum spins spooky vinyl rarities at Fly by Night Thursday",
       "deck": "Two record collectors, a crate of monster-mash obscurities and the seventies cocktail lounge's creepy drink list: the quiet way into Halloween weekend.",
       "facts": [
@@ -349,7 +351,8 @@
           "Wax Museum's spooky vinyl night at Fly by Night",
           "Thursday, no cover posted"
         ]
-      }
+      },
+      "image": "/assets/spots/no20_spooky_vinyl.jpg"
     },
     {
       "id": "freaks-ball-fbn",
@@ -358,7 +361,7 @@
       "days": [
         "Fri"
       ],
-      "layout": "textOnly",
+      "layout": "imageLeft",
       "title": "Fly by Night's fourth Freaks Come Out at Night ball brings three DJs to the haunted lounge Friday",
       "deck": "The lounge's biggest night of the year is a costume ball with Alex Falk, Minitiger and Benicio on the decks, ten dollars at the door and the room done up as a haunted house.",
       "facts": [
@@ -426,7 +429,8 @@
           "Freaks Come Out at Night ball at Fly by Night",
           "Friday, nine till late, ten dollars"
         ]
-      }
+      },
+      "image": "/assets/spots/no20_freaks_ball_dj.jpg"
     },
     {
       "id": "808-90s-rave",
@@ -435,7 +439,7 @@
       "days": [
         "Fri"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "title": "The 808 throws a free 90s rave with Psychonaut on Halloween eve",
       "deck": "The month-old music venue on Sevier Avenue calls it the Halloween pregame: no ticket, doors at seven, and a decade's worth of glow sticks implied.",
       "facts": [
@@ -461,8 +465,8 @@
         },
         {
           "label": "Parking",
-          "value": "The venue's map: the lots and street spaces around the block",
-          "href": "#808-bear-grillz"
+          "value": "The venue's map of the lots and street spaces around the block",
+          "zoom": "/assets/diagrams/the-808-parking.svg"
         }
       ],
       "body": [
@@ -497,7 +501,8 @@
           "A free 90s rave at The 808",
           "Friday, doors at seven, eighteen and up"
         ]
-      }
+      },
+      "image": "/assets/spots/no20_glow_stick_hands.jpg"
     },
     {
       "id": "808-bear-grillz",
@@ -506,10 +511,8 @@
       "days": [
         "Sat"
       ],
-      "layout": "textOnly",
-      "image": "/assets/diagrams/the-808-parking.svg",
-      "imageCaption": "Where to park for The 808: the lots and street spaces around the block, from the venue.",
-      "imageZoom": true,
+      "layout": "imageLeft",
+      "image": "/assets/spots/no20_bear_costume_dj.jpg",
       "title": "Bear Grillz brings the Dubstep Time Machine to The 808 on Halloween night",
       "deck": "The venue's biggest booking so far lands on the holiday itself: a touring dubstep headliner with Spnce and Shosstah opening, and a crowd that will come in costume.",
       "facts": [
@@ -538,7 +541,7 @@
       "body": [
         {
           "type": "paragraph",
-          "text": "Bear Grillz, the bass producer who tours as a costumed bear, plays The 808 on Saturday, October 31, with Spnce and Shosstah opening; the venue has been billing it as Dubstep Time Machine Halloween since the middle of the month and told followers to let the bear inspire their costumes. Doors are at seven and the show at eight, 18 and up. Tickets are on the venue's site through TicketWeb; the venue's post quoted an advance price lower than the one its site shows, so buy from the page and take the number there. The parking map above is the venue's own."
+          "text": "Bear Grillz, the bass producer who tours as a costumed bear, plays The 808 on Saturday, October 31, with Spnce and Shosstah opening; the venue has been billing it as Dubstep Time Machine Halloween since the middle of the month and told followers to let the bear inspire their costumes. Doors are at seven and the show at eight, 18 and up. Tickets are on the venue's site through TicketWeb; the venue's post quoted an advance price lower than the one its site shows, so buy from the page and take the number there. The Parking line above opens the venue's own map."
         }
       ],
       "sources": [
@@ -578,7 +581,7 @@
       "days": [
         "Fri"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "ticket": {
         "href": "https://posh.vip/e/planet-doom-halloweemo-party",
         "image": "/assets/spots/pink-cactus-tickets.svg",
@@ -648,7 +651,8 @@
           "Pink Is Punk: HalloweEMO at the Pink Cactus",
           "Friday, nine to two; dating gameshow at seven thirty"
         ]
-      }
+      },
+      "image": "/assets/spots/no20_emo_fringe_singalong.jpg"
     },
     {
       "id": "belltower-hiween",
@@ -657,7 +661,7 @@
       "days": [
         "Sat"
       ],
-      "layout": "textOnly",
+      "layout": "imageLeft",
       "title": "Belltower turns the Pink Cactus into a haunted house party on Halloween night, with free karaoke after nine",
       "deck": "Goth DJs downstairs, all four karaoke rooms free upstairs, vendors and the outdoor bar, and an extra hour on the clock: the pink house's Halloween runs until two.",
       "facts": [
@@ -732,7 +736,8 @@
           "Haunted house party at the Pink Cactus, free karaoke after nine",
           "Halloween night, fifteen dollars, until two"
         ]
-      }
+      },
+      "image": "/assets/spots/no20_goth_karaoke.jpg"
     },
     {
       "id": "dia-de-los-muertos-pink-cactus",
@@ -741,7 +746,7 @@
       "days": [
         "Sun"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "title": "The Pink Cactus celebrates Día de los Muertos Sunday with a free cumbia class, catrina face paint and an ofrenda",
       "deck": "The weekend's gentlest finish: a Day of the Dead evening for families, with a traditional altar for the people you've lost and a dance lesson for the people you came with.",
       "facts": [
@@ -795,7 +800,8 @@
           "Día de los Muertos at the Pink Cactus",
           "Sunday, five to nine, free cumbia class"
         ]
-      }
+      },
+      "image": "/assets/spots/no20_catrina_face_paint.jpg"
     },
     {
       "id": "drop-dead-drag-hiwire",
@@ -804,7 +810,7 @@
       "days": [
         "Sat"
       ],
-      "layout": "textOnly",
+      "layout": "imageLeft",
       "title": "Hi-Wire hosts Drop Dead, a Halloween drag show and costume contest, Saturday at nine",
       "deck": "The brewery's upstairs taproom does drag for the holiday, with a costume contest for the crowd and a ticket that costs less than a flight of beer.",
       "facts": [
@@ -859,7 +865,8 @@
           "Drop Dead: Halloween drag show at Hi-Wire",
           "Saturday, nine to eleven thirty"
         ]
-      }
+      },
+      "image": "/assets/spots/no20_drag_queen_wink.jpg"
     },
     {
       "id": "trailhead-jake-smith-trio",
@@ -868,7 +875,7 @@
       "days": [
         "Fri"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "title": "Jake Smith Trio plays the Trailhead patio Friday at seven",
       "deck": "Free music outdoors on a 77-degree Friday, with a one-week mushroom menu in the kitchen that the cook says you cannot go wrong on.",
       "facts": [
@@ -925,7 +932,8 @@
           "Jake Smith Trio on the Trailhead patio",
           "Friday at seven, free"
         ]
-      }
+      },
+      "image": "/assets/spots/no20_upright_bass_hands.jpg"
     },
     {
       "id": "trailhead-four-legged-dog",
@@ -934,7 +942,7 @@
       "days": [
         "Sat"
       ],
-      "layout": "textOnly",
+      "layout": "imageLeft",
       "title": "Four Legged Dog plays Trailhead on Halloween night",
       "deck": "A band on the patio at seven on the day of the pub crawl, which makes Trailhead the stamp you can sit down for.",
       "facts": [
@@ -987,7 +995,8 @@
           "Four Legged Dog at Trailhead on Halloween night",
           "Saturday at seven, free"
         ]
-      }
+      },
+      "image": "/assets/spots/no20_dog_in_costume_guitar.jpg"
     },
     {
       "id": "trailhead-mt-olive",
@@ -996,7 +1005,7 @@
       "days": [
         "Sun"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "title": "Mt Olive Pleasure Club closes the weekend at Trailhead Sunday at four",
       "deck": "The Sunday show starts early, in daylight, which on a showery first of November is the right call.",
       "facts": [
@@ -1049,7 +1058,8 @@
           "Mt Olive Pleasure Club on the Trailhead patio",
           "Sunday at four, free"
         ]
-      }
+      },
+      "image": "/assets/spots/no20_brass_trumpet_bell.jpg"
     },
     {
       "id": "kerns-hodown",
@@ -1058,7 +1068,7 @@
       "days": [
         "Fri"
       ],
-      "layout": "textOnly",
+      "layout": "imageLeft",
       "title": "Kern's Ho'Down puts line dancing, a mechanical bull and a Thriller lesson on the lawn Friday",
       "deck": "Boots and costumes at the food hall: a country night with a live DJ, a bull to ride and a costume contest that pays a $500 gift card at nine.",
       "facts": [
@@ -1115,7 +1125,8 @@
           "Ho'Down on the lawn at Kern's: line dancing and a mechanical bull",
           "Friday night; costume winners at nine"
         ]
-      }
+      },
+      "image": "/assets/spots/no20_mechanical_bull_rider.jpg"
     },
     {
       "id": "starlight-paddle",
@@ -1124,7 +1135,7 @@
       "days": [
         "Fri"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "title": "The Starlight Paddle takes kayaks onto the Tennessee River after dark Friday",
       "deck": "Two guided hours on the water under the stars with a naturalist, a headlamp and a boat provided; the full-moon paddles are done for the year, so this is the dark-sky one.",
       "facts": [
@@ -1199,7 +1210,8 @@
           "Starlight Paddle on the river at Ijams Nature Center",
           "Friday, seven to nine, forty-five dollars"
         ]
-      }
+      },
+      "image": "/assets/spots/no20_starlight_paddle_headlamp.jpg"
     },
     {
       "id": "playscape-storytime-bats",
@@ -1208,7 +1220,7 @@
       "days": [
         "Sat"
       ],
-      "layout": "textOnly",
+      "layout": "imageLeft",
       "title": "Storytime at the Nature Playscape is all about bats on Halloween morning",
       "deck": "A free Saturday for the smallest Halloween fans: bat stories and bat play in the nature playground before the costumes go on for the night.",
       "facts": [
@@ -1260,7 +1272,8 @@
         ],
         "standing": true,
         "standingKey": "playscape-storytime"
-      }
+      },
+      "image": "/assets/spots/no20_bat_puppet_storytime.jpg"
     },
     {
       "id": "playing-possum",
@@ -1269,7 +1282,7 @@
       "days": [
         "Sat"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "title": "Meet the park's newest animal ambassador, an opossum, at Playing 'Possum on Halloween morning",
       "deck": "An hour with Ijams Nature Center's new opossum and the naturalist who looks after it: how the only marsupial in Tennessee lives, and why it is nothing to be scared of.",
       "facts": [
@@ -1328,7 +1341,8 @@
           "Meet the new opossum at Ijams Nature Center",
           "Halloween morning, eleven o'clock, ten dollars"
         ]
-      }
+      },
+      "image": "/assets/spots/no20_opossum_in_hands.jpg"
     },
     {
       "id": "renew-in-nature",
@@ -1337,7 +1351,7 @@
       "days": [
         "Sun"
       ],
-      "layout": "textOnly",
+      "layout": "imageLeft",
       "title": "Renew in Nature: yoga, a sound bath and forest bathing at the Ijams homesite Sunday morning",
       "deck": "The morning after Halloween, with an extra hour of sleep behind it, the park offers two quiet hours of moving, listening and walking slowly in the woods.",
       "facts": [
@@ -1396,7 +1410,8 @@
           "Yoga, a sound bath and forest bathing at Ijams Nature Center",
           "Sunday, ten to noon, forty dollars"
         ]
-      }
+      },
+      "image": "/assets/spots/no20_singing_bowl_mallet.jpg"
     },
     {
       "id": "specials-board",
@@ -1408,7 +1423,7 @@
         "Sat",
         "Sun"
       ],
-      "layout": "textOnly",
+      "layout": "imageRight",
       "title": "Earl's runs a rita a day through Halloween weekend, then mimosas for the morning after",
       "deck": "No Vols game this Saturday, so the river bar's board is the daily one: a different margarita Thursday, Friday and Saturday, and seven-dollar mimosas and Bloody Marys on Sunday.",
       "facts": [
@@ -1466,7 +1481,8 @@
         ],
         "standing": true,
         "standingKey": "specials-board"
-      }
+      },
+      "image": "/assets/spots/no20_mango_rita_pumpkin_rim.jpg"
     }
   ],
   "sidebar": {
