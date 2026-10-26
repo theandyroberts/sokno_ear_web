@@ -219,6 +219,216 @@
       "fetched": "2026-10-14",
       "confidence": "high",
       "note": "Dark brown (#47372A) lettering on transparent, 360x76, so it sits on the cream chip untouched. Andy asked for it 2026-10-14."
+    },
+    "ijams-nature-center": {
+      "name": "Ijams Nature Center",
+      "match": [
+        "Ijams Nature Center",
+        "Ijams",
+        "Mead's Quarry",
+        "Meads Quarry",
+        "Nature Playscape",
+        "Ijams River Landing",
+        "Miller Education Building",
+        "Grayson Subaru Preserve",
+        "Ijams Homesite"
+      ],
+      "site": "https://www.ijams.org/",
+      "logo": "/assets/venues/ijams-nature-center.png",
+      "source": "https://static.wixstatic.com/media/236ed8_a65597e0b2714d8faa1d2d5f3eb00ecc~mv2.png (Ijams-Logo-2023.png)",
+      "sourceNote": "the horizontal 2023 lockup their own site header loads (674x191) — the bird-and-trees mark plus 'Ijams NATURE CENTER'; trimmed, colors untouched",
+      "treatment": "as-is",
+      "fetched": "2026-10-26",
+      "confidence": "high",
+      "note": "Every Ijams location resolves here: the River Landing, Mead's Quarry, the Nature Playscape, the Miller Education Building, the Homesite. The organization asked to be called Ijams Nature Center (2026-10-06); the alias list only matches text, it never writes it."
+    },
+    "old-sevier-district": {
+      "name": "Old Sevier District",
+      "match": [
+        "Old Sevier District",
+        "Old Sevier"
+      ],
+      "site": "https://oldsevierdistrict.org/",
+      "logo": "/assets/venues/old-sevier-district.png",
+      "source": "https://images.squarespace-cdn.com/content/v1/667367c053c505644f7e86a0/18048fd0-ca45-4e29-91d2-3a339695e6d5/SEVIER+AVE%2C-10-photoaidcom-cropped.png",
+      "sourceNote": "the header logo on oldsevierdistrict.org (alt 'Old Sevier District'): the blue contour-map circle with the yellow ring and the S arrow. The site serves it at 380x380; that is the largest copy they publish.",
+      "treatment": "as-is",
+      "fetched": "2026-10-26",
+      "confidence": "high",
+      "note": "'Old Sevier' is the district's merchant association, so the label 'Old Sevier' falls back here when a story names no venue of its own. 'Old Sevier Market' is longer and wins its own rows. Never add a bare 'Sevier' alias."
+    },
+    "borderland-playhouse": {
+      "name": "Borderland Playhouse",
+      "match": [
+        "Borderland Playhouse",
+        "Borderland Tees",
+        "Borderland"
+      ],
+      "site": "https://borderlandtees.com/playhouse",
+      "logo": null,
+      "source": null,
+      "sourceNote": "No mark to take, 2026-10-26: borderlandtees.com (GoDaddy builder) has no logo image at all — the header is text, the og:image is a photo strip of printed tees, the /playhouse page carries a stage photo, and the Facebook page picture is a photo of the press. The wordmark chip stands in until they publish one.",
+      "treatment": null,
+      "fetched": "2026-10-26",
+      "confidence": "none"
+    },
+    "suttree-landing": {
+      "name": "Suttree Landing Park",
+      "match": [
+        "Suttree Landing Park",
+        "Suttree Landing"
+      ],
+      "site": "https://www.knoxvilletn.gov/government/city_departments_offices/parks_and_recreation",
+      "logo": null,
+      "source": null,
+      "sourceNote": "A City of Knoxville park with no mark of its own; the City's seal would say 'the City', not the park, and knoxvilletn.gov refuses non-browser fetches (403) anyway. Wordmark chip by design.",
+      "treatment": null,
+      "fetched": "2026-10-26",
+      "confidence": "none"
+    },
+    "legacy-parks": {
+      "name": "Legacy Parks Foundation",
+      "match": [
+        "Legacy Parks Foundation",
+        "Legacy Parks",
+        "Baker Creek Preserve",
+        "Baker Creek",
+        "Urban Wilderness"
+      ],
+      "site": "https://legacyparks.org/",
+      "logo": "/assets/venues/legacy-parks.png",
+      "source": "https://legacyparks.org/wp-content/uploads/2023/08/LegacyParksLogoHoriz.png",
+      "sourceNote": "the horizontal tree-and-wordmark lockup their site header loads (390x189, their own upload); trimmed, colors untouched",
+      "treatment": "as-is",
+      "fetched": "2026-10-26",
+      "confidence": "high",
+      "note": "Legacy Parks assembled the Urban Wilderness and owns Baker Creek Preserve, so trail-district rows with no narrower venue carry their mark. The Gateway Park is the City's; it resolves here through 'Urban Wilderness' because Legacy Parks is the name on the district."
+    },
+    "ambc": {
+      "name": "AMBC",
+      "match": [
+        "Appalachian Mountain Bike Club",
+        "AMBC"
+      ],
+      "site": "https://ambcknox.org/",
+      "logo": "/assets/venues/ambc.png",
+      "source": "https://ambcknox.org/site/wp-content/uploads/2017/11/bg-ambc-logo.png",
+      "sourceNote": "the club's chainring mark, from the 1600x900 banner their own site publishes (the header uses sponsor marks only); cropped to the ring, the navy field kept because the lettering inside is white",
+      "treatment": "cropped",
+      "fetched": "2026-10-26",
+      "confidence": "medium"
+    },
+    "mighty-mud": {
+      "name": "Mighty Mud",
+      "match": [
+        "Mighty Mud"
+      ],
+      "site": "https://mightymud.com/",
+      "logo": "/assets/venues/mighty-mud.png",
+      "source": "https://mightymud.com/wp-content/uploads/2020/05/Mighty-Mud-hi-res.png",
+      "sourceNote": "the hi-res stacked logo in their own media library (2500x2125; the site's favicon is a crop of the same file); trimmed, colors untouched",
+      "treatment": "as-is",
+      "fetched": "2026-10-26",
+      "confidence": "high"
+    },
+    "sokno-sourdough": {
+      "name": "SoKno Sourdough",
+      "match": [
+        "SoKno Sourdough",
+        "So-Kno Sourdough"
+      ],
+      "site": "https://www.soknosourdough.com/",
+      "logo": "/assets/venues/sokno-sourdough.png",
+      "source": "https://www.soknosourdough.com/uploads/b/84c17c254fd40b3cf04dc4b4e3ed8dee7b7d23b57ca16836ac45f454c06b66ed/logo_circle_green_1624646491.png",
+      "sourceNote": "the green circle with the Dutch oven, the logo file their own site declares (1264x1264); colors untouched",
+      "treatment": "as-is",
+      "fetched": "2026-10-26",
+      "confidence": "high"
+    },
+    "redbud-kitchen": {
+      "name": "Redbud Kitchen",
+      "match": [
+        "Redbud Kitchen",
+        "Redbud"
+      ],
+      "site": "https://www.redbudkitchen.com/",
+      "logo": "/assets/venues/redbud-kitchen.png",
+      "source": "https://images.squarespace-cdn.com/content/v1/60c10e6fb1480d2dddf512f1/7fbe4f33-dd0a-4633-9124-560ee14aedd9/RK_Logo_Final_Color.png",
+      "sourceNote": "the header logo on redbudkitchen.com (alt 'Redbud Kitchen', 1500x1099) — the script wordmark in the sunburst; trimmed, colors untouched",
+      "treatment": "as-is",
+      "fetched": "2026-10-26",
+      "confidence": "high"
+    },
+    "sevier-ave-burger": {
+      "name": "Sevier Ave Burger Co.",
+      "match": [
+        "Sevier Ave Burger Co.",
+        "Sevier Ave Burger",
+        "Sevier Avenue Burger"
+      ],
+      "site": "https://www.instagram.com/sevieraveburgerco/",
+      "logo": null,
+      "source": null,
+      "sourceNote": "No website (sevieraveburger.com and sevieravenueburger.com do not resolve) and no Facebook page under the handle; Instagram is their only presence and it serves no fetchable avatar. Wordmark chip until they publish a mark, or Andy saves one from the Instagram profile.",
+      "treatment": null,
+      "fetched": "2026-10-26",
+      "confidence": "none"
+    },
+    "honeybee-coffee": {
+      "name": "Honeybee Coffee",
+      "match": [
+        "Honeybee Coffee",
+        "Honeybee"
+      ],
+      "site": "https://www.honeybeecoffeeco.com/",
+      "logo": "/assets/venues/honeybee-coffee.png",
+      "source": "https://images.squarespace-cdn.com/content/v1/66706c462687cb0236bf16b9/1ce78e70-99d2-4fc6-947e-09d6e1fd5ad6/16.9+Logo.png",
+      "sourceNote": "the wide '16.9 Logo' from their own Squarespace library (1500x844) — the arched 'honeybee' script, COFFEE CO. and the bee; the header's 500px 'logo white' is the same art smaller",
+      "treatment": "ink-recolor",
+      "fetched": "2026-10-26",
+      "confidence": "high",
+      "note": "Their file is pure white on transparent for a dark header; every visible pixel was repainted brand ink #171512, alpha kept."
+    },
+    "old-sevier-market": {
+      "name": "Old Sevier Market",
+      "match": [
+        "Old Sevier Market"
+      ],
+      "site": "https://oldseviermarket.com/",
+      "logo": "/assets/venues/old-sevier-market.png",
+      "source": "https://graph.facebook.com/oldseviermarket/picture?type=large&width=720&height=720",
+      "sourceNote": "the market's own Facebook page picture (facebook.com/oldseviermarket) at 720px — gold OLD SEVIER MARKET lettering on maroon; oldseviermarket.com is a GoDaddy page whose header is a photo and a text tagline, no logo file. Trimmed to the lettering, colors untouched.",
+      "treatment": "as-is",
+      "fetched": "2026-10-26",
+      "confidence": "medium"
+    },
+    "knoxville-theatre-club": {
+      "name": "Knoxville Theatre Club",
+      "match": [
+        "Knoxville Theatre Club",
+        "Knoxville Theater Club"
+      ],
+      "site": "https://knoxvilletheatreclub.org/",
+      "logo": "/assets/venues/knoxville-theatre-club.png",
+      "source": "https://images.squarespace-cdn.com/content/v1/543c8bd0e4b03bb4774ed0b8/d34b91b7-c0c3-410e-b9f6-aa3f5e4b95cf/Knoxville+Theatre+Club+LOGO+2500x2500+300dpi+007.png",
+      "sourceNote": "the header logo on knoxvilletheatreclub.org (alt 'KNOXVILLE THEATRE CLUB') — the red rubber-stamp roundel; fetched at 1500px, trimmed, colors untouched",
+      "treatment": "as-is",
+      "fetched": "2026-10-26",
+      "confidence": "high"
+    },
+    "marble-springs": {
+      "name": "Marble Springs",
+      "match": [
+        "Marble Springs State Historic Site",
+        "Marble Springs"
+      ],
+      "site": "https://www.marblesprings.net/",
+      "logo": "/assets/venues/marble-springs.png",
+      "source": "https://static.wixstatic.com/media/6ad499_3fb93d3d0b1343a0b60d79eaf44ce542~mv2.jpg (MS_logo_knoxtenn.jpg)",
+      "sourceNote": "the cabin engraving with MARBLE SPRINGS / STATE HISTORIC SITE / Knoxville, Tennessee, the logo their own site header loads (1252x993 JPEG). The JPEG's white ground was knocked out to transparency so the ink sits straight on the cream tile; the lettering and the blue-gray cabin tints are theirs.",
+      "treatment": "as-is",
+      "fetched": "2026-10-26",
+      "confidence": "high"
     }
   }
 }
