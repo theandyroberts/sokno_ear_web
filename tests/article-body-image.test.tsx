@@ -7,7 +7,7 @@ import { Ticket, EpisodeSchema } from "@/lib/schema";
 import episode from "@/content/episodes/2026-10-21.json";
 
 describe("venue ticket button", () => {
-  it("appears after the deck and before facts/original art, with a safe new-tab link", () => {
+  it("sits inside the facts box after the deck and before the original art, with a safe new-tab link", () => {
     const parsed = EpisodeSchema.parse(episode);
     const story = parsed.stories.find(s => s.id === "big-pink-house-party")!;
     expect(story.image).toBe("/assets/spots/dnb_sneakers_jump.jpg");
@@ -20,10 +20,14 @@ describe("venue ticket button", () => {
     expect(link).toHaveAttribute("rel", "noopener noreferrer");
     const image = screen.getByRole("img", { name: "Get tickets at The Pink Cactus" });
     expect(link).toContainElement(image);
-    expect(link.textContent).toBe("Get tickets ↗");
+    expect(link.textContent).toBe(""); // the graphic says GET TICKETS; no caption inside the facts box
     expect(container.querySelectorAll("img")).toHaveLength(2);
     expect(screen.getByText(story.deck!).compareDocumentPosition(link) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
-    expect(link.compareDocumentPosition(container.querySelector("dl")!) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    // Facts and ticket share one two-column box (Andy, 2026-10-26): facts left, ticket right.
+    const box = container.querySelector(".ear-facts-box--ticket")!;
+    expect(box).toContainElement(container.querySelector("dl")!);
+    expect(box).toContainElement(link);
+    expect(container.querySelector("dl")!.compareDocumentPosition(link) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     expect(link.compareDocumentPosition(container.querySelector('img[src$="dnb_sneakers_jump.jpg"]')!) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     const url = new URL(link.getAttribute("href")!);
     expect(url.hostname).toBe("toast.app");

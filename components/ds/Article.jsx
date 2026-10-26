@@ -123,21 +123,32 @@ export function Article({
         </p>
       )}
 
-      {ticket && <TicketLink {...ticket} />}
-
       {isHero && figure}
 
-      {facts.length > 0 && (
-        <dl
+      {/* The facts strip. When the story sells tickets the strip becomes a two-column
+          box, facts on the left two thirds and the venue's ticket button on the right
+          third, so the button reads as part of the where-and-when instead of a row of
+          its own that splits the story (Andy, 2026-10-26). */}
+      {(facts.length > 0 || ticket) && (
+        <div
+          className={ticket ? "ear-facts-box ear-facts-box--ticket" : "ear-facts-box"}
           style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "6px 22px",
             margin: "0 0 var(--space-4)",
             padding: "10px 14px",
             background: "var(--paper-shadow)",
             border: "var(--border-hair) solid var(--ink-black)",
             borderRadius: "var(--radius-sm)",
+          }}
+        >
+        {facts.length > 0 && (
+        <dl
+          className="ear-facts"
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            gap: "6px 22px",
+            margin: 0,
+            alignContent: "center",
           }}
         >
           {facts.map((f, i) => (
@@ -159,6 +170,9 @@ export function Article({
             </div>
           ))}
         </dl>
+        )}
+        {ticket && <TicketLink {...ticket} showCaption={false} />}
+        </div>
       )}
 
       <div

@@ -535,7 +535,7 @@
         },
         {
           "label": "Tickets",
-          "value": "On the venue's site, 808knox.com, where the rest of the calendar is too; the posted advance and door prices differ, so take the number there",
+          "value": "808knox.com · the rest of the venue's calendar is there too",
           "href": "https://808knox.com/"
         },
         {
@@ -1676,8 +1676,8 @@
     ],
     "audio": {
       "title": "Weekend Audio Briefing",
-      "intro": "Andy reads the weekend: the eleven-stop Halloween Pub Crawl, three nights at the Pink Cactus, a free 90s rave and Bear Grillz at The 808, Kern's Ho'Down, and a paddle under the stars at Ijams Nature Center.",
-      "description": "Vol. 1 No. 20 · Halloween weekend, Oct 29–Nov 1: the Old Sevier Halloween Pub Crawl, Puckers' Boos & Brews, Fly by Night's vinyl night and Freaks ball, The 808, the Pink Cactus's HalloweEMO, Belltower and Día de los Muertos, Hi-Wire's drag show, Trailhead's three patio shows, Kern's Ho'Down, four things at Ijams Nature Center and Earl's board.",
+      "intro": "Andy reads the weekend.",
+      "description": "Vol. 1 No. 20 · Halloween weekend, Oct 29–Nov 1",
       "duration": "5:36",
       "src": "/audio/2026-10-28.mp3"
     }

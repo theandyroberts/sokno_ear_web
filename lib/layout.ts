@@ -21,7 +21,7 @@ const IMAGE_TOP_EXTRA = 265;   // a banner image sits above the text instead of 
 const LIFTED_WRAP = 123;       // divider, section header and padding around a lifted story
 
 const SIDEBAR_AD = 139;        // the Dirty South card and the gap under it
-const SIDEBAR_PLAYER = 431;    // the audio player and the gap under it
+const SIDEBAR_PLAYER = 385;    // the audio player (title, controls, one line; no intro since 2026-10-26) and the gap under it
 const CALENDAR_FRAME = 87;     // the well's title bar, padding and "don't miss it" line
 const CALENDAR_ROW = 118;      // one row, averaged over rows that wrap and rows that don't
 const CALENDAR_DAYBAR = 43;    // the dark weekday bar that heads each date
@@ -48,7 +48,7 @@ function storyChars(s: Story): number {
 /** Rendered height of a story in the feature column, in px. */
 export function estimateStoryHeight(s: Story): number {
   const image = s.layout === "imageTop" || s.layout === "banner" ? IMAGE_TOP_EXTRA : 0;
-  const ticket = s.ticket ? 240 : 0; // compact 360px ticket, caption and spacing
+  const ticket = s.ticket ? 40 : 0; // the ticket shares the facts box (right third); it only deepens the box a little
   return Math.round(STORY_BASE + STORY_PER_CHAR * storyChars(s) + image + ticket);
 }
 

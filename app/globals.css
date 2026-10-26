@@ -133,8 +133,20 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
   .ds-cat { display: none; }
 }
 
-/* Reusable venue ticket: a compact, obvious link above the article facts. */
+/* Reusable venue ticket. In an article it sits inside the facts box: facts on the
+   left two thirds, the ticket on the right third, vertically centred, so the button
+   is part of the where-and-when rather than a full-width row that splits the story
+   (Andy, 2026-10-26). On a phone the ticket keeps a 128px column beside the facts. */
 .ear-ticket { width: 100%; max-width: 360px; margin: 0 0 20px; }
+.ear-facts-box--ticket { display: grid; grid-template-columns: 2fr 1fr; gap: 10px 18px; align-items: center; }
+.ear-facts-box--ticket .ear-ticket { max-width: 240px; margin: 0; justify-self: end; }
+@media (max-width: 560px) {
+  /* A phone column is too narrow to split: the facts keep the full width and the
+     ticket sits small at the box's bottom-right corner, still inside the box. */
+  .ear-facts-box--ticket { grid-template-columns: minmax(0, 1fr); gap: 8px; justify-items: end; }
+  .ear-facts-box--ticket .ear-facts { width: 100%; }
+  .ear-facts-box--ticket .ear-ticket { max-width: 150px; }
+}
 .ear-ticket-link { display: block; color: var(--rust); border-radius: 12px; text-decoration: none; }
 .ear-ticket-link img { display: block; width: 100%; height: auto; transition: transform 100ms ease, filter 100ms ease; }
 .ear-ticket-caption { display: block; margin-top: 3px; font-family: var(--font-body); font-size: 14px; text-align: center; text-decoration: underline; text-underline-offset: 3px; }

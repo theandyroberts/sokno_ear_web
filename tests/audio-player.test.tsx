@@ -3,12 +3,15 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { AudioBriefingPlayer } from "@/components/AudioBriefingPlayer";
 
 describe("AudioBriefingPlayer", () => {
-  it("renders title + intro and an audio element with the src", () => {
+  it("renders the title, the one-line description and an audio element with the src, and not the intro", () => {
     const { container } = render(
       <AudioBriefingPlayer title="Weekend Audio Briefing" intro="Hi neighbors."
-        description="d" duration="01:30" src="/audio/2026-06-20.mp3" />
+        description="Vol. 1 No. 20 · Halloween weekend, Oct 29–Nov 1" duration="01:30" src="/audio/2026-06-20.mp3" />
     );
     expect(screen.getByText("Weekend Audio Briefing")).toBeInTheDocument();
+    // Title, player, one line (Andy, 2026-10-26): the intro paragraph is gone.
+    expect(screen.getByText("Vol. 1 No. 20 · Halloween weekend, Oct 29–Nov 1")).toBeInTheDocument();
+    expect(screen.queryByText("Hi neighbors.")).toBeNull();
     const audio = container.querySelector("audio") as HTMLAudioElement;
     expect(audio).toBeTruthy();
     expect(audio.getAttribute("src")).toBe("/audio/2026-06-20.mp3");

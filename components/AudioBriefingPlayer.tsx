@@ -2,7 +2,7 @@
 import * as React from "react";
 import { track } from "@/lib/track";
 
-type Props = { title?: string; intro: string; description: string; duration: string; src: string };
+type Props = { title?: string; intro?: string; description: string; duration: string; src: string };
 
 /** The episode an audio file belongs to: "/audio/2026-10-14.mp3" → "2026-10-14". */
 function episodeOf(src: string): string {
@@ -74,8 +74,9 @@ export function AudioBriefingPlayer({
         <span aria-hidden style={{ color: "var(--rust)" }}>★</span>{title}
         <span aria-hidden style={{ color: "var(--rust)" }}>★</span>
       </div>
-      <p style={{ fontFamily: "var(--font-body)", fontWeight: 700, fontSize: "var(--text-deck)",
-        lineHeight: 1.3, color: "var(--ink-black)", margin: "0 0 var(--space-4)" }}>{intro}</p>
+      {/* The intro paragraph is no longer rendered: title, player, one line (Andy,
+          2026-10-26: "way too much text around the audio briefing"). The prop stays
+          so older episode files still validate; it is read nowhere else. */}
       <div style={{ display: "flex", alignItems: "center", gap: "var(--space-4)" }}>
         <button type="button" aria-label={playing ? "Pause" : "Play"} onClick={toggle}
           onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
