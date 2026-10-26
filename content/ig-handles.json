@@ -209,6 +209,118 @@
       "kind": "act",
       "verified": "tagged by Inside of Knoxville's Old Sevier update (instagram.com/insideofknoxville/p/DeckCwKEXww/) for the Oct 22 Rail Trail planting; live profile 'Trees Knoxville — Nonprofit organization', links linktr.ee/treesknoxville; the planting is on treesknoxville.org/event/tree-planting-sokno-rail-trail-and-art-walk/",
       "confidence": "high"
+    },
+    "alex-falk": {
+      "handle": "@alex__falk",
+      "name": "Alex Falk (DJ, Fly by Night's Freaks Come Out at Night ball)",
+      "verified": "tagged in the Oct 5 October-lineup post on Fly by Night's own grid and in Benicio's Oct 22 collab post with the venue",
+      "confidence": "high",
+      "added": "2026-10-26"
+    },
+    "minitiger": {
+      "handle": "@minitigertime",
+      "name": "Minitiger (DJ)",
+      "verified": "tagged in Fly by Night's Oct 5 October-lineup post and the Oct 22 Freaks Come Out at Night post on the venue's grid",
+      "confidence": "high",
+      "added": "2026-10-26"
+    },
+    "benicio": {
+      "handle": "@dj._.ba",
+      "name": "Benicio (DJ)",
+      "verified": "author of the Oct 22 Freaks Come Out at Night collab post on Fly by Night's own grid; tagged in the venue's Oct 5 lineup",
+      "confidence": "high",
+      "added": "2026-10-26"
+    },
+    "xerox-the-kidd": {
+      "handle": "@xeroxthekidd",
+      "name": "Xerox the Kidd (Wax Museum, vinyl night at Fly by Night)",
+      "verified": "tagged in the Oct 5 October-lineup post on Fly by Night's own grid (Wax Museum, Oct 29)",
+      "confidence": "high",
+      "added": "2026-10-26"
+    },
+    "real-country-dark": {
+      "handle": "@realcountrydark",
+      "name": "Country Dark (Wax Museum, vinyl night at Fly by Night)",
+      "verified": "tagged in the Oct 5 October-lineup post on Fly by Night's own grid (Wax Museum, Oct 29)",
+      "confidence": "high",
+      "added": "2026-10-26"
+    },
+    "bear-grillz": {
+      "handle": "@itsbeargrillz",
+      "name": "Bear Grillz",
+      "verified": "tagged in The 808's own Oct 19 post for the Oct 31 show",
+      "confidence": "high",
+      "added": "2026-10-26"
+    },
+    "shosstah": {
+      "handle": "@shosstah",
+      "name": "Shosstah (DJ)",
+      "verified": "tagged in The 808's own Oct 19 and Oct 23 posts",
+      "confidence": "high",
+      "added": "2026-10-26"
+    },
+    "planet-doom": {
+      "handle": "@planetdoomshows",
+      "name": "Planet Doom (Doomsayer's EDM night)",
+      "verified": "author of the Oct 13 HalloweEMO collab post on The Pink Cactus's own grid; @doomsayer named in the venue's Sep 30 October list",
+      "confidence": "high",
+      "added": "2026-10-26"
+    },
+    "knox-social-club": {
+      "handle": "@knoxsocialclub",
+      "name": "Knox Social Club (Love at First Laugh)",
+      "verified": "tagged in The Pink Cactus's own Sep 30 October list; author of the Oct 13 collab post on the venue's grid",
+      "confidence": "high",
+      "added": "2026-10-26"
+    },
+    "comedy-sphere": {
+      "handle": "@thecomedysphereknox",
+      "name": "The Comedy Sphere",
+      "verified": "tagged in The Pink Cactus's own Sep 30 October list",
+      "confidence": "high",
+      "added": "2026-10-26"
+    },
+    "belltower": {
+      "handle": "@belltowerknox",
+      "name": "Belltower (Temple's goth night at The Pink Cactus)",
+      "verified": "author of the Sep 28 Halloween house party collab post on The Pink Cactus's own grid",
+      "confidence": "high",
+      "added": "2026-10-26"
+    },
+    "temple-knox": {
+      "handle": "@templeknox",
+      "name": "Temple (presents Belltower)",
+      "verified": "tagged in Belltower's Sep 28 post on The Pink Cactus's grid; the venue's Sep 30 list says Temple hosts the Halloween Belltower",
+      "confidence": "high",
+      "added": "2026-10-26"
+    },
+    "cemetery-sex": {
+      "handle": "@cemeterysex",
+      "name": "Cemetery Sex (DJ, host of Belltower)",
+      "verified": "tagged in Belltower's Sep 28 post on The Pink Cactus's grid",
+      "confidence": "high",
+      "added": "2026-10-26"
+    },
+    "verena-noctem": {
+      "handle": "@verenanoctem",
+      "name": "Verena Noctem (DJ, Belltower)",
+      "verified": "tagged in Belltower's Sep 28 post on The Pink Cactus's grid",
+      "confidence": "high",
+      "added": "2026-10-26"
+    },
+    "sara-alured": {
+      "handle": "@saraalured",
+      "name": "Sara Alured (DJ, Belltower)",
+      "verified": "tagged in Belltower's Sep 28 post on The Pink Cactus's grid",
+      "confidence": "high",
+      "added": "2026-10-26"
+    },
+    "honeybee": {
+      "handle": "@honeybeecoffeeco",
+      "name": "Honeybee Coffee Company",
+      "verified": "tagged in the Old Sevier District's Oct 24 pub-crawl post; live profile 'Honeybee Coffee Company' with a 'south knox' highlight (2026-10-26)",
+      "confidence": "high",
+      "added": "2026-10-26"
     }
   }
 }

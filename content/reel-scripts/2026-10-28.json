@@ -1,0 +1,26 @@
+{
+  "_comment": "One spoken quip per story for the week's Reel (scripts/ig-reel.py). Real spellings; the script applies the LEXICON's TTS respellings itself. Keep each under about fifteen words — it is said and shown.",
+  "intro": "Nineteen things in South Knoxville this Halloween weekend. The costume is not optional.",
+  "outro": "That's the weekend. The whole briefing is at soknoear.com. Link in bio.",
+  "quips": {
+    "halloween-pub-crawl": "Eleven stops, one passport: the Old Sevier Halloween Pub Crawl, all day Saturday, free.",
+    "puckers-boos-and-brews": "Pumpkin beer pong and a cash costume prize at Puckers, Thursday from five thirty.",
+    "wax-museum-fbn": "Wax Museum spins spooky vinyl rarities at Fly by Night Thursday night.",
+    "freaks-ball-fbn": "Freaks Come Out at Night: three DJs at Fly by Night Friday at nine, ten dollars.",
+    "808-90s-rave": "A free 90s rave with Psychonaut at The 808 Friday. Doors at seven.",
+    "808-bear-grillz": "Bear Grillz plays The 808 on Halloween night. Doors at seven, eighteen and up.",
+    "pink-is-punk-halloweemo": "Emo anthems remixed till two at the Pink Cactus Friday, a dating gameshow first.",
+    "belltower-hiween": "A haunted house party at the Pink Cactus Saturday: free karaoke after nine, till two.",
+    "dia-de-los-muertos-pink-cactus": "Día de los Muertos at the Pink Cactus Sunday: free cumbia class, catrina face paint.",
+    "drop-dead-drag-hiwire": "Drop Dead: a Halloween drag show and costume contest at Hi-Wire, Saturday at nine.",
+    "trailhead-jake-smith-trio": "Jake Smith Trio on the Trailhead patio Friday at seven. Free.",
+    "trailhead-four-legged-dog": "Four Legged Dog plays Trailhead on Halloween night at seven. Free.",
+    "trailhead-mt-olive": "Mt Olive Pleasure Club closes the weekend at Trailhead, Sunday at four.",
+    "kerns-hodown": "Line dancing, a mechanical bull and a Thriller lesson at Kern's Friday night.",
+    "starlight-paddle": "A guided kayak paddle under the stars at Ijams Nature Center, Friday at seven.",
+    "playscape-storytime-bats": "Free bat storytime at the Ijams Nature Center playscape, Halloween morning at ten.",
+    "playing-possum": "Meet the new opossum at Ijams Nature Center, Saturday at eleven. Ten dollars.",
+    "renew-in-nature": "Yoga, a sound bath and forest bathing at Ijams Nature Center, Sunday at ten.",
+    "specials-board": "A different rita every day at Earl's through Halloween, then seven-dollar mimosas Sunday."
+  }
+}

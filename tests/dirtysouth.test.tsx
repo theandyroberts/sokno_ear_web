@@ -46,7 +46,8 @@ describe("DirtySouth checklist", () => {
     expect(ticket.closest(".ds-listing")).toHaveTextContent(item.headline);
     expect(ticket.parentElement?.closest("a")).toBeNull();
     expect(ticket.querySelector(".ear-ticket-caption")).toBeNull();
-    expect(screen.getByRole("link", { name: /9:00 PM.*The Big Pink House Party/i })).toHaveAttribute("href", item.href);
+    const headlineWords = item.headline.split(/\s+/).slice(0, 3).join("\\s+");
+    expect(screen.getByRole("link", { name: new RegExp(`9:00 PM.*${headlineWords}`, "i") })).toHaveAttribute("href", item.href);
     expect(screen.getByAltText("Get tickets at The Pink Cactus")).toHaveAttribute("src", "/assets/spots/pink-cactus-tickets-dirty-south.svg");
     fireEvent.click(screen.getByRole("tab", { name: "Sat" }));
     expect(screen.queryByRole("link", { name: /Get tickets at The Pink Cactus/i })).not.toBeInTheDocument();

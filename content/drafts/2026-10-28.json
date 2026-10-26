@@ -1,0 +1,1635 @@
+{
+  "slug": "2026-10-28",
+  "volume": 1,
+  "number": 20,
+  "episode": "Weekend Episode",
+  "date": "2026-10-28",
+  "dateLabel": "Thu–Sun, Oct 29–Nov 1, 2026",
+  "shortDate": "Oct 29–Nov 1",
+  "place": "South Knoxville, TN",
+  "newsletter": {
+    "subject": "Halloween on Sevier Avenue: an eleven-stop costume crawl, a haunted pink house and a paddle under the stars"
+  },
+  "feature": {
+    "id": "halloween-pub-crawl",
+    "label": "Old Sevier",
+    "labelColor": "rust",
+    "days": [
+      "Sat"
+    ],
+    "layout": "textOnly",
+    "title": "The Old Sevier Halloween Pub Crawl puts eleven neighborhood stops on one passport Saturday",
+    "deck": "Halloween lands on a Saturday, and the merchants' association is turning the whole avenue into the party: a free passport, a costume, and a coffee roaster, a pizza place and a cocktail lounge on the same route.",
+    "facts": [
+      {
+        "label": "When",
+        "value": "Sat Oct 31 · all day, on each stop's own hours"
+      },
+      {
+        "label": "Where",
+        "value": "The Old Sevier District: Sevier Avenue, Island Home Avenue and Barber Street"
+      },
+      {
+        "label": "Cost",
+        "value": "Free to play · a purchase gets the passport stamped"
+      },
+      {
+        "label": "How it works",
+        "value": "Pick up a passport at any participating stop · visit six or more and you are entered to win a prize package from the district's businesses"
+      },
+      {
+        "label": "The eleven stops",
+        "value": "Alliance Brewing · Fly by Night · Hi-Wire Brewing · Honeybee Coffee · Printshop Beer Co. · Redbud Kitchen · Sevier Ave Burger Co. · South Coast Pizza · SouthSide Garage · The Pink Cactus · Trailhead Beer Market"
+      },
+      {
+        "label": "Dress code",
+        "value": "Costumes highly encouraged"
+      },
+      {
+        "label": "Parking",
+        "value": "Riverwalk Garage at the west end, the gravel lot under the James White Parkway bridge at the east end, the public lot at the east end of Suttree Landing Park"
+      },
+      {
+        "label": "Weather",
+        "value": "Mostly cloudy and 76 · showers possible after dark · clocks fall back at 2 AM"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "The Old Sevier District, the merchants' association for the Sevier Avenue corridor, posted the route Saturday: on October 31 its Halloween Pub Crawl is back, with eleven neighborhood businesses on a single passport and the whole day to work through them. Grab a passport at whichever stop you reach first, get it stamped with a purchase at each place you visit, and hit six or more to be entered for a prize package put together by the district's businesses. There is no cover and no ticket; the association's own word for it is a neighborhood in on the spooky-season shenanigans."
+      },
+      {
+        "type": "subhead",
+        "text": "A route you can walk"
+      },
+      {
+        "type": "paragraph",
+        "text": "The list is the avenue end to end, and it is not all beer. Honeybee Coffee is a stop, so is South Coast Pizza, Redbud Kitchen and Sevier Ave Burger Co., which puts breakfast, lunch and dinner on the passport alongside Alliance, Hi-Wire, Printshop and Trailhead's taps, Fly by Night's cocktail list and the Pink Cactus's karaoke rooms. SouthSide Garage opens at noon and runs to midnight on Saturday. Everything sits within about a mile, from Printshop and Trailhead on Island Home Avenue to Hi-Wire on Barber Street, so the sensible plan is to park once and walk it in costume."
+      },
+      {
+        "type": "subhead",
+        "text": "The stops have their own nights"
+      },
+      {
+        "type": "paragraph",
+        "text": "Several of the eleven have Halloween programming that starts as the crawl winds down. The Pink Cactus turns into a haunted house party with free karaoke after nine, Hi-Wire's drag show and costume contest starts at nine, Trailhead has Four Legged Dog on the patio at seven, and just off the list The 808 has Bear Grillz, so the passport can end at a show. The forecast is mostly cloudy and 76 with a chance of showers after dark, and the clocks go back an hour at 2 AM, which the late stops are counting as a bonus hour of Halloween."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Old Sevier District on Instagram — the Halloween Pub Crawl, Oct 31 (the stops, the passport, the prize)",
+        "url": "https://www.instagram.com/oldsevierdistrict/p/De4nXYvFsDk/"
+      },
+      {
+        "label": "Old Sevier District — where to park",
+        "url": "https://oldsevierdistrict.org/"
+      },
+      {
+        "label": "SouthSide Garage — specials (Saturday hours)",
+        "url": "https://www.southsidegarageknox.com/specials/"
+      },
+      {
+        "label": "National Weather Service — Knoxville forecast",
+        "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+      }
+    ],
+    "event": {
+      "startDate": "2026-10-31T11:00:00-04:00",
+      "endDate": "2026-10-31T23:59:00-04:00",
+      "locationName": "Old Sevier District",
+      "locationAddress": "Sevier Ave, Knoxville, TN 37920"
+    },
+    "social": {
+      "igTags": [
+        "old-sevier",
+        "alliance",
+        "fly-by-night",
+        "hiwire",
+        "honeybee",
+        "printshop",
+        "pink-cactus",
+        "trailhead"
+      ],
+      "igAct": {
+        "key": "old-sevier"
+      },
+      "igBanner": [
+        "Halloween Pub Crawl: eleven stops, one passport",
+        "Saturday, all day, free to play"
+      ],
+      "igBannerSkipCheck": true
+    }
+  },
+  "scanner": [
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/possum_street_art.png",
+      "title": "Eleven stops, one passport: the Halloween Pub Crawl",
+      "blurb": "Costumes on, six stamps enter the prize drawing, free to play.",
+      "href": "#halloween-pub-crawl"
+    },
+    {
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "hot": true,
+      "image": "/assets/possum_street_art.png",
+      "title": "A guided paddle on the river under the stars",
+      "blurb": "Kayak and headlamp provided, 7 to 9, $45.",
+      "href": "#starlight-paddle"
+    },
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Fri"
+      ],
+      "hot": false,
+      "image": "/assets/possum_street_art.png",
+      "title": "Line dancing, a mechanical bull and a Thriller lesson on the lawn",
+      "blurb": "The Ho'Down's costume winners take a $500 gift card at nine.",
+      "href": "#kerns-hodown"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "hot": false,
+      "image": "/assets/possum_street_art.png",
+      "title": "Boos & Brews at Puckers: pumpkin beer pong and a cash costume prize",
+      "blurb": "Thursday 5:30 to 9:30, a live DJ, shot roulette.",
+      "href": "#puckers-boos-and-brews"
+    },
+    {
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/possum_street_art.png",
+      "title": "Free bat storytime at the Nature Playscape",
+      "blurb": "Halloween morning, 10 to noon, for the little ones.",
+      "href": "#playscape-storytime-bats"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/possum_street_art.png",
+      "title": "Drop Dead: Hi-Wire's Halloween drag show and costume contest",
+      "blurb": "Saturday 9 to 11:30, tickets under ten dollars.",
+      "href": "#drop-dead-drag-hiwire"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "hot": false,
+      "image": "/assets/possum_street_art.png",
+      "title": "A free 90s rave at The 808",
+      "blurb": "Psychonaut, doors at 7, 18 and up, no ticket.",
+      "href": "#808-90s-rave"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "hot": false,
+      "image": "/assets/possum_street_art.png",
+      "title": "Día de los Muertos at the Pink Cactus",
+      "blurb": "Free cumbia class, catrina face paint and an ofrenda, 5 to 9.",
+      "href": "#dia-de-los-muertos-pink-cactus"
+    }
+  ],
+  "stories": [
+    {
+      "id": "puckers-boos-and-brews",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "textOnly",
+      "title": "Puckers throws Boos & Brews Thursday: a cash-prize costume contest, pumpkin beer pong and shot roulette",
+      "deck": "The sports grill across the river from Neyland gets the weekend started two days early, with a live DJ and a costume contest that pays out in cash.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Oct 29 · 5:30 – 9:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Puckers Sports Grill · 115 Mimosa Ave"
+        },
+        {
+          "label": "On",
+          "value": "Cash-prize costume contest · Pumpkin Beer Pong · Shot Roulette · a live DJ"
+        },
+        {
+          "label": "Before it",
+          "value": "Pucker Hour, 5 to 6 on weekdays: $1 Puckers Lager, $3 wells, prosecco and lemon drops, $5 Vol Bombs"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Puckers, the sports grill on Mimosa Avenue with the wall of screens across the river from Neyland, is calling Thursday Boos & Brews. From 5:30 to 9:30 on October 29 there is a costume contest with a cash prize, Pumpkin Beer Pong, Shot Roulette and a live DJ; the venue's own line is come dressed to impress and ready to party. It overlaps Pucker Hour, the weekday five-to-six deal with a dollar Puckers Lager and three-dollar wells, so the early arrivals pay less. Thursday is sunny and 75, dropping into the 40s overnight."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Puckers Sports Grill on Instagram — Boos & Brews, Oct 29",
+          "url": "https://www.instagram.com/puckersknoxville/reel/DewdTH-i5v0/"
+        },
+        {
+          "label": "Puckers Sports Grill on Instagram — Happy Hour and Pucker Hour",
+          "url": "https://www.instagram.com/puckersknoxville/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-29T17:30:00-04:00",
+        "endDate": "2026-10-29T21:30:00-04:00",
+        "locationName": "Puckers Sports Grill",
+        "locationAddress": "115 Mimosa Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "puckers"
+        ],
+        "igAct": {
+          "none": "Puckers' own party; the DJ is unnamed in the venue's post"
+        },
+        "igBanner": [
+          "Boos & Brews at Puckers: costume contest, pumpkin beer pong",
+          "Thursday, five thirty to nine thirty"
+        ]
+      }
+    },
+    {
+      "id": "wax-museum-fbn",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "textOnly",
+      "title": "Wax Museum spins spooky vinyl rarities at Fly by Night Thursday",
+      "deck": "Two record collectors, a crate of monster-mash obscurities and the seventies cocktail lounge's creepy drink list: the quiet way into Halloween weekend.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Oct 29 · evening; the lounge is open 4 PM – 1 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Fly by Night · 906 Sevier Ave, Suite 126"
+        },
+        {
+          "label": "Who",
+          "value": "Wax Museum: Xerox the Kidd and Country Dark, on vinyl"
+        },
+        {
+          "label": "Cost",
+          "value": "No cover posted"
+        },
+        {
+          "label": "Also",
+          "value": "The creepy cocktail list runs all month"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Fly by Night's October lineup, posted on the lounge's own grid at the start of the month, gives the Thursday before Halloween to Wax Museum, the vinyl duo of Xerox the Kidd and Country Dark, for what the post calls a monster mash of spooky vinyl rarities. No set time or cover is posted, so ask at the bar; the room is open from four until one. The creepy cocktail list the lounge has run all month is still on, and it is the calmer of the lounge's two Halloween nights, before Friday's ball."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Fly by Night on Instagram — the October lineup (Wax Museum, Oct 29)",
+          "url": "https://www.instagram.com/dj._.ba/p/DeHkyqDxwij/"
+        },
+        {
+          "label": "Fly by Night — hours",
+          "url": "https://www.flybynightknox.com/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-29T21:00:00-04:00",
+        "locationName": "Fly by Night",
+        "locationAddress": "906 Sevier Ave Suite 126, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "fly-by-night",
+          "xerox-the-kidd",
+          "real-country-dark"
+        ],
+        "igAct": {
+          "key": "xerox-the-kidd"
+        },
+        "igBanner": [
+          "Wax Museum's spooky vinyl night at Fly by Night",
+          "Thursday, no cover posted"
+        ]
+      }
+    },
+    {
+      "id": "freaks-ball-fbn",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "textOnly",
+      "title": "Fly by Night's fourth Freaks Come Out at Night ball brings three DJs to the haunted lounge Friday",
+      "deck": "The lounge's biggest night of the year is a costume ball with Alex Falk, Minitiger and Benicio on the decks, ten dollars at the door and the room done up as a haunted house.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 30 · 9 PM until late"
+        },
+        {
+          "label": "Where",
+          "value": "Fly by Night · 906 Sevier Ave, Suite 126"
+        },
+        {
+          "label": "DJs",
+          "value": "Alex Falk · Minitiger · Benicio"
+        },
+        {
+          "label": "Cost",
+          "value": "$10 · tickets through the lounge's bio link or at the door"
+        },
+        {
+          "label": "Ages",
+          "value": "21+"
+        },
+        {
+          "label": "Dress",
+          "value": "Dress up and get down, says the post"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Freaks Come Out at Night is Fly by Night's annual Halloween ball, and this is its fourth year. Benicio, one of the three DJs, posted the details with the lounge on October 22: Friday, October 30, from nine until late, ten dollars, 21 and up, with Alex Falk and Minitiger on the bill alongside him, rocking the haunted house, as the lineup put it. The lounge itself posted that tickets are on sale through the QR code and the link in its bio, and its October lineup promised all the ghouls and goblins grooving. Friday is mostly sunny and 77 and stays in the 50s overnight, so the walk from the gravel lot is a mild one."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Benicio and Fly by Night on Instagram — Freaks Come Out at Night, Oct 30",
+          "url": "https://www.instagram.com/dj._.ba/p/De0d9z_DIdz/"
+        },
+        {
+          "label": "Fly by Night on Instagram — tickets",
+          "url": "https://www.instagram.com/flybynightknox/p/DeurpCkODjG/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-30T21:00:00-04:00",
+        "locationName": "Fly by Night",
+        "locationAddress": "906 Sevier Ave Suite 126, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "fly-by-night",
+          "alex-falk",
+          "minitiger",
+          "benicio"
+        ],
+        "igAct": {
+          "key": "alex-falk"
+        },
+        "igBanner": [
+          "Freaks Come Out at Night ball at Fly by Night",
+          "Friday, nine till late, ten dollars"
+        ]
+      }
+    },
+    {
+      "id": "808-90s-rave",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "textOnly",
+      "title": "The 808 throws a free 90s rave with Psychonaut on Halloween eve",
+      "deck": "The month-old music venue on Sevier Avenue calls it the Halloween pregame: no ticket, doors at seven, and a decade's worth of glow sticks implied.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 30 · doors 7 PM · show 8 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The 808 · 808 Sevier Ave"
+        },
+        {
+          "label": "Who",
+          "value": "Psychonaut"
+        },
+        {
+          "label": "Cost",
+          "value": "Free entry"
+        },
+        {
+          "label": "Ages",
+          "value": "18+"
+        },
+        {
+          "label": "Parking",
+          "value": "The venue's map: the lots and street spaces around the block",
+          "href": "#808-bear-grillz"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The 808, the music venue that opened at 808 Sevier Avenue on October 2, has a free night on Halloween eve: a 90s Rave with Psychonaut, doors at seven and show at eight, 18 and up, free entry on the venue's own schedule. Its post pitched it as the Halloween pregame and said to get the costumes ready, which fits a week in which the venue has gone from a free open-house weekend of house and bass DJs to its first Halloween. The next night is a ticketed one, below."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The 808 — 90s Rave event page",
+          "url": "https://808knox.com/tm-event/90s-rave/"
+        },
+        {
+          "label": "The 808 on Instagram — free 90s rave with Psychonaut",
+          "url": "https://www.instagram.com/808knox/p/DeuROgEi_aB/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-30T19:00:00-04:00",
+        "locationName": "The 808",
+        "locationAddress": "808 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "the-808"
+        ],
+        "igAct": {
+          "none": "Psychonaut has no handle in The 808's post or on its event page"
+        },
+        "igBanner": [
+          "A free 90s rave at The 808",
+          "Friday, doors at seven, eighteen and up"
+        ]
+      }
+    },
+    {
+      "id": "808-bear-grillz",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "textOnly",
+      "image": "/assets/spots/the-808-parking.png",
+      "imageCaption": "Where to park for The 808: the lots and street spaces around the block, from the venue.",
+      "imageZoom": true,
+      "title": "Bear Grillz brings the Dubstep Time Machine to The 808 on Halloween night",
+      "deck": "The venue's biggest booking so far lands on the holiday itself: a touring dubstep headliner with Spnce and Shosstah opening, and a crowd that will come in costume.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 31 · doors 7 PM · show 8 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The 808 · 808 Sevier Ave"
+        },
+        {
+          "label": "Who",
+          "value": "Bear Grillz · Spnce · Shosstah"
+        },
+        {
+          "label": "Tickets",
+          "value": "On the venue's site; the posted advance and door prices differ, so check before you go",
+          "href": "https://808knox.com/tm-event/bear-grillz/"
+        },
+        {
+          "label": "Ages",
+          "value": "18+"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Bear Grillz, the bass producer who tours as a costumed bear, plays The 808 on Saturday, October 31, with Spnce and Shosstah opening; the venue has been billing it as Dubstep Time Machine Halloween since the middle of the month and told followers to let the bear inspire their costumes. Doors are at seven and the show at eight, 18 and up. Tickets are on the venue's site through TicketWeb; the venue's post quoted an advance price lower than the one its site shows, so buy from the page and take the number there. The parking map above is the venue's own."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The 808 — Bear Grillz event page and tickets",
+          "url": "https://808knox.com/tm-event/bear-grillz/"
+        },
+        {
+          "label": "The 808 on Instagram — Bear Grillz Dubstep Time Machine Halloween",
+          "url": "https://www.instagram.com/808knox/p/DeraGeoEZyh/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-31T19:00:00-04:00",
+        "locationName": "The 808",
+        "locationAddress": "808 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "the-808",
+          "bear-grillz",
+          "shosstah"
+        ],
+        "igAct": {
+          "key": "bear-grillz"
+        },
+        "igBanner": [
+          "Bear Grillz at The 808 on Halloween night",
+          "Saturday, doors at seven, eighteen and up"
+        ]
+      }
+    },
+    {
+      "id": "pink-is-punk-halloweemo",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "textOnly",
+      "ticket": {
+        "href": "https://posh.vip/e/planet-doom-halloweemo-party",
+        "image": "/assets/spots/pink-cactus-tickets.svg",
+        "alt": "Get tickets for the HalloweEMO party at The Pink Cactus"
+      },
+      "title": "Planet Doom's HalloweEMO party takes over the Pink Cactus Friday, with a blind-dating gameshow first",
+      "deck": "EDM remixes of emo anthems in costume, from nine until two, and a comedy dating show at half past seven for anyone who wants a date for the dance floor.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 30 · Love at First Laugh 7:30 PM · Pink Is Punk 9 PM – 2 AM"
+        },
+        {
+          "label": "Where",
+          "value": "The Pink Cactus · 1147 Sevier Ave"
+        },
+        {
+          "label": "Tickets",
+          "value": "$35 VIP covers the gameshow and the party, through Knox Social Club · party-only presale at iamdoomsayer.com"
+        },
+        {
+          "label": "Ages",
+          "value": "18+ · costumes encouraged"
+        },
+        {
+          "label": "Who",
+          "value": "Planet Doom (Doomsayer) · Knox Social Club and The Comedy Sphere for the gameshow"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Planet Doom, Doomsayer's recurring EDM night, makes the Pink Cactus its Halloween home on Friday, October 30, with Pink Is Punk: HalloweEMO, a party of EDM remixes of emo favorites from nine until two, 18 and up, costumes encouraged. Before it, at 7:30, Knox Social Club and The Comedy Sphere run Love at First Laugh: Get Boo'd Up Edition, a blind-dating gameshow hosted by comedians. A thirty-five-dollar VIP ticket, sold through Knox Social Club, covers both; the party alone has a presale on Doomsayer's site, which lists it nine to two at the pink house. The Pink Cactus put both on its October list at the start of the month, and Planet Doom posted the details with the venue on October 13."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Planet Doom and The Pink Cactus on Instagram — HalloweEMO and Love at First Laugh, Oct 30",
+          "url": "https://www.instagram.com/planetdoomshows/p/Decl_aWtGmh/"
+        },
+        {
+          "label": "The Pink Cactus on Instagram — the October list",
+          "url": "https://www.instagram.com/thepinkcactusknox/p/Dd6tuR1lts4/"
+        },
+        {
+          "label": "Doomsayer — shows (the Oct 30 listing and presale)",
+          "url": "https://iamdoomsayer.com/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-30T19:30:00-04:00",
+        "endDate": "2026-10-31T02:00:00-04:00",
+        "locationName": "The Pink Cactus",
+        "locationAddress": "1147 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "pink-cactus",
+          "planet-doom",
+          "knox-social-club",
+          "comedy-sphere"
+        ],
+        "igAct": {
+          "key": "planet-doom"
+        },
+        "igBanner": [
+          "Pink Is Punk: HalloweEMO at the Pink Cactus",
+          "Friday, nine to two; dating gameshow at seven thirty"
+        ]
+      }
+    },
+    {
+      "id": "belltower-hiween",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "textOnly",
+      "title": "Belltower turns the Pink Cactus into a haunted house party on Halloween night, with free karaoke after nine",
+      "deck": "Goth DJs downstairs, all four karaoke rooms free upstairs, vendors and the outdoor bar, and an extra hour on the clock: the pink house's Halloween runs until two.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 31 · evening until 2 AM · karaoke rooms free after 9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The Pink Cactus · 1147 Sevier Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$15 at the gate · cash, card or Venmo"
+        },
+        {
+          "label": "Ages",
+          "value": "18+ (\"baby bats welcome\")"
+        },
+        {
+          "label": "DJs",
+          "value": "Verena Noctem · Sara Alured · Cemetery Sex, goth all night"
+        },
+        {
+          "label": "Presented by",
+          "value": "Temple · Dark Frequencies Production · hosted by Cemetery Sex"
+        },
+        {
+          "label": "Parking",
+          "value": "Tight on Halloween night, the hosts say: carpool or rideshare"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Belltower, the goth night Temple runs, has the Pink Cactus on Halloween itself. Its post with the venue describes a decorated haunted house party: a dark dance party downstairs with live DJs spinning goth music all night, Verena Noctem, Sara Alured and Cemetery Sex among them, local vendors, the outdoor bar back open, and the venue's treat, free karaoke in all four rooms after nine, with a request to let everyone have a turn. Entry is fifteen dollars at the gate, 18 and up, costumes encouraged."
+        },
+        {
+          "type": "paragraph",
+          "text": "The hosts have extended hours for the night and are counting the end of daylight saving time, which falls at 2 AM Sunday, as a bonus hour: the party runs until the clock says two. It is the last stop on Saturday's pub crawl route for anyone still in costume, and the hosts warn that parking will be tight, so carpool or rideshare in."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Belltower and The Pink Cactus on Instagram — the Halloween house party, Oct 31",
+          "url": "https://www.instagram.com/belltowerknox/p/Dd1x1gumUcx/"
+        },
+        {
+          "label": "The Pink Cactus on Instagram — the October list",
+          "url": "https://www.instagram.com/thepinkcactusknox/p/Dd6tuR1lts4/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-31T21:00:00-04:00",
+        "endDate": "2026-11-01T02:00:00-05:00",
+        "locationName": "The Pink Cactus",
+        "locationAddress": "1147 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "pink-cactus",
+          "belltower",
+          "temple-knox",
+          "cemetery-sex",
+          "verena-noctem",
+          "sara-alured"
+        ],
+        "igAct": {
+          "key": "belltower"
+        },
+        "igBanner": [
+          "Haunted house party at the Pink Cactus, free karaoke after nine",
+          "Halloween night, fifteen dollars, until two"
+        ]
+      }
+    },
+    {
+      "id": "dia-de-los-muertos-pink-cactus",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "layout": "textOnly",
+      "title": "The Pink Cactus celebrates Día de los Muertos Sunday with a free cumbia class, catrina face paint and an ofrenda",
+      "deck": "The weekend's gentlest finish: a Day of the Dead evening for families, with a traditional altar for the people you've lost and a dance lesson for the people you came with.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Nov 1 · 5 – 9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The Pink Cactus · 1147 Sevier Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "Free cumbia class · free catrina makeup"
+        },
+        {
+          "label": "On",
+          "value": "Cumbia dance class with Nery and Ramón · traditional catrina skull face paint · an ofrenda to celebrate loved ones"
+        },
+        {
+          "label": "Weather",
+          "value": "Showers likely and 73; the celebration is indoors and on the covered patio"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The Pink Cactus closes Halloween weekend with Día de los Muertos on Sunday, November 1, from five to nine. The venue's bilingual post lists a free cumbia dance class with Nery and Ramón, free catrina makeup, the traditional skull face paint, and an ofrenda, the altar of photographs, marigolds and favorite foods that is the heart of the Day of the Dead, with an invitation to come with families and friends. It is the one Halloween-weekend event on the avenue that is built for all ages, and the venue's kitchen does arepas and flatbreads for anyone who stays for dinner."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The Pink Cactus on Instagram — Día de los Muertos, Nov 1",
+          "url": "https://www.instagram.com/thepinkcactusknox/reel/De2fs9_OF7h/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-01T17:00:00-05:00",
+        "endDate": "2026-11-01T21:00:00-05:00",
+        "locationName": "The Pink Cactus",
+        "locationAddress": "1147 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "pink-cactus"
+        ],
+        "igAct": {
+          "none": "the venue's own celebration; the dance teachers have no handle in its post"
+        },
+        "igBanner": [
+          "Día de los Muertos at the Pink Cactus",
+          "Sunday, five to nine, free cumbia class"
+        ]
+      }
+    },
+    {
+      "id": "drop-dead-drag-hiwire",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "textOnly",
+      "title": "Hi-Wire hosts Drop Dead, a Halloween drag show and costume contest, Saturday at nine",
+      "deck": "The brewery's upstairs taproom does drag for the holiday, with a costume contest for the crowd and a ticket that costs less than a flight of beer.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 31 · 9 – 11:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Hi-Wire Brewing · 2020 Barber St, second floor"
+        },
+        {
+          "label": "Tickets",
+          "value": "$9.55 on the brewery's SimpleTix page",
+          "href": "https://www.simpletix.com/e/drop-dead-halloween-drag-show-costume-cont-tickets-291775"
+        },
+        {
+          "label": "Earlier",
+          "value": "Hi-Wire is a stop on the day's pub crawl; Saturday hours are noon to 11"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Hi-Wire's Knoxville taproom, the whole second floor of the building on Barber Street, hosts Drop Dead: Halloween Drag Show & Costume Contest on Saturday, October 31, from nine to 11:30. The brewery's own ticket page lists it at $9.55 and bills it with its usual wink: coming for you, babe. It is the latest in a run of drag nights the taproom has hosted this year, and the costume contest is for the crowd, so the pub crawl outfit gets a second use. The taproom opens at noon on Saturdays and is one of the crawl's eleven stops."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Hi-Wire Brewing — Drop Dead Halloween Drag Show & Costume Contest (tickets)",
+          "url": "https://www.simpletix.com/e/drop-dead-halloween-drag-show-costume-cont-tickets-291775"
+        },
+        {
+          "label": "Hi-Wire Brewing — Knoxville taproom hours",
+          "url": "https://hiwirebrewing.com/knoxville/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-31T21:00:00-04:00",
+        "endDate": "2026-10-31T23:30:00-04:00",
+        "locationName": "Hi-Wire Brewing Knoxville",
+        "locationAddress": "2020 Barber St, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "hiwire"
+        ],
+        "igAct": {
+          "none": "the brewery's ticket page names no performers"
+        },
+        "igBanner": [
+          "Drop Dead: Halloween drag show at Hi-Wire",
+          "Saturday, nine to eleven thirty"
+        ]
+      }
+    },
+    {
+      "id": "trailhead-jake-smith-trio",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "textOnly",
+      "title": "Jake Smith Trio plays the Trailhead patio Friday at seven",
+      "deck": "Free music outdoors on a 77-degree Friday, with a one-week mushroom menu in the kitchen that the cook says you cannot go wrong on.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 30 · 7 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Trailhead Beer Market · 1317 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "Free"
+        },
+        {
+          "label": "Kitchen",
+          "value": "Gato Peligroso's Asian mushroom menu with Extraterrestrial Fungi, every night through Sunday"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly sunny and 77, 50s after dark"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Trailhead Beer Market's October flyer puts the Jake Smith Trio on the patio Friday, October 30, at seven, the first of three nights of music there this weekend. The shows are free and outdoors, and Gato Peligroso, the kitchen inside, has brought back its Asian-themed mushroom menu with Extraterrestrial Fungi for the week, open every night through Sunday. Friday is mostly sunny and 77 and holds in the 50s after dark, which is patio weather in a jacket."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Trailhead Beer Market on Instagram — the October live music flyer",
+          "url": "https://www.instagram.com/trailheadbeer/p/Dd92UvFBnV5/"
+        },
+        {
+          "label": "Gato Peligroso on Instagram — the mushroom menu",
+          "url": "https://www.instagram.com/gatopeligrosokno/p/DeusSkjo3jm/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-30T19:00:00-04:00",
+        "locationName": "Trailhead Beer Market",
+        "locationAddress": "1317 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "trailhead"
+        ],
+        "igAct": {
+          "none": "the band is named on Trailhead's flyer with no handle, and tags no account in the venue's posts"
+        },
+        "igBanner": [
+          "Jake Smith Trio on the Trailhead patio",
+          "Friday at seven, free"
+        ]
+      }
+    },
+    {
+      "id": "trailhead-four-legged-dog",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "textOnly",
+      "title": "Four Legged Dog plays Trailhead on Halloween night",
+      "deck": "A band on the patio at seven on the day of the pub crawl, which makes Trailhead the stamp you can sit down for.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 31 · 7 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Trailhead Beer Market · 1317 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "Free"
+        },
+        {
+          "label": "Crawl",
+          "value": "Trailhead is one of the eleven pub crawl stops; a purchase stamps the passport"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Four Legged Dog takes the Trailhead patio Saturday, October 31, at seven, per the beer market's October flyer. It is Halloween night, Trailhead is one of the eleven stops on the Old Sevier pub crawl, and the music is free, so this is the stamp that comes with a set. Saturday is mostly cloudy and 76 with a chance of showers after dark; the patio has cover."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Trailhead Beer Market on Instagram — the October live music flyer",
+          "url": "https://www.instagram.com/trailheadbeer/p/Dd92UvFBnV5/"
+        },
+        {
+          "label": "Old Sevier District on Instagram — the pub crawl stops",
+          "url": "https://www.instagram.com/oldsevierdistrict/p/De4nXYvFsDk/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-31T19:00:00-04:00",
+        "locationName": "Trailhead Beer Market",
+        "locationAddress": "1317 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "trailhead"
+        ],
+        "igAct": {
+          "none": "the band is named on Trailhead's flyer with no handle, and tags no account in the venue's posts"
+        },
+        "igBanner": [
+          "Four Legged Dog at Trailhead on Halloween night",
+          "Saturday at seven, free"
+        ]
+      }
+    },
+    {
+      "id": "trailhead-mt-olive",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "layout": "textOnly",
+      "title": "Mt Olive Pleasure Club closes the weekend at Trailhead Sunday at four",
+      "deck": "The Sunday show starts early, in daylight, which on a showery first of November is the right call.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Nov 1 · 4 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Trailhead Beer Market · 1317 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "Free"
+        },
+        {
+          "label": "Weather",
+          "value": "Showers likely and 73; the patio is covered"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Mt Olive Pleasure Club plays Trailhead Beer Market on Sunday, November 1, at four, the flyer's standing Sunday hour. It is the last of the weekend's three patio shows, free, and the first afternoon after the clocks go back, so four o'clock feels later than it is. Rain showers are likely Sunday with a high of 73; the patio has cover and the mushroom menu runs through the night."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Trailhead Beer Market on Instagram — the October live music flyer",
+          "url": "https://www.instagram.com/trailheadbeer/p/Dd92UvFBnV5/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-01T16:00:00-05:00",
+        "locationName": "Trailhead Beer Market",
+        "locationAddress": "1317 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "trailhead"
+        ],
+        "igAct": {
+          "none": "the band is named on Trailhead's flyer with no handle, and tags no account in the venue's posts"
+        },
+        "igBanner": [
+          "Mt Olive Pleasure Club on the Trailhead patio",
+          "Sunday at four, free"
+        ]
+      }
+    },
+    {
+      "id": "kerns-hodown",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Fri"
+      ],
+      "layout": "textOnly",
+      "title": "Kern's Ho'Down puts line dancing, a mechanical bull and a Thriller lesson on the lawn Friday",
+      "deck": "Boots and costumes at the food hall: a country night with a live DJ, a bull to ride and a costume contest that pays a $500 gift card at nine.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 30 · evening · costume contest winners announced at 9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The event lawn at Kern's · 2201 Kern's Rising Way"
+        },
+        {
+          "label": "On",
+          "value": "Country line dancing · two-stepping · a live DJ · a mechanical bull · a group lesson in the Thriller line dance"
+        },
+        {
+          "label": "Prizes",
+          "value": "1st: $500 gift card · 2nd: $100 Eggspectation gift card"
+        },
+        {
+          "label": "Food",
+          "value": "The food hall is open until 11 on Fridays"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Kern's calls it the Ho'Down: on Friday, October 30, the lawn at the food hall goes country, with line dancing, two-stepping and a live DJ, a mechanical bull, and a group lesson in the Thriller line dance for the holiday. The costume contest winners are announced at nine during the dancing, a $500 gift card for first and a $100 Eggspectation card for second; the post's advice is dress up, hop on the bull and show us what you've got. Kern's post gives the nine o'clock mark but no start time, so arrive after dinner. Friday is mostly sunny and 77 and in the 50s after dark."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Kern's on Instagram — the Ho'Down, Oct 30",
+          "url": "https://www.instagram.com/kernsknox/p/DezTNmFBdEi/"
+        },
+        {
+          "label": "Kern's — hours",
+          "url": "https://kernsbakery.com/public-events/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-30T19:30:00-04:00",
+        "locationName": "Kern's",
+        "locationAddress": "2201 Kern's Rising Way, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "kerns"
+        ],
+        "igAct": {
+          "none": "Kern's post names no DJ, dance studio or account; the venue is the act"
+        },
+        "igBanner": [
+          "Ho'Down on the lawn at Kern's: line dancing and a mechanical bull",
+          "Friday night; costume winners at nine"
+        ]
+      }
+    },
+    {
+      "id": "starlight-paddle",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "layout": "textOnly",
+      "title": "The Starlight Paddle takes kayaks onto the Tennessee River after dark Friday",
+      "deck": "Two guided hours on the water under the stars with a naturalist, a headlamp and a boat provided; the full-moon paddles are done for the year, so this is the dark-sky one.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Oct 30 · 7 – 9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams River Landing boat dock · 3507 Island Home Pike (park there, not at Meads Quarry or the visitor center)"
+        },
+        {
+          "label": "Cost",
+          "value": "$45 · register on the park's calendar",
+          "href": "https://www.ijams.org/event-details/starlight-paddle-2026-10-30-19-00"
+        },
+        {
+          "label": "Ages",
+          "value": "14+ · under 18 with an adult"
+        },
+        {
+          "label": "Gear",
+          "value": "Kayaks, life vests and headlamps provided · bring your own vest or paddle if you like, not your own boat · bring water, dress for the weather"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly sunny Friday, 77, clearing to the 50s by nine"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Ijams Nature Center's Starlight Paddle is a two-hour guided trip on the Tennessee River after sunset on Friday, October 30, from seven to nine. Naturalists lead it from the boat dock at Ijams River Landing, pointing out the plants, animals and rock along the bank and the night sky above it, and the park provides the kayak, the life vest and the headlamp. It is for ages 14 and up, with anyone under 18 accompanied by an adult, and costs $45."
+        },
+        {
+          "type": "subhead",
+          "text": "The practical part"
+        },
+        {
+          "type": "paragraph",
+          "text": "Park at Ijams River Landing itself, down the road between the main visitor center and Meads Quarry, not at either of those lots. The park notes that its launch and dock have accessible elements but do not meet ADA requirements for a fully accessible dock, and asks anyone who needs accommodations to write before buying a ticket. Last weekend's Hunter Moon paddle was the last full-moon date of the season, so Friday's is the darker sky, and the forecast is clear: mostly sunny all day, into the 50s by the time the boats come in."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Starlight Paddle, Oct 30",
+          "url": "https://www.ijams.org/event-details/starlight-paddle-2026-10-30-19-00"
+        },
+        {
+          "label": "Ijams Nature Center on Instagram — the week's calendar",
+          "url": "https://www.instagram.com/ijamsnaturecenter/p/De9IJgOgEdx/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-30T19:00:00-04:00",
+        "endDate": "2026-10-30T21:00:00-04:00",
+        "locationName": "Ijams River Landing",
+        "locationAddress": "3507 Island Home Pike, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a guided park program led by Ijams naturalists"
+        },
+        "igBanner": [
+          "Starlight Paddle on the river at Ijams Nature Center",
+          "Friday, seven to nine, forty-five dollars"
+        ]
+      }
+    },
+    {
+      "id": "playscape-storytime-bats",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "textOnly",
+      "title": "Storytime at the Nature Playscape is all about bats on Halloween morning",
+      "deck": "A free Saturday for the smallest Halloween fans: bat stories and bat play in the nature playground before the costumes go on for the night.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 31 · 10 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Playscape · 3518 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "Free"
+        },
+        {
+          "label": "Same morning",
+          "value": "Playing 'Possum, the meet-and-greet with the park's new opossum, is at 11 at the visitor center"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Ijams Nature Center's Saturday storytime moves to the Nature Playscape on October 31 with a theme that fits the date: bats. The park bills it as a free Saturday family event focused on bats, from ten to noon, in the natural playground on Island Home Avenue. Last Saturday's storytime was fairytales ahead of the Enchanted Forest; this one is the Halloween animal, and it is the easiest Halloween-morning plan on the beat for anyone with a toddler who will be up at six anyway. The weather is mostly cloudy and in the 60s by ten, climbing to 76."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Storytime at the Ijams Nature Playscape: Bats",
+          "url": "https://www.ijams.org/event-details/storytime-at-the-ijams-nature-playscape-bats"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-31T10:00:00-04:00",
+        "endDate": "2026-10-31T12:00:00-04:00",
+        "locationName": "Ijams Nature Playscape",
+        "locationAddress": "3518 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a free park storytime for small children, led by Ijams staff"
+        },
+        "igBanner": [
+          "Bat storytime at the Ijams Nature Center playscape",
+          "Halloween morning, ten to noon, free"
+        ],
+        "standing": true,
+        "standingKey": "playscape-storytime"
+      }
+    },
+    {
+      "id": "playing-possum",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "textOnly",
+      "title": "Meet the park's newest animal ambassador, an opossum, at Playing 'Possum on Halloween morning",
+      "deck": "An hour with Ijams Nature Center's new opossum and the naturalist who looks after it: how the only marsupial in Tennessee lives, and why it is nothing to be scared of.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Oct 31 · 11 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$10 · register on the park's calendar",
+          "href": "https://www.ijams.org/event-details/playing-possum-animal-ambassador-meet-greet-2026-10-31-11-00"
+        },
+        {
+          "label": "Parking",
+          "value": "Free for the program; check in 5 to 10 minutes early for a pass"
+        },
+        {
+          "label": "Again",
+          "value": "Fri Nov 6 at 6 PM"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Ijams Nature Center has a new animal ambassador, an opossum, and Playing 'Possum on Saturday, October 31, from eleven to noon is the public's first scheduled hour with it. The park's listing promises a look at the lifestyle and adaptations of opossums, which is a long list: North America's only marsupial, a pouch, a prehensile tail, a tick appetite that makes it a gardener's friend, and the famous faint that gives the program its name. Ten dollars, with free parking for the hour if you check in a few minutes early. It runs again Friday, November 6, at six for anyone whose Halloween morning is spoken for, and it pairs with the free bat storytime at the Nature Playscape down Island Home Avenue from ten to noon."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Playing 'Possum: Animal Ambassador Meet & Greet, Oct 31",
+          "url": "https://www.ijams.org/event-details/playing-possum-animal-ambassador-meet-greet-2026-10-31-11-00"
+        },
+        {
+          "label": "Ijams Nature Center — the Nov 6 date",
+          "url": "https://www.ijams.org/event-details/playing-possum-animal-ambassador-meet-greet-2026-11-06-18-00"
+        }
+      ],
+      "event": {
+        "startDate": "2026-10-31T11:00:00-04:00",
+        "endDate": "2026-10-31T12:00:00-04:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a park animal program; the ambassador is an opossum"
+        },
+        "igBanner": [
+          "Meet the new opossum at Ijams Nature Center",
+          "Halloween morning, eleven o'clock, ten dollars"
+        ]
+      }
+    },
+    {
+      "id": "renew-in-nature",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "textOnly",
+      "title": "Renew in Nature: yoga, a sound bath and forest bathing at the Ijams homesite Sunday morning",
+      "deck": "The morning after Halloween, with an extra hour of sleep behind it, the park offers two quiet hours of moving, listening and walking slowly in the woods.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Nov 1 · 10 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center · the Miller Building and Homesite Pavilion, 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$40 · register on the park's calendar",
+          "href": "https://www.ijams.org/event-details/special-event-renew-in-nature-a-meditative-workshop-november-1"
+        },
+        {
+          "label": "On",
+          "value": "A yoga session · a sound bath · a guided forest bathing walk"
+        },
+        {
+          "label": "Weather",
+          "value": "Showers likely and 73; the yoga and sound bath are under roof"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Ijams Nature Center's Renew in Nature is a two-hour meditative workshop on Sunday, November 1, from ten to noon: a morning of nature meditation with yoga, a sound bath and a forest bathing session, in the park's words, split between the Miller Building and the Homesite Pavilion on the historic Ijams family homesite. Forest bathing is the Japanese practice of walking slowly and paying attention in the woods, and the pavilion sits at the edge of them. It is $40, registration on the park's calendar, and it falls on the first morning after the clocks go back, so ten o'clock will feel like eleven. Rain showers are likely Sunday; the yoga and the sound bath are under roof."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Renew in Nature: A Meditative Workshop, Nov 1",
+          "url": "https://www.ijams.org/event-details/special-event-renew-in-nature-a-meditative-workshop-november-1"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-01T10:00:00-05:00",
+        "endDate": "2026-11-01T12:00:00-05:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a park wellness workshop; the page names no instructor"
+        },
+        "igBanner": [
+          "Yoga, a sound bath and forest bathing at Ijams Nature Center",
+          "Sunday, ten to noon, forty dollars"
+        ]
+      }
+    },
+    {
+      "id": "specials-board",
+      "label": "Suttree Landing",
+      "labelColor": "ink",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "textOnly",
+      "title": "Earl's runs a rita a day through Halloween weekend, then mimosas for the morning after",
+      "deck": "No Vols game this Saturday, so the river bar's board is the daily one: a different margarita Thursday, Friday and Saturday, and seven-dollar mimosas and Bloody Marys on Sunday.",
+      "facts": [
+        {
+          "label": "Thursday",
+          "value": "$10 Patrón mango ritas"
+        },
+        {
+          "label": "Friday",
+          "value": "$9 spicy pineapple ritas"
+        },
+        {
+          "label": "Saturday",
+          "value": "$8 house margaritas · Halloween, no game (the Vols are off)"
+        },
+        {
+          "label": "Sunday",
+          "value": "$7 mimosas and Bloody Marys · the Titans are at Cincinnati at 1"
+        },
+        {
+          "label": "Hours",
+          "value": "11 AM – 10 PM daily · 610 Waterfront Dr"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Earl's, the bar and kitchen on Waterfront Drive at Suttree Landing, runs a different special every day from eleven to ten, and this is a week without a game on top of it: the Vols have Saturday off before Kentucky comes to town on November 7, so the game-day board stays in the drawer. Thursday is ten-dollar Patrón mango ritas, Friday nine-dollar spicy pineapple ritas, Saturday eight-dollar house margaritas for anyone in costume or out of it, and Sunday seven-dollar mimosas and Bloody Marys, with the Titans at the Bengals at one on the screens. Thursday and Friday are sunny and in the mid-70s for the river tables; Sunday brings the showers."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Earl's — specials",
+          "url": "https://earlsknox.com/specials/"
+        },
+        {
+          "label": "ESPN — Tennessee Volunteers schedule (no game Oct 31)",
+          "url": "https://www.espn.com/college-football/team/schedule/_/id/2633"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "earls"
+        ],
+        "igAct": {
+          "none": "a specials board; no act"
+        },
+        "igBanner": [
+          "A rita a day at Earl's through Halloween weekend",
+          "Thursday to Saturday; mimosas Sunday"
+        ],
+        "standing": true,
+        "standingKey": "specials-board"
+      }
+    }
+  ],
+  "sidebar": {
+    "calendar": [
+      {
+        "month": "OCT",
+        "day": "29",
+        "title": "Boos & Brews at Puckers",
+        "meta": "5:30 – 9:30 PM · costume contest, pumpkin beer pong, live DJ",
+        "starred": false,
+        "href": "#puckers-boos-and-brews"
+      },
+      {
+        "month": "OCT",
+        "day": "29",
+        "title": "Wax Museum spooky vinyl at Fly by Night",
+        "meta": "Evening · Xerox the Kidd and Country Dark",
+        "starred": false,
+        "href": "#wax-museum-fbn"
+      },
+      {
+        "month": "OCT",
+        "day": "29",
+        "title": "$10 Patrón mango ritas at Earl's",
+        "meta": "11 AM – 10 PM · a rita a day through Saturday",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "OCT",
+        "day": "30",
+        "title": "Starlight Paddle, Ijams River Landing",
+        "meta": "7 – 9 PM · $45 · ages 14+",
+        "starred": true,
+        "href": "#starlight-paddle"
+      },
+      {
+        "month": "OCT",
+        "day": "30",
+        "title": "Jake Smith Trio at Trailhead",
+        "meta": "7 PM · free, outdoors",
+        "starred": false,
+        "href": "#trailhead-jake-smith-trio"
+      },
+      {
+        "month": "OCT",
+        "day": "30",
+        "title": "Free 90s Rave at The 808",
+        "meta": "Doors 7, show 8 · Psychonaut · 18+",
+        "starred": false,
+        "href": "#808-90s-rave"
+      },
+      {
+        "month": "OCT",
+        "day": "30",
+        "title": "Ho'Down on the lawn at Kern's",
+        "meta": "Evening · line dancing, mechanical bull · costume winners at 9",
+        "starred": true,
+        "href": "#kerns-hodown"
+      },
+      {
+        "month": "OCT",
+        "day": "30",
+        "title": "Love at First Laugh, then Pink Is Punk: HalloweEMO",
+        "meta": "7:30 PM gameshow · 9 PM party · The Pink Cactus · 18+",
+        "starred": false,
+        "href": "#pink-is-punk-halloweemo"
+      },
+      {
+        "month": "OCT",
+        "day": "30",
+        "title": "Freaks Come Out at Night ball at Fly by Night",
+        "meta": "9 PM – late · $10 · 21+",
+        "starred": false,
+        "href": "#freaks-ball-fbn"
+      },
+      {
+        "month": "OCT",
+        "day": "31",
+        "title": "Old Sevier Halloween Pub Crawl",
+        "meta": "All day · 11 stops · free passport",
+        "starred": true,
+        "href": "#halloween-pub-crawl"
+      },
+      {
+        "month": "OCT",
+        "day": "31",
+        "title": "Storytime: Bats at the Ijams Nature Playscape",
+        "meta": "10 AM – noon · free",
+        "starred": false,
+        "href": "#playscape-storytime-bats"
+      },
+      {
+        "month": "OCT",
+        "day": "31",
+        "title": "Playing 'Possum at Ijams Nature Center",
+        "meta": "11 AM – noon · $10",
+        "starred": false,
+        "href": "#playing-possum"
+      },
+      {
+        "month": "OCT",
+        "day": "31",
+        "title": "Four Legged Dog at Trailhead",
+        "meta": "7 PM · free, outdoors",
+        "starred": false,
+        "href": "#trailhead-four-legged-dog"
+      },
+      {
+        "month": "OCT",
+        "day": "31",
+        "title": "Bear Grillz at The 808",
+        "meta": "Doors 7, show 8 · 18+",
+        "starred": true,
+        "href": "#808-bear-grillz"
+      },
+      {
+        "month": "OCT",
+        "day": "31",
+        "title": "Drop Dead drag show at Hi-Wire",
+        "meta": "9 – 11:30 PM · $9.55",
+        "starred": false,
+        "href": "#drop-dead-drag-hiwire"
+      },
+      {
+        "month": "OCT",
+        "day": "31",
+        "title": "Belltower haunted house party at The Pink Cactus",
+        "meta": "Until 2 AM · $15 · free karaoke after 9 · 18+",
+        "starred": false,
+        "href": "#belltower-hiween"
+      },
+      {
+        "month": "NOV",
+        "day": "1",
+        "title": "Renew in Nature at Ijams Nature Center",
+        "meta": "10 AM – noon · $40",
+        "starred": false,
+        "href": "#renew-in-nature"
+      },
+      {
+        "month": "NOV",
+        "day": "1",
+        "title": "Mt Olive Pleasure Club at Trailhead",
+        "meta": "4 PM · free, outdoors",
+        "starred": false,
+        "href": "#trailhead-mt-olive"
+      },
+      {
+        "month": "NOV",
+        "day": "1",
+        "title": "Día de los Muertos at The Pink Cactus",
+        "meta": "5 – 9 PM · free cumbia class, catrina makeup",
+        "starred": true,
+        "href": "#dia-de-los-muertos-pink-cactus"
+      }
+    ],
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "Andy reads the weekend: the eleven-stop Halloween Pub Crawl, three nights at the Pink Cactus, a free 90s rave and Bear Grillz at The 808, Kern's Ho'Down, and a paddle under the stars at Ijams Nature Center.",
+      "description": "Vol. 1 No. 20 · Halloween weekend, Oct 29–Nov 1: the Old Sevier Halloween Pub Crawl, Puckers' Boos & Brews, Fly by Night's vinyl night and Freaks ball, The 808, the Pink Cactus's HalloweEMO, Belltower and Día de los Muertos, Hi-Wire's drag show, Trailhead's three patio shows, Kern's Ho'Down, four things at Ijams Nature Center and Earl's board.",
+      "duration": "5:36",
+      "src": "/audio/2026-10-28.mp3"
+    }
+  }
+}
