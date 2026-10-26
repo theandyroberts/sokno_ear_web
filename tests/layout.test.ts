@@ -7,14 +7,16 @@ import { liftCount, estimateStoryHeight, estimateSidebarHeight } from "@/lib/lay
 const load = (file: string): Episode =>
   EpisodeSchema.parse(JSON.parse(fs.readFileSync(path.join(process.cwd(), file), "utf8")));
 
-// No. 15 as published, measured on the live site at 1360px on 2026-09-28.
+// No. 15 as published, measured on the live site at 1360px on 2026-09-28; the sidebar
+// re-measured on 2026-10-26 after the calendar rows took the venue-logo tile and the
+// cue line and the day bar took the date (17 rows, four day bars: 2929px).
 const no15 = load("content/episodes/2026-09-23.json");
 
 describe("layout — lifting stories beside a long sidebar", () => {
   it("estimates land close to what the browser measured on No. 15", () => {
     expect(Math.abs(estimateStoryHeight(no15.feature) - 1551)).toBeLessThan(60);      // feature, banner image
     expect(Math.abs(estimateStoryHeight(no15.stories[0]) + 123 - 1293)).toBeLessThan(60); // first story, lifted
-    expect(Math.abs(estimateSidebarHeight(no15.sidebar) - 2805)).toBeLessThan(90);    // ad, player, 17 rows
+    expect(Math.abs(estimateSidebarHeight(no15.sidebar) - 2929)).toBeLessThan(90);    // ad, player, 17 rows with logo tiles
   });
 
   it("No. 15 lifts one story, as it did under the row-count rule", () => {

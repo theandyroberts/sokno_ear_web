@@ -55,3 +55,35 @@ export function matchVenue(venue: string, registry: VenueRegistry): Venue | null
 export function brandName(venue: string, registry: VenueRegistry): string {
   return matchVenue(venue, registry)?.name ?? venue.split(" · ")[0];
 }
+
+/** What a sidebar calendar row needs to draw its venue tile. */
+export type CalendarVenue = {
+  venue: Venue | null;
+  /** The name for the wordmark tile when there is no logo: the registry's name,
+   *  else the story's event location, else its label (the location pill). */
+  name: string;
+};
+
+/** Resolve the venue for a "What's Happening Soon" row from the story it points
+ *  at. The story's `event.locationName` is the authority ("Hi-Wire Brewing
+ *  Knoxville" → Hi-Wire); failing that, a venue named in the row's title or meta
+ *  or the story's title ("Trivia at Trailhead"); failing that, the label, which
+ *  for a district or a park is the venue ("Ijams Nature Center", "Kern's").
+ *  Rows with no story (older episodes linked out) match on their own text. */
+export function calendarVenue(
+  row: { title: string; meta?: string },
+  story: { title: string; label: string; event?: { locationName: string } } | undefined,
+  registry: VenueRegistry,
+): CalendarVenue {
+  const location = story?.event?.locationName;
+  const candidates = [location, `${row.title} ${row.meta ?? ""} ${story?.title ?? ""}`, story?.label];
+  for (const text of candidates) {
+    if (!text) continue;
+    const venue = matchVenue(text, registry);
+    if (venue) return { venue, name: venue.name };
+  }
+  // No registry match: the best plain name we have. A row's meta usually ends in
+  // the place ("7 PM · Trailhead"), so take the part after the last " · ".
+  const metaPlace = row.meta?.includes(" · ") ? row.meta.split(" · ").pop()?.trim() : undefined;
+  return { venue: null, name: location ?? story?.label ?? metaPlace ?? row.title };
+}

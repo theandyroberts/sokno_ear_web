@@ -22,9 +22,12 @@ const LIFTED_WRAP = 123;       // divider, section header and padding around a l
 
 const SIDEBAR_AD = 139;        // the Dirty South card and the gap under it
 const SIDEBAR_PLAYER = 385;    // the audio player (title, controls, one line; no intro since 2026-10-26) and the gap under it
+// The calendar was re-measured on No. 15 at 1360px on 2026-10-26, after the rows took
+// the venue-logo tile and the cue line (★ →) under the meta, and the day bar took the
+// date lockup: 17 rows averaged 126px (102–150), the bars 45–53px with their margins.
 const CALENDAR_FRAME = 87;     // the well's title bar, padding and "don't miss it" line
-const CALENDAR_ROW = 118;      // one row, averaged over rows that wrap and rows that don't
-const CALENDAR_DAYBAR = 43;    // the dark weekday bar that heads each date
+const CALENDAR_ROW = 126;      // one row — logo tile, title, meta, cue line — averaged over rows that wrap and rows that don't
+const CALENDAR_DAYBAR = 51;    // the dark day bar (weekday · month, day numeral) that heads each date, with its margins
 
 /** A blank stretch shorter than this is left alone; longer, and another story is lifted. */
 const TOLERATED_GAP = 300;

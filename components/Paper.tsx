@@ -19,6 +19,7 @@ import { ShareStory } from "@/components/ShareStory";
 import { JsonLd } from "@/components/JsonLd";
 import { calendarRowDay } from "@/lib/episodes";
 import { liftCount } from "@/lib/layout";
+import { calendarVenue, loadVenues, type VenueRegistry } from "@/lib/venues";
 
 const Page = ({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) => (
   <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", ...style }}>{children}</div>
@@ -35,8 +36,12 @@ const Well = ({ children, title }: { children: React.ReactNode; title?: string }
   </section>
 );
 
-export function Paper({ episode, permalinks = true, storyView = false }: { episode: Episode; permalinks?: boolean; storyView?: boolean }) {
+export function Paper({ episode, permalinks = true, storyView = false, venues }: { episode: Episode; permalinks?: boolean; storyView?: boolean; venues?: VenueRegistry }) {
   const { feature, scanner, stories, sidebar } = episode;
+  // The venue-logo registry (content/venues.json) for the calendar's tiles. Paper
+  // renders on the server, so reading it here is fine; tests may pass their own.
+  const registry = venues ?? loadVenues();
+  const storyById = new Map([feature, ...stories].map((s) => [s.id, s]));
   const volLine = `Vol. ${episode.volume} — No. ${episode.number}`;
   const dateline = `${episode.episode} · ${episode.dateLabel ?? episode.date} · ${episode.place}`;
   const shortDate = episode.shortDate ?? episode.dateLabel ?? episode.date;
@@ -105,25 +110,42 @@ export function Paper({ episode, permalinks = true, storyView = false }: { episo
   // Day bars. The rows stamp a date, not a weekday, and once the list runs past a dozen
   // a reader can't see where Thursday ends and Friday starts (Andy, 2026-09-22: "I had
   // to look five times to figure out there's only one thing on Friday"). A dark bar
-  // heads each new date in both the sidebar and the day board.
+  // heads each new date in both the sidebar and the day board. Since 2026-10-26 the bar
+  // is the only place the date appears: the weekday spelled out, then the month and the
+  // day number set large in the display font, the way the row stamps used to show it;
+  // the rows carry the venue's logo where the stamp was (Andy: "work the day/date lockup
+  // into the black bg date divider").
   const sameDate = (a?: { month: string; day: string }, b?: { month: string; day: string }) =>
     !!a && !!b && a.month === b.month && a.day === b.day;
   const dayBarLabel = (c: { month: string; day: string }) => {
     const wd = calendarRowDay(c.month, c.day, episode.date);
-    return `${wd ? `${DAY_FULL[wd]} · ` : ""}${c.month} ${c.day}`;
+    return (
+      <>
+        {/* The text reads "Thursday · OCT 29" in order (that is what the day filter's
+            tests and a screen reader see); the flex row trims the spaces and the
+            margins put them back. */}
+        {wd && <span className="ear-daybar-weekday">{DAY_FULL[wd]}</span>}
+        {wd && <span style={{ opacity: 0.55, margin: "0 7px" }}>{" · "}</span>}
+        <span className="ear-daybar-month">{c.month}</span>
+        {" "}
+        <span className="ear-daybar-day" style={{ fontFamily: "var(--font-display)", fontSize: "19px", letterSpacing: 0, marginLeft: "5px", lineHeight: 1 }}>{c.day}</span>
+      </>
+    );
   };
   const renderCalendar = () =>
     calendarRows.map((c, i) => {
       const newDay = !sameDate(calendarRows[i - 1], c);
       const lastOfDay = !sameDate(c, calendarRows[i + 1]);
+      const story = c.href?.startsWith("#") ? storyById.get(c.href.slice(1)) : undefined;
+      const { venue, name } = calendarVenue(c, story, registry);
       return (
         <React.Fragment key={i}>
           {newDay && (
-            <div className="ear-daybar" data-days={c.dayAttr} style={{ background: "var(--ink-black)", color: "var(--paper-cream)", fontFamily: "var(--font-label)", fontSize: "var(--label-sm)", letterSpacing: "var(--tracking-label)", textTransform: "uppercase", padding: "5px 10px", borderRadius: "var(--radius-sm)", margin: i === 0 ? "6px 0 6px" : "14px 0 6px" }}>
+            <div className="ear-daybar" data-days={c.dayAttr} style={{ display: "flex", alignItems: "baseline", background: "var(--ink-black)", color: "var(--paper-cream)", fontFamily: "var(--font-label)", fontSize: "var(--label-sm)", letterSpacing: "var(--tracking-label)", textTransform: "uppercase", padding: "5px 10px 4px", borderRadius: "var(--radius-sm)", margin: i === 0 ? "6px 0 6px" : "14px 0 6px" }}>
               {dayBarLabel(c)}
             </div>
           )}
-          <CalendarItem data-days={c.dayAttr} month={c.month} day={c.day} title={c.title} meta={c.meta} starred={c.starred} href={resolveHref(c.href)} divider={!lastOfDay} />
+          <CalendarItem data-days={c.dayAttr} title={c.title} meta={c.meta} starred={c.starred} href={resolveHref(c.href)} divider={!lastOfDay} logo={venue?.logo ?? null} logoTreatment={venue?.treatment ?? null} venueName={name} />
         </React.Fragment>
       );
     });
