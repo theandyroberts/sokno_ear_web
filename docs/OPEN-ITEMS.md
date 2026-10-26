@@ -33,44 +33,49 @@ tickets the Instagram reviews used until 2026-09-28 (A1–A16) meant nothing to 
 retired; where an old one appears below, its name is beside it. Things Andy can answer are
 **moves** on the dashboard (`node scripts/pub-status.mjs moves`).
 
-### 1. The Reel is cut to 45 seconds — first short cut Wed Oct 21, read it Oct 26
-**Opened:** 2026-10-19 · **Claude's** · **Move:** `shorter-reel` · **Due: Wed 2026-10-21**
+### 1. Half the posts go out a day early (the timing test) — first week Wed Oct 28, read it Nov 2
+**Opened:** 2026-10-26 · **Claude's** · **Move:** `early-posts` · **Due: Wed 2026-10-28**
 
-The first Reel (No. 18, 116 s, 18 stories) posted Oct 14 at 1 PM as designed and read **19
-reach, 21 views, 11.8 s average watch, 68.4% skip rate**, the lowest post of the week bar
-three. Shipped this run: `scripts/ig-reel.py` caps at 45 s by default, taking the feature
-then one story a day Thu–Sun (`reel_priority`), playing them in day order, and re-saying the
-intro as "Five of the eighteen things … all of them at soknoear.com"; `reelMaxSeconds(moves)`
-in `ig-reel.mjs` makes Andy's "Don't" the full 120 s cut, read by `publish-episode.mjs`. The
-No. 18 cut at 45 s is on the dashboard as the sample. Recipe and numbers in
-`docs/ig-reviews/2026-10-19.md`.
+Andy, Oct 23: every dated post went out about three hours before doors, so the venue and
+the act never had time to reshare, and the reshare is the account's reach (13 shared posts
+in three weeks average 148; the other 32 tagged posts average 22). `assignTimingArms` in
+`scripts/ig-schedule.mjs` (`9c5ec6a`) splits each week's dated posts within each venue: half
+go exactly 24 hours before their old slot, half stay day-of, the split flips each week, and
+`timingArm` is stored on the post. This run registered the move and added `earlyPostsOn(moves)`
+so a "Don't" on the dashboard puts every post back to day-of. No post has run in either arm
+yet. Recipe and the empty arm table in `docs/ig-reviews/2026-10-26.md`.
 
-*Measures, Oct 26:* reach against 19 and against the week's stills; average watch over 20 s;
-skip rate under 50%; a follow. The move closes when the short cut has posted and been read.
+*Measures, every Monday:* posts, shared (≥1 share), share rate, median and mean reach, profile
+visits by arm, this week and cumulative. *Decide:* at the review of Nov 23, or sooner if one
+arm leads two-to-one on shares with at least 20 posts in each; then the winner becomes the
+rule in `assignTimingArms` and the move closes.
 
-### 2. Tag the artist in the picture too — now a gate on the draft, read it Oct 26
-**Opened:** 2026-10-12 · **Age: 7 days** (as of 2026-10-19) · **Claude's** · **Move:** `tag-the-artist` · **Due: Wed 2026-10-21**
+### 2. The Reel opens on the feature, not the title card — first cut Wed Oct 28, read it Nov 2
+**Opened:** 2026-10-26 · **Claude's** · **Move:** `reel-opens-on-the-story` · **Due: Wed 2026-10-28**
 
-**2026-10-19:** the measure read **0 of 9**: every No. 18 `userTags` held the venue alone. The
-code was right (`userTagsFor`, everyone on); the Tuesday draft task ran with step 1h in it and
-added no act handle to any story or to the registry, though the Disco Demon DJ's own post
-(`@ahungryhungarian`) was that story's first source. Shipped: `social.igAct` is required from
-episodes dated 2026-10-21 — `{ key }` (also in `igTags`, also in `content/ig-handles.json`) or
-`{ none: "why" }` — and `scripts/research-check.mjs` refuses a draft without it (check 4 in
-`research-lib.mjs`, four tests). `ahun` → `@ahungryhungarian` is the first act in the registry.
-The Tuesday task's step 1h names the field.
+Two Reels: 116 s read 19 (11.8 s watched, 68% skipped), 46 s read 16 (11.1 s watched, 44%
+skipped). The cut fixed completion, not reach, and the viewer left at eleven seconds both
+times — the cover card and the counting intro. Shipped this run: `cut_order` and `bridge_text`
+in `scripts/ig-reel.py` play the feature's quip first and the title card second as the bridge
+("Five more of the sixteen things … all of them at soknoear.com"); `--title-first` is the old
+order, which `publish-episode.mjs` passes when Andy answers "Don't" (`reelOpensOnStory`).
 
-Andy, 2026-10-09: "tags the venue and artist." The No. 17 numbers said the same: the four
-posts that reached 103–286 people were the ones where an account with its own crowd was
-tagged in the image.
+*Measures, Nov 2:* reach against 16 and against the week's median still post (21 this week);
+average watch above 15 s; skip rate under 44%. *If reach is still under the median still,* the
+Reel comes out on Nov 2 (`weekly-reel` closed with the numbers) — this is its last structural
+fix.
 
-*Measures, Oct 26:* every No. 19 story has `igAct`; how many carry a key; whether a post with
-an act tagged in the image beats the tagged-not-shared band (19 over the last two weeks).
-*Risk:* an act's handle guessed from a name tags a stranger — the registry rule (confirmed from
-the venue's post or the act's profile) is the guard, and the check refuses a key the registry
-doesn't know.
+### 3. Stale worktree fails the full test run
+**Opened:** 2026-10-26 · **Claude's** · not blocking — no push
 
-### 3. Search Console is unreadable from the Mac mini
+`npx vitest run` at the repo root picks up `.claude/worktrees/keen-colden-4ab029/tests/` and
+38 of its React tests fail (`Cannot read properties of null (reading 'useState')` — the
+worktree resolves a different `node_modules`). They fail identically with and without this
+run's changes; the repo's own `tests/` are 69 files, 679 tests, all passing. Not removed here
+because a worktree is somebody's working copy. *To close:* delete the worktree once whatever
+it holds is merged, or exclude `.claude/worktrees/**` in `vitest.config`.
+
+### 4. Search Console is unreadable from the Mac mini
 **Opened:** 2026-08-15 · **Age: 61 days** (as of 2026-10-15) · **Missed 4 of 5 SEO checks**
 · **Needs Andy** · not blocking — no push (the site-side half covers breakage; this only costs the crawl numbers)
 
@@ -99,6 +104,8 @@ fires (1st and 15th), or open Search Console and paste the Page indexing numbers
 
 | Item | Opened | Closed | What fixed it |
 | --- | --- | --- | --- |
+| Tag the artist in the picture too (the code ran Oct 12 and tagged nobody; the draft gate from Oct 19) | 2026-10-12 | 2026-10-26 | The gate worked first time: all 16 No. 19 stories carried `igAct` (8 handles, 8 reasons there is none); 7 posts tagged an act beside the venue and 3 of the 7 were shared (116, 71, 36) against 2 of the 10 venue-only posts. The gate stays; `docs/ig-reviews/2026-10-26.md` |
+| The Reel is cut to 45 seconds | 2026-10-19 | 2026-10-26 | Posted Oct 21 at 45.8 s and read Oct 26: 16 reach, 11.1 s watched (24%, was 10%), skip rate 43.8% (was 68.4%). The cap stays at 45; the opening is the next fix (open item 2) |
 | The Call-the-Ear ad, held while the phone line changes (was a move and an open item) | 2026-10-12 | 2026-10-19 | Not an open item: Andy decided it once (Oct 9) and said so again Oct 19 when the review asked. `AD_HELD = true` in `scripts/ig-container.mjs` keeps the ad out of every staging until he says turn it back on; the move is closed; no review asks about it |
 | The first Reel goes out Wednesday (built Oct 12, recut Oct 13 as a quip a story) | 2026-09-28 | 2026-10-19 | Posted Oct 14 at 1 PM with No. 18 through the REELS container path, first time, no retry. Read Oct 19: 19 reach, 11.8 s watched of 116, 68% skipped — the cut was too long, so it is 45 s from Oct 21 (item 1 above); `docs/ig-reviews/2026-10-19.md` |
 | Fewer posts reached fewer people — the roundup week (47 reach on 8 posts, 1 non-follower) and its fixes | 2026-10-05 | 2026-10-12 | Every story back to a single post and every venue post tagged in the image, both live Oct 7. No. 17: 17 posts, 926 reach, lowest 9, 660 non-followers, 14 of 14 tagged, the roundup read 14 (needed 6 — it stays). Every measure cleared; `docs/ig-reviews/2026-10-12.md` |

@@ -1,0 +1,130 @@
+{
+ "run": 13,
+ "date": "2026-10-26",
+ "next": "2026-11-02",
+ "episode": 19,
+ "kicker": "Week of Oct 21 · episode No. 19 · read Oct 26",
+ "railKind": "244 followers · 51 reach a post",
+ "headline": "Best week yet: 966 reach, a 346 post, 49 new followers.",
+ "verdicts": [
+  { "label": "Growth", "tone": "ok", "text": "+49 followers, 195 to 244" },
+  { "label": "Reach", "tone": "ok", "text": "966 all week, the most ever" },
+  { "label": "The Reel", "tone": "warn", "text": "16 people; 44% skipped, was 68%" },
+  { "label": "Pipeline", "tone": "ok", "text": "19 of 19 posted, no retries" }
+ ],
+ "tiles": [
+  {
+   "label": "Followers", "value": "244", "good": "up",
+   "series": [46, 49, 59, 66, 74, 86, 95, 100, 101, 111, 156, 195, 244],
+   "vsLast": { "dir": "up", "tone": "ok", "text": "+49, the best week ever; 85 followed back" },
+   "vsBase": "46 on Aug 11"
+  },
+  {
+   "label": "Reach per post", "value": "51", "good": "up",
+   "series": [16.1, 10.5, 10.5, 14.2, 10.4, 8.2, 8.1, 6.8, 7.8, 4.9, 5.9, 54.5, 37.5, 50.8],
+   "vsLast": { "dir": "up", "tone": "ok", "text": "38 last week, same age" },
+   "vsBase": "10.5 in early Aug"
+  },
+  {
+   "label": "Reach, whole week", "value": "966", "good": "up",
+   "series": [113, 84, 63, 128, 104, 106, 89, 41, 101, 69, 47, 926, 675, 966],
+   "vsLast": { "dir": "up", "tone": "ok", "text": "675 last week; three posts over 100" },
+   "vsBase": "best before October was 128"
+  },
+  {
+   "label": "People reached this week", "value": "702", "good": "up",
+   "series": [19, 11, 21, 25, 20, 686, 517, 702],
+   "vsLast": { "dir": "up", "tone": "ok", "text": "643 of them don't follow us" },
+   "vsBase": "19 in September"
+  },
+  {
+   "label": "New people reached · 28 days", "value": "1,595", "good": "up",
+   "series": [10, 10, 6, 9, 12, 13, 675, 1059, 1595],
+   "vsLast": { "dir": "up", "tone": "ok", "text": "was 1,059 last Monday" },
+   "vsBase": "10 in September"
+  }
+ ],
+ "tilesNote": "Lines run from July to now. Reach per post is read at the same age as last week's was (one to five days).",
+ "week": [
+  { "id": "weekend-roundup", "day": "Wed", "time": "09:16", "reach": 37, "title": "Weekend roundup · 9 stories", "img": "/insta/img/soknoear/2026-10-21_episode-drop.jpg", "group": "lead" },
+  { "id": "spooky-streets", "day": "Wed", "time": "09:30", "reach": 104, "title": "Spooky Streets on Sevier Avenue", "img": "/insta/img/soknoear/2026-10-21_spooky-streets.jpg", "group": "hot" },
+  { "id": "reel", "day": "Wed", "time": "13:00", "reach": 16, "title": "The Reel · 6 stories, 46 seconds", "img": "/insta/img/soknoear/2026-10-21_reel.jpg", "group": "lead" },
+  { "id": "rail-trail-tree-planting", "day": "Wed", "time": "19:00", "reach": 16, "title": "Rail Trail tree planting", "img": "/insta/img/soknoear/2026-10-21_rail-trail-tree-planting.jpg" },
+  { "id": "specials-board", "day": "Thu", "time": "09:00", "reach": 17, "title": "Earl's specials board", "img": "/insta/img/soknoear/2026-10-21_specials-board.jpg" },
+  { "id": "monsters-workshop-kerns", "day": "Thu", "time": "14:00", "reach": 21, "title": "Monsters workshop at Kern's", "img": "/insta/img/soknoear/2026-10-21_monsters-workshop-kerns.jpg" },
+  { "id": "john-borderland", "day": "Thu", "time": "16:00", "reach": 36, "title": "John at the Borderland Playhouse", "img": "/insta/img/soknoear/2026-10-21_john-borderland.jpg" },
+  { "id": "industrial-night-fbn", "day": "Thu", "time": "18:00", "reach": 71, "title": "Industrial night at Fly by Night", "img": "/insta/img/soknoear/2026-10-21_industrial-night-fbn.jpg" },
+  { "id": "trailhead-rodney-lee", "day": "Fri", "time": "14:00", "reach": 15, "title": "Rodney Lee at Trailhead", "img": "/insta/img/soknoear/2026-10-21_trailhead-rodney-lee.jpg" },
+  { "id": "mischief-night", "day": "Fri", "time": "16:00", "reach": 22, "title": "Mischief Night at Ijams", "img": "/insta/img/soknoear/2026-10-21_mischief-night.jpg" },
+  { "id": "big-pink-house-party", "day": "Fri", "time": "18:00", "reach": 116, "title": "Big Pink House Party", "img": "/insta/img/soknoear/2026-10-21_big-pink-house-party.jpg", "group": "hot" },
+  { "id": "printshop-vols-pints", "day": "Sat", "time": "10:00", "reach": 21, "title": "Printshop Vols pints", "img": "/insta/img/soknoear/2026-10-21_printshop-vols-pints.jpg" },
+  { "id": "enchanted-forest", "day": "Sat", "time": "12:00", "reach": 346, "title": "The Enchanted Forest at Ijams", "img": "/insta/img/soknoear/2026-10-21_enchanted-forest.jpg", "group": "hot" },
+  { "id": "vampire-night-fbn", "day": "Sat", "time": "17:00", "reach": 30, "title": "Vampire night at Fly by Night", "img": "/insta/img/soknoear/2026-10-21_vampire-night-fbn.jpg" },
+  { "id": "scruffy-roots-fest-oct-25", "day": "Sun", "time": "08:00", "reach": 14, "title": "Scruffy Roots Fest at Kern's", "img": "/insta/img/soknoear/2026-10-21_scruffy-roots-fest-oct-25.jpg" },
+  { "id": "crossword-play", "day": "Sun", "time": "10:00", "reach": 11, "title": "The Crossword Play at Ijams", "img": "/insta/img/soknoear/2026-10-21_crossword-play.jpg" },
+  { "id": "trailhead-lonetones", "day": "Sun", "time": "12:00", "reach": 36, "title": "The Lonetones at Trailhead", "img": "/insta/img/soknoear/2026-10-21_trailhead-lonetones.jpg" },
+  { "id": "hunter-moon-paddle", "day": "Sun", "time": "14:00", "reach": 21, "title": "Hunter Moon paddle at Ijams", "img": "/insta/img/soknoear/2026-10-21_hunter-moon-paddle.jpg" },
+  { "id": "best-if-used-by", "day": "Sun", "time": "16:00", "reach": 16, "title": "Best if Used By at the Borderland", "img": "/insta/img/soknoear/2026-10-21_best-if-used-by.jpg" }
+ ],
+ "weekLegend": [
+  { "group": "hot", "label": "Over a hundred people" },
+  { "group": "lead", "label": "The roundup and the Reel" },
+  { "group": "plain", "label": "Single posts, the venue tagged in the image" }
+ ],
+ "worked": [
+  { "title": "The Enchanted Forest at Ijams", "reach": 346, "img": "/insta/img/soknoear/2026-10-21_enchanted-forest.jpg", "why": "Ijams shared it, the first time in 54 posts. Life-size puppets, Saturday, ten dollars." },
+  { "title": "Big Pink House Party", "reach": 116, "img": "/insta/img/soknoear/2026-10-21_big-pink-house-party.jpg", "why": "The Pink Cactus and the DJ both tagged; one shared it. Friday, drum and bass." },
+  { "title": "Spooky Streets", "reach": 104, "img": "/insta/img/soknoear/2026-10-21_spooky-streets.jpg", "why": "The feature. Old Sevier shared it; the first note to them went Friday. Four profile visits." }
+ ],
+ "didnt": [
+  { "title": "The Reel", "reach": 16, "img": "/insta/img/soknoear/2026-10-21_reel.jpg", "why": "46 seconds this time. Still 11 seconds watched. The opening loses them; it changes Wednesday." },
+  { "title": "The Crossword Play at Ijams", "reach": 11, "img": "/insta/img/soknoear/2026-10-21_crossword-play.jpg", "why": "Ijams' fourth post of the week, Sunday at ten. Not shared. Ijams' usual number." },
+  { "title": "Scruffy Roots Fest at Kern's", "reach": 14, "img": "/insta/img/soknoear/2026-10-21_scruffy-roots-fest-oct-25.jpg", "why": "Kern's and WDVX tagged, neither shared. Sunday at eight, the earliest slot of the week." }
+ ],
+ "learned": {
+  "title": "Tag the act too and the post is twice as likely to be shared",
+  "note": "This week's seventeen single posts, by who was tagged in the picture. A share is the venue or the act putting the post in its own story, and a shared post has averaged 148 people over three weeks against 22 for the rest.",
+  "rows": [
+   { "label": "The venue and the act, both tagged", "value": 43, "note": "3 of 7 shared · 116, 71, 36", "tone": "ok" },
+   { "label": "The venue alone", "value": 20, "note": "2 of 10 shared · 346, 104", "tone": "ink" }
+  ]
+ },
+ "dials": [
+  { "label": "Posts delivered", "value": 19, "max": 19, "display": "19/19", "note": "0 failed, 0 retries", "tone": "ok" },
+  { "label": "Followers who saw a post", "value": 22, "max": 100, "display": "22%", "note": "53 of 244, this week", "tone": "warn" },
+  { "label": "Reach that was new people", "value": 97, "max": 100, "display": "97%", "note": "1,595 of 1,652, in 28 days", "tone": "ok" },
+  { "label": "Of the Reel that got watched", "value": 24, "max": 100, "display": "24%", "note": "11 of 46 seconds; was 10%", "tone": "warn" }
+ ],
+ "bestEver": [
+  { "title": "The Enchanted Forest at Ijams", "reach": 346, "img": "/insta/img/soknoear/2026-10-21_enchanted-forest.jpg", "why": "Puppets and animal ambassadors at the quarry. Oct 24." },
+  { "title": "Feral Kitty at Fly by Night", "reach": 294, "img": "/insta/img/soknoear/2026-10-07_feral-kitty-release.jpg", "why": "A release show at a cocktail lounge. Oct 9." },
+  { "title": "Kern's Fall Festival", "reach": 288, "img": "/insta/img/soknoear/2026-10-14_kerns-fall-fest.jpg", "why": "A free fair on the bakery lawn. Oct 14." },
+  { "title": "Vegan barbecue at Printshop", "reach": 243, "img": "/insta/img/soknoear/2026-10-07_vegan-bbq-printshop.jpg", "why": "A pop-up at a brewery. Oct 11." },
+  { "title": "Stand-up at the Pink Cactus", "reach": 133, "img": "/insta/img/soknoear/2026-10-07_after-brunch-special.jpg", "why": "Six comics for five dollars. Oct 10." },
+  { "title": "Social run from Printshop", "reach": 125, "img": "/insta/img/soknoear/2026-10-14_ktc-run-printshop.jpg", "why": "Three miles and dollar wings. Oct 15." }
+ ],
+ "moves": [
+  {
+   "key": "early-posts",
+   "owner": "claude",
+   "title": "Half the posts go out a day early",
+   "why": "You asked for it Friday: every post went out hours before doors, so the venue had no time to reshare. Half go a day early from Wednesday.",
+   "plan": "From Wed Oct 28 half of each week's dated posts go out 24 hours before their old slot, the other half at the old time, swapping each week, so the venue and the act have a day to reshare. The review reads the two sides every Monday and picks the winner by Nov 23. Say don't and every post stays day-of.",
+   "due": "2026-10-28"
+  },
+  {
+   "key": "reel-opens-on-the-story",
+   "owner": "claude",
+   "title": "The Reel opens on the feature, not the title card",
+   "why": "Two Reels, 116 and 46 seconds, both lost people at eleven seconds. The title card is what they skip. The feature's quip opens instead.",
+   "plan": "From Wed Oct 28 the Reel starts on the feature's picture and quip; the title card plays second and says where the rest are. If this third Reel still reads under the week's ordinary post, the Reel is dropped on Nov 2. Say don't and the title card stays first.",
+   "due": "2026-10-28"
+  }
+ ],
+ "done": [
+  { "title": "Nineteen of nineteen posted, no retries.", "text": "The Enchanted Forest at Ijams read 346, the best post ever. Ijams' 53 posts before it had a median of 11." },
+  { "title": "Every story named its act, or said why not.", "text": "Seven posts tagged the act in the picture, three were shared. Ten tagged the venue alone, two were shared. The gate stays." },
+  { "title": "The 46-second Reel read 16.", "text": "People watched 11 seconds again, but 24% of it instead of 10%, and 44% skipped instead of 68%. The opening is the next fix." },
+  { "title": "The first save, ever.", "text": "Somebody saved the weekend roundup. 168 posts, one save. Shares went 16 to 21; 85 accounts were followed this week, the most ever." }
+ ]
+}
