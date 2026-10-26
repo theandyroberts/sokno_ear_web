@@ -102,5 +102,18 @@ export function checkResearch(registry, log, episode, handles = null) {
     }
   }
 
+  // 5. Decks are one thought, nine words at most, and optional (Andy, 2026-10-26: "WAAAAY
+  //    too much text after the headline"; No. 20's first drafts ran 25-37 words).
+  if (String(episode.date ?? "") >= DECK_CAP_FROM) {
+    for (const s of allStories(episode)) {
+      const words = String(s.deck ?? "").trim().split(/\s+/).filter(Boolean).length;
+      if (words > DECK_MAX_WORDS) errors.push(`${s.id}: the deck is ${words} words; the cap is ${DECK_MAX_WORDS}. One thought that adds to the headline, or no deck at all`);
+    }
+  }
+
   return { errors, warnings, table };
 }
+
+/** Episodes from this date on keep decks to DECK_MAX_WORDS words (or none). */
+export const DECK_CAP_FROM = "2026-10-28";
+export const DECK_MAX_WORDS = 9;

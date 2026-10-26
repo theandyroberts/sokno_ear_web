@@ -19,7 +19,7 @@
     ],
     "layout": "imageTop",
     "title": "The Old Sevier Halloween Pub Crawl puts eleven neighborhood stops on one passport Saturday",
-    "deck": "Halloween lands on a Saturday, and the merchants' association is turning the whole avenue into the party: a free passport, a costume, and a coffee roaster, a pizza place and a cocktail lounge on the same route.",
+    "deck": "Six stamps enter you for the prize package.",
     "facts": [
       {
         "label": "When",
@@ -230,7 +230,7 @@
       ],
       "layout": "imageLeft",
       "title": "Puckers throws Boos & Brews Thursday: a cash-prize costume contest, pumpkin beer pong and shot roulette",
-      "deck": "The sports grill across the river from Neyland gets the weekend started two days early, with a live DJ and a costume contest that pays out in cash.",
+      "deck": "The costume contest pays out in cash.",
       "facts": [
         {
           "label": "When",
@@ -294,7 +294,7 @@
       ],
       "layout": "imageRight",
       "title": "Wax Museum spins spooky vinyl rarities at Fly by Night Thursday",
-      "deck": "Two record collectors, a crate of monster-mash obscurities and the seventies cocktail lounge's creepy drink list: the quiet way into Halloween weekend.",
+      "deck": "The quieter of the lounge's two Halloween nights.",
       "facts": [
         {
           "label": "When",
@@ -363,7 +363,7 @@
       ],
       "layout": "imageLeft",
       "title": "Fly by Night's fourth Freaks Come Out at Night ball brings three DJs to the haunted lounge Friday",
-      "deck": "The lounge's biggest night of the year is a costume ball with Alex Falk, Minitiger and Benicio on the decks, ten dollars at the door and the room done up as a haunted house.",
+      "deck": "Fourth year; ten dollars at the door.",
       "facts": [
         {
           "label": "When",
@@ -441,7 +441,7 @@
       ],
       "layout": "imageRight",
       "title": "The 808 throws a free 90s rave with Psychonaut on Halloween eve",
-      "deck": "The month-old music venue on Sevier Avenue calls it the Halloween pregame: no ticket, doors at seven, and a decade's worth of glow sticks implied.",
+      "deck": "No ticket, no cover, doors at seven.",
       "facts": [
         {
           "label": "When",
@@ -519,7 +519,7 @@
       "layout": "imageLeft",
       "image": "/assets/spots/no20_bear_costume_dj.jpg",
       "title": "Bear Grillz brings the Dubstep Time Machine to The 808 on Halloween night",
-      "deck": "The venue's biggest booking so far lands on the holiday itself: a touring dubstep headliner with Spnce and Shosstah opening, and a crowd that will come in costume.",
+      "deck": "The venue's biggest booking yet lands on Halloween.",
       "facts": [
         {
           "label": "When",
@@ -546,7 +546,7 @@
       "body": [
         {
           "type": "paragraph",
-          "text": "Bear Grillz, the bass producer who tours as a costumed bear, plays The 808 on Saturday, October 31, with Spnce and Shosstah opening; the venue has been billing it as Dubstep Time Machine Halloween since the middle of the month and told followers to let the bear inspire their costumes. Doors are at seven and the show at eight, 18 and up. Tickets are on the venue's site through TicketWeb; the venue's post quoted an advance price lower than the one its site shows, so buy from the page and take the number there. The Parking line above opens the venue's own map."
+          "text": "Bear Grillz, the bass producer who tours as a costumed bear, plays The 808 on Saturday, October 31, with Spnce and Shosstah opening; the venue has been billing it as Dubstep Time Machine Halloween since the middle of the month and told followers to let the bear inspire their costumes. Doors are at seven and the show at eight, 18 and up. Tickets are on the venue's site through TicketWeb; the venue's post quoted an advance price lower than the one its site shows, so buy from the page and take the number there. The Parking line in the box opens the venue's own map."
         }
       ],
       "sources": [
@@ -602,7 +602,7 @@
         "alt": "Get tickets for the HalloweEMO party at The Pink Cactus"
       },
       "title": "Planet Doom's HalloweEMO party takes over the Pink Cactus Friday, with a blind-dating gameshow first",
-      "deck": "EDM remixes of emo anthems in costume, from nine until two, and a comedy dating show at half past seven for anyone who wants a date for the dance floor.",
+      "deck": "Emo anthems remixed until two; find a date first.",
       "facts": [
         {
           "label": "When",
@@ -677,7 +677,7 @@
       ],
       "layout": "imageLeft",
       "title": "Belltower turns the Pink Cactus into a haunted house party on Halloween night, with free karaoke after nine",
-      "deck": "Goth DJs downstairs, all four karaoke rooms free upstairs, vendors and the outdoor bar, and an extra hour on the clock: the pink house's Halloween runs until two.",
+      "deck": "All four karaoke rooms are free after nine.",
       "facts": [
         {
           "label": "When",
@@ -762,7 +762,7 @@
       ],
       "layout": "imageRight",
       "title": "The Pink Cactus celebrates Día de los Muertos Sunday with a free cumbia class, catrina face paint and an ofrenda",
-      "deck": "The weekend's gentlest finish: a Day of the Dead evening for families, with a traditional altar for the people you've lost and a dance lesson for the people you came with.",
+      "deck": "The avenue's one all-ages event of the weekend.",
       "facts": [
         {
           "label": "When",
@@ -826,7 +826,7 @@
       ],
       "layout": "imageLeft",
       "title": "Hi-Wire hosts Drop Dead, a Halloween drag show and costume contest, Saturday at nine",
-      "deck": "The brewery's upstairs taproom does drag for the holiday, with a costume contest for the crowd and a ticket that costs less than a flight of beer.",
+      "deck": "A ticket costs less than a flight of beer.",
       "facts": [
         {
           "label": "When",
@@ -896,7 +896,7 @@
       ],
       "layout": "imageRight",
       "title": "Jake Smith Trio plays the Trailhead patio Friday at seven",
-      "deck": "Free music outdoors on a 77-degree Friday, with a one-week mushroom menu in the kitchen that the cook says you cannot go wrong on.",
+      "deck": "Free, outdoors, and 77 degrees.",
       "facts": [
         {
           "label": "When",
@@ -963,7 +963,7 @@
       ],
       "layout": "imageLeft",
       "title": "Four Legged Dog plays Trailhead on Halloween night",
-      "deck": "A band on the patio at seven on the day of the pub crawl, which makes Trailhead the stamp you can sit down for.",
+      "deck": "The pub crawl stamp you can sit down for.",
       "facts": [
         {
           "label": "When",
@@ -1026,7 +1026,7 @@
       ],
       "layout": "imageRight",
       "title": "Mt Olive Pleasure Club closes the weekend at Trailhead Sunday at four",
-      "deck": "The Sunday show starts early, in daylight, which on a showery first of November is the right call.",
+      "deck": "The first show after the clocks fall back.",
       "facts": [
         {
           "label": "When",
@@ -1089,7 +1089,7 @@
       ],
       "layout": "imageLeft",
       "title": "Kern's Ho'Down puts line dancing, a mechanical bull and a Thriller lesson on the lawn Friday",
-      "deck": "Boots and costumes at the food hall: a country night with a live DJ, a bull to ride and a costume contest that pays a $500 gift card at nine.",
+      "deck": "Costume contest winners take a $500 gift card.",
       "facts": [
         {
           "label": "When",
@@ -1156,7 +1156,7 @@
       ],
       "layout": "imageRight",
       "title": "The Starlight Paddle takes kayaks onto the Tennessee River after dark Friday",
-      "deck": "Two guided hours on the water under the stars with a naturalist, a headlamp and a boat provided; the full-moon paddles are done for the year, so this is the dark-sky one.",
+      "deck": "Kayak, vest and headlamp provided.",
       "facts": [
         {
           "label": "When",
@@ -1246,7 +1246,7 @@
       ],
       "layout": "imageLeft",
       "title": "Storytime at the Nature Playscape is all about bats on Halloween morning",
-      "deck": "A free Saturday for the smallest Halloween fans: bat stories and bat play in the nature playground before the costumes go on for the night.",
+      "deck": "Free, for the smallest Halloween fans.",
       "facts": [
         {
           "label": "When",
@@ -1308,7 +1308,7 @@
       ],
       "layout": "imageRight",
       "title": "Meet the park's newest animal ambassador, an opossum, at Playing 'Possum on Halloween morning",
-      "deck": "An hour with Ijams Nature Center's new opossum and the naturalist who looks after it: how the only marsupial in Tennessee lives, and why it is nothing to be scared of.",
+      "deck": "Tennessee's only marsupial, up close, for ten dollars.",
       "facts": [
         {
           "label": "When",
@@ -1382,7 +1382,7 @@
       ],
       "layout": "imageLeft",
       "title": "Renew in Nature: yoga, a sound bath and forest bathing at the Ijams homesite Sunday morning",
-      "deck": "The morning after Halloween, with an extra hour of sleep behind it, the park offers two quiet hours of moving, listening and walking slowly in the woods.",
+      "deck": "Two quiet hours, with an extra hour of sleep.",
       "facts": [
         {
           "label": "When",
@@ -1459,7 +1459,7 @@
       ],
       "layout": "imageRight",
       "title": "Earl's runs a rita a day through Halloween weekend, then mimosas for the morning after",
-      "deck": "No Vols game this Saturday, so the river bar's board is the daily one: a different margarita Thursday, Friday and Saturday, and seven-dollar mimosas and Bloody Marys on Sunday.",
+      "deck": "No game Saturday; the board is the daily one.",
       "facts": [
         {
           "label": "Thursday",

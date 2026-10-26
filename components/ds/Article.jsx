@@ -86,50 +86,13 @@ export function Article({
     </figure>
   );
 
-  return (
-    <article id={id} style={{ ...style }} {...rest}>
-      {(label || (days && days.length > 0)) && (
-        <div style={{ marginBottom: "10px", display: "flex", flexWrap: "wrap", gap: "6px", alignItems: "center" }}>
-          {label && <Tag color={labelColor}>{label}</Tag>}
-          {days && days.map((d, i) => <Tag key={i} color="ink" variant="outline" size="sm">{d}</Tag>)}
-        </div>
-      )}
-      <h2
-        style={{
-          fontFamily: "var(--font-body)",
-          fontWeight: 700,
-          fontSize: "var(--display-3)",
-          lineHeight: 1.12,
-          letterSpacing: "0",
-          color: "var(--ink-black)",
-          margin: "0 0 10px",
-          textWrap: "balance",
-        }}
-      >
-        {title}
-      </h2>
-      {deck && (
-        <p
-          style={{
-            fontFamily: "var(--font-body)",
-            fontWeight: 700,
-            fontSize: "var(--text-deck)",
-            lineHeight: 1.35,
-            color: "var(--ink-black)",
-            margin: "0 0 var(--space-4)",
-          }}
-        >
-          {deck}
-        </p>
-      )}
-
-      {isHero && figure}
-
-      {/* The facts strip. When the story sells tickets the strip becomes a two-column
+  /* The facts strip. When the story sells tickets the strip becomes a two-column
           box, facts on the left two thirds and the venue's ticket button on the right
           third, so the button reads as part of the where-and-when instead of a row of
-          its own that splits the story (Andy, 2026-10-26). */}
-      {(facts.length > 0 || ticket) && (
+          its own that splits the story (Andy, 2026-10-26). It sits after the FIRST
+          paragraph of the body, not under the deck, so the headline runs straight into
+          the lede and the art (Andy, 2026-10-26, later the same day). */
+  const factsBox = (facts.length > 0 || ticket) ? (
         <div
           className={ticket ? "ear-facts-box ear-facts-box--ticket" : "ear-facts-box"}
           style={{
@@ -173,7 +136,47 @@ export function Article({
         )}
         {ticket && <TicketLink {...ticket} showCaption={false} />}
         </div>
+  ) : null;
+
+  return (
+    <article id={id} style={{ ...style }} {...rest}>
+      {(label || (days && days.length > 0)) && (
+        <div style={{ marginBottom: "10px", display: "flex", flexWrap: "wrap", gap: "6px", alignItems: "center" }}>
+          {label && <Tag color={labelColor}>{label}</Tag>}
+          {days && days.map((d, i) => <Tag key={i} color="ink" variant="outline" size="sm">{d}</Tag>)}
+        </div>
       )}
+      <h2
+        style={{
+          fontFamily: "var(--font-body)",
+          fontWeight: 700,
+          fontSize: "var(--display-3)",
+          lineHeight: 1.12,
+          letterSpacing: "0",
+          color: "var(--ink-black)",
+          margin: "0 0 10px",
+          textWrap: "balance",
+        }}
+      >
+        {title}
+      </h2>
+      {deck && (
+        <p
+          style={{
+            fontFamily: "var(--font-body)",
+            fontWeight: 700,
+            fontSize: "var(--text-deck)",
+            lineHeight: 1.35,
+            color: "var(--ink-black)",
+            margin: "0 0 var(--space-4)",
+          }}
+        >
+          {deck}
+        </p>
+      )}
+
+      {isHero && figure}
+
 
       <div
         style={{
@@ -184,7 +187,17 @@ export function Article({
         }}
       >
         {!isHero && figure}
-        {children}
+        {(() => {
+          // Slot the facts box into the first element child (the ArticleBody) so it lands
+          // after the lede; any other children (the sources line) follow untouched.
+          if (!factsBox) return children;
+          let placed = false;
+          const out = React.Children.map(children, (c) => {
+            if (!placed && React.isValidElement(c)) { placed = true; return React.cloneElement(c, { afterFirst: factsBox }); }
+            return c;
+          });
+          return placed ? out : (<>{factsBox}{children}</>);
+        })()}
         <div style={{ clear: "both" }} />
       </div>
     </article>

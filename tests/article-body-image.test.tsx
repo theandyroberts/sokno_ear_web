@@ -28,7 +28,14 @@ describe("venue ticket button", () => {
     expect(box).toContainElement(container.querySelector("dl")!);
     expect(box).toContainElement(link);
     expect(container.querySelector("dl")!.compareDocumentPosition(link) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
-    expect(link.compareDocumentPosition(container.querySelector('img[src$="dnb_sneakers_jump.jpg"]')!) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    // The box follows the FIRST paragraph of the body (Andy, 2026-10-26): headline → lede → facts.
+    const firstP = container.querySelector("p + p, article p:not(:first-of-type)")!;
+    const bodyPs = [...container.querySelectorAll("p")].filter(p => p.textContent !== story.deck);
+    expect(bodyPs[0].compareDocumentPosition(box) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(box.compareDocumentPosition(bodyPs[1]) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(firstP).toBeTruthy();
+    // The art comes before the box now: it floats at the top of the body beside the lede.
+    expect(container.querySelector('img[src$="dnb_sneakers_jump.jpg"]')!.compareDocumentPosition(box) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     const url = new URL(link.getAttribute("href")!);
     expect(url.hostname).toBe("toast.app");
     expect(url.searchParams.get("date")).toBe("2026-10-23");

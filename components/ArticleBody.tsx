@@ -49,8 +49,14 @@ function AgendaTable({ title, rows }: { title?: string; rows: { time: string; wh
   );
 }
 
-export function ArticleBody({ blocks }: { blocks: Block[] }) {
-  return <>{blocks.map((b, i) => {
+/**
+ * `afterFirst` is slotted in right after the first block: the Article passes its
+ * facts box here so the headline runs straight into the lede and the where-and-when
+ * follows the first paragraph (Andy, 2026-10-26: the image and text sat too far
+ * from the headline). With no blocks it renders before nothing, i.e. first.
+ */
+export function ArticleBody({ blocks, afterFirst }: { blocks: Block[]; afterFirst?: React.ReactNode }) {
+  const nodes = blocks.map((b, i) => {
     if (b.type === "subhead") return (
       <h3 key={i} style={subStyle}>
         <span aria-hidden>★</span>{b.text}
@@ -59,5 +65,7 @@ export function ArticleBody({ blocks }: { blocks: Block[] }) {
     );
     if (b.type === "agenda") return <AgendaTable key={i} title={b.title} rows={b.rows} />;
     return <p key={i} style={pStyle}>{b.runs ? <Runs runs={b.runs} /> : b.text}</p>;
-  })}</>;
+  });
+  if (afterFirst) nodes.splice(Math.min(1, nodes.length), 0, <React.Fragment key="after-first">{afterFirst}</React.Fragment>);
+  return <>{nodes}</>;
 }

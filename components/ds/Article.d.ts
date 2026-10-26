@@ -22,7 +22,7 @@ export interface ArticleProps {
   /** Compact ticket link immediately below the headline/deck. */
   ticket?: { href: string; image: string; alt: string };
   title: React.ReactNode;
-  /** One- or two-sentence deck explaining why the story matters. */
+  /** Optional deck: one thought under the headline, nine words at most (Andy, 2026-10-26). */
   deck?: React.ReactNode;
   /** Event facts strip — date, time, place, cost, source. */
   facts?: ArticleFact[];
