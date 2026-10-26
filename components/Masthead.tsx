@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { SearchForm } from "./SearchForm";
 
 interface Section {
   id: string;
@@ -120,22 +121,24 @@ export function Masthead({ volLine, dateline, shortDate, sections, days }: Masth
           {sections.map((s) => (
             <NavLink key={s.id} href={s.href ?? `#${s.id}`} label={s.label} />
           ))}
+          <SearchForm />
           <span style={{ ...navStar, borderLeft: "var(--border-hair) solid var(--ink-black)" }}>★</span>
         </nav>
         {days && days.length > 0 && (
+          // Day chips are links: ALL is this week's Ear, a weekday is its day page —
+          // that day's events, earliest first, then last week's, and further back on request.
           <div className="ear-daynav">
             <span className="ear-daynav-label">See</span>
-            <input type="radio" name="ear-day" id="df-all" className="ear-day-radio" defaultChecked />
-            <label htmlFor="df-all">All</label>
+            <Link href="/" className="ear-day-chip">All</Link>
             {days.map((d) => (
-              <React.Fragment key={d}>
-                <input type="radio" name="ear-day" id={`df-${d.toLowerCase()}`} className="ear-day-radio" />
-                <label htmlFor={`df-${d.toLowerCase()}`}>{d}</label>
-              </React.Fragment>
+              <Link key={d} href={`/day/${d.toLowerCase()}`} className="ear-day-chip">{d}</Link>
             ))}
           </div>
         )}
       </div>
+      {/* Phones hide the wrapping nav (.ear-navwrap), so the search field gets its own
+          full-width row under it; CSS shows exactly one of the two. */}
+      <SearchForm className="ear-nav-search ear-nav-search--phone" />
     </header>
   );
 }

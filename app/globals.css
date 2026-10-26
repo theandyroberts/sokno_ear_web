@@ -55,8 +55,11 @@ html { scroll-behavior: smooth; }
 .ear-daynav { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px; padding: 7px 12px; border-top: var(--border-hair) solid var(--ink-black); }
 .ear-daynav-label { font-family: var(--font-label); font-size: var(--label-sm); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--ink-faded); margin-right: 4px; }
 .ear-day-radio { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
-.ear-daynav label { font-family: var(--font-label); font-size: var(--label-sm); letter-spacing: var(--tracking-label); text-transform: uppercase; padding: 3px 11px; border: var(--border-hair) solid var(--ink-black); border-radius: var(--radius-sm); cursor: pointer; color: var(--ink-black); background: transparent; user-select: none; }
+.ear-daynav label, .ear-daynav .ear-day-chip { font-family: var(--font-label); font-size: var(--label-sm); letter-spacing: var(--tracking-label); text-transform: uppercase; padding: 3px 11px; border: var(--border-hair) solid var(--ink-black); border-radius: var(--radius-sm); cursor: pointer; color: var(--ink-black); background: transparent; user-select: none; }
 .ear-day-radio:checked + label { background: var(--ink-black); color: var(--paper-cream); }
+.ear-daynav .ear-day-chip { text-decoration: none; }
+.ear-daynav .ear-day-chip:hover, .ear-daynav .ear-day-chip[aria-current="page"] { background: var(--ink-black); color: var(--paper-cream); }
+.ear-daynav .ear-day-chip:focus-visible { outline: 2px solid var(--rust); outline-offset: 2px; }
 .ear-day-radio:focus-visible + label { outline: 2px solid var(--rust); outline-offset: 2px; }
 
 main:has(#df-mon:checked) [data-days]:not([data-days~="mon"]),
@@ -195,3 +198,45 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
   line-height: 1.45; letter-spacing: 0.06em; text-transform: uppercase;
 }
 .ds-superheader:focus-visible { outline: 3px solid currentColor; outline-offset: -5px; }
+
+/* Search. The field sits in the nav row like another item (label font, cream well);
+   phones hide the whole nav, so a second copy runs full width under it instead. */
+.ear-nav-search { display: flex; align-items: center; padding: 0 14px; border-left: var(--border-hair) solid var(--ink-black); }
+.ear-nav-search input, .ear-search-page input {
+  font-family: var(--font-label); font-size: var(--label-md); letter-spacing: 0.04em;
+  color: var(--ink-black); background: var(--paper-cream);
+  border: var(--border-hair) solid var(--ink-black); border-radius: var(--radius-sm);
+  padding: 6px 10px; width: 170px; box-sizing: border-box;
+}
+.ear-nav-search input::placeholder, .ear-search-page input::placeholder { color: var(--ink-faded); text-transform: uppercase; letter-spacing: 0.08em; font-size: var(--label-sm); }
+.ear-nav-search input:focus-visible, .ear-search-page input:focus-visible { outline: 2px solid var(--rust); outline-offset: 2px; }
+.ear-nav-search--phone { display: none; }
+@media (max-width: 767px) {
+  .ear-nav-search--phone { display: flex; border-left: none; padding: 8px 16px; background: var(--paper-shadow); border-bottom: var(--border-hair) solid var(--ink-black); }
+  .ear-nav-search--phone input { width: 100%; }
+}
+.ear-search-page input { width: 100%; max-width: 520px; font-size: var(--label-lg); padding: 10px 14px; }
+
+/* Venue and place pages: one row per event. 56px thumbnail in the site's ink frame,
+   headline capped at two lines, a dim line under it, the ticket small on the right. */
+.ear-event-list { list-style: none; margin: 8px 0 0; padding: 0; }
+.ear-event-row { display: flex; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--paper-edge); }
+.ear-event-thumb { flex: 0 0 56px; width: 56px; height: 56px; display: block; overflow: hidden; background: var(--paper-cream); border: var(--border-ink) solid var(--ink-black); border-radius: var(--radius-sm); }
+.ear-event-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; filter: saturate(0.92) contrast(1.04); }
+.ear-event-thumb-blank { display: block; width: 100%; height: 100%; background: var(--paper-cream); }
+.ear-event-time { flex: 0 0 60px; width: 60px; font-family: var(--font-label); font-size: var(--label-sm); letter-spacing: var(--tracking-label-tight); text-transform: uppercase; color: var(--ink-black); white-space: nowrap; }
+.ear-event-text { flex: 1 1 auto; min-width: 0; }
+.ear-event-title { display: block; font-family: var(--font-body); font-weight: 700; font-size: var(--text-base); line-height: 1.3; color: var(--ink-black); text-decoration: none; }
+.ear-event-title:hover { color: var(--rust); }
+.ear-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis; }
+.ear-event-sub { margin-top: 3px; font-family: var(--font-label); font-size: var(--label-sm); letter-spacing: var(--tracking-label-tight); text-transform: uppercase; color: var(--ink-faded); }
+.ear-event-ticket { flex: 0 0 96px; width: 96px; }
+.ear-event-ticket img { display: block; width: 100%; height: auto; }
+.ear-event-list--compact .ear-event-row { padding: 9px 0; }
+.ear-event-break { display: flex; align-items: center; gap: 14px; margin: 28px 0 4px; font-family: var(--font-label); font-size: var(--label-sm); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--ink-faded); }
+.ear-event-break::before, .ear-event-break::after { content: ""; flex: 1; border-top: var(--border-ink) solid var(--ink-black); }
+@media (max-width: 480px) {
+  .ear-event-row { gap: 10px; }
+  .ear-event-time { flex-basis: 48px; width: 48px; }
+  .ear-event-ticket { flex-basis: 76px; width: 76px; }
+}
