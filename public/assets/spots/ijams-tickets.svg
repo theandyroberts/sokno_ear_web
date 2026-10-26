@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="440" viewBox="0 0 800 440" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="824" height="464" viewBox="-12 -12 824 464" role="img" aria-labelledby="title desc">
 <title id="title">Register — Ijams Nature Center</title>
 <desc id="desc">A worn ticket button with rust borders and Ijams and Nature Center lettered down the sides. A link to the program's registration page, not an admission credential.</desc>
 <defs>
-  <path id="paper" d="M45 18H755Q755 40 779 40V62 Q760 70 779 78V94 Q760 102 779 110V126 Q760 134 779 142V158 Q760 166 779 174V190 Q760 198 779 206V222 Q760 230 779 238V254 Q760 262 779 270V286 Q760 294 779 302V318 Q760 326 779 334V350 Q760 358 779 366V382 Q760 390 779 398V414Q755 400 755 422H45Q45 400 21 400V382 Q40 374 21 366V350 Q40 342 21 334V318 Q40 310 21 302V286 Q40 278 21 270V254 Q40 246 21 238V222 Q40 214 21 206V190 Q40 182 21 174V158 Q40 150 21 142V126 Q40 118 21 110V94 Q40 86 21 78V62 Q40 54 21 46V30V40Q45 40 45 18Z"/>
+  <!-- Each short edge: four radius-24 semicircles and five equal 42.4-unit flat tabs. -->
+  <path id="paper" d="M8 18H792V60.4A24 24 0 0 0 792 108.4V150.8A24 24 0 0 0 792 198.8V241.2A24 24 0 0 0 792 289.2V331.6A24 24 0 0 0 792 379.6V422H8V379.6A24 24 0 0 0 8 331.6V289.2A24 24 0 0 0 8 241.2V198.8A24 24 0 0 0 8 150.8V108.4A24 24 0 0 0 8 60.4V18Z"/>
   <clipPath id="ticket-cut"><use href="#paper"/></clipPath>
   <mask id="worn-ink"><rect width="800" height="440" fill="white"/><g fill="black"><rect x="359.4" y="282.6" width="1.2" height="3.4" transform="rotate(-16)"/>
 <rect x="456.7" y="214.8" width="1.1" height="1.0" transform="rotate(5)"/>
@@ -185,7 +186,7 @@
 <rect x="139.0" y="148.6" width="2.9" height="3.7" transform="rotate(14)"/>
 <rect x="145.1" y="300.2" width="2.4" height="2.8" transform="rotate(-19)"/></g></mask>
 </defs>
-<use href="#paper" fill="#E1C8A0"/>
+<use href="#paper" fill="#F3E8D2"/>
 <g clip-path="url(#ticket-cut)">
   <g fill="#765238"><circle cx="718.6" cy="399.4" r="1.4" opacity="0.10"/>
 <circle cx="469.0" cy="189.5" r="1.0" opacity="0.11"/>
@@ -647,8 +648,8 @@
 <circle cx="40.7" cy="88.6" r="1.3" opacity="0.14"/>
 <circle cx="704.9" cy="312.3" r="1.3" opacity="0.27"/>
 <circle cx="512.4" cy="289.9" r="1.3" opacity="0.21"/></g>
-  <rect x="60" y="48" width="680" height="344" rx="30" fill="none" stroke="#A15B43" stroke-width="11"/>
-  <path d="M151 57v326M649 57v326" fill="none" stroke="#A15B43" stroke-width="9" stroke-dasharray="17 14"/>
+  <rect x="60" y="48" width="680" height="344" rx="30" fill="none" stroke="#C2553A" stroke-width="11"/>
+  <path d="M151 57v326M649 57v326" fill="none" stroke="#C2553A" stroke-width="9" stroke-dasharray="17 14"/>
   <g fill="#171512" text-anchor="middle" mask="url(#worn-ink)">
     <g font-family="Rockwell, 'DejaVu Serif', Georgia, serif" font-weight="900">
       <text x="400" y="230" font-size="140" textLength="330" lengthAdjust="spacingAndGlyphs">GET</text>
@@ -661,4 +662,6 @@
     </g>
   </g>
 </g>
+<!-- 11.23636 SVG units × 220 / 824 = 3 CSS px, matching the Dirty South rules and logo frames. -->
+<use href="#paper" fill="none" stroke="#131309" stroke-width="11.23636" stroke-linejoin="round"/>
 </svg>
