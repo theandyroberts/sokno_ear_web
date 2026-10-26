@@ -121,7 +121,12 @@
         "headline": "Free 90s rave with Psychonaut",
         "sub": "Doors 7, show 8 · 18+ · no ticket · 808 Sevier Ave",
         "cat": "dance",
-        "href": "/2026-10-28/808-90s-rave"
+        "href": "/2026-10-28/808-90s-rave",
+        "ticket": {
+          "href": "https://808knox.com/",
+          "image": "/assets/spots/the-808-tickets-dirty-south.svg",
+          "alt": "Get tickets at The 808"
+        }
       },
       {
         "id": "fri-trailhead",
@@ -245,7 +250,12 @@
         "headline": "Bear Grillz: Dubstep Time Machine Halloween",
         "sub": "Doors 7, show 8 · Spnce, Shosstah · 18+ · tickets on the venue's site · 808 Sevier Ave",
         "cat": "music",
-        "href": "/2026-10-28/808-bear-grillz"
+        "href": "/2026-10-28/808-bear-grillz",
+        "ticket": {
+          "href": "https://808knox.com/",
+          "image": "/assets/spots/the-808-tickets-dirty-south.svg",
+          "alt": "Get tickets at The 808"
+        }
       },
       {
         "id": "sat-hiwire",
@@ -254,7 +264,12 @@
         "headline": "Drop Dead: Halloween drag show and costume contest",
         "sub": "9–11:30 · $9.55 on SimpleTix · the taproom's open noon to 11 · 2020 Barber St",
         "cat": "star",
-        "href": "/2026-10-28/drop-dead-drag-hiwire"
+        "href": "/2026-10-28/drop-dead-drag-hiwire",
+        "ticket": {
+          "href": "https://www.simpletix.com/e/drop-dead-halloween-drag-show-costume-cont-tickets-291775",
+          "image": "/assets/spots/hi-wire-tickets-dirty-south.svg",
+          "alt": "Get tickets at Hi-Wire Brewing"
+        }
       },
       {
         "id": "sat-pinkcactus",

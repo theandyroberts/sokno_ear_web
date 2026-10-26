@@ -457,7 +457,7 @@
         },
         {
           "label": "Cost",
-          "value": "Free entry"
+          "value": "Free entry · the venue lists it on its ticket page at 808knox.com"
         },
         {
           "label": "Ages",
@@ -502,7 +502,12 @@
           "Friday, doors at seven, eighteen and up"
         ]
       },
-      "image": "/assets/spots/no20_glow_stick_hands.jpg"
+      "image": "/assets/spots/no20_glow_stick_hands.jpg",
+      "ticket": {
+        "href": "https://808knox.com/",
+        "image": "/assets/spots/the-808-tickets.svg",
+        "alt": "Get tickets at The 808"
+      }
     },
     {
       "id": "808-bear-grillz",
@@ -530,8 +535,8 @@
         },
         {
           "label": "Tickets",
-          "value": "On the venue's site; the posted advance and door prices differ, so check before you go",
-          "href": "https://808knox.com/tm-event/bear-grillz/"
+          "value": "On the venue's site, 808knox.com, where the rest of the calendar is too; the posted advance and door prices differ, so take the number there",
+          "href": "https://808knox.com/"
         },
         {
           "label": "Ages",
@@ -552,6 +557,10 @@
         {
           "label": "The 808 on Instagram — Bear Grillz Dubstep Time Machine Halloween",
           "url": "https://www.instagram.com/808knox/p/DeraGeoEZyh/"
+        },
+        {
+          "label": "Andrea Kerns, The 808 — ticket link by email, Oct 23",
+          "url": "https://808knox.com/"
         }
       ],
       "event": {
@@ -572,6 +581,11 @@
           "Bear Grillz at The 808 on Halloween night",
           "Saturday, doors at seven, eighteen and up"
         ]
+      },
+      "ticket": {
+        "href": "https://808knox.com/",
+        "image": "/assets/spots/the-808-tickets.svg",
+        "alt": "Get tickets at The 808"
       }
     },
     {
@@ -866,7 +880,12 @@
           "Saturday, nine to eleven thirty"
         ]
       },
-      "image": "/assets/spots/no20_drag_queen_wink.jpg"
+      "image": "/assets/spots/no20_drag_queen_wink.jpg",
+      "ticket": {
+        "href": "https://www.simpletix.com/e/drop-dead-halloween-drag-show-costume-cont-tickets-291775",
+        "image": "/assets/spots/hi-wire-tickets.svg",
+        "alt": "Get tickets at Hi-Wire Brewing"
+      }
     },
     {
       "id": "trailhead-jake-smith-trio",
@@ -1211,7 +1230,12 @@
           "Friday, seven to nine, forty-five dollars"
         ]
       },
-      "image": "/assets/spots/no20_starlight_paddle_headlamp.jpg"
+      "image": "/assets/spots/no20_starlight_paddle_headlamp.jpg",
+      "ticket": {
+        "href": "https://www.ijams.org/event-details/starlight-paddle-2026-10-30-19-00",
+        "image": "/assets/spots/ijams-tickets.svg",
+        "alt": "Register at Ijams Nature Center"
+      }
     },
     {
       "id": "playscape-storytime-bats",
@@ -1342,7 +1366,12 @@
           "Halloween morning, eleven o'clock, ten dollars"
         ]
       },
-      "image": "/assets/spots/no20_opossum_in_hands.jpg"
+      "image": "/assets/spots/no20_opossum_in_hands.jpg",
+      "ticket": {
+        "href": "https://www.ijams.org/event-details/playing-possum-animal-ambassador-meet-greet-2026-10-31-11-00",
+        "image": "/assets/spots/ijams-tickets.svg",
+        "alt": "Register at Ijams Nature Center"
+      }
     },
     {
       "id": "renew-in-nature",
@@ -1411,7 +1440,12 @@
           "Sunday, ten to noon, forty dollars"
         ]
       },
-      "image": "/assets/spots/no20_singing_bowl_mallet.jpg"
+      "image": "/assets/spots/no20_singing_bowl_mallet.jpg",
+      "ticket": {
+        "href": "https://www.ijams.org/event-details/special-event-renew-in-nature-a-meditative-workshop-november-1",
+        "image": "/assets/spots/ijams-tickets.svg",
+        "alt": "Register at Ijams Nature Center"
+      }
     },
     {
       "id": "specials-board",
