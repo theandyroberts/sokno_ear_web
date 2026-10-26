@@ -64,7 +64,12 @@ export type SearchIndex = {
 export type SearchResults = {
   venues: VenueEntry[];
   categories: CategoryEntry[];
+  /** Every matching article, best match first — the ranked list. */
   articles: ArticleEntry[];
+  /** The matches a reader can still make (today onward), soonest first; never capped. */
+  upcoming: ArticleEntry[];
+  /** The matches that have been, newest first; the top CAPS.articles by rank. */
+  past: ArticleEntry[];
 };
 
 export const CAPS = { venues: 5, categories: 5, articles: 20 } as const;
@@ -207,10 +212,15 @@ function tokens(q: string): string[] {
 
 const hasAll = (hay: string, words: string[]) => words.every((w) => hay.includes(w));
 
-/** Ranked, capped results: venues by name or alias, places by label, articles by title, then deck, then body. */
-export function search(index: SearchIndex, q: string): SearchResults {
+/**
+ * Ranked, capped results: venues by name or alias, places by label, articles by title,
+ * then deck, then body. The articles come back twice over: ranked, and split into what
+ * is still to come (every match, soonest first — the reader is checking whether they
+ * can make it) and what has been (the best twenty, newest first).
+ */
+export function search(index: SearchIndex, q: string, today: string | Date = new Date()): SearchResults {
   const words = tokens(q);
-  if (words.length === 0) return { venues: [], categories: [], articles: [] };
+  if (words.length === 0) return { venues: [], categories: [], articles: [], upcoming: [], past: [] };
 
   const venues = index.venues
     .filter((v) => hasAll(v.name.toLowerCase(), words) || v.aliases.some((a) => hasAll(a.toLowerCase(), words)) || hasAll(v.key, words))
@@ -231,7 +241,11 @@ export function search(index: SearchIndex, q: string): SearchResults {
     .filter((x) => x.score > 0)
     .sort((x, y) => y.score - x.score || dateKey(y.a.startDate).localeCompare(dateKey(x.a.startDate)));
 
-  return { venues, categories, articles: scored.slice(0, CAPS.articles).map((x) => x.a) };
+  const ranked = scored.map((x) => x.a);
+  const t = dateKey(today);
+  const upcoming = ranked.filter((a) => isUpcoming(a, t)).sort(byStart);
+  const past = ranked.filter((a) => !isUpcoming(a, t)).slice(0, CAPS.articles).sort((a, b) => byStart(b, a));
+  return { venues, categories, articles: ranked.slice(0, CAPS.articles), upcoming, past };
 }
 
 // ---- dates -------------------------------------------------------------------
@@ -273,6 +287,22 @@ export function timeCell(a: Pick<ArticleEntry, "eventStart" | "allDay">): string
   return t || (a.allDay ? "all day" : "—");
 }
 
+/**
+ * The row's date column: the day on one line ("Sat Oct 31") and the time on the next
+ * ("7 PM", or "all day" from the facts, or a dash). A story with no event shows the
+ * day of its episode, so no row ever carries a bare time.
+ */
+export function dateCell(a: Pick<ArticleEntry, "eventStart" | "startDate" | "allDay">): { day: string; time: string } {
+  return { day: formatDay(a.eventStart ?? a.startDate), time: timeCell(a) };
+}
+
+/** Still to come: the event's last day (or its only day) is today or later, by South Knoxville calendar date. */
+export function isUpcoming(a: Pick<ArticleEntry, "startDate" | "endDate">, today: string | Date = new Date()): boolean {
+  return dateKey(a.endDate ?? a.startDate) >= dateKey(today);
+}
+
+const byStart = (a: ArticleEntry, b: ArticleEntry) => dateKey(a.startDate).localeCompare(dateKey(b.startDate)) || a.startDate.localeCompare(b.startDate);
+
 /** The dim line under a row: "Sat Oct 31 · 7 PM" from the event, else the episode's short date. */
 export function dateLine(a: Pick<ArticleEntry, "eventStart" | "episodeShortDate" | "episodeDate">): string {
   if (a.eventStart) {
@@ -282,11 +312,12 @@ export function dateLine(a: Pick<ArticleEntry, "eventStart" | "episodeShortDate"
   return a.episodeShortDate ?? formatDay(a.episodeDate);
 }
 
-/** The one-line meta on a search result: "No. 20 · Sat Oct 31 · The 808". */
+/**
+ * The dim line under a result row: "No. 20 · The 808" — the episode and the venue
+ * (or the place pill when no venue is named). The date lives in the row's date column.
+ */
 export function articleMeta(a: ArticleEntry): string {
-  return [`No. ${a.episodeNumber}`, a.eventStart ? formatDay(a.eventStart) : a.episodeShortDate ?? formatDay(a.episodeDate), a.venueName]
-    .filter(Boolean)
-    .join(" · ");
+  return [`No. ${a.episodeNumber}`, a.venueName ?? a.label].filter(Boolean).join(" · ");
 }
 
 /**
@@ -298,11 +329,7 @@ export function groupVenueEvents(articles: ArticleEntry[], today: string | Date 
   const t = dateKey(today);
   const upcoming: ArticleEntry[] = [];
   const past: ArticleEntry[] = [];
-  for (const a of articles) {
-    const last = dateKey(a.endDate ?? a.startDate);
-    (last >= t ? upcoming : past).push(a);
-  }
-  const byStart = (a: ArticleEntry, b: ArticleEntry) => dateKey(a.startDate).localeCompare(dateKey(b.startDate)) || a.startDate.localeCompare(b.startDate);
+  for (const a of articles) (isUpcoming(a, t) ? upcoming : past).push(a);
   upcoming.sort(byStart);
   past.sort((a, b) => byStart(b, a));
   return { upcoming, past };

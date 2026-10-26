@@ -2,12 +2,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { EventRow } from "@/components/EventRow";
+import { PastSection } from "@/components/PastSection";
 import { getSearchIndex } from "@/lib/search-index";
-import { groupVenueEvents, dateLine, type SearchIndex } from "@/lib/search";
+import { groupVenueEvents, type SearchIndex } from "@/lib/search";
 
 // One page per venue: every event the Ear has covered there, the ones still to come
-// first and the ones that have been after a rule. Rendered at request time so the
-// split between the two moves on its own each day.
+// first and the ones that have been after the filigree, folded behind a fade.
+// Rendered at request time so the split between the two moves on its own each day.
 export const dynamic = "force-dynamic";
 
 function resolve(index: SearchIndex, key: string) {
@@ -35,6 +36,9 @@ const kicker: React.CSSProperties = {
   textTransform: "uppercase",
   color: "var(--rust)",
 };
+
+/** Under a row on its own venue's page the venue is a given, so: the episode and the place pill. */
+const sub = (a: { episodeNumber: number; label: string }) => `No. ${a.episodeNumber} · ${a.label}`;
 
 export default async function VenuePage({ params }: { params: Promise<{ key: string }> }) {
   const { key } = await params;
@@ -66,33 +70,21 @@ export default async function VenuePage({ params }: { params: Promise<{ key: str
       </header>
 
       <section aria-labelledby="coming-up" style={{ marginTop: 24 }}>
-        <h2 id="coming-up" style={{ ...kicker, margin: "0 0 4px" }}>Coming up</h2>
+        <h2 id="coming-up" className="ear-results-h2">Coming up</h2>
         {upcoming.length === 0 ? (
-          <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--ink-faded)", margin: "8px 0 0" }}>
-            Nothing on the calendar at {venue.name} this week.
-          </p>
+          <p className="ear-results-none">Nothing coming up at {venue.name} &mdash; the past is below.</p>
         ) : (
           <ul className="ear-event-list">
-            {upcoming.map((a) => <EventRow key={a.href} article={a} sub={dateLine(a)} />)}
+            {upcoming.map((a) => <EventRow key={a.href} article={a} sub={sub(a)} upcoming />)}
           </ul>
         )}
       </section>
 
-      <div className="ear-event-break" role="separator">
-        <span>Past events</span>
-      </div>
-
-      <section aria-label="Past events">
-        {past.length === 0 ? (
-          <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--ink-faded)", margin: "8px 0 0" }}>
-            None yet.
-          </p>
-        ) : (
-          <ul className="ear-event-list">
-            {past.map((a) => <EventRow key={a.href} article={a} sub={dateLine(a)} />)}
-          </ul>
-        )}
-      </section>
+      <PastSection count={past.length}>
+        <ul className="ear-event-list">
+          {past.map((a) => <EventRow key={a.href} article={a} sub={sub(a)} upcoming={false} />)}
+        </ul>
+      </PastSection>
 
       <p style={{ marginTop: 36 }}><Link href="/">&#9733; Back to this week&rsquo;s Ear</Link></p>
     </main>

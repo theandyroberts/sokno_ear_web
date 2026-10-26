@@ -2,12 +2,14 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { EventRow } from "@/components/EventRow";
+import { PastSection } from "@/components/PastSection";
 import { getSearchIndex } from "@/lib/search-index";
 import { groupByWeekday, parseWeekday, formatMonthDay, WEEKDAY_FULL, type DayWeek } from "@/lib/search";
 
-// One page per weekend day: this week's events on that day, earliest first, then a
-// rule and last week's, and one more past week for every step of ?weeks=. Plain GET
-// pagination, so it works with no JavaScript. /day/thursday normalises to /day/thu.
+// One page per weekend day: this week's events on that day, earliest first, then
+// after the filigree the past weeks folded behind a fade — last week's, and one more
+// for every step of ?weeks= from the load-more link at the bottom of the list. Plain
+// GET pagination, so it works with no JavaScript. /day/thursday normalises to /day/thu.
 export const dynamic = "force-dynamic";
 
 type Params = Promise<{ weekday: string }>;
@@ -37,17 +39,13 @@ const kicker: React.CSSProperties = {
   color: "var(--rust)",
 };
 
-function Rows({ week, dayName }: { week: DayWeek; dayName: string }) {
+function Rows({ week, dayName, upcoming }: { week: DayWeek; dayName: string; upcoming?: boolean }) {
   if (week.articles.length === 0) {
-    return (
-      <p style={{ fontFamily: "var(--font-body)", fontSize: "var(--text-sm)", color: "var(--ink-faded)", margin: "8px 0 0" }}>
-        Nothing in the Ear for that {dayName}.
-      </p>
-    );
+    return <p className="ear-results-none">Nothing in the Ear for that {dayName}.</p>;
   }
   return (
     <ul className="ear-event-list">
-      {week.articles.map((a) => <EventRow key={a.href} article={a} sub={a.venueName ?? a.label} />)}
+      {week.articles.map((a) => <EventRow key={a.href} article={a} sub={a.venueName ?? a.label} upcoming={upcoming} />)}
     </ul>
   );
 }
@@ -65,6 +63,7 @@ export default async function DayPage({ params, searchParams }: { params: Params
   const [thisWeek, ...earlier] = all;
   const shown = earlier.slice(0, weeks);
   const more = earlier.length > weeks;
+  const pastCount = shown.reduce((n, w) => n + w.articles.length, 0);
 
   return (
     <main style={{ maxWidth: 860, margin: "0 auto", padding: "48px 24px" }}>
@@ -81,30 +80,33 @@ export default async function DayPage({ params, searchParams }: { params: Params
         </nav>
       </header>
 
-      <section aria-label={`This ${dayName}`} style={{ marginTop: 10 }}>
+      {/* This week's day: the prominent set when it is still ahead; each row judges itself by today's date. */}
+      <section aria-labelledby="this-week" style={{ marginTop: 24 }}>
+        <h2 id="this-week" className="ear-results-h2">This {dayName}</h2>
         <Rows week={thisWeek} dayName={dayName} />
       </section>
 
-      {shown.map((week, i) => (
-        <section key={week.slug} aria-label={`${dayName} · ${formatMonthDay(week.date)}`}>
-          <div className="ear-event-break" role="separator">
-            <span>{i === 0 ? `Last ${dayName}` : dayName} · {formatMonthDay(week.date)}</span>
-          </div>
-          <Rows week={week} dayName={dayName} />
-        </section>
-      ))}
-
-      {more && (
-        <p style={{ marginTop: 28, textAlign: "center" }}>
-          <Link
-            href={`/day/${wd}?weeks=${weeks + 1}`}
-            className="ear-day-chip"
-            style={{ display: "inline-block", fontFamily: "var(--font-label)", fontSize: "var(--label-md)", letterSpacing: "var(--tracking-label)", textTransform: "uppercase", padding: "8px 18px", border: "var(--border-ink) solid var(--ink-black)", borderRadius: "var(--radius-sm)", color: "var(--ink-black)", textDecoration: "none", background: "var(--paper-bright)" }}
-          >
-            Load more {dayName}s
-          </Link>
-        </p>
-      )}
+      <PastSection count={pastCount} defaultOpen={weeks > 1}>
+        {shown.map((week, i) => (
+          <section key={week.slug} aria-label={`${dayName} · ${formatMonthDay(week.date)}`}>
+            <div className="ear-event-break" role="separator">
+              <span>{i === 0 ? `Last ${dayName}` : dayName} · {formatMonthDay(week.date)}</span>
+            </div>
+            <Rows week={week} dayName={dayName} upcoming={false} />
+          </section>
+        ))}
+        {more && (
+          <p style={{ marginTop: 28, textAlign: "center" }}>
+            <Link
+              href={`/day/${wd}?weeks=${weeks + 1}`}
+              className="ear-day-chip"
+              style={{ display: "inline-block", fontFamily: "var(--font-label)", fontSize: "var(--label-md)", letterSpacing: "var(--tracking-label)", textTransform: "uppercase", padding: "8px 18px", border: "var(--border-ink) solid var(--ink-black)", borderRadius: "var(--radius-sm)", color: "var(--ink-black)", textDecoration: "none", background: "var(--paper-bright)" }}
+            >
+              Load more {dayName}s
+            </Link>
+          </p>
+        )}
+      </PastSection>
 
       <p style={{ marginTop: 36 }}><Link href="/">&#9733; Back to this week&rsquo;s Ear</Link></p>
     </main>

@@ -4,8 +4,8 @@ import { loadVenues } from "@/lib/venues";
 import { EpisodeSchema } from "@/lib/schema";
 import {
   buildIndex, search, groupVenueEvents, groupByEpisode, groupByWeekday, episodeWeekend,
-  resolveVenue, dateKey, formatDay, formatTime, timeCell, dateLine, articleMeta, parseWeekday, slugify,
-  type ArticleEntry,
+  resolveVenue, dateKey, formatDay, formatTime, timeCell, dateCell, isUpcoming, dateLine, articleMeta, parseWeekday, slugify,
+  CAPS, type ArticleEntry,
 } from "@/lib/search";
 import fixture from "@/tests/fixtures/episodes/2026-06-20.json";
 
@@ -62,7 +62,22 @@ describe("buildIndex — the real episodes", () => {
 
 describe("search", () => {
   it("returns nothing for an empty query", () => {
-    expect(search(index, "   ")).toEqual({ venues: [], categories: [], articles: [] });
+    expect(search(index, "   ")).toEqual({ venues: [], categories: [], articles: [], upcoming: [], past: [] });
+  });
+  it("splits the matches into what is still to come (soonest first, uncapped) and what has been (newest first, capped)", () => {
+    // A day in June 2026: most of the archive is still ahead, so the upcoming list runs past the cap.
+    const r = search(index, "ijams", "2026-06-01");
+    expect(r.upcoming.length).toBeGreaterThan(CAPS.articles);
+    for (const a of r.upcoming) expect(isUpcoming(a, "2026-06-01")).toBe(true);
+    const starts = r.upcoming.map((a) => dateKey(a.startDate));
+    expect([...starts].sort()).toEqual(starts);
+    // Far in the future everything has been: the past is the best twenty, newest first, and nothing is coming.
+    const later = search(index, "ijams", "2030-01-01");
+    expect(later.upcoming).toEqual([]);
+    expect(later.past.length).toBe(CAPS.articles);
+    const ends = later.past.map((a) => dateKey(a.startDate));
+    expect([...ends].sort().reverse()).toEqual(ends);
+    for (const a of later.past) expect(later.articles).toContain(a);
   });
   it("finds a venue by name or alias and a place by label", () => {
     expect(search(index, "kern").venues.map((v) => v.key)).toContain("kerns");
@@ -136,10 +151,21 @@ describe("dates and lines", () => {
     expect(timeCell(entry({ allDay: true }))).toBe("all day");
     expect(timeCell(entry({}))).toBe("—");
   });
+  it("date cell: the day and the time together, never a bare time; a story with no event shows its episode's day", () => {
+    expect(dateCell(entry({ eventStart: "2026-10-31T19:00:00-04:00", startDate: "2026-10-31T19:00:00-04:00" }))).toEqual({ day: "Sat Oct 31", time: "7 PM" });
+    expect(dateCell(entry({ allDay: true }))).toEqual({ day: "Wed Oct 21", time: "all day" });
+    expect(dateCell(entry({}))).toEqual({ day: "Wed Oct 21", time: "—" });
+  });
+  it("isUpcoming goes by the South Knoxville calendar date, through the end of a run", () => {
+    expect(isUpcoming(entry({ startDate: "2026-10-26T20:00:00-04:00" }), new Date("2026-10-26T23:30:00Z"))).toBe(true);
+    expect(isUpcoming(entry({ startDate: "2026-10-25" }), "2026-10-26")).toBe(false);
+    expect(isUpcoming(entry({ startDate: "2026-10-20", endDate: "2026-10-27" }), "2026-10-26")).toBe(true);
+  });
   it("row line and search meta", () => {
     const a = entry({ eventStart: "2026-10-31T19:00:00-04:00", venueName: "The 808", episodeNumber: 20 });
     expect(dateLine(a)).toBe("Sat Oct 31 · 7 PM");
-    expect(articleMeta(a)).toBe("No. 20 · Sat Oct 31 · The 808");
+    expect(articleMeta(a)).toBe("No. 20 · The 808");
+    expect(articleMeta(entry({ episodeNumber: 19 }))).toBe("No. 19 · Old Sevier");
     expect(dateLine(entry({}))).toBe("Oct 22–25");
   });
   it("slugify", () => {

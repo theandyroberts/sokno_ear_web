@@ -2,12 +2,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { EventRow } from "@/components/EventRow";
+import { PastSection } from "@/components/PastSection";
 import { getSearchIndex } from "@/lib/search-index";
-import { groupByEpisode, PLACE_NOTES, type SearchIndex } from "@/lib/search";
+import { groupVenueEvents, PLACE_NOTES, type SearchIndex, type ArticleEntry } from "@/lib/search";
 
 // One page per location pill (Old Sevier, Kern's, Ijams Nature Center …): the
-// stories filed under it, episode by episode, newest first. A different shape from
-// the venue page on purpose — a place is a run of weeks, a venue is a calendar.
+// stories filed under it, what is still to come first and what has been after the
+// filigree, newest first. The dim line under each row carries the episode and venue.
 export const dynamic = "force-dynamic";
 
 const PILL_COLOR: Record<string, string> = {
@@ -44,12 +45,16 @@ const kicker: React.CSSProperties = {
   color: "var(--ink-faded)",
 };
 
+/** Under a row on a place page: the episode and the venue, when one is named. */
+const sub = (a: ArticleEntry) => [`No. ${a.episodeNumber}`, a.venueName].filter(Boolean).join(" · ");
+
 export default async function PlacePage({ params }: { params: Promise<{ key: string }> }) {
   const { key } = await params;
   const found = resolve(getSearchIndex(), key);
   if (!found) notFound();
   const { category, articles } = found;
-  const groups = groupByEpisode(articles);
+  const { upcoming, past } = groupVenueEvents(articles);
+  const episodes = new Set(articles.map((a) => a.slug)).size;
   const color = PILL_COLOR[category.labelColor] ?? "var(--rust)";
 
   return (
@@ -65,22 +70,26 @@ export default async function PlacePage({ params }: { params: Promise<{ key: str
           </p>
         )}
         <p style={{ ...kicker, letterSpacing: "var(--tracking-label-tight)", margin: "8px 0 0" }}>
-          {articles.length} {articles.length === 1 ? "story" : "stories"} across {groups.length} {groups.length === 1 ? "episode" : "episodes"}
+          {articles.length} {articles.length === 1 ? "story" : "stories"} across {episodes} {episodes === 1 ? "episode" : "episodes"}
         </p>
       </header>
 
-      {groups.map((g) => (
-        <section key={g.slug} aria-labelledby={`ep-${g.slug}`} style={{ marginTop: 28 }}>
-          <h2 id={`ep-${g.slug}`} style={{ margin: 0, paddingBottom: 6, borderBottom: "var(--border-hair) solid var(--ink-black)", fontFamily: "var(--font-label)", fontSize: "var(--label-md)", letterSpacing: "var(--tracking-label)", textTransform: "uppercase", color: "var(--ink-black)" }}>
-            <Link href={`/${g.slug}`} style={{ color: "inherit", textDecoration: "none" }}>
-              No. {g.number} · {g.shortDate ?? g.date}
-            </Link>
-          </h2>
-          <ul className="ear-event-list ear-event-list--compact">
-            {g.articles.map((a) => <EventRow key={a.href} article={a} sub={a.venueName ?? a.label} />)}
+      <section aria-labelledby="coming-up" style={{ marginTop: 28 }}>
+        <h2 id="coming-up" className="ear-results-h2">Coming up</h2>
+        {upcoming.length === 0 ? (
+          <p className="ear-results-none">Nothing coming up in {category.label} &mdash; the past is below.</p>
+        ) : (
+          <ul className="ear-event-list">
+            {upcoming.map((a) => <EventRow key={a.href} article={a} sub={sub(a)} upcoming />)}
           </ul>
-        </section>
-      ))}
+        )}
+      </section>
+
+      <PastSection count={past.length}>
+        <ul className="ear-event-list">
+          {past.map((a) => <EventRow key={a.href} article={a} sub={sub(a)} upcoming={false} />)}
+        </ul>
+      </PastSection>
 
       <p style={{ marginTop: 36 }}><Link href="/">&#9733; Back to this week&rsquo;s Ear</Link></p>
     </main>
