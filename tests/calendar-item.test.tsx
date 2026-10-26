@@ -75,6 +75,11 @@ describe("calendarVenue — resolving a row's venue from its story", () => {
     expect(calendarVenue({ title: "Fall market", meta: "10 AM" }, { title: "Fall market", label: "Old Sevier" }, registry).venue?.name).toBe("Old Sevier District");
     expect(calendarVenue({ title: "Fall market", meta: "10 AM" }, { title: "Fall market", label: "Suttree Landing" }, registry)).toEqual(expect.objectContaining({ name: "Suttree Landing Park" }));
   });
+  it("reads the row title before the drinks in the meta, so Earl's mimosas don't resolve to Mimosas", () => {
+    const story = { title: "Earl's runs a rita a day through Halloween weekend, then mimosas for the morning after", label: "Suttree Landing" };
+    expect(calendarVenue({ title: "$10 Patrón mango ritas at Earl's", meta: "11 AM – 10 PM · a rita a day through Saturday" }, story, registry).venue?.name).toBe("Earl's");
+    expect(calendarVenue({ title: "Seven-dollar mimosas and Bloody Marys at Earl's", meta: "All day" }, story, registry).venue?.name).toBe("Earl's");
+  });
   it("names the place for the wordmark when nothing is registered", () => {
     const story = { title: "Zoning hearing", label: "SoKno", event: { locationName: "City County Building — Main Assembly Room" } };
     expect(calendarVenue({ title: "Zoning hearing" }, story, registry)).toEqual({ venue: null, name: "City County Building — Main Assembly Room" });

@@ -18,6 +18,9 @@ export type Venue = {
   fetched?: string;
   confidence?: string;
   note?: string;
+  /** Set (e.g. "2026-08") when the business has closed: kept so archived episodes still
+   *  resolve, but never matched against a row's wording, only against an event location. */
+  closed?: string;
 };
 
 export type VenueRegistry = Record<string, Venue>;
@@ -76,12 +79,20 @@ export function calendarVenue(
   registry: VenueRegistry,
 ): CalendarVenue {
   const location = story?.event?.locationName;
-  const candidates = [location, `${row.title} ${row.meta ?? ""} ${story?.title ?? ""}`, story?.label];
-  for (const text of candidates) {
-    if (!text) continue;
-    const venue = matchVenue(text, registry);
-    if (venue) return { venue, name: venue.name };
-  }
+  // One text at a time, the row's own title first: it names the place ("… at Earl's"),
+  // while a meta or story title that lists the drinks ("$7 mimosas…") would let a longer
+  // alias from another venue win the longest-match (the Mimosas tombstone did, 2026-10-26).
+  const candidates = [location, row.title, story?.title, row.meta, story?.label];
+  // A closed venue (a tombstone kept so archived episodes still resolve) can match an
+  // event location, but never a drink or a dish named in a row ("$7 mimosas").
+  const open: VenueRegistry = Object.fromEntries(Object.entries(registry).filter(([, v]) => !v.closed));
+  let found: CalendarVenue | null = null;
+  candidates.forEach((text, i) => {
+    if (!text) return;
+    const venue = matchVenue(text, i === 0 ? registry : open);
+    if (venue && !found) found = { venue, name: venue.name };
+  });
+  if (found) return found;
   // No registry match: the best plain name we have. A row's meta usually ends in
   // the place ("7 PM · Trailhead"), so take the part after the last " · ".
   const metaPlace = row.meta?.includes(" · ") ? row.meta.split(" · ").pop()?.trim() : undefined;

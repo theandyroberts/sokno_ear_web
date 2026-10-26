@@ -175,7 +175,8 @@
       "sourceNote": "Closed Aug 2026 — the Blount Ave room is Puckers now. Kept as a tombstone so the name resolves in archived episodes instead of looking unregistered.",
       "treatment": null,
       "fetched": "2026-08-29",
-      "confidence": "none"
+      "confidence": "none",
+      "closed": "2026-08"
     },
     "printshop": {
       "name": "Printshop Beer Co.",
