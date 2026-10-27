@@ -7,8 +7,13 @@ description: Use when generating, tracing, or placing artwork for The South Knox
 
 All art for the Ear is **vintage local-newspaper engraving**: black-ink linework,
 stipple dots, cross-hatch shading, warm cream paper, restrained teal + rust accents.
-Three generation modes. All use the **Higgsfield MCP** (`generate_image`,
-`remove_background`, `media_upload_widget`) and end with optimization + placement.
+Three generation modes, all ending with optimization + placement. **Since 2026-10-27 the
+weekly story art is made in ChatGPT Image (the latest image model), driven by computer
+control of the ChatGPT desktop app or, when that grant is refused in a scheduled run, at
+chatgpt.com in the built-in browser pane (Andy: "each week we want to use computer control
+and ChatGPT Image"). Prefix each prompt "Generate an image, 1:1 aspect ratio." (3:2 for the
+feature) and append the palette hex codes; the prompt rules below are unchanged. The
+Higgsfield recipes stay for the portrait and diagram modes and as a fallback.
 
 ## Brand constants (use in every generation)
 
