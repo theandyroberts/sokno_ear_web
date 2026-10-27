@@ -66,6 +66,12 @@ export function resolveVenues(episode, contacts) {
     if (!keys.size && where) unresolved.push({ id: s.id, where });
     for (const k of keys) add(k, s);
   }
+  // Lead with a story that's about the venue alone (Andy, 2026-10-27): the Halloween
+  // pub crawl went to seven venues as their first link, and none of them could find
+  // themselves in it. Stories shared with other venues sink; episode order otherwise.
+  const shared = new Map();
+  for (const v of venues.values()) for (const s of v.stories) shared.set(s.id, (shared.get(s.id) ?? 0) + 1);
+  for (const v of venues.values()) v.stories.sort((a, b) => shared.get(a.id) - shared.get(b.id));
   return { venues, unresolved };
 }
 
@@ -142,14 +148,23 @@ export function renderMessage({ episode, name, contact = {}, stories, first = fa
   // 2026-10-15: "much shorter than the initial notes... just say hi and here's the link").
   // We're asking for their help, so the ask says so (Andy, 2026-10-23: "share anything
   // you like, it would be a big help"); "Share anything you like." alone left Printshop
-  // asking what sharing meant.
+  // asking what sharing meant. With several stories every one is listed, titled so the
+  // venue can tell which is theirs, its own story first (Andy, 2026-10-27).
   if (!first) {
-    const url = storyUrl(episode, stories[0]);
-    const line = n === 1 ? `${name} is in this week's South Knoxville Ear.` : `${name} has ${n} stories in this week's South Knoxville Ear.`;
-    const intro = n === 1 ? "Here's the link:" : "Here's one of them:";
-    const text = [who, "", `${line} ${intro}`, "", url, "", ASK, "", "Andy"].join("\n");
     const esc = (t) => String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-    const html = `<div style="font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.55;color:#171512;">${esc(who)}<br><br>${esc(line)} ${intro}<br><br><a href="${url}" style="color:#A94A34;">${url}</a><br><br>${ASK}<br><br>Andy</div>`;
+    const a = (url) => `<a href="${url}" style="color:#A94A34;">${url}</a>`;
+    const style = "font-family:Georgia,'Times New Roman',serif;font-size:16px;line-height:1.55;color:#171512;";
+    let text, html;
+    if (n === 1) {
+      const url = storyUrl(episode, stories[0]);
+      const line = `${name} is in this week's South Knoxville Ear. Here's the link:`;
+      text = [who, "", line, "", url, "", ASK, "", "Andy"].join("\n");
+      html = `<div style="${style}">${esc(who)}<br><br>${esc(line)}<br><br>${a(url)}<br><br>${ASK}<br><br>Andy</div>`;
+    } else {
+      const line = `${name} has ${n} stories in this week's South Knoxville Ear:`;
+      text = [who, "", line, "", ...stories.flatMap((s) => [s.title, storyUrl(episode, s), ""]), ASK, "", "Andy"].join("\n");
+      html = `<div style="${style}">${esc(who)}<br><br>${esc(line)}<br><br>${stories.map((s) => `${esc(s.title)}<br>${a(storyUrl(episode, s))}`).join("<br><br>")}<br><br>${ASK}<br><br>Andy</div>`;
+    }
     return { subject: `${name} is in this week's South Knoxville Ear`, text, html };
   }
 

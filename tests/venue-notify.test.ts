@@ -55,6 +55,15 @@ describe("resolveVenues", () => {
     expect(venues.get("earls")!.stories[0].id).toBe("specials-board");
     expect(venues.get("kerns")!.stories[0].id).toBe("kerns-rooftop");
   });
+  it("leads with a story about the venue alone, ahead of one it shares", () => {
+    const crawl = { slug: "2026-10-28", date: "2026-10-28", number: 20, stories: [
+      { id: "pub-crawl", title: "Halloween pub crawl", social: { igTags: ["ijams", "kerns"] } },
+      { id: "kerns-solo", title: "Hoedown at Kern's", social: { igTags: ["kerns"] } },
+    ] };
+    const { venues: v } = resolveVenues(crawl, contacts);
+    expect(v.get("kerns")!.stories.map((s: any) => s.id)).toEqual(["kerns-solo", "pub-crawl"]);
+    expect(v.get("ijams")!.stories.map((s: any) => s.id)).toEqual(["pub-crawl"]);
+  });
   it("reports a venue nobody has a contact for", () => {
     expect(unresolved).toEqual([{ id: "sevier-day", where: "Marble Springs State Historic Site" }]);
   });
@@ -89,12 +98,12 @@ describe("renderMessage", () => {
   const { venues } = resolveVenues(episode, contacts);
   const now = new Date("2026-09-16T13:00:00-04:00").getTime();
 
-  it("keeps the weekly note to a hello and one link", () => {
+  it("keeps the weekly note to a hello and the week's links, each titled", () => {
     const { text, html, subject } = renderMessage({ episode, name: "Ijams Nature Center", contact: contacts.ijams, stories: venues.get("ijams")!.stories , now });
     expect(subject).toBe("Ijams Nature Center is in this week's South Knoxville Ear");
-    expect(text).toBe("Hiya Ijams Nature Center team,\n\nIjams Nature Center has 2 stories in this week's South Knoxville Ear. Here's one of them:\n\nhttps://soknoear.com/2026-09-16/lotr-lawn\n\nShare anything you like, it would be a big help.\n\nAndy");
+    expect(text).toBe("Hiya Ijams Nature Center team,\n\nIjams Nature Center has 2 stories in this week's South Knoxville Ear:\n\nLOTR on the Ijams lawn\nhttps://soknoear.com/2026-09-16/lotr-lawn\n\nA guided caving trip\nhttps://soknoear.com/2026-09-16/caving-trip\n\nShare anything you like, it would be a big help.\n\nAndy");
     expect(html).toContain('href="https://soknoear.com/2026-09-16/lotr-lawn"');
-    expect(text).not.toContain("caving-trip");
+    expect(html).toContain('href="https://soknoear.com/2026-09-16/caving-trip"');
   });
   it("addresses a named person by first name", () => {
     const { text } = renderMessage({ episode, name: "Puckers Sports Grill", contact: contacts.puckers, stories: venues.get("puckers")!.stories , now });
