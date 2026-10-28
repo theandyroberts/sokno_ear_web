@@ -84,6 +84,12 @@
       "phone": "(865) 252-4886",
       "people": [
         {
+          "name": "Zach",
+          "role": "Manager, Earl's",
+          "email": null,
+          "source": "Andy, 2026-10-28"
+        },
+        {
           "name": "Jimmy Loup",
           "role": "Co-founder, Gemini Hospitality (operator)",
           "email": null,
@@ -99,7 +105,7 @@
       "salutation": "Hiya Earl's team,",
       "introduced": "2026-10-01",
       "source": "https://earlsknox.com/",
-      "notes": "Domain is earlsknox.com. Operator Gemini Hospitality (also Raven Steakhouse, Bella, The Armory); its contact page is form-only. Opened Jan 2026."
+      "notes": "Domain is earlsknox.com. Operator Gemini Hospitality (also Raven Steakhouse, Bella, The Armory); its contact page is form-only. Opened Jan 2026. 2026-10-28: Zach is the manager (Andy); surname and email not known yet."
     },
     "hiwire": {
       "name": "Hi-Wire Brewing",
@@ -110,14 +116,22 @@
       "instagram": "@hiwirebrewing_knx",
       "website": "https://hiwirebrewing.com/knoxville/",
       "contactPage": "https://hiwirebrewing.com/contact-us/",
-      "email": "knoxville@hiwirebrewing.com",
-      "to": null,
+      "email": "lesley.gass@hiwirebrewing.com",
+      "to": "lesley.gass@hiwirebrewing.com",
       "phone": "(865) 935-9395",
-      "people": [],
-      "salutation": "Hiya Hi-Wire Knoxville team,",
+      "people": [
+        {
+          "name": "Lesley Martin",
+          "role": "General Manager, Hi-Wire Knoxville",
+          "email": "lesley.gass@hiwirebrewing.com",
+          "phone": "(865) 935-9395",
+          "source": "her reply to Andy, 2026-10-28"
+        }
+      ],
+      "salutation": "Hi Lesley,",
       "introduced": "2026-10-14",
       "source": "https://hiwirebrewing.com/contact-us/",
-      "notes": "2020 Barber St. Taproom inbox knoxville@; company-wide events@hiwirebrewing.com and info@hiwirebrewing.com (Asheville HQ, 828-738-2448). No named staff or marketing contact published. Space rental form: https://hiwirebrewing.com/rent-our-space-knoxville/. Food by Redbud Kitchen.",
+      "notes": "2020 Barber St. Taproom inbox knoxville@; company-wide events@hiwirebrewing.com and info@hiwirebrewing.com (Asheville HQ, 828-738-2448). No named staff or marketing contact published. Space rental form: https://hiwirebrewing.com/rent-our-space-knoxville/. Food by Redbud Kitchen. 2026-10-28: Lesley Martin (GM, Knoxville) replied to the weekly note and thanked us; she is the contact now, weekly notes go to her. knoxville@hiwirebrewing.com was the old taproom address.",
       "altEmail": "events@hiwirebrewing.com"
     },
     "pink-cactus": {
