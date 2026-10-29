@@ -33,6 +33,19 @@ const episode = JSON.parse(fs.readFileSync(path.join(episodesDir, `${slug}.json`
 const handlesPath = path.join(process.cwd(), "content", "ig-handles.json");
 const registry = fs.existsSync(handlesPath) ? JSON.parse(fs.readFileSync(handlesPath, "utf8")) : { handles: {} };
 
+// Handles Meta refuses to tag in a picture (subcode 2207018: private, or gone). Two
+// sources: `noImageTag` on a registry entry, and every `droppedTags` ig-post.mjs has
+// written into a queue on this box. They stay in the caption; only the image tag goes.
+const untaggable = new Set(
+  Object.values(registry.handles ?? {}).filter((v) => v.noImageTag).map((v) => String(v.handle ?? "").replace(/^@/, "").toLowerCase())
+);
+const queueDir = path.join(process.cwd(), "content", "ig-queue");
+for (const f of fs.existsSync(queueDir) ? fs.readdirSync(queueDir).filter((f) => f.endsWith(".json")) : []) {
+  try {
+    for (const p of JSON.parse(fs.readFileSync(path.join(queueDir, f), "utf8")).posts ?? []) for (const u of p.droppedTags ?? []) untaggable.add(String(u).toLowerCase());
+  } catch { /* a half-written queue is not worth failing the staging over */ }
+}
+
 /** Map a day abbreviation ("Fri") to the real date inside this episode's week. */
 function dateForDay(episodeDate, dayAbbr) {
   const start = new Date(`${episodeDate}T12:00:00-04:00`);
@@ -178,7 +191,7 @@ for (const s of stories) {
   // in docs/ig-reviews/2026-10-05.md. Since 2026-10-12 every verified handle the story
   // names goes in the picture, not only the venue (Andy: "tags the venue and artist";
   // the No. 17 posts that reached hundreds were the ones with a tagged audience).
-  const userTags = userTagsFor(tags, { everyone: artistTagsOn(moves) });
+  const userTags = userTagsFor(tags, { everyone: artistTagsOn(moves), untaggable });
 
   if (s.__isFeature) featureIds.add(s.id);
   posts.push({

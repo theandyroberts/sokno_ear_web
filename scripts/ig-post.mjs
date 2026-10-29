@@ -24,10 +24,16 @@
 //   · a DATED post whose event has already started is dropped as `stale` instead of
 //     posted hours late — announcing a 7pm show at 11pm is worse than silence. An
 //     undated post (the feature, the promo pair, undated news) always goes out late.
+//   · a container refused with subcode 2207018 ("user(s) cannot be accessed" — a
+//     private or dead handle in `user_tags`) is not transient: retrying it is four
+//     identical failures (2026-10-28/pink-is-punk-halloweemo, @thecomedysphereknox).
+//     Those usernames come out of `userTags` (the caption still @s them), go on
+//     `droppedTags`, and the post is retried at once without spending an attempt.
+//     ig-queue.mjs reads `droppedTags` back so the handle is never image-tagged again.
 process.env.TZ = "America/New_York"; // all slot math is SoKno-local
 import fs from "node:fs";
 import path from "node:path";
-import { publishPost } from "./ig-container.mjs";
+import { publishPost, untaggableUsernames } from "./ig-container.mjs";
 import { downgradeCarousel } from "./ig-roundup.mjs";
 
 const GRAPH = process.env.IG_GRAPH_BASE || "https://graph.instagram.com/v22.0";
@@ -99,7 +105,23 @@ for (const file of files) {
 
     try {
       // Container(s), wait, publish — one image or a carousel. See ig-container.mjs.
-      const published = await publishPost(post, { graph: GRAPH, userId: IG_USER_ID, token: IG_ACCESS_TOKEN });
+      let published;
+      for (;;) {
+        try {
+          published = await publishPost(post, { graph: GRAPH, userId: IG_USER_ID, token: IG_ACCESS_TOKEN });
+          break;
+        } catch (err) {
+          // An untaggable handle: drop it from the picture and go again this run. Only
+          // when it actually removes a tag — otherwise the same error would loop.
+          const refused = untaggableUsernames(err.graph);
+          const before = post.userTags?.length ?? 0;
+          if (refused.length) post.userTags = (post.userTags ?? []).filter((t) => !refused.includes(t.username.toLowerCase()));
+          if (!refused.length || post.userTags.length === before) throw err;
+          post.droppedTags = [...new Set([...(post.droppedTags ?? []), ...refused])];
+          if (!post.userTags.length) delete post.userTags;
+          console.warn(`✂ ${q.slug}/${post.id}: Meta cannot tag ${refused.map((u) => "@" + u).join(" ")} — dropped from the image, retrying now`);
+        }
+      }
 
       post.status = "posted";
       post.igMediaId = published.id;

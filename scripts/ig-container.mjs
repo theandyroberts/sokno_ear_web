@@ -13,6 +13,22 @@ export const PUBLISH_BACKOFF_MS = [5000, 20000, 50000];
 /** How long a container may take to reach FINISHED: an image is seconds, a Reel is minutes. */
 export const CONTAINER_WAIT = { image: { polls: 10, everyMs: 4000 }, video: { polls: 36, everyMs: 10000 } };
 
+/** "The following user(s) cannot be accessed": a private or dead handle in `user_tags`. Never transient. */
+export const UNTAGGABLE_SUBCODE = 2207018;
+
+/**
+ * The usernames Meta refused to tag, read out of a 2207018 error's `error_user_msg`.
+ * Empty for any other error, so a caller can branch on the length alone.
+ * @param {object} payload  the Graph error body ({error: {...}})
+ * @returns {string[]}
+ */
+export function untaggableUsernames(payload) {
+  const e = payload?.error ?? {};
+  if (Number(e.error_subcode) !== UNTAGGABLE_SUBCODE) return [];
+  const list = String(e.error_user_msg ?? "").split(/cannot be accessed:?/i)[1] ?? "";
+  return [...new Set(list.split(/[\s,]+/).map((u) => u.replace(/^@/, "").replace(/\.$/, "").toLowerCase()).filter((u) => /^[a-z0-9_.]+$/.test(u)))];
+}
+
 export function isTransient(payload) {
   const e = payload?.error ?? {};
   return TRANSIENT_CODES.has(Number(e.code)) || TRANSIENT_CODES.has(Number(e.error_subcode))
@@ -73,11 +89,14 @@ export function abBucket(id) {
  * Tags are spread along the band so none sits on another. Untagged stays untagged.
  *
  * @param {string[]} tags   caption handles, "@kernsknox" first
- * @param {{everyone?: boolean}} [opts]   everyone=false tags the venue alone (Andy's "Don't")
+ * @param {{everyone?: boolean, untaggable?: Set<string>}} [opts]   everyone=false tags the venue alone
+ *   (Andy's "Don't"); `untaggable` is handles Meta has refused to tag (2207018) — they stay
+ *   in the caption but never go in the picture again
  * @returns {Array<{username: string, x: number, y: number}> | undefined}
  */
-export function userTagsFor(tags, { everyone = true } = {}) {
-  const handles = [...new Set((tags ?? []).filter((t) => /^@[a-z0-9_.]+$/i.test(String(t))).map((t) => t.replace(/^@/, "")))];
+export function userTagsFor(tags, { everyone = true, untaggable = new Set() } = {}) {
+  const handles = [...new Set((tags ?? []).filter((t) => /^@[a-z0-9_.]+$/i.test(String(t))).map((t) => t.replace(/^@/, "")))]
+    .filter((h) => !untaggable.has(h.toLowerCase()));
   if (!handles.length) return undefined;
   const chosen = everyone ? handles.slice(0, MAX_IMAGE_TAGS) : handles.slice(0, 1);
   const n = chosen.length;
@@ -102,7 +121,8 @@ export async function publishPost(post, { graph, userId, token, fetchImpl = fetc
   async function container(body, what, wait = CONTAINER_WAIT.image) {
     const res = await fetchImpl(`${graph}/${userId}/media`, form(body));
     const made = await res.json().catch(() => ({}));
-    if (!res.ok || !made.id) throw new Error(`${what}: ${JSON.stringify(made).slice(0, 300)}`);
+    // The Graph body rides on the error (`graph`) so ig-post.mjs can read a 2207018's usernames.
+    if (!res.ok || !made.id) throw Object.assign(new Error(`${what}: ${JSON.stringify(made).slice(0, 300)}`), { graph: made });
     // Wait for Meta to fetch + process — publishing immediately races the processing
     // and fails with code 9007 "media not ready". A Reel is transcoded, which takes
     // minutes, so it gets the video wait (`status` says why when it ends in ERROR).
