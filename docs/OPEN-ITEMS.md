@@ -79,6 +79,12 @@ it holds is merged, or exclude `.claude/worktrees/**` in `vitest.config`.
 **Opened:** 2026-08-15 · **Age: 61 days** (as of 2026-10-15) · **Missed 4 of 5 SEO checks**
 · **Needs Andy** · not blocking — no push (the site-side half covers breakage; this only costs the crawl numbers)
 
+**2026-11-01:** age 78 days, missed again (5 of 6) — no Chrome extension connected. The
+Browser pane is no longer signed out: it holds one Google session, `andy@sparkpoint.studio`,
+and that account has no access to the property. Signing the pane in with the account that
+owns it, or adding `andy@sparkpoint.studio` as a user on the property, also closes this.
+Sitemap is 210 URLs (+36 since 2026-10-15); site-side sweep all clean.
+
 **2026-10-15:** missed again (4 of 5) — no Chrome extension connected, Browser pane
 signed out. Sitemap is 174 URLs (+39 since 2026-10-01); site-side sweep all clean.
 

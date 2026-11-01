@@ -8,6 +8,42 @@ entry.
 
 ---
 
+## 2026-11-01
+
+Sixth check. Deltas vs. 2026-10-15. Site-side half is clean; **Search Console
+was not readable** (fifth miss in six checks). Nothing needed fixing, so nothing
+was changed or deployed.
+
+### Site-side audit
+
+| Check | Result | Delta |
+| --- | --- | --- |
+| `sitemap.xml` | 200, 33,236 bytes, **210 URLs** | +36 URLs (+5,843 bytes) |
+| Sitemap composition | 4 static + 20 episodes + 186 story permalinks | **+2 episodes** (`/2026-10-21`, `/2026-10-28`), **+34 stories** |
+| `lastmod` range | 2026-06-20 → 2026-10-28 | tracks the latest episode ✓ |
+| Full sweep of all 210 sitemap URLs | **210/210 200**, **210/210 `index, follow`**, **0 canonical mismatches**, no duplicates | — |
+| Spot-check 5 random URLs | `/2026-10-21/monsters-workshop-kerns`, `/2026-09-16/puckers-titans`, `/2026-08-13/specials-board`, `/2026-07-16/world-cup-final`, `/2026-09-23/fungi-workshop` → all 200 | — |
+| `robots.txt` | `Allow: /`, `Disallow: /next`, `Disallow: /draft/`, `Disallow: /desk/`, `Host:`, `Sitemap:` | unchanged |
+| Canonical — homepage | `https://soknoear.com` | ✓ |
+| Canonical — latest episode `/2026-10-28` | `https://soknoear.com` (deliberate) | ✓ |
+| Canonical — older episodes (19) | self, all 19 | ✓ |
+| Canonical — non-feature stories | self, **all 186** (sweep) | ✓ |
+| Canonical — feature permalink `/2026-10-28/halloween-pub-crawl` | `/2026-10-28`, absent from sitemap | ✓ |
+| `NewsArticle` JSON-LD | Present on **all 186** story pages (sweep) | ✓ |
+| Noindex audit | `/next`, `/draft/*` → 404 + `noindex`; `/desk/` → 308 → `/desk` 404; `/dashboard` 200 + `noindex, nofollow`, not in sitemap. Nothing in the sitemap is noindexed | ✓ |
+| `www.soknoear.com` → apex | `https://www./`, `https://www./archive`, `http://www./about` → 301 apex; `http://` apex → 301 https | ✓ **still fixed** (since 2026-09-15) |
+| `/stats/script.js` | 200 — tracker not blocked | ✓ |
+
+### Search Console
+
+**Not collected.** No Chrome extension connected (`list_connected_browsers`
+empty). The Browser pane now has a Google session, but it is
+`andy@sparkpoint.studio`, which has no access to `sc-domain:soknoear.com`
+("Oops, you don't have access to this property"); `/u/1` and `/u/2` fall back to
+the same account. Open item 4 in `docs/OPEN-ITEMS.md`.
+
+---
+
 ## 2026-10-15
 
 Fifth check. Deltas vs. 2026-10-01. Site-side half is clean; **Search Console
