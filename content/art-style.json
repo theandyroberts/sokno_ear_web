@@ -1,14 +1,26 @@
 {
-  "_comment": "LOCKED. The one prompt wrapper for every Ear picture (Andy, 2026-11-02). Do not reword it for a week, a mood or a note about color; a change here is Andy's call. scripts/art-check.mjs fails a week whose prompts or pictures leave it.",
+  "_comment": "LOCKED. The one prompt wrapper for every Ear picture, agreed with Andy 2026-11-02: the wording that made the first 20 episodes, with a real background behind the subject and pine in place of teal. Don't reword it for a week, a mood or a note about color; a change here is Andy's call. scripts/art-check.mjs fails a week whose prompts leave it.",
   "inks": {
     "black": "#171512",
     "cream": "#F3E8D2",
     "rust": "#A94A34",
-    "pine": "#315D54",
-    "gold": "#D8A725"
+    "pine": "#315D54"
   },
   "prefix": "Generate an image, {aspect} aspect ratio. ",
-  "intro": "A woodcut stipple print: ",
-  "suffix": " Style: a hand-carved woodcut stipple print from an old local newspaper: bold black carved lines, dense stipple dots and gouged hatching, visible block-print grain, flat ink colors with no gradients and no airbrushing. Strictly five inks and nothing else: black #171512, cream #F3E8D2, rust red #A94A34, dark pine green #315D54, and a little gold #D8A725 for small details only. Skin is cream shaded with black and rust stipple. No teal, no blue, no purple, no orange, no bright green, no other colors. The inks fill the frame edge to edge with no blank paper background, and the subject is huge, in motion and runs off the frame. Not a photograph, not a painting, not flat vector. No text or letters anywhere.",
-  "bannedInPrompts": ["teal", "blue", "indigo", "purple", "violet", "emerald", "marigold", "amber", "magenta", "saturated", "vivid", "vibrant", "cream paper background", "background scenery"]
+  "intro": "A vintage local-newspaper engraving: ",
+  "suffix": " Predominantly black ink linework with stipple dots and cross-hatch shading, slight engraving texture, warm cream paper, restrained accents in muted pine green and rust red. Charming and specific, not generic. Hand-drawn local newspaper engraving, not a photograph, not flat vector. No text or letters anywhere.",
+  "bannedInPrompts": [
+    "teal",
+    "blue",
+    "woodcut",
+    "vivid",
+    "vibrant",
+    "saturated",
+    "sunburst",
+    "rays",
+    "checkerboard",
+    "cream paper background",
+    "background scenery"
+  ],
+  "background": ", large in the frame. Behind it, [the real place from the story], drawn in the same ink and filling the space behind the subject."
 }

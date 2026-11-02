@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // Holds a week's art to the locked style in content/art-style.json: the prompts use the
-// wrapper word for word, and the finished pictures stay in the five inks with color to the
-// frame edge. Run it before a draft ships; a failure means redo the picture, not the rule.
+// wrapper word for word and name a background, and the finished pictures carry no lit teal
+// or blue and no empty paper around the subject. Run it before a draft ships; a failure
+// means redo the picture, not the rule. It can't judge a face or a line; look at them too.
 //
 //   node scripts/art-check.mjs 2026-11-04
 //   node scripts/art-check.mjs --images public/assets/spots/a.jpg public/assets/spots/b.jpg
@@ -47,8 +48,10 @@ function checkPrompts(slug) {
   const art = JSON.parse(readFileSync(`content/research/${slug}.art.json`, "utf8"));
   const problems = [];
   if (art.suffix !== style.suffix) problems.push("suffix differs from content/art-style.json");
-  for (const [key, { prompt }] of Object.entries(art.images)) {
+  for (const [key, { prompt, note }] of Object.entries(art.images)) {
+    const plate = /background plate/.test(note ?? "");
     if (!prompt.startsWith(style.intro)) problems.push(`${key}: prompt doesn't open "${style.intro.trim()}"`);
+    if (!/Behind it, /.test(prompt) && !plate) problems.push(`${key}: prompt names no background`);
     for (const word of style.bannedInPrompts) {
       if (new RegExp(`\\b${word}\\b`, "i").test(prompt)) problems.push(`${key}: prompt says "${word}"`);
     }

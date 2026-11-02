@@ -5,37 +5,40 @@ description: Use when generating, tracing, or placing artwork for The South Knox
 
 # The South Knoxville Ear — Art Pipeline
 
-All art for the Ear is a **woodcut stipple print**: bold black carved lines, dense stipple
-dots, gouged hatching, block-print grain, in five flat inks. Three generation modes, all ending
-with optimization + placement. **Since 2026-10-27 the weekly story art is made in ChatGPT Image
-(the latest image model), driven by computer control of the ChatGPT desktop app or, when that
-grant is refused in a scheduled run, at chatgpt.com in the built-in browser pane (Andy: "each
-week we want to use computer control and ChatGPT Image").** The Higgsfield recipes stay for the
-portrait and diagram modes and as a fallback.
+All art for the Ear is **vintage local-newspaper engraving**: black-ink linework, stipple dots,
+cross-hatch shading, warm cream paper, restrained pine + rust accents. Three generation modes,
+all ending with optimization + placement. **Since 2026-10-27 the weekly story art is made in
+ChatGPT Image (the latest image model), driven by computer control of the ChatGPT desktop app or,
+when that grant is refused in a scheduled run, at chatgpt.com in the built-in browser pane
+(Andy: "each week we want to use computer control and ChatGPT Image").** The Higgsfield recipes
+stay for the portrait and diagram modes and as a fallback.
 
-## The locked prompt (Andy, 2026-11-02)
+## The locked prompt (agreed with Andy, 2026-11-02)
 
-**`content/art-style.json` is the one wrapper for every picture. Use it word for word and do
-not reword it, for a week, a mood, or a note about color.** Changing it is Andy's call. A
-prompt is exactly:
+**`content/art-style.json` is the one wrapper for every picture, word for word:**
 
-    <prefix with the aspect ratio> + "A woodcut stipple print: " + <the subject> + <suffix>
+> Generate an image, 1:1 aspect ratio. A vintage local-newspaper engraving: [the subject and what
+> it's doing, the crop, two or three details], large in the frame. Behind it, [the real place
+> from the story], drawn in the same ink and filling the space behind the subject. Predominantly
+> black ink linework with stipple dots and cross-hatch shading, slight engraving texture, warm
+> cream paper, restrained accents in muted pine green and rust red. Charming and specific, not
+> generic. Hand-drawn local newspaper engraving, not a photograph, not flat vector. No text or
+> letters anywhere.
 
-The subject sentence names one thing doing something, what it wears, and what ground stands
-behind it, in the inks only.
+**Don't restyle it.** The style has worked for 20 episodes. A note about one thing (Andy asked
+for backgrounds) means changing that one thing. On 2026-11-02 I answered that note by adding
+"vivid", "woodcut", sunburst rays and screaming faces, and lost the look twice. Andy's test for the
+energy is No. 20's bull rider: a laugh on her face, the action in the flying hat and cape.
 
-- **Five inks, no more:** black `#171512`, cream `#F3E8D2`, rust `#A94A34`, pine `#315D54`, and a
-  little gold `#D8A725` for details. **No teal, blue, purple, orange or bright green**, in the
-  prompt or the picture. The site's `--teal` token is page chrome, not an art ink. The old
-  template said "muted teal" and that is how it got in.
-- **Color reaches the frame edge.** The ground is solid rust, pine or black, or carved rays of
-  those with cream. Never "cream paper background" or "no background scenery": together they
-  gave a figure on blank paper (No. 21's first set, rejected).
-- **Don't turn the color up in words.** "Vivid", "saturated", "vibrant", "electric" and color names
-  outside the inks gave a full-color poster (rejected the same day).
-- **Run `node scripts/art-check.mjs <slug>` before the draft ships.** It fails prompts that leave
-  the wrapper and pictures with off-palette color or bare paper on the edge. Redo the picture,
-  don't loosen the check. Then look at the contact sheet yourself: it can't judge a face.
+- **Subject lines stay ordinary:** "a laughing woman", not "mid-scream", "head thrown back" or
+  "bursting". Excitement comes from what's happening around the person.
+- **No rays, sunbursts, stripes, checkerboards or color fields** behind anyone. The background is
+  the actual place: the taproom, the patio, the lawn.
+- **Never "no background scenery"** or "cream paper background": together they gave a figure on
+  blank paper (No. 21's first set, rejected).
+- **Pine, not teal.** The site's `--teal` token is page chrome, not an art color.
+- **Run `node scripts/art-check.mjs <slug>` before the draft ships**, then look at a contact sheet
+  beside last week's: the check can't judge a face or a line.
 - **Optimize before committing:** `scripts/optimize-image.sh <in> <out.jpg> 900 84`
 - **Place under:** `public/assets/spots/<name>.jpg` (art) or `public/assets/diagrams/<name>`
   (diagrams); reference in the episode JSON `image` / `imageTop` field, or in a page `<Figure>`.
@@ -76,7 +79,7 @@ Rules for the prompt:
 
 - **Name the subject first**, then the crop: "extreme close-up", "cropped from the chest
   up", "fills the frame edge to edge". If the model keeps pulling back, tighten the
-  crop; don't ask for an empty background.
+  crop.
 - **The subject takes two thirds of the picture or more.** If you can see the ground
   it stands on and the sky above it, you are too far away.
 - **Something is happening.** Spinning, pouring, breathing fire, breaking the water.
@@ -111,10 +114,7 @@ redo it closer.
 
 - **Fallback model (Higgsfield only):** `recraft-v4-1`, `model_type: "standard"`, `colors` set to the
   five inks, same prompt.
-- **Prompt:** the wrapper in `content/art-style.json`, with the subject in the middle:
-  > "A woodcut stipple print: **[the one subject, and what it is doing]**, **[the crop]**.
-  > **[two or three telling details, colored in the inks]**. Behind it **[a solid rust, pine or
-  > black ground, or carved rays of them]**." + the locked suffix
+- **Prompt:** the locked wrapper above, with the subject and its real place filled in.
 
 Shipped examples that got it right: bird-banding (two gloved hands and one bird),
 Kern's mac & cheese (the dish), Earl's margarita (the glass).
