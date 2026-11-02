@@ -1,6 +1,6 @@
 // @vitest-environment node
 import { describe, it, expect } from "vitest";
-import { reelIsOn, buildReelPost, REEL_HOUR, reelMaxSeconds, REEL_SECONDS, SHORT_REEL_MOVE, reelOpensOnStory, REEL_OPEN_MOVE } from "../scripts/ig-reel.mjs";
+import { reelIsOn, buildReelPost, REEL_HOUR, reelMaxSeconds, REEL_SECONDS, SHORT_REEL_MOVE, reelOpensOnStory, REEL_OPEN_MOVE, REEL_OUT_MOVE } from "../scripts/ig-reel.mjs";
 import { execFileSync } from "node:child_process";
 import path from "node:path";
 import { publishPost, userTagsFor, artistTagsOn, adIsOn, CONTAINER_WAIT, MAX_IMAGE_TAGS } from "../scripts/ig-container.mjs";
@@ -8,11 +8,15 @@ import { publishPost, userTagsFor, artistTagsOn, adIsOn, CONTAINER_WAIT, MAX_IMA
 const episode = { number: 18, shortDate: "Oct 15–18", date: "2026-10-14", feature: { title: "The Pink Cactus turns one" } };
 
 describe("the weekly Reel", () => {
-  it("is on unless Andy said Don't", () => {
-    expect(reelIsOn([])).toBe(true);
-    expect(reelIsOn(undefined)).toBe(true);
-    expect(reelIsOn([{ key: "weekly-reel", answer: "go", note: "no ad next week" }])).toBe(true);
-    expect(reelIsOn([{ key: "weekly-reel", answer: "no" }])).toBe(false);
+  it("is out since Nov 2 unless Andy said Don't to taking it out", () => {
+    expect(reelIsOn([])).toBe(false);
+    expect(reelIsOn(undefined)).toBe(false);
+    expect(reelIsOn([{ key: REEL_OUT_MOVE, answer: "go" }])).toBe(false);
+    expect(reelIsOn([{ key: REEL_OUT_MOVE, answer: "no" }])).toBe(true);
+    expect(reelIsOn([{ key: REEL_OUT_MOVE, answer: "no", note: "keep it a bit" }])).toBe(true);
+    // the old switch's Don't still wins
+    expect(reelIsOn([{ key: "weekly-reel", answer: "go", note: "no ad next week" }])).toBe(false);
+    expect(reelIsOn([{ key: "weekly-reel", answer: "no" }, { key: REEL_OUT_MOVE, answer: "no" }])).toBe(false);
   });
 
   it("is cut to 45 seconds unless Andy said Don't to the shorter Reel", () => {

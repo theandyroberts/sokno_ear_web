@@ -490,16 +490,17 @@ if (fs.existsSync(path.join(promoDir, "teaser.jpg"))) {
 }
 
 // ── The weekly Reel (scripts/ig-reel.py cuts it at publish; scripts/ig-reel.mjs is the
-// entry). Publish day, 13:00, after the lead pair. Off on Andy's "Don't" to
-// `weekly-reel`, when there is no mp4, or when this week already went out before a
-// Reel was cut for it (restaging a posted week must never add a post to it).
+// entry). Publish day, 13:00, after the lead pair. Out since 2026-11-02 unless Andy
+// answers "Don't" on `reel-comes-out`; also off when there is no mp4, or when this week
+// already went out before a Reel was cut for it (restaging a posted week must never add
+// a post to it).
 {
   const reelRel = `/assets/ig/${episode.slug}/reel.mp4`;
   const hasReel = fs.existsSync(path.join(process.cwd(), "public", reelRel));
   const weekIsOut = Boolean(prevQueue?.posts?.some((p) => p.status === "posted"));
   const hadReel = Boolean(prevQueue?.posts?.some((p) => p.id === "reel"));
-  if (!hasReel) warnings.push("no Reel — public/assets/ig/<slug>/reel.mp4 not built (python3 scripts/ig-reel.py)");
-  else if (!reelIsOn(moves)) warnings.push("Reel off — Andy answered “Don't” on the dashboard");
+  if (!reelIsOn(moves)) warnings.push("no Reel — out since Nov 2 (three cuts read 27, 19, 16); “Don't” on reel-comes-out on the dashboard puts it back");
+  else if (!hasReel) warnings.push("no Reel — public/assets/ig/<slug>/reel.mp4 not built (python3 scripts/ig-reel.py)");
   else if (weekIsOut && !hadReel) warnings.push("Reel not added — this week already went out without one");
   else {
     let cut = {};

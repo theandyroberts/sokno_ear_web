@@ -8,6 +8,9 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: ["./vitest.setup.ts"],
     globals: true,
+    // Worktrees under .claude/ carry their own copy of tests/ and resolve a different
+    // node_modules; they are somebody's working copy, not this repo's suite.
+    exclude: ["**/node_modules/**", "**/dist/**", ".claude/**"],
   },
   resolve: { alias: { "@": path.resolve(__dirname, ".") } },
 });

@@ -45,38 +45,18 @@ go exactly 24 hours before their old slot, half stay day-of, the split flips eac
 so a "Don't" on the dashboard puts every post back to day-of. No post has run in either arm
 yet. Recipe and the empty arm table in `docs/ig-reviews/2026-10-26.md`.
 
+**2026-11-02:** age 7 days. Week one (No. 20): early 7 posts, 1 shared (Día de los Muertos,
+180), median 21; day-of 7 posts, 2 shared (Puckers 283, Belltower 188), median 18. Too close
+to call; week two runs with the sides swapped. Andy answered "go" Oct 30. Table in
+`docs/ig-reviews/2026-11-02.md`.
+
 *Measures, every Monday:* posts, shared (≥1 share), share rate, median and mean reach, profile
 visits by arm, this week and cumulative. *Decide:* at the review of Nov 23, or sooner if one
 arm leads two-to-one on shares with at least 20 posts in each; then the winner becomes the
 rule in `assignTimingArms` and the move closes.
 
-### 2. The Reel opens on the feature, not the title card — first cut Wed Oct 28, read it Nov 2
-**Opened:** 2026-10-26 · **Claude's** · **Move:** `reel-opens-on-the-story` · **Due: Wed 2026-10-28**
-
-Two Reels: 116 s read 19 (11.8 s watched, 68% skipped), 46 s read 16 (11.1 s watched, 44%
-skipped). The cut fixed completion, not reach, and the viewer left at eleven seconds both
-times — the cover card and the counting intro. Shipped this run: `cut_order` and `bridge_text`
-in `scripts/ig-reel.py` play the feature's quip first and the title card second as the bridge
-("Five more of the sixteen things … all of them at soknoear.com"); `--title-first` is the old
-order, which `publish-episode.mjs` passes when Andy answers "Don't" (`reelOpensOnStory`).
-
-*Measures, Nov 2:* reach against 16 and against the week's median still post (21 this week);
-average watch above 15 s; skip rate under 44%. *If reach is still under the median still,* the
-Reel comes out on Nov 2 (`weekly-reel` closed with the numbers) — this is its last structural
-fix.
-
-### 3. Stale worktree fails the full test run
-**Opened:** 2026-10-26 · **Claude's** · not blocking — no push
-
-`npx vitest run` at the repo root picks up `.claude/worktrees/keen-colden-4ab029/tests/` and
-38 of its React tests fail (`Cannot read properties of null (reading 'useState')` — the
-worktree resolves a different `node_modules`). They fail identically with and without this
-run's changes; the repo's own `tests/` are 69 files, 679 tests, all passing. Not removed here
-because a worktree is somebody's working copy. *To close:* delete the worktree once whatever
-it holds is merged, or exclude `.claude/worktrees/**` in `vitest.config`.
-
-### 4. Search Console is unreadable from the Mac mini
-**Opened:** 2026-08-15 · **Age: 61 days** (as of 2026-10-15) · **Missed 4 of 5 SEO checks**
+### 2. Search Console is unreadable from the Mac mini
+**Opened:** 2026-08-15 · **Age: 79 days** (as of 2026-11-02) · **Missed 4 of 5 SEO checks**
 · **Needs Andy** · not blocking — no push (the site-side half covers breakage; this only costs the crawl numbers)
 
 **2026-11-01:** age 78 days, missed again (5 of 6) — no Chrome extension connected. The
@@ -110,6 +90,8 @@ fires (1st and 15th), or open Search Console and paste the Page indexing numbers
 
 | Item | Opened | Closed | What fixed it |
 | --- | --- | --- | --- |
+| The weekly Reel: three cuts (116 s, 46 s, 46 s opening on the feature) read 27, 19 and 16, under the week's median still every time; the third was watched 7.5 s and skipped 73% | 2026-10-26 | 2026-11-02 | The Reel comes out from Nov 4: `reelIsOn` in `scripts/ig-reel.mjs` is off unless Andy answers "Don't" on `reel-comes-out`; `publish-episode.mjs` skips the render, `ig-queue.mjs` the post. `reel-opens-on-the-story` closed with the numbers |
+| Stale worktree under `.claude/worktrees/` failed the full `vitest run` (38 React tests resolving a different `node_modules`) | 2026-10-26 | 2026-11-02 | `vitest.config.ts` excludes `.claude/**`; 44 files, 425 tests, all passing |
 | Tag the artist in the picture too (the code ran Oct 12 and tagged nobody; the draft gate from Oct 19) | 2026-10-12 | 2026-10-26 | The gate worked first time: all 16 No. 19 stories carried `igAct` (8 handles, 8 reasons there is none); 7 posts tagged an act beside the venue and 3 of the 7 were shared (116, 71, 36) against 2 of the 10 venue-only posts. The gate stays; `docs/ig-reviews/2026-10-26.md` |
 | The Reel is cut to 45 seconds | 2026-10-19 | 2026-10-26 | Posted Oct 21 at 45.8 s and read Oct 26: 16 reach, 11.1 s watched (24%, was 10%), skip rate 43.8% (was 68.4%). The cap stays at 45; the opening is the next fix (open item 2) |
 | The Call-the-Ear ad, held while the phone line changes (was a move and an open item) | 2026-10-12 | 2026-10-19 | Not an open item: Andy decided it once (Oct 9) and said so again Oct 19 when the review asked. `AD_HELD = true` in `scripts/ig-container.mjs` keeps the ad out of every staging until he says turn it back on; the move is closed; no review asks about it |

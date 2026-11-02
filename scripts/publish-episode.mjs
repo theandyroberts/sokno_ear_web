@@ -122,13 +122,17 @@ if (doIg) {
   run("python3", ["scripts/ig-banners.py", slug]);
   run("python3", ["scripts/ig-promos.py", slug]);
   // The weekly Reel, cut from the audio briefing (needs public/audio/<slug>.mp3 and the
-  // card above). A week without one still publishes; ig-queue.mjs says the Reel is missing.
+  // card above). Out since 2026-11-02 unless Andy answers "Don't" on `reel-comes-out`
+  // (scripts/ig-reel.mjs); a week without one still publishes.
   try {
-    // 45 seconds unless Andy answered "Don't" on the shorter-Reel move (scripts/ig-reel.mjs).
-    // Opens on the feature's quip unless Andy answered "Don't" on reel-opens-on-the-story.
-    const { reelMaxSeconds, reelOpensOnStory } = await import("./ig-reel.mjs");
+    const { reelIsOn, reelMaxSeconds, reelOpensOnStory } = await import("./ig-reel.mjs");
     const moves = await deskMoves();
-    run("python3", ["scripts/ig-reel.py", slug, "--max", String(reelMaxSeconds(moves)), ...(reelOpensOnStory(moves) ? [] : ["--title-first"])]);
+    if (!reelIsOn(moves)) console.log("  (no Reel — out since Nov 2; “Don't” on reel-comes-out on the dashboard puts it back)");
+    else {
+      // 45 seconds unless Andy answered "Don't" on the shorter-Reel move; opens on the
+      // feature's quip unless he answered "Don't" on reel-opens-on-the-story.
+      run("python3", ["scripts/ig-reel.py", slug, "--max", String(reelMaxSeconds(moves)), ...(reelOpensOnStory(moves) ? [] : ["--title-first"])]);
+    }
   }
   catch (e) { console.warn(`  (no Reel this week — ${String(e.message ?? e).split("\n")[0]})`); }
 }

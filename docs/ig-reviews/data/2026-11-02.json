@@ -1,0 +1,494 @@
+{
+ "run": 14,
+ "date": "2026-11-02",
+ "next": "2026-11-09",
+ "episode": 20,
+ "kicker": "Week of Oct 28 · episode No. 20 · read Nov 2",
+ "railKind": "333 followers · 60 reach a post",
+ "headline": "Best week yet: 1,081 reach, 89 new followers. The Reel comes out.",
+ "verdicts": [
+  {
+   "label": "Growth",
+   "tone": "ok",
+   "text": "+89 followers, 244 to 333"
+  },
+  {
+   "label": "Reach",
+   "tone": "ok",
+   "text": "1,081 all week; three posts over 150"
+  },
+  {
+   "label": "The Reel",
+   "tone": "bad",
+   "text": "16 people, 7.5 seconds watched. Out."
+  },
+  {
+   "label": "Timing test",
+   "tone": "warn",
+   "text": "Early shared 1 of 7, day-of 2"
+  }
+ ],
+ "tiles": [
+  {
+   "label": "Followers",
+   "value": "333",
+   "good": "up",
+   "series": [
+    46,
+    49,
+    59,
+    66,
+    74,
+    86,
+    95,
+    100,
+    101,
+    111,
+    156,
+    195,
+    244,
+    333
+   ],
+   "vsLast": {
+    "dir": "up",
+    "tone": "ok",
+    "text": "+89, the best week ever; 47 followed back"
+   },
+   "vsBase": "46 on Aug 11"
+  },
+  {
+   "label": "Reach per post",
+   "value": "60",
+   "good": "up",
+   "series": [
+    16.1,
+    10.5,
+    10.5,
+    14.2,
+    10.4,
+    8.2,
+    8.1,
+    6.8,
+    7.8,
+    4.9,
+    5.9,
+    54.5,
+    37.5,
+    50.8,
+    60.1
+   ],
+   "vsLast": {
+    "dir": "up",
+    "tone": "ok",
+    "text": "51 last week, same age"
+   },
+   "vsBase": "10.5 in early Aug"
+  },
+  {
+   "label": "Reach, whole week",
+   "value": "1,081",
+   "good": "up",
+   "series": [
+    113,
+    84,
+    63,
+    128,
+    104,
+    106,
+    89,
+    41,
+    101,
+    69,
+    47,
+    926,
+    675,
+    966,
+    1081
+   ],
+   "vsLast": {
+    "dir": "up",
+    "tone": "ok",
+    "text": "966 last week; 283, 188 and 180 at the top"
+   },
+   "vsBase": "best before October was 128"
+  },
+  {
+   "label": "People reached this week",
+   "value": "709",
+   "good": "up",
+   "series": [
+    19,
+    11,
+    21,
+    25,
+    20,
+    686,
+    517,
+    702,
+    709
+   ],
+   "vsLast": {
+    "dir": "flat",
+    "tone": "ok",
+    "text": "702 last week; 649 of them don't follow us"
+   },
+   "vsBase": "19 in September"
+  },
+  {
+   "label": "New people reached · 28 days",
+   "value": "2,147",
+   "good": "up",
+   "series": [
+    10,
+    10,
+    6,
+    9,
+    12,
+    13,
+    675,
+    1059,
+    1595,
+    2147
+   ],
+   "vsLast": {
+    "dir": "up",
+    "tone": "ok",
+    "text": "was 1,595 last Monday"
+   },
+   "vsBase": "10 in September"
+  }
+ ],
+ "tilesNote": "Lines run from July to now. Reach per post is read at the same age as last week's was (one to six days).",
+ "week": [
+  {
+   "id": "weekend-roundup",
+   "day": "Tue",
+   "time": "09:16",
+   "reach": 100,
+   "title": "Weekend roundup · 9 stories · shared 3 times",
+   "img": "/insta/img/soknoear/2026-10-28_episode-drop.jpg",
+   "group": "lead"
+  },
+  {
+   "id": "teaser",
+   "day": "Tue",
+   "time": "13:30",
+   "reach": 30,
+   "title": "Guess the week",
+   "img": "/insta/img/soknoear/2026-10-28_teaser.jpg",
+   "group": "lead"
+  },
+  {
+   "id": "specials-board",
+   "day": "Tue",
+   "time": "21:00",
+   "reach": 21,
+   "title": "Earl's specials board · a day early",
+   "img": "/insta/img/soknoear/2026-10-28_specials-board.jpg"
+  },
+  {
+   "id": "halloween-pub-crawl",
+   "day": "Wed",
+   "time": "09:00",
+   "reach": 34,
+   "title": "The Old Sevier Halloween Pub Crawl · the feature",
+   "img": "/insta/img/soknoear/2026-10-28_halloween-pub-crawl.jpg"
+  },
+  {
+   "id": "reel",
+   "day": "Wed",
+   "time": "13:01",
+   "reach": 16,
+   "title": "The Reel · opens on the feature, 43 seconds",
+   "img": "/insta/img/soknoear/2026-10-28_reel.jpg",
+   "group": "lead"
+  },
+  {
+   "id": "puckers-boos-and-brews",
+   "day": "Thu",
+   "time": "08:00",
+   "reach": 283,
+   "title": "Boos & Brews at Puckers · day-of · shared 3 times",
+   "img": "/insta/img/soknoear/2026-10-28_puckers-boos-and-brews.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "pink-is-punk-halloweemo",
+   "day": "Thu",
+   "time": "11:01",
+   "reach": 74,
+   "title": "HalloweEMO at the Pink Cactus · a day early",
+   "img": "/insta/img/soknoear/2026-10-28_pink-is-punk-halloweemo.jpg"
+  },
+  {
+   "id": "kerns-hodown",
+   "day": "Thu",
+   "time": "12:00",
+   "reach": 21,
+   "title": "Kern's Ho'Down · a day early",
+   "img": "/insta/img/soknoear/2026-10-28_kerns-hodown.jpg"
+  },
+  {
+   "id": "808-90s-rave",
+   "day": "Thu",
+   "time": "14:00",
+   "reach": 17,
+   "title": "90s rave at The 808 · a day early",
+   "img": "/insta/img/soknoear/2026-10-28_808-90s-rave.jpg"
+  },
+  {
+   "id": "wax-museum-fbn",
+   "day": "Thu",
+   "time": "16:00",
+   "reach": 18,
+   "title": "Wax Museum at Fly by Night · day-of",
+   "img": "/insta/img/soknoear/2026-10-28_wax-museum-fbn.jpg"
+  },
+  {
+   "id": "freaks-ball-fbn",
+   "day": "Thu",
+   "time": "18:00",
+   "reach": 26,
+   "title": "Freaks Come Out at Night ball · a day early",
+   "img": "/insta/img/soknoear/2026-10-28_freaks-ball-fbn.jpg"
+  },
+  {
+   "id": "trailhead-jake-smith-trio",
+   "day": "Fri",
+   "time": "14:00",
+   "reach": 13,
+   "title": "Jake Smith Trio at Trailhead · day-of",
+   "img": "/insta/img/soknoear/2026-10-28_trailhead-jake-smith-trio.jpg"
+  },
+  {
+   "id": "trailhead-four-legged-dog",
+   "day": "Fri",
+   "time": "16:00",
+   "reach": 14,
+   "title": "Four Legged Dog at Trailhead · a day early",
+   "img": "/insta/img/soknoear/2026-10-28_trailhead-four-legged-dog.jpg"
+  },
+  {
+   "id": "dia-de-los-muertos-pink-cactus",
+   "day": "Sat",
+   "time": "12:00",
+   "reach": 180,
+   "title": "Día de los Muertos at the Pink Cactus · a day early · shared",
+   "img": "/insta/img/soknoear/2026-10-28_dia-de-los-muertos-pink-cactus.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "808-bear-grillz",
+   "day": "Sat",
+   "time": "14:00",
+   "reach": 15,
+   "title": "Bear Grillz at The 808 · day-of",
+   "img": "/insta/img/soknoear/2026-10-28_808-bear-grillz.jpg"
+  },
+  {
+   "id": "drop-dead-drag-hiwire",
+   "day": "Sat",
+   "time": "16:00",
+   "reach": 25,
+   "title": "Drop Dead drag show at Hi-Wire · day-of",
+   "img": "/insta/img/soknoear/2026-10-28_drop-dead-drag-hiwire.jpg"
+  },
+  {
+   "id": "belltower-hiween",
+   "day": "Sat",
+   "time": "18:00",
+   "reach": 188,
+   "title": "Belltower at the Pink Cactus · day-of · shared",
+   "img": "/insta/img/soknoear/2026-10-28_belltower-hiween.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "trailhead-mt-olive",
+   "day": "Sun",
+   "time": "12:00",
+   "reach": 6,
+   "title": "Mt Olive Pleasure Club at Trailhead · day-of",
+   "img": "/insta/img/soknoear/2026-10-28_trailhead-mt-olive.jpg"
+  }
+ ],
+ "weekLegend": [
+  {
+   "group": "hot",
+   "label": "Over a hundred people"
+  },
+  {
+   "group": "lead",
+   "label": "The roundup, the teaser and the Reel"
+  },
+  {
+   "group": "plain",
+   "label": "Single posts, the venue tagged in the image"
+  }
+ ],
+ "worked": [
+  {
+   "title": "Boos & Brews at Puckers",
+   "reach": 283,
+   "img": "/insta/img/soknoear/2026-10-28_puckers-boos-and-brews.jpg",
+   "why": "Puckers' first Ear post. They shared it three times. Thursday at eight, day-of."
+  },
+  {
+   "title": "Día de los Muertos at the Pink Cactus",
+   "reach": 180,
+   "img": "/insta/img/soknoear/2026-10-28_dia-de-los-muertos-pink-cactus.jpg",
+   "why": "Posted Saturday noon for a Sunday event, a day early. The Pink Cactus shared it."
+  },
+  {
+   "title": "The weekend roundup",
+   "reach": 100,
+   "img": "/insta/img/soknoear/2026-10-28_episode-drop.jpg",
+   "why": "Its best ever: three shares and a save. Five roundups: 14, 32, 81, 41, 100."
+  }
+ ],
+ "didnt": [
+  {
+   "title": "The Reel",
+   "reach": 16,
+   "img": "/insta/img/soknoear/2026-10-28_reel.jpg",
+   "why": "Opened on the feature this time. 7.5 seconds watched, 73% skipped. It comes out."
+  },
+  {
+   "title": "Mt Olive Pleasure Club at Trailhead",
+   "reach": 6,
+   "img": "/insta/img/soknoear/2026-10-28_trailhead-mt-olive.jpg",
+   "why": "Trailhead's third post of the week, Sunday noon for a four o'clock show. Not shared."
+  },
+  {
+   "title": "Jake Smith Trio at Trailhead",
+   "reach": 13,
+   "img": "/insta/img/soknoear/2026-10-28_trailhead-jake-smith-trio.jpg",
+   "why": "A post a band at Trailhead, and Trailhead rarely shares. Three posts read 14, 13, 6."
+  }
+ ],
+ "learned": {
+  "title": "Week one of the timing test: too close to call",
+  "note": "Seven posts went a day early, seven at the old day-of slot. The share is the number that decides it: sixteen shared posts in four weeks average 164 people, the other forty-four average 27. The sides swap this week; the call comes Nov 23, or sooner at two to one with twenty posts a side.",
+  "rows": [
+   {
+    "label": "A day early",
+    "value": 14,
+    "note": "1 of 7 shared · median 21 · 180, 74, 26",
+    "tone": "ink"
+   },
+   {
+    "label": "Day-of, the old slot",
+    "value": 29,
+    "note": "2 of 7 shared · median 18 · 283, 188, 25",
+    "tone": "ink"
+   }
+  ]
+ },
+ "dials": [
+  {
+   "label": "Posts delivered",
+   "value": 18,
+   "max": 18,
+   "display": "18/18",
+   "note": "0 failed, 0 retries",
+   "tone": "ok"
+  },
+  {
+   "label": "Followers who saw a post",
+   "value": 18,
+   "max": 100,
+   "display": "18%",
+   "note": "60 of 333, this week; was 22%",
+   "tone": "warn"
+  },
+  {
+   "label": "Reach that was new people",
+   "value": 96,
+   "max": 100,
+   "display": "96%",
+   "note": "2,147 of 2,243, in 28 days",
+   "tone": "ok"
+  },
+  {
+   "label": "Of the Reel that got watched",
+   "value": 17,
+   "max": 100,
+   "display": "17%",
+   "note": "7.5 of 43 seconds; was 24%",
+   "tone": "bad"
+  }
+ ],
+ "bestEver": [
+  {
+   "title": "The Enchanted Forest at Ijams",
+   "reach": 349,
+   "img": "/insta/img/soknoear/2026-10-21_enchanted-forest.jpg",
+   "why": "Puppets and animal ambassadors at the quarry. Oct 24."
+  },
+  {
+   "title": "Feral Kitty at Fly by Night",
+   "reach": 295,
+   "img": "/insta/img/soknoear/2026-10-07_feral-kitty-release.jpg",
+   "why": "A release show at a cocktail lounge. Oct 9."
+  },
+  {
+   "title": "Kern's Fall Festival",
+   "reach": 290,
+   "img": "/insta/img/soknoear/2026-10-14_kerns-fall-fest.jpg",
+   "why": "A free fair on the bakery lawn. Oct 14."
+  },
+  {
+   "title": "Boos & Brews at Puckers",
+   "reach": 283,
+   "img": "/insta/img/soknoear/2026-10-28_puckers-boos-and-brews.jpg",
+   "why": "A costume contest, beer pong and shot roulette. Oct 29."
+  },
+  {
+   "title": "Vegan barbecue at Printshop",
+   "reach": 243,
+   "img": "/insta/img/soknoear/2026-10-07_vegan-bbq-printshop.jpg",
+   "why": "A pop-up at a brewery. Oct 11."
+  },
+  {
+   "title": "Belltower at the Pink Cactus",
+   "reach": 188,
+   "img": "/insta/img/soknoear/2026-10-28_belltower-hiween.jpg",
+   "why": "A haunted house party with free karaoke after. Oct 31."
+  }
+ ],
+ "moves": [
+  {
+   "key": "reel-comes-out",
+   "owner": "claude",
+   "title": "The Reel comes out",
+   "why": "Three Reels read 27, 19 and 16 against 23 for an ordinary post. Opening on the feature made the watch time worse: 7.5 seconds, 73% skipped.",
+   "plan": "From Wed Nov 4 no Reel is cut or posted. Three cuts read 27, 19 and 16 people against 23 for the week's ordinary post, and the third was watched 7.5 seconds. Say don't and it keeps going, opening on the feature.",
+   "due": "2026-11-04"
+  },
+  {
+   "key": "early-posts",
+   "owner": "claude",
+   "title": "Half the posts go out a day early",
+   "why": "Week one: a day early shared 1 of 7, day-of 2 of 7. Seven a side is too few to call; it runs on, sides swapped.",
+   "plan": "From Wed Oct 28 half of each week's dated posts go out 24 hours before their old slot, the other half at the old time, swapping each week, so the venue and the act have a day to reshare. The review reads the two sides every Monday and picks the winner by Nov 23. Say don't and every post stays day-of.",
+   "due": "2026-11-23"
+  }
+ ],
+ "done": [
+  {
+   "title": "Eighteen of eighteen posted, no retries.",
+   "text": "Puckers' first post read 283 with three shares. The Pink Cactus shared two more, 188 and 180. Four posts at a hundred or more."
+  },
+  {
+   "title": "The roundup read 100, its best ever.",
+   "text": "Three shares and a save. Five roundups: 14, 32, 81, 41, 100. It went Tuesday at nine, with the episode."
+  },
+  {
+   "title": "The timing test ran its first week.",
+   "text": "Seven posts a day early, seven day-of. One early post was shared, two day-of. The sides swap this week."
+  },
+  {
+   "title": "Two Reels went up from the phone.",
+   "text": "Oct 27 read 3, Oct 29 read 44, 82% skipped. The 44 beat every pipeline Reel; the skip rate didn't."
+  }
+ ]
+}

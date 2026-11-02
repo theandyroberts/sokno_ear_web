@@ -4,11 +4,16 @@
 // reach followers. Reels are the format Instagram shows to people
 // who don't follow you. The first one rides the No. 18 drip (Wed 2026-10-14).
 //
-// Andy's switch is the dashboard move `weekly-reel`: "Don't" keeps the Reel out of the
+// Out since the review of 2026-11-02: three cuts (116 s, 46 s, 46 s opening on the
+// feature) read 27, 19 and 16 people, watched 9.6, 10.6 and 7.5 seconds on average,
+// 68%, 44% and 73% skipped — every one under the week's median still post. Andy's
+// switch is the dashboard move `reel-comes-out`: "Don't" puts the Reel back in the
 // queue with no run in between (ig-queue.mjs reads the answer directly, the way it
-// does for the roundup).
+// does for the roundup). The older `weekly-reel` move's "Don't" still keeps it out.
 
-/** The move key Andy answers on the dashboard. */
+/** The move that took the Reel out (Claude's, 2026-11-02). Andy's "Don't" keeps it running. */
+export const REEL_OUT_MOVE = "reel-comes-out";
+/** The move key Andy answered on the dashboard while the Reel ran (Oct 14 – Nov 1). */
 export const REEL_MOVE = "weekly-reel";
 /** When the Reel posts on publish day: after the lead pair, in the hour that reads best for stills (13:00, 35 reach a post since Aug 11). */
 export const REEL_HOUR = 13;
@@ -30,9 +35,12 @@ export function reelOpensOnStory(moves) {
   return !(moves ?? []).some((m) => m.key === REEL_OPEN_MOVE && m.answer === "no");
 }
 
-/** Off only if Andy said no. No answer, "go", or no store at all means on. */
+/** Off unless Andy answered "Don't" on `reel-comes-out`. No answer, "go", or no store at
+ *  all means out; a "Don't" on the old `weekly-reel` move keeps it out whatever he says here. */
 export function reelIsOn(moves) {
-  return !(moves ?? []).some((m) => m.key === REEL_MOVE && m.answer === "no");
+  const list = moves ?? [];
+  if (list.some((m) => m.key === REEL_MOVE && m.answer === "no")) return false;
+  return list.some((m) => m.key === REEL_OUT_MOVE && m.answer === "no");
 }
 
 /**
