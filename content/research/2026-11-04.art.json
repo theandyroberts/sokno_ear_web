@@ -1,76 +1,77 @@
 {
-  "_comment": "Art prompts for No. 21, written 2026-11-02. Generated in ChatGPT Image (the latest image model) by computer control of the ChatGPT desktop app, or at chatgpt.com in the built-in browser pane when the app grant is refused in a scheduled run, then optimized to public/assets/spots/no21_<file> at 900 px, JPEG q84. Each prompt is one subject, close in, in action, a likeable face where there is one (sokno-ear-art skill; Andy 2026-09-28 and 2026-10-19). The people differ in hair, view and hand action so the week does not read as one picture repeated. Prefix in ChatGPT: 'Generate an image, 1:1 aspect ratio.' (3:2 for the feature) and append the palette hex codes ink #171512, cream #F3E8D2, teal #7FAEA3, rust #A94A34.",
-  "suffix": " Predominantly black ink linework with stipple dots and cross-hatch shading, slight engraving texture, warm cream paper background, restrained accents in muted teal and rust red. Charming and specific, not generic. Hand-drawn local newspaper engraving, not a photograph, not flat vector. No text or letters anywhere.",
+  "_comment": "Art prompts for No. 21, written 2026-11-02, rewritten the same day after Andy's two notes: no blank paper backgrounds, color and action to the frame edge; and only the Ear's inks (black, cream, rust, pine, a little gold, no teal or blue) in woodcut stipple print. Generated in ChatGPT Image at chatgpt.com in the built-in browser pane, then optimized to public/assets/spots/no21_<file> at 900 px, JPEG q84. Prefix in ChatGPT: 'Generate an image, 1:1 aspect ratio.' (3:2 for the feature).",
+  "suffix": " Style: a hand-carved woodcut stipple print from an old local newspaper: bold black carved lines, dense stipple dots and gouged hatching, visible block-print grain, flat ink colors with no gradients and no airbrushing. Strictly five inks and nothing else: black #171512, cream #F3E8D2, rust red #A94A34, dark pine green #315D54, and a little gold #D8A725 for small details only. Skin is cream shaded with black and rust stipple. No teal, no blue, no purple, no orange, no bright green, no other colors. The inks fill the frame edge to edge with no blank paper background, and the subject is huge, in motion and runs off the frame. Not a photograph, not a painting, not flat vector. No text or letters anywhere.",
   "images": {
     "ambc-fall-fest": {
       "file": "whip_off_rider.jpg",
       "aspect": "3:2",
-      "prompt": "A vintage local-newspaper engraving: a mountain biker in mid-air throwing a sideways whip off a dirt jump, seen from slightly below and in front so the bike is tilted nearly flat and the rider's grinning face under a full-face helmet is turned toward us, cropped so rider and bike fill the frame edge to edge. Knobby tires, dust flying off the rear wheel, a rust-red jersey, one knee tucked, both hands locked on the bars. No crowd, no trees, no horizon, no background scenery."
+      "prompt": "A woodcut stipple print: the Great Smoky Mountains as a background plate with nothing in front of it. Layer upon layer of long rolling ridgelines receding into the distance in the lower 40 percent of the picture, rising gently from left to right, the nearest ridge black with a stippled tree line, the ones behind it dark pine green, with bands of cream mist in the valleys between them. Above the ridges, huge carved sunburst rays in rust and cream radiate up from behind the mountains and fill the whole sky to the top edge of the frame, with a thin gold glow along the highest ridge. No people, no bikes, no buildings, no sun disc, no birds.",
+      "note": "This prompt is the background plate only. The rider is the first ChatGPT rider, kept at Andy's request (2026-11-02), composited over the plate with its teal moved to pine."
     },
     "latin-knox-printshop": {
       "file": "latin_dj_hands.jpg",
       "aspect": "1:1",
-      "prompt": "A vintage local-newspaper engraving: a laughing young woman DJ with dark curly hair pulled up, seen from the front across her mixer, one hand on a fader and the other hand raised high with a finger pointed up, cropped from the waist up with the mixer's knobs large in the foreground. Big hoop earrings, a teal top, headphones around her neck, eyes on the dance floor. No room, no crowd, no background scenery."
+      "prompt": "A woodcut stipple print: a laughing young woman DJ with wild black curls flying, big gold hoop earrings swinging, one arm flung high with a finger pointed up, the other hand on the mixer, cropped tight from the chest up with black mixer knobs huge along the bottom edge and headphones around her neck, a pine green top. Behind her, carved sunburst rays in rust and cream fill the frame."
     },
     "808-college-night": {
       "file": "college_band_singer.jpg",
       "aspect": "1:1",
-      "prompt": "A vintage local-newspaper engraving: a young man with shaggy blond hair singing into a microphone on a stand while playing a Telecaster-style electric guitar, cropped from the chest up and seen from his right side as he leans into the mic. Mouth open mid-note, eyes nearly shut, a band tee, a guitar strap over the shoulder, the headstock crossing the lower corner. No stage, no crowd, no background scenery."
+      "prompt": "A woodcut stipple print: a young man with shaggy gold-blond hair whipping sideways, mouth wide open mid-scream into a microphone, eyes shut, sweat flying off him, a rust red electric guitar neck slashing diagonally across the corner, a pine green shirt, cropped tight from the shoulders up and seen from his right. Behind him solid black cut by carved rust spotlight beams."
     },
     "sokno-sourdough-first-friday": {
       "file": "chocolate_tonic_pour.jpg",
       "aspect": "1:1",
-      "prompt": "A vintage local-newspaper engraving: a smiling woman with gray-streaked hair in a bun pouring a dark chocolate tonic from a small glass bottle into a tiny sample cup held by another person's hand, cropped from her shoulders up with the pour and the cup large in the center of the frame. A thin stream of liquid mid-pour, an apron strap, a broken square of chocolate on the counter beside the cup. No shop, no background scenery."
+      "prompt": "A woodcut stipple print: a delighted woman with gray-streaked hair in a bun and a pine green apron pouring a thick glossy ribbon of black chocolate tonic from a small bottle into a tiny cup held up by another person's hand, the pour huge in the center of the frame, droplets leaping and broken chocolate squares tumbling through the air, cropped tight from her shoulders up. Behind her a solid rust field with carved cream rays."
     },
     "cut-corners-fbn": {
       "file": "techno_dancer.jpg",
       "aspect": "1:1",
-      "prompt": "A vintage local-newspaper engraving: a dancer with a shaved head and a wide-open laughing mouth, arms thrown up and crossed above the head, caught mid-bounce with sweat flying, cropped from the ribs up and seen straight on. A mesh tank top, a chain necklace swinging, a rust-red light catching one cheek. No club, no crowd, no background scenery."
+      "prompt": "A woodcut stipple print: a joyful dancer with a shaved head and a huge laughing grin, both arms thrown up and hands open, caught mid-jump with sweat flying and a gold chain necklace swinging up off the chest, wearing a black mesh tank top, cropped tight from the chest up with hands running off the top of the frame. Behind, solid black crossed by carved rust and pine beams of light and stipple sparkle."
     },
     "bow-wow-bingo-printshop": {
       "file": "dog_bingo_dauber.jpg",
       "aspect": "1:1",
-      "prompt": "A vintage local-newspaper engraving: an old gray-muzzled beagle with its chin resting on a bingo card on a picnic table, looking up at us with big hopeful eyes, while a human hand with a bingo dauber marks a square beside its nose, cropped close so the dog's head and the card fill the frame. A few dabbed squares already on the card, a sweet floppy ear, a beer glass's base at the edge. No patio, no crowd, no background scenery."
+      "prompt": "A woodcut stipple print: a gleeful gray-muzzled beagle in cream, rust and black, floppy ears flying, front paws up on a picnic table, holding a bingo dauber crosswise in its grinning mouth, rust ink dabs splattering across the cream bingo card in the foreground, the dog's head filling the frame and its ears running off the edges. Behind, a solid pine green ground and a beer glass with a gold glint."
     },
     "uptop-karaoke-kerns": {
       "file": "rooftop_karaoke_mic.jpg",
       "aspect": "1:1",
-      "prompt": "A vintage local-newspaper engraving: a man with a thick dark beard and a backwards cap belting into a handheld wireless microphone with both hands wrapped around it, eyes squeezed shut and head tilted back, cropped from the chest up and seen from a three-quarter angle. A flannel shirt, a string of patio bulbs blurred behind his head, a drink glass raised by a friend's hand at the edge of the frame. No rooftop view, no crowd, no background scenery."
+      "prompt": "A woodcut stipple print: a man with a thick black beard and backwards cap belting into a wireless microphone with both hands wrapped around it, head thrown back, eyes squeezed shut, a friend's beer raised and sloshing at the frame edge, a rust and black plaid flannel shirt, cropped tight from the chest up at a three-quarter angle. Behind him a solid pine night with swooping strings of small gold patio bulbs."
     },
     "all-play-live-kerns": {
       "file": "family_buzzer.jpg",
       "aspect": "1:1",
-      "prompt": "A vintage local-newspaper engraving: a girl of about eight with two braids and a gap-toothed grin slamming both hands down on a big round game-show buzzer, her father's hand landing on it a moment too late beside hers, cropped from her shoulders up with the buzzer large in the foreground. Her eyes wide with glee, a striped shirt, the buzzer's dome catching light. No lawn, no stage, no background scenery."
+      "prompt": "A woodcut stipple print: a girl of about eight with two flying black braids and a gap-toothed grin slamming both hands down on a huge round game-show buzzer, her father's hand landing a moment too late beside hers, the rust red dome enormous in the foreground with carved shock lines bursting off it, her eyes wide with glee, a pine and cream striped shirt, cropped tight from the shoulders up. Behind her carved rays in pine and cream with small gold bulbs."
     },
     "goat-yoga-kerns": {
       "file": "goat_on_back.jpg",
       "aspect": "1:1",
-      "prompt": "A vintage local-newspaper engraving: a small black-and-white goat with a tiny bow tie standing squarely on the back of a woman in tabletop pose on a yoga mat, the woman turning her head toward us with a delighted laugh, cropped close so the goat and her upper body fill the frame. Short red hair, a teal long-sleeve top and full-length leggings, the goat's little hooves planted on her shoulder blades, its ears perked. No lawn, no crowd, no background scenery."
+      "prompt": "A woodcut stipple print: a small black-and-cream goat with a tiny rust bow tie leaping joyfully off the back of a laughing woman in tabletop pose, all four hooves in the air and ears flapping, the goat huge in the upper frame, her delighted face with short rust red hair turned toward us just below it, a cream long-sleeve top and full-length black leggings, cropped close so goat and woman fill the frame. Behind them a solid pine green hillside rising to a rust sky."
     },
     "moss-meander": {
       "file": "moss_hand_lens.jpg",
       "aspect": "1:1",
-      "prompt": "A vintage local-newspaper engraving: a smiling older man with a white beard and a knit cap crouched close to a mossy boulder, holding a small jeweler's hand lens up to his eye with one hand and touching a tuft of moss with the other, cropped from the chest up so his face, the lens and the moss fill the frame. Tiny moss stalks standing up under the lens, a rust-red scarf, a kind squint. No forest, no trail, no background scenery."
+      "prompt": "A woodcut stipple print: a grinning older man with a white beard, a black knit cap and a rust red scarf, lying on his stomach right up against a boulder and holding a small gold jeweler's hand lens up to one twinkling eye, his other hand pointing at a tiny moss stalk, cropped from the chest up. Dense pine green moss with tiny rust-tipped stalks piles up huge in the foreground, and a deep pine forest with carved cream shafts of light stands behind him."
     },
     "wilderness-basics": {
       "file": "fire_starting_hands.jpg",
       "aspect": "1:1",
-      "prompt": "A vintage local-newspaper engraving: two hands striking a ferro rod with a knife spine so a shower of sparks falls onto a nest of dry tinder, the first small flame just catching, with a young woman's focused face with a dark ponytail leaning in above her hands, cropped close so the hands, the sparks and the tinder fill the lower two thirds of the frame. Curls of bark shavings, the sparks drawn as bright streaks, a wool sleeve. No campsite, no woods, no background scenery."
+      "prompt": "A woodcut stipple print: a young woman with a dark ponytail and a thrilled grin leaning over a nest of tinder, striking a ferro rod with a knife spine so a huge shower of rust and gold sparks explodes across the frame and the first flames leap up, lighting her face from below, a pine green wool sweater, cropped tight so her face, hands and the fire fill the frame. Behind her solid black night with flying embers."
     },
     "bird-banding": {
       "file": "bird_in_hand_band.jpg",
       "aspect": "1:1",
-      "prompt": "A vintage local-newspaper engraving: a tiny songbird, a yellow-rumped warbler, held gently in the bander's grip between two fingers with its head poking out, while a second pair of fingers closes a tiny numbered aluminum band around its leg with small pliers, extreme close-up so the bird and the hands fill the frame. A bright alert eye, feather detail, a gloveless careful hand, a teal accent on the bird's crown. No station, no trees, no background scenery."
+      "prompt": "A woodcut stipple print: a yellow-rumped warbler in black, cream and small gold patches held gently in a bander's fingers, its head and bright alert eye huge in the frame, beak open mid-chirp, feathers crisply carved, a second hand closing a tiny band around its leg with small pliers, extreme close-up. Behind it a solid pine ground scattered with falling rust autumn leaves."
     },
     "sound-bath-ijams": {
       "file": "singing_bowl_mallet.jpg",
       "aspect": "1:1",
-      "prompt": "A vintage local-newspaper engraving: a woman with long silver hair and closed eyes and a serene smile running a suede mallet around the rim of a large crystal singing bowl held in her other hand, cropped from the chest up and seen from the front with the bowl large in the lower frame. Fine ripple lines rising off the rim to show the sound, a loose linen top, rings on her fingers. No room, no mats, no background scenery."
+      "prompt": "A woodcut stipple print: a woman with long cream-white hair floating outward, eyes closed and a blissful smile, circling a suede mallet around the rim of a large crystal singing bowl resting on a rust cushion in front of her, big carved gold rings of sound rippling out from the rim through the whole picture and lifting her hair, cropped from the chest up. Behind her a solid pine night with stipple stars."
     },
     "specials-board": {
       "file": "orange_bliss_cocktail.jpg",
       "aspect": "1:1",
-      "prompt": "A vintage local-newspaper engraving: a tall orange cocktail in a highball glass with a wedge of orange on the rim, being set down on a bar by a bartender's hand, with a small orange-and-white checkered football resting on the bar beside it, extreme close-up so the glass and the football fill the frame. Condensation beads on the glass, ice, a black cocktail straw, the football's laces up. No bar room, no screens, no background scenery."
+      "prompt": "A woodcut stipple print: a tall rust red cocktail in a highball glass slammed down on a bar by a bartender's hand so juice and ice splash up and out in a huge frozen crown, a gold citrus wheel flying off the rim, a black-and-cream football spiraling past behind it, extreme close-up with the glass filling the frame. Behind it a bold rust and cream end-zone checkerboard fills the frame edge to edge, no logos."
     }
   }
 }

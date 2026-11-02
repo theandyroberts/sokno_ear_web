@@ -5,28 +5,42 @@ description: Use when generating, tracing, or placing artwork for The South Knox
 
 # The South Knoxville Ear — Art Pipeline
 
-All art for the Ear is **vintage local-newspaper engraving**: black-ink linework,
-stipple dots, cross-hatch shading, warm cream paper, restrained teal + rust accents.
-Three generation modes, all ending with optimization + placement. **Since 2026-10-27 the
-weekly story art is made in ChatGPT Image (the latest image model), driven by computer
-control of the ChatGPT desktop app or, when that grant is refused in a scheduled run, at
-chatgpt.com in the built-in browser pane (Andy: "each week we want to use computer control
-and ChatGPT Image"). Prefix each prompt "Generate an image, 1:1 aspect ratio." (3:2 for the
-feature) and append the palette hex codes; the prompt rules below are unchanged. The
-Higgsfield recipes stay for the portrait and diagram modes and as a fallback.
+All art for the Ear is a **woodcut stipple print**: bold black carved lines, dense stipple
+dots, gouged hatching, block-print grain, in five flat inks. Three generation modes, all ending
+with optimization + placement. **Since 2026-10-27 the weekly story art is made in ChatGPT Image
+(the latest image model), driven by computer control of the ChatGPT desktop app or, when that
+grant is refused in a scheduled run, at chatgpt.com in the built-in browser pane (Andy: "each
+week we want to use computer control and ChatGPT Image").** The Higgsfield recipes stay for the
+portrait and diagram modes and as a fallback.
 
-## Brand constants (use in every generation)
+## The locked prompt (Andy, 2026-11-02)
 
-- **Palette:** ink `#171512`, cream `#F3E8D2`, teal `#7FAEA3`, rust `#A94A34`
-- **Background:** `#F3E8D2` (cream)
-- **Always end the prompt with:** "Hand-drawn local newspaper engraving, not a
-  photograph, not flat vector. No text or letters anywhere."
-- **Optimize before committing:** `scripts/optimize-image.sh <in> <out.jpg> 900 88`
-- **Place under:** `public/assets/spots/<name>.jpg` (art) or
-  `public/assets/diagrams/<name>` (diagrams); reference in the episode JSON
-  `image` / `imageTop` field, or in a page `<Figure>`.
-- After viewing each result with the Read tool, only ship it if it reads at small size
-  (the 120-pixel test under Mode 1).
+**`content/art-style.json` is the one wrapper for every picture. Use it word for word and do
+not reword it, for a week, a mood, or a note about color.** Changing it is Andy's call. A
+prompt is exactly:
+
+    <prefix with the aspect ratio> + "A woodcut stipple print: " + <the subject> + <suffix>
+
+The subject sentence names one thing doing something, what it wears, and what ground stands
+behind it, in the inks only.
+
+- **Five inks, no more:** black `#171512`, cream `#F3E8D2`, rust `#A94A34`, pine `#315D54`, and a
+  little gold `#D8A725` for details. **No teal, blue, purple, orange or bright green**, in the
+  prompt or the picture. The site's `--teal` token is page chrome, not an art ink. The old
+  template said "muted teal" and that is how it got in.
+- **Color reaches the frame edge.** The ground is solid rust, pine or black, or carved rays of
+  those with cream. Never "cream paper background" or "no background scenery": together they
+  gave a figure on blank paper (No. 21's first set, rejected).
+- **Don't turn the color up in words.** "Vivid", "saturated", "vibrant", "electric" and color names
+  outside the inks gave a full-color poster (rejected the same day).
+- **Run `node scripts/art-check.mjs <slug>` before the draft ships.** It fails prompts that leave
+  the wrapper and pictures with off-palette color or bare paper on the edge. Redo the picture,
+  don't loosen the check. Then look at the contact sheet yourself: it can't judge a face.
+- **Optimize before committing:** `scripts/optimize-image.sh <in> <out.jpg> 900 84`
+- **Place under:** `public/assets/spots/<name>.jpg` (art) or `public/assets/diagrams/<name>`
+  (diagrams); reference in the episode JSON `image` / `imageTop` field, or in a page `<Figure>`.
+- After viewing each result with the Read tool, only ship it if it reads at small size (the
+  120-pixel test under Mode 1).
 
 ---
 
@@ -61,8 +75,8 @@ Before writing the prompt, answer: **what is the one thing, and what is it doing
 Rules for the prompt:
 
 - **Name the subject first**, then the crop: "extreme close-up", "cropped from the chest
-  up", "fills the frame edge to edge". Say what is out of frame if the model keeps
-  pulling back ("no horizon, no background scenery").
+  up", "fills the frame edge to edge". If the model keeps pulling back, tighten the
+  crop; don't ask for an empty background.
 - **The subject takes two thirds of the picture or more.** If you can see the ground
   it stands on and the sky above it, you are too far away.
 - **Something is happening.** Spinning, pouring, breathing fire, breaking the water.
@@ -89,25 +103,18 @@ over moss, a paddler drawn from under the chin, a hoop floating in front of a to
 - **Get the physics right.** A hoop goes around the waist, with the far side hidden
   behind the body. A paddle is in the hands. If the object is in the wrong place the
   picture reads as wrong before it reads as anything else.
-- **Whole bodies need their clothes named** ("teal tank top and full-length leggings").
+- **Whole bodies need their clothes named** ("pine tank top and full-length leggings").
   Left unsaid, the model has drawn a yoga figure unclothed.
 
 **The test:** shrink it to 120 pixels wide. If you can't say what it is in two words,
 redo it closer.
 
-- **Model:** `recraft-v4-1`, `model_type: "standard"`
-- **Params:** `colors: ["#171512","#F3E8D2","#7FAEA3","#A94A34"]`,
-  `background_color: "#F3E8D2"`, `aspect_ratio` per layout
-  (`1:1` spot, `3:4` portrait, `16:9`/`3:2` banner)
-- **Prompt template:**
-  > "A vintage local-newspaper engraving: **[the one subject, and what it is doing]**,
-  > **[the crop — extreme close-up / from the chest up / fills the frame edge to edge]**.
-  > **[two or three telling details on the subject itself]**. No wide view, no
-  > background scenery.
-  > Predominantly black ink linework with stipple dots and cross-hatch shading,
-  > slight engraving texture, warm cream paper background, restrained accents in
-  > muted teal and rust red. Charming and specific, not generic. Hand-drawn local
-  > newspaper engraving, not a photograph, not flat vector. No text or letters anywhere."
+- **Fallback model (Higgsfield only):** `recraft-v4-1`, `model_type: "standard"`, `colors` set to the
+  five inks, same prompt.
+- **Prompt:** the wrapper in `content/art-style.json`, with the subject in the middle:
+  > "A woodcut stipple print: **[the one subject, and what it is doing]**, **[the crop]**.
+  > **[two or three telling details, colored in the inks]**. Behind it **[a solid rust, pine or
+  > black ground, or carved rays of them]**." + the locked suffix
 
 Shipped examples that got it right: bird-banding (two gloved hands and one bird),
 Kern's mac & cheese (the dish), Earl's margarita (the glass).
@@ -145,8 +152,8 @@ For profiles where the subject must be **recognizable**. Three steps.
      > the reference (same faces, hair, expressions, pose) so they stay
      > recognizable. **[true-to-life details: exact hair color, etc. — e.g. keep
      > strawberry-blond hair, NOT bright red]**. Then add restrained hand-tinted
-     > color from only this palette: cream `#F3E8D2` background, muted teal
-     > `#7FAEA3`, rust red `#A94A34`. Plain cream background. Hand-drawn engraving,
+     > color from only this palette: cream `#F3E8D2` background, pine
+     > `#315D54`, rust red `#A94A34`. Plain cream background. Hand-drawn engraving,
      > not a photograph, not flat vector. No text or letters."
 
 **Recognizability guardrails:** use a clear front-facing photo; name the subject's
