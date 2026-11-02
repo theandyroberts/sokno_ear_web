@@ -1,5 +1,5 @@
 {
-  "_comment": "LOCKED. The one prompt wrapper for every Ear picture, agreed with Andy 2026-11-02: the wording that made the first 20 episodes, with a real background behind the subject and pine in place of teal. Don't reword it for a week, a mood or a note about color; a change here is Andy's call. scripts/art-check.mjs fails a week whose prompts leave it.",
+  "_comment": "LOCKED. The one prompt wrapper for every Ear picture, set with Andy 2026-11-02 against the No. 20 prints he framed (bass, opossum, bull rider, Día de los Muertos): one subject, large, in crisp black ink, popping off plain cream paper. A background is the rare exception, one simple object when the picture wouldn't read without it. Don't reword it for a week, a mood or a note about color; a change here is Andy's call. scripts/art-check.mjs fails a week whose prompts leave it.",
   "inks": {
     "black": "#171512",
     "cream": "#F3E8D2",
@@ -8,7 +8,7 @@
   },
   "prefix": "Generate an image, {aspect} aspect ratio. ",
   "intro": "A vintage local-newspaper engraving: ",
-  "suffix": " Predominantly black ink linework with stipple dots and cross-hatch shading, slight engraving texture, warm cream paper, restrained accents in muted pine green and rust red. Charming and specific, not generic. Hand-drawn local newspaper engraving, not a photograph, not flat vector. No text or letters anywhere.",
+  "suffix": " Predominantly crisp black ink linework with stipple dots and cross-hatch shading, strong contrast, slight engraving texture, restrained accents in muted pine green and rust red. Charming and specific, not generic. Hand-drawn local newspaper engraving, not a photograph, not flat vector. No text or letters anywhere.",
   "bannedInPrompts": [
     "teal",
     "blue",
@@ -19,8 +19,8 @@
     "sunburst",
     "rays",
     "checkerboard",
-    "cream paper background",
-    "background scenery"
+    "background scenery",
+    "filling the space"
   ],
-  "background": ", large in the frame. Behind it, [the real place from the story], drawn in the same ink and filling the space behind the subject."
+  "background": " Behind it, nothing but plain, clean warm cream paper #F3E8D2, so the subject pops off the page."
 }

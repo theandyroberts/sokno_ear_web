@@ -13,37 +13,31 @@ when that grant is refused in a scheduled run, at chatgpt.com in the built-in br
 (Andy: "each week we want to use computer control and ChatGPT Image").** The Higgsfield recipes
 stay for the portrait and diagram modes and as a fallback.
 
-## The locked prompt (agreed with Andy, 2026-11-02)
+## The locked prompt (set with Andy, 2026-11-02)
 
-**`content/art-style.json` is the one wrapper for every picture, word for word:**
+**The standard is the No. 20 pieces Andy framed and had signed: the upright bass, the opossum, the bull rider, the Día de los Muertos face. One subject, large, crisp black ink, popping off plain cream paper. New pictures must look like the same artist.**
+
+`content/art-style.json` is the wrapper, word for word:
 
 > Generate an image, 1:1 aspect ratio. A vintage local-newspaper engraving: [the subject and what
-> it's doing, the crop, two or three details], large in the frame. Behind it, [the real place
-> from the story], drawn in the same ink and filling the space behind the subject. Predominantly
-> black ink linework with stipple dots and cross-hatch shading, slight engraving texture, warm
-> cream paper, restrained accents in muted pine green and rust red. Charming and specific, not
-> generic. Hand-drawn local newspaper engraving, not a photograph, not flat vector. No text or
-> letters anywhere.
+> it's doing, the crop, two or three details], large in the frame. Behind it, nothing but plain,
+> clean warm cream paper #F3E8D2, so the subject pops off the page. Predominantly crisp black ink
+> linework with stipple dots and cross-hatch shading, strong contrast, slight engraving texture,
+> restrained accents in muted pine green and rust red. Charming and specific, not generic.
+> Hand-drawn local newspaper engraving, not a photograph, not flat vector. No text or letters anywhere.
 
-**Don't restyle it.** The style has worked for 20 episodes. A note about one thing (Andy asked
-for backgrounds) means changing that one thing. On 2026-11-02 I answered that note by adding
-"vivid", "woodcut", sunburst rays and screaming faces, and lost the look twice. Andy's test for the
-energy is No. 20's bull rider: a laugh on her face, the action in the flying hat and cape.
+**Why it reads this way.** On No. 21 Andy said the figures sat on blank paper, and I answered with full rooms and crowds, then posters and rays. Each lost the iconic pop. His own conclusion: "I guess we do have blank cream backgrounds on a lot of them to keep the main subject in focus." What makes plain paper work is a subject big and inked enough to carry the frame. A small pale figure on paper still fails, so fix the subject, not the background.
 
-- **Subject lines stay ordinary:** "a laughing woman", not "mid-scream", "head thrown back" or
-  "bursting". Excitement comes from what's happening around the person.
-- **No rays, sunbursts, stripes, checkerboards or color fields** behind anyone. The background is
-  the actual place: the taproom, the patio, the lawn.
-- **Never "no background scenery"** or "cream paper background": together they gave a figure on
-  blank paper (No. 21's first set, rejected).
+- **A note about one picture changes that picture.** Keep the rest.
+- **A background is the rare exception:** one simple object when the picture wouldn't read without it, like one shelf of loaves behind the baker.
+- **To change a finished picture, edit it in its own ChatGPT chat** ("keep the subject exactly as drawn; replace the background with plain, clean warm cream paper #F3E8D2"). The subject holds. A new prompt redraws everything.
+- **Subject lines stay ordinary:** "a laughing woman", not "mid-scream". The energy is in the action and props, as in the flying hat and cape.
+- **No rays, sunbursts, stripes, checkerboards or color fields.**
 - **Pine, not teal.** The site's `--teal` token is page chrome, not an art color.
-- **Run `node scripts/art-check.mjs <slug>` before the draft ships**, then look at a contact sheet
-  beside last week's: the check can't judge a face or a line.
+- **Run `node scripts/art-check.mjs <slug>` before the draft ships**, then look at a contact sheet beside the framed pieces: the check can't judge a face or a line.
 - **Optimize before committing:** `scripts/optimize-image.sh <in> <out.jpg> 900 84`
-- **Place under:** `public/assets/spots/<name>.jpg` (art) or `public/assets/diagrams/<name>`
-  (diagrams); reference in the episode JSON `image` / `imageTop` field, or in a page `<Figure>`.
-- After viewing each result with the Read tool, only ship it if it reads at small size (the
-  120-pixel test under Mode 1).
+- **Place under:** `public/assets/spots/<name>.jpg` (art) or `public/assets/diagrams/<name>` (diagrams); reference in the episode JSON `image` / `imageTop` field, or in a page `<Figure>`.
+- After viewing each result with the Read tool, only ship it if it reads at small size (the 120-pixel test under Mode 1).
 
 ---
 
