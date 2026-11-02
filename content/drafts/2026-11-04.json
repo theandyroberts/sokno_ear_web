@@ -1136,6 +1136,65 @@
         "standingKey": "specials-board"
       },
       "image": "/assets/spots/no21_orange_bliss_cocktail.jpg"
+    },
+    {
+      "id": "kerbela-overturned",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "layout": "imageRight",
+      "image": "/assets/spots/planning_hearing.jpg",
+      "imageCaption": "Overturned, 5-4",
+      "title": "City Council overturns the Kerbela apartments, 5-4, and the old Shriners site goes back to square one",
+      "deck": "We told you approved in August. Not anymore.",
+      "facts": [
+        {
+          "label": "Decided",
+          "value": "Tue Oct 13 · Knoxville City Council, 5-4"
+        },
+        {
+          "label": "Site",
+          "value": "315 Kerbela Ave · 5.7 acres at Sevier Ave & Dawson St"
+        },
+        {
+          "label": "The plan",
+          "value": "225 apartments · 55-and-over community · CR Endeavors"
+        },
+        {
+          "label": "Next",
+          "value": "A new proposal, a lawsuit or dropping it · the developer hasn't said"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "In August we reported that the Planning Commission had approved 225 apartments for people 55 and over on the old Kerbela Shriners site, and that design and permitting came next. They don't, for now. On October 13 City Council upheld an appeal from members of the South Waterfront Advisory and Advocacy Group and overturned that approval, 5-4. The commission's own vote had been 7-6."
+        },
+        {
+          "type": "paragraph",
+          "text": "The fight was over seven exceptions the developer, CR Endeavors, wanted from the South Waterfront code. The company says the site's unusual terrain makes it hard to meet every requirement. Council attorney Rob Frost said the vote turned on whether the project met the code's intent, and that this was the first appeal of its kind ever to reach the council. Debbie Helsley, Lynne Fugate, Denzel Grant and Doug Lloyd voted for the apartments."
+        },
+        {
+          "type": "paragraph",
+          "text": "CR Endeavors can bring a new proposal, walk away, or take it to Knox County Chancery Court, and Frost said it has 60 days to file suit. The company said in October that it would evaluate its next steps, and we found no announcement as of Monday. The Shriners still owned the land as of the last reports. We'll be watching."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Knox News — Council narrowly overturns Kerbela apartments",
+          "url": "https://www.yahoo.com/news/us/articles/knoxville-city-council-narrowly-overturns-084840682.html"
+        },
+        {
+          "label": "WBIR — What comes next for the former Kerbela Shriners site",
+          "url": "https://www.yahoo.com/news/articles/comes-next-former-kerbela-shriners-220747697.html"
+        },
+        {
+          "label": "WVLT — Rare zoning appeal overturns the plan, attorney explains",
+          "url": "https://www.wvlt.tv/2026/10/15/rare-zoning-appeal-overturns-south-knoxville-housing-plan-former-kerbela-shriners-site-attorney-explains/"
+        }
+      ],
+      "social": {
+        "igSkip": true
+      }
     }
   ],
   "sidebar": {
