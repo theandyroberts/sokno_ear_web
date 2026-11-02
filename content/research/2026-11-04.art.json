@@ -75,6 +75,12 @@
       "file": "orange_bliss_cocktail.jpg",
       "aspect": "1:1",
       "prompt": "A vintage local-newspaper engraving: a tall orange cocktail in a highball glass with a wedge of orange on the rim, being set down on a bar by a bartender's hand, with a football resting on the bar beside it, extreme close-up so the glass and the football fill the frame. Condensation beads on the glass, ice, a black cocktail straw, the football's laces up, large in the frame. Behind it, a busy bar with shelves of bottles and a football game on a small television, drawn in the same ink and filling the space behind the subject."
+    },
+    "kerbela-overturned": {
+      "file": "denied_stamp.jpg",
+      "aspect": "1:1",
+      "prompt": "A vintage local-newspaper engraving: a hand gripping a big wooden-handled rubber desk stamp, having just slammed it down on a rolled-out set of building plans, large in the frame. The word DENIED stamped huge across the plans in rust red, with a rough inked box around it and uneven stamp texture, spelled exactly D-E-N-I-E-D. A rust ink pad at the edge of the desk. Behind it, a simply drawn wooden desk.",
+      "note": "Andy's idea, 2026-11-02. Trial wording ('Hand-drawn and a little rough...'), and the one picture allowed a word: the only lettering is DENIED."
     }
   }
 }
