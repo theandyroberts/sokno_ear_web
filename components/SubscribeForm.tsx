@@ -195,7 +195,7 @@ export function SubscribeForm({ variant = "well" }: { variant?: "well" | "band" 
       </div>
       <div>
         <button type="submit" disabled={state === "busy"} style={{ ...submitBtnStyle, opacity: state === "busy" ? 0.6 : 1 }}>
-          {state === "busy" ? "Signing you up…" : variant === "band" ? "Subscribe, it's free" : "Subscribe"}
+          {state === "busy" ? "Signing you up…" : "Subscribe"}
         </button>
       </div>
       {state === "error" && (
@@ -211,7 +211,7 @@ export function SubscribeForm({ variant = "well" }: { variant?: "well" | "band" 
       <section style={{ ...boxStyle, height: "auto" }}>
         <div style={headingStyle}>★ Get Notified Each Week!</div>
         <p style={copyStyle}>
-          One email a week: the weekend’s events, stories and audio briefing.
+          One email a week when the new SoKnoEar is ready: the weekend’s events, stories and audio briefing.
         </p>
         {form}
       </section>
@@ -228,7 +228,7 @@ export function SubscribeForm({ variant = "well" }: { variant?: "well" | "band" 
             <p style={leadStyle}>You read to the bottom. You&apos;re one of us now.</p>
             <p style={{ ...copyStyle, margin: "0 0 10px" }}>
               Put your email here and the next episode comes to you as soon as it&apos;s up: the weekend&apos;s
-              plans, the audio briefing, every story. One email a week, free, no spam.
+              plans, the audio briefing, every story. One email a week, no spam.
             </p>
           </div>
         </div>
@@ -245,7 +245,7 @@ export function SubscribeForm({ variant = "well" }: { variant?: "well" | "band" 
       </div>
       <p style={leadStyle}>A fresh episode every week. This dog brings it to your inbox.</p>
       <p style={copyStyle}>
-        One short email a week: the weekend&apos;s calendar, the audio briefing and every story
+        One short email a week when the new SoKnoEar is ready: the weekend&apos;s calendar, the audio briefing and every story
         from around SoKno, Thursday through Sunday. Nobody gets your address but us.
       </p>
       {form}
