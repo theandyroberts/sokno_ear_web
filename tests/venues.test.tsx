@@ -45,6 +45,20 @@ describe("venue registry", () => {
       }
     }
   });
+  it("credits AMBC on all three Fall Fest listings and preserves every other venue match", () => {
+    const days = withVenueLogos(nightlife.days, registry);
+    const festival = Object.values(days).flat().filter((item) => item.href === "/2026-11-04/ambc-fall-fest");
+    expect(festival).toHaveLength(3);
+    for (const item of festival) {
+      expect(item.brand).toBe("AMBC");
+      expect(item.logo).toBe("/assets/venues/ambc-official.png");
+    }
+    for (const item of Object.values(days).flat().filter((item) => !item.venueKey)) {
+      expect(item.logo).toBe(matchVenue(item.venue, registry)?.logo ?? null);
+      expect(item.brand).toBe(matchVenue(item.venue, registry)?.name ?? item.venue.split(" · ")[0]);
+    }
+    expect(matchVenue("Legacy Parks Foundation · Baker Creek Preserve", registry)).toBe(registry["legacy-parks"]);
+  });
 });
 
 describe("logo chip on the checklist", () => {

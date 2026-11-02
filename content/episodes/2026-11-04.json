@@ -1239,7 +1239,8 @@
         "title": "AMBC Fall Fest opens at Baker Creek",
         "meta": "5 PM · bluegrass 5:30, lit jump line 6:30, film 6:45 · free",
         "starred": true,
-        "href": "#ambc-fall-fest"
+        "href": "#ambc-fall-fest",
+        "venueKey": "ambc"
       },
       {
         "month": "NOV",
@@ -1279,7 +1280,8 @@
         "title": "Fall Fest Saturday: rides, Whip Off, Best Line",
         "meta": "Rides from 9:30 · Whip Off 3 · Best Line 7 · bands till 10:30",
         "starred": true,
-        "href": "#ambc-fall-fest"
+        "href": "#ambc-fall-fest",
+        "venueKey": "ambc"
       },
       {
         "month": "NOV",

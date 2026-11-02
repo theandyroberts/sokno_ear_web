@@ -11,6 +11,14 @@ row's title/meta or the story's title, then the story's label. Longest alias win
 so "Old Sevier Market" beats "Old Sevier" and "Kern's Food Hall rooftop" still lands
 on Kern's. Never add a bare "Sevier" alias.
 
+For an event whose organizer differs from its location, set `venueKey` to the
+organizer's key in `content/venues.json` on the calendar row and nightlife item.
+This explicit brand takes precedence over automatic location matching. Keep
+`venueKey: "ambc"` on the two No. 21 Fall Fest calendar rows and all three Fall Fest
+nightlife items when regenerating them: Baker Creek is the location, AMBC is the
+event brand. Leave the story's location and rider illustration unchanged, and do
+not change the Legacy Parks aliases for unrelated listings.
+
 Sourcing rules are the registry's own (`_comment` in `content/venues.json`): the mark
 comes from the business's own site or official profile, `source` records exactly
 where, and the file is trimmed and scaled into `public/assets/venues/` (sharp, then
@@ -60,7 +68,7 @@ the nightlife plan, and Andy named them):
 | Redbud Kitchen | `redbud-kitchen.png` | redbudkitchen.com header, `RK_Logo_Final_Color.png` |
 | Honeybee Coffee | `honeybee-coffee.png` | honeybeecoffeeco.com, `16.9 Logo.png` — white on transparent, repainted ink |
 | Knoxville Theatre Club | `knoxville-theatre-club.png` | knoxvilletheatreclub.org header logo (the red stamp roundel) |
-| AMBC (Appalachian Mountain Bike Club) | `ambc.png` | ambcknox.org banner `bg-ambc-logo.png`, cropped to the chainring; navy field kept (white lettering inside) |
+| AMBC (Appalachian Mountain Bike Club) | `ambc-official.png` | `AMBC logo-cog PREFERRED.png`, unchanged from the official screen pack at ambcknox.org/brand/; gold cog and blue type on a light background |
 | Sevier Ave Burger Co. | none yet — wordmark | Instagram only; no website resolves, no Facebook page under the handle |
 
 ## Not found / left as wordmark

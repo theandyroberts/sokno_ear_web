@@ -74,10 +74,13 @@ export type CalendarVenue = {
  *  for a district or a park is the venue ("Ijams Nature Center", "Kern's").
  *  Rows with no story (older episodes linked out) match on their own text. */
 export function calendarVenue(
-  row: { title: string; meta?: string },
+  row: { title: string; meta?: string; venueKey?: string },
   story: { title: string; label: string; event?: { locationName: string } } | undefined,
   registry: VenueRegistry,
 ): CalendarVenue {
+  // An explicit event brand beats the park or district where it takes place.
+  const explicit = row.venueKey ? registry[row.venueKey] : undefined;
+  if (explicit) return { venue: explicit, name: explicit.name };
   const location = story?.event?.locationName;
   // One text at a time, the row's own title first: it names the place ("… at Earl's"),
   // while a meta or story title that lists the drinks ("$7 mimosas…") would let a longer

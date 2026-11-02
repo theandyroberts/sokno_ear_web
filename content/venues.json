@@ -312,12 +312,12 @@
         "AMBC"
       ],
       "site": "https://ambcknox.org/",
-      "logo": "/assets/venues/ambc.png",
-      "source": "https://ambcknox.org/site/wp-content/uploads/2017/11/bg-ambc-logo.png",
-      "sourceNote": "the club's chainring mark, from the 1600x900 banner their own site publishes (the header uses sponsor marks only); cropped to the ring, the navy field kept because the lettering inside is white",
-      "treatment": "cropped",
-      "fetched": "2026-10-26",
-      "confidence": "medium"
+      "logo": "/assets/venues/ambc-official.png",
+      "source": "https://ambcknox.org/site/wp-content/uploads/2026/01/JPG%C2%B7PNG-Screen.zip",
+      "sourceNote": "AMBC logo-cog PREFERRED.png from the official screen-logo pack linked at https://ambcknox.org/brand/; preferred gold cog and blue type for light backgrounds, unchanged.",
+      "treatment": "as-is",
+      "fetched": "2026-11-02",
+      "confidence": "high"
     },
     "mighty-mud": {
       "name": "Mighty Mud",

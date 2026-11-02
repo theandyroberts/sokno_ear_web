@@ -5,6 +5,7 @@ import { Paper } from "@/components/Paper";
 import { EpisodeSchema } from "@/lib/schema";
 import { calendarVenue, loadVenues } from "@/lib/venues";
 import fixture from "@/tests/fixtures/episodes/2026-06-20.json";
+import fallFest from "@/content/episodes/2026-11-04.json";
 
 const registry = loadVenues();
 
@@ -59,6 +60,19 @@ describe("CalendarItem — venue tile", () => {
 });
 
 describe("calendarVenue — resolving a row's venue from its story", () => {
+  it("uses AMBC for both Fall Fest rows without relabeling other Baker Creek events", () => {
+    const episode = EpisodeSchema.parse(fallFest);
+    const rows = episode.sidebar.calendar.filter((row) => row.href === "#ambc-fall-fest");
+    expect(rows).toHaveLength(2);
+    for (const row of rows) {
+      expect(calendarVenue(row, episode.feature, registry)).toEqual({ venue: registry.ambc, name: "AMBC" });
+    }
+    expect(calendarVenue({ title: "Legacy Parks trail event" }, episode.feature, registry).venue).toBe(registry["legacy-parks"]);
+    const { container } = render(<Paper episode={episode} />);
+    const tiles = container.querySelectorAll('.ear-soon-aside a[href="#ambc-fall-fest"] .ear-cal-logo img');
+    expect(tiles).toHaveLength(2);
+    for (const tile of tiles) expect(tile.getAttribute("src")).toBe("/assets/venues/ambc-official.png");
+  });
   const row = { title: "Pint night", meta: "All-day happy hour too · 2020 Barber St" };
   it("trusts the story's event location first", () => {
     const story = { title: "Pint night at Hi-Wire", label: "Old Sevier", event: { locationName: "Hi-Wire Brewing Knoxville" } };

@@ -118,6 +118,8 @@ export const StoryCard = z.object({
 export const CalEvent = z.object({
   month: z.string(), day: z.string(), title: z.string(),
   meta: z.string().optional(), starred: z.boolean().default(false),
+  /** Registry key for the event's brand when it differs from the location. */
+  venueKey: z.string().optional(),
   /** Jump target — usually "#story-id" of the story covering this event. */
   href: z.string().optional(),
 });

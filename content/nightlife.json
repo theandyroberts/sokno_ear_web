@@ -130,7 +130,8 @@
         "headline": "Fall Fest opens: beer garden, food trucks, Knoxville Utility Band",
         "sub": "Bluegrass 5:30 · lit jump line 6:30 · film 6:45 · slideshows 8 · last call 9:30 · free · 1516 Taylor Rd",
         "cat": "star",
-        "href": "/2026-11-04/ambc-fall-fest"
+        "href": "/2026-11-04/ambc-fall-fest",
+        "venueKey": "ambc"
       },
       {
         "id": "fri-dumplings",
@@ -209,7 +210,8 @@
         "headline": "Fall Fest Saturday: rides from 9:30, beer gardens at 11, Mal Nombre at noon",
         "sub": "Bike parade 12:30 · Whip Off 3 · strider race 4:45 · free · 1516 Taylor Rd",
         "cat": "star",
-        "href": "/2026-11-04/ambc-fall-fest"
+        "href": "/2026-11-04/ambc-fall-fest",
+        "venueKey": "ambc"
       },
       {
         "id": "sat-burger-brunch",
@@ -245,7 +247,8 @@
         "headline": "Mercy Lights 5, Butcherbird 6, Best Line on the lit jump line 7",
         "sub": "Megaweed 8:15 · raffle 9 · New Speedway Honkers 9:30 · silent disco 10:30 · 1516 Taylor Rd",
         "cat": "music",
-        "href": "/2026-11-04/ambc-fall-fest"
+        "href": "/2026-11-04/ambc-fall-fest",
+        "venueKey": "ambc"
       },
       {
         "id": "sat-printshop-game",

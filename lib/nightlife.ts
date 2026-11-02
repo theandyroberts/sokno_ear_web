@@ -10,6 +10,8 @@ export type NightItem = {
   id: string;
   time: string;
   venue: string;
+  /** Registry key for an event brand that differs from its physical venue. */
+  venueKey?: string;
   headline: string;
   sub?: string;
   href: string;
@@ -53,7 +55,7 @@ export function loadNightlife(file: string = FILE): Nightlife {
  *  can go on the list before anyone has chased down its logo. */
 export function withVenueLogos(days: Record<NightDay, NightItem[]>, registry: VenueRegistry): Record<NightDay, NightItem[]> {
   const decorate = (item: NightItem): NightItem => {
-    const venue = matchVenue(item.venue, registry);
+    const venue = (item.venueKey ? registry[item.venueKey] : undefined) ?? matchVenue(item.venue, registry);
     return { ...item, logo: venue?.logo ?? null, brand: venue?.name ?? item.venue.split(" · ")[0] };
   };
   return Object.fromEntries(
