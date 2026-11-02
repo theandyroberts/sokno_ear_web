@@ -11,7 +11,8 @@
     "latin-knox-printshop": {
       "file": "latin_dj_hands.jpg",
       "aspect": "1:1",
-      "prompt": "A vintage local-newspaper engraving: a laughing young woman DJ with dark curly hair pulled up, seen from the front across her mixer, one hand on a fader and the other hand raised high with a finger pointed up, cropped from the waist up with the mixer's knobs large in the foreground. Big hoop earrings, a pine green top, headphones around her neck, eyes on the dance floor, large in the frame. Behind it, the Printshop taproom with steel brewing tanks and a crowd dancing, drawn in the same ink and filling the space behind the subject."
+      "prompt": "A vintage local-newspaper engraving: a smiling young woman DJ with dark curly hair dancing a little as she works her decks, one hand on the mixer and the other raised to the music, seen from the front across the decks, cropped from the waist up and large in the frame. Big hoop earrings, a pine green top, headphones around her neck. Behind her, two simply drawn steel brewing tanks and a few people dancing, so it is clearly a party at a brewery.",
+      "note": "Trial wording, 2026-11-02: after the subject and background, 'Hand-drawn and a little rough, with simple shapes and not too much fine detail' was added to the locked style; not locked yet."
     },
     "808-college-night": {
       "file": "college_band_singer.jpg",
@@ -21,7 +22,8 @@
     "sokno-sourdough-first-friday": {
       "file": "chocolate_tonic_pour.jpg",
       "aspect": "1:1",
-      "prompt": "A vintage local-newspaper engraving: a young, earthy baker in her early thirties with a big warm smile and curly brown hair piled up in a messy bun, wearing an olive green t-shirt, pouring a dark chocolate tonic from a small glass bottle into a tiny sample cup held by another person's hand, cropped from her waist up with the pour and the cup large in the frame. A thin stream of liquid mid-pour, flour on her forearm, a broken square of chocolate on the counter beside the cup, large in the frame. Behind it, the SoKno Sourdough shop with sourdough loaves on wooden shelves and framed paintings on the wall, drawn in the same ink and filling the space behind the subject."
+      "prompt": "A vintage local-newspaper engraving: a young, earthy baker with curly brown hair piled in a messy bun and a warm smile, lifting a big crusty sourdough loaf out at her counter, cropped from the waist up and large in the frame. An olive green t-shirt, flour on her hands. Behind her, a few simply drawn wooden shelves of bread loaves, so it is clearly a bakery.",
+      "note": "Trial wording, 2026-11-02: after the subject and background, 'Hand-drawn and a little rough, with simple shapes and not too much fine detail' was added to the locked style; not locked yet."
     },
     "cut-corners-fbn": {
       "file": "techno_dancer.jpg",
@@ -46,7 +48,8 @@
     "goat-yoga-kerns": {
       "file": "goat_on_back.jpg",
       "aspect": "1:1",
-      "prompt": "A vintage local-newspaper engraving: a small black-and-white goat with a tiny bow tie standing squarely on the back of a woman in tabletop pose on a yoga mat, the woman turning her head toward us with a delighted laugh, cropped close so the goat and her upper body fill the frame. Short red hair, a pine green long-sleeve top and full-length leggings, the goat's little hooves planted on her shoulder blades, its ears perked, large in the frame. Behind it, the lawn at Kern's in the morning with other yoga mats and a brick wall, drawn in the same ink and filling the space behind the subject."
+      "prompt": "A vintage local-newspaper engraving: a small black-and-white goat with a tiny rust bow tie standing calmly on the back of a woman in tabletop pose on a yoga mat, the woman with short red hair smiling gently with her eyes closed, seen from the side and cropped close so the goat and the woman are large in the frame. A pine green long-sleeve top and full-length leggings, the goat's hooves on her back. Behind them, a simply drawn morning lawn with a tree and another yoga mat.",
+      "note": "Trial wording, 2026-11-02: after the subject and background, 'Hand-drawn and a little rough, with simple shapes and not too much fine detail' was added to the locked style; not locked yet."
     },
     "moss-meander": {
       "file": "moss_hand_lens.jpg",
