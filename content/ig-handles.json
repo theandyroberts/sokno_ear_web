@@ -322,6 +322,73 @@
       "verified": "tagged in the Old Sevier District's Oct 24 pub-crawl post; live profile 'Honeybee Coffee Company' with a 'south knox' highlight (2026-10-26)",
       "confidence": "high",
       "added": "2026-10-26"
+    },
+    "ambc": {
+      "handle": "@ambcknox",
+      "name": "Appalachian Mountain Bike Club",
+      "verified": "the Instagram link in the ambcknox.org footer and on fallfest.ambcknox.org; live profile read 2026-11-02: 'AMBC — We develop, build, and maintain trails', linktr.ee/ambcknox",
+      "confidence": "high"
+    },
+    "cut-corners": {
+      "handle": "@cutcornersatl",
+      "name": "Cut Corners (Atlanta DJ collective; Fly by Night takeover Nov 7)",
+      "kind": "act",
+      "verified": "its own collab post on Fly by Night's grid announcing Nov 7 (instagram.com/cutcornersatl/p/DevHkq3jS4J/); live profile read 2026-11-02: 'Cut Corners — Engineering random acts of creativity through music, dancing, and interactive art, Atlanta'",
+      "confidence": "high"
+    },
+    "latin-knox": {
+      "handle": "@latin.knox",
+      "name": "Latin Knox (Latin house party promoter; Printshop Nov 6)",
+      "kind": "act",
+      "verified": "tagged in Printshop's own Oct 30 week-ahead post (instagram.com/printshopbeer/p/DfIKKpKpz1E/); live profile read 2026-11-02: 'Latin Knox — The best latin house events in Knoxville, See you all November 6', its Oct 6 post gives 1532 Island Home Ave, 9 PM, 21+, $20",
+      "confidence": "high"
+    },
+    "dj-ev": {
+      "handle": "@djev01",
+      "name": "DJ EV (Estiven Vargas; Latin.Knox)",
+      "kind": "act",
+      "verified": "tagged in Latin Knox's own DJ-reveal post (instagram.com/latin.knox/p/DesPqOUGjTk/); live profile read 2026-11-02: 'ESTIVEN VARGAS — TN 423'",
+      "confidence": "high"
+    },
+    "jason-davila": {
+      "handle": "@jasondavila.wav",
+      "name": "Jason Davila (DJ, Atlanta; Latin.Knox)",
+      "kind": "act",
+      "verified": "tagged in Latin Knox's own post (instagram.com/latin.knox/p/Deu3a3hmjRf/); live profile read 2026-11-02: 'Jason Davila', @themorninggroove",
+      "confidence": "high"
+    },
+    "knox-vintage-pet-project": {
+      "handle": "@knoxvintagepetproject",
+      "name": "Knox Vintage Pet Project (senior and special-needs pet rescue; Bow Wow Bingo)",
+      "kind": "act",
+      "verified": "tagged in Printshop's own Oct 30 post; its own Nov 1 post names Printshop, Sun Nov 8, 2-4 (instagram.com/knoxvintagepetproject/p/DfNZP_Ymk4E/); live profile 'Knox Vintage Pet Project — Finding forever homes for senior and special needs pets in the Knoxville, TN area'",
+      "confidence": "high"
+    },
+    "uptop": {
+      "handle": "@uptoprooftopbar",
+      "name": "Up Top Rooftop Bar (Kern's)",
+      "verified": "its own collab post on Kern's grid for the Nov 5 karaoke night (instagram.com/uptoprooftopbar/p/DfDSpKnJsgR/); live profile read 2026-11-02 links kernsbakery.com/sip",
+      "confidence": "high"
+    },
+    "paradise-chocolate": {
+      "handle": "@paradisechocolateco",
+      "name": "Paradise Chocolate Co (bean-to-bar chocolate; SoKno Sourdough First Friday)",
+      "kind": "act",
+      "verified": "its own collab post on SoKno Sourdough's grid (instagram.com/paradisechocolateco/p/Dexz7z2jC8z/); live profile read 2026-11-02: 'Paradise Chocolate Co — Small-batch, from-the-bean chocolate, Knoxville, TN', links paradisechocolate.co",
+      "confidence": "high"
+    },
+    "peter-riesing": {
+      "handle": "@peter.riesing",
+      "name": "Peter Riesing (artist; SoKno Sourdough First Friday)",
+      "kind": "act",
+      "verified": "tagged in Paradise Chocolate's collab post on SoKno Sourdough's grid; live profile read 2026-11-02: 'Peter MagikStix Riesing', portfolio peterriesing.github.io",
+      "confidence": "medium"
+    },
+    "sokno-sourdough": {
+      "handle": "@soknosourdough",
+      "name": "SoKno Sourdough",
+      "verified": "the handle in content/sources.json; live profile read 2026-11-02: 'SoKno Sourdough — Woman-owned, 100% sourdough bakery, Knoxville TN', links soknosourdough.com",
+      "confidence": "high"
     }
   }
 }

@@ -1,0 +1,314 @@
+{
+  "_comment": "Research log for No. 21 (Thu Nov 5 - Sun Nov 8, 2026; First Friday, AMBC Fall Fest weekend, Vols host Kentucky Saturday at 6:15 PM EST per ESPN). One entry per source in content/sources.json; every dated thing found for this Thu-Sun is a lead with a story id or a reason. Read Monday Nov 2 in the built-in browser (Instagram, logged out; flyer images read at full size from the post pages) and with scripts/research-sweep.mjs (websites). Forecast (NWS point 35.95,-83.90): Thu rain showers likely and 73, Fri partly sunny 70 (45 overnight), Sat mostly sunny 66 (42 overnight), Sun mostly sunny 65.",
+  "slug": "2026-11-04",
+  "checked": {
+    "old-sevier-district": {
+      "how": "both",
+      "found": 0,
+      "note": "Last post Oct 30 (the pub crawl day-of). No November First Friday game plan or weekend roundup yet as of Monday morning; nothing dated Nov 5-8. Site: hours and parking; ics stale (5 events, none in November)."
+    },
+    "the-808": {
+      "how": "both",
+      "found": 1,
+      "note": "Site schedule: Fri 11/6 College Night, doors 7, show 8, 18+. The venue's Oct 29 post and flyer: Ella Pinchock 8, Fort Knox 9, Pocket Ace 10; $5 at the door, free with RSVP at posh.vip/f/f421c (the Posh page confirms Fri Nov 6, 808 Sevier Ave). Summoners Circle Nov 21 (lead). No band handles in the venue's post; @ellapinchock is not an available profile, so no act is tagged."
+    },
+    "alliance": {
+      "how": "both",
+      "found": 1,
+      "note": "Knox Vintage Pet Project's Oct 27 collab reel on the brewery's grid recaps a past Bow Wow Bingo and names the next one, Sun Nov 8; KVPP's own Nov 1 post and Printshop's Oct 30 post put that one at Printshop. Alliance's own feed: Wed songwriter night (outside Thu-Sun), happy hour M-F 3-6 with $2 off drafts (bio). Site: hours Tue-Sat 12-10, Sun-Mon 12-8."
+    },
+    "hi-wire": {
+      "unreadable": "age-gated profile, seen 0 logged out on Nov 2; the hub's recent posts name nothing of Hi-Wire's for Nov 5-8; hiwirebrewing.simpletix.com lists only Stout Bout (Nov 7, 1-6 PM), which its event page places at the RAD Beer Garden in Asheville, not Knoxville; hiwirebrewing.com/knoxville is hours only (Mon-Thu 3-10, Fri 3-11, Sat 12-11, Sun 12-9)"
+    },
+    "fly-by-night": {
+      "how": "both",
+      "found": 1,
+      "note": "Cut Corners' Oct 20 collab post on the lounge's grid: Sat 11/7 Cut Corners ATL takeover, bouncy techno, banging club, bubbling house, 9 PM-1 AM, $10, 906 Sevier Ave #126. No November lineup post from the venue yet; no post confirms Sunday karaoke for Nov 8. Site: hours Thu-Sat 4 PM-1 AM, Sun 2-12."
+    },
+    "printshop": {
+      "how": "both",
+      "found": 4,
+      "note": "Venue's Oct 30 week-ahead post: Thu 11/5 Knox Trails social run, comedy with @aaron_westberry and $1 wings night with Friends BBQ (no times given); Fri 11/6 Latin.Knox 2.0; Sun 11/8 bingo supporting Knox Vintage Pet Project. Latin Knox's own posts: Nov 6, 9 PM, 21+, $20, DJs EV, Jason Davila, Minitiger, 1532 Island Home Ave. KVPP's Nov 1 post: Bow Wow Bingo 2-4 PM, kid and dog friendly. /specials/ dated Nov 3-7: Tue $16 pitchers, Thu 10% off cases, Fri $12 flights noon-9, Sat $1 off pints from 30 minutes before the Vols kickoff to the final whistle. Rooted Monday yin yoga (Mondays, lead). Peaceful Side firkin fest Nov 14 is in Maryville."
+    },
+    "trailhead": {
+      "how": "instagram",
+      "found": 1,
+      "note": "No November flyer yet (the October one was posted Oct 1). Thursday trivia at 7 is in the October flyer and Gato Peligroso's Oct 20 post; party plan. Rodney Lee's Oct 21 poster was for Oct 23 (past). Nothing dated Nov 5-8 for music."
+    },
+    "pink-cactus": {
+      "how": "both",
+      "found": 0,
+      "note": "No November list from the venue yet (the October list came Sep 30). The Comedy Sphere's Nov 1 month poster, read at full size: nothing at the pink house until Dan Alten Live Nov 10, then the After Brunch Special Nov 14 and Last Tuesdays Nov 24 (leads). The free karaoke-room hour was an October deal with no November post. Alt Mart Nov 13 (lead). Site: hours Thu/Sun 5-11, Fri/Sat 5-1."
+    },
+    "southside-garage": {
+      "how": "both",
+      "found": 2,
+      "note": "/specials/: Fri 11/6 open for lunch at 11 with the Dia de torta; Sat 11/7 open noon to midnight. /events/: Tue trivia. Feed: pub crawl posts, nothing dated Nov 5-8. Party plan."
+    },
+    "sevier-ave-burger": {
+      "how": "instagram",
+      "found": 1,
+      "note": "Oct 30 post: October's Monster Mash burger and Bad Apple cocktail end with the month; no November specials posted yet. Brunch Sat and Sun 11-2 (bio and Oct 22 post). Party plan."
+    },
+    "south-coast-pizza": {
+      "how": "both",
+      "found": 0,
+      "note": "No posts in the last two weeks. Site: Thanksgiving closed Nov 26, New Year's Eve. Hours Sun-Thu 11-9, Fri-Sat 11-10."
+    },
+    "redbud": {
+      "how": "both",
+      "found": 1,
+      "note": "Oct 31 post: brunch 11-4 (Saturday) and dinner till 9. Site: Tue-Sat 11-9, Sun 11-4, happy hour weekdays 4-6, double rewards points Tue and Thu. Party plan."
+    },
+    "mighty-mud": {
+      "how": "both",
+      "found": 0,
+      "note": "Oct 28 reel: one-night November classes (hand building, wheel, Raku), no dates given; December intensives (leads). No post about a November First Friday show and mightymud.com/gallery lists none, so no story."
+    },
+    "sokno-sourdough": {
+      "how": "both",
+      "found": 1,
+      "note": "Paradise Chocolate's Oct 21 collab post on the bakery's grid: Fri Nov 6, First Friday at SoKno Sourdough with artist Peter Riesing, sampling a chocolate tonic. The post gives no hours and the bakery posted nothing; soknosourdough.com renders empty. Sat Nov 7 Paradise is at The Drop Inn for Fall Fest (s'mores, drinking chocolate)."
+    },
+    "borderland": {
+      "how": "both",
+      "found": 0,
+      "note": "Playhouse page still lists October's John and Best if Used By. Feed: Spooky Streets photos, a seance visit. Nothing Nov 5-8."
+    },
+    "knoxville-theatre-club": {
+      "how": "both",
+      "found": 0,
+      "note": "No posts in the last two weeks; tickets page says Alas, Ajax on sale soon."
+    },
+    "old-sevier-market": {
+      "how": "both",
+      "found": 0,
+      "note": "Oct 30 fall items, Oct 25 meat highlight. Senior discount is first Wednesdays (Nov 4, outside Thu-Sun). Hours 7-7 daily."
+    },
+    "angry-dumplings": {
+      "how": "instagram",
+      "found": 0,
+      "note": "No posts in the last two weeks. Party plan 6 PM stop stands (Andy)."
+    },
+    "honeybee": {
+      "how": "both",
+      "found": 0,
+      "note": "Coffee releases, a pumpkin pancake latte. Nothing dated."
+    },
+    "kerns": {
+      "how": "both",
+      "found": 5,
+      "note": "Nov 1 'Kern's in November' carousel, read at full size: every Tuesday Dancing with the Stars viewing party; Wednesdays 6:30 movie nights (Twilight Nov 4); every Saturday UT football watch parties; Nov 4 and 17 Bingo Night for a Cause (Nov 4 is Knox Bingo for the Koinonia Foundation, 6:30-8); Thu Nov 5 UpTop Karaoke Night and All Play Live; Nov 7 Goat Yoga; Nov 12 Alchemy x UpTop; Nov 24 Stem to Stem bouquets; Nov 28 pictures with Santa and the Grinch (leads). UpTop's Oct 28 collab post: karaoke Thu Nov 5, 7-9 PM, half off select drinks, pop-ups, a date-night giveaway. Oct 24 flyer: All Play Live, Thu Nov 5, 7 PM, parents and kids team up for games and prizes on the lawn. Oct 20 flyer: Goat Yoga with Misfit Herd, Nov 7, 8:30 AM, tickets at buytickets.at/misfitherd/2341692 (the ticket page renders no price to a reader). Oct 30 post: Roni's Mac Bar themed trivia Thursdays 6:30 at the Scruffy Bar. Site: hours and private watch-party packages only."
+    },
+    "puckers": {
+      "how": "instagram",
+      "found": 0,
+      "note": "Halloween pool-table and merch posts; the last game-day post was for Oct 24. Nothing posted yet for the Kentucky game. Brunch Sat-Sun from 9 is standing (Oct 23 post). The 404-page embed returned 404 to curl this week."
+    },
+    "earls": {
+      "how": "both",
+      "found": 1,
+      "note": "/specials/ and the Oct 28 reel: Thu $10 Patron mango ritas, Fri $9 spicy pineapple ritas, Sat $8 house margs, Sun $7 mimosas and Bloody Marys, 11-10 daily; the game-day board ($2 off drafts, $6 Orange Bliss, 6-for-5 buckets, $2 off pizza, $4-5 shots) runs on game days and the Vols host Kentucky Saturday at 6:15. Nov 2 reel: daily specials reminder."
+    },
+    "ijams": {
+      "how": "both",
+      "found": 7,
+      "note": "Calendar JSON slugs then /event-details/: Fri 11/6 Playing 'Possum 6-7 PM $10 ages 5+ (ran in No. 20); Sat 11/7 Wilderness Basics 9-noon $15 ages 14+; Sat 11/7 Storytime: Harvest 10-noon free (weekly); Sat 11/7 Moss Meander 2-4 PM $15 ages 16+ at Mead's Quarry; Sun 11/8 Bird Banding 8-9:30 AM $5 at Meads Quarry; Sun 11/8 Sound Bath Meditation 10-11 AM $25 with KB Sound Healing, Visitor Center; Sun 11/8 Self Care Sunday yoga 11:30 $10 (weekly). Feed Nov 2: 'November is here' points at the calendar. Prices before the site's ticket fee."
+    },
+    "ambc": {
+      "how": "web",
+      "found": 1,
+      "note": "ambcknox.org events list and fallfest.ambcknox.org/schedule/: 17th annual Fall Fest, Fri Nov 6 - Sat Nov 7 at Baker Creek Preserve and Urban Wilderness Gateway Park, free. Friday: campground 5, beer garden and food trucks 5:30, Knoxville Utility Band 5:30, Friday Night Lights on the pump track and jump line 6:30, Best Day Ever film 6:45, Adventure Slideshows (PechaKucha) 8, last call 9:30, after party at Climbing Roots 10. Saturday: coffee and vendors 8:30, Joy Ride and aMTB demos 9:30, social, advanced and vintage rides 10, beer gardens 11, Mal Nombre noon, South Loop ride noon, bike parade 12:30, women's power hour and kids rides 1, Whip Off at Devil's Racetrack 3 (sign up by 2:30), strider race 4:45, Mercy Lights 5, Butcherbird 6, Best Line Invitational on the lit jump line 7, Megaweed 8:15, silent auction closes 8:30, bike raffle 9, New Speedway Honkers 9:30, silent disco 10:30. Free parking at Baker Creek Bottoms, South Doyle Middle (after 5 Friday) and the Gateway Park lot under Sevierville Pike; free camping. @ambcknox posts (Oct 22-31) match. Bear Wheels Nov 14 is in Carthage; Nov 23 meeting at SouthSide, Dec 12 Tour de Lights (leads)."
+    },
+    "legacy-parks": {
+      "how": "both",
+      "found": 0,
+      "note": "Oct 22: 37 trees planted on the SoKno Rail Trail. Nothing dated Nov 5-8."
+    },
+    "sokno-taco": {
+      "how": "web",
+      "found": 1,
+      "note": "Home page specials: Thu Singo 7-9 free, $13 domestic pitchers; Fri $10 frozen coronaritas; Sat-Sun brunch 10-2; Sun all-day happy hour $4 wells, champagne and domestics; happy hour Mon-Sat 4-7. Party plan. SoKno Taco and Sevier Ave Burger Co. sponsor the Fall Fest main stage."
+    },
+    "blank-news": {
+      "how": "web",
+      "found": 0,
+      "note": "Search page: nothing new for South Knoxville since the 808 feature."
+    },
+    "inside-of-knoxville": {
+      "how": "instagram",
+      "found": 0,
+      "note": "Site returns 403 to curl (Cloudflare). Feed: the 10-day planner for Oct 25-Nov 3 (nothing on the beat for Nov 5-8), pumpkin contest, Clyde's review."
+    }
+  },
+  "leads": [
+    {
+      "date": "2026-11-06",
+      "what": "AMBC Fall Fest at Baker Creek Preserve, Fri Nov 6 - Sat Nov 7: rides, bands, Whip Off, Best Line, raffle, auction, free",
+      "source": "ambc",
+      "story": "ambc-fall-fest"
+    },
+    {
+      "date": "2026-11-06",
+      "what": "Latin.Knox 2.0 at Printshop, 9 PM, 21+, $20, DJs EV, Jason Davila, Minitiger",
+      "source": "printshop",
+      "story": "latin-knox-printshop"
+    },
+    {
+      "date": "2026-11-06",
+      "what": "College Night at The 808: Ella Pinchock 8, Fort Knox 9, Pocket Ace 10; doors 7, 18+, $5 or free with RSVP",
+      "source": "the-808",
+      "story": "808-college-night"
+    },
+    {
+      "date": "2026-11-06",
+      "what": "First Friday at SoKno Sourdough with Paradise Chocolate and artist Peter Riesing; chocolate tonic samples",
+      "source": "sokno-sourdough",
+      "story": "sokno-sourdough-first-friday"
+    },
+    {
+      "date": "2026-11-07",
+      "what": "Cut Corners ATL takeover at Fly by Night, 9 PM-1 AM, $10",
+      "source": "fly-by-night",
+      "story": "cut-corners-fbn"
+    },
+    {
+      "date": "2026-11-08",
+      "what": "Bow Wow Bingo for Knox Vintage Pet Project at Printshop, 2-4 PM",
+      "source": "printshop",
+      "story": "bow-wow-bingo-printshop"
+    },
+    {
+      "date": "2026-11-08",
+      "what": "Knox Vintage Pet Project's next Bow Wow Bingo, Sun Nov 8 (collab reel on Alliance's grid)",
+      "source": "alliance",
+      "story": "bow-wow-bingo-printshop"
+    },
+    {
+      "date": "2026-11-05",
+      "what": "Printshop Thursday: Knox Trails social run, comedy with Aaron Westberry, $1 wings with Friends BBQ",
+      "source": "printshop",
+      "skipped": "the venue's post names no times and the comic's profile is empty; nothing to run"
+    },
+    {
+      "date": "2026-11-07",
+      "what": "Printshop $1 off pints from 30 minutes before the Vols kickoff to the final whistle",
+      "source": "printshop",
+      "skipped": "a game-day deal; party plan"
+    },
+    {
+      "date": "2026-11-05",
+      "what": "Trivia at Trailhead, 7 PM",
+      "source": "trailhead",
+      "skipped": "weekly; party plan"
+    },
+    {
+      "date": "2026-11-06",
+      "what": "SouthSide Garage open for lunch at 11 with the Friday torta; Sat open noon to midnight",
+      "source": "southside-garage",
+      "skipped": "hours and a lunch special; party plan"
+    },
+    {
+      "date": "2026-11-07",
+      "what": "Brunch at Sevier Ave Burger Co., Sat and Sun 11-2",
+      "source": "sevier-ave-burger",
+      "skipped": "standing; party plan"
+    },
+    {
+      "date": "2026-11-07",
+      "what": "Brunch at Redbud Kitchen 11-4, happy hour weekdays 4-6",
+      "source": "redbud",
+      "skipped": "standing; party plan"
+    },
+    {
+      "date": "2026-11-05",
+      "what": "UpTop Karaoke Night at Kern's rooftop bar, 7-9 PM",
+      "source": "kerns",
+      "story": "uptop-karaoke-kerns"
+    },
+    {
+      "date": "2026-11-05",
+      "what": "All Play Live family game show on the Kern's lawn, 7 PM",
+      "source": "kerns",
+      "story": "all-play-live-kerns"
+    },
+    {
+      "date": "2026-11-07",
+      "what": "Goat Yoga with Misfit Herd on the Kern's lawn, 8:30 AM",
+      "source": "kerns",
+      "story": "goat-yoga-kerns"
+    },
+    {
+      "date": "2026-11-07",
+      "what": "UT football watch party at Kern's (every Saturday on the November lineup)",
+      "source": "kerns",
+      "skipped": "the lineup names no time, room or offer; the site lists only private packages"
+    },
+    {
+      "date": "2026-11-05",
+      "what": "Roni's Mac Bar themed trivia at the Scruffy Bar, Thursdays 6:30",
+      "source": "kerns",
+      "skipped": "weekly; party plan"
+    },
+    {
+      "date": "2026-11-07",
+      "what": "Earl's game-day board for Kentucky at Tennessee (6:15 PM), plus the daily ritas and Sunday mimosas",
+      "source": "earls",
+      "story": "specials-board"
+    },
+    {
+      "date": "2026-11-07",
+      "what": "Moss Meander at Mead's Quarry, 2-4 PM, $15, ages 16+",
+      "source": "ijams",
+      "story": "moss-meander"
+    },
+    {
+      "date": "2026-11-07",
+      "what": "Wilderness Basics: Beginner Outdoor Skills, 9-noon, $15, ages 14+",
+      "source": "ijams",
+      "story": "wilderness-basics"
+    },
+    {
+      "date": "2026-11-08",
+      "what": "Bird Banding at Meads Quarry, 8-9:30 AM, $5",
+      "source": "ijams",
+      "story": "bird-banding"
+    },
+    {
+      "date": "2026-11-08",
+      "what": "Sound Bath Meditation with KB Sound Healing, 10-11 AM, $25",
+      "source": "ijams",
+      "story": "sound-bath-ijams"
+    },
+    {
+      "date": "2026-11-06",
+      "what": "Playing 'Possum animal ambassador meet and greet, 6-7 PM, $10",
+      "source": "ijams",
+      "skipped": "ran as a story in No. 20 (Oct 31) and the park's cap is four"
+    },
+    {
+      "date": "2026-11-07",
+      "what": "Storytime at the Nature Playscape: Harvest, 10-noon, free",
+      "source": "ijams",
+      "skipped": "weekly; the park's cap is four this week"
+    },
+    {
+      "date": "2026-11-08",
+      "what": "Self Care Sunday yoga with Hope Irwin, 11:30, $10",
+      "source": "ijams",
+      "skipped": "weekly class"
+    },
+    {
+      "date": "2026-11-05",
+      "what": "Singo at SoKno Taco, 7-9, $13 pitchers; Fri $10 coronaritas; Sun all-day happy hour",
+      "source": "sokno-taco",
+      "skipped": "weekly specials; party plan"
+    },
+    {
+      "date": "2026-11-07",
+      "what": "Stout Bout Festival on Hi-Wire's ticket page, Nov 7, 1-6 PM",
+      "source": "hi-wire",
+      "skipped": "the event page puts it at the RAD Beer Garden in Asheville"
+    }
+  ]
+}

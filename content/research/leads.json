@@ -1,66 +1,36 @@
 {
   "_comment": "Dated things found during research that fall AFTER the episode being drafted. The next research pass starts here: confirm each against the venue, then it becomes a story or is dropped with a reason. Delete a lead once its date has passed.",
-  "updated": "2026-10-26",
+  "updated": "2026-11-02",
   "leads": [
-    {
-      "date": "2026-11-04",
-      "what": "Old Sevier Market senior discount: 10% off every first Wednesday",
-      "source": "old-sevier-market"
-    },
-    {
-      "date": "2026-11-05",
-      "what": "All Play Live interactive family game show on the Kern's lawn, 7 PM (Oct 24 poster)",
-      "source": "kerns"
-    },
-    {
-      "date": "2026-11-06",
-      "what": "AMBC Fall Fest at Baker Creek, Nov 6-7",
-      "source": "ambc"
-    },
-    {
-      "date": "2026-11-06",
-      "what": "Latin.Knox at Printshop Beer Co., 9 PM, 21+, $20, DJs EV, Jason Davila, Minitiger",
-      "source": "printshop"
-    },
-    {
-      "date": "2026-11-06",
-      "what": "Paradise Chocolate at SoKno Sourdough's First Friday with artist Peter Riesing; chocolate tonic samples",
-      "source": "sokno-sourdough"
-    },
-    {
-      "date": "2026-11-07",
-      "what": "Moss Meander at Ijams Nature Center, 2 PM; Wilderness Basics 9 AM",
-      "source": "ijams"
-    },
-    {
-      "date": "2026-11-07",
-      "what": "Goat Yoga with Misfit Herd on the Kern's lawn (the Nov 1 date was cancelled)",
-      "source": "kerns"
-    },
-    {
-      "date": "2026-11-07",
-      "what": "Cut Corners ATL takeover at Fly by Night: bouncy techno, club, house, 9 PM-1 AM, $10",
-      "source": "fly-by-night"
-    },
-    {
-      "date": "2026-11-07",
-      "what": "Stout Bout Festival (Hi-Wire SimpleTix), 1-6 PM; check which taproom",
-      "source": "hi-wire"
-    },
-    {
-      "date": "2026-11-08",
-      "what": "Sound bath meditation at Ijams Nature Center",
-      "source": "ijams"
-    },
     {
       "date": "2026-11-09",
       "what": "The Faint at The 808, all ages",
       "source": "the-808"
     },
     {
+      "date": "2026-11-09",
+      "what": "Rooted Monday yin yoga at Printshop, Mondays in November at 7 PM, $10 drop-in (Well Rooted Knoxville)",
+      "source": "printshop"
+    },
+    {
+      "date": "2026-11-10",
+      "what": "Dan Alten Live! at The Pink Cactus (The Comedy Sphere's November poster)",
+      "source": "pink-cactus"
+    },
+    {
+      "date": "2026-11-11",
+      "what": "Intuition Cultivation Academy at Ijams Nature Center, 6-8:30 PM",
+      "source": "ijams"
+    },
+    {
       "date": "2026-11-12",
       "what": "Ahee: Bass Quest Tour at The 808, 18+",
       "source": "the-808"
+    },
+    {
+      "date": "2026-11-12",
+      "what": "Alchemy x UpTop: sweaters, flannels and single barrels at Kern's (November lineup)",
+      "source": "kerns"
     },
     {
       "date": "2026-11-13",
@@ -93,9 +63,19 @@
       "source": "ijams"
     },
     {
+      "date": "2026-11-14",
+      "what": "The After Brunch Special comedy at The Pink Cactus (Comedy Sphere)",
+      "source": "pink-cactus"
+    },
+    {
       "date": "2026-11-15",
       "what": "ETBA bluegrass jam at Ijams Nature Center, 2-5; Fall Fungi ID 9 AM; Self Care Sunday yoga",
       "source": "ijams"
+    },
+    {
+      "date": "2026-11-17",
+      "what": "Bingo Night for a Cause at Kern's (November lineup; Nov 4 was Knox Bingo for the Koinonia Foundation, 6:30-8)",
+      "source": "kerns"
     },
     {
       "date": "2026-11-18",
@@ -118,9 +98,34 @@
       "source": "the-808"
     },
     {
+      "date": "2026-11-20",
+      "what": "Nature Nerd Hike at Ijams Nature Center, 5:30 PM",
+      "source": "ijams"
+    },
+    {
+      "date": "2026-11-21",
+      "what": "Summoners Circle homecoming at The 808 with War Clown, Ninja Witch and Truckstop Dickpill, all ages",
+      "source": "the-808"
+    },
+    {
+      "date": "2026-11-21",
+      "what": "Playing 'Possum 1 PM and Painting with the Sun cyanotype 2:30 at Ijams Nature Center",
+      "source": "ijams"
+    },
+    {
+      "date": "2026-11-22",
+      "what": "Moss Meander 1 PM and Renew in Nature at Ijams Nature Center",
+      "source": "ijams"
+    },
+    {
       "date": "2026-11-23",
       "what": "AMBC monthly meeting at SouthSide Garage, 7 PM",
       "source": "ambc"
+    },
+    {
+      "date": "2026-11-24",
+      "what": "Last Tuesdays comedy at The Pink Cactus (Comedy Sphere); Stem to Stem bouquet making at Kern's",
+      "source": "pink-cactus"
     },
     {
       "date": "2026-11-25",
@@ -131,6 +136,11 @@
       "date": "2026-11-27",
       "what": "Echo album release at The 808, all ages",
       "source": "the-808"
+    },
+    {
+      "date": "2026-11-28",
+      "what": "Pictures with Santa and the Grinch at Kern's; Carve and Create block printing 10 AM and Native Landscape workshop at Ijams Nature Center",
+      "source": "kerns"
     },
     {
       "date": "2026-12-05",
@@ -164,13 +174,13 @@
       "day": "Tue",
       "what": "Free team trivia at SouthSide Garage, 7 PM",
       "source": "southside-garage",
-      "seen": "2026-10-26"
+      "seen": "2026-11-02"
     },
     {
       "day": "Wed",
       "what": "Singer & Songwriter Night open mic at Alliance Brewing, 7-10, led by Tom Smith",
       "source": "alliance",
-      "seen": "2026-10-14"
+      "seen": "2026-10-28"
     },
     {
       "day": "Wed",
@@ -182,21 +192,21 @@
       "day": "Wed",
       "what": "Singo at Sevier Ave Burger Co., 7 PM",
       "source": "sevier-ave-burger",
-      "seen": "2026-10-26"
+      "seen": "2026-11-02"
     },
     {
       "day": "Thu",
       "what": "Free hour in the karaoke rooms at The Pink Cactus, every Thursday in October",
       "source": "pink-cactus",
       "seen": "2026-10-26",
-      "note": "The venue's Sep 30 October list: every Thursday this month. Oct 29 is the last one; re-check for November."
+      "note": "October-only deal; no November post as of Nov 2. Drop unless the venue re-posts it."
     },
     {
       "day": "Sun",
       "what": "Karaoke at Fly by Night, 8 PM",
       "source": "fly-by-night",
       "seen": "2026-09-23",
-      "note": "last confirmed by the host's own post for Sep 27; no post for Oct 11, 18, 25 or Nov 1 as of Oct 26. Re-confirm each week"
+      "note": "last confirmed by the host's own post for Sep 27; no post for any October Sunday or Nov 1 or Nov 8 as of Nov 2. Re-confirm each week"
     },
     {
       "day": "4th Sun",
@@ -215,14 +225,21 @@
       "day": "Thu",
       "what": "Trivia at Trailhead Beer Market, 7 PM (Mon happy hour all day, Tue SloKno run club 6, Wed Singo 7); Fri/Sat music at 7, Sun at 4",
       "source": "trailhead",
-      "seen": "2026-10-26"
+      "seen": "2026-11-02",
+      "note": "Thursday trivia confirmed by the October flyer and Gato Peligroso's Oct 20 post; no November flyer as of Nov 2 (the monthly flyer usually lands on the 1st)."
     },
     {
       "day": "Thu",
       "what": "$1 wing night with Friends BBQ at Printshop, 5-9 (Fri $12 flights all day, Sat yoga 10:30)",
       "source": "printshop",
-      "seen": "2026-10-06",
-      "note": "Thursday wings last confirmed in the venue's Oct 6 week-ahead post; no week-ahead post for Oct 27-Nov 1 as of Monday Oct 26. /specials/ has Thu 10% off cases, Fri $12 flights, and a Sat Vols pint deal the Vols' bye week makes moot."
+      "seen": "2026-10-30",
+      "note": "The venue's Oct 30 week-ahead post names Thursday wings with Friends BBQ, a Knox Trails social run and comedy, no times. /specials/ for Nov 3-7: Thu 10% off cases, Fri $12 flights, Sat $1 off pints around the Vols kickoff. Saturday yoga not posted for Nov 7."
+    },
+    {
+      "day": "Thu",
+      "what": "Roni's Mac Bar themed trivia at the Kern's Scruffy Bar, 6:30 PM; UpTop karaoke nights are one-offs (Nov 5)",
+      "source": "kerns",
+      "seen": "2026-10-30"
     }
   ]
 }

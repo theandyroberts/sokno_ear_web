@@ -1,0 +1,1280 @@
+{
+  "slug": "2026-11-04",
+  "volume": 1,
+  "number": 21,
+  "episode": "Weekend Episode",
+  "date": "2026-11-04",
+  "dateLabel": "Thu–Sun, Nov 5–8, 2026",
+  "shortDate": "Nov 5–8",
+  "place": "South Knoxville, TN",
+  "newsletter": {
+    "subject": "Fall Fest fills Baker Creek, Latin.Knox takes Printshop on First Friday, and goats on the Kern's lawn"
+  },
+  "feature": {
+    "id": "ambc-fall-fest",
+    "label": "Urban Wilderness",
+    "labelColor": "ink",
+    "days": [
+      "Fri",
+      "Sat"
+    ],
+    "layout": "imageTop",
+    "title": "AMBC's Fall Fest fills Baker Creek with group rides, a Whip Off, five bands and a lit-up jump line Friday and Saturday",
+    "deck": "Free, and the trails are the point.",
+    "facts": [
+      {
+        "label": "When",
+        "value": "Fri Nov 6 · 5 – 10 PM · Sat Nov 7 · 8:30 AM – midnight"
+      },
+      {
+        "label": "Where",
+        "value": "Baker Creek Preserve and Urban Wilderness Gateway Park · 1516 Taylor Rd"
+      },
+      {
+        "label": "Cost",
+        "value": "Free · beer garden and food trucks on site · the bike raffle and silent auction are the fundraiser"
+      },
+      {
+        "label": "Friday",
+        "value": "Knoxville Utility Band 5:30 · pump track and jump line lit at 6:30 · Best Day Ever film 6:45 · Adventure Slideshows 8 · after-party at Climbing Roots 10"
+      },
+      {
+        "label": "Saturday rides",
+        "value": "Joy Ride and adaptive-bike demos 9:30 · social, advanced and vintage rides 10 · South Loop ride noon · bike parade 12:30 · kids' rides 1 · Whip Off at Devil's Racetrack 3 · strider race 4:45"
+      },
+      {
+        "label": "Saturday stage",
+        "value": "Mal Nombre noon · Mercy Lights 5 · Butcherbird 6 · Best Line Invitational 7 · Megaweed 8:15 · raffle drawing 9 · New Speedway Honkers 9:30 · silent disco 10:30"
+      },
+      {
+        "label": "Parking",
+        "value": "Free at the Baker Creek Bottoms overflow lot, South Doyle Middle School (after 5 Friday) and the Gateway Park lot under Sevierville Pike · free camping on site · stay out of the neighborhood streets"
+      },
+      {
+        "label": "Weather",
+        "value": "Friday partly sunny and 70, 45 overnight · Saturday mostly sunny and 66"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "The Appalachian Mountain Bike Club calls Fall Fest its homecoming, and the 17th one lands this weekend at Baker Creek Preserve, the gateway to the Urban Wilderness at the end of James White Parkway. It is the club's biggest fundraiser of the year and it costs nothing to walk in: two days of guided rides for every speed, kids' events, a jump contest, a night-time jump exhibition, five bands on a main stage and a beer garden, with a bike raffle and a silent auction paying for the trails. Riders come from around the country for it. Most of the people on the lawn are from around here."
+      },
+      {
+        "type": "subhead",
+        "text": "Friday night"
+      },
+      {
+        "type": "paragraph",
+        "text": "Friday is the easy half. The campground and beer garden open at five, the Knoxville Utility Band plays bluegrass on the main stage at 5:30, and at 6:30 the pump track and the jump line are lit for Friday Night Lights, which is exactly what it sounds like. At 6:45 Catalyst Sports shows the film Best Day Ever, and at eight nine women tell their biggest adventures in the PechaKucha format, twenty slides at twenty seconds each, under the stars. Last call is 9:30 and the after-party moves to Climbing Roots, the bouldering gym. A quarter of Friday's beer profits go to Catalyst Sports, which runs adaptive mountain biking."
+      },
+      {
+        "type": "subhead",
+        "text": "Saturday"
+      },
+      {
+        "type": "paragraph",
+        "text": "Saturday starts with coffee at 8:30 and rides at 9:30: the women's Joy Ride, adaptive-bike demos, then at ten a social ride, an advanced long ride with Tennessee Valley Bikes, a vintage mountain bike ride with Two Bikes and a shuttle to Devil's Racetrack. At noon Mal Nombre plays and Harper's leads the South Loop ride. The bike parade at 12:30 is for everyone, decorated or not; at one the kids ride with Trail Blazers and the jump line is women-only for an hour. The Whip Off at three is the crowd event: riders send the big jumps at the bottom of Devil's Racetrack and anyone can enter until 2:30 at the booth, men, women and groms. The strider race for the smallest riders is at 4:45."
+      },
+      {
+        "type": "paragraph",
+        "text": "After dark the main stage takes over: Mercy Lights at five, Butcherbird at six, and at seven the Best Line Invitational puts invited pro and local riders on the lit jump line with commentary and cash prizes. Megaweed plays at 8:15, the silent auction closes at 8:30, the bike raffle is drawn at nine, New Speedway Honkers close the stage at 9:30 and a silent disco runs until the festival turns in at midnight."
+      },
+      {
+        "type": "subhead",
+        "text": "The practical part"
+      },
+      {
+        "type": "paragraph",
+        "text": "Parking is free at the Baker Creek Bottoms overflow lot, at South Doyle Middle School after five on Friday, and at the Gateway Park lot under Sevierville Pike; the club asks everyone to stay off the neighborhood streets. Camping on the site is free and first come, with portable toilets and nothing else, no fires. Friday is partly sunny and 70 before dropping to 45 overnight, and Saturday is mostly sunny and 66, so the night events want a jacket."
+      }
+    ],
+    "sources": [
+      {
+        "label": "AMBC Fall Fest — weekend schedule",
+        "url": "https://fallfest.ambcknox.org/schedule/"
+      },
+      {
+        "label": "AMBC Fall Fest — FAQs: parking and camping",
+        "url": "https://fallfest.ambcknox.org/faqs/"
+      },
+      {
+        "label": "Appalachian Mountain Bike Club — events",
+        "url": "https://www.ambcknox.org/events/list/"
+      },
+      {
+        "label": "AMBC on Instagram — the Whip Off, Nov 7",
+        "url": "https://www.instagram.com/ambcknox/p/DfF4m-jljSW/"
+      }
+    ],
+    "event": {
+      "startDate": "2026-11-06T17:00:00-05:00",
+      "endDate": "2026-11-07T23:59:00-05:00",
+      "locationName": "Baker Creek Preserve",
+      "locationAddress": "1516 Taylor Rd, Knoxville, TN 37920"
+    },
+    "social": {
+      "igTags": [
+        "ambc"
+      ],
+      "igAct": {
+        "key": "ambc"
+      },
+      "igBanner": [
+        "AMBC Fall Fest at Baker Creek: rides, bands, the Whip Off",
+        "Friday from five, Saturday all day, free"
+      ]
+    },
+    "image": "/assets/spots/no21_whip_off_rider.jpg"
+  },
+  "scanner": [
+    {
+      "label": "Urban Wilderness",
+      "labelColor": "ink",
+      "days": [
+        "Fri",
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/no21_whip_off_rider.jpg",
+      "title": "Fall Fest: two days of rides, bands and big air at Baker Creek",
+      "blurb": "Free; the Whip Off at three, the lit jump line at seven Saturday.",
+      "href": "#ambc-fall-fest"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "hot": true,
+      "image": "/assets/spots/no21_latin_dj_hands.jpg",
+      "title": "Latin.Knox: three DJs at Printshop on First Friday",
+      "blurb": "Latin house from the classics to the underground, nine o'clock, $20, 21+.",
+      "href": "#latin-knox-printshop"
+    },
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Thu"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no21_family_buzzer.jpg",
+      "title": "All Play Live, a family game show on the lawn",
+      "blurb": "Parents and kids team up for prizes, Thursday at seven.",
+      "href": "#all-play-live-kerns"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no21_college_band_singer.jpg",
+      "title": "College Night at The 808: three local bands for $5",
+      "blurb": "Ella Pinchock, Fort Knox and Pocket Ace on the hour from eight; free with an RSVP.",
+      "href": "#808-college-night"
+    },
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no21_goat_on_back.jpg",
+      "title": "Goat yoga on the Kern's lawn",
+      "blurb": "Misfit Herd's goats, Saturday at 8:30; the Nov 1 class was the one cancelled.",
+      "href": "#goat-yoga-kerns"
+    },
+    {
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no21_moss_hand_lens.jpg",
+      "title": "Moss Meander with a naturalist at Mead's Quarry",
+      "blurb": "Two hours of moss, Saturday at two, $15, ages 16 and up.",
+      "href": "#moss-meander"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/no21_techno_dancer.jpg",
+      "title": "Cut Corners ATL takes over Fly by Night",
+      "blurb": "Techno, club and house till one, Saturday from nine, $10.",
+      "href": "#cut-corners-fbn"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no21_dog_bingo_dauber.jpg",
+      "title": "Bow Wow Bingo for the old dogs at Printshop",
+      "blurb": "Adoptable seniors, bingo cards and beer, Sunday two to four.",
+      "href": "#bow-wow-bingo-printshop"
+    }
+  ],
+  "stories": [
+    {
+      "id": "latin-knox-printshop",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageLeft",
+      "title": "Latin.Knox brings three DJs and a Latin house party to Printshop on First Friday",
+      "deck": "Starts with the classics, goes underground.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Nov 6 · 9 PM till close"
+        },
+        {
+          "label": "Where",
+          "value": "Printshop Beer Co. · 1532 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$20"
+        },
+        {
+          "label": "Ages",
+          "value": "21+"
+        },
+        {
+          "label": "The DJs",
+          "value": "EV opens · Jason Davila · Minitiger closes"
+        },
+        {
+          "label": "Earlier",
+          "value": "$12 flights at Printshop, noon to 9"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Latin.Knox, the Latin house party that debuted in July, comes to Printshop for its second night on First Friday. The promoter's pitch is a set that starts familiar and gets deeper as the night goes: DJ EV opens with the Latin party classics and club bangers he plays around Knoxville, Jason Davila, out of Atlanta's underground dance parties, takes the peak, and Minitiger, the Knoxville fixture who closed Fly by Night's Halloween ball, finishes with Latin-infused selections. Nine o'clock, twenty dollars, twenty-one and up, in the taproom on the river at 1532 Island Home Avenue. Knox Social Girls Club is folding its Latin Ladies Night into the same party, and says you do not have to be Latina to come. Printshop's Friday flight deal, twelve dollars for four pours, runs from noon to nine if you want to get there early."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Latin Knox on Instagram — Nov 6 at 1532 Island Home Ave, 9 PM, 21+, $20",
+          "url": "https://www.instagram.com/latin.knox/p/DeK6CF1RZgs/"
+        },
+        {
+          "label": "Latin Knox on Instagram — Minitiger closes",
+          "url": "https://www.instagram.com/latin.knox/p/DexiZCemoed/"
+        },
+        {
+          "label": "Printshop Beer Co. on Instagram — the week ahead",
+          "url": "https://www.instagram.com/printshopbeer/p/DfIKKpKpz1E/"
+        },
+        {
+          "label": "Knox Social Girls Club on Instagram — Latin Ladies Night",
+          "url": "https://www.instagram.com/knoxsocialgirlsclub/p/DfFsxfaHzub/"
+        },
+        {
+          "label": "Printshop Beer Co. — specials",
+          "url": "https://printshopbeer.com/specials/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-06T21:00:00-05:00",
+        "endDate": "2026-11-07T01:00:00-05:00",
+        "locationName": "Printshop Beer Co.",
+        "locationAddress": "1532 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "printshop",
+          "latin-knox",
+          "dj-ev",
+          "jason-davila",
+          "minitiger"
+        ],
+        "igAct": {
+          "key": "latin-knox"
+        },
+        "igBanner": [
+          "Latin.Knox: three DJs at Printshop",
+          "First Friday, nine o'clock, twenty-one and up"
+        ]
+      },
+      "image": "/assets/spots/no21_latin_dj_hands.jpg"
+    },
+    {
+      "id": "808-college-night",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "title": "The 808's College Night puts Ella Pinchock, Fort Knox and Pocket Ace on one bill Friday for five dollars",
+      "deck": "Free with an RSVP.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Nov 6 · doors 7, music 8"
+        },
+        {
+          "label": "Where",
+          "value": "The 808 · 808 Sevier Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$5 at the door · free with an RSVP",
+          "href": "https://posh.vip/f/f421c"
+        },
+        {
+          "label": "Ages",
+          "value": "18+"
+        },
+        {
+          "label": "Set times",
+          "value": "Ella Pinchock 8 · Fort Knox 9 · Pocket Ace 10"
+        },
+        {
+          "label": "Parking",
+          "value": "The venue's map of the lots and street spaces around the block",
+          "zoom": "/assets/diagrams/the-808-parking.svg"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The 808, the music venue that opened at 808 Sevier Avenue in October with national touring acts, gives Friday to the locals. College Night is three Knoxville bands on the hour, Ella Pinchock at eight, Fort Knox at nine and Pocket Ace at ten, with the doors at seven. It is five dollars at the door and free for anyone who RSVPs on the venue's Posh page, eighteen and up. The room's own line is come out and support the city's local talent. The Vols are not playing until Saturday, so the avenue is yours Friday."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The 808 on Instagram — College Night, Nov 6",
+          "url": "https://www.instagram.com/808knox/p/DfFnq0bCW06/"
+        },
+        {
+          "label": "The 808 — live music schedule",
+          "url": "https://808knox.com/"
+        },
+        {
+          "label": "Posh — RSVP to College Night 808",
+          "url": "https://posh.vip/f/f421c"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-06T19:00:00-05:00",
+        "endDate": "2026-11-06T23:00:00-05:00",
+        "locationName": "The 808",
+        "locationAddress": "808 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "the-808"
+        ],
+        "igAct": {
+          "none": "the three bands' handles are not in the venue's post or flyer and could not be verified from their own profiles"
+        },
+        "igBanner": [
+          "College Night at The 808: three local bands",
+          "Friday, doors at seven, five dollars"
+        ]
+      },
+      "image": "/assets/spots/no21_college_band_singer.jpg"
+    },
+    {
+      "id": "sokno-sourdough-first-friday",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageLeft",
+      "title": "SoKno Sourdough's First Friday pairs artist Peter Riesing with Paradise Chocolate's new chocolate tonic",
+      "deck": "A bakery, a painter and a drink to taste.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Nov 6 · First Friday evening"
+        },
+        {
+          "label": "Where",
+          "value": "SoKno Sourdough · 2006 Barber St, between Redbud Kitchen and Hi-Wire"
+        },
+        {
+          "label": "On",
+          "value": "Work by Peter Riesing · Paradise Chocolate bars · samples of a chocolate tonic"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "SoKno Sourdough, the all-sourdough bakery on Barber Street, opens its doors for First Friday with Peter Riesing's art on the walls and Paradise Chocolate at a table. Paradise, the Knoxville bean-to-bar maker, was at the bakery for an earlier First Friday and is back with its bars and something new from its kitchen: a chocolate tonic, which it will be pouring as samples. The bakery and the chocolate are both small, woman-run South Knoxville businesses, and this is the kind of evening where you meet the people who make the thing. Paradise moves on to the Drop Inn's fire pit for Fall Fest on Saturday with s'mores and drinking chocolate."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Paradise Chocolate Co on Instagram — Nov 6 at SoKno Sourdough",
+          "url": "https://www.instagram.com/paradisechocolateco/p/Dexz7z2jC8z/"
+        },
+        {
+          "label": "SoKno Sourdough on Instagram",
+          "url": "https://www.instagram.com/soknosourdough/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-06T18:00:00-05:00",
+        "locationName": "SoKno Sourdough",
+        "locationAddress": "2006 Barber St, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "sokno-sourdough",
+          "paradise-chocolate",
+          "peter-riesing"
+        ],
+        "igAct": {
+          "key": "paradise-chocolate"
+        },
+        "igBanner": [
+          "First Friday at SoKno Sourdough: art and chocolate tonic",
+          "Friday evening on Barber Street"
+        ]
+      },
+      "image": "/assets/spots/no21_chocolate_tonic_pour.jpg"
+    },
+    {
+      "id": "cut-corners-fbn",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "title": "Cut Corners brings its Atlanta techno, club and house night to Fly by Night Saturday",
+      "deck": "Bouncy techno till one, ten dollars.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Nov 7 · 9 PM – 1 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Fly by Night · 906 Sevier Ave, Suite 126"
+        },
+        {
+          "label": "Cost",
+          "value": "$10"
+        },
+        {
+          "label": "The sound",
+          "value": "Bouncy techno, banging club and bubbling house, in the collective's words"
+        },
+        {
+          "label": "Game clock",
+          "value": "The Vols kick off against Kentucky at 6:15 across the river; it is over about when this starts"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Cut Corners, the Atlanta collective that describes itself as engineering random acts of creativity through music, dancing and interactive art, is on tour and taking over Fly by Night, the seventies cocktail lounge on Sevier Avenue, on Saturday. Their own announcement promises a toolbox of bouncy techno, banging club and bubbling house from nine until one, ten dollars at the door. Fly by Night is the lounge that ran four Halloween nights in a row last week, so the floor is warmed up. Kentucky kicks off against the Vols at 6:15 Saturday; the game should be done around the time the first DJ goes on, and the Sevier Avenue bars will be emptying out of the fourth quarter."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Cut Corners on Instagram — Nov 7 at Fly by Night",
+          "url": "https://www.instagram.com/cutcornersatl/p/DevHkq3jS4J/"
+        },
+        {
+          "label": "Fly by Night — hours",
+          "url": "https://www.flybynightknox.com/"
+        },
+        {
+          "label": "ESPN — Kentucky at Tennessee, Nov 7, 6:15 PM",
+          "url": "https://www.espn.com/college-football/team/schedule/_/id/2633"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-07T21:00:00-05:00",
+        "endDate": "2026-11-08T01:00:00-05:00",
+        "locationName": "Fly by Night",
+        "locationAddress": "906 Sevier Ave Suite 126, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "fly-by-night",
+          "cut-corners"
+        ],
+        "igAct": {
+          "key": "cut-corners"
+        },
+        "igBanner": [
+          "Cut Corners ATL takeover at Fly by Night",
+          "Saturday, nine till one, ten dollars"
+        ]
+      },
+      "image": "/assets/spots/no21_techno_dancer.jpg"
+    },
+    {
+      "id": "bow-wow-bingo-printshop",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "title": "Bow Wow Bingo brings adoptable dogs and bingo cards to the Printshop patio Sunday afternoon",
+      "deck": "Kid friendly, dog friendly, beer friendly.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Nov 8 · 2 – 4 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Printshop Beer Co. · 1532 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "Buy a bingo card; every card goes to the rescue"
+        },
+        {
+          "label": "For",
+          "value": "Knox Vintage Pet Project, which places senior and special-needs dogs and cats"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly sunny and 65"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Knox Vintage Pet Project is the small rescue that finds homes for the old dogs and the ones with medical bills, and Bow Wow Bingo is how it pays for them. Sunday's is at Printshop from two to four: bingo cards, cold beer, and foster dogs walking the patio looking for a lap. The rescue's own rule is that it is kid friendly, dog friendly and beer friendly, so bring the leash and the stroller. Last month's bingo was at Alliance Brewing; this one moves up Island Home Avenue to the brewery on the river, and the forecast is mostly sunny and 65, a patio day."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Knox Vintage Pet Project on Instagram — Bow Wow Bingo, Nov 8",
+          "url": "https://www.instagram.com/knoxvintagepetproject/p/DfNZP_Ymk4E/"
+        },
+        {
+          "label": "Printshop Beer Co. on Instagram — the week ahead",
+          "url": "https://www.instagram.com/printshopbeer/p/DfIKKpKpz1E/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-08T14:00:00-05:00",
+        "endDate": "2026-11-08T16:00:00-05:00",
+        "locationName": "Printshop Beer Co.",
+        "locationAddress": "1532 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "printshop",
+          "knox-vintage-pet-project"
+        ],
+        "igAct": {
+          "key": "knox-vintage-pet-project"
+        },
+        "igBanner": [
+          "Bow Wow Bingo at Printshop for Knox Vintage Pet Project",
+          "Sunday, two to four"
+        ]
+      },
+      "image": "/assets/spots/no21_dog_bingo_dauber.jpg"
+    },
+    {
+      "id": "uptop-karaoke-kerns",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageRight",
+      "title": "UpTop, the rooftop bar at Kern's, hosts a karaoke night Thursday with half-off drinks and a date-night giveaway",
+      "deck": "Sing on the roof, win a date night.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Nov 5 · 7 – 9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "UpTop Rooftop Bar at Kern's · 2201 Kern's Rising Way"
+        },
+        {
+          "label": "On",
+          "value": "Karaoke · half off select drinks · pop-ups · a date night hosted by Kern's up for grabs"
+        },
+        {
+          "label": "Weather",
+          "value": "Rain showers likely Thursday, 73; the bar is indoor-outdoor"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "UpTop is the rooftop bar on the Kern's patio, the newest of the food hall's three bars, and Thursday it runs its first karaoke night: two hours of singing from seven to nine with half off select drinks, pop-ups, and a drawing for a date night that Kern's itself will host. Thursday is also the night Roni's Mac Bar runs themed trivia on the Scruffy Bar screens downstairs at 6:30, so the building has a warm-up act. Rain showers are likely Thursday; UpTop bills itself as indoor-outdoor, so the microphone stays dry."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Up Top Rooftop Bar on Instagram — karaoke, Nov 5",
+          "url": "https://www.instagram.com/uptoprooftopbar/p/DfDSpKnJsgR/"
+        },
+        {
+          "label": "Kern's on Instagram — Kern's in November",
+          "url": "https://www.instagram.com/kernsknox/p/DfNATfiiPz2/"
+        },
+        {
+          "label": "Kern's on Instagram — Roni's trivia Thursdays",
+          "url": "https://www.instagram.com/kernsknox/p/DfIKp8HoGkm/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-05T19:00:00-05:00",
+        "endDate": "2026-11-05T21:00:00-05:00",
+        "locationName": "UpTop Rooftop Bar at Kern's",
+        "locationAddress": "2201 Kern's Rising Way, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "kerns",
+          "uptop"
+        ],
+        "igAct": {
+          "none": "the bar's own karaoke night; no host or DJ is named in its post"
+        },
+        "igBanner": [
+          "Karaoke night at UpTop, the Kern's rooftop bar",
+          "Thursday, seven to nine"
+        ]
+      },
+      "image": "/assets/spots/no21_rooftop_karaoke_mic.jpg"
+    },
+    {
+      "id": "all-play-live-kerns",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageLeft",
+      "title": "All Play Live turns the Kern's lawn into a family game show Thursday night",
+      "deck": "Parents and kids team up for prizes.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Nov 5 · 7 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The lawn at Kern's · 2201 Kern's Rising Way"
+        },
+        {
+          "label": "Format",
+          "value": "Interactive games, challenges, audience participation and prizes, parents and kids as teams"
+        },
+        {
+          "label": "Dinner",
+          "value": "The food hall is open till 10 on Thursdays"
+        },
+        {
+          "label": "Weather",
+          "value": "Rain showers likely Thursday, 73"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "All Play Live is a touring game show for families: parents and kids form a team, the host runs interactive games and challenges, the audience plays along and there are prizes. Kern's puts it on the lawn Thursday at seven, and the food hall's own advice is to grab dinner inside first and a sweet treat after. Showers are likely Thursday afternoon and evening, so check the Kern's feed before you load the car; the hall is open until ten regardless."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Kern's on Instagram — All Play Live, Nov 5",
+          "url": "https://www.instagram.com/kernsknox/p/De1jWtfo_tn/"
+        },
+        {
+          "label": "Kern's on Instagram — Kern's in November",
+          "url": "https://www.instagram.com/kernsknox/p/DfNATfiiPz2/"
+        },
+        {
+          "label": "Kern's — hours",
+          "url": "https://kernsbakery.com/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-05T19:00:00-05:00",
+        "locationName": "Kern's",
+        "locationAddress": "2201 Kern's Rising Way, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "kerns"
+        ],
+        "igAct": {
+          "none": "a touring family game show booked by the venue; the venue's post names no handle for it"
+        },
+        "igBanner": [
+          "All Play Live: a family game show on the Kern's lawn",
+          "Thursday at seven"
+        ]
+      },
+      "image": "/assets/spots/no21_family_buzzer.jpg"
+    },
+    {
+      "id": "goat-yoga-kerns",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "title": "Goat yoga with Misfit Herd comes to the Kern's lawn Saturday morning",
+      "deck": "Postponed from Nov 1; this one is on.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Nov 7 · 8:30 AM"
+        },
+        {
+          "label": "Where",
+          "value": "The lawn at Kern's · 2201 Kern's Rising Way"
+        },
+        {
+          "label": "Tickets",
+          "value": "Through Misfit Herd's ticket page",
+          "href": "https://buytickets.at/misfitherd/2341692"
+        },
+        {
+          "label": "Bring",
+          "value": "A mat and a layer: it is 42 at dawn Saturday, climbing to 66"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Misfit Herd's goat yoga is a yoga class with small goats loose in it, which is to say the goats climb on you during the poses and everyone takes pictures. Kern's had it booked for November 1 and 7; the first date was cancelled, so Saturday's 8:30 class on the lawn is the one. Tickets are sold on Misfit Herd's page, linked above. Saturday is mostly sunny but starts at 42 degrees, so dress for a cold mat, and the food hall opens at eight for coffee on the way in."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Kern's on Instagram — Goat Yoga, Nov 7 (Nov 1 cancelled)",
+          "url": "https://www.instagram.com/kernsknox/p/DertPpch7ue/"
+        },
+        {
+          "label": "Kern's on Instagram — Kern's in November",
+          "url": "https://www.instagram.com/kernsknox/p/DfNATfiiPz2/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-07T08:30:00-05:00",
+        "locationName": "Kern's",
+        "locationAddress": "2201 Kern's Rising Way, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "kerns"
+        ],
+        "igAct": {
+          "none": "Misfit Herd has no verified Instagram handle; its ticket page is the only link"
+        },
+        "igBanner": [
+          "Goat yoga on the Kern's lawn",
+          "Saturday, eight thirty in the morning"
+        ]
+      },
+      "image": "/assets/spots/no21_goat_on_back.jpg"
+    },
+    {
+      "id": "moss-meander",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "title": "Moss Meander walks Mead's Quarry with a naturalist and a hand lens Saturday afternoon",
+      "deck": "Moss holds the story of the forest.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Nov 7 · 2 – 4 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Mead's Quarry · 3526 Island Home Ave · meet at the picnic tables"
+        },
+        {
+          "label": "Cost",
+          "value": "$15, plus the site's ticket fee"
+        },
+        {
+          "label": "Ages",
+          "value": "16+"
+        },
+        {
+          "label": "Before you go",
+          "value": "Sign the park's yearly waiver at ijams.org/waiver",
+          "href": "https://www.ijams.org/waiver"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Moss, the park says, is where children learned to look for fairies, and it is also an organism that holds the story of the forest in its structure. Moss Meander is two hours at Mead's Quarry with an Ijams Nature Center naturalist, learning to tell the species apart and what each one says about the ground it grows on, at the one time of year the moss is the greenest thing in the woods. Meet at the picnic tables by the quarry lot at two; it is fifteen dollars, for ages sixteen and up, and the walk is on uneven trail. Saturday is mostly sunny and 66."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Moss Meander, Nov 7",
+          "url": "https://www.ijams.org/event-details/moss-meander-2026-11-07-14-00"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-07T14:00:00-05:00",
+        "endDate": "2026-11-07T16:00:00-05:00",
+        "locationName": "Mead's Quarry, Ijams Nature Center",
+        "locationAddress": "3526 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a naturalist-led park program; no act"
+        },
+        "igBanner": [
+          "Moss Meander at Ijams Nature Center",
+          "Saturday, two to four, fifteen dollars"
+        ]
+      },
+      "image": "/assets/spots/no21_moss_hand_lens.jpg"
+    },
+    {
+      "id": "wilderness-basics",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "title": "Wilderness Basics teaches shelter, fire and food in three hours at Ijams Nature Center Saturday",
+      "deck": "Thrive, not just survive, the park says.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Nov 7 · 9 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$15, plus the site's ticket fee · parking free for participants"
+        },
+        {
+          "label": "Ages",
+          "value": "14+"
+        },
+        {
+          "label": "Terrain",
+          "value": "Up to a mile over rocks, roots and gravel"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Outside can be a scary place, the course description admits: bears, winter storms, critters and mountains. Wilderness Basics is the park's introductory answer, three hours on Saturday morning learning to prioritize in a survival scenario, build a shelter, start and keep a fire, and find and store food, with some walking between the lessons. It is for ages fourteen and up, fifteen dollars, and it starts at nine from the visitor center at 2915 Island Home Avenue with the parking fee waived for the class. The waiver at ijams.org/waiver covers you for the year."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Wilderness Basics, Nov 7",
+          "url": "https://www.ijams.org/event-details/wilderness-basics-beginner-outdoor-skills-2026-11-07-09-00"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-07T09:00:00-05:00",
+        "endDate": "2026-11-07T12:00:00-05:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a park skills class; no act"
+        },
+        "igBanner": [
+          "Wilderness Basics at Ijams Nature Center: shelter, fire, food",
+          "Saturday, nine to noon"
+        ]
+      },
+      "image": "/assets/spots/no21_fire_starting_hands.jpg"
+    },
+    {
+      "id": "bird-banding",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "title": "Bird banding at Meads Quarry puts songbirds in gloved hands for five dollars Sunday morning",
+      "deck": "Behind the scenes at the banding station.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Nov 8 · 8 – 9:30 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Meads Quarry lot · 3526 Island Home Ave · a staff member walks the group five minutes to the station"
+        },
+        {
+          "label": "Cost",
+          "value": "$5, plus the site's ticket fee · no parking fee for the program"
+        },
+        {
+          "label": "Before you go",
+          "value": "Sign the park's yearly waiver at ijams.org/waiver",
+          "href": "https://www.ijams.org/waiver"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The Ijams community science team runs a bird banding station in the woods behind Meads Quarry, and a few mornings a season it lets the public in. Sunday's is one: at eight the group meets in the quarry lot, walks five minutes to the station and watches migratory and resident songbirds safely netted, measured, banded and released, the data going toward the health of the birds around South Knoxville. Five dollars is the whole ticket, it is ninety minutes, and November is late migration, so the nets catch the birds that stay. It is 41 at dawn Sunday and clear."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Bird Banding, Nov 8",
+          "url": "https://www.ijams.org/event-details/bird-banding-at-ijams-nature-center-2026-11-08-08-00"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-08T08:00:00-05:00",
+        "endDate": "2026-11-08T09:30:00-05:00",
+        "locationName": "Meads Quarry, Ijams Nature Center",
+        "locationAddress": "3526 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a park science program; no act"
+        },
+        "igBanner": [
+          "Bird banding at Ijams Nature Center",
+          "Sunday, eight in the morning, five dollars"
+        ]
+      },
+      "image": "/assets/spots/no21_bird_in_hand_band.jpg"
+    },
+    {
+      "id": "sound-bath-ijams",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "title": "A sound bath with Tibetan and crystal singing bowls fills the Ijams visitor center Sunday morning",
+      "deck": "Bring a mat and a blanket.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Nov 8 · 10 – 11 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center visitor center, the large room · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$25, plus the site's ticket fee"
+        },
+        {
+          "label": "Led by",
+          "value": "KB Sound Healing"
+        },
+        {
+          "label": "Bring",
+          "value": "A mat, a blanket, a pillow or a bolster"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "KB Sound Healing brings Tibetan singing bowls, crystal bowls, a gong and the rest of its instruments to the big room at the Ijams Nature Center visitor center Sunday at ten for an hour-long sound bath, which is a lie-down meditation where the sound does the work. Bring whatever makes an hour on the floor comfortable: a mat, a blanket, a pillow. It is twenty-five dollars. If you want to stack the morning, the bird banding at Meads Quarry ends at 9:30, a five-minute drive away, and Hope Irwin's Sunday yoga class follows in the same building at 11:30 for ten dollars."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Sound Bath Meditation, Nov 8",
+          "url": "https://www.ijams.org/event-details/special-event-sound-bath-meditation-november-8"
+        },
+        {
+          "label": "Ijams Nature Center — Self Care Sunday yoga, Nov 8",
+          "url": "https://www.ijams.org/event-details/special-event-self-care-sunday-yoga-class-with-hope-irwin-november-8"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-08T10:00:00-05:00",
+        "endDate": "2026-11-08T11:00:00-05:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "KB Sound Healing has no verified Instagram handle"
+        },
+        "igBanner": [
+          "Sound bath at Ijams Nature Center",
+          "Sunday, ten to eleven, twenty-five dollars"
+        ]
+      },
+      "image": "/assets/spots/no21_singing_bowl_mallet.jpg"
+    },
+    {
+      "id": "specials-board",
+      "label": "Suttree Landing",
+      "labelColor": "ink",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "title": "Earl's game-day board comes out for Kentucky Saturday night, between a rita a day and Sunday mimosas",
+      "deck": "Kickoff is 6:15; the board runs all day.",
+      "facts": [
+        {
+          "label": "Thursday",
+          "value": "$10 Patrón mango ritas"
+        },
+        {
+          "label": "Friday",
+          "value": "$9 spicy pineapple ritas"
+        },
+        {
+          "label": "Saturday",
+          "value": "$8 house margaritas · the game-day board: $2 off drafts, $6 Orange Bliss, 6-for-5 beer buckets, $2 off pizza, $4 and $5 shots · Kentucky at Tennessee, 6:15 PM"
+        },
+        {
+          "label": "Sunday",
+          "value": "$7 mimosas and Bloody Marys"
+        },
+        {
+          "label": "Hours",
+          "value": "11 AM – 10 PM daily · 610 Waterfront Dr"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Earl's, the bar and kitchen on Waterfront Drive at Suttree Landing, runs one special a day from eleven to ten, and Saturday the game-day board comes out on top of it: the Vols host Kentucky at 6:15 and Earl's runs two dollars off drafts, six-dollar Orange Bliss cocktails, six beer buckets for the price of five, two dollars off pizza and four- and five-dollar shots all day, with eight-dollar house margaritas as Saturday's standing deal. Thursday is ten-dollar Patrón mango ritas under likely rain showers, Friday nine-dollar spicy pineapple ritas on a partly sunny 70-degree afternoon, and Sunday seven-dollar mimosas and Bloody Marys for whatever the score was."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Earl's — specials and the game-day board",
+          "url": "https://earlsknox.com/specials/"
+        },
+        {
+          "label": "ESPN — Tennessee Volunteers schedule (Kentucky, Nov 7, 6:15 PM)",
+          "url": "https://www.espn.com/college-football/team/schedule/_/id/2633"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "earls"
+        ],
+        "igAct": {
+          "none": "a specials board; no act"
+        },
+        "igBanner": [
+          "Earl's game-day board for Kentucky, and a rita a day",
+          "Saturday, kickoff at six fifteen"
+        ],
+        "standing": true,
+        "standingKey": "specials-board"
+      },
+      "image": "/assets/spots/no21_orange_bliss_cocktail.jpg"
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "Andy reads the weekend.",
+      "description": "Vol. 1 No. 21 · Nov 5–8",
+      "duration": "5:02",
+      "src": "/audio/2026-11-04.mp3"
+    },
+    "calendar": [
+      {
+        "month": "NOV",
+        "day": "5",
+        "title": "UpTop karaoke night at Kern's",
+        "meta": "7 – 9 PM · half off select drinks",
+        "starred": false,
+        "href": "#uptop-karaoke-kerns"
+      },
+      {
+        "month": "NOV",
+        "day": "5",
+        "title": "All Play Live on the Kern's lawn",
+        "meta": "7 PM · family game show",
+        "starred": false,
+        "href": "#all-play-live-kerns"
+      },
+      {
+        "month": "NOV",
+        "day": "5",
+        "title": "$10 Patrón mango ritas at Earl's",
+        "meta": "11 AM – 10 PM · a rita a day",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "NOV",
+        "day": "6",
+        "title": "AMBC Fall Fest opens at Baker Creek",
+        "meta": "5 PM · bluegrass 5:30, lit jump line 6:30, film 6:45 · free",
+        "starred": true,
+        "href": "#ambc-fall-fest"
+      },
+      {
+        "month": "NOV",
+        "day": "6",
+        "title": "First Friday at SoKno Sourdough",
+        "meta": "Evening · Peter Riesing's art, Paradise Chocolate's tonic",
+        "starred": false,
+        "href": "#sokno-sourdough-first-friday"
+      },
+      {
+        "month": "NOV",
+        "day": "6",
+        "title": "College Night at The 808",
+        "meta": "Doors 7 · Ella Pinchock, Fort Knox, Pocket Ace · $5 · 18+",
+        "starred": false,
+        "href": "#808-college-night"
+      },
+      {
+        "month": "NOV",
+        "day": "6",
+        "title": "Latin.Knox at Printshop",
+        "meta": "9 PM · DJs EV, Jason Davila, Minitiger · $20 · 21+",
+        "starred": true,
+        "href": "#latin-knox-printshop"
+      },
+      {
+        "month": "NOV",
+        "day": "7",
+        "title": "Goat yoga on the Kern's lawn",
+        "meta": "8:30 AM · Misfit Herd",
+        "starred": false,
+        "href": "#goat-yoga-kerns"
+      },
+      {
+        "month": "NOV",
+        "day": "7",
+        "title": "Fall Fest Saturday: rides, Whip Off, Best Line",
+        "meta": "Rides from 9:30 · Whip Off 3 · Best Line 7 · bands till 10:30",
+        "starred": true,
+        "href": "#ambc-fall-fest"
+      },
+      {
+        "month": "NOV",
+        "day": "7",
+        "title": "Wilderness Basics at Ijams Nature Center",
+        "meta": "9 AM – noon · $15 · ages 14+",
+        "starred": false,
+        "href": "#wilderness-basics"
+      },
+      {
+        "month": "NOV",
+        "day": "7",
+        "title": "Moss Meander at Mead's Quarry",
+        "meta": "2 – 4 PM · $15 · ages 16+",
+        "starred": false,
+        "href": "#moss-meander"
+      },
+      {
+        "month": "NOV",
+        "day": "7",
+        "title": "Vols host Kentucky — game-day board at Earl's",
+        "meta": "Kickoff 6:15 · board all day",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "NOV",
+        "day": "7",
+        "title": "Cut Corners ATL at Fly by Night",
+        "meta": "9 PM – 1 AM · $10",
+        "starred": true,
+        "href": "#cut-corners-fbn"
+      },
+      {
+        "month": "NOV",
+        "day": "8",
+        "title": "Bird banding at Meads Quarry",
+        "meta": "8 – 9:30 AM · $5",
+        "starred": false,
+        "href": "#bird-banding"
+      },
+      {
+        "month": "NOV",
+        "day": "8",
+        "title": "Sound bath at Ijams Nature Center",
+        "meta": "10 – 11 AM · $25 · bring a mat",
+        "starred": false,
+        "href": "#sound-bath-ijams"
+      },
+      {
+        "month": "NOV",
+        "day": "8",
+        "title": "Bow Wow Bingo at Printshop",
+        "meta": "2 – 4 PM · Knox Vintage Pet Project",
+        "starred": true,
+        "href": "#bow-wow-bingo-printshop"
+      }
+    ]
+  }
+}

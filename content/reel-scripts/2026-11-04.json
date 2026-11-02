@@ -1,0 +1,21 @@
+{
+  "_comment": "One spoken quip per story for the week's Reel (scripts/ig-reel.py). Real spellings; the script applies the LEXICON's TTS respellings itself. Keep each under about fifteen words — it is said and shown.",
+  "intro": "Fourteen things in South Knoxville this weekend, and a mountain bike festival on top.",
+  "outro": "That's the weekend. The whole briefing is at soknoear.com. Link in bio.",
+  "quips": {
+    "ambc-fall-fest": "AMBC's Fall Fest at Baker Creek: rides, five bands and a Whip Off. Friday and Saturday, free.",
+    "latin-knox-printshop": "Latin.Knox puts three DJs in Printshop on First Friday. Nine o'clock, twenty dollars.",
+    "808-college-night": "Three local bands for five dollars at The 808 Friday. Doors at seven, free with an RSVP.",
+    "sokno-sourdough-first-friday": "First Friday at SoKno Sourdough: Peter Riesing's art and a chocolate tonic to taste.",
+    "cut-corners-fbn": "Cut Corners brings Atlanta techno to Fly by Night Saturday, nine till one, ten dollars.",
+    "bow-wow-bingo-printshop": "Bow Wow Bingo at Printshop Sunday, two to four: adoptable old dogs and bingo cards.",
+    "uptop-karaoke-kerns": "Karaoke on the Kern's rooftop Thursday, seven to nine, with half-off drinks.",
+    "all-play-live-kerns": "All Play Live, a family game show on the Kern's lawn, Thursday at seven.",
+    "goat-yoga-kerns": "Goat yoga on the Kern's lawn Saturday at eight thirty. Bring a mat and a layer.",
+    "moss-meander": "Moss Meander at Mead's Quarry, Saturday at two, with a naturalist and a hand lens.",
+    "wilderness-basics": "Shelter, fire and food in three hours: Wilderness Basics at Ijams Nature Center, Saturday at nine.",
+    "bird-banding": "Bird banding at Meads Quarry, Sunday at eight, five dollars.",
+    "sound-bath-ijams": "A sound bath with singing bowls at Ijams Nature Center, Sunday at ten.",
+    "specials-board": "Earl's game-day board for Kentucky Saturday, kickoff at six fifteen, and a rita a day."
+  }
+}

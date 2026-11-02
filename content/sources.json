@@ -82,7 +82,7 @@
       "district": "Old Sevier",
       "address": "1317 Island Home Ave",
       "instagram": "trailheadbeer",
-      "note": "The weekly lineup is a FLYER IMAGE; the caption only says 'planning their weekend?'. Read the scan's `img` text and open the post if it is thin. Kitchen is Gato Peligroso (@gatopeligrosokno)."
+      "note": "The monthly lineup is a FLYER IMAGE posted on or about the 1st; the caption only says 'planning their weekend?'. Read the scan's `img` text and open the post if it is thin. Kitchen is Gato Peligroso (@gatopeligrosokno). No November flyer as of Nov 2."
     },
     {
       "key": "pink-cactus",
@@ -216,7 +216,7 @@
         "https://kernsbakery.com/football-watch-parties/",
         "https://kernsbakery.com/"
       ],
-      "note": "The site lists weekly specials but no dated events; the feed has them."
+      "note": "The site lists weekly specials but no dated events; the feed has them. On the 1st the venue posts a 'Kern's in <month>' carousel whose second slide is the month's dated list as an IMAGE; read it at full size from the post page. UpTop (@uptoprooftopbar) and Roni's post their own nights on the grid as collabs."
     },
     {
       "key": "puckers",
@@ -255,9 +255,10 @@
       "name": "Appalachian Mountain Bike Club",
       "district": "Urban Wilderness",
       "web": [
-        "https://www.ambcknox.org/events/list/"
+        "https://www.ambcknox.org/events/list/",
+        "https://fallfest.ambcknox.org/schedule/"
       ],
-      "note": "Work parties, social rides, races, Fall Fest."
+      "note": "Work parties, social rides, races, Fall Fest. Fall Fest (first weekend of November) has its own site, fallfest.ambcknox.org, with the full schedule; the club's @ambcknox posts match it."
     },
     {
       "key": "legacy-parks",
