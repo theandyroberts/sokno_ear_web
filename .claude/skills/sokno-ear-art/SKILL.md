@@ -15,13 +15,15 @@ stay for the portrait and diagram modes and as a fallback.
 
 ## The locked prompt (set with Andy, 2026-11-02)
 
-**The standard is the No. 20 pieces Andy framed and had signed: the upright bass, the opossum, the bull rider, the Día de los Muertos face. One subject, large, crisp black ink, popping off plain cream paper. New pictures must look like the same artist.**
+**The standard is the No. 20 pieces Andy framed and had signed: the upright bass, the opossum, the bull rider, the Día de los Muertos face. One subject, huge, crisp black ink, popping off plain cream paper. New pictures must look like the same artist.**
+
+**Composition (Andy, 2026-11-02, after No. 21 came out with too much white): the subject runs off at least two edges with almost no empty paper. Cream is what shows in the gaps, not a margin around a figure. No. 20 reads iconic because of big dark masses, a bleed off the frame and one idea with a twist; a smiling person centred on paper is a stock illustration. To enlarge a finished picture, ask its own ChatGPT chat to "move in close" (it redraws with new detail, as on the No. 21 football); a plain crop is the fallback. Every hand must clearly belong to someone or be gone: no arm floating in from nowhere. Story cards show the middle 4:3 of a square, so eyes must sit below the top eighth.**
 
 `content/art-style.json` is the wrapper, word for word:
 
 > Generate an image, 1:1 aspect ratio. A vintage local-newspaper engraving: [the subject and what
-> it's doing, the crop, two or three details], large in the frame. Behind it, nothing but plain,
-> clean warm cream paper #F3E8D2, so the subject pops off the page. Predominantly crisp black ink
+> it's doing, the crop, two or three details], large in the frame. It is so big it runs off at least two edges of the square, with almost no empty paper; what little shows is plain,
+> clean warm cream #F3E8D2, so the subject pops off the page. Predominantly crisp black ink
 > linework with stipple dots and cross-hatch shading, strong contrast, slight engraving texture,
 > restrained accents in muted pine green and rust red. Charming and specific, not generic.
 > Hand-drawn local newspaper engraving, not a photograph, not flat vector. No text or letters anywhere.
