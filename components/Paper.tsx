@@ -229,10 +229,8 @@ export function Paper({ episode, permalinks = true, storyView = false, venues }:
               {lifted.map((s) => renderStory(s, true))}
             </div>
             <aside id="listen" style={{ display: "flex", flexDirection: "column", gap: 22, position: storyView ? "static" : "sticky", top: 16 }}>
-              <div className="ds-card-desktop">
-                <DirtySouthCard />
-              </div>
-              {storyView && <SubscribeForm variant="sidebar" />}
+              {/* The signup leads the column and the party card closes it (Andy, 2026-11-02). */}
+              <SubscribeForm variant="sidebar" />
               {sidebar.audio && (
                 <AudioBriefingPlayer title={sidebar.audio.title} intro={sidebar.audio.intro} description={sidebar.audio.description} duration={sidebar.audio.duration} src={sidebar.audio.src} />
               )}
@@ -252,6 +250,9 @@ export function Paper({ episode, permalinks = true, storyView = false, venues }:
                 </Well>
                 </div>
               )}
+              <div className="ds-card-desktop">
+                <DirtySouthCard />
+              </div>
             </aside>
           </div>
           {/* Below the feature: the map card and the signup ride side by side under the

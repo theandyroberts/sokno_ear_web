@@ -9,18 +9,19 @@ const load = (file: string): Episode =>
 
 // No. 15 as published, measured on the live site at 1360px on 2026-09-28; the sidebar
 // re-measured on 2026-10-26 after the calendar rows took the venue-logo tile and the
-// cue line and the day bar took the date (17 rows, four day bars: 2929px).
+// cue line and the day bar took the date (17 rows, four day bars), and on 2026-11-02
+// after the signup took the top of the column: 3191px.
 const no15 = load("content/episodes/2026-09-23.json");
 
 describe("layout — lifting stories beside a long sidebar", () => {
   it("estimates land close to what the browser measured on No. 15", () => {
     expect(Math.abs(estimateStoryHeight(no15.feature) - 1551)).toBeLessThan(60);      // feature, banner image
     expect(Math.abs(estimateStoryHeight(no15.stories[0]) + 123 - 1293)).toBeLessThan(60); // first story, lifted
-    expect(Math.abs(estimateSidebarHeight(no15.sidebar) - 2929)).toBeLessThan(90);    // ad, player, 17 rows with logo tiles
+    expect(Math.abs(estimateSidebarHeight(no15.sidebar) - 3191)).toBeLessThan(90);    // signup, player, 17 rows with logo tiles, ad
   });
 
-  it("No. 15 lifts one story, as it did under the row-count rule", () => {
-    expect(liftCount(no15)).toBe(1);
+  it("No. 15 lifts two stories now the signup has lengthened its column", () => {
+    expect(liftCount(no15)).toBe(2);
   });
 
   it("a 14-row calendar beside an ordinary feature lifts a story (No. 16 ran a third empty)", () => {

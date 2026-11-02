@@ -87,9 +87,9 @@ describe("Paper — standalone article sidebar", () => {
     const signup = within(aside).getByRole("textbox", { name: "Email address" });
     const audio = aside.querySelector("audio")!;
     const fullIssue = within(aside).getByRole("link", { name: /^Home$/ });
-    expect(dirtySouth.compareDocumentPosition(signup) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     expect(signup.compareDocumentPosition(audio) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     expect(audio.compareDocumentPosition(fullIssue) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(fullIssue.compareDocumentPosition(dirtySouth) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     expect(fullIssue).toHaveAttribute("href", "/");
     expect(container.querySelector(".ear-soon-aside, .ear-dayboard, .ear-daynav")).toBeNull();
     expect(container.querySelector(".ear-belowfeature form")).toBeTruthy();
@@ -99,12 +99,15 @@ describe("Paper — standalone article sidebar", () => {
     expect(new Set(emailIds).size).toBe(3);
   });
 
-  it("keeps the full issue calendar, day filters, and existing signup placements", () => {
+  it("keeps the full issue calendar and day filters, with the signup leading the column and the party card closing it", () => {
     const { container } = render(<Paper episode={episode} />);
     expect(container.querySelector(".ear-soon-aside .ear-daybar")).toBeTruthy();
     expect(container.querySelector(".ear-dayboard")).toBeTruthy();
     expect(container.querySelector(".ear-daynav")).toBeTruthy();
-    expect(container.querySelector("aside form, .ear-home-link")).toBeNull();
-    expect(container.querySelectorAll('input[name="subscribe-email"]')).toHaveLength(2);
+    expect(container.querySelector(".ear-home-link")).toBeNull();
+    const aside = container.querySelector("aside")!;
+    expect(aside.firstElementChild!.querySelector("form")).toBeTruthy();
+    expect(aside.lastElementChild!.matches(".ds-card-desktop")).toBe(true);
+    expect(container.querySelectorAll('input[name="subscribe-email"]')).toHaveLength(3);
   });
 });

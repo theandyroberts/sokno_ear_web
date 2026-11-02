@@ -112,12 +112,12 @@ const submitBtnStyle: React.CSSProperties = {
 type SubscribeState = "idle" | "busy" | "error" | "welcomed" | "already";
 
 /**
- * Two placements on the episode page (Andy, 2026-10-13):
+ * Placements on the episode page (Andy, 2026-10-13 and 2026-11-02):
  *  - "well"  — beside the party map under the feature. The courier sits above the copy.
  *  - "band"  — the bottom of the read, beside "Tell the Ear", where the phone-in card
  *              used to be. The courier sits beside the copy and the pitch is the
  *              second-chance one: you read this far, don't miss the next one.
- *  - "sidebar" — a compact signup on standalone articles, above the audio briefing.
+ *  - "sidebar" — a compact signup at the top of the right column, on every page.
  * Each placement gets its own input id so repeated forms stay valid HTML.
  */
 export function SubscribeForm({ variant = "well" }: { variant?: "well" | "band" | "sidebar" }) {
@@ -209,9 +209,9 @@ export function SubscribeForm({ variant = "well" }: { variant?: "well" | "band" 
   if (variant === "sidebar") {
     return (
       <section style={{ ...boxStyle, height: "auto" }}>
-        <div style={headingStyle}>★ Get the Weekend Delivered</div>
+        <div style={headingStyle}>★ Get Notified Each Week!</div>
         <p style={copyStyle}>
-          One free email each Wednesday: the weekend’s events, stories and audio briefing.
+          One email a week: the weekend’s events, stories and audio briefing.
         </p>
         {form}
       </section>
@@ -227,7 +227,7 @@ export function SubscribeForm({ variant = "well" }: { variant?: "well" | "band" 
           <div>
             <p style={leadStyle}>You read to the bottom. You&apos;re one of us now.</p>
             <p style={{ ...copyStyle, margin: "0 0 10px" }}>
-              Put your email here and the next episode comes to you on Wednesday: the weekend&apos;s
+              Put your email here and the next episode comes to you as soon as it&apos;s up: the weekend&apos;s
               plans, the audio briefing, every story. One email a week, free, no spam.
             </p>
           </div>
@@ -239,14 +239,14 @@ export function SubscribeForm({ variant = "well" }: { variant?: "well" | "band" 
 
   return (
     <section style={boxStyle}>
-      <div style={headingStyle}>★ Get the Weekend Delivered</div>
+      <div style={headingStyle}>★ Get Notified Each Week!</div>
       <div style={{ display: "flex", justifyContent: "center", margin: "2px 0 14px" }}>
         <Courier size={132} />
       </div>
-      <p style={leadStyle}>A fresh episode every Wednesday. This dog brings it to your inbox.</p>
+      <p style={leadStyle}>A fresh episode every week. This dog brings it to your inbox.</p>
       <p style={copyStyle}>
         One short email a week: the weekend&apos;s calendar, the audio briefing and every story
-        from around SoKno, Thursday through Sunday. Free, and nobody gets your address but us.
+        from around SoKno, Thursday through Sunday. Nobody gets your address but us.
       </p>
       {form}
     </section>

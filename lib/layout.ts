@@ -20,7 +20,8 @@ const STORY_PER_CHAR = 0.458;  // body and facts text, at the column's measure
 const IMAGE_TOP_EXTRA = 265;   // a banner image sits above the text instead of beside it
 const LIFTED_WRAP = 123;       // divider, section header and padding around a lifted story
 
-const SIDEBAR_AD = 139;        // the Dirty South card and the gap under it
+const SIDEBAR_AD = 139;        // the Dirty South card and the gap beside it
+const SIDEBAR_SIGNUP = 261;    // the signup that leads the column (2026-11-02), and the gap under it
 const SIDEBAR_PLAYER = 385;    // the audio player (title, controls, one line; no intro since 2026-10-26) and the gap under it
 // The calendar was re-measured on No. 15 at 1360px on 2026-10-26, after the rows took
 // the venue-logo tile and the cue line (★ →) under the meta, and the day bar took the
@@ -60,7 +61,7 @@ export function estimateSidebarHeight(sidebar: Episode["sidebar"]): number {
   const rows = sidebar.calendar;
   const dates = rows.filter((c, i) => i === 0 || c.month !== rows[i - 1].month || c.day !== rows[i - 1].day).length;
   const calendar = rows.length ? CALENDAR_FRAME + rows.length * CALENDAR_ROW + dates * CALENDAR_DAYBAR : 0;
-  return SIDEBAR_AD + (sidebar.audio ? SIDEBAR_PLAYER : 0) + calendar;
+  return SIDEBAR_SIGNUP + SIDEBAR_AD + (sidebar.audio ? SIDEBAR_PLAYER : 0) + calendar;
 }
 
 export function liftCount(episode: Pick<Episode, "feature" | "stories" | "sidebar">): number {
