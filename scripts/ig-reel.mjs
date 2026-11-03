@@ -4,7 +4,10 @@
 // reach followers. Reels are the format Instagram shows to people
 // who don't follow you. The first one rides the No. 18 drip (Wed 2026-10-14).
 //
-// Out since the review of 2026-11-02: three cuts (116 s, 46 s, 46 s opening on the
+// Back on every week from 2026-11-03 (Andy), made with /brag-slim in the style of his
+// Oct 29 brag video (89 views, twice the earlier cuts) and voiced by SouthernCourtney.
+// The history:
+// Out at the review of 2026-11-02: three cuts (116 s, 46 s, 46 s opening on the
 // feature) read 27, 19 and 16 people, watched 9.6, 10.6 and 7.5 seconds on average,
 // 68%, 44% and 73% skipped — every one under the week's median still post. Andy's
 // switch is the dashboard move `reel-comes-out`: "Don't" puts the Reel back in the
@@ -35,12 +38,10 @@ export function reelOpensOnStory(moves) {
   return !(moves ?? []).some((m) => m.key === REEL_OPEN_MOVE && m.answer === "no");
 }
 
-/** Off unless Andy answered "Don't" on `reel-comes-out`. No answer, "go", or no store at
- *  all means out; a "Don't" on the old `weekly-reel` move keeps it out whatever he says here. */
-export function reelIsOn(moves) {
-  const list = moves ?? [];
-  if (list.some((m) => m.key === REEL_MOVE && m.answer === "no")) return false;
-  return list.some((m) => m.key === REEL_OUT_MOVE && m.answer === "no");
+/** On every week. Andy, 2026-11-03: "I want a reel each week as per the plan." The
+ *  `reel-comes-out` move is withdrawn; `moves` is kept so callers don't change. */
+export function reelIsOn(_moves) {
+  return true;
 }
 
 /**

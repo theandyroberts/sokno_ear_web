@@ -499,9 +499,10 @@ if (fs.existsSync(path.join(promoDir, "teaser.jpg"))) {
   const hasReel = fs.existsSync(path.join(process.cwd(), "public", reelRel));
   const weekIsOut = Boolean(prevQueue?.posts?.some((p) => p.status === "posted"));
   const hadReel = Boolean(prevQueue?.posts?.some((p) => p.id === "reel"));
-  if (!reelIsOn(moves)) warnings.push("no Reel — out since Nov 2 (three cuts read 27, 19, 16); “Don't” on reel-comes-out on the dashboard puts it back");
-  else if (!hasReel) warnings.push("no Reel — public/assets/ig/<slug>/reel.mp4 not built (python3 scripts/ig-reel.py)");
-  else if (weekIsOut && !hadReel) warnings.push("Reel not added — this week already went out without one");
+  // REEL_LATE=1 adds a Reel to a week already under way (Andy asked for No. 21's on Nov 3).
+  if (!reelIsOn(moves)) warnings.push("no Reel");
+  else if (!hasReel) warnings.push("no Reel — public/assets/ig/<slug>/reel.mp4 not built (make it with /brag-slim)");
+  else if (weekIsOut && !hadReel && !process.env.REEL_LATE) warnings.push("Reel not added — this week already went out without one (REEL_LATE=1 adds it)");
   else {
     let cut = {};
     try { cut = JSON.parse(fs.readFileSync(path.join(process.cwd(), "public", "assets", "ig", episode.slug, "reel.json"), "utf8")); } catch { /* an older cut */ }

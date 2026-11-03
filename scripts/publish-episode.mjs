@@ -121,14 +121,14 @@ if (doIg) {
   step("Building Instagram artwork");
   run("python3", ["scripts/ig-banners.py", slug]);
   run("python3", ["scripts/ig-promos.py", slug]);
-  // The weekly Reel, cut from the audio briefing (needs public/audio/<slug>.mp3 and the
-  // card above). Out since 2026-11-02 unless Andy answers "Don't" on `reel-comes-out`
-  // (scripts/ig-reel.mjs); a week without one still publishes.
+  // The weekly Reel. Made on Tuesday with /brag-slim into public/assets/ig/<slug>/reel.mp4
+  // (Andy, 2026-11-03); only when that file is missing is one cut from the audio briefing
+  // as a fallback. A week without one still publishes.
   try {
     const { reelIsOn, reelMaxSeconds, reelOpensOnStory } = await import("./ig-reel.mjs");
     const moves = await deskMoves();
-    if (!reelIsOn(moves)) console.log("  (no Reel — out since Nov 2; “Don't” on reel-comes-out on the dashboard puts it back)");
-    else {
+    if (fs.existsSync(path.join(process.cwd(), "public", "assets", "ig", slug, "reel.mp4"))) console.log("  Reel: using this week's brag cut (reel.mp4)");
+    else if (reelIsOn(moves)) {
       // 45 seconds unless Andy answered "Don't" on the shorter-Reel move; opens on the
       // feature's quip unless he answered "Don't" on reel-opens-on-the-story.
       run("python3", ["scripts/ig-reel.py", slug, "--max", String(reelMaxSeconds(moves)), ...(reelOpensOnStory(moves) ? [] : ["--title-first"])]);

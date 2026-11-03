@@ -8,15 +8,11 @@ import { publishPost, userTagsFor, artistTagsOn, adIsOn, CONTAINER_WAIT, MAX_IMA
 const episode = { number: 18, shortDate: "Oct 15–18", date: "2026-10-14", feature: { title: "The Pink Cactus turns one" } };
 
 describe("the weekly Reel", () => {
-  it("is out since Nov 2 unless Andy said Don't to taking it out", () => {
-    expect(reelIsOn([])).toBe(false);
-    expect(reelIsOn(undefined)).toBe(false);
-    expect(reelIsOn([{ key: REEL_OUT_MOVE, answer: "go" }])).toBe(false);
-    expect(reelIsOn([{ key: REEL_OUT_MOVE, answer: "no" }])).toBe(true);
-    expect(reelIsOn([{ key: REEL_OUT_MOVE, answer: "no", note: "keep it a bit" }])).toBe(true);
-    // the old switch's Don't still wins
-    expect(reelIsOn([{ key: "weekly-reel", answer: "go", note: "no ad next week" }])).toBe(false);
-    expect(reelIsOn([{ key: "weekly-reel", answer: "no" }, { key: REEL_OUT_MOVE, answer: "no" }])).toBe(false);
+  it("runs every week, whatever the old moves say (Andy, 2026-11-03)", () => {
+    expect(reelIsOn([])).toBe(true);
+    expect(reelIsOn(undefined)).toBe(true);
+    expect(reelIsOn([{ key: REEL_OUT_MOVE, answer: "go" }])).toBe(true);
+    expect(reelIsOn([{ key: "weekly-reel", answer: "no" }])).toBe(true);
   });
 
   it("is cut to 45 seconds unless Andy said Don't to the shorter Reel", () => {
