@@ -1,5 +1,5 @@
 {
-  "_comment": "Who to tell when the Ear covers a place. One entry per venue/organizer, keyed like content/ig-handles.json so a story's social.igTags resolves here too; `match` strings catch untagged stories by their Where/Venue fact. Every email/phone/name here is one the organization PUBLISHES ITSELF (its site, its official socials) and `source` says where — nothing scraped from people-search sites. `to` overrides `email` as the address the weekly note goes to. `introduced` is the date Andy sent the FIRST note himself; until it's set, scripts/venue-notify.mjs only drafts. `salutation` overrides the greeting (default: first name of people[0], else 'Hiya <name> team,').",
+  "_comment": "Who to tell when the Ear covers a place. One entry per venue/organizer, keyed like content/ig-handles.json so a story's social.igTags resolves here too; `match` strings catch untagged stories by their Where/Venue fact. Every email/phone/name here is one the organization PUBLISHES ITSELF (its site, its official socials) and `source` says where — nothing scraped from people-search sites. `to` overrides `email` as the address the weekly note goes to; `cc` copies more people on every weekly note. `introduced` is the date Andy sent the FIRST note himself; until it's set, scripts/venue-notify.mjs only drafts. `salutation` overrides the greeting (default: first name of people[0], else 'Hiya <name> team,').",
   "contacts": {
     "ijams": {
       "name": "Ijams Nature Center",
@@ -15,6 +15,9 @@
       "contactPage": "https://www.ijams.org/staff",
       "email": "publicprograms@ijams.org",
       "to": "chassil@ijams.org",
+      "cc": [
+        "sbrobst@ijams.org"
+      ],
       "phone": "865-577-4717",
       "people": [
         {
@@ -37,7 +40,7 @@
         },
         {
           "name": "Sarah Brobst",
-          "role": "Visitor Services Director (ext. 1008)",
+          "role": "Visitor Services Director (ext. 1008); shares the Ear's notes to the Ijams stories, copied on every weekly note (Cindy Hassil asked, 2026-11-03)",
           "email": "sbrobst@ijams.org",
           "source": "https://www.ijams.org/staff"
         },

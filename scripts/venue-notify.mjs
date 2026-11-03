@@ -70,20 +70,21 @@ for (const p of plan) {
   const first = p.action === "draft";
   const msg = renderMessage({ episode, name: p.name, contact: p.contact, stories: p.stories, first });
   const draftPath = path.join(outDir, episode.slug, `${p.key}${first ? ".FIRST-CONTACT" : ""}.txt`);
-  fs.writeFileSync(draftPath, `To: ${p.to ?? "(no email on file — DM " + (p.contact.instagram ?? "?") + ")"}\nSubject: ${msg.subject}\n\n${msg.text}\n`);
+  fs.writeFileSync(draftPath, `To: ${p.to ?? "(no email on file — DM " + (p.contact.instagram ?? "?") + ")"}\n${p.cc.length ? `Cc: ${p.cc.join(", ")}\n` : ""}Subject: ${msg.subject}\n\n${msg.text}\n`);
 
   const label = `${p.name.padEnd(28)} ${p.stories.length} stor${p.stories.length === 1 ? "y" : "ies"}`;
   if (p.action === "done") { console.log(`  = ${label} · already sent`); continue; }
   if (p.action === "draft") { console.log(`  ✎ ${label} · FIRST CONTACT — draft for Andy → ${path.relative(root, draftPath)}`); drafts.push({ ...p, msg }); continue; }
   if (p.action === "no-email") { console.log(`  ! ${label} · introduced but no email on file — draft written, DM ${p.contact.instagram ?? "?"}`); drafts.push({ ...p, msg }); continue; }
 
-  if (mode === "plan") { console.log(`  → ${label} · would send to ${p.to}`); continue; }
+  if (mode === "plan") { console.log(`  → ${label} · would send to ${p.to}${p.cc.length ? ` cc ${p.cc.join(", ")}` : ""}`); continue; }
   const to = mode === "preview" ? PREVIEW_TO : p.to;
+  const cc = mode === "preview" || !p.cc.length ? undefined : p.cc;
   try {
-    const r = await resend.emails.send({ from: FROM, to, bcc: outreachBcc(to), replyTo: REPLY_TO, subject: mode === "preview" ? `[preview → ${p.to}] ${msg.subject}` : msg.subject, text: msg.text, html: msg.html });
+    const r = await resend.emails.send({ from: FROM, to, cc, bcc: outreachBcc(to), replyTo: REPLY_TO, subject: mode === "preview" ? `[preview → ${p.to}] ${msg.subject}` : msg.subject, text: msg.text, html: msg.html });
     if (r.error) throw new Error(r.error.message ?? JSON.stringify(r.error));
-    console.log(`  ✓ ${label} · sent to ${to}${mode === "preview" ? " (preview)" : ""}`);
-    if (mode === "send") { sentLog[p.key] = { to, at: new Date().toISOString(), id: r.data?.id ?? null }; fs.writeFileSync(logPath, JSON.stringify(sentLog, null, 2) + "\n"); }
+    console.log(`  ✓ ${label} · sent to ${to}${cc ? ` cc ${cc.join(", ")}` : ""}${mode === "preview" ? " (preview)" : ""}`);
+    if (mode === "send") { sentLog[p.key] = { to, ...(cc ? { cc } : {}), at: new Date().toISOString(), id: r.data?.id ?? null }; fs.writeFileSync(logPath, JSON.stringify(sentLog, null, 2) + "\n"); }
   } catch (e) {
     console.error(`  ✗ ${label} · FAILED — ${e.message}`);
   }
@@ -95,7 +96,7 @@ const prior = fs.existsSync(draftsPath) ? JSON.parse(fs.readFileSync(draftsPath,
 for (const d of drafts) {
   prior[d.key] = {
     ...(prior[d.key] ?? {}),
-    key: d.key, name: d.name, action: d.action, to: d.to, instagram: d.contact.instagram ?? null,
+    key: d.key, name: d.name, action: d.action, to: d.to, cc: d.cc, instagram: d.contact.instagram ?? null,
     contactPage: d.contact.contactPage ?? null, subject: d.msg.subject, text: d.msg.text, html: d.msg.html,
     stories: d.stories.map((s) => s.id), writtenAt: new Date().toISOString(),
     // The Gmail-drafts task makes no draft once this day has passed.

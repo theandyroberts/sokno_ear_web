@@ -101,7 +101,7 @@ export function upcomingStories(episode, stories, now = Date.now()) {
 
 /**
  * Decide what happens for each venue this week.
- *   send     — introduced, has an email, not already notified for this slug
+ *   send     — introduced, has an email, not already notified for this slug; `cc` rides along
  *   draft    — no `introduced` date yet: write the note for Andy to send himself
  *   no-email — introduced (or not) but nothing to send to; Andy DMs or we find one
  *   done     — already sent for this episode
@@ -116,7 +116,8 @@ export function planNotifications(venues, contacts, sentLog = {}) {
     else if (!c.introduced) action = "draft";
     else if (!to) action = "no-email";
     else action = "send";
-    plan.push({ key: v.key, name: c.name ?? v.key, to, action, stories: v.stories, contact: c });
+    const cc = Array.isArray(c.cc) ? c.cc.filter(Boolean) : c.cc ? [c.cc] : [];
+    plan.push({ key: v.key, name: c.name ?? v.key, to, cc, action, stories: v.stories, contact: c });
   }
   return plan.sort((a, b) => a.name.localeCompare(b.name));
 }

@@ -92,6 +92,11 @@ describe("planNotifications", () => {
     const c = { ...contacts, kerns: { ...contacts.kerns, to: "events@kerns.example" } };
     expect(planNotifications(venues, c).find((p) => p.key === "kerns")!.to).toBe("events@kerns.example");
   });
+  it("copies everyone in `cc` on the weekly note", () => {
+    const c = { ...contacts, kerns: { ...contacts.kerns, cc: ["social@kerns.example"] } };
+    expect(planNotifications(venues, c).find((p) => p.key === "kerns")!.cc).toEqual(["social@kerns.example"]);
+    expect(planNotifications(venues, contacts).find((p) => p.key === "kerns")!.cc).toEqual([]);
+  });
 });
 
 describe("renderMessage", () => {
