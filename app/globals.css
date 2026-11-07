@@ -198,6 +198,13 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
   line-height: 1.45; letter-spacing: 0.06em; text-transform: uppercase;
 }
 .ds-superheader:focus-visible { outline: 3px solid currentColor; outline-offset: -5px; }
+.ds-hero {
+  background: var(--paper-cream); padding: 14px 16px 12px; text-align: center;
+  border-bottom: var(--border-rule) double var(--ink-black);
+}
+.ds-hero-link { display: block; max-width: 1180px; margin: 0 auto; }
+.ds-hero-link img { display: block; width: 100%; height: auto; }
+.ds-hero-link:focus-visible { outline: 3px solid #131309; outline-offset: 4px; }
 
 /* Search. The field sits in the nav row like another item (label font, cream well);
    phones hide the whole nav, so a second copy runs full width under it instead. */

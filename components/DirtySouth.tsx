@@ -262,6 +262,20 @@ export function DirtySouth({
         <span style={{ whiteSpace: "nowrap" }}>-- GO TO THIS WEEK&apos;S EPISODE</span>
       </Link>
 
+      {/* The main site's masthead treatment, carried over: cream band, ink rule
+          underneath, and the whole hero links home (Andy, 2026-11-07). */}
+      <div className="ds-hero">
+        <Link className="ds-hero-link" href="/" aria-label="SoKnoEar.com — go to this week's episode">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/assets/dirtysouth_hero.jpg"
+            alt="SoKnoEar.com — Weekend Party Planner for the Dirty South"
+            width={2000}
+            height={666}
+          />
+        </Link>
+      </div>
+
       <div style={{ maxWidth: 720, margin: "0 auto", padding: "28px 20px 40px" }}>
         <h1
           className={fontClass}

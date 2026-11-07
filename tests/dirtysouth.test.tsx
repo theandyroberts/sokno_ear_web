@@ -28,6 +28,17 @@ describe("nightlife", () => {
 });
 
 describe("DirtySouth checklist", () => {
+  it("carries the main site's hero, and both it and the ribbon link home", () => {
+    render(<DirtySouth days={nightlife.days} defaultDay="Fri" weekend={nightlife.weekend} fontClass="" />);
+    const hero = screen.getByRole("img", { name: /Weekend Party Planner for the Dirty South/i });
+    expect(hero).toHaveAttribute("src", "/assets/dirtysouth_hero.jpg");
+    expect(hero.closest("a")).toHaveAttribute("href", "/");
+    // The ribbon and the hero are both named for the episode, and both go home.
+    const home = screen.getAllByRole("link", { name: /go to this week.s episode/i });
+    expect(home).toHaveLength(2);
+    home.forEach((a) => expect(a).toHaveAttribute("href", "/"));
+    expect(screen.getByText(/SOUTH KNOXVILLE EVENTS AND RUMORS/).closest("a")).toHaveAttribute("href", "/");
+  });
   beforeEach(() => window.localStorage.clear());
   it("defaults to the given day, switches on tab click", () => {
     render(<DirtySouth days={nightlife.days} defaultDay="Fri" weekend={nightlife.weekend} fontClass="" />);
