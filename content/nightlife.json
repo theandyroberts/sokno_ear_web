@@ -345,13 +345,13 @@
     ]
   },
   "sponsor": {
-    "name": "Puckers Sports Grill",
+    "name": "SoKno Taco Cantina",
     "kicker": "Mon–Wed brought to you by",
-    "blurb": "The wall of TVs across the river from Neyland · chef-driven plates & real cocktails",
-    "address": "115 Mimosa Ave",
-    "phone": "(865) 357-7020",
-    "hours": "Weekend brunch Sat–Sun 9 AM–2 PM · book on Resy",
-    "image": "/assets/venues/puckers.png",
-    "href": "https://resy.com/cities/knoxville-tn/venues/puckers-knoxville"
+    "blurb": "Free trivia Monday 7–9 · two-taco special all day Tuesday, $7 · happy hour 4–7",
+    "address": "3701 Sevierville Pike",
+    "phone": "(865) 851-8882",
+    "hours": "Open Mon–Thu 11 AM–10 PM",
+    "image": "/assets/venues/sokno-taco.png",
+    "href": "https://soknota.co/"
   }
 }
