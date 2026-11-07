@@ -291,47 +291,33 @@ export function DirtySouth({
           SoKno&apos;s plan for the night · {weekend}
         </p>
 
-        {/* why this page exists */}
-        <p style={{ fontFamily: "var(--font-label)", fontSize: "0.86rem", lineHeight: 1.65, letterSpacing: "0.03em", margin: "0 0 10px", borderLeft: `4px solid ${INK}`, paddingLeft: 12 }}>
-          Every week, midweek, a fresh episode of soknoear.com drops — that&apos;s the
-          plan-ahead side. This is the night side. The Dirty South is everything you
-          reach by crossing the bridge: Old Sevier, the South Waterfront, Island Home,
-          the Urban Wilderness, the old Kern&apos;s Bakery. Come on over — if you dare.
-        </p>
-        {mapSrc && (
-          <div style={{ margin: "10px 0 12px", maxWidth: 440 }}>
-            {/* The snapshot itself opens the lightbox too. It's a duplicate of the
-                button below, so it stays out of the tab order and the a11y tree —
-                the labeled button is the one control screen readers see. */}
-            <img
-              src={mapSrc}
-              alt=""
-              aria-hidden="true"
-              onClick={() => setMapOpen(true)}
-              style={{
-                width: "100%", display: "block", cursor: "pointer",
-                border: `3px solid ${INK}`, boxShadow: `7px 7px 0 ${INK}`,
-                transform: "rotate(-1deg)",
-              }}
-            />
+        {/* why this page exists, with the map button beside it — four-fifths text,
+            one-fifth button; stacks on phones (Andy, 2026-11-07: no map snapshot). */}
+        <div className={mapSrc ? "ds-intro-row" : "ds-intro-row ds-intro-row--solo"}>
+          <p style={{ fontFamily: "var(--font-label)", fontSize: "0.86rem", lineHeight: 1.65, letterSpacing: "0.03em", margin: 0, borderLeft: `4px solid ${INK}`, paddingLeft: 12 }}>
+            Every week, midweek, a fresh episode of soknoear.com drops — that&apos;s the
+            plan-ahead side. This is the night side. The Dirty South is everything you
+            reach by crossing the bridge: Old Sevier, the South Waterfront, Island Home,
+            the Urban Wilderness, the old Kern&apos;s Bakery. Come on over — if you dare.
+          </p>
+          {mapSrc && (
             <button
               onClick={() => setMapOpen(true)}
-              className={fontClass}
+              className={`ds-map-btn ${fontClass}`}
               style={{
-                display: "inline-block", margin: "16px 0 0", padding: "8px 14px",
-                fontSize: "1rem", textTransform: "uppercase", cursor: "pointer",
+                padding: "8px 12px", fontSize: "1rem", lineHeight: 1.1,
+                textTransform: "uppercase", cursor: "pointer",
                 border: `3px solid ${INK}`, background: "transparent", color: INK,
                 transform: "rotate(0.6deg)", textAlign: "left",
               }}
             >
               ☛ Map of the territory
-              <span style={{ display: "block", fontFamily: "var(--font-label)", fontSize: "0.64rem", letterSpacing: "0.12em", textTransform: "uppercase", marginTop: 2 }}>
+              <span style={{ display: "block", fontFamily: "var(--font-label)", fontSize: "0.64rem", letterSpacing: "0.12em", textTransform: "uppercase", marginTop: 4 }}>
                 Tap for the full map
               </span>
             </button>
-          </div>
-        )}
-        <div style={{ height: 12 }} />
+          )}
+        </div>
 
         {sponsor && <SponsorCard sponsor={sponsor} fontClass={fontClass} />}
 

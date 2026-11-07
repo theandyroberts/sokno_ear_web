@@ -205,6 +205,16 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
 .ds-hero-link { display: block; max-width: 1180px; margin: 0 auto; }
 .ds-hero-link img { display: block; width: 100%; height: auto; }
 .ds-hero-link:focus-visible { outline: 3px solid #131309; outline-offset: 4px; }
+.ds-intro-row {
+  display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 1fr);
+  gap: 18px; align-items: start; margin: 0 0 24px;
+}
+.ds-intro-row--solo { grid-template-columns: minmax(0, 1fr); }
+.ds-map-btn { width: 100%; box-sizing: border-box; }
+@media (max-width: 560px) {
+  .ds-intro-row { grid-template-columns: minmax(0, 1fr); }
+  .ds-map-btn { width: auto; justify-self: start; }
+}
 
 /* Search. The field sits in the nav row like another item (label font, cream well);
    phones hide the whole nav, so a second copy runs full width under it instead. */
