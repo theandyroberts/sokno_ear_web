@@ -13,6 +13,14 @@ when that grant is refused in a scheduled run, at chatgpt.com in the built-in br
 (Andy: "each week we want to use computer control and ChatGPT Image").** The Higgsfield recipes
 stay for the portrait and diagram modes and as a fallback.
 
+## Composition and expression across an issue
+
+Andy’s November 9 review applies to the whole lineup. In [the preferred muralist illustration](../../../public/assets/spots/no22_mural_painter_heron.jpg), the painter, heron and large dogwood fill the frame. The brush connects the motifs, and the brick establishes that the bird is painted. Give supporting motifs visual weight when they are central to the story. Let the important shapes determine the crop.
+
+Before generating, plan the cards in reading order. For each portrait, specify placement, facing direction, head angle, gaze and an expression that fits the action. Vary these across the issue, and use a hands or object study where appropriate. Left placement, rightward gaze and a lifted or tilted head can work for an individual card. Avoid repeating that combination on adjacent cards. Use concentration, calm, dry humor or quiet satisfaction where appropriate. Reserve broad grins and open-mouth laughter for scenes that earn them.
+
+Review the lineup at the actual newsletter card crop. If adjacent portraits repeat the same lean or orientation, or the issue reads as one repeated mood, revise the affected cards with an explicit pose or expression before shipping.
+
 ## The locked prompt (set with Andy, 2026-11-02)
 
 **The standard is the No. 20 pieces Andy framed and had signed: the upright bass, the opossum, the bull rider, the Día de los Muertos face. One subject, huge, crisp black ink, popping off plain cream paper. New pictures must look like the same artist.**
