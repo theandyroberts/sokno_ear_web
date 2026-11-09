@@ -74,7 +74,12 @@
         "headline": "Sweaters, Flannels and Bourbon Barrels with Alchemy Cigar Lounge",
         "sub": "7–9 · $40: a cocktail, a cigar, a guided whiskey tasting · covered seating · 2201 Kern's Rising Way",
         "cat": "star",
-        "href": "/2026-11-11/alchemy-uptop-kerns"
+        "href": "/2026-11-11/alchemy-uptop-kerns",
+        "ticket": {
+          "href": "https://alchemyloungeandcigar.com/our-event/sweaters-flannels-and-bourbon-barrels/",
+          "image": "/assets/spots/kerns-uptop-tickets-dirty-south.svg",
+          "alt": "Get tickets at UpTop at Kern's"
+        }
       },
       {
         "id": "thu-trailhead",
@@ -101,7 +106,12 @@
         "headline": "Ahee: Bass Quest Tour",
         "sub": "Doors 8, show 9 · 18+ · tickets on the venue's page · 808 Sevier Ave",
         "cat": "music",
-        "href": "/2026-11-11/ahee-808"
+        "href": "/2026-11-11/ahee-808",
+        "ticket": {
+          "href": "https://808knox.com/",
+          "image": "/assets/spots/the-808-tickets-dirty-south.svg",
+          "alt": "Get tickets at The 808"
+        }
       },
       {
         "id": "thu-feyleux",
@@ -245,7 +255,12 @@
         "headline": "The After Brunch Special: stand-up with Justin Chavez headlining",
         "sub": "Doors 2, show 2:30 · The Comedy Sphere · tickets on its site · 1147 Sevier Ave",
         "cat": "mic",
-        "href": "/2026-11-11/after-brunch-special"
+        "href": "/2026-11-11/after-brunch-special",
+        "ticket": {
+          "href": "https://thecomedysphere.com/",
+          "image": "/assets/spots/the-pink-cactus-tickets-dirty-south.svg",
+          "alt": "Get tickets at The Pink Cactus"
+        }
       },
       {
         "id": "sat-printshop-game",
@@ -281,7 +296,12 @@
         "headline": "SHOGUN's LP release, Agonize in Defeat, all ages",
         "sub": "Doors 6, show 7 · tickets on the venue's page · 808 Sevier Ave",
         "cat": "music",
-        "href": "/2026-11-11/shogun-808"
+        "href": "/2026-11-11/shogun-808",
+        "ticket": {
+          "href": "https://808knox.com/",
+          "image": "/assets/spots/the-808-tickets-dirty-south.svg",
+          "alt": "Get tickets at The 808"
+        }
       },
       {
         "id": "sat-fbn",
@@ -346,7 +366,12 @@
         "headline": "The East Tennessee Bluegrass Association's jam on the plaza",
         "sub": "2–5 · free · beginners first, then everyone · bring an acoustic instrument · 2915 Island Home Ave",
         "cat": "music",
-        "href": "/2026-11-11/bluegrass-jam-ijams"
+        "href": "/2026-11-11/bluegrass-jam-ijams",
+        "ticket": {
+          "href": "https://www.ijams.org/event-details/special-event-east-tennessee-bluegrass-association-monthly-jam-2026-11-15-14-00",
+          "image": "/assets/spots/ijams-nature-center-tickets-dirty-south.svg",
+          "alt": "Get tickets at Ijams Nature Center"
+        }
       },
       {
         "id": "sun-dumplings",

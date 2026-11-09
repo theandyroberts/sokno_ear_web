@@ -46,7 +46,7 @@ describe("DirtySouth checklist", () => {
     fireEvent.click(screen.getByRole("tab", { name: "Sun" }));
     expect(screen.getByText("Sunday night")).toBeInTheDocument();
   });
-  it("shows the booking ticket only on the Friday 808 event, separate from its article link", () => {
+  it("shows the booking ticket on the Friday 808 event, separate from its article link", () => {
     render(<DirtySouth days={nightlife.days} defaultDay="Fri" weekend={nightlife.weekend} fontClass="" />);
     const item = nightlife.days.Fri.find((i) => i.id === "fri-808")!;
     expect(item.time).toBe("7:00 PM");
@@ -61,7 +61,8 @@ describe("DirtySouth checklist", () => {
     expect(screen.getByRole("link", { name: new RegExp(`7:00 PM.*${headlineWords}`, "i") })).toHaveAttribute("href", item.href);
     expect(screen.getByAltText("Get tickets at The 808")).toHaveAttribute("src", "/assets/spots/the-808-tickets-dirty-south.svg");
     fireEvent.click(screen.getByRole("tab", { name: "Sat" }));
-    expect(screen.queryByRole("link", { name: /Get tickets at The 808/i })).not.toBeInTheDocument();
+    // The ticket travels with its own listing: Friday's goes when the Friday tab does.
+    expect(screen.queryByRole("link", { name: new RegExp(`7:00 PM.*${headlineWords}`, "i") })).not.toBeInTheDocument();
   });
   it("checking a box persists to localStorage scoped to this weekend; tapping a link marks it done", () => {
     render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" />);

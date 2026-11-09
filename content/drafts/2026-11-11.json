@@ -748,7 +748,12 @@
           "Saturday, doors at two"
         ]
       },
-      "image": "/assets/spots/no22_mimosa_comic.jpg"
+      "image": "/assets/spots/no22_mimosa_comic.jpg",
+      "ticket": {
+        "href": "https://thecomedysphere.com/",
+        "image": "/assets/spots/the-pink-cactus-tickets.svg",
+        "alt": "Get tickets at The Pink Cactus"
+      }
     },
     {
       "id": "alchemy-uptop-kerns",
@@ -831,7 +836,12 @@
           "Thursday, seven to nine, forty dollars"
         ]
       },
-      "image": "/assets/spots/no22_cigar_whiskey_flannel.jpg"
+      "image": "/assets/spots/no22_cigar_whiskey_flannel.jpg",
+      "ticket": {
+        "href": "https://alchemyloungeandcigar.com/our-event/sweaters-flannels-and-bourbon-barrels/",
+        "image": "/assets/spots/kerns-uptop-tickets.svg",
+        "alt": "Get tickets at UpTop at Kern's"
+      }
     },
     {
       "id": "cars-coffee-kerns",
@@ -968,7 +978,12 @@
           "Friday, five thirty to seven, fifteen dollars"
         ]
       },
-      "image": "/assets/spots/no22_journal_leaf_sketch.jpg"
+      "image": "/assets/spots/no22_journal_leaf_sketch.jpg",
+      "ticket": {
+        "href": "https://www.ijams.org/event-details/the-forest-speaks-beginner-nature-journaling-2026-11-13-17-30",
+        "image": "/assets/spots/ijams-nature-center-tickets.svg",
+        "alt": "Get tickets at Ijams Nature Center"
+      }
     },
     {
       "id": "block-printing-ijams",
@@ -1033,7 +1048,12 @@
           "Saturday, two thirty to four thirty, eighteen dollars"
         ]
       },
-      "image": "/assets/spots/no22_block_print_press.jpg"
+      "image": "/assets/spots/no22_block_print_press.jpg",
+      "ticket": {
+        "href": "https://www.ijams.org/event-details/carve-and-create-block-printing-for-beginners-2026-11-14-14-30",
+        "image": "/assets/spots/ijams-nature-center-tickets.svg",
+        "alt": "Get tickets at Ijams Nature Center"
+      }
     },
     {
       "id": "fall-fungi-ijams",
@@ -1102,7 +1122,12 @@
           "Sunday, nine to eleven, fifteen dollars"
         ]
       },
-      "image": "/assets/spots/no22_mushroom_hand_lens.jpg"
+      "image": "/assets/spots/no22_mushroom_hand_lens.jpg",
+      "ticket": {
+        "href": "https://www.ijams.org/event-details/fall-fungi-id-beginner-workshop-2026-11-15-09-00",
+        "image": "/assets/spots/ijams-nature-center-tickets.svg",
+        "alt": "Get tickets at Ijams Nature Center"
+      }
     },
     {
       "id": "bluegrass-jam-ijams",
@@ -1171,7 +1196,12 @@
           "Sunday, two to five, free"
         ]
       },
-      "image": "/assets/spots/no22_fiddle_bow_grin.jpg"
+      "image": "/assets/spots/no22_fiddle_bow_grin.jpg",
+      "ticket": {
+        "href": "https://www.ijams.org/event-details/special-event-east-tennessee-bluegrass-association-monthly-jam-2026-11-15-14-00",
+        "image": "/assets/spots/ijams-nature-center-tickets.svg",
+        "alt": "Get tickets at Ijams Nature Center"
+      }
     },
     {
       "id": "specials-board",
