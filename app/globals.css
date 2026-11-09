@@ -141,17 +141,29 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
    is part of the where-and-when rather than a full-width row that splits the story
    (Andy, 2026-10-26). On a phone the ticket keeps a 128px column beside the facts. */
 .ear-ticket { width: 100%; max-width: 360px; margin: 0 0 20px; }
-/* One ticket size on every story, whatever the facts box's width (Andy, 2026-11-09: it ran
-   240px on a full-width box and about 130px beside an image). The column is the ticket's
-   own width, so the facts take the rest. */
-.ear-facts-box--ticket { display: grid; grid-template-columns: minmax(0, 1fr) 150px; gap: 10px 18px; align-items: center; }
-.ear-facts-box--ticket .ear-ticket { width: 150px; max-width: 150px; margin: 0; justify-self: end; }
-@media (max-width: 560px) {
-  /* A phone column is too narrow to split: the facts keep the full width and the
-     ticket sits small at the box's bottom-right corner, still inside the box. */
-  .ear-facts-box--ticket { grid-template-columns: minmax(0, 1fr); gap: 8px; justify-items: end; }
-  .ear-facts-box--ticket .ear-facts { width: 100%; }
-  .ear-facts-box--ticket .ear-ticket { max-width: 150px; }
+/* The facts box: the where-and-when on the left, the venue's framed mark top right and, when
+   the event sells tickets, the ticket under it (Andy, 2026-11-09: "put the venue logo on the top
+   right, the ticket icon below it if the event has tickets"). The mark and the ticket are each
+   150px, the one ticket size, so the facts take the rest. The box is wrapped in a container so
+   on a phone the right column gives way: the mark top right, the facts full width, the ticket
+   bottom right. */
+.ear-facts-wrap { container-type: inline-size; }
+.ear-facts-box { display: grid; grid-template-columns: minmax(0, 1fr); grid-template-areas: "facts"; gap: 10px 18px; align-items: start; }
+.ear-facts-box .ear-facts { grid-area: facts; min-width: 0; }
+.ear-facts-box--logo { grid-template-columns: minmax(0, 1fr) 150px; grid-template-areas: "facts logo"; }
+.ear-facts-box--ticket { grid-template-columns: minmax(0, 1fr) 150px; grid-template-areas: "facts ticket"; }
+.ear-facts-box--logo.ear-facts-box--ticket { grid-template-areas: "facts logo" "facts ticket"; grid-template-rows: auto 1fr; }
+.ear-facts-box .ear-ticket { grid-area: ticket; width: 150px; max-width: 150px; margin: 0; justify-self: end; }
+/* The mark: the calendar's ink-framed cream tile, grown to the ticket's width. A venue with no
+   logo in the registry gets its name set small on the same tile, so the layout never has a hole. */
+.ear-venue-mark { grid-area: logo; justify-self: end; display: grid; place-items: center; box-sizing: border-box; width: 150px; height: 84px; padding: 6px 8px; border: var(--border-ink) solid var(--ink-black); border-radius: var(--radius-sm); background: var(--paper-cream); color: var(--ink-black); text-decoration: none; overflow: hidden; transition: box-shadow 120ms ease, transform 120ms ease; }
+.ear-venue-mark img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.ear-venue-mark--wordmark span { font-family: var(--font-label); font-weight: 600; font-size: 13px; line-height: 1.15; letter-spacing: 0.04em; text-transform: uppercase; text-align: center; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.ear-venue-mark:hover { box-shadow: var(--shadow-lift); transform: translateY(-1px); }
+.ear-venue-mark:focus-visible { outline: 3px solid var(--rust); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .ear-venue-mark { transition: none; } .ear-venue-mark:hover { transform: none; } }
+@container (max-width: 440px) {
+  .ear-facts-box--logo, .ear-facts-box--ticket, .ear-facts-box--logo.ear-facts-box--ticket { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; grid-template-areas: "logo" "facts" "ticket"; gap: 8px; }
 }
 .ear-ticket-link { display: block; color: var(--rust); border-radius: 12px; text-decoration: none; }
 .ear-ticket-link img { display: block; width: 100%; height: auto; transition: transform 100ms ease, filter 100ms ease; }

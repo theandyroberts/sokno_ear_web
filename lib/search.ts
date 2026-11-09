@@ -138,6 +138,20 @@ export function resolveVenue(locationName: string | undefined, registry: VenueRe
   return key ? { key, name, logo: null, aliases: [name] } : null;
 }
 
+/** The venue whose framed mark sits in a story's facts box: an explicit `venueKey` (the
+ *  event's brand when it differs from the place, or a story with no event), else the
+ *  event's location, resolved the way the venue pages resolve it. */
+export function storyVenue(
+  story: { venueKey?: string; event?: { locationName: string } },
+  registry: VenueRegistry,
+): ResolvedVenue | null {
+  if (story.venueKey) {
+    const v = registry[story.venueKey];
+    if (v) return { key: story.venueKey, name: v.name, logo: v.logo ?? null, site: v.site, aliases: v.match };
+  }
+  return resolveVenue(story.event?.locationName, registry);
+}
+
 function blockText(b: Block): string {
   if (b.type === "subhead") return b.text;
   if (b.type === "agenda") return [b.title ?? "", ...b.rows.map((r) => `${r.time} ${r.what}`)].join(" ");

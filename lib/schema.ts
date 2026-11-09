@@ -101,6 +101,9 @@ export const StorySchema = z.object({
   sources: z.array(Source).optional(),
   event: EventDetails.optional(),
   social: Social.optional(),
+  /** Registry key (content/venues.json) for the framed mark in the facts box when it is not
+   *  the event's location, or when the story has no event (Earl's specials board). */
+  venueKey: z.string().optional(),
 });
 
 export const StoryCard = z.object({

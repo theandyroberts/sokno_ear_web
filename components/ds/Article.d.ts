@@ -21,6 +21,8 @@ export interface ArticleProps {
   imageZoom?: boolean;
   /** Compact ticket link immediately below the headline/deck. */
   ticket?: { href: string; image: string; alt: string };
+  /** The venue whose framed mark sits at the left of the facts box, linking to /venue/{key}. */
+  venue?: { key: string; name: string; logo: string | null } | null;
   title: React.ReactNode;
   /** Optional deck: one thought under the headline, nine words at most (Andy, 2026-10-26). */
   deck?: React.ReactNode;

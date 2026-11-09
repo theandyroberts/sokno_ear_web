@@ -20,6 +20,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { calendarRowDay } from "@/lib/episodes";
 import { liftCount } from "@/lib/layout";
 import { calendarVenue, loadVenues, type VenueRegistry } from "@/lib/venues";
+import { storyVenue } from "@/lib/search";
 
 const Page = ({ children, style }: { children: React.ReactNode; style?: React.CSSProperties }) => (
   <div style={{ maxWidth: 1100, margin: "0 auto", padding: "0 24px", ...style }}>{children}</div>
@@ -163,7 +164,7 @@ export function Paper({ episode, permalinks = true, storyView = false, venues }:
       {withDivider && <Divider ornament="star" />}
       <section id={s.id} style={{ padding: "24px 0" }}>
         <SectionHeader>{s.label}</SectionHeader>
-        <Article id={s.id} label={s.label} labelColor={s.labelColor} days={s.days} image={s.image} imageCaption={s.imageCaption} imageZoom={s.imageZoom} ticket={s.ticket} title={s.title} deck={s.deck} facts={factNodes(s.facts)} layout={s.layout}>
+        <Article id={s.id} label={s.label} labelColor={s.labelColor} days={s.days} image={s.image} imageCaption={s.imageCaption} imageZoom={s.imageZoom} ticket={s.ticket} venue={storyVenue(s, registry)} title={s.title} deck={s.deck} facts={factNodes(s.facts)} layout={s.layout}>
           <ArticleBody blocks={s.body} />
           <ArticleSources sources={s.sources} />
           {permalinks && <ShareStory slug={episode.slug} id={s.id} title={s.title} />}
@@ -221,7 +222,7 @@ export function Paper({ episode, permalinks = true, storyView = false, venues }:
         <Page>
           <div className={`ear-twocol${storyView ? " ear-story-columns" : ""}`} style={{ display: "grid", gridTemplateColumns: "minmax(0, 1.9fr) minmax(0, 1fr)", gap: 36, alignItems: "start" }}>
             <div className="ear-maincol">
-              <Article id={feature.id} label={feature.label} labelColor={feature.labelColor} days={feature.days} image={feature.image} imageCaption={feature.imageCaption} imageZoom={feature.imageZoom} ticket={feature.ticket} title={feature.title} deck={feature.deck} facts={factNodes(feature.facts)} layout={feature.layout}>
+              <Article id={feature.id} label={feature.label} labelColor={feature.labelColor} days={feature.days} image={feature.image} imageCaption={feature.imageCaption} imageZoom={feature.imageZoom} ticket={feature.ticket} venue={storyVenue(feature, registry)} title={feature.title} deck={feature.deck} facts={factNodes(feature.facts)} layout={feature.layout}>
                 <ArticleBody blocks={feature.body} />
                 <ArticleSources sources={feature.sources} />
                 {permalinks && <ShareStory slug={episode.slug} id={feature.id} title={feature.title} />}

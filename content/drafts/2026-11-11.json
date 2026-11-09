@@ -1276,7 +1276,8 @@
         "standing": true,
         "standingKey": "specials-board"
       },
-      "image": "/assets/spots/no22_pineapple_margarita.jpg"
+      "image": "/assets/spots/no22_pineapple_margarita.jpg",
+      "venueKey": "earls"
     },
     {
       "id": "rail-trail-murals",
@@ -1341,7 +1342,8 @@
         ],
         "igBannerSkipCheck": true
       },
-      "image": "/assets/spots/no22_mural_painter_heron.jpg"
+      "image": "/assets/spots/no22_mural_painter_heron.jpg",
+      "venueKey": "legacy-parks"
     }
   ],
   "sidebar": {

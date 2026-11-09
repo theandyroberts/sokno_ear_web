@@ -22,6 +22,7 @@ export function Article({
   imageCaption,
   imageZoom = false,
   ticket,
+  venue = null,
   title,
   deck,
   facts = [],
@@ -86,15 +87,33 @@ export function Article({
     </figure>
   );
 
-  /* The facts strip. When the story sells tickets the strip becomes a two-column
-          box, facts on the left two thirds and the venue's ticket button on the right
-          third, so the button reads as part of the where-and-when instead of a row of
-          its own that splits the story (Andy, 2026-10-26). It sits after the FIRST
-          paragraph of the body, not under the deck, so the headline runs straight into
-          the lede and the art (Andy, 2026-10-26, later the same day). */
+  /* The facts box: the where-and-when on the left, the venue's framed mark top right
+     and, when the event sells tickets, the ticket under it (Andy, 2026-11-09: "add the
+     framed venue logo into the when/where/ages box for every story", then "put the venue
+     logo on the top right, the ticket icon below it"). The mark is the same ink-framed
+     cream tile as the calendar's, at the ticket's 150px, and links to the venue's page.
+     On a phone the right column gives way (app/globals.css; .ear-facts-wrap is the
+     container). The box sits after the FIRST paragraph of the body, not under the deck,
+     so the headline runs straight into the lede and the art (Andy, 2026-10-26). */
+  const mark = venue && (
+    <a
+      className={`ear-venue-mark${venue.logo ? "" : " ear-venue-mark--wordmark"}`}
+      href={`/venue/${venue.key}`}
+      aria-label={`${venue.name}: every story in the Ear`}
+    >
+      {venue.logo ? (
+        /* eslint-disable-next-line @next/next/no-img-element */
+        <img src={venue.logo} alt="" />
+      ) : (
+        <span>{venue.name}</span>
+      )}
+    </a>
+  );
+  const boxClass = ["ear-facts-box", mark && "ear-facts-box--logo", ticket && "ear-facts-box--ticket"].filter(Boolean).join(" ");
   const factsBox = (facts.length > 0 || ticket) ? (
+        <div className="ear-facts-wrap">
         <div
-          className={ticket ? "ear-facts-box ear-facts-box--ticket" : "ear-facts-box"}
+          className={boxClass}
           style={{
             margin: "0 0 var(--space-4)",
             padding: "10px 14px",
@@ -103,6 +122,7 @@ export function Article({
             borderRadius: "var(--radius-sm)",
           }}
         >
+        {mark}
         {facts.length > 0 && (
         <dl
           className="ear-facts"
@@ -135,6 +155,7 @@ export function Article({
         </dl>
         )}
         {ticket && <TicketLink {...ticket} showCaption={false} />}
+        </div>
         </div>
   ) : null;
 
