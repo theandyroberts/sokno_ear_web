@@ -10,10 +10,10 @@
 process.env.TZ = "America/New_York"; // all slot math is SoKno-local
 import fs from "node:fs";
 import path from "node:path";
-import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, placeDaySlots, assignTimingArms, earlyPostsOn, SAME_DAY_GAP_H, MAX_VENUE_POSTS_PER_DAY } from "./ig-schedule.mjs";
+import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, placeDaySlots, assignTimingArms, earlyPostsOn, SAME_DAY_GAP_H, MAX_VENUE_POSTS_PER_DAY , etIso, toIso } from "./ig-schedule.mjs";
 import { priorRunsById, pickRepeatsToDrop, standingKeyOf, MAX_REPEATS_PER_EPISODE } from "./ig-repeats.mjs";
 import { checkBanner } from "./ig-banner-check.mjs";
-import { buildRoundup, buildVenueRoundup, pickSingles, roundupIsOn, venueCarouselsOn, MAX_SINGLES_PER_VENUE } from "./ig-roundup.mjs";
+import { buildRoundup, buildVenueRoundup, pickSingles, roundupIsOn, roundupSlideTagsOn, venueCarouselsOn, MAX_SINGLES_PER_VENUE } from "./ig-roundup.mjs";
 import { userTagsFor, imageTagsOn, artistTagsOn, adIsOn, abBucket } from "./ig-container.mjs";
 import { reelIsOn, buildReelPost } from "./ig-reel.mjs";
 
@@ -48,7 +48,7 @@ for (const f of fs.existsSync(queueDir) ? fs.readdirSync(queueDir).filter((f) =>
 
 /** Map a day abbreviation ("Fri") to the real date inside this episode's week. */
 function dateForDay(episodeDate, dayAbbr) {
-  const start = new Date(`${episodeDate}T12:00:00-04:00`);
+  const start = new Date(etIso(episodeDate, 12));
   for (let i = 0; i < 7; i++) {
     const d = new Date(start);
     d.setDate(start.getDate() + i);
@@ -60,8 +60,7 @@ function dateForDay(episodeDate, dayAbbr) {
 function iso(date, hour) {
   const d = new Date(date);
   d.setHours(hour, 0, 0, 0);
-  const p = (n) => String(n).padStart(2, "0");
-  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}T${p(d.getHours())}:00:00-04:00`;
+  return toIso(d.getTime());
 }
 
 /** Resolve tags → only handles present in the verified registry survive. */
@@ -161,7 +160,7 @@ for (const s of stories) {
   // opened four consecutive drips on a Tuesday for a Thursday–Sunday episode.
   const dayDate = dated
     ? dateForDay(episode.date, firstDay)
-    : new Date(`${episode.date}T12:00:00-04:00`);
+    : new Date(etIso(episode.date, 12));
 
   const { date, hour } = dated
     ? slotFor(s, dayDate)
@@ -277,8 +276,12 @@ else {
     bannerUrl: (s) => assetUrl(s.id),
     coverUrl: assetUrl("episode-drop"),
     tagsOf: (s) => resolveTags(s).tags,
+    // Each slide tagged with its own venue (and act), as the single banner is, unless
+    // Andy answered Don't on "roundup-slide-tags" (2026-11-09).
+    ...(roundupSlideTagsOn(moves) ? { slideTagsOf: (s) => userTagsFor(resolveTags(s).tags, { everyone: artistTagsOn(moves), untaggable }) } : {}),
     hashtags: BASE_HASHTAGS,
   });
+  if (roundup && !roundupSlideTagsOn(moves)) warnings.push("roundup slides untagged — Andy answered “Don't” on the dashboard");
   if (!roundup) warnings.push("roundup off — fewer than three stories have a banner");
   else if (!venueCarouselsOn(moves)) {
     // Since 2026-10-05 every story keeps its single post: a venue's carousel read 4
@@ -304,7 +307,7 @@ else {
       for (let i = posts.length - 1; i >= 0; i--) if (vr.stories.includes(posts[i].id)) posts.splice(i, 1);
       // It goes out the morning of the first thing in it (never before publish day).
       const day = slots[0].slice(0, 10) < episode.date ? episode.date : slots[0].slice(0, 10);
-      posts.push({ ...vr, postAt: `${day}T${String(DEFAULT_HOUR).padStart(2, "0")}:00:00-04:00`, permalink: `${SITE}/${episode.slug}`, dated: false, status: "pending" });
+      posts.push({ ...vr, postAt: etIso(day, DEFAULT_HOUR), permalink: `${SITE}/${episode.slug}`, dated: false, status: "pending" });
       warnings.push(`${handle}: ${MAX_SINGLES_PER_VENUE} single posts this week, and ${vr.stories.length} more in one carousel (${vr.stories.join(", ")})`);
     }
   }
@@ -325,7 +328,7 @@ else {
   for (const p of dated) {
     const a = arms.get(p.id);
     p.timingArm = a.arm;
-    p.postAt = `${a.day}T${String(a.hour).padStart(2, "0")}:00:00-04:00`;
+    p.postAt = etIso(a.day, a.hour);
   }
   const n = (arm) => dated.filter((p) => p.timingArm === arm).length;
   warnings.push(`timing test: ${n("early")} posts the day before, ${n("day-of")} day-of${n("no-room") ? `, ${n("no-room")} too close to publish to move` : ""}`);
@@ -350,7 +353,7 @@ else {
   );
   for (const p of posts) {
     const s = slots.get(p.id);
-    const next = `${s.day}T${String(s.hour).padStart(2, "0")}:00:00-04:00`;
+    const next = etIso(s.day, s.hour);
     const moved = `(${p.postAt.slice(5, 16)} → ${next.slice(5, 16)})`;
     const why = s.venueCapped
       ? `to keep ${p.tags[0]} to ${MAX_VENUE_POSTS_PER_DAY} posts a day`
@@ -391,9 +394,7 @@ const promoCeiling = earliestStoryMs === Infinity
   : earliestStoryMs - 3 * MIN_GAP_MIN * 60000;
 
 function isoPromoSlot(min) {
-  const d = new Date(nextLeadWindow(Date.now(), promoCeiling) + min * 60000);
-  const p = (n) => String(n).padStart(2, "0");
-  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}:00-04:00`;
+  return toIso(nextLeadWindow(Date.now(), promoCeiling) + min * 60000);
 }
 const promoDir = path.join(process.cwd(), "public", "assets", "ig", episode.slug);
 const storyTitles = episode.stories.slice(0, 3).map((s) => s.title.split(" — ")[0].split(":")[0]);
@@ -473,12 +474,10 @@ const TEASER_LINES = [
 if (fs.existsSync(path.join(promoDir, "teaser.jpg"))) {
   const leadAt = new Date(isoPromoSlot(1)).getTime();
   const at = Math.max(leadAt + MIN_GAP_MIN * 60000, Math.min(leadAt + 4 * 3600000, earliestStoryMs - MIN_GAP_MIN * 60000));
-  const d = new Date(at);
-  const p2 = (n) => String(n).padStart(2, "0");
   posts.push({
     id: "teaser",
     title: `Guess the week (No. ${episode.number})`,
-    postAt: `${d.getFullYear()}-${p2(d.getMonth() + 1)}-${p2(d.getDate())}T${p2(d.getHours())}:${p2(d.getMinutes())}:00-04:00`,
+    postAt: toIso(at),
     imageUrl: `${SITE}/assets/ig/${episode.slug}/teaser.jpg`,
     permalink: SITE,
     caption: [TEASER_LINES[episode.number % TEASER_LINES.length], "", "Go to SoKnoEar.com for the details.", "", BASE_HASHTAGS].join("\n"),

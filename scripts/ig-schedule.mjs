@@ -22,12 +22,37 @@ export const DAY_END_HOUR = 20;
 export const LEAD_WINDOW_START_HOUR = 9;
 export const LEAD_WINDOW_END_HOUR = 13;
 
-const OFFSET = "-04:00";
+/** Every slot is South Knoxville time. */
+export const ET = "America/New_York";
+const ET_FMT = new Intl.DateTimeFormat("en-US", {
+  timeZone: ET, hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", timeZoneName: "longOffset",
+});
 
-function toIso(ms) {
-  const d = new Date(ms);
+/** The wall-clock parts of an instant in South Knoxville: {day: "YYYY-MM-DD", hour, minute, offset: "-05:00"}. */
+export function etParts(ms) {
+  const p = Object.fromEntries(ET_FMT.formatToParts(new Date(ms)).map((x) => [x.type, x.value]));
+  const offset = p.timeZoneName === "GMT" ? "+00:00" : p.timeZoneName.replace("GMT", "");
+  return { day: `${p.year}-${p.month}-${p.day}`, hour: Number(p.hour), minute: Number(p.minute), offset };
+}
+
+/**
+ * "YYYY-MM-DDTHH:MM:00-05:00" for a South Knoxville day and hour, with the offset the
+ * calendar says: -04:00 in summer time, -05:00 in winter. Until 2026-11-09 the offset
+ * was the constant "-04:00", so from the night the clocks went back (Nov 1) every post
+ * in the No. 21 drip went out an hour earlier than its slot said: 4 PM meant 3 PM.
+ */
+export function etIso(day, hour, minute = 0) {
+  const [y, m, d] = day.split("-").map(Number);
+  // Noon UTC-ish on that day is safely inside the day in ET, on either side of a clock change.
+  const { offset } = etParts(Date.UTC(y, m - 1, d, 17));
   const p = (n) => String(n).padStart(2, "0");
-  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}T${p(d.getHours())}:${p(d.getMinutes())}:00${OFFSET}`;
+  return `${day}T${p(hour)}:${p(minute)}:00${offset}`;
+}
+
+/** The ISO slot string for an instant, in South Knoxville time. */
+export function toIso(ms) {
+  const { day, hour, minute } = etParts(ms);
+  return etIso(day, hour, minute);
 }
 
 /**

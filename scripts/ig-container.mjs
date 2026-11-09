@@ -105,7 +105,39 @@ export function userTagsFor(tags, { everyone = true, untaggable = new Set() } = 
 }
 
 /**
- * @param {object} post   a queue entry: imageUrl, caption, optional slides[], userTags[], videoUrl + coverUrl (a Reel)
+ * Take the handles Meta refused (2207018) out of a post's in-image tags — the single
+ * image's `userTags` and every carousel slide's `slideTags` — so the post can be retried
+ * at once. Returns how many tags were removed; zero means the error was not about a tag
+ * we carry, and retrying would loop.
+ * @param {object} post      mutated in place
+ * @param {string[]} refused lower-case usernames from untaggableUsernames
+ * @returns {number}
+ */
+export function dropRefusedTags(post, refused) {
+  if (!refused?.length) return 0;
+  const bad = new Set(refused.map((u) => u.toLowerCase()));
+  const keep = (tags) => (tags ?? []).filter((t) => !bad.has(String(t.username).toLowerCase()));
+  let removed = 0;
+  if (post.userTags?.length) {
+    const kept = keep(post.userTags);
+    removed += post.userTags.length - kept.length;
+    if (kept.length) post.userTags = kept; else delete post.userTags;
+  }
+  if (post.slideTags?.length) {
+    post.slideTags = post.slideTags.map((tags) => {
+      if (!tags?.length) return tags ?? null;
+      const kept = keep(tags);
+      removed += tags.length - kept.length;
+      return kept.length ? kept : null;
+    });
+    if (post.slideTags.every((t) => !t)) delete post.slideTags;
+  }
+  if (removed) post.droppedTags = [...new Set([...(post.droppedTags ?? []), ...bad])];
+  return removed;
+}
+
+/**
+ * @param {object} post   a queue entry: imageUrl, caption, optional slides[] (+ slideTags[]), userTags[], videoUrl + coverUrl (a Reel)
  * @param {object} io
  * @param {string} io.graph  API base
  * @param {string} io.userId
@@ -149,7 +181,13 @@ export async function publishPost(post, { graph, userId, token, fetchImpl = fetc
     creationId = await container(body, "reel", CONTAINER_WAIT.video);
   } else if (slides) {
     const children = [];
-    for (const [i, url] of slides.entries()) children.push(await container({ image_url: url, is_carousel_item: "true" }, `slide ${i + 1}`));
+    for (const [i, url] of slides.entries()) {
+      // Since 2026-11-11 each roundup slide is tagged with its own venue, the way a
+      // single banner is (slideTags, built by buildRoundup); the cover carries none.
+      const body = { image_url: url, is_carousel_item: "true" };
+      if (post.slideTags?.[i]?.length) body.user_tags = JSON.stringify(post.slideTags[i]);
+      children.push(await container(body, `slide ${i + 1}`));
+    }
     creationId = await container({ media_type: "CAROUSEL", children: children.join(","), caption: post.caption }, "carousel");
     containers = children.length + 1;
   } else {

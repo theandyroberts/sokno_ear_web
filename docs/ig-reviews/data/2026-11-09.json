@@ -1,0 +1,486 @@
+{
+ "run": 15,
+ "date": "2026-11-09",
+ "next": "2026-11-16",
+ "episode": 21,
+ "kicker": "Week of Nov 4 · episode No. 21 · read Nov 9",
+ "railKind": "378 followers · 58 reach a post",
+ "headline": "The roundup read 260. Every post ran an hour early; fixed.",
+ "verdicts": [
+  {
+   "label": "Growth",
+   "tone": "warn",
+   "text": "+45 followers, then almost none since Thursday"
+  },
+  {
+   "label": "Reach",
+   "tone": "ok",
+   "text": "874 on 15 posts; the roundup read 260"
+  },
+  {
+   "label": "Posting hour",
+   "tone": "bad",
+   "text": "An hour early since the clocks changed. Fixed."
+  },
+  {
+   "label": "Timing test",
+   "tone": "warn",
+   "text": "Early 3/12 shared · day-of 4/13"
+  }
+ ],
+ "tiles": [
+  {
+   "label": "Followers",
+   "value": "378",
+   "good": "up",
+   "series": [
+    46,
+    49,
+    59,
+    66,
+    74,
+    86,
+    95,
+    100,
+    101,
+    111,
+    156,
+    195,
+    244,
+    333,
+    378
+   ],
+   "vsLast": {
+    "dir": "up",
+    "tone": "warn",
+    "text": "+45; 13, 14, 11 a day, then 2, 6, 1, 0"
+   },
+   "vsBase": "46 on Aug 11"
+  },
+  {
+   "label": "Reach per post",
+   "value": "58",
+   "good": "up",
+   "series": [
+    16.1,
+    10.5,
+    10.5,
+    14.2,
+    10.4,
+    8.2,
+    8.1,
+    6.8,
+    7.8,
+    4.9,
+    5.9,
+    54.5,
+    37.5,
+    50.8,
+    60.1,
+    58.3
+   ],
+   "vsLast": {
+    "dir": "flat",
+    "tone": "ok",
+    "text": "60 last week, same age; median 26, was 23"
+   },
+   "vsBase": "10.5 in early Aug"
+  },
+  {
+   "label": "Reach, whole week",
+   "value": "874",
+   "good": "up",
+   "series": [
+    113,
+    84,
+    63,
+    128,
+    104,
+    106,
+    89,
+    41,
+    101,
+    69,
+    47,
+    926,
+    675,
+    966,
+    1081,
+    874
+   ],
+   "vsLast": {
+    "dir": "down",
+    "tone": "ok",
+    "text": "1,081 last week on 18 posts; 15 this week"
+   },
+   "vsBase": "best before October was 128"
+  },
+  {
+   "label": "People reached this week",
+   "value": "656",
+   "good": "up",
+   "series": [
+    19,
+    11,
+    21,
+    25,
+    20,
+    686,
+    517,
+    702,
+    709,
+    656
+   ],
+   "vsLast": {
+    "dir": "down",
+    "tone": "ok",
+    "text": "709 last week; 589 of them don't follow us"
+   },
+   "vsBase": "19 in September"
+  },
+  {
+   "label": "New people reached · 28 days",
+   "value": "2,118",
+   "good": "up",
+   "series": [
+    10,
+    10,
+    6,
+    9,
+    12,
+    13,
+    675,
+    1059,
+    1595,
+    2147,
+    2118
+   ],
+   "vsLast": {
+    "dir": "flat",
+    "tone": "ok",
+    "text": "2,147 last Monday; the first week it didn't climb"
+   },
+   "vsBase": "10 in September"
+  }
+ ],
+ "tilesNote": "Lines run from July to now. Reach per post is read at the same age as last week's was (one to six days).",
+ "week": [
+  {
+   "id": "weekend-roundup",
+   "day": "Tue",
+   "time": "08:16",
+   "reach": 260,
+   "title": "Weekend roundup · 9 stories · shared twice, saved once",
+   "img": "/insta/img/soknoear/2026-11-04_episode-drop.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "teaser",
+   "day": "Tue",
+   "time": "11:15",
+   "reach": 29,
+   "title": "Guess the week",
+   "img": "/insta/img/soknoear/2026-11-04_teaser.jpg",
+   "group": "lead"
+  },
+  {
+   "id": "ambc-fall-fest",
+   "day": "Wed",
+   "time": "08:00",
+   "reach": 26,
+   "title": "AMBC's Fall Fest at Baker Creek · the feature",
+   "img": "/insta/img/soknoear/2026-11-04_ambc-fall-fest.jpg"
+  },
+  {
+   "id": "reel",
+   "day": "Wed",
+   "time": "12:00",
+   "reach": 17,
+   "title": "The Reel · 24 seconds, back at Andy's call",
+   "img": "/insta/img/soknoear/2026-11-04_reel.jpg",
+   "group": "lead"
+  },
+  {
+   "id": "all-play-live-kerns",
+   "day": "Wed",
+   "time": "15:00",
+   "reach": 17,
+   "title": "All Play Live at Kern's · a day early",
+   "img": "/insta/img/soknoear/2026-11-04_all-play-live-kerns.jpg"
+  },
+  {
+   "id": "uptop-karaoke-kerns",
+   "day": "Thu",
+   "time": "15:00",
+   "reach": 22,
+   "title": "Karaoke at UpTop · day-of",
+   "img": "/insta/img/soknoear/2026-11-04_uptop-karaoke-kerns.jpg"
+  },
+  {
+   "id": "goat-yoga-kerns",
+   "day": "Thu",
+   "time": "18:00",
+   "reach": 26,
+   "title": "Goat yoga at Kern's · a day early · shared",
+   "img": "/insta/img/soknoear/2026-11-04_goat-yoga-kerns.jpg"
+  },
+  {
+   "id": "moss-meander",
+   "day": "Fri",
+   "time": "08:00",
+   "reach": 19,
+   "title": "Moss Meander at Ijams · a day early",
+   "img": "/insta/img/soknoear/2026-11-04_moss-meander.jpg"
+  },
+  {
+   "id": "sokno-sourdough-first-friday",
+   "day": "Fri",
+   "time": "10:00",
+   "reach": 170,
+   "title": "First Friday at SoKno Sourdough · day-of · shared 3 times",
+   "img": "/insta/img/soknoear/2026-11-04_sokno-sourdough-first-friday.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "808-college-night",
+   "day": "Fri",
+   "time": "12:00",
+   "reach": 24,
+   "title": "College Night at The 808 · day-of",
+   "img": "/insta/img/soknoear/2026-11-04_808-college-night.jpg"
+  },
+  {
+   "id": "latin-knox-printshop",
+   "day": "Fri",
+   "time": "14:00",
+   "reach": 85,
+   "title": "Latin.Knox at Printshop · day-of · shared",
+   "img": "/insta/img/soknoear/2026-11-04_latin-knox-printshop.jpg"
+  },
+  {
+   "id": "cut-corners-fbn",
+   "day": "Fri",
+   "time": "16:00",
+   "reach": 29,
+   "title": "Cut Corners at Fly by Night · a day early",
+   "img": "/insta/img/soknoear/2026-11-04_cut-corners-fbn.jpg"
+  },
+  {
+   "id": "wilderness-basics",
+   "day": "Fri",
+   "time": "18:00",
+   "reach": 21,
+   "title": "Wilderness Basics at Ijams · day-of",
+   "img": "/insta/img/soknoear/2026-11-04_wilderness-basics.jpg"
+  },
+  {
+   "id": "bow-wow-bingo-printshop",
+   "day": "Sat",
+   "time": "10:00",
+   "reach": 108,
+   "title": "Bow Wow Bingo at Printshop · a day early · shared",
+   "img": "/insta/img/soknoear/2026-11-04_bow-wow-bingo-printshop.jpg",
+   "group": "hot"
+  },
+  {
+   "id": "sound-bath-ijams",
+   "day": "Sat",
+   "time": "18:00",
+   "reach": 21,
+   "title": "Sound bath at Ijams · day-of",
+   "img": "/insta/img/soknoear/2026-11-04_sound-bath-ijams.jpg"
+  }
+ ],
+ "weekLegend": [
+  {
+   "group": "hot",
+   "label": "Over a hundred people"
+  },
+  {
+   "group": "lead",
+   "label": "The teaser and the Reel"
+  },
+  {
+   "group": "plain",
+   "label": "Single posts, the venue tagged in the image"
+  }
+ ],
+ "worked": [
+  {
+   "title": "The weekend roundup",
+   "reach": 260,
+   "img": "/insta/img/soknoear/2026-11-04_episode-drop.jpg",
+   "why": "Its best yet: 14, 32, 81, 41, 100, 260. Two shares, a save, no slide tagged."
+  },
+  {
+   "title": "First Friday at SoKno Sourdough",
+   "reach": 170,
+   "img": "/insta/img/soknoear/2026-11-04_sokno-sourdough-first-friday.jpg",
+   "why": "The bakery's first Ear post. Shared three times, 13 profile visits, one follow. Friday, day-of."
+  },
+  {
+   "title": "Bow Wow Bingo at Printshop",
+   "reach": 108,
+   "img": "/insta/img/soknoear/2026-11-04_bow-wow-bingo-printshop.jpg",
+   "why": "Saturday morning for a Sunday event, a day early. Printshop shared five of six posts."
+  }
+ ],
+ "didnt": [
+  {
+   "title": "All Play Live at Kern's",
+   "reach": 17,
+   "img": "/insta/img/soknoear/2026-11-04_all-play-live-kerns.jpg",
+   "why": "A day early, Wednesday at three, the lowest still of the week. Kern's didn't share it."
+  },
+  {
+   "title": "Moss Meander at Ijams",
+   "reach": 19,
+   "img": "/insta/img/soknoear/2026-11-04_moss-meander.jpg",
+   "why": "Ijams' three posts read 19, 21, 21, none shared. Twelve Ijams posts since October, one share."
+  },
+  {
+   "title": "The Reel",
+   "reach": 17,
+   "img": "/insta/img/soknoear/2026-11-04_reel.jpg",
+   "why": "Back at Andy's call, 24 seconds. 17 people, under the median, but 34% watched, its best."
+  }
+ ],
+ "learned": {
+  "title": "Week two of the timing test: still too close to call",
+  "note": "Twenty-five dated posts in two weeks: twelve a day early, thirteen at the old day-of slot. The share rate decides it, and the two sides are within one share of each other. Twenty shared posts since October average 153 people; fifty-two unshared average 29. The call comes Nov 23 unless one side pulls two-to-one ahead first.",
+  "rows": [
+   {
+    "label": "A day early",
+    "value": 25,
+    "note": "3 of 12 shared · median 28 · 195, 108, 93",
+    "tone": "ink"
+   },
+   {
+    "label": "Day-of, the old slot",
+    "value": 31,
+    "note": "4 of 13 shared · median 25 · 286, 203, 170, 85",
+    "tone": "ink"
+   }
+  ]
+ },
+ "dials": [
+  {
+   "label": "Posts delivered",
+   "value": 15,
+   "max": 15,
+   "display": "15/15",
+   "note": "0 failed, 0 retries; all an hour early",
+   "tone": "warn"
+  },
+  {
+   "label": "Followers who saw a post",
+   "value": 19,
+   "max": 100,
+   "display": "19%",
+   "note": "70 of 378, this week; was 18%",
+   "tone": "warn"
+  },
+  {
+   "label": "Reach that was new people",
+   "value": 95,
+   "max": 100,
+   "display": "95%",
+   "note": "2,118 of 2,226, in 28 days",
+   "tone": "ok"
+  },
+  {
+   "label": "Of the Reel that got watched",
+   "value": 34,
+   "max": 100,
+   "display": "34%",
+   "note": "8.2 of 24 seconds; was 17%",
+   "tone": "ok"
+  }
+ ],
+ "bestEver": [
+  {
+   "title": "The Enchanted Forest at Ijams",
+   "reach": 353,
+   "img": "/insta/img/soknoear/2026-10-21_enchanted-forest.jpg",
+   "why": "Puppets and animal ambassadors at the quarry. Oct 24."
+  },
+  {
+   "title": "Feral Kitty at Fly by Night",
+   "reach": 295,
+   "img": "/insta/img/soknoear/2026-10-07_feral-kitty-release.jpg",
+   "why": "A release show at a cocktail lounge. Oct 9."
+  },
+  {
+   "title": "Kern's Fall Festival",
+   "reach": 290,
+   "img": "/insta/img/soknoear/2026-10-14_kerns-fall-fest.jpg",
+   "why": "A free fair on the bakery lawn. Oct 14."
+  },
+  {
+   "title": "Boos & Brews at Puckers",
+   "reach": 286,
+   "img": "/insta/img/soknoear/2026-10-28_puckers-boos-and-brews.jpg",
+   "why": "A costume contest, beer pong and shot roulette. Oct 29."
+  },
+  {
+   "title": "The weekend roundup, No. 21",
+   "reach": 260,
+   "img": "/insta/img/soknoear/2026-11-04_episode-drop.jpg",
+   "why": "Nine things to do, Nov 5–8. The first roundup in the top ten. Nov 3."
+  },
+  {
+   "title": "Vegan barbecue at Printshop",
+   "reach": 243,
+   "img": "/insta/img/soknoear/2026-10-07_vegan-bbq-printshop.jpg",
+   "why": "A pop-up at a brewery. Oct 11."
+  }
+ ],
+ "moves": [
+  {
+   "key": "roundup-slide-tags",
+   "owner": "claude",
+   "title": "The roundup's slides carry the venue tag",
+   "why": "The roundup read 260, the fifth-best post ever, with nothing tagged in its slides. Tagged posts are the ones venues find and share.",
+   "plan": "From Wed Nov 11 every slide of the weekend roundup is tagged in the picture with its own venue and act, the way the single posts already are. The roundup read 260 this week, the account's fifth-best post ever, with nothing tagged in any slide. Say don't and the slides stay untagged.",
+   "due": "2026-11-11"
+  },
+  {
+   "key": "early-posts",
+   "owner": "claude",
+   "title": "Half the posts go out a day early",
+   "why": "Two weeks in: a day early shared 3 of 12, day-of 4 of 13. Within one share of each other; it runs on, sides swapped again.",
+   "plan": "From Wed Oct 28 half of each week's dated posts go out 24 hours before their old slot, the other half at the old time, swapping each week, so the venue and the act have a day to reshare. The review reads the two sides every Monday and picks the winner by Nov 23. Say don't and every post stays day-of.",
+   "due": "2026-11-23"
+  },
+  {
+   "key": "sourdough-hello",
+   "owner": "andy",
+   "title": "Say hello to SoKno Sourdough",
+   "why": "Their first Ear post read 170 with three shares and 13 profile visits, and nobody has said hello. No email anywhere, so it's a DM from the account.",
+   "plan": "Only you can send a DM from the account. SoKno Sourdough's first Ear post read 170 with three shares and 13 profile visits, and nobody has said hello. Send this to @soknosourdough: Hiya SoKno Sourdough, Andy here from The South Knoxville Ear, the weekly what's-on for the south side. Your First Friday with Peter Riesing and the chocolate tonic was in last week's episode, and your shares carried it a long way. Here's the story: https://soknoear.com/2026-11-04/sokno-sourdough-first-friday. We'll keep covering what you have on and tag you in the picture each time so it's easy to pass along. Share anything you like, it would be a big help. Is there an email for whoever does your social, so we can send the link each week instead of a DM? Thanks, Andy",
+   "due": "2026-11-11"
+  }
+ ],
+ "done": [
+  {
+   "title": "Fifteen of fifteen posted, no retries, every one an hour early.",
+   "text": "The scheduler carried a summer-time offset after the clocks went back. A 4 PM slot posted at 3 PM. Fixed from Wednesday, with tests."
+  },
+  {
+   "title": "The roundup read 260, its best by a mile.",
+   "text": "Six roundups: 14, 32, 81, 41, 100, 260. Two shares and a save, seventeen handles in the caption, nothing tagged in the slides."
+  },
+  {
+   "title": "The Reel is back, at Andy's call.",
+   "text": "Cut to 24 seconds. 17 people, 8.2 seconds watched each: 34% of it, the best share yet. Reach still under the median."
+  },
+  {
+   "title": "The timing test ran its second week.",
+   "text": "Five posts a day early, six day-of. Two shared on each side. Two weeks: 3 of 12 against 4 of 13."
+  },
+  {
+   "title": "SoKno Sourdough is in the contacts.",
+   "text": "No email anywhere, so the hello is a DM from the account. Once it's sent they get the weekly note like everyone else."
+  }
+ ]
+}

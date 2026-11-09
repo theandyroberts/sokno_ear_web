@@ -159,3 +159,35 @@ describe("nextLeadWindow", () => {
     }
   });
 });
+
+// The clocks went back on 2026-11-01. Until 2026-11-09 every slot string carried a
+// constant "-04:00", so the No. 21 drip (Nov 4–7) went out an hour before its slot
+// said: a 4 PM post at 3 PM. The offset now follows the calendar.
+import { etIso, toIso, etParts } from "../scripts/ig-schedule.mjs";
+
+describe("slot strings follow the clock change", () => {
+  it("writes summer time before Nov 1 and winter time after", () => {
+    expect(etIso("2026-10-29", 8)).toBe("2026-10-29T08:00:00-04:00");
+    expect(etIso("2026-11-05", 16)).toBe("2026-11-05T16:00:00-05:00");
+    expect(etIso("2026-11-01", 12)).toBe("2026-11-01T12:00:00-05:00");
+    expect(etIso("2026-10-31", 23)).toBe("2026-10-31T23:00:00-04:00");
+  });
+
+  it("means the instant it says: 4 PM in November is 21:00 UTC, not 20:00", () => {
+    expect(new Date(etIso("2026-11-05", 16)).toISOString()).toBe("2026-11-05T21:00:00.000Z");
+    expect(new Date(etIso("2026-10-29", 16)).toISOString()).toBe("2026-10-29T20:00:00.000Z");
+  });
+
+  it("round-trips an instant through toIso in South Knoxville time, whatever the machine's zone", () => {
+    const ms = Date.UTC(2026, 10, 7, 23, 30); // Sat Nov 7, 18:30 EST
+    expect(toIso(ms)).toBe("2026-11-07T18:30:00-05:00");
+    expect(new Date(toIso(ms)).getTime()).toBe(ms);
+    expect(etParts(ms)).toEqual({ day: "2026-11-07", hour: 18, minute: 30, offset: "-05:00" });
+    const summer = Date.UTC(2026, 7, 20, 13, 0); // Aug 20, 09:00 EDT
+    expect(toIso(summer)).toBe("2026-08-20T09:00:00-04:00");
+  });
+
+  it("pads single-digit hours and minutes", () => {
+    expect(etIso("2026-11-12", 9, 5)).toBe("2026-11-12T09:05:00-05:00");
+  });
+});

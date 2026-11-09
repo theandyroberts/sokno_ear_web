@@ -687,6 +687,24 @@
       "introduced": "2026-11-03",
       "source": "his email to Andy, 2026-11-03",
       "notes": "Fall Fest at Baker Creek (No. 21 feature) had no contact on publish day, so no note went out; Matthew wrote in on his own."
+    },
+    "sokno-sourdough": {
+      "name": "SoKno Sourdough",
+      "match": [
+        "SoKno Sourdough",
+        "Sokno Sourdough"
+      ],
+      "instagram": "@soknosourdough",
+      "website": "https://soknosourdough.com/",
+      "contactPage": null,
+      "email": null,
+      "to": null,
+      "phone": null,
+      "people": [],
+      "salutation": null,
+      "introduced": null,
+      "source": "the No. 21 First Friday story (sokno-sourdough-first-friday), 2026-11-06",
+      "notes": "Bakery on Sevier Ave. soknosourdough.com rendered empty on 2026-11-02, so no email is on file; the route is an Instagram DM. First Ear post Nov 6 (First Friday with Peter Riesing and Paradise Chocolate) read 170 with three shares and 13 profile visits before anyone had said hello. Added 2026-11-09 by the Instagram review; Andy's move `sourdough-hello` sends the first DM and asks for their social person's email."
     }
   }
 }

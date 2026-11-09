@@ -34,30 +34,62 @@ retired; where an old one appears below, its name is beside it. Things Andy can 
 **moves** on the dashboard (`node scripts/pub-status.mjs moves`).
 
 ### 1. Half the posts go out a day early (the timing test) — first week Wed Oct 28, read it Nov 2
-**Opened:** 2026-10-26 · **Claude's** · **Move:** `early-posts` · **Due: Wed 2026-10-28**
+**Opened:** 2026-10-26 · **Age: 14 days** (as of 2026-11-09) · **Claude's** · **Move:** `early-posts` · **Decision: Mon 2026-11-23**
 
 Andy, Oct 23: every dated post went out about three hours before doors, so the venue and
 the act never had time to reshare, and the reshare is the account's reach (13 shared posts
 in three weeks average 148; the other 32 tagged posts average 22). `assignTimingArms` in
 `scripts/ig-schedule.mjs` (`9c5ec6a`) splits each week's dated posts within each venue: half
 go exactly 24 hours before their old slot, half stay day-of, the split flips each week, and
-`timingArm` is stored on the post. This run registered the move and added `earlyPostsOn(moves)`
-so a "Don't" on the dashboard puts every post back to day-of. No post has run in either arm
-yet. Recipe and the empty arm table in `docs/ig-reviews/2026-10-26.md`.
+`timingArm` is stored on the post. Andy answered "go" Oct 30.
 
-**2026-11-02:** age 7 days. Week one (No. 20): early 7 posts, 1 shared (Día de los Muertos,
-180), median 21; day-of 7 posts, 2 shared (Puckers 283, Belltower 188), median 18. Too close
-to call; week two runs with the sides swapped. Andy answered "go" Oct 30. Table in
-`docs/ig-reviews/2026-11-02.md`.
+**2026-11-09:** age 14 days, week two read. Early 5 posts, 2 shared (Bow Wow Bingo 108, goat
+yoga 26); day-of 6 posts, 2 shared (Sourdough 170, Latin.Knox 85). Cumulative: early 3 of 12
+(25%), median 28; day-of 4 of 13 (31%), median 25. Within one share; no call. Week three runs
+with `flip` false. Table in `docs/ig-reviews/2026-11-09.md`.
+
+**2026-11-02:** age 7 days. Week one (No. 20): early 7 posts, 1 shared, median 21; day-of 7
+posts, 2 shared, median 18. Too close to call. Table in `docs/ig-reviews/2026-11-02.md`.
 
 *Measures, every Monday:* posts, shared (≥1 share), share rate, median and mean reach, profile
 visits by arm, this week and cumulative. *Decide:* at the review of Nov 23, or sooner if one
 arm leads two-to-one on shares with at least 20 posts in each; then the winner becomes the
 rule in `assignTimingArms` and the move closes.
 
-### 2. Search Console is unreadable from the Mac mini
-**Opened:** 2026-08-15 · **Age: 79 days** (as of 2026-11-02) · **Missed 4 of 5 SEO checks**
+### 2. The roundup's slides carry the venue tag — first week Wed Nov 11, read it Nov 16
+**Opened:** 2026-11-09 · **Claude's** · **Move:** `roundup-slide-tags` · **Due: Wed 2026-11-11**
+
+The weekend roundup read 260 on Nov 3 (14, 32, 81, 41, 100, 260), the account's fifth-best
+post ever, with two shares and a save and nothing tagged in any of its ten slides. Every
+single banner has carried its venue as an in-image tag since Oct 7 and the tagged posts are
+the ones venues find and share. This run: `buildRoundup` returns `slideTags` aligned with
+`slides` (cover untagged), `publishPost` sends each slide's `user_tags` on its own child
+container, `dropRefusedTags` strips a 2207018 handle from slides as well as single images,
+and `roundupSlideTagsOn(moves)` honours Andy's "Don't". Tests in `tests/ig-roundup.test.ts`
+and `tests/ig-untaggable.test.ts`.
+
+*Measures:* the No. 22 roundup publishes first time (a refused handle shows as a `✂` retry,
+not a failure); its reach and shares against 260 and 2. *Close:* after two roundups with
+tagged slides, whatever they read; this is a correction, not a test.
+
+### 3. Say hello to SoKno Sourdough
+**Opened:** 2026-11-09 · **Andy's** (a DM from the account) · **Move:** `sourdough-hello` · **Due: Wed 2026-11-11**
+
+The bakery's first Ear post (First Friday with Peter Riesing and Paradise Chocolate, Nov 6)
+read 170 with three shares, 13 profile visits and a follow, from the image tag alone; the
+Ear has never written to them. No email anywhere (`soknosourdough.com` renders empty), so
+the first contact is a DM, which only Andy can send. `content/contacts.json` has
+`sokno-sourdough` with `introduced: null`; the move carries the DM text (under 900
+characters, one link, asks for their social person's email).
+
+*To close:* Andy marks it Done; the next run sets `introduced` and the weekly note runs from
+`venue-notify` like everyone else's. An email in the reply goes in `email`/`to`.
+
+### 4. Search Console is unreadable from the Mac mini
+**Opened:** 2026-08-15 · **Age: 86 days** (as of 2026-11-09) · **Missed 5 of 6 SEO checks**
 · **Needs Andy** · not blocking — no push (the site-side half covers breakage; this only costs the crawl numbers)
+
+**2026-11-09:** age 86 days, unchanged; the next SEO check is Nov 15.
 
 **2026-11-01:** age 78 days, missed again (5 of 6) — no Chrome extension connected. The
 Browser pane is no longer signed out: it holds one Google session, `andy@sparkpoint.studio`,
@@ -90,6 +122,8 @@ fires (1st and 15th), or open Search Console and paste the Page indexing numbers
 
 | Item | Opened | Closed | What fixed it |
 | --- | --- | --- | --- |
+| Every post went out an hour early after the clocks went back (Nov 1 – Nov 7: eight dated posts a day, the feature, the Reel), because the scheduler wrote every slot with a constant `-04:00` | 2026-11-09 | 2026-11-09 | `etIso`/`toIso` in `scripts/ig-schedule.mjs` take the offset from the calendar (`America/New_York`); `scripts/ig-queue.mjs` uses them in all eight places; four tests in `tests/ig-schedule.test.ts` pin Oct 29 to `-04:00` and Nov 5 to `-05:00`. First live week is No. 22. Lesson below |
+| The weekly Reel comes out (decided Nov 2) | 2026-10-26 | 2026-11-03 | Withdrawn by Andy on Nov 3: he wants a Reel every week. `reelIsOn` is back on; cut with `/brag-slim`, 24 s, voiced by SouthernCourtney. No. 21's read 17 reach, 8.2 s watched (34%, the best share yet) |
 | The weekly Reel: three cuts (116 s, 46 s, 46 s opening on the feature) read 27, 19 and 16, under the week's median still every time; the third was watched 7.5 s and skipped 73% | 2026-10-26 | 2026-11-02 | The Reel comes out from Nov 4: `reelIsOn` in `scripts/ig-reel.mjs` is off unless Andy answers "Don't" on `reel-comes-out`; `publish-episode.mjs` skips the render, `ig-queue.mjs` the post. `reel-opens-on-the-story` closed with the numbers |
 | Stale worktree under `.claude/worktrees/` failed the full `vitest run` (38 React tests resolving a different `node_modules`) | 2026-10-26 | 2026-11-02 | `vitest.config.ts` excludes `.claude/**`; 44 files, 425 tests, all passing |
 | Tag the artist in the picture too (the code ran Oct 12 and tagged nobody; the draft gate from Oct 19) | 2026-10-12 | 2026-10-26 | The gate worked first time: all 16 No. 19 stories carried `igAct` (8 handles, 8 reasons there is none); 7 posts tagged an act beside the venue and 3 of the 7 were shared (116, 71, 36) against 2 of the 10 venue-only posts. The gate stays; `docs/ig-reviews/2026-10-26.md` |
@@ -120,6 +154,19 @@ fires (1st and 15th), or open Search Console and paste the Page indexing numbers
 ---
 
 ## Lessons
+
+**2026-11-09 — a status line that prints the plan is not a check.** The publishing desk said
+"4:00 PM" for a post Instagram put up at 3:00 PM, because the desk prints the slot string and
+the slot string carried a summer-time offset after the clocks went back. Eight posts a day for
+a week went out an hour early and nothing in the pipeline noticed; the Monday review found it
+by reading Instagram's own timestamps against the queue. Two rules:
+
+1. **Never hard-code a UTC offset for a place.** `-04:00` is a season, not a time zone. Build
+   the string from `America/New_York` for that date (`etIso` in `scripts/ig-schedule.mjs`).
+2. **A check compares the thing that happened with the thing that was meant.** The publish
+   check should read one posted timestamp from the API and compare it with the slot; printing
+   the slot back is not evidence.
+
 
 **2026-09-28 — don't silence cosmetic noise with robots.txt.** The `/stats` 404 was
 logged as "Harmless" on 2026-09-01 and then "fixed" anyway on 2026-09-15. `Disallow`

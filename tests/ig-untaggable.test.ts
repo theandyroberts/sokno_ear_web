@@ -28,3 +28,32 @@ describe("userTagsFor untaggable", () => {
     expect(userTagsFor(["@x"], { untaggable: new Set(["x"]) })).toBeUndefined();
   });
 });
+
+import { dropRefusedTags } from "../scripts/ig-container.mjs";
+
+describe("dropRefusedTags", () => {
+  const tag = (username: string) => ({ username, x: 0.5, y: 0.88 });
+  it("takes a refused handle out of a single image's tags and remembers it", () => {
+    const post: Record<string, unknown> = { userTags: [tag("thepinkcactusknox"), tag("TheComedySphereKnox")] };
+    expect(dropRefusedTags(post, ["thecomedysphereknox"])).toBe(1);
+    expect(post.userTags).toEqual([tag("thepinkcactusknox")]);
+    expect(post.droppedTags).toEqual(["thecomedysphereknox"]);
+  });
+  it("takes it out of every roundup slide too, leaving the slide list aligned", () => {
+    const post: Record<string, unknown> = { slides: ["c", "a", "b"], slideTags: [null, [tag("kernsknox")], [tag("dead_handle"), tag("printshopbeer")]] };
+    expect(dropRefusedTags(post, ["dead_handle"])).toBe(1);
+    expect(post.slideTags).toEqual([null, [tag("kernsknox")], [tag("printshopbeer")]]);
+  });
+  it("drops the whole tag list when nothing is left, and the slide list when every slide is bare", () => {
+    const post: Record<string, unknown> = { userTags: [tag("x")], slideTags: [null, [tag("x")]] };
+    expect(dropRefusedTags(post, ["x"])).toBe(2);
+    expect(post.userTags).toBeUndefined();
+    expect(post.slideTags).toBeUndefined();
+  });
+  it("returns zero when the error was not about a tag we carry, so the caller does not loop", () => {
+    const post: Record<string, unknown> = { userTags: [tag("kernsknox")] };
+    expect(dropRefusedTags(post, ["someone_else"])).toBe(0);
+    expect(dropRefusedTags(post, [])).toBe(0);
+    expect(post.userTags).toEqual([tag("kernsknox")]);
+  });
+});

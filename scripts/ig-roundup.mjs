@@ -30,6 +30,17 @@ export function roundupIsOn(moves) {
   return !(moves ?? []).some((m) => m.key === ROUNDUP_MOVE && m.answer === "no");
 }
 
+/**
+ * The move that tags each venue in its own roundup slide (2026-11-09): "The roundup's
+ * slides carry the venue tag". The roundup read 260 on Nov 3, the fifth-best post the
+ * account has made, with nothing tagged in any slide; the single posts that get
+ * reshared are the ones tagged in the image. On unless Andy says Don't.
+ */
+export const ROUNDUP_SLIDE_TAGS_MOVE = "roundup-slide-tags";
+export function roundupSlideTagsOn(moves) {
+  return !(moves ?? []).some((m) => m.key === ROUNDUP_SLIDE_TAGS_MOVE && m.answer === "no");
+}
+
 /** The move that turned a venue's own carousel OFF: "Venue stories back to single posts". */
 export const VENUE_SINGLES_MOVE = "venue-singles";
 
@@ -120,10 +131,12 @@ const inWeekendOrder = (a, b) => firstDay(a) - firstDay(b) || startOf(a) - start
  * @param {(story: object) => string} a.bannerUrl
  * @param {string} a.coverUrl
  * @param {(story: object) => string[]} [a.tagsOf]
+ * @param {(story: object) => Array<{username: string, x: number, y: number}> | undefined} [a.slideTagsOf]
+ *   the in-image tags for a story's slide (userTagsFor); the cover is never tagged
  * @param {string} [a.hashtags]
  * @param {string} [a.fallbackCaption]  what to say if it has to go out as the plain card
  */
-export function buildRoundup({ episode, stories, bannerUrl, coverUrl, tagsOf = () => [], hashtags = "", fallbackCaption }) {
+export function buildRoundup({ episode, stories, bannerUrl, coverUrl, tagsOf = () => [], slideTagsOf, hashtags = "", fallbackCaption }) {
   if (stories.length < MIN_ROUNDUP_STORIES) return null;
   const chosen = chooseVaried(stories, MAX_SLIDES - 1, (s) => tagsOf(s)[0]).sort(inWeekendOrder);
   const tags = [...new Set(chosen.flatMap(tagsOf))];
@@ -144,6 +157,11 @@ export function buildRoundup({ episode, stories, bannerUrl, coverUrl, tagsOf = (
     title: `Weekend roundup (No. ${episode.number}) · ${chosen.length} stories`,
     imageUrl: coverUrl,
     slides: [coverUrl, ...chosen.map(bannerUrl)],
+    // One entry per slide, aligned with `slides`: null for the cover and for a story
+    // with nobody to tag. publishPost puts each slide's tags on its own container.
+    ...(slideTagsOf && chosen.some((s) => slideTagsOf(s)?.length)
+      ? { slideTags: [null, ...chosen.map((s) => slideTagsOf(s) ?? null)] }
+      : {}),
     stories: chosen.map((s) => s.id),
     caption: lines.join("\n"),
     ...(fallbackCaption ? { fallbackCaption } : {}),

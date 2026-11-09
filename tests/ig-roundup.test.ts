@@ -1,7 +1,7 @@
 // @vitest-environment node
 import { describe, it, expect } from "vitest";
 import {
-  pickSingles, chooseVaried, buildRoundup, buildVenueRoundup, roundupIsOn, venueCarouselsOn, downgradeCarousel, shortTitle,
+  pickSingles, chooseVaried, buildRoundup, buildVenueRoundup, roundupIsOn, roundupSlideTagsOn, venueCarouselsOn, downgradeCarousel, shortTitle,
   MAX_SINGLES_PER_VENUE, MAX_SLIDES,
 } from "../scripts/ig-roundup.mjs";
 import { publishPost, userTagsFor, imageTagsOn, abBucket, USER_TAG_SPOT } from "../scripts/ig-container.mjs";
@@ -84,6 +84,32 @@ describe("the weekend roundup", () => {
 
   it("isn't built for a week with fewer than three stories", () => {
     expect(buildRoundup({ ...io, stories: no15.slice(0, 2), coverUrl: "c" })).toBeNull();
+  });
+
+  // 2026-11-09: the roundup read 260 with nothing tagged in any slide. Each slide now
+  // carries its story's in-image tags, the way the single banner does; the cover none.
+  it("tags each slide with its own venue, aligned with the slides, and never the cover", () => {
+    const tagged = buildRoundup({ ...io, stories: no15, coverUrl: "cover.jpg", slideTagsOf: (s: { tags: string[] }) => userTagsFor(s.tags) })!;
+    expect(tagged.slideTags).toHaveLength(tagged.slides.length);
+    expect(tagged.slideTags![0]).toBeNull();
+    tagged.slides.slice(1).forEach((url: string, i: number) => {
+      const story = no15.find((s) => url.endsWith(`/${s.id}.jpg`))!;
+      const t = tagged.slideTags![i + 1];
+      if (story.tags.length) expect(t.map((x: { username: string }) => x.username)).toEqual([story.tags[0].slice(1)]);
+      else expect(t).toBeNull();
+    });
+  });
+
+  it("carries no slide tags at all when nobody asked for them, or when no story has a handle", () => {
+    expect(r.slideTags).toBeUndefined();
+    const bare = buildRoundup({ ...io, stories: no15.map((s) => ({ ...s, tags: [] })), coverUrl: "c", slideTagsOf: () => undefined })!;
+    expect(bare.slideTags).toBeUndefined();
+  });
+
+  it("is on unless Andy says Don't to 'roundup-slide-tags'", () => {
+    expect(roundupSlideTagsOn([])).toBe(true);
+    expect(roundupSlideTagsOn([{ key: "roundup-slide-tags", answer: "go" }])).toBe(true);
+    expect(roundupSlideTagsOn([{ key: "roundup-slide-tags", answer: "no" }])).toBe(false);
   });
 });
 
@@ -196,6 +222,20 @@ describe("publishing", () => {
     expect(media.slice(0, 3).every((c) => !("caption" in c.body))).toBe(true);
     expect(media[3].body).toMatchObject({ media_type: "CAROUSEL", children: "c1,c2,c3", caption: "Swipe" });
     expect(ig.calls.at(-1)!.body.creation_id).toBe("c4");
+  });
+
+  it("puts each slide's tags on its own child container, and none on the cover or the parent", async () => {
+    const ig = fakeInstagram();
+    const kerns = [{ username: "kernsknox", x: 0.5, y: 0.88 }];
+    const ps = [{ username: "printshopbeer", x: 0.2, y: 0.88 }, { username: "latin.knox", x: 0.8, y: 0.88 }];
+    await publishPost({ imageUrl: "c.jpg", slides: ["c.jpg", "a.jpg", "b.jpg", "d.jpg"], slideTags: [null, kerns, null, ps], caption: "Swipe" }, { ...base, fetchImpl: ig.fetchImpl });
+    const media = ig.calls.filter((c) => c.url.endsWith("/media"));
+    expect("user_tags" in media[0].body).toBe(false);
+    expect(JSON.parse(media[1].body.user_tags)).toEqual(kerns);
+    expect("user_tags" in media[2].body).toBe(false);
+    expect(JSON.parse(media[3].body.user_tags)).toEqual(ps);
+    expect("user_tags" in media[4].body).toBe(false);
+    expect(media[4].body).toMatchObject({ media_type: "CAROUSEL", children: "c1,c2,c3,c4" });
   });
 
   it("refuses a carousel Instagram would refuse, before asking", async () => {

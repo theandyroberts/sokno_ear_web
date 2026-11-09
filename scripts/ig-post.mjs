@@ -33,7 +33,7 @@
 process.env.TZ = "America/New_York"; // all slot math is SoKno-local
 import fs from "node:fs";
 import path from "node:path";
-import { publishPost, untaggableUsernames } from "./ig-container.mjs";
+import { publishPost, untaggableUsernames, dropRefusedTags } from "./ig-container.mjs";
 import { downgradeCarousel } from "./ig-roundup.mjs";
 
 const GRAPH = process.env.IG_GRAPH_BASE || "https://graph.instagram.com/v22.0";
@@ -114,11 +114,7 @@ for (const file of files) {
           // An untaggable handle: drop it from the picture and go again this run. Only
           // when it actually removes a tag — otherwise the same error would loop.
           const refused = untaggableUsernames(err.graph);
-          const before = post.userTags?.length ?? 0;
-          if (refused.length) post.userTags = (post.userTags ?? []).filter((t) => !refused.includes(t.username.toLowerCase()));
-          if (!refused.length || post.userTags.length === before) throw err;
-          post.droppedTags = [...new Set([...(post.droppedTags ?? []), ...refused])];
-          if (!post.userTags.length) delete post.userTags;
+          if (!dropRefusedTags(post, refused)) throw err;
           console.warn(`✂ ${q.slug}/${post.id}: Meta cannot tag ${refused.map((u) => "@" + u).join(" ")} — dropped from the image, retrying now`);
         }
       }
