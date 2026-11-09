@@ -1,7 +1,7 @@
 {
   "_flow": "Each day reads as the night's arc: happy hour → dinner → events/concerts/comedy/drink specials → the closing-time hang. Bars, restaurants, music venues only.",
-  "updated": "2026-11-02",
-  "weekend": "Nov 5–8",
+  "updated": "2026-11-09",
+  "weekend": "Nov 12–15",
   "days": {
     "Thu": [
       {
@@ -9,9 +9,9 @@
         "time": "11:00 AM",
         "venue": "Earl's · 610 Waterfront Dr",
         "headline": "Ten-dollar Patrón mango ritas",
-        "sub": "All day till 10 · rain showers likely, so the inside tables · 610 Waterfront Dr",
+        "sub": "All day till 10 · rain showers, so the inside tables · 610 Waterfront Dr",
         "cat": "drink",
-        "href": "/2026-11-04/specials-board"
+        "href": "/2026-11-11/specials-board"
       },
       {
         "id": "thu-alliance",
@@ -27,7 +27,7 @@
         "time": "4:00 PM",
         "venue": "Redbud Kitchen · 906 Sevier Ave",
         "headline": "Weekday happy hour, four to six",
-        "sub": "Double rewards points on Thursdays · 906 Sevier Ave",
+        "sub": "The new menu landed Wednesday · double rewards points Thursdays · 906 Sevier Ave",
         "cat": "drink",
         "href": "https://www.redbudkitchen.com/"
       },
@@ -41,10 +41,19 @@
         "href": "https://printshopbeer.com/specials/"
       },
       {
+        "id": "thu-pinkcactus-karaoke",
+        "time": "5:00 PM",
+        "venue": "The Pink Cactus · 1147 Sevier Ave",
+        "headline": "Free first hour in a karaoke room",
+        "sub": "Every Thursday in November · book a room · 1147 Sevier Ave",
+        "cat": "mic",
+        "href": "https://www.instagram.com/thepinkcactusknox/p/DfS6ojXGao_/"
+      },
+      {
         "id": "thu-dumplings",
         "time": "6:00 PM",
         "venue": "Angry Dumplings · 1119 Sevier Ave",
-        "headline": "Dumplings before karaoke on the roof",
+        "headline": "Dumplings before the roof or the lounge",
         "sub": "Hand-wrapped dumplings, noodles and boba · 1119 Sevier Ave",
         "cat": "food",
         "href": "https://www.instagram.com/dumplingsteaknoxville/"
@@ -59,22 +68,13 @@
         "href": "https://www.instagram.com/kernsknox/p/DfIKp8HoGkm/"
       },
       {
-        "id": "thu-uptop",
+        "id": "thu-alchemy",
         "time": "7:00 PM",
         "venue": "UpTop Rooftop Bar at Kern's · 2201 Kern's Rising Way",
-        "headline": "Karaoke night on the roof, half off select drinks",
-        "sub": "7–9 · pop-ups · a date-night giveaway · indoor-outdoor · 2201 Kern's Rising Way",
-        "cat": "mic",
-        "href": "/2026-11-04/uptop-karaoke-kerns"
-      },
-      {
-        "id": "thu-allplay",
-        "time": "7:00 PM",
-        "venue": "Kern's lawn · 2201 Kern's Rising Way",
-        "headline": "All Play Live: a family game show on the lawn",
-        "sub": "Parents and kids as teams, prizes · showers likely, check their feed · 2201 Kern's Rising Way",
+        "headline": "Sweaters, Flannels and Bourbon Barrels with Alchemy Cigar Lounge",
+        "sub": "7–9 · $40: a cocktail, a cigar, a guided whiskey tasting · covered seating · 2201 Kern's Rising Way",
         "cat": "star",
-        "href": "/2026-11-04/all-play-live-kerns"
+        "href": "/2026-11-11/alchemy-uptop-kerns"
       },
       {
         "id": "thu-trailhead",
@@ -93,24 +93,42 @@
         "sub": "$13 domestic pitchers all day · 3701 Sevierville Pike",
         "cat": "mic",
         "href": "https://soknotaco.com/"
+      },
+      {
+        "id": "thu-808",
+        "time": "8:00 PM",
+        "venue": "The 808 · 808 Sevier Ave",
+        "headline": "Ahee: Bass Quest Tour",
+        "sub": "Doors 8, show 9 · 18+ · tickets on the venue's page · 808 Sevier Ave",
+        "cat": "music",
+        "href": "/2026-11-11/ahee-808"
+      },
+      {
+        "id": "thu-feyleux",
+        "time": "8:45 PM",
+        "venue": "Fly by Night · 906 Sevier Ave",
+        "headline": "BellTower Presents: Feyleux live, DJs Darkness and Cemetery Sex",
+        "sub": "Doors 8:45, music 9 · $10 · 21+ · goth, darkwave, post-punk till 1 · 906 Sevier Ave",
+        "cat": "music",
+        "href": "/2026-11-11/feyleux-belltower-fbn"
       }
     ],
     "Fri": [
       {
-        "id": "fri-southside-lunch",
+        "id": "fri-southside",
         "time": "11:00 AM",
         "venue": "SouthSide Garage · 1014 Sevier Ave",
         "headline": "Open for lunch, and the Friday torta",
-        "sub": "Dia de Foods torta special every Friday · 1014 Sevier Ave",
+        "sub": "Dia de Foods' torta special · 11–4 · 1014 Sevier Ave",
         "cat": "food",
         "href": "https://www.southsidegarageknox.com/specials/"
       },
       {
-        "id": "fri-printshop-flights",
+        "id": "fri-printshop",
         "time": "12:00 PM",
         "venue": "Printshop Beer Co. · 1532 Island Home Ave",
         "headline": "Twelve-dollar flights, you pick four",
-        "sub": "Noon to 9 · partly sunny and 70 on the patio · 1532 Island Home Ave",
+        "sub": "Noon to 9 every Friday · 1532 Island Home Ave",
         "cat": "drink",
         "href": "https://printshopbeer.com/specials/"
       },
@@ -119,106 +137,86 @@
         "time": "4:00 PM",
         "venue": "Earl's · 610 Waterfront Dr",
         "headline": "Nine-dollar spicy pineapple ritas",
-        "sub": "All day till 10 · 610 Waterfront Dr",
+        "sub": "All day till 10 · cloudy and 48 · 610 Waterfront Dr",
         "cat": "drink",
-        "href": "/2026-11-04/specials-board"
+        "href": "/2026-11-11/specials-board"
       },
       {
-        "id": "fri-fallfest",
-        "time": "5:30 PM",
-        "venue": "AMBC Fall Fest · Baker Creek Preserve, 1516 Taylor Rd",
-        "headline": "Fall Fest opens: beer garden, food trucks, Knoxville Utility Band",
-        "sub": "Bluegrass 5:30 · lit jump line 6:30 · film 6:45 · slideshows 8 · last call 9:30 · free · 1516 Taylor Rd",
+        "id": "fri-altmart",
+        "time": "4:00 PM",
+        "venue": "The Pink Cactus · 1147 Sevier Ave",
+        "headline": "Alt Mart: art, flash tattoos, plants, potions",
+        "sub": "From 4 · the MX Knoxville Goth Pageant at 6 · all ages till 9 · 1147 Sevier Ave",
         "cat": "star",
-        "href": "/2026-11-04/ambc-fall-fest",
-        "venueKey": "ambc"
+        "href": "/2026-11-11/alt-mart-pink-cactus"
       },
       {
         "id": "fri-dumplings",
         "time": "6:00 PM",
         "venue": "Angry Dumplings · 1119 Sevier Ave",
-        "headline": "Dumplings before First Friday",
+        "headline": "Dumplings before the night market",
         "sub": "Hand-wrapped dumplings, noodles and boba · 1119 Sevier Ave",
         "cat": "food",
         "href": "https://www.instagram.com/dumplingsteaknoxville/"
       },
       {
-        "id": "fri-sourdough",
+        "id": "fri-aapi",
         "time": "6:00 PM",
-        "venue": "SoKno Sourdough · 2006 Barber St",
-        "headline": "First Friday: Peter Riesing's art, Paradise Chocolate's tonic",
-        "sub": "Evening · samples of the new chocolate tonic · 2006 Barber St",
+        "venue": "Hi-Wire Brewing · 2020 Barber St",
+        "headline": "Fall Asian Night Market: two food trucks, twenty makers",
+        "sub": "6–9 · free · indoors on the second floor · carpool, parking is thin · 2020 Barber St",
         "cat": "star",
-        "href": "/2026-11-04/sokno-sourdough-first-friday"
+        "href": "/2026-11-11/aapi-night-market"
+      },
+      {
+        "id": "fri-puckers",
+        "time": "6:00 PM",
+        "venue": "Puckers Sports Grill · 115 Mimosa Ave",
+        "headline": "Noah Grey plays the Friday music slot",
+        "sub": "6–9 · live music every Friday in November · 115 Mimosa Ave",
+        "cat": "music",
+        "href": "https://www.instagram.com/puckersknoxville/p/DfPlITHIb1M/"
       },
       {
         "id": "fri-808",
         "time": "7:00 PM",
         "venue": "The 808 · 808 Sevier Ave",
-        "headline": "College Night: Ella Pinchock, Fort Knox, Pocket Ace",
-        "sub": "Doors 7 · bands on the hour from 8 · $5 at the door, free with an RSVP · 18+ · 808 Sevier Ave",
+        "headline": "Big Something, doors at seven",
+        "sub": "Show at 8 · 18+ · tickets on the venue's page · 808 Sevier Ave",
         "cat": "music",
-        "href": "/2026-11-04/808-college-night",
+        "href": "/2026-11-11/big-something-808",
         "ticket": {
-          "href": "https://posh.vip/f/f421c",
+          "href": "https://808knox.com/",
           "image": "/assets/spots/the-808-tickets-dirty-south.svg",
           "alt": "Get tickets at The 808"
         }
       },
       {
-        "id": "fri-latinknox",
+        "id": "fri-aero",
         "time": "9:00 PM",
-        "venue": "Printshop Beer Co. · 1532 Island Home Ave",
-        "headline": "Latin.Knox: DJs EV, Jason Davila and Minitiger",
-        "sub": "Latin house from the classics to the underground · $20 · 21+ · 1532 Island Home Ave",
+        "venue": "The Pink Cactus · 1147 Sevier Ave",
+        "headline": "Aero Dream: a Y2K dance night with DJs Captain Midnight, Freake and Nocturne",
+        "sub": "9 PM–1 AM · $10 · 18+ · metallic tracksuits encouraged · 1147 Sevier Ave",
         "cat": "dance",
-        "href": "/2026-11-04/latin-knox-printshop"
+        "href": "/2026-11-11/aero-dream-pink-cactus"
       },
       {
-        "id": "fri-flybynight",
+        "id": "fri-fbn",
         "time": "10:00 PM",
         "venue": "Fly by Night · 906 Sevier Ave",
         "headline": "The seventies lounge, open till one",
-        "sub": "A great martini never goes out of style, they say · 906 Sevier Ave",
+        "sub": "Cocktails after the market · 906 Sevier Ave",
         "cat": "drink",
         "href": "https://www.flybynightknox.com/"
-      },
-      {
-        "id": "fri-climbingroots",
-        "time": "10:00 PM",
-        "venue": "Climbing Roots · Fall Fest after-party",
-        "headline": "Fall Fest after-party at the bouldering gym",
-        "sub": "After the 9:30 last call at Baker Creek · see the Fall Fest schedule",
-        "cat": "star",
-        "href": "https://fallfest.ambcknox.org/schedule/"
       }
     ],
     "Sat": [
       {
-        "id": "sat-goatyoga",
-        "time": "8:30 AM",
-        "venue": "Kern's lawn · 2201 Kern's Rising Way",
-        "headline": "Goat yoga with Misfit Herd",
-        "sub": "42 at dawn, so a layer · coffee in the hall from 8 · 2201 Kern's Rising Way",
-        "cat": "star",
-        "href": "/2026-11-04/goat-yoga-kerns"
-      },
-      {
-        "id": "sat-fallfest-rides",
-        "time": "9:30 AM",
-        "venue": "AMBC Fall Fest · Baker Creek Preserve, 1516 Taylor Rd",
-        "headline": "Fall Fest Saturday: rides from 9:30, beer gardens at 11, Mal Nombre at noon",
-        "sub": "Bike parade 12:30 · Whip Off 3 · strider race 4:45 · free · 1516 Taylor Rd",
-        "cat": "star",
-        "href": "/2026-11-04/ambc-fall-fest",
-        "venueKey": "ambc"
-      },
-      {
-        "id": "sat-burger-brunch",
+        "id": "sat-burger",
         "time": "11:00 AM",
         "venue": "Sevier Ave Burger Co. · Sevier Ave",
         "headline": "Brunch eleven to two",
-        "sub": "Pancakes, donuts, eggs, the new skillet potatoes · Sevier Ave",
+        "sub": "Pancakes, donuts, eggs and the new skillet potatoes · the Harvest Burger of the month after",
         "cat": "food",
         "href": "https://www.instagram.com/sevieraveburgerco/"
       },
@@ -226,74 +224,91 @@
         "id": "sat-earls",
         "time": "11:00 AM",
         "venue": "Earl's · 610 Waterfront Dr",
-        "headline": "Game-day board for Kentucky, plus eight-dollar house margs",
-        "sub": "$2 off drafts · $6 Orange Bliss · 6-for-5 buckets · $2 off pizza · kickoff 6:15 · 610 Waterfront Dr",
+        "headline": "Game-day board for Texas A&M, plus eight-dollar house margs",
+        "sub": "$2 off drafts, $6 Orange Bliss, 6-for-5 buckets, $2 off pizza · kickoff 3 PM · 610 Waterfront Dr",
         "cat": "drink",
-        "href": "/2026-11-04/specials-board"
+        "href": "/2026-11-11/specials-board"
       },
       {
         "id": "sat-southside",
         "time": "12:00 PM",
         "venue": "SouthSide Garage · 1014 Sevier Ave",
         "headline": "Open noon to midnight for the game",
-        "sub": "Dia de Foods in the kitchen · 1014 Sevier Ave",
+        "sub": "Kickoff at 3 on the patio TVs · 1014 Sevier Ave",
         "cat": "drink",
         "href": "https://www.southsidegarageknox.com/specials/"
       },
       {
-        "id": "sat-fallfest-stage",
-        "time": "5:00 PM",
-        "venue": "AMBC Fall Fest · Baker Creek Preserve, 1516 Taylor Rd",
-        "headline": "Mercy Lights 5, Butcherbird 6, Best Line on the lit jump line 7",
-        "sub": "Megaweed 8:15 · raffle 9 · New Speedway Honkers 9:30 · silent disco 10:30 · 1516 Taylor Rd",
-        "cat": "music",
-        "href": "/2026-11-04/ambc-fall-fest",
-        "venueKey": "ambc"
+        "id": "sat-comedy",
+        "time": "2:00 PM",
+        "venue": "The Pink Cactus · 1147 Sevier Ave",
+        "headline": "The After Brunch Special: stand-up with Justin Chavez headlining",
+        "sub": "Doors 2, show 2:30 · The Comedy Sphere · tickets on its site · 1147 Sevier Ave",
+        "cat": "mic",
+        "href": "/2026-11-11/after-brunch-special"
       },
       {
         "id": "sat-printshop-game",
-        "time": "5:45 PM",
+        "time": "2:30 PM",
         "venue": "Printshop Beer Co. · 1532 Island Home Ave",
         "headline": "A dollar off pints from 30 minutes before kickoff to the final whistle",
-        "sub": "Kentucky at Tennessee, 6:15 · 1532 Island Home Ave",
+        "sub": "Tennessee at Texas A&M, 3 PM · 1532 Island Home Ave",
         "cat": "drink",
         "href": "https://printshopbeer.com/specials/"
+      },
+      {
+        "id": "sat-kerns-game",
+        "time": "3:00 PM",
+        "venue": "Kern's · 2201 Kern's Rising Way",
+        "headline": "Vols watch party on the big screens",
+        "sub": "Every Saturday of the season · the hall's open till 11 · 2201 Kern's Rising Way",
+        "cat": "drink",
+        "href": "https://www.instagram.com/kernsknox/p/DfNATfiiPz2/"
       },
       {
         "id": "sat-dumplings",
         "time": "6:00 PM",
         "venue": "Angry Dumplings · 1119 Sevier Ave",
-        "headline": "Dumplings before kickoff",
+        "headline": "Dumplings after the game",
         "sub": "Hand-wrapped dumplings, noodles and boba · 1119 Sevier Ave",
         "cat": "food",
         "href": "https://www.instagram.com/dumplingsteaknoxville/"
       },
       {
-        "id": "sat-cutcorners",
+        "id": "sat-808",
+        "time": "6:00 PM",
+        "venue": "The 808 · 808 Sevier Ave",
+        "headline": "SHOGUN's LP release, Agonize in Defeat, all ages",
+        "sub": "Doors 6, show 7 · tickets on the venue's page · 808 Sevier Ave",
+        "cat": "music",
+        "href": "/2026-11-11/shogun-808"
+      },
+      {
+        "id": "sat-fbn",
         "time": "9:00 PM",
         "venue": "Fly by Night · 906 Sevier Ave",
-        "headline": "Cut Corners ATL takeover: techno, club, house",
-        "sub": "9 PM–1 AM · $10 · the game's over about when it starts · 906 Sevier Ave",
+        "headline": "Disco night, tickets on the lounge's page",
+        "sub": "The lounge says disco fever is back Saturday; details on its Instagram · open till 1 · 906 Sevier Ave",
         "cat": "dance",
-        "href": "/2026-11-04/cut-corners-fbn"
+        "href": "https://www.instagram.com/flybynightknox/p/DffKl3Hx4q-/"
       }
     ],
     "Sun": [
       {
-        "id": "sun-birdbanding",
-        "time": "8:00 AM",
-        "venue": "Ijams Nature Center · Meads Quarry, 3526 Island Home Ave",
-        "headline": "Bird banding behind the quarry, five dollars",
-        "sub": "8–9:30 · meet in the quarry lot · 3526 Island Home Ave",
+        "id": "sun-carscoffee",
+        "time": "7:00 AM",
+        "venue": "Eggspectation at Kern's · 2201 Kern's Rising Way",
+        "headline": "Cars & Coffee, the first one, with free drip coffee",
+        "sub": "7–10 AM · every third Sunday from here · 33 degrees and sunny · 2201 Kern's Rising Way",
         "cat": "star",
-        "href": "/2026-11-04/bird-banding"
+        "href": "/2026-11-11/cars-coffee-kerns"
       },
       {
         "id": "sun-soknotaco",
         "time": "10:00 AM",
         "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
         "headline": "Brunch, then all-day happy hour",
-        "sub": "Brunch 10–2 · $4 wells, champagne and domestics all day · 3701 Sevierville Pike",
+        "sub": "Brunch 10–2 · $4 wells, $4 bubbles, $4 domestics all day · 3701 Sevierville Pike",
         "cat": "food",
         "href": "https://soknotaco.com/"
       },
@@ -302,27 +317,36 @@
         "time": "11:00 AM",
         "venue": "Earl's · 610 Waterfront Dr",
         "headline": "Seven-dollar mimosas and Bloody Marys",
-        "sub": "All day till 10 · 610 Waterfront Dr",
+        "sub": "All day till 10 · sunny and 55 · 610 Waterfront Dr",
         "cat": "drink",
-        "href": "/2026-11-04/specials-board"
+        "href": "/2026-11-11/specials-board"
+      },
+      {
+        "id": "sun-southside",
+        "time": "11:00 AM",
+        "venue": "SouthSide Garage · 1014 Sevier Ave",
+        "headline": "Dia de brunch with mimosa and Bloody Mary specials",
+        "sub": "11–3 · 1014 Sevier Ave",
+        "cat": "food",
+        "href": "https://www.southsidegarageknox.com/specials/"
       },
       {
         "id": "sun-redbud",
         "time": "11:00 AM",
         "venue": "Redbud Kitchen · 906 Sevier Ave",
         "headline": "Brunch till four, baked eggs and morning poutine",
-        "sub": "Sunday 11–4 · 906 Sevier Ave",
+        "sub": "The new menu's first weekend · 906 Sevier Ave",
         "cat": "food",
         "href": "https://www.redbudkitchen.com/"
       },
       {
-        "id": "sun-bingo",
+        "id": "sun-bluegrass",
         "time": "2:00 PM",
-        "venue": "Printshop Beer Co. · 1532 Island Home Ave",
-        "headline": "Bow Wow Bingo with Knox Vintage Pet Project",
-        "sub": "2–4 · adoptable senior dogs on the patio · kid, dog and beer friendly · mostly sunny and 65 · 1532 Island Home Ave",
-        "cat": "star",
-        "href": "/2026-11-04/bow-wow-bingo-printshop"
+        "venue": "Ijams Nature Center · 2915 Island Home Ave",
+        "headline": "The East Tennessee Bluegrass Association's jam on the plaza",
+        "sub": "2–5 · free · beginners first, then everyone · bring an acoustic instrument · 2915 Island Home Ave",
+        "cat": "music",
+        "href": "/2026-11-11/bluegrass-jam-ijams"
       },
       {
         "id": "sun-dumplings",
@@ -334,11 +358,20 @@
         "href": "https://www.instagram.com/dumplingsteaknoxville/"
       },
       {
-        "id": "sun-flybynight",
+        "id": "sun-pinkcactus-trivia",
+        "time": "6:30 PM",
+        "venue": "The Pink Cactus · 1147 Sevier Ave",
+        "headline": "Trivia Sunday with Knox Trivia Guys",
+        "sub": "Every Sunday at 6:30 · gift-card prizes · 1147 Sevier Ave",
+        "cat": "mic",
+        "href": "https://www.instagram.com/thepinkcactusknox/reel/DfYHo_kpuRY/"
+      },
+      {
+        "id": "sun-fbn",
         "time": "8:00 PM",
         "venue": "Fly by Night · 906 Sevier Ave",
         "headline": "The lounge is open till midnight Sundays",
-        "sub": "From 2 PM · 906 Sevier Ave",
+        "sub": "906 Sevier Ave",
         "cat": "drink",
         "href": "https://www.flybynightknox.com/"
       }

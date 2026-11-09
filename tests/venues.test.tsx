@@ -45,11 +45,16 @@ describe("venue registry", () => {
       }
     }
   });
-  it("credits AMBC on all three Fall Fest listings and preserves every other venue match", () => {
-    const days = withVenueLogos(nightlife.days, registry);
-    const festival = Object.values(days).flat().filter((item) => item.href === "/2026-11-04/ambc-fall-fest");
-    expect(festival).toHaveLength(3);
-    for (const item of festival) {
+  it("venueKey credits the organizer (AMBC on a Fall Fest listing) and preserves every other venue match", () => {
+    // A fixture, not the live plan: Fall Fest is one weekend a year (No. 21, Nov 6-7, 2026).
+    const festival = {
+      id: "fri-fallfest", time: "5:30 PM", venue: "AMBC Fall Fest · Baker Creek Preserve, 1516 Taylor Rd",
+      headline: "Fall Fest opens", cat: "star", href: "/2026-11-04/ambc-fall-fest", venueKey: "ambc",
+    } as const;
+    const days = withVenueLogos({ ...nightlife.days, Fri: [festival, ...nightlife.days.Fri] }, registry);
+    const credited = Object.values(days).flat().filter((item) => item.href === "/2026-11-04/ambc-fall-fest");
+    expect(credited).toHaveLength(1);
+    for (const item of credited) {
       expect(item.brand).toBe("AMBC");
       expect(item.logo).toBe("/assets/venues/ambc-official.png");
     }

@@ -1,0 +1,1456 @@
+{
+  "slug": "2026-11-11",
+  "volume": 1,
+  "number": 22,
+  "episode": "Weekend Episode",
+  "date": "2026-11-11",
+  "dateLabel": "Thu–Sun, Nov 12–15, 2026",
+  "shortDate": "Nov 12–15",
+  "place": "South Knoxville, TN",
+  "newsletter": {
+    "subject": "The Asian Night Market lights up Hi-Wire, Friday the 13th gets weird at The Pink Cactus, and a bluegrass jam at Ijams Nature Center"
+  },
+  "feature": {
+    "id": "aapi-night-market",
+    "label": "Old Sevier",
+    "labelColor": "rust",
+    "days": [
+      "Fri"
+    ],
+    "layout": "imageTop",
+    "title": "The Fall Asian Night Market fills Hi-Wire's taproom with two food trucks, twenty makers and kimchi to carry home Friday night",
+    "deck": "Free, indoors, and the bread sells out.",
+    "facts": [
+      {
+        "label": "When",
+        "value": "Fri Nov 13 · 6 – 9 PM"
+      },
+      {
+        "label": "Where",
+        "value": "Hi-Wire Brewing · 2020 Barber St, second floor · the taproom is open 3 – 11"
+      },
+      {
+        "label": "Cost",
+        "value": "Free to attend · pay the vendors · all ages"
+      },
+      {
+        "label": "Food trucks",
+        "value": "Happy Song Pocha · Gohan Japanese Grill"
+      },
+      {
+        "label": "Food and drink",
+        "value": "Girls Gotta Eat Good · Matcha Mama · Grace Cake · Mama Lana's Kitchen · A Lucky Little Bakery · Tealicious · Ajumom Kimchi · SW Table 26 · Walnut Hill Homestead"
+      },
+      {
+        "label": "Art and retail",
+        "value": "Sasa Starcake · Roshani Designs · Sweet Busy Bee · Mystical Fairy by Claudia Holt · Swordlinks · Trappd Creations · Yune · Tally Tattoo · Henna by Nia · Nokku Studios"
+      },
+      {
+        "label": "Parking",
+        "value": "Limited around the taproom · carpool or ride-share · Johnson Architecture is waiving its lot fee for the market"
+      },
+      {
+        "label": "Weather",
+        "value": "A chance of showers early, then cloudy and 48, falling to 32 overnight · the market is indoors"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "The Knox AAPI Business Association brings its Asian Night Market back to Hi-Wire on Friday for the fall run, six to nine, and it costs nothing to walk in. The association, which exists to promote and give free resources to the area's Asian-owned businesses, curates the lineup; The Thread TN, an Asian and Pacific Islander magazine, presents it. Hi-Wire's whole second floor is the room, so the cold stays outside."
+      },
+      {
+        "type": "subhead",
+        "text": "Eat first"
+      },
+      {
+        "type": "paragraph",
+        "text": "Two food trucks park for the night, Happy Song Pocha and Gohan Japanese Grill, and nine food and drink makers set up inside. Ajumom Kimchi brings small-batch kimchi and kimchi-style pickles made in East Tennessee, from spicy napa cabbage to cucumber and daikon, with vegan and gluten-free jars. A Lucky Little Bakery's Ben bakes sogeum ppang, the Korean salt bread, milk bread buns and songpyeon, the harvest-festival rice cake, and they are meant to go home with you. Matcha Mama, Grace Cake, Tealicious and Mama Lana's Kitchen fill out the table."
+      },
+      {
+        "type": "subhead",
+        "text": "Then shop"
+      },
+      {
+        "type": "paragraph",
+        "text": "Ten art and retail tables make it the market's own pitch: get ahead on the holidays. Sasa Starcake is new this round with ceramic critter trinkets and little dishes and incense holders; Roshani Designs, Sweet Busy Bee, Swordlinks, Trappd Creations and Nokku Studios sell their goods; Tally Tattoo and Henna by Nia work on the spot. Knox Asian Festival, the UT Vietnamese Student Association and Kimchi Princess hold the nonprofit and student tables. Hi-Wire asks you to carpool or grab a ride, since parking around the building is thin; its neighbor Johnson Architecture is waiving the fee on its lot for the three hours."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Hi-Wire Brewing Knoxville on Instagram — the Fall AAPI Asian Night Market, Nov 13",
+        "url": "https://www.instagram.com/hiwirebrewing_knx/p/DfamsXJDNwj/"
+      },
+      {
+        "label": "Knox AAPI Business Association on Instagram — the market and its vendors",
+        "url": "https://www.instagram.com/knoxaapi/"
+      },
+      {
+        "label": "Hi-Wire Brewing — Knoxville taproom hours",
+        "url": "https://hiwirebrewing.com/knoxville/"
+      },
+      {
+        "label": "National Weather Service — Knoxville forecast",
+        "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+      }
+    ],
+    "event": {
+      "startDate": "2026-11-13T18:00:00-05:00",
+      "endDate": "2026-11-13T21:00:00-05:00",
+      "locationName": "Hi-Wire Brewing Knoxville",
+      "locationAddress": "2020 Barber St, Knoxville, TN 37920"
+    },
+    "social": {
+      "igTags": [
+        "hiwire",
+        "knoxaapi",
+        "the-thread-tn"
+      ],
+      "igAct": {
+        "key": "knoxaapi"
+      },
+      "igBanner": [
+        "The Asian Night Market at Hi-Wire: two trucks, twenty makers",
+        "Friday, six to nine, free"
+      ]
+    },
+    "image": "/assets/spots/no22_night_market_skewers.jpg"
+  },
+  "scanner": [
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "hot": true,
+      "image": "/assets/spots/no22_night_market_skewers.jpg",
+      "title": "The Asian Night Market takes over Hi-Wire",
+      "blurb": "Free, six to nine; two food trucks, twenty makers, kimchi to carry home.",
+      "href": "#aapi-night-market"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "hot": true,
+      "image": "/assets/spots/no22_goth_crown.jpg",
+      "title": "Alt Mart and a goth pageant at The Pink Cactus",
+      "blurb": "Friday the 13th from four, the crown at six, all ages till nine.",
+      "href": "#alt-mart-pink-cactus"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no22_darkwave_singer.jpg",
+      "title": "Feyleux live at Fly by Night",
+      "blurb": "BellTower's first band night; music at nine, ten dollars, 21+.",
+      "href": "#feyleux-belltower-fbn"
+    },
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Thu"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no22_cigar_whiskey_flannel.jpg",
+      "title": "Cigars and bourbon on the UpTop roof",
+      "blurb": "Alchemy's flannel night at Kern's, seven to nine, forty dollars.",
+      "href": "#alchemy-uptop-kerns"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no22_mimosa_comic.jpg",
+      "title": "Stand-up after brunch at The Pink Cactus",
+      "blurb": "The Comedy Sphere's Saturday show; doors at two.",
+      "href": "#after-brunch-special"
+    },
+    {
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no22_block_print_press.jpg",
+      "title": "Carve a block print at Ijams Nature Center",
+      "blurb": "Beginners welcome, 2:30 to 4:30, eighteen dollars; bring a shirt.",
+      "href": "#block-printing-ijams"
+    },
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Sun"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no22_coffee_on_the_hood.jpg",
+      "title": "Cars & Coffee starts at Eggspectation",
+      "blurb": "Seven to ten Sunday morning, free drip coffee inside.",
+      "href": "#cars-coffee-kerns"
+    },
+    {
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "hot": true,
+      "image": "/assets/spots/no22_fiddle_bow_grin.jpg",
+      "title": "The bluegrass jam on the Ijams Nature Center plaza",
+      "blurb": "Free, two to five Sunday; beginners first, then everyone.",
+      "href": "#bluegrass-jam-ijams"
+    }
+  ],
+  "stories": [
+    {
+      "id": "feyleux-belltower-fbn",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageRight",
+      "title": "Feyleux plays its new album live at Fly by Night Thursday as BellTower's goth night gets a band for the first time",
+      "deck": "Southern gothic, then a dark dance floor till late.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Nov 12 · doors 8:45 PM · music 9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Fly by Night · 906 Sevier Ave, Suite 126"
+        },
+        {
+          "label": "Cost",
+          "value": "$10 at the door"
+        },
+        {
+          "label": "Ages",
+          "value": "21 and up"
+        },
+        {
+          "label": "The bill",
+          "value": "Feyleux live · DJ sets opening and closing by Darkness and Cemetery Sex: goth, darkwave, post-punk"
+        },
+        {
+          "label": "Weather",
+          "value": "Rain showers and 59 Thursday · it is indoors"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "BellTower is the goth night that threw the Halloween house party at The Pink Cactus two weeks ago. Thursday it tries something new: BellTower Presents, a night built around a live band, and the first one is Feyleux, the North Carolina darkwave duo whose new record, Shadeweaver, came out on November 6. The band calls the album an exploration of the shadow self, written over last winter, and describes the sound as darkwave, post-punk and dream pop. The night is billed as live Southern gothic followed by a dark dance party."
+        },
+        {
+          "type": "paragraph",
+          "text": "Darkness opens on the decks and Cemetery Sex, one of BellTower's regular DJs, closes, spinning goth, darkwave and post-punk in a seventies cocktail lounge, which is Fly by Night's whole idea. Doors are at 8:45, the music at nine, ten dollars, twenty-one and up. Thursday is a rainy one, so the lounge is the right place to be."
+        }
+      ],
+      "sources": [
+        {
+          "label": "BellTower on Instagram — BellTower Presents: Feyleux, Nov 12 (on Fly by Night's grid)",
+          "url": "https://www.instagram.com/belltowerknox/p/DfS1jYMTnXt/"
+        },
+        {
+          "label": "Fly by Night on Instagram — the November lineup",
+          "url": "https://www.instagram.com/dj._.ba/p/DfYANaZvX2M/"
+        },
+        {
+          "label": "Feyleux on Instagram — Shadeweaver",
+          "url": "https://www.instagram.com/feyleux/"
+        },
+        {
+          "label": "Fly by Night — hours",
+          "url": "https://www.flybynightknox.com/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-12T21:00:00-05:00",
+        "locationName": "Fly by Night",
+        "locationAddress": "906 Sevier Ave Suite 126, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "fly-by-night",
+          "feyleux",
+          "belltower",
+          "cemetery-sex",
+          "darkness-dj"
+        ],
+        "igAct": {
+          "key": "feyleux"
+        },
+        "igBanner": [
+          "Feyleux live at Fly by Night, BellTower's first band night",
+          "Thursday, music at nine, ten dollars"
+        ]
+      },
+      "image": "/assets/spots/no22_darkwave_singer.jpg"
+    },
+    {
+      "id": "alt-mart-pink-cactus",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageLeft",
+      "title": "The Pink Cactus throws its first Alt Mart on Friday the 13th and crowns MX Knoxville Goth at six",
+      "deck": "Flash tattoos, potions and a pageant, all ages.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Nov 13 · from 4 PM · the pageant at 6 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The Pink Cactus · 1147 Sevier Ave · the bar, the patio and the yard"
+        },
+        {
+          "label": "Cost",
+          "value": "Free to browse · the vendors set their own prices"
+        },
+        {
+          "label": "Ages",
+          "value": "All ages until 9 PM"
+        },
+        {
+          "label": "On stage",
+          "value": "The MX Knoxville Goth Pageant hosted by Purrahna Rivers · Fiona Snap · npotwin420 · River Abrasax · DJ Graves"
+        },
+        {
+          "label": "Weather",
+          "value": "Cloudy and 48, a chance of showers early · the yard and the patio are covered, the bar is warm"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Friday the 13th gets its own holiday on Sevier Avenue. The Pink Cactus, the karaoke-room bar with the big front yard, has been planning Alt Mart since October: a market of what it calls non-mainstream goods and services, art, food, bespoke goods, games, flash tattoos, plants and potions, with the vendors applying through the bar. It is the first one the bar has held, and it is all ages until nine."
+        },
+        {
+          "type": "subhead",
+          "text": "The crown"
+        },
+        {
+          "type": "paragraph",
+          "text": "At six the bar crowns one alt baddie MX Knoxville Goth, a pageant hosted by Purrahna Rivers, with live entertainment from Fiona Snap, npotwin420, River Abrasax and DJ Graves around it. The bar's own words for the night: come together to celebrate the differences that make all people unique and special; kindness is key, no hate lives here. The district's November list has it running from four. When the market wraps, the same building turns into a Y2K dance floor at nine, which is its own story below."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The Pink Cactus on Instagram — Alt Mart and the MX Knoxville Goth Pageant, Nov 13",
+          "url": "https://www.instagram.com/thepinkcactusknox/p/DeIO3DFlikG/"
+        },
+        {
+          "label": "The Pink Cactus on Instagram — November at The Pink Cactus",
+          "url": "https://www.instagram.com/thepinkcactusknox/p/DfS6ojXGao_/"
+        },
+        {
+          "label": "Old Sevier District on Instagram — November in Old Sevier",
+          "url": "https://www.instagram.com/oldsevierdistrict/p/DfYVDCYDQUo/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-13T16:00:00-05:00",
+        "endDate": "2026-11-13T21:00:00-05:00",
+        "locationName": "The Pink Cactus",
+        "locationAddress": "1147 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "pink-cactus",
+          "purrahna"
+        ],
+        "igAct": {
+          "key": "purrahna"
+        },
+        "igBanner": [
+          "Alt Mart and the MX Knoxville Goth Pageant at The Pink Cactus",
+          "Friday the 13th, from four, pageant at six"
+        ]
+      },
+      "image": "/assets/spots/no22_goth_crown.jpg"
+    },
+    {
+      "id": "aero-dream-pink-cactus",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "title": "Aero Dream turns The Pink Cactus into a Y2K dance party Friday night, metallic tracksuits encouraged",
+      "deck": "Flip phones and shiny CDs, nine till one.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Nov 13 · 9 PM – 1 AM"
+        },
+        {
+          "label": "Where",
+          "value": "The Pink Cactus · 1147 Sevier Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$10"
+        },
+        {
+          "label": "Ages",
+          "value": "18 and up"
+        },
+        {
+          "label": "DJs",
+          "value": "Captain Midnight · Freake · Nocturne"
+        },
+        {
+          "label": "Dress",
+          "value": "Metallic tracksuits encouraged, the bar says"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Once Alt Mart clears out, the pink house changes decades. Aero Dream is a new DJ night hosted by Chloe Freake, who DJs as Freake, and the theme is the turn of the millennium: flip phones, shiny CDs and what the bar calls unforgettable dance music. Captain Midnight, Freake and Nocturne split the decks from nine until one, ten dollars at the door, eighteen and up. It is the second half of a Friday the 13th double bill at the same address, so the goth pageant crowd and the tracksuit crowd will pass each other on the patio around nine."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The Pink Cactus on Instagram — Aero Dream, Nov 13",
+          "url": "https://www.instagram.com/thepinkcactusknox/reel/DfVetmlJJwg/"
+        },
+        {
+          "label": "DJ Chloe Freake on Instagram",
+          "url": "https://www.instagram.com/dj.freake/"
+        },
+        {
+          "label": "The Pink Cactus on Instagram — November at The Pink Cactus",
+          "url": "https://www.instagram.com/thepinkcactusknox/p/DfS6ojXGao_/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-13T21:00:00-05:00",
+        "endDate": "2026-11-14T01:00:00-05:00",
+        "locationName": "The Pink Cactus",
+        "locationAddress": "1147 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "pink-cactus",
+          "dj-freake"
+        ],
+        "igAct": {
+          "key": "dj-freake"
+        },
+        "igBanner": [
+          "Aero Dream: a Y2K dance night at The Pink Cactus",
+          "Friday, nine till one, ten dollars"
+        ]
+      },
+      "image": "/assets/spots/no22_flip_phone_dj.jpg"
+    },
+    {
+      "id": "ahee-808",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageLeft",
+      "title": "Ahee brings the Bass Quest Tour to The 808 Thursday night, 18 and up",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Nov 12 · doors 8 PM · show 9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The 808 · 808 Sevier Ave"
+        },
+        {
+          "label": "Ages",
+          "value": "18 and up"
+        },
+        {
+          "label": "Tickets",
+          "value": "808knox.com"
+        },
+        {
+          "label": "Parking",
+          "value": "The venue's map of the lots and street spaces around the block",
+          "zoom": "/assets/diagrams/the-808-parking.svg"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The 808, the music venue that opened at the top of Sevier Avenue in October, has three nights in a row this week, and the first is a touring bass show. Ahee's Bass Quest Tour stops in Thursday: doors at eight, the show at nine, eighteen and up, with tickets through the venue's page. It is a late one on a rainy Thursday, and the venue's parking map is below for the lots and the street spaces around the block."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The 808 — live music schedule",
+          "url": "https://808knox.com/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-12T21:00:00-05:00",
+        "locationName": "The 808",
+        "locationAddress": "808 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "the-808"
+        ],
+        "igAct": {
+          "none": "the venue has not posted the show and its schedule names no handle for the act"
+        },
+        "igBanner": [
+          "Ahee: Bass Quest Tour at The 808",
+          "Thursday, doors at eight, eighteen and up"
+        ]
+      },
+      "ticket": {
+        "href": "https://808knox.com/",
+        "image": "/assets/spots/the-808-tickets.svg",
+        "alt": "Get tickets at The 808"
+      },
+      "image": "/assets/spots/no22_bass_speaker_hands.jpg"
+    },
+    {
+      "id": "big-something-808",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "title": "Big Something plays The 808 Friday night, doors at seven",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Nov 13 · doors 7 PM · show 8 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The 808 · 808 Sevier Ave"
+        },
+        {
+          "label": "Ages",
+          "value": "18 and up"
+        },
+        {
+          "label": "Tickets",
+          "value": "808knox.com"
+        },
+        {
+          "label": "Parking",
+          "value": "The venue's map of the lots and street spaces around the block",
+          "zoom": "/assets/diagrams/the-808-parking.svg"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Friday the touring band Big Something takes the stage at The 808, doors at seven and the show at eight, eighteen and up. The venue sells tickets through its schedule page. With the Asian Night Market a few blocks over at Hi-Wire until nine and the Pink Cactus running two events across the street, Sevier Avenue is as busy a Friday as it has had since the venue opened; the parking map below shows where to leave the car."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The 808 — live music schedule",
+          "url": "https://808knox.com/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-13T20:00:00-05:00",
+        "locationName": "The 808",
+        "locationAddress": "808 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "the-808"
+        ],
+        "igAct": {
+          "none": "the venue has not posted the show and its schedule names no handle for the band"
+        },
+        "igBanner": [
+          "Big Something at The 808",
+          "Friday, doors at seven, eighteen and up"
+        ]
+      },
+      "ticket": {
+        "href": "https://808knox.com/",
+        "image": "/assets/spots/the-808-tickets.svg",
+        "alt": "Get tickets at The 808"
+      },
+      "image": "/assets/spots/no22_guitarist_leap.jpg"
+    },
+    {
+      "id": "shogun-808",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "title": "SHOGUN releases its LP Agonize in Defeat at The 808 Saturday, an all-ages show with doors at six",
+      "deck": "A record release the kids can get into.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Nov 14 · doors 6 PM · show 7 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The 808 · 808 Sevier Ave"
+        },
+        {
+          "label": "Ages",
+          "value": "All ages"
+        },
+        {
+          "label": "Tickets",
+          "value": "808knox.com"
+        },
+        {
+          "label": "Parking",
+          "value": "The venue's map of the lots and street spaces around the block",
+          "zoom": "/assets/diagrams/the-808-parking.svg"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Saturday The 808 hands the room to a record release. SHOGUN plays its new LP, Agonize in Defeat, with doors at six and the show at seven, and this one is all ages, the earliest start of the venue's three nights. Tickets are through the venue's page. The Vols kick off at Texas A&M at three across town's televisions, so the game is over well before doors."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The 808 — live music schedule",
+          "url": "https://808knox.com/"
+        },
+        {
+          "label": "ESPN — Tennessee Volunteers schedule (at Texas A&M, Nov 14, 3 PM EST)",
+          "url": "https://www.espn.com/college-football/team/schedule/_/id/2633"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-14T19:00:00-05:00",
+        "locationName": "The 808",
+        "locationAddress": "808 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "the-808"
+        ],
+        "igAct": {
+          "none": "the venue has not posted the show and its schedule names no handle for the band"
+        },
+        "igBanner": [
+          "SHOGUN's LP release at The 808, all ages",
+          "Saturday, doors at six"
+        ]
+      },
+      "ticket": {
+        "href": "https://808knox.com/",
+        "image": "/assets/spots/the-808-tickets.svg",
+        "alt": "Get tickets at The 808"
+      },
+      "image": "/assets/spots/no22_vinyl_held_high.jpg"
+    },
+    {
+      "id": "after-brunch-special",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "title": "The After Brunch Special puts stand-up on The Pink Cactus stage Saturday afternoon, with the club's owner stepping up to headline",
+      "deck": "His first time closing this show.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Nov 14 · doors 2 PM · show 2:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The Pink Cactus · 1147 Sevier Ave"
+        },
+        {
+          "label": "Tickets",
+          "value": "thecomedysphere.com"
+        },
+        {
+          "label": "Headliner",
+          "value": "Justin Chavez, owner of The Comedy Sphere, filling in after the booked headliner dropped"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The Comedy Sphere is a pop-up comedy club that runs shows around Knoxville, and its Saturday-afternoon edition, The After Brunch Special, is back at The Pink Cactus this week. The pitch is in the name: step out of brunch and straight into the laughs. Doors are at two, the show at 2:30, and the lineup is Knoxville comics. The headliner booked for this one had to drop, so the club's owner, Justin Chavez, who usually hosts, is headlining the show for the first time. Tickets are on the club's site. It is the daytime half of a Pink Cactus Saturday that is otherwise given over to the bar's regular karaoke rooms."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The Comedy Sphere on Instagram — this week, Nov 9",
+          "url": "https://www.instagram.com/comedysphereknox/p/DffZyWGuHYR/"
+        },
+        {
+          "label": "The Comedy Sphere — calendar: The After Brunch Special, Sat Nov 14",
+          "url": "https://thecomedysphere.com/"
+        },
+        {
+          "label": "The Pink Cactus on Instagram — November at The Pink Cactus",
+          "url": "https://www.instagram.com/thepinkcactusknox/p/DfS6ojXGao_/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-14T14:30:00-05:00",
+        "locationName": "The Pink Cactus",
+        "locationAddress": "1147 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "pink-cactus",
+          "comedy-sphere-knox",
+          "justin-chavez"
+        ],
+        "igAct": {
+          "key": "justin-chavez"
+        },
+        "igBanner": [
+          "The After Brunch Special: stand-up at The Pink Cactus",
+          "Saturday, doors at two"
+        ]
+      },
+      "image": "/assets/spots/no22_mimosa_comic.jpg"
+    },
+    {
+      "id": "alchemy-uptop-kerns",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageLeft",
+      "title": "Sweaters, flannels and bourbon barrels: Alchemy Cigar Lounge takes over the UpTop rooftop at Kern's Thursday night",
+      "deck": "A cocktail, a cigar, a guided tasting, forty dollars.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Nov 12 · 7 – 9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "UpTop, the rooftop bar at Kern's · 2201 Kern's Rising Way"
+        },
+        {
+          "label": "Cost",
+          "value": "$40 · includes one cocktail, one Crowned Heads cigar and a guided Company Distilling whiskey tasting"
+        },
+        {
+          "label": "Tickets",
+          "value": "alchemyloungeandcigar.com",
+          "href": "https://alchemyloungeandcigar.com/our-event/sweaters-flannels-and-bourbon-barrels/"
+        },
+        {
+          "label": "Ages",
+          "value": "21 and up for the pours"
+        },
+        {
+          "label": "Weather",
+          "value": "Rain showers and 59 Thursday, 37 overnight · UpTop has indoor and covered seating"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Alchemy Cigar Lounge, the downtown lounge on South Central Street, brings its event night across the river to the roof of Kern's on Thursday. Sweaters, Flannels and Bourbon Barrels runs seven to nine at UpTop, the rooftop bar: the forty-dollar ticket covers a cocktail, a Crowned Heads cigar and a guided tasting of Company Distilling whiskey, with the lounge's crew pouring and Kern's calling it rooftop vibes under the lights. The dress code is in the name. Kern's posted that spots were going fast a week ago; tickets are on Alchemy's event page. It is a rainy evening, so plan on the covered side of the roof."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Kern's on Instagram — Sweaters, Flannels & Bourbon Barrels",
+          "url": "https://www.instagram.com/kernsknox/p/DfQJAgIBCpa/"
+        },
+        {
+          "label": "Alchemy Cigar Lounge — the event, Nov 12, 7–9 PM, $40",
+          "url": "https://alchemyloungeandcigar.com/our-event/sweaters-flannels-and-bourbon-barrels/"
+        },
+        {
+          "label": "Kern's on Instagram — Kern's in November",
+          "url": "https://www.instagram.com/kernsknox/p/DfNATfiiPz2/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-12T19:00:00-05:00",
+        "endDate": "2026-11-12T21:00:00-05:00",
+        "locationName": "UpTop at Kern's",
+        "locationAddress": "2201 Kern's Rising Way, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "kerns",
+          "uptop",
+          "alchemy"
+        ],
+        "igAct": {
+          "key": "alchemy"
+        },
+        "igBanner": [
+          "Sweaters, flannels and bourbon barrels on the Kern's rooftop",
+          "Thursday, seven to nine, forty dollars"
+        ]
+      },
+      "image": "/assets/spots/no22_cigar_whiskey_flannel.jpg"
+    },
+    {
+      "id": "cars-coffee-kerns",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "title": "Cars & Coffee starts up at Eggspectation on the Kern's lot Sunday morning, with free drip coffee at the bar",
+      "deck": "Third Sundays from here on.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Nov 15 · 7 – 10 AM · then every third Sunday"
+        },
+        {
+          "label": "Where",
+          "value": "Eggspectation at Kern's · 2201 Kern's Rising Way"
+        },
+        {
+          "label": "Cost",
+          "value": "Free · free drip coffee at the bar inside"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 55 by afternoon, but 33 at seven · bring the heavy coat and the clean car"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Kern's adds a Sunday-morning standing date this week. Cars & Coffee, the show-up-and-park kind of car meet, runs for the first time at Eggspectation, the breakfast restaurant on the Kern's property, from seven to ten on Sunday, and Kern's says it will be back every third Sunday after that. There is free drip coffee at the bar inside for anyone who comes, driver or spectator; the restaurant's menu is the upgrade. Sunday is the clear, cold morning of the weekend, 33 degrees at the start and sunny, which is the weather car people want for the paint."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Kern's on Instagram — Cars & Coffee at Eggspectation, from Nov 15",
+          "url": "https://www.instagram.com/kernsknox/p/DfU2WGRIGjx/"
+        },
+        {
+          "label": "Kern's — hours",
+          "url": "https://kernsbakery.com/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-15T07:00:00-05:00",
+        "endDate": "2026-11-15T10:00:00-05:00",
+        "locationName": "Eggspectation at Kern's",
+        "locationAddress": "2201 Kern's Rising Way, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "kerns"
+        ],
+        "igAct": {
+          "none": "a venue-run car meet; the venue's post names no club or organizer"
+        },
+        "igBanner": [
+          "Cars & Coffee at Eggspectation, Kern's",
+          "Sunday, seven to ten in the morning, free coffee"
+        ]
+      },
+      "image": "/assets/spots/no22_coffee_on_the_hood.jpg"
+    },
+    {
+      "id": "nature-journaling-ijams",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageLeft",
+      "title": "The Forest Speaks teaches beginner nature journaling at Ijams Nature Center Friday evening, pens and paper provided",
+      "deck": "No drawing talent required, the park says.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Nov 13 · 5:30 – 7 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$15 · register at ijams.org",
+          "href": "https://www.ijams.org/event-details/the-forest-speaks-beginner-nature-journaling-2026-11-13-17-30"
+        },
+        {
+          "label": "Bring",
+          "value": "Nothing required · the park supplies the materials · your own notebook and pens are welcome"
+        },
+        {
+          "label": "Weather",
+          "value": "Cloudy and 48 at the start, dropping fast · dress for an hour and a half outside"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The Forest Speaks is Ijams Nature Center's beginner workshop in nature journaling: an hour and a half on Friday evening learning to look harder at what is in front of you and get it onto paper. The park says no artistic or naturalist experience is necessary and that the point is to become a more intentional observer, with techniques for turning what you notice into words and sketches. The park provides everything, though you can bring a notebook and pens you like. It is fifteen dollars, registration is on the park's event page, and the park's standing assumption-of-risk form has to be on file once a year."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — The Forest Speaks: Beginner Nature Journaling, Nov 13",
+          "url": "https://www.ijams.org/event-details/the-forest-speaks-beginner-nature-journaling-2026-11-13-17-30"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-13T17:30:00-05:00",
+        "endDate": "2026-11-13T19:00:00-05:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a naturalist-led park workshop; no act"
+        },
+        "igBanner": [
+          "Beginner nature journaling at Ijams Nature Center",
+          "Friday, five thirty to seven, fifteen dollars"
+        ]
+      },
+      "image": "/assets/spots/no22_journal_leaf_sketch.jpg"
+    },
+    {
+      "id": "block-printing-ijams",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "title": "Carve and Create: Ijams Nature Center teaches beginners to carve and hand-press a block print Saturday afternoon",
+      "deck": "Bring an old shirt to print on.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Nov 14 · 2:30 – 4:30 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$18 · register at ijams.org",
+          "href": "https://www.ijams.org/event-details/carve-and-create-block-printing-for-beginners-2026-11-14-14-30"
+        },
+        {
+          "label": "You make",
+          "value": "One 4-by-6-inch design, carved, inked in several colors and pressed onto paper or fabric"
+        },
+        {
+          "label": "Bring",
+          "value": "Any clothing you want to print on · the park supplies the art materials"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Block printing is the one where you carve a design into a block, ink it and press it, and then print it as many times as you like, which is the park's whole argument for it. Saturday afternoon Ijams Nature Center runs its beginner class: two hours to draw and carve one four-by-six design, ink it up in several colors and hand-press it onto paper or fabric. The park calls it an easy, sustainable way to breathe new life into old clothes, and invites you to bring anything you want to customize. Eighteen dollars covers the supplies; register on the event page. It is the first of three dates this season, with others on November 29 and December 20."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Carve and Create: Block Printing for Beginners, Nov 14",
+          "url": "https://www.ijams.org/event-details/carve-and-create-block-printing-for-beginners-2026-11-14-14-30"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-14T14:30:00-05:00",
+        "endDate": "2026-11-14T16:30:00-05:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a park art class; no act"
+        },
+        "igBanner": [
+          "Block printing for beginners at Ijams Nature Center",
+          "Saturday, two thirty to four thirty, eighteen dollars"
+        ]
+      },
+      "image": "/assets/spots/no22_block_print_press.jpg"
+    },
+    {
+      "id": "fall-fungi-ijams",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "title": "Fall Fungi ID walks beginners through mushroom and lichen identification at Ijams Nature Center Sunday morning",
+      "deck": "Mush-room for guessing, the park promises, none.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Nov 15 · 9 – 11 AM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$15 · register at ijams.org",
+          "href": "https://www.ijams.org/event-details/fall-fungi-id-beginner-workshop-2026-11-15-09-00"
+        },
+        {
+          "label": "You learn",
+          "value": "Fungi and lichen anatomy, identification basics, and what they do for the forest"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and cold · about 35 at nine, 55 by afternoon"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "A park fun-guide, which is what the park calls its naturalist for this one, leads a two-hour beginner workshop in fall fungi on Sunday morning: the basics of fungus and lichen anatomy, how to tell one from another in the field, and the role they play in the ecosystem. The park's own line is that out in the field, fungi identification doesn't leave mush-room for guessing. It is fifteen dollars, registration is on the event page, and the yearly waiver applies. Sunday is sunny and cold, which is pleasant walking weather if not the dampest week for mushrooms; a second session runs the Friday after Thanksgiving at one."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Fall Fungi ID: Beginner Workshop, Nov 15",
+          "url": "https://www.ijams.org/event-details/fall-fungi-id-beginner-workshop-2026-11-15-09-00"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-15T09:00:00-05:00",
+        "endDate": "2026-11-15T11:00:00-05:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a naturalist-led park walk; no act"
+        },
+        "igBanner": [
+          "Fall fungi ID at Ijams Nature Center",
+          "Sunday, nine to eleven, fifteen dollars"
+        ]
+      },
+      "image": "/assets/spots/no22_mushroom_hand_lens.jpg"
+    },
+    {
+      "id": "bluegrass-jam-ijams",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "title": "The East Tennessee Bluegrass Association's monthly jam fills the Ijams Nature Center plaza Sunday afternoon, free, bring your instrument",
+      "deck": "Beginners get the first hour to themselves.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Nov 15 · 2 – 5 PM · beginner jam 2 – 3, open jam 3 – 5"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center visitor center · 2915 Island Home Ave · the plaza in good weather, indoors if not"
+        },
+        {
+          "label": "Cost",
+          "value": "Free · RSVP on the park's page",
+          "href": "https://www.ijams.org/event-details/special-event-east-tennessee-bluegrass-association-monthly-jam-2026-11-15-14-00"
+        },
+        {
+          "label": "Instruments",
+          "value": "Any acoustic bluegrass instrument · no harmonicas or spoons, the association says"
+        },
+        {
+          "label": "Weather",
+          "value": "Sunny and 55 · the plaza is on"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Every third Sunday the East Tennessee Bluegrass Association and Ijams Nature Center put chairs in a circle and play, and this month's is Sunday from two to five. It is a community jam, open to any acoustic bluegrass instrument and every skill level: the first hour is the beginner jam, where the tunes are slow and the chord changes get called, and from three to five it opens to everyone. The association draws one line, no harmonicas or spoons at this time. It is free, listeners are welcome, and the park asks for an RSVP. Sunny and 55 means the circle sits outside on the plaza by the visitor center; in bad weather it moves indoors. It is the free afternoon of the weekend."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — East Tennessee Bluegrass Association Monthly Jam, Nov 15",
+          "url": "https://www.ijams.org/event-details/special-event-east-tennessee-bluegrass-association-monthly-jam-2026-11-15-14-00"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-15T14:00:00-05:00",
+        "endDate": "2026-11-15T17:00:00-05:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "the East Tennessee Bluegrass Association has no Instagram handle the park's page or its own posts confirm"
+        },
+        "igBanner": [
+          "Bluegrass jam at Ijams Nature Center, bring your instrument",
+          "Sunday, two to five, free"
+        ]
+      },
+      "image": "/assets/spots/no22_fiddle_bow_grin.jpg"
+    },
+    {
+      "id": "specials-board",
+      "label": "Suttree Landing",
+      "labelColor": "ink",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "title": "Earl's game-day board comes out for the Texas A&M game at three Saturday, with a rita a day around it",
+      "deck": "An away game, so the board runs all day.",
+      "facts": [
+        {
+          "label": "Thursday",
+          "value": "$10 Patrón mango ritas · rain showers, so the inside tables"
+        },
+        {
+          "label": "Friday",
+          "value": "$9 spicy pineapple ritas"
+        },
+        {
+          "label": "Saturday",
+          "value": "$8 house margaritas · the game-day board: $2 off drafts, $6 Orange Bliss, 6-for-5 beer buckets, $2 off pizza, $4 and $5 shots · Tennessee at Texas A&M, 3 PM"
+        },
+        {
+          "label": "Sunday",
+          "value": "$7 mimosas and Bloody Marys"
+        },
+        {
+          "label": "Hours",
+          "value": "11 AM – 10 PM daily · 610 Waterfront Dr"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Earl's, the bar and kitchen on Waterfront Drive at Suttree Landing, runs one special a day from eleven to ten, and Saturday the game-day board comes out on top of it. The Vols are at Texas A&M at three, and Earl's posts the same board for away games as for home ones: two dollars off drafts, six-dollar Orange Bliss cocktails, six beer buckets for the price of five, two dollars off pizza and four- and five-dollar shots all day, with eight-dollar house margaritas as Saturday's standing deal. Thursday is ten-dollar Patrón mango ritas under rain showers, Friday nine-dollar spicy pineapple ritas on a cloudy 48-degree afternoon, and Sunday seven-dollar mimosas and Bloody Marys in the sun."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Earl's — specials and the game-day board",
+          "url": "https://earlsknox.com/specials/"
+        },
+        {
+          "label": "Earl's on Instagram — the game-day specials, Nov 6",
+          "url": "https://www.instagram.com/earlsknoxville/reel/DfZzsuMAd2_/"
+        },
+        {
+          "label": "ESPN — Tennessee Volunteers schedule (at Texas A&M, Nov 14, 3 PM EST)",
+          "url": "https://www.espn.com/college-football/team/schedule/_/id/2633"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "earls"
+        ],
+        "igAct": {
+          "none": "a specials board; no act"
+        },
+        "igBanner": [
+          "Earl's game-day board for Texas A&M, and a rita a day",
+          "Saturday, kickoff at three"
+        ],
+        "standing": true,
+        "standingKey": "specials-board"
+      },
+      "image": "/assets/spots/no22_pineapple_margarita.jpg"
+    },
+    {
+      "id": "rail-trail-murals",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "layout": "imageRight",
+      "title": "Two more murals are going up along the SoKno Rail Trail & Art Walk: herons and dogwoods at Landing Health, a dulcimer and a marble eagle on the Trimble building",
+      "deck": "Five paintings and two sculptures along the walk now.",
+      "facts": [
+        {
+          "label": "What",
+          "value": "The SoKno Rail Trail & Art Walk · a 3.8-mile rail corridor from Chapman Highway to Ijams Nature Center with a 1.5-mile outdoor gallery"
+        },
+        {
+          "label": "New this month",
+          "value": "Whitney Herrington's herons and oversized dogwood blooms at Landing Health · Key Detail's Appalachian mural, with a mountain dulcimer and a marble eagle, on the Wm S Trimble building"
+        },
+        {
+          "label": "Also",
+          "value": "37 native trees planted behind Rivers Edge Apartments on Oct 22 · the trail's tunnel is being relit by Massey Electric and CertaPro"
+        },
+        {
+          "label": "Who",
+          "value": "Legacy Parks Foundation · legacyparks.org",
+          "href": "https://legacyparks.org/"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Legacy Parks Foundation says two more murals are being painted right now along the SoKno Rail Trail & Art Walk, the rail corridor it is turning into a soft-surface trail with an outdoor gallery along its middle. Tennessee artist Whitney Herrington's piece at Landing Health is herons and oversized dogwood blooms; at the Wm S Trimble building, New York artist Key Detail is painting Appalachian heritage and Knoxville history together, a mountain dulcimer and a marble eagle among them. They follow Naomi Haverland's fishing lures and Anna Charney's botanicals on the back of Kern's, and two sculptures already stand along the path."
+        },
+        {
+          "type": "paragraph",
+          "text": "The foundation also planted 37 native trees along the trail behind Rivers Edge Apartments with volunteers on October 22, and this week thanked Massey Electric and CertaPro for the work relighting the tunnel the trail passes through, which it called seeing the light at the end of the tunnel. More installations are promised; the campaign for ten-foot SOKNO letters along the walk is still raising money."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Legacy Parks on Instagram — two more murals, Nov 4",
+          "url": "https://www.instagram.com/legacyparks/p/DfX84-Zo2Za/"
+        },
+        {
+          "label": "Legacy Parks on Instagram — the tunnel lighting, Nov 6",
+          "url": "https://www.instagram.com/legacyparks/p/DfaTwdIo5rd/"
+        },
+        {
+          "label": "Legacy Parks Foundation — news",
+          "url": "https://legacyparks.org/events/"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "legacy-parks"
+        ],
+        "igAct": {
+          "key": "legacy-parks"
+        },
+        "igBanner": [
+          "Two more murals rise on the SoKno Rail Trail & Art Walk",
+          "Herons at Landing Health, a dulcimer on the Trimble building"
+        ],
+        "igBannerSkipCheck": true
+      },
+      "image": "/assets/spots/no22_mural_painter_heron.jpg"
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "Andy reads the weekend.",
+      "description": "Vol. 1 No. 22 · Nov 12–15",
+      "duration": "6:11",
+      "src": "/audio/2026-11-11.mp3"
+    },
+    "calendar": [
+      {
+        "month": "NOV",
+        "day": "12",
+        "title": "Alchemy's Sweaters, Flannels & Bourbon Barrels at UpTop",
+        "meta": "7 – 9 PM · $40 · Kern's rooftop",
+        "starred": false,
+        "href": "#alchemy-uptop-kerns"
+      },
+      {
+        "month": "NOV",
+        "day": "12",
+        "title": "Ahee: Bass Quest Tour at The 808",
+        "meta": "doors 8 PM · 18+",
+        "starred": false,
+        "href": "#ahee-808"
+      },
+      {
+        "month": "NOV",
+        "day": "12",
+        "title": "Feyleux live at Fly by Night",
+        "meta": "doors 8:45 PM · $10 · 21+",
+        "starred": true,
+        "href": "#feyleux-belltower-fbn"
+      },
+      {
+        "month": "NOV",
+        "day": "13",
+        "title": "Alt Mart and the MX Knoxville Goth Pageant at The Pink Cactus",
+        "meta": "from 4 PM · pageant 6 PM · all ages till 9",
+        "starred": true,
+        "href": "#alt-mart-pink-cactus"
+      },
+      {
+        "month": "NOV",
+        "day": "13",
+        "title": "Nature journaling at Ijams Nature Center",
+        "meta": "5:30 – 7 PM · $15",
+        "starred": false,
+        "href": "#nature-journaling-ijams"
+      },
+      {
+        "month": "NOV",
+        "day": "13",
+        "title": "Fall Asian Night Market at Hi-Wire",
+        "meta": "6 – 9 PM · free",
+        "starred": true,
+        "href": "#aapi-night-market"
+      },
+      {
+        "month": "NOV",
+        "day": "13",
+        "title": "Big Something at The 808",
+        "meta": "doors 7 PM · 18+",
+        "starred": false,
+        "href": "#big-something-808"
+      },
+      {
+        "month": "NOV",
+        "day": "13",
+        "title": "Aero Dream Y2K night at The Pink Cactus",
+        "meta": "9 PM – 1 AM · $10 · 18+",
+        "starred": false,
+        "href": "#aero-dream-pink-cactus"
+      },
+      {
+        "month": "NOV",
+        "day": "14",
+        "title": "The After Brunch Special at The Pink Cactus",
+        "meta": "doors 2 PM · show 2:30",
+        "starred": false,
+        "href": "#after-brunch-special"
+      },
+      {
+        "month": "NOV",
+        "day": "14",
+        "title": "Block printing for beginners at Ijams Nature Center",
+        "meta": "2:30 – 4:30 PM · $18",
+        "starred": false,
+        "href": "#block-printing-ijams"
+      },
+      {
+        "month": "NOV",
+        "day": "14",
+        "title": "Vols at Texas A&M — game-day board at Earl's",
+        "meta": "3 PM kickoff · board all day",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "NOV",
+        "day": "14",
+        "title": "SHOGUN LP release at The 808",
+        "meta": "doors 6 PM · all ages",
+        "starred": false,
+        "href": "#shogun-808"
+      },
+      {
+        "month": "NOV",
+        "day": "15",
+        "title": "Cars & Coffee at Eggspectation, Kern's",
+        "meta": "7 – 10 AM · free coffee",
+        "starred": false,
+        "href": "#cars-coffee-kerns"
+      },
+      {
+        "month": "NOV",
+        "day": "15",
+        "title": "Fall Fungi ID at Ijams Nature Center",
+        "meta": "9 – 11 AM · $15",
+        "starred": false,
+        "href": "#fall-fungi-ijams"
+      },
+      {
+        "month": "NOV",
+        "day": "15",
+        "title": "ETBA bluegrass jam at Ijams Nature Center",
+        "meta": "2 – 5 PM · free · bring an instrument",
+        "starred": true,
+        "href": "#bluegrass-jam-ijams"
+      },
+      {
+        "month": "NOV",
+        "day": "15",
+        "title": "Two more murals on the SoKno Rail Trail & Art Walk",
+        "meta": "in progress · Legacy Parks",
+        "starred": false,
+        "href": "#rail-trail-murals"
+      }
+    ]
+  }
+}

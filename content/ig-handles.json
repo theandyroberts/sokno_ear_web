@@ -1,394 +1,467 @@
 {
-  "_comment": "Verified Instagram handles the Ear tags in posts. A wrong handle @s a stranger, so ONLY add one confirmed from the venue's own website or official socials — never inferred from a naming pattern. Stories reference these by key (or by handle) via social.igTags; scripts/ig-queue.mjs drops anything not listed here and warns. Each entry records HOW it was verified so nobody has to redo the work.",
-  "_traps": [
-    "One Knoxville SC is @oneknoxville on Instagram — it is OneKnoxSC on X, YouTube, TikTok and Facebook. The consistent-looking guess is the WRONG one. Do not 'fix' this.",
-    "@tnshakespeare is Tennessee Shakespeare Company of MEMPHIS — a different organization. Knoxville Shakespeare is run by Tennessee Stage Company: @tennesseestage.",
-    "@knoxcountyparks is Knox COUNTY. Suttree Landing and the South Waterfront are CITY parks: @knoxvillerecreation.",
-    "Kern's is @kernsknox on Instagram but /kernsfoodhall on Facebook and @kernsbakery on TikTok. Do not normalize them.",
-    "Hi-Wire: tag the Knoxville taproom @hiwirebrewing_knx, not Asheville corporate @hiwirebrewing."
-  ],
-  "handles": {
-    "ijams": {
-      "handle": "@ijamsnaturecenter",
-      "name": "Ijams Nature Center",
-      "copyName": "Ijams Nature Center",
-      "verified": "linked from the ijams.org footer; live profile 'Ijams Nature Center'",
-      "confidence": "high",
-      "note": "Call it Ijams Nature Center, never 'Ijams Park' — the organization asked (note to Andy, 2026-10-06)"
-    },
-    "kerns": {
-      "handle": "@kernsknox",
-      "name": "Kern's",
-      "verified": "linked directly from kernsbakery.com; live profile \"Kern's - Knoxville, TN\"",
-      "confidence": "high"
-    },
-    "hiwire": {
-      "handle": "@hiwirebrewing_knx",
-      "name": "Hi-Wire Brewing Knoxville",
-      "verified": "linked from the official location page hiwirebrewing.com/knoxville/",
-      "confidence": "high"
-    },
-    "hiwire-corporate": {
-      "handle": "@hiwirebrewing",
-      "name": "Hi-Wire Brewing (Asheville corporate)",
-      "verified": "hiwirebrewing.com footer — NOT the Knoxville taproom; prefer the 'hiwire' key",
-      "confidence": "high"
-    },
-    "earls": {
-      "handle": "@earlsknoxville",
-      "name": "Earl's Knoxville",
-      "verified": "linked from earlsknox.com; live profile 'Earl's Knoxville', 610 Waterfront Drive",
-      "confidence": "high"
-    },
-    "disco-chicken": {
-      "handle": "@discochickenanddonuts",
-      "name": "Disco Chicken & Donuts",
-      "verified": "linked from Kern's own vendor page kernsbakery.com/savor/disco-chicken-donuts/",
-      "confidence": "high"
-    },
-    "tennessee-stage": {
-      "handle": "@tennesseestage",
-      "name": "Tennessee Stage Company (Knoxville Shakespeare)",
-      "verified": "linked from tennesseestage.com; bio reads 'Knoxville Shakespeare'. No separate Shakespeare account exists.",
-      "confidence": "high"
-    },
-    "one-knoxville": {
-      "handle": "@oneknoxville",
-      "name": "One Knoxville Sporting Club",
-      "verified": "linked from oneknoxsc.com; live profile 'One Knoxville Sporting Club'. See _traps.",
-      "confidence": "high"
-    },
-    "trailhead": {
-      "handle": "@trailheadbeer",
-      "name": "Trailhead Beer Market",
-      "verified": "confirmed by Andy against the live profile (Trailhead Beer Market, 1317 Island Home Ave; followed by @oldsevierdistrict)",
-      "confidence": "high"
-    },
-    "alliance": {
-      "handle": "@alliancebrewing",
-      "name": "Alliance Brewing",
-      "verified": "linked from alliancebrewing.com (1130 Sevier Ave)",
-      "confidence": "high"
-    },
-    "legacy-parks": {
-      "handle": "@legacyparks",
-      "name": "Legacy Parks Foundation",
-      "verified": "linked from legacyparks.org",
-      "confidence": "high"
-    },
-    "wdvx": {
-      "handle": "@wdvx",
-      "name": "WDVX",
-      "verified": "linked from the wdvx.com footer",
-      "confidence": "high"
-    },
-    "knox-parks": {
-      "handle": "@knoxvillerecreation",
-      "name": "City of Knoxville Parks & Recreation",
-      "verified": "listed on the City of Knoxville's own official social-media registry (knoxvilletn.gov). See _traps re: county vs city.",
-      "confidence": "high"
-    },
-    "knoxville-city": {
-      "handle": "@knoxvillecity",
-      "name": "City of Knoxville",
-      "verified": "City of Knoxville official social-media registry",
-      "confidence": "high"
-    },
-    "pink-cactus": {
-      "handle": "@thepinkcactusknox",
-      "name": "The Pink Cactus",
-      "verified": "linked directly from the thepinkcactusknox.com header social icons (1147 Sevier Ave)",
-      "confidence": "high"
-    },
-    "mimosas": {
-      "handle": "@mimosasknoxville",
-      "name": "Mimosas (Kennedy Concepts)",
-      "verified": "confirmed by Andy (local) as the new South Knoxville Mimosas at Blount & Chapman; matches official domain mimosasknoxville.com",
-      "confidence": "high"
-    },
-    "puckers": {
-      "handle": "@puckersknoxville",
-      "name": "Puckers Sports Grill Knoxville",
-      "verified": "live profile 'Puckers Sports Grill | Knoxville' — bio reads 'NOW OPEN in South Knoxville, TN / Your Game Day Headquarters' and links the official Kennedy Concepts domain mimosasknoxville.com/coming-soon-puckers; checked 2026-09-01",
-      "confidence": "high"
-    },
-    "old-sevier": {
-      "handle": "@oldsevierdistrict",
-      "name": "Old Sevier District",
-      "verified": "linked from the merchants association's site oldsevierdistrict.org; live profile 'Old Sevier District', bio 'things happening in the Old Sevier District in South Knoxville'",
-      "confidence": "high"
-    },
-    "the-808": {
-      "handle": "@808knox",
-      "name": "The 808",
-      "verified": "tagged by the Old Sevier District's own First Friday post (2026-10-02); live profile read 2026-10-02: 'The 808 Knox — A South Knoxville music venue', links 808knox.com",
-      "confidence": "high"
-    },
-    "printshop": {
-      "handle": "@printshopbeer",
-      "name": "Printshop Beer Co.",
-      "verified": "tagged by the Old Sevier District's own First Friday post (2026-10-02); live profile read 2026-10-02: 'Printshop Beer Co. — Craft Malt Certified Brewery in South Knox'",
-      "confidence": "high"
-    },
-    "fly-by-night": {
-      "handle": "@flybynightknox",
-      "name": "Fly by Night",
-      "verified": "printed on flybynightknox.com; live profile 'Fly by Night — Knoxville's 70's Cocktail Lounge'",
-      "confidence": "high"
-    },
-    "knoxville-theatre-club": {
-      "handle": "@knoxvilletheatreclub.lovesyou",
-      "name": "Knoxville Theatre Club",
-      "verified": "tagged by the Old Sevier District's own First Friday post (2026-10-02); live profile read 2026-10-02: 'Knoxville Theatre Club', links knoxvilletheatreclub.org/tickets",
-      "confidence": "high"
-    },
-    "borderland-tees": {
-      "handle": "@borderlandtees",
-      "name": "Borderland Tees",
-      "verified": "tagged by the Old Sevier District's own First Friday post (2026-10-02); live profile read 2026-10-02: posts as 'Borderland Tees' about its own playhouse at 802 Sevier Ave",
-      "confidence": "high"
-    },
-    "old-sevier-market": {
-      "handle": "@oldseviermarket",
-      "name": "Old Sevier Market",
-      "verified": "tagged by the Old Sevier District's own October can't-miss post (2026-10-01); live profile read 2026-10-05: 'Old Sevier Market — Grocery Store Coming Soon To Sevier Ave', linktr.ee/oldseviermarket; the store's site links its socials",
-      "confidence": "high"
-    },
-    "ahun": {
-      "handle": "@ahungryhungarian",
-      "name": "Ahun (DJ, the Disco Demon night at Fly by Night)",
-      "kind": "act",
-      "verified": "his own post announcing Disco Demon at Fly by Night, Oct 15 (the source of No. 18's story): instagram.com/ahungryhungarian/p/DeR4zTbOELX/",
-      "confidence": "high"
-    },
-    "lonetones": {
-      "handle": "@thelonetones",
-      "name": "The Lonetones",
-      "kind": "act",
-      "verified": "live profile read 2026-10-19: 'The Lonetones — Mountain Indie Folk-Pop from Knoxville, TN', links thelonetones.com; named on Trailhead's own October flyer (instagram.com/p/Dd92UvFBnV5/)",
-      "confidence": "high"
-    },
-    "tjo": {
-      "handle": "@tjo.bpm",
-      "name": "TJO (DJ; The Big Pink House Party at The Pink Cactus)",
-      "kind": "act",
-      "verified": "tagged in The Pink Cactus's own October list (instagram.com/thepinkcactusknox/p/Dd6tuR1lts4/); his own post announcing Vol. 5 on Oct 23 (instagram.com/tjo.bpm/p/Dd6mZ5rR6qp/); live profile 'its pronounced tee-joe — Musician, Friendly Neighbourhood DJ, Knoxville TN', followed by @thepinkcactusknox",
-      "confidence": "high"
-    },
-    "captain-ed": {
-      "handle": "@captain___ed",
-      "name": "Captain Ed (DJ, Fly by Night's industrial night)",
-      "kind": "act",
-      "verified": "tagged in Fly by Night's October lineup post (instagram.com/dj._.ba/p/DeHkyqDxwij/, a collab post on the venue's grid); live profile read 2026-10-19: 'Ed McDaniel — Starts riots on the dance floor', followed by @oldsevierdistrict and @alliancebrewing",
-      "confidence": "high"
-    },
-    "freqk": {
-      "handle": "@freqk.music",
-      "name": "FreQ-K (DJ, Fly by Night's industrial night)",
-      "kind": "act",
-      "verified": "tagged in Fly by Night's October lineup post (instagram.com/dj._.ba/p/DeHkyqDxwij/); live profile read 2026-10-19: 'FreQ-K — frequency designer'",
-      "confidence": "high"
-    },
-    "vampire-host": {
-      "handle": "@stephaniefranklinmarr",
-      "name": "Stephanie (host of the sapphic vampire night at Fly by Night)",
-      "kind": "act",
-      "verified": "her own collab post on Fly by Night's grid announcing Oct 24 (instagram.com/stephaniefranklinmarr/p/DeYJhdLxf64/); live profile 'stephanie — hostess with the most-ish'",
-      "confidence": "high"
-    },
-    "monsters-made-with-love": {
-      "handle": "@monstersmadewithlove",
-      "name": "Monsters Made with Love (sewing workshops)",
-      "kind": "act",
-      "verified": "her own reel tagging @kernsknox for Oct 22 (instagram.com/monstersmadewithlove/reel/DepSi17t6aG/); Kern's own post names the workshop; live profile links monstersmadewithlove.com, followed by @kernsknox",
-      "confidence": "high"
-    },
-    "trees-knoxville": {
-      "handle": "@treesknoxville",
-      "name": "Trees Knoxville",
-      "kind": "act",
-      "verified": "tagged by Inside of Knoxville's Old Sevier update (instagram.com/insideofknoxville/p/DeckCwKEXww/) for the Oct 22 Rail Trail planting; live profile 'Trees Knoxville — Nonprofit organization', links linktr.ee/treesknoxville; the planting is on treesknoxville.org/event/tree-planting-sokno-rail-trail-and-art-walk/",
-      "confidence": "high"
-    },
-    "alex-falk": {
-      "handle": "@alex__falk",
-      "name": "Alex Falk (DJ, Fly by Night's Freaks Come Out at Night ball)",
-      "verified": "tagged in the Oct 5 October-lineup post on Fly by Night's own grid and in Benicio's Oct 22 collab post with the venue",
-      "confidence": "high",
-      "added": "2026-10-26"
-    },
-    "minitiger": {
-      "handle": "@minitigertime",
-      "name": "Minitiger (DJ)",
-      "verified": "tagged in Fly by Night's Oct 5 October-lineup post and the Oct 22 Freaks Come Out at Night post on the venue's grid",
-      "confidence": "high",
-      "added": "2026-10-26"
-    },
-    "benicio": {
-      "handle": "@dj._.ba",
-      "name": "Benicio (DJ)",
-      "verified": "author of the Oct 22 Freaks Come Out at Night collab post on Fly by Night's own grid; tagged in the venue's Oct 5 lineup",
-      "confidence": "high",
-      "added": "2026-10-26"
-    },
-    "xerox-the-kidd": {
-      "handle": "@xeroxthekidd",
-      "name": "Xerox the Kidd (Wax Museum, vinyl night at Fly by Night)",
-      "verified": "tagged in the Oct 5 October-lineup post on Fly by Night's own grid (Wax Museum, Oct 29)",
-      "confidence": "high",
-      "added": "2026-10-26"
-    },
-    "real-country-dark": {
-      "handle": "@realcountrydark",
-      "name": "Country Dark (Wax Museum, vinyl night at Fly by Night)",
-      "verified": "tagged in the Oct 5 October-lineup post on Fly by Night's own grid (Wax Museum, Oct 29)",
-      "confidence": "high",
-      "added": "2026-10-26"
-    },
-    "bear-grillz": {
-      "handle": "@itsbeargrillz",
-      "name": "Bear Grillz",
-      "verified": "tagged in The 808's own Oct 19 post for the Oct 31 show",
-      "confidence": "high",
-      "added": "2026-10-26"
-    },
-    "shosstah": {
-      "handle": "@shosstah",
-      "name": "Shosstah (DJ)",
-      "verified": "tagged in The 808's own Oct 19 and Oct 23 posts",
-      "confidence": "high",
-      "added": "2026-10-26"
-    },
-    "planet-doom": {
-      "handle": "@planetdoomshows",
-      "name": "Planet Doom (Doomsayer's EDM night)",
-      "verified": "author of the Oct 13 HalloweEMO collab post on The Pink Cactus's own grid; @doomsayer named in the venue's Sep 30 October list",
-      "confidence": "high",
-      "added": "2026-10-26"
-    },
-    "knox-social-club": {
-      "handle": "@knoxsocialclub",
-      "name": "Knox Social Club (Love at First Laugh)",
-      "verified": "tagged in The Pink Cactus's own Sep 30 October list; author of the Oct 13 collab post on the venue's grid",
-      "confidence": "high",
-      "added": "2026-10-26"
-    },
-    "comedy-sphere": {
-      "handle": "@thecomedysphereknox",
-      "name": "The Comedy Sphere",
-      "verified": "tagged in The Pink Cactus's own Sep 30 October list",
-      "confidence": "high",
-      "added": "2026-10-26",
-      "noImageTag": "2026-10-29: Meta refused it in user_tags (error 2207018, \"cannot be accessed\") — private account. Caption @ only."
-    },
-    "belltower": {
-      "handle": "@belltowerknox",
-      "name": "Belltower (Temple's goth night at The Pink Cactus)",
-      "verified": "author of the Sep 28 Halloween house party collab post on The Pink Cactus's own grid",
-      "confidence": "high",
-      "added": "2026-10-26"
-    },
-    "temple-knox": {
-      "handle": "@templeknox",
-      "name": "Temple (presents Belltower)",
-      "verified": "tagged in Belltower's Sep 28 post on The Pink Cactus's grid; the venue's Sep 30 list says Temple hosts the Halloween Belltower",
-      "confidence": "high",
-      "added": "2026-10-26"
-    },
-    "cemetery-sex": {
-      "handle": "@cemeterysex",
-      "name": "Cemetery Sex (DJ, host of Belltower)",
-      "verified": "tagged in Belltower's Sep 28 post on The Pink Cactus's grid",
-      "confidence": "high",
-      "added": "2026-10-26"
-    },
-    "verena-noctem": {
-      "handle": "@verenanoctem",
-      "name": "Verena Noctem (DJ, Belltower)",
-      "verified": "tagged in Belltower's Sep 28 post on The Pink Cactus's grid",
-      "confidence": "high",
-      "added": "2026-10-26"
-    },
-    "sara-alured": {
-      "handle": "@saraalured",
-      "name": "Sara Alured (DJ, Belltower)",
-      "verified": "tagged in Belltower's Sep 28 post on The Pink Cactus's grid",
-      "confidence": "high",
-      "added": "2026-10-26"
-    },
-    "honeybee": {
-      "handle": "@honeybeecoffeeco",
-      "name": "Honeybee Coffee Company",
-      "verified": "tagged in the Old Sevier District's Oct 24 pub-crawl post; live profile 'Honeybee Coffee Company' with a 'south knox' highlight (2026-10-26)",
-      "confidence": "high",
-      "added": "2026-10-26"
-    },
-    "ambc": {
-      "handle": "@ambcknox",
-      "name": "Appalachian Mountain Bike Club",
-      "verified": "the Instagram link in the ambcknox.org footer and on fallfest.ambcknox.org; live profile read 2026-11-02: 'AMBC — We develop, build, and maintain trails', linktr.ee/ambcknox",
-      "confidence": "high"
-    },
-    "cut-corners": {
-      "handle": "@cutcornersatl",
-      "name": "Cut Corners (Atlanta DJ collective; Fly by Night takeover Nov 7)",
-      "kind": "act",
-      "verified": "its own collab post on Fly by Night's grid announcing Nov 7 (instagram.com/cutcornersatl/p/DevHkq3jS4J/); live profile read 2026-11-02: 'Cut Corners — Engineering random acts of creativity through music, dancing, and interactive art, Atlanta'",
-      "confidence": "high"
-    },
-    "latin-knox": {
-      "handle": "@latin.knox",
-      "name": "Latin Knox (Latin house party promoter; Printshop Nov 6)",
-      "kind": "act",
-      "verified": "tagged in Printshop's own Oct 30 week-ahead post (instagram.com/printshopbeer/p/DfIKKpKpz1E/); live profile read 2026-11-02: 'Latin Knox — The best latin house events in Knoxville, See you all November 6', its Oct 6 post gives 1532 Island Home Ave, 9 PM, 21+, $20",
-      "confidence": "high"
-    },
-    "dj-ev": {
-      "handle": "@djev01",
-      "name": "DJ EV (Estiven Vargas; Latin.Knox)",
-      "kind": "act",
-      "verified": "tagged in Latin Knox's own DJ-reveal post (instagram.com/latin.knox/p/DesPqOUGjTk/); live profile read 2026-11-02: 'ESTIVEN VARGAS — TN 423'",
-      "confidence": "high"
-    },
-    "jason-davila": {
-      "handle": "@jasondavila.wav",
-      "name": "Jason Davila (DJ, Atlanta; Latin.Knox)",
-      "kind": "act",
-      "verified": "tagged in Latin Knox's own post (instagram.com/latin.knox/p/Deu3a3hmjRf/); live profile read 2026-11-02: 'Jason Davila', @themorninggroove",
-      "confidence": "high"
-    },
-    "knox-vintage-pet-project": {
-      "handle": "@knoxvintagepetproject",
-      "name": "Knox Vintage Pet Project (senior and special-needs pet rescue; Bow Wow Bingo)",
-      "kind": "act",
-      "verified": "tagged in Printshop's own Oct 30 post; its own Nov 1 post names Printshop, Sun Nov 8, 2-4 (instagram.com/knoxvintagepetproject/p/DfNZP_Ymk4E/); live profile 'Knox Vintage Pet Project — Finding forever homes for senior and special needs pets in the Knoxville, TN area'",
-      "confidence": "high"
-    },
-    "uptop": {
-      "handle": "@uptoprooftopbar",
-      "name": "Up Top Rooftop Bar (Kern's)",
-      "verified": "its own collab post on Kern's grid for the Nov 5 karaoke night (instagram.com/uptoprooftopbar/p/DfDSpKnJsgR/); live profile read 2026-11-02 links kernsbakery.com/sip",
-      "confidence": "high"
-    },
-    "paradise-chocolate": {
-      "handle": "@paradisechocolateco",
-      "name": "Paradise Chocolate Co (bean-to-bar chocolate; SoKno Sourdough First Friday)",
-      "kind": "act",
-      "verified": "its own collab post on SoKno Sourdough's grid (instagram.com/paradisechocolateco/p/Dexz7z2jC8z/); live profile read 2026-11-02: 'Paradise Chocolate Co — Small-batch, from-the-bean chocolate, Knoxville, TN', links paradisechocolate.co",
-      "confidence": "high"
-    },
-    "peter-riesing": {
-      "handle": "@peter.riesing",
-      "name": "Peter Riesing (artist; SoKno Sourdough First Friday)",
-      "kind": "act",
-      "verified": "tagged in Paradise Chocolate's collab post on SoKno Sourdough's grid; live profile read 2026-11-02: 'Peter MagikStix Riesing', portfolio peterriesing.github.io",
-      "confidence": "medium"
-    },
-    "sokno-sourdough": {
-      "handle": "@soknosourdough",
-      "name": "SoKno Sourdough",
-      "verified": "the handle in content/sources.json; live profile read 2026-11-02: 'SoKno Sourdough — Woman-owned, 100% sourdough bakery, Knoxville TN', links soknosourdough.com",
-      "confidence": "high"
-    }
+ "_comment": "Verified Instagram handles the Ear tags in posts. A wrong handle @s a stranger, so ONLY add one confirmed from the venue's own website or official socials — never inferred from a naming pattern. Stories reference these by key (or by handle) via social.igTags; scripts/ig-queue.mjs drops anything not listed here and warns. Each entry records HOW it was verified so nobody has to redo the work.",
+ "_traps": [
+  "One Knoxville SC is @oneknoxville on Instagram — it is OneKnoxSC on X, YouTube, TikTok and Facebook. The consistent-looking guess is the WRONG one. Do not 'fix' this.",
+  "@tnshakespeare is Tennessee Shakespeare Company of MEMPHIS — a different organization. Knoxville Shakespeare is run by Tennessee Stage Company: @tennesseestage.",
+  "@knoxcountyparks is Knox COUNTY. Suttree Landing and the South Waterfront are CITY parks: @knoxvillerecreation.",
+  "Kern's is @kernsknox on Instagram but /kernsfoodhall on Facebook and @kernsbakery on TikTok. Do not normalize them.",
+  "Hi-Wire: tag the Knoxville taproom @hiwirebrewing_knx, not Asheville corporate @hiwirebrewing."
+ ],
+ "handles": {
+  "ijams": {
+   "handle": "@ijamsnaturecenter",
+   "name": "Ijams Nature Center",
+   "copyName": "Ijams Nature Center",
+   "verified": "linked from the ijams.org footer; live profile 'Ijams Nature Center'",
+   "confidence": "high",
+   "note": "Call it Ijams Nature Center, never 'Ijams Park' — the organization asked (note to Andy, 2026-10-06)"
+  },
+  "kerns": {
+   "handle": "@kernsknox",
+   "name": "Kern's",
+   "verified": "linked directly from kernsbakery.com; live profile \"Kern's - Knoxville, TN\"",
+   "confidence": "high"
+  },
+  "hiwire": {
+   "handle": "@hiwirebrewing_knx",
+   "name": "Hi-Wire Brewing Knoxville",
+   "verified": "linked from the official location page hiwirebrewing.com/knoxville/",
+   "confidence": "high"
+  },
+  "hiwire-corporate": {
+   "handle": "@hiwirebrewing",
+   "name": "Hi-Wire Brewing (Asheville corporate)",
+   "verified": "hiwirebrewing.com footer — NOT the Knoxville taproom; prefer the 'hiwire' key",
+   "confidence": "high"
+  },
+  "earls": {
+   "handle": "@earlsknoxville",
+   "name": "Earl's Knoxville",
+   "verified": "linked from earlsknox.com; live profile 'Earl's Knoxville', 610 Waterfront Drive",
+   "confidence": "high"
+  },
+  "disco-chicken": {
+   "handle": "@discochickenanddonuts",
+   "name": "Disco Chicken & Donuts",
+   "verified": "linked from Kern's own vendor page kernsbakery.com/savor/disco-chicken-donuts/",
+   "confidence": "high"
+  },
+  "tennessee-stage": {
+   "handle": "@tennesseestage",
+   "name": "Tennessee Stage Company (Knoxville Shakespeare)",
+   "verified": "linked from tennesseestage.com; bio reads 'Knoxville Shakespeare'. No separate Shakespeare account exists.",
+   "confidence": "high"
+  },
+  "one-knoxville": {
+   "handle": "@oneknoxville",
+   "name": "One Knoxville Sporting Club",
+   "verified": "linked from oneknoxsc.com; live profile 'One Knoxville Sporting Club'. See _traps.",
+   "confidence": "high"
+  },
+  "trailhead": {
+   "handle": "@trailheadbeer",
+   "name": "Trailhead Beer Market",
+   "verified": "confirmed by Andy against the live profile (Trailhead Beer Market, 1317 Island Home Ave; followed by @oldsevierdistrict)",
+   "confidence": "high"
+  },
+  "alliance": {
+   "handle": "@alliancebrewing",
+   "name": "Alliance Brewing",
+   "verified": "linked from alliancebrewing.com (1130 Sevier Ave)",
+   "confidence": "high"
+  },
+  "legacy-parks": {
+   "handle": "@legacyparks",
+   "name": "Legacy Parks Foundation",
+   "verified": "linked from legacyparks.org",
+   "confidence": "high"
+  },
+  "wdvx": {
+   "handle": "@wdvx",
+   "name": "WDVX",
+   "verified": "linked from the wdvx.com footer",
+   "confidence": "high"
+  },
+  "knox-parks": {
+   "handle": "@knoxvillerecreation",
+   "name": "City of Knoxville Parks & Recreation",
+   "verified": "listed on the City of Knoxville's own official social-media registry (knoxvilletn.gov). See _traps re: county vs city.",
+   "confidence": "high"
+  },
+  "knoxville-city": {
+   "handle": "@knoxvillecity",
+   "name": "City of Knoxville",
+   "verified": "City of Knoxville official social-media registry",
+   "confidence": "high"
+  },
+  "pink-cactus": {
+   "handle": "@thepinkcactusknox",
+   "name": "The Pink Cactus",
+   "verified": "linked directly from the thepinkcactusknox.com header social icons (1147 Sevier Ave)",
+   "confidence": "high"
+  },
+  "mimosas": {
+   "handle": "@mimosasknoxville",
+   "name": "Mimosas (Kennedy Concepts)",
+   "verified": "confirmed by Andy (local) as the new South Knoxville Mimosas at Blount & Chapman; matches official domain mimosasknoxville.com",
+   "confidence": "high"
+  },
+  "puckers": {
+   "handle": "@puckersknoxville",
+   "name": "Puckers Sports Grill Knoxville",
+   "verified": "live profile 'Puckers Sports Grill | Knoxville' — bio reads 'NOW OPEN in South Knoxville, TN / Your Game Day Headquarters' and links the official Kennedy Concepts domain mimosasknoxville.com/coming-soon-puckers; checked 2026-09-01",
+   "confidence": "high"
+  },
+  "old-sevier": {
+   "handle": "@oldsevierdistrict",
+   "name": "Old Sevier District",
+   "verified": "linked from the merchants association's site oldsevierdistrict.org; live profile 'Old Sevier District', bio 'things happening in the Old Sevier District in South Knoxville'",
+   "confidence": "high"
+  },
+  "the-808": {
+   "handle": "@808knox",
+   "name": "The 808",
+   "verified": "tagged by the Old Sevier District's own First Friday post (2026-10-02); live profile read 2026-10-02: 'The 808 Knox — A South Knoxville music venue', links 808knox.com",
+   "confidence": "high"
+  },
+  "printshop": {
+   "handle": "@printshopbeer",
+   "name": "Printshop Beer Co.",
+   "verified": "tagged by the Old Sevier District's own First Friday post (2026-10-02); live profile read 2026-10-02: 'Printshop Beer Co. — Craft Malt Certified Brewery in South Knox'",
+   "confidence": "high"
+  },
+  "fly-by-night": {
+   "handle": "@flybynightknox",
+   "name": "Fly by Night",
+   "verified": "printed on flybynightknox.com; live profile 'Fly by Night — Knoxville's 70's Cocktail Lounge'",
+   "confidence": "high"
+  },
+  "knoxville-theatre-club": {
+   "handle": "@knoxvilletheatreclub.lovesyou",
+   "name": "Knoxville Theatre Club",
+   "verified": "tagged by the Old Sevier District's own First Friday post (2026-10-02); live profile read 2026-10-02: 'Knoxville Theatre Club', links knoxvilletheatreclub.org/tickets",
+   "confidence": "high"
+  },
+  "borderland-tees": {
+   "handle": "@borderlandtees",
+   "name": "Borderland Tees",
+   "verified": "tagged by the Old Sevier District's own First Friday post (2026-10-02); live profile read 2026-10-02: posts as 'Borderland Tees' about its own playhouse at 802 Sevier Ave",
+   "confidence": "high"
+  },
+  "old-sevier-market": {
+   "handle": "@oldseviermarket",
+   "name": "Old Sevier Market",
+   "verified": "tagged by the Old Sevier District's own October can't-miss post (2026-10-01); live profile read 2026-10-05: 'Old Sevier Market — Grocery Store Coming Soon To Sevier Ave', linktr.ee/oldseviermarket; the store's site links its socials",
+   "confidence": "high"
+  },
+  "ahun": {
+   "handle": "@ahungryhungarian",
+   "name": "Ahun (DJ, the Disco Demon night at Fly by Night)",
+   "kind": "act",
+   "verified": "his own post announcing Disco Demon at Fly by Night, Oct 15 (the source of No. 18's story): instagram.com/ahungryhungarian/p/DeR4zTbOELX/",
+   "confidence": "high"
+  },
+  "lonetones": {
+   "handle": "@thelonetones",
+   "name": "The Lonetones",
+   "kind": "act",
+   "verified": "live profile read 2026-10-19: 'The Lonetones — Mountain Indie Folk-Pop from Knoxville, TN', links thelonetones.com; named on Trailhead's own October flyer (instagram.com/p/Dd92UvFBnV5/)",
+   "confidence": "high"
+  },
+  "tjo": {
+   "handle": "@tjo.bpm",
+   "name": "TJO (DJ; The Big Pink House Party at The Pink Cactus)",
+   "kind": "act",
+   "verified": "tagged in The Pink Cactus's own October list (instagram.com/thepinkcactusknox/p/Dd6tuR1lts4/); his own post announcing Vol. 5 on Oct 23 (instagram.com/tjo.bpm/p/Dd6mZ5rR6qp/); live profile 'its pronounced tee-joe — Musician, Friendly Neighbourhood DJ, Knoxville TN', followed by @thepinkcactusknox",
+   "confidence": "high"
+  },
+  "captain-ed": {
+   "handle": "@captain___ed",
+   "name": "Captain Ed (DJ, Fly by Night's industrial night)",
+   "kind": "act",
+   "verified": "tagged in Fly by Night's October lineup post (instagram.com/dj._.ba/p/DeHkyqDxwij/, a collab post on the venue's grid); live profile read 2026-10-19: 'Ed McDaniel — Starts riots on the dance floor', followed by @oldsevierdistrict and @alliancebrewing",
+   "confidence": "high"
+  },
+  "freqk": {
+   "handle": "@freqk.music",
+   "name": "FreQ-K (DJ, Fly by Night's industrial night)",
+   "kind": "act",
+   "verified": "tagged in Fly by Night's October lineup post (instagram.com/dj._.ba/p/DeHkyqDxwij/); live profile read 2026-10-19: 'FreQ-K — frequency designer'",
+   "confidence": "high"
+  },
+  "vampire-host": {
+   "handle": "@stephaniefranklinmarr",
+   "name": "Stephanie (host of the sapphic vampire night at Fly by Night)",
+   "kind": "act",
+   "verified": "her own collab post on Fly by Night's grid announcing Oct 24 (instagram.com/stephaniefranklinmarr/p/DeYJhdLxf64/); live profile 'stephanie — hostess with the most-ish'",
+   "confidence": "high"
+  },
+  "monsters-made-with-love": {
+   "handle": "@monstersmadewithlove",
+   "name": "Monsters Made with Love (sewing workshops)",
+   "kind": "act",
+   "verified": "her own reel tagging @kernsknox for Oct 22 (instagram.com/monstersmadewithlove/reel/DepSi17t6aG/); Kern's own post names the workshop; live profile links monstersmadewithlove.com, followed by @kernsknox",
+   "confidence": "high"
+  },
+  "trees-knoxville": {
+   "handle": "@treesknoxville",
+   "name": "Trees Knoxville",
+   "kind": "act",
+   "verified": "tagged by Inside of Knoxville's Old Sevier update (instagram.com/insideofknoxville/p/DeckCwKEXww/) for the Oct 22 Rail Trail planting; live profile 'Trees Knoxville — Nonprofit organization', links linktr.ee/treesknoxville; the planting is on treesknoxville.org/event/tree-planting-sokno-rail-trail-and-art-walk/",
+   "confidence": "high"
+  },
+  "alex-falk": {
+   "handle": "@alex__falk",
+   "name": "Alex Falk (DJ, Fly by Night's Freaks Come Out at Night ball)",
+   "verified": "tagged in the Oct 5 October-lineup post on Fly by Night's own grid and in Benicio's Oct 22 collab post with the venue",
+   "confidence": "high",
+   "added": "2026-10-26"
+  },
+  "minitiger": {
+   "handle": "@minitigertime",
+   "name": "Minitiger (DJ)",
+   "verified": "tagged in Fly by Night's Oct 5 October-lineup post and the Oct 22 Freaks Come Out at Night post on the venue's grid",
+   "confidence": "high",
+   "added": "2026-10-26"
+  },
+  "benicio": {
+   "handle": "@dj._.ba",
+   "name": "Benicio (DJ)",
+   "verified": "author of the Oct 22 Freaks Come Out at Night collab post on Fly by Night's own grid; tagged in the venue's Oct 5 lineup",
+   "confidence": "high",
+   "added": "2026-10-26"
+  },
+  "xerox-the-kidd": {
+   "handle": "@xeroxthekidd",
+   "name": "Xerox the Kidd (Wax Museum, vinyl night at Fly by Night)",
+   "verified": "tagged in the Oct 5 October-lineup post on Fly by Night's own grid (Wax Museum, Oct 29)",
+   "confidence": "high",
+   "added": "2026-10-26"
+  },
+  "real-country-dark": {
+   "handle": "@realcountrydark",
+   "name": "Country Dark (Wax Museum, vinyl night at Fly by Night)",
+   "verified": "tagged in the Oct 5 October-lineup post on Fly by Night's own grid (Wax Museum, Oct 29)",
+   "confidence": "high",
+   "added": "2026-10-26"
+  },
+  "bear-grillz": {
+   "handle": "@itsbeargrillz",
+   "name": "Bear Grillz",
+   "verified": "tagged in The 808's own Oct 19 post for the Oct 31 show",
+   "confidence": "high",
+   "added": "2026-10-26"
+  },
+  "shosstah": {
+   "handle": "@shosstah",
+   "name": "Shosstah (DJ)",
+   "verified": "tagged in The 808's own Oct 19 and Oct 23 posts",
+   "confidence": "high",
+   "added": "2026-10-26"
+  },
+  "planet-doom": {
+   "handle": "@planetdoomshows",
+   "name": "Planet Doom (Doomsayer's EDM night)",
+   "verified": "author of the Oct 13 HalloweEMO collab post on The Pink Cactus's own grid; @doomsayer named in the venue's Sep 30 October list",
+   "confidence": "high",
+   "added": "2026-10-26"
+  },
+  "knox-social-club": {
+   "handle": "@knoxsocialclub",
+   "name": "Knox Social Club (Love at First Laugh)",
+   "verified": "tagged in The Pink Cactus's own Sep 30 October list; author of the Oct 13 collab post on the venue's grid",
+   "confidence": "high",
+   "added": "2026-10-26"
+  },
+  "comedy-sphere": {
+   "handle": "@thecomedysphereknox",
+   "name": "The Comedy Sphere",
+   "verified": "tagged in The Pink Cactus's own Sep 30 October list",
+   "confidence": "high",
+   "added": "2026-10-26",
+   "noImageTag": "2026-10-29: Meta refused it in user_tags (error 2207018, \"cannot be accessed\") — private account. Caption @ only."
+  },
+  "belltower": {
+   "handle": "@belltowerknox",
+   "name": "Belltower (Temple's goth night at The Pink Cactus)",
+   "verified": "author of the Sep 28 Halloween house party collab post on The Pink Cactus's own grid",
+   "confidence": "high",
+   "added": "2026-10-26"
+  },
+  "temple-knox": {
+   "handle": "@templeknox",
+   "name": "Temple (presents Belltower)",
+   "verified": "tagged in Belltower's Sep 28 post on The Pink Cactus's grid; the venue's Sep 30 list says Temple hosts the Halloween Belltower",
+   "confidence": "high",
+   "added": "2026-10-26"
+  },
+  "cemetery-sex": {
+   "handle": "@cemeterysex",
+   "name": "Cemetery Sex (DJ, host of Belltower)",
+   "verified": "tagged in Belltower's Sep 28 post on The Pink Cactus's grid",
+   "confidence": "high",
+   "added": "2026-10-26"
+  },
+  "verena-noctem": {
+   "handle": "@verenanoctem",
+   "name": "Verena Noctem (DJ, Belltower)",
+   "verified": "tagged in Belltower's Sep 28 post on The Pink Cactus's grid",
+   "confidence": "high",
+   "added": "2026-10-26"
+  },
+  "sara-alured": {
+   "handle": "@saraalured",
+   "name": "Sara Alured (DJ, Belltower)",
+   "verified": "tagged in Belltower's Sep 28 post on The Pink Cactus's grid",
+   "confidence": "high",
+   "added": "2026-10-26"
+  },
+  "honeybee": {
+   "handle": "@honeybeecoffeeco",
+   "name": "Honeybee Coffee Company",
+   "verified": "tagged in the Old Sevier District's Oct 24 pub-crawl post; live profile 'Honeybee Coffee Company' with a 'south knox' highlight (2026-10-26)",
+   "confidence": "high",
+   "added": "2026-10-26"
+  },
+  "ambc": {
+   "handle": "@ambcknox",
+   "name": "Appalachian Mountain Bike Club",
+   "verified": "the Instagram link in the ambcknox.org footer and on fallfest.ambcknox.org; live profile read 2026-11-02: 'AMBC — We develop, build, and maintain trails', linktr.ee/ambcknox",
+   "confidence": "high"
+  },
+  "cut-corners": {
+   "handle": "@cutcornersatl",
+   "name": "Cut Corners (Atlanta DJ collective; Fly by Night takeover Nov 7)",
+   "kind": "act",
+   "verified": "its own collab post on Fly by Night's grid announcing Nov 7 (instagram.com/cutcornersatl/p/DevHkq3jS4J/); live profile read 2026-11-02: 'Cut Corners — Engineering random acts of creativity through music, dancing, and interactive art, Atlanta'",
+   "confidence": "high"
+  },
+  "latin-knox": {
+   "handle": "@latin.knox",
+   "name": "Latin Knox (Latin house party promoter; Printshop Nov 6)",
+   "kind": "act",
+   "verified": "tagged in Printshop's own Oct 30 week-ahead post (instagram.com/printshopbeer/p/DfIKKpKpz1E/); live profile read 2026-11-02: 'Latin Knox — The best latin house events in Knoxville, See you all November 6', its Oct 6 post gives 1532 Island Home Ave, 9 PM, 21+, $20",
+   "confidence": "high"
+  },
+  "dj-ev": {
+   "handle": "@djev01",
+   "name": "DJ EV (Estiven Vargas; Latin.Knox)",
+   "kind": "act",
+   "verified": "tagged in Latin Knox's own DJ-reveal post (instagram.com/latin.knox/p/DesPqOUGjTk/); live profile read 2026-11-02: 'ESTIVEN VARGAS — TN 423'",
+   "confidence": "high"
+  },
+  "jason-davila": {
+   "handle": "@jasondavila.wav",
+   "name": "Jason Davila (DJ, Atlanta; Latin.Knox)",
+   "kind": "act",
+   "verified": "tagged in Latin Knox's own post (instagram.com/latin.knox/p/Deu3a3hmjRf/); live profile read 2026-11-02: 'Jason Davila', @themorninggroove",
+   "confidence": "high"
+  },
+  "knox-vintage-pet-project": {
+   "handle": "@knoxvintagepetproject",
+   "name": "Knox Vintage Pet Project (senior and special-needs pet rescue; Bow Wow Bingo)",
+   "kind": "act",
+   "verified": "tagged in Printshop's own Oct 30 post; its own Nov 1 post names Printshop, Sun Nov 8, 2-4 (instagram.com/knoxvintagepetproject/p/DfNZP_Ymk4E/); live profile 'Knox Vintage Pet Project — Finding forever homes for senior and special needs pets in the Knoxville, TN area'",
+   "confidence": "high"
+  },
+  "uptop": {
+   "handle": "@uptoprooftopbar",
+   "name": "Up Top Rooftop Bar (Kern's)",
+   "verified": "its own collab post on Kern's grid for the Nov 5 karaoke night (instagram.com/uptoprooftopbar/p/DfDSpKnJsgR/); live profile read 2026-11-02 links kernsbakery.com/sip",
+   "confidence": "high"
+  },
+  "paradise-chocolate": {
+   "handle": "@paradisechocolateco",
+   "name": "Paradise Chocolate Co (bean-to-bar chocolate; SoKno Sourdough First Friday)",
+   "kind": "act",
+   "verified": "its own collab post on SoKno Sourdough's grid (instagram.com/paradisechocolateco/p/Dexz7z2jC8z/); live profile read 2026-11-02: 'Paradise Chocolate Co — Small-batch, from-the-bean chocolate, Knoxville, TN', links paradisechocolate.co",
+   "confidence": "high"
+  },
+  "peter-riesing": {
+   "handle": "@peter.riesing",
+   "name": "Peter Riesing (artist; SoKno Sourdough First Friday)",
+   "kind": "act",
+   "verified": "tagged in Paradise Chocolate's collab post on SoKno Sourdough's grid; live profile read 2026-11-02: 'Peter MagikStix Riesing', portfolio peterriesing.github.io",
+   "confidence": "medium"
+  },
+  "sokno-sourdough": {
+   "handle": "@soknosourdough",
+   "name": "SoKno Sourdough",
+   "verified": "the handle in content/sources.json; live profile read 2026-11-02: 'SoKno Sourdough — Woman-owned, 100% sourdough bakery, Knoxville TN', links soknosourdough.com",
+   "confidence": "high"
+  },
+  "knoxaapi": {
+   "handle": "@knoxaapi",
+   "name": "Knox AAPI Business Association (the Asian Night Market)",
+   "kind": "act",
+   "verified": "tagged in Hi-Wire's own Nov 6 market post (instagram.com/hiwirebrewing_knx/p/DfamsXJDNwj/); its own vendor-spotlight posts name Fri Nov 13, 6-9, Hi-Wire; live profile read 2026-11-09: 'Knox AAPI Business Association', knoxaapi.com, followed by @oldsevierdistrict",
+   "confidence": "high",
+   "added": "2026-11-09"
+  },
+  "the-thread-tn": {
+   "handle": "@thethreadtn.magazine",
+   "name": "The Thread TN (AAPI magazine; presents the night market)",
+   "kind": "act",
+   "verified": "tagged in Hi-Wire's own Nov 6 market post and in Knox AAPI's posts as the presenting sponsor",
+   "confidence": "high",
+   "added": "2026-11-09"
+  },
+  "feyleux": {
+   "handle": "@feyleux",
+   "name": "Feyleux (NC darkwave duo; BellTower Presents at Fly by Night Nov 12)",
+   "kind": "act",
+   "verified": "tagged in BellTower's collab post on Fly by Night's own grid (instagram.com/belltowerknox/p/DfS1jYMTnXt/) and in the venue's November lineup post; live profile read 2026-11-09: 'Feyleux, they/them, Shadeweaver out NOW'",
+   "confidence": "high",
+   "added": "2026-11-09"
+  },
+  "darkness-dj": {
+   "handle": "@bradd27",
+   "name": "Darkness (DJ; BellTower Presents at Fly by Night)",
+   "kind": "act",
+   "verified": "tagged as 'Darkness/ @bradd27' in BellTower's collab post on Fly by Night's own grid (instagram.com/belltowerknox/p/DfS1jYMTnXt/)",
+   "confidence": "medium",
+   "added": "2026-11-09"
+  },
+  "purrahna": {
+   "handle": "@purrahna",
+   "name": "Purrahna Rivers (host of the MX Knoxville Goth Pageant at The Pink Cactus)",
+   "kind": "act",
+   "verified": "tagged as the pageant host in The Pink Cactus's own Alt Mart post (instagram.com/thepinkcactusknox/p/DeIO3DFlikG/); live profile read 2026-11-09: 'Purrahna Rivers' (no posts)",
+   "confidence": "medium",
+   "added": "2026-11-09"
+  },
+  "dj-freake": {
+   "handle": "@dj.freake",
+   "name": "DJ Chloe Freake (Aero Dream Y2K night at The Pink Cactus)",
+   "kind": "act",
+   "verified": "named as host in The Pink Cactus's own Nov 3 month post; her own grid carries the Aero Dream post (Fri Nov 13, 9-1, $10, 18+); live profile read 2026-11-09: 'DJ Chloe Freake, Knoxville, TN'",
+   "confidence": "high",
+   "added": "2026-11-09"
+  },
+  "comedy-sphere-knox": {
+   "handle": "@comedysphereknox",
+   "name": "The Comedy Sphere (public account; the After Brunch Special)",
+   "kind": "act",
+   "verified": "author of the Nov 9 'This week at The Comedy Sphere' post that names Saturday's After Brunch Special at The Pink Cactus; its posts sit on the venue's grid as collabs; live profile read 2026-11-09: 'The Comedy Sphere, pop-up comedy club in Knoxville, TN', thecomedysphere.com",
+   "confidence": "high",
+   "added": "2026-11-09",
+   "note": "@thecomedysphereknox (key comedy-sphere) is the private one Meta refuses in image tags; use this key in igTags."
+  },
+  "justin-chavez": {
+   "handle": "@justinchavezcomedy",
+   "name": "Justin Chavez (comic, owner of The Comedy Sphere; headlines the Nov 14 After Brunch Special)",
+   "kind": "act",
+   "verified": "tagged in The Comedy Sphere's own Nov 9 week-ahead post (instagram.com/comedysphereknox/p/DffZyWGuHYR/)",
+   "confidence": "high",
+   "added": "2026-11-09"
+  },
+  "alchemy": {
+   "handle": "@alchemylounge.cigar",
+   "name": "Alchemy Cigar Lounge (Sweaters, Flannels and Bourbon Barrels at UpTop)",
+   "kind": "act",
+   "verified": "the Instagram link on alchemyloungeandcigar.com, whose event page gives Nov 12, 7-9 PM, $40 at Kern's UpTop; Kern's own Nov 4 post links that page",
+   "confidence": "high",
+   "added": "2026-11-09"
   }
+ }
 }
