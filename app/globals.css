@@ -141,8 +141,11 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
    is part of the where-and-when rather than a full-width row that splits the story
    (Andy, 2026-10-26). On a phone the ticket keeps a 128px column beside the facts. */
 .ear-ticket { width: 100%; max-width: 360px; margin: 0 0 20px; }
-.ear-facts-box--ticket { display: grid; grid-template-columns: 2fr 1fr; gap: 10px 18px; align-items: center; }
-.ear-facts-box--ticket .ear-ticket { max-width: 240px; margin: 0; justify-self: end; }
+/* One ticket size on every story, whatever the facts box's width (Andy, 2026-11-09: it ran
+   240px on a full-width box and about 130px beside an image). The column is the ticket's
+   own width, so the facts take the rest. */
+.ear-facts-box--ticket { display: grid; grid-template-columns: minmax(0, 1fr) 150px; gap: 10px 18px; align-items: center; }
+.ear-facts-box--ticket .ear-ticket { width: 150px; max-width: 150px; margin: 0; justify-self: end; }
 @media (max-width: 560px) {
   /* A phone column is too narrow to split: the facts keep the full width and the
      ticket sits small at the box's bottom-right corner, still inside the box. */
