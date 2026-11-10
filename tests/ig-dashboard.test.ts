@@ -161,3 +161,26 @@ describe("putting a run into the page", () => {
     expect(out).toContain('localStorage.getItem("ear_k")');
   });
 });
+
+// 2026-11-10: the overview page's cumulative charts sat at Oct 19 for three weeks because
+// the weekly run stopped carrying the account's totals. Every run carries them now.
+import { lifetimeLine, validate as validateRun } from "../scripts/ig-dashboard.mjs";
+import fsLife from "node:fs";
+
+describe("the totals to date", () => {
+  const life = { posts: 203, reach: 6690, views: 10414, likes: 188, shares: 37, comments: 6, saves: 4 };
+  it("draws one line the overview can read, a data-life span a number", () => {
+    const line = lifetimeLine(life);
+    expect(line).toContain('<span data-life="reach">6,690</span> post reach');
+    expect(line).toContain('<span data-life="views">10,414</span> views');
+    expect(line.match(/data-life="/g)).toHaveLength(7);
+    expect(lifetimeLine(undefined)).toBe("");
+  });
+  it("is required from Oct 26 on, and every number must be whole", () => {
+    const run = JSON.parse(fsLife.readFileSync("docs/ig-reviews/data/2026-11-09.json", "utf8"));
+    expect(validateRun(run)).toEqual([]);
+    expect(validateRun({ ...run, lifetime: undefined }).join(" ")).toMatch(/lifetime: the totals to date/);
+    expect(validateRun({ ...run, lifetime: { ...life, views: 10414.5 } }).join(" ")).toMatch(/lifetime\.views/);
+    expect(validateRun({ ...run, date: "2026-10-19", lifetime: undefined })).toEqual([]);
+  });
+});

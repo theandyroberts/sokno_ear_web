@@ -57,6 +57,11 @@ export function validate(d) {
     need(words(m.why) <= MAX_WORDS.why, `move "${m.title}": the reason is at most ${MAX_WORDS.why} words`);
     need(Boolean(m.plan), `move "${m.title}": say what happens and when`);
   }
+  // The account's totals to date. The overview page (note15.com/insta/soknoear-overview)
+  // reads them out of this line for its cumulative charts; without them those charts stop
+  // at the last run that had them (they sat at Oct 19 for three weeks).
+  need(d.date < LIFETIME_SINCE || d.lifetime, "lifetime: the totals to date (posts, reach, views, likes, shares, comments, saves)");
+  if (d.lifetime) for (const [k] of LIFETIME) need(Number.isSafeInteger(d.lifetime[k]) && d.lifetime[k] >= 0, `lifetime.${k}: a whole number`);
   for (const s of d.done ?? []) need(words(s.text) <= MAX_WORDS.done, `done "${s.title}": at most ${MAX_WORDS.done} words`);
   // Names, not ticket numbers, anywhere a person reads.
   const seen = JSON.stringify({ ...d, writeUp: undefined, writeUpHtml: undefined });
@@ -65,6 +70,21 @@ export function validate(d) {
 }
 
 // ── drawing ─────────────────────────────────────────────────────────────────
+
+/** The lifetime totals a run carries, in the order they read. Required from this date on. */
+export const LIFETIME = [["posts", "posts"], ["reach", "post reach"], ["views", "views"], ["likes", "likes"], ["shares", "shares"], ["comments", "comments"], ["saves", "saves"]];
+export const LIFETIME_SINCE = "2026-10-26";
+
+/**
+ * One quiet line under the tiles: "To date: 203 posts · 6,690 post reach · …". Each number
+ * sits in a `data-life` span, which is what the overview page's reader looks for
+ * (insta/soknoear-overview-model.js in the note15 repo). Keep the attribute names.
+ */
+export function lifetimeLine(life) {
+  if (!life) return "";
+  const n = (v) => new Intl.NumberFormat("en-US").format(v);
+  return `<p class="g-foot g-life">To date: ${LIFETIME.map(([k, word]) => `<span data-life="${k}">${n(life[k])}</span> ${word}`).join(" · ")}</p>`;
+}
 
 /** A sparkline. The last point is the one that matters, so it gets the dot. */
 export function spark(series, { w = 132, h = 38, good = "up" } = {}) {
@@ -172,6 +192,7 @@ export function renderRun(d) {
 ${d.tiles.map(tile).join("\n")}
         </div>
         <p class="g-foot">${esc(d.tilesNote ?? "")}</p>
+        ${lifetimeLine(d.lifetime)}
       </section>
 
       <section id="${r}-pictures" class="g-sec">

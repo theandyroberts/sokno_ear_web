@@ -46,6 +46,7 @@ Runs 01–08 stay as they were written; they are the archive.
 | `headline` | The week in one line | 12 words |
 | `verdicts` | Two to four coloured pills: label, `tone` (`ok` / `warn` / `bad`), a few words | 8 words each |
 | `tiles` | Three to six numbers, each with its `series` (the line), `vsLast` and `vsBase` | |
+| `lifetime` | The account's totals to date: `posts`, `reach`, `views`, `likes`, `shares`, `comments`, `saves` (the review's "Lifetime post performance" table). Drawn as one line under the tiles; **the overview page reads its cumulative charts from it** | required, whole numbers |
 | `week` | Every post of the week, in order, each with `img` and `reach`; `group` colours it | every post has an image |
 | `worked`, `didnt` | One to three posts each, with `img`, `reach` and a reason | 16 words a reason |
 | `learned` | One set of bars: the thing the numbers show | |
