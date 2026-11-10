@@ -1,7 +1,22 @@
-import type { Episode } from "./schema";
+import type { Episode, Story } from "./schema";
 
 const BASE = "https://soknoear.com";
 const PUB = "The South Knoxville Ear";
+
+// A deck is optional editorial copy, but every Event needs a useful description.
+// Reuse visible story text instead of inventing details or requiring a subtitle.
+function eventDescription(story: Story): string {
+  const clean = (text: string) => text.replace(/\s+/g, " ").trim();
+  const deck = clean(story.deck ?? "");
+  if (deck) return deck;
+  for (const block of story.body) {
+    if (block.type !== "paragraph") continue;
+    // ArticleBody renders runs in preference to text and joins them without gaps.
+    const text = clean(block.runs ? block.runs.map((run) => run.text).join("") : (block.text ?? ""));
+    if (text) return text;
+  }
+  return clean(story.title);
+}
 
 // Build a schema.org JSON-LD @graph for an episode: the publication identity plus
 // an Event for every story that carries structured event data (great for Google's
@@ -33,7 +48,7 @@ export function episodeJsonLd(episode: Episode) {
               }
             : {}),
         },
-        ...(s.deck ? { description: s.deck } : {}),
+        description: eventDescription(s),
         ...(s.image ? { image: [`${BASE}${s.image}`] } : {}),
         url: `${BASE}/${episode.slug}#${s.id}`,
       },
@@ -105,7 +120,7 @@ export function storyJsonLd(episode: Episode, storyUrl: string) {
                     }
                   : {}),
               },
-              ...(s.deck ? { description: s.deck } : {}),
+              description: eventDescription(s),
               ...(s.image ? { image: [image] } : {}),
               url: storyUrl,
             },
