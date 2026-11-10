@@ -39,6 +39,16 @@ ssh andy@143.244.188.235 'cd /var/www/note15 && git add insta && git -c user.nam
 run, and refreshes the page's styles and script. Running it twice changes nothing.
 Runs 01–08 stay as they were written; they are the archive.
 
+## Motion
+
+The page builds as it is scrolled (2026-11-10, Andy asked for it): each tile, picture, bar,
+dial and move rises in once, the first time it is seen; sparklines draw, bars grow, dials
+sweep, the big numbers count up, and a yellow hairline across the top fills as the page is
+read. It lives in the `CSS` and `JS` constants of `scripts/ig-dashboard.mjs`, so every run
+gets it. The finished state is the default: the starting states apply only under
+`html.g-motion`, which the script sets when the visitor has not asked for reduced motion.
+Keep it quiet: one entrance per element, under a second, nothing that loops.
+
 ## The data file
 
 | Field | What it is | Limit |

@@ -353,6 +353,36 @@ export const CSS = `
   .g-more{border-top:1px solid var(--line);padding-top:18px;margin-top:10px}
   .g-more>summary{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);cursor:pointer;padding:6px 0}
   .g-more[open]>summary{margin-bottom:26px}
+  /* ---- motion (2026-11-10): the page builds as you scroll. Everything below is the
+     finished state by default; the starting states apply only under html.g-motion, which
+     the script sets when the browser can watch the scroll and the visitor has not asked
+     for reduced motion. No script, no motion, nothing hidden. ---- */
+  .g-tile-v,.g-cell-n,.g-bar-v,.g-reach b{font-variant-numeric:tabular-nums}
+  .g-tile{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .g-tile:hover{transform:translateY(-3px);box-shadow:0 12px 26px -16px rgba(0,0,0,.38);border-color:var(--gray-lite)}
+  .g-shot-img img,.g-cell-img img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  .g-shot:hover .g-shot-img img,.g-cell:hover .g-cell-img img{transform:scale(1.045)}
+  .g-move{transition:box-shadow .25s ease}
+  .g-move:hover{box-shadow:0 14px 30px -20px rgba(0,0,0,.42)}
+  .g-progress{position:fixed;left:0;top:0;z-index:60;width:100%;height:3px;background:var(--yellow);transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+  .g-motion [data-r]{transition:opacity .6s cubic-bezier(.2,.7,.2,1) var(--d,0ms),transform .75s cubic-bezier(.2,.7,.2,1) var(--d,0ms)}
+  .g-motion [data-r]:not(.is-in){opacity:0;transform:translateY(18px)}
+  .g-motion [data-r="left"]:not(.is-in){transform:translateX(-22px)}
+  .g-motion [data-r="fade"]:not(.is-in){transform:none}
+  .g-motion .g-cell-bar i{transform-origin:50% 100%;transition:transform .85s cubic-bezier(.2,.7,.2,1) calc(var(--d,0ms) + 180ms)}
+  .g-motion [data-r]:not(.is-in) .g-cell-bar i{transform:scaleY(0)}
+  .g-motion .g-bar-t i{transform-origin:0 50%;transition:transform 1.1s cubic-bezier(.2,.7,.2,1) calc(var(--d,0ms) + 180ms)}
+  .g-motion [data-r]:not(.is-in) .g-bar-t i{transform:scaleX(0)}
+  .g-motion [data-r]:not(.is-in) .g-shot-img img{transform:scale(1.1)}
+  .g-motion .g-reach{transition:transform .45s cubic-bezier(.3,1.5,.5,1) calc(var(--d,0ms) + 380ms),opacity .25s linear calc(var(--d,0ms) + 380ms)}
+  .g-motion [data-r]:not(.is-in) .g-reach{transform:scale(.6);opacity:0}
+  .g-motion .g-move-n{transition:transform .55s cubic-bezier(.3,1.6,.5,1) calc(var(--d,0ms) + 260ms)}
+  .g-motion [data-r]:not(.is-in) .g-move-n{transform:scale(.4) rotate(-14deg)}
+  .g-motion .g-spark polyline{transition:stroke-dashoffset 1.25s cubic-bezier(.4,0,.2,1) calc(var(--d,0ms) + 220ms)}
+  .g-motion .g-spark circle{transform-box:fill-box;transform-origin:center;transition:transform .4s cubic-bezier(.3,1.8,.5,1) calc(var(--d,0ms) + 1300ms)}
+  .g-motion [data-r]:not(.is-in) .g-spark circle{transform:scale(0)}
+  .g-motion .g-dial-fill{transition:stroke-dasharray 1.35s cubic-bezier(.3,.8,.2,1) calc(var(--d,0ms) + 180ms)}
+  @media print{.g-motion [data-r]{opacity:1!important;transform:none!important}.g-progress{display:none}}
   /* On a narrow screen the picture comes first and the list of past runs goes underneath. */
   @media (max-width:1080px){.g-tiles{grid-template-columns:repeat(2,1fr)}.g-shots--row{grid-template-columns:repeat(3,1fr)}
     main{order:1}.rail{order:2;border-bottom:none;border-top:1px solid var(--line)}}
@@ -371,6 +401,111 @@ export const CSS = `
 
 /** The page's side of the feedback loop. Plain ES5-ish, no build step on that site. */
 export const JS = `
+/* The page builds as you scroll: each piece rises in once, the first time it is seen.
+   Lines draw, bars grow, dials sweep, numbers count up. Off entirely for a visitor who
+   asked for reduced motion, and harmless if this script never runs. */
+(function () {
+  var root = document.documentElement;
+  if (!("IntersectionObserver" in window) || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
+  var each = function (list, fn) { Array.prototype.forEach.call(list, fn); };
+  // what rises, the group its stagger is counted in, the step in ms, and how it comes in
+  var SPECS = [
+    [".g-head .kicker, .g-head h2, .g-verdict", ".g-head", 75, "up"],
+    [".g-tile", ".g-tiles", 85, "up"],
+    [".g-h", null, 0, "fade"],
+    [".g-cell", ".g-strip", 40, "up"],
+    [".g-shot", ".g-shots", 90, "up"],
+    [".g-bar", ".g-bars", 130, "up"],
+    [".g-dial", ".g-dials", 110, "up"],
+    [".g-move", ".g-moves", 110, "left"],
+    [".g-done li", ".g-done", 70, "up"],
+    [".g-foot, .g-legend", null, 0, "fade"]
+  ];
+  var MAX_DELAY = 480;
+  var targets = [];
+  each(document.querySelectorAll(".g-run"), function (run) {
+    SPECS.forEach(function (spec) {
+      var counts = [];
+      each(run.querySelectorAll(spec[0]), function (el) {
+        if (el.hasAttribute("data-r")) return;
+        var group = spec[1] && el.closest(spec[1]), i = 0;
+        if (group) {
+          var slot = null;
+          counts.forEach(function (c) { if (c.g === group) slot = c; });
+          if (!slot) { slot = { g: group, n: 0 }; counts.push(slot); }
+          i = slot.n++;
+        }
+        var d = Math.min(MAX_DELAY, i * spec[2]);
+        el.setAttribute("data-r", spec[3]);
+        el.style.setProperty("--d", d + "ms");
+        el.__d = d;
+        targets.push(el);
+      });
+    });
+    // lines start undrawn, dials start empty
+    each(run.querySelectorAll(".g-spark polyline"), function (line) {
+      try {
+        var len = Math.ceil(line.getTotalLength()) + 1;
+        line.style.strokeDasharray = len; line.style.strokeDashoffset = len;
+      } catch (e) {}
+    });
+    each(run.querySelectorAll(".g-dial-fill"), function (arc) {
+      var full = (arc.getAttribute("stroke-dasharray") || "").split(" ");
+      if (full.length !== 2) return;
+      arc.__to = full[0] + " " + full[1];
+      arc.style.strokeDasharray = "0 " + full[1];
+    });
+  });
+  if (!targets.length) return;
+  root.classList.add("g-motion");
+
+  function countUp(el, delay) {
+    var final = el.textContent, m = /^([0-9][0-9,]*)([.][0-9]+)?(%?)$/.exec(final.replace(/^ +| +$/g, ""));
+    if (!m) return;
+    var to = parseFloat((m[1] + (m[2] || "")).replace(/,/g, "")), places = m[2] ? m[2].length - 1 : 0;
+    if (!(to > 0)) return;
+    var fmt = function (v) { return v.toLocaleString("en-US", { minimumFractionDigits: places, maximumFractionDigits: places }) + m[3]; };
+    var start = null, DUR = 950;
+    el.textContent = fmt(0);
+    function step(t) {
+      if (start === null) start = t + delay;
+      var p = Math.max(0, Math.min(1, (t - start) / DUR)), eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = p >= 1 ? final : fmt(to * eased);
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  function arrive(el) {
+    var d = el.__d || 0;
+    el.classList.add("is-in");
+    each(el.querySelectorAll(".g-spark polyline"), function (line) { line.style.strokeDashoffset = 0; });
+    each(el.querySelectorAll(".g-dial-fill"), function (arc) { if (arc.__to) arc.style.strokeDasharray = arc.__to; });
+    each(el.querySelectorAll(".g-tile-v, .g-cell-n, .g-bar-v, .g-reach b, .g-dial-v"), function (n) { countUp(n, d + 150); });
+    // once it has landed it is an ordinary element again, so hover and the run switcher behave
+    setTimeout(function () { el.removeAttribute("data-r"); el.classList.remove("is-in"); el.style.removeProperty("--d"); }, d + 2200);
+  }
+  var seen = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      seen.unobserve(entry.target);
+      arrive(entry.target);
+    });
+  }, { rootMargin: "0px 0px -7% 0px", threshold: 0.12 });
+  targets.forEach(function (el) { seen.observe(el); });
+
+  // a hairline across the top that fills as the page is read
+  var bar = document.createElement("div");
+  bar.className = "g-progress"; bar.setAttribute("aria-hidden", "true");
+  document.body.appendChild(bar);
+  var ticking = false;
+  function progress() {
+    ticking = false;
+    var room = root.scrollHeight - window.innerHeight;
+    bar.style.transform = "scaleX(" + (room > 0 ? Math.min(1, window.scrollY / room) : 0) + ")";
+  }
+  window.addEventListener("scroll", function () { if (!ticking) { ticking = true; requestAnimationFrame(progress); } }, { passive: true });
+  window.addEventListener("resize", progress);
+})();
 (function () {
   var API = ${JSON.stringify(API)};
   var WORD = { go: "Go ahead", no: "Don\\u2019t", done: "Done", later: "Not this week" };
