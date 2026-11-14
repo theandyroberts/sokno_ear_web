@@ -7,6 +7,9 @@
 # Matches the pattern already used by christinadavilaproperties.com on this box.
 server {
     server_name soknoear.com;
+    # The Ear gets its own log, kept 120 days (logrotate.d/soknoear), so AI and crawler visits can be trended. The shared log still gets every line.
+    access_log /var/log/nginx/access.log;
+    access_log /var/log/nginx/soknoear/access.log;
     include snippets/deny-sensitive.conf;
 
     # modest body limit for the event/news submission form

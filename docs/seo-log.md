@@ -45,6 +45,23 @@ Control inactive). One-page summary: `docs/SEO-health-check.pdf`.
 
 ---
 
+### AI and agents (added 2026-11-14, from 15 days of nginx logs, Oct 31 – Nov 14)
+
+| Measure | Value |
+| --- | --- |
+| People from ChatGPT answers (`utm_source=chatgpt.com`) | **42 distinct IPs, 49 visits**; 35 visits Oct 31 – Nov 11 against Google's 20 clicks |
+| ChatGPT landing pages | `/` 29, `/2026-10-28/belltower-hiween` 5, `/2026-11-11/aapi-night-market` 3, six others 2 each or fewer; 40 of 49 on iPhone |
+| Ear pages fetched (probe requests removed) | Amazonbot 451, OAI-SearchBot 304 (6,205 requests in all), Applebot 191, bingbot 168, ClaudeBot 126 (119 on Nov 5), Googlebot 113, ChatGPT-User 38, meta-externalagent 34, Perplexity and others 12 |
+| Search Console "Generative AI" report | same totals as web search (50 clicks / 1.17K); no separate AI Overview figure for this site |
+
+OAI-SearchBot runs the page JavaScript and fires `/stats/api/send` (197 times), so some Umami
+page views are OpenAI's crawler. The Ear now writes its own access log,
+`/var/log/nginx/soknoear/access.log`, kept 120 days (`deploy/soknoear.logrotate`; live
+config backed up to `/home/andy/soknoear.com.nginx.bak-*`, `nginx -t` clean, site
+re-verified 200). Page 3 of `docs/SEO-health-check.pdf`.
+
+---
+
 ## 2026-11-01
 
 Sixth check. Deltas vs. 2026-10-15. Site-side half is clean; **Search Console
