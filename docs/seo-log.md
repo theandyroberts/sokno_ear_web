@@ -8,6 +8,43 @@ entry.
 
 ---
 
+## 2026-11-14 — off-cycle, after Andy asked
+
+Run by hand between checks, because Search Console had gone unread for 91 days and nobody
+was told. Deltas vs. 2026-11-01. **Search Console read in full for the first time since
+2026-09-01.** It belongs to the note15 Google account; the pane had been opening it as
+andy@sparkpoint.studio.
+
+### Site-side audit
+
+| Check | Result | Delta |
+| --- | --- | --- |
+| `sitemap.xml` | 200, 38,237 bytes, **241 URLs** (4 static + 22 episodes + 215 stories) | +31 URLs (+2 episodes, +29 stories) |
+| Full sweep | **241/241 200**, **241/241 `index, follow`**, 0 canonical mismatches, NewsArticle on all 215 stories | — |
+| `robots.txt`, noindex, `www`/`http` → apex, `/stats/script.js` | unchanged, all correct | — |
+
+### Search Console (as andy@note15.com, page indexing last updated 2026-11-08)
+
+| Measure | Value | vs. 2026-09-01 |
+| --- | --- | --- |
+| Indexed | **187** | — |
+| Not indexed | 106: alternate canonical 43 (feature stories, expected), discovered not crawled **46**, crawled not indexed 12 (11 font/favicon files, 1 story `/2026-07-16/planning-denied`), page with redirect 4, blocked by robots 1 (`/stats`, last crawled Sep 19, from the reverted Disallow) | never-crawled was 64 of 80; now 46 discovered of ~293 known |
+| Performance, 28 days | **50 clicks**, 1,170 impressions, CTR 4.3%, avg position 6.8 | 90 days: 84 clicks, 2.31K impressions |
+| Top queries (28 d) | bow wow bingo 1/2, sokno rail trail and art walk 1/2, scruffy roots festival 0/21, spooky streets knoxville 0/12, borderland playhouse knoxville 0/9 | — |
+| Top pages (28 d) | `/` 20/344, `/2026-10-28/pink-is-punk-halloweemo` 5/55, `/2026-10-21/scruffy-roots-fest-oct-25` 3/48, `/2026-11-04/bow-wow-bingo-printshop` 3/11, `/2026-10-21/spooky-streets` 2/92 | — |
+
+No new not-indexed reason. Nothing to fix on the site.
+
+### Alerting
+
+The 2026-11-01 run filed the unread Search Console as "not blocking" and sent nothing. Rule
+changed (task file and `docs/OPEN-ITEMS.md`): an unreachable source alerts every run. The
+alert command also never loaded `.env`; with `--env-file=.env` the test **email was sent**;
+**SMS skipped** (no AgentPhone key, no `ALERT_SMS_TO`); `PushNotification` not sent (Remote
+Control inactive). One-page summary: `docs/SEO-health-check.pdf`.
+
+---
+
 ## 2026-11-01
 
 Sixth check. Deltas vs. 2026-10-15. Site-side half is clean; **Search Console

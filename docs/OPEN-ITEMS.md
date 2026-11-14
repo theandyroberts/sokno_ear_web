@@ -11,12 +11,15 @@ triangle. A finding that lives only in a report nobody opens is not a finding.
 **The rule.** Every recurring check reads this file first and writes it last.
 
 - An item gets an **Opened** date and never loses it. Age is the escalation signal.
-- A check **pushes a notification only for BLOCKING items** — something is broken,
-  or something needs a decision only Andy can make. Everything else lands here quietly.
-- Ages **7** and **14** days re-fire the notification for an item already open. That
-  is the escalation that did not happen for the www redirect.
-- A check that finds nothing blocking sends **nothing**. A channel that fires every
-  run is a channel that gets ignored, which is how this started.
+- A check **alerts Andy, every run until it is fixed,** when something is broken, when
+  something it is meant to read **could not be reached** (Search Console, the VPS, a
+  signed-out browser), or when it needs a decision or login only Andy has. A check
+  that did half its job did not work. (Andy, 2026-11-14, after Search Console sat
+  unread for 91 days filed as "not blocking".)
+- Alerts go out on both channels: `scripts/notify.mjs` on the VPS (email + text) and
+  `PushNotification`. The log entry records which channels landed.
+- A check that finds everything working sends **nothing**. A channel that fires on
+  healthy runs gets ignored.
 - **Close items here.** An item that is fixed moves to Closed with what fixed it.
 
 **Channels.** `scripts/notify.mjs` fans out to whatever is configured — Resend email,
@@ -85,36 +88,14 @@ characters, one link, asks for their social person's email).
 *To close:* Andy marks it Done; the next run sets `introduced` and the weekly note runs from
 `venue-notify` like everyone else's. An email in the reply goes in `email`/`to`.
 
-### 4. Search Console is unreadable from the Mac mini
-**Opened:** 2026-08-15 · **Age: 86 days** (as of 2026-11-09) · **Missed 5 of 6 SEO checks**
-· **Needs Andy** · not blocking — no push (the site-side half covers breakage; this only costs the crawl numbers)
+### 4. Text alerts are off
+**Opened:** 2026-11-14 · **Needs Andy** · alerting — email sent 2026-11-14
 
-**2026-11-09:** age 86 days, unchanged; the next SEO check is Nov 15.
-
-**2026-11-01:** age 78 days, missed again (5 of 6) — no Chrome extension connected. The
-Browser pane is no longer signed out: it holds one Google session, `andy@sparkpoint.studio`,
-and that account has no access to the property. Signing the pane in with the account that
-owns it, or adding `andy@sparkpoint.studio` as a user on the property, also closes this.
-Sitemap is 210 URLs (+36 since 2026-10-15); site-side sweep all clean.
-
-**2026-10-15:** missed again (4 of 5) — no Chrome extension connected, Browser pane
-signed out. Sitemap is 174 URLs (+39 since 2026-10-01); site-side sweep all clean.
-
-**2026-10-01:** missed again — no Chrome extension connected, Browser pane signed out.
-Sitemap is now 135 URLs (+41 since 2026-09-15), so the uncrawled-share question has
-grown, not shrunk.
-
-No Chrome extension connected to the mini, and the Browser pane has no Google session,
-so `sc-domain:soknoear.com` bounces to the signed-out page. The 2026-09-01 run got in
-and is the only real data on record.
-
-This blocks the one number worth watching: **64 of the then-80 sitemap URLs had never
-been crawled** (all showing *Last crawled: N/A*). The sitemap is 94 URLs now. Two fixes
-shipped 2026-09-15 that should move it — the www consolidation and story links on
-`/archive` — and neither can be measured without this.
-
-*To close:* leave Chrome running with the Claude extension connected when the check
-fires (1st and 15th), or open Search Console and paste the Page indexing numbers.
+`scripts/notify.mjs` can text from the Ear's AgentPhone line, but `/var/www/soknoear/.env`
+has `AGENTPHONE_API_KEY` empty and no `ALERT_SMS_TO`, so no alert has ever gone out as a
+text. Email works (test landed 2026-11-14), and `PushNotification` reaches the phone only
+while Remote Control is on. *To close:* an AgentPhone API key and Andy's mobile number in
+that `.env`; then send a test with `node --env-file=.env scripts/notify.mjs`.
 
 ---
 
@@ -122,6 +103,8 @@ fires (1st and 15th), or open Search Console and paste the Page indexing numbers
 
 | Item | Opened | Closed | What fixed it |
 | --- | --- | --- | --- |
+| Search Console unreadable from the Mac mini (missed 5 of 6 SEO checks) | 2026-08-15 | 2026-11-14 | The pane was opening the property as andy@sparkpoint.studio; it belongs to the note15 account. The task now opens it with `authuser=andy%40note15.com`, and read it in full on 2026-11-14 (187 indexed, 46 waiting on Google, was 64 of 80). The bigger failure was filing it as "not blocking" for 91 days: an unreachable source now alerts every run (rule above) |
+| SEO alerts never sent | 2026-11-14 | 2026-11-14 | The task ran `notify.mjs` without loading `.env`, so every channel reported "skipped". It now runs `node --env-file=.env`; test email landed |
 | Every post went out an hour early after the clocks went back (Nov 1 – Nov 7: eight dated posts a day, the feature, the Reel), because the scheduler wrote every slot with a constant `-04:00` | 2026-11-09 | 2026-11-09 | `etIso`/`toIso` in `scripts/ig-schedule.mjs` take the offset from the calendar (`America/New_York`); `scripts/ig-queue.mjs` uses them in all eight places; four tests in `tests/ig-schedule.test.ts` pin Oct 29 to `-04:00` and Nov 5 to `-05:00`. First live week is No. 22. Lesson below |
 | The weekly Reel comes out (decided Nov 2) | 2026-10-26 | 2026-11-03 | Withdrawn by Andy on Nov 3: he wants a Reel every week. `reelIsOn` is back on; cut with `/brag-slim`, 24 s, voiced by SouthernCourtney. No. 21's read 17 reach, 8.2 s watched (34%, the best share yet) |
 | The weekly Reel: three cuts (116 s, 46 s, 46 s opening on the feature) read 27, 19 and 16, under the week's median still every time; the third was watched 7.5 s and skipped 73% | 2026-10-26 | 2026-11-02 | The Reel comes out from Nov 4: `reelIsOn` in `scripts/ig-reel.mjs` is off unless Andy answers "Don't" on `reel-comes-out`; `publish-episode.mjs` skips the render, `ig-queue.mjs` the post. `reel-opens-on-the-story` closed with the numbers |

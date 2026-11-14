@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SEO Health Check</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=block" rel="stylesheet">
+<style>
+  @page { size: letter; margin: 0; }
+  :root {
+    --paper: #F4EEDF; --ink: #1B1A14; --soft: #5B574B; --rule: #CFC6B1;
+    --rust: #A8452A; --green: #3E6B3A; --gold: #B8862B; --card: #FBF7EC;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 8.5in; height: 11in; }
+  body {
+    background: var(--paper); color: var(--ink);
+    font: 9.6pt/1.38 "PT Serif", Georgia, serif;
+    padding: 0.42in 0.5in 0.36in;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  .label { font-family: "Special Elite", monospace; letter-spacing: .04em; }
+  header { border-bottom: 3px double var(--ink); padding-bottom: 8px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .kicker { font-size: 8.5pt; color: var(--rust); text-transform: uppercase; }
+  h1 { font-family: "Rye", serif; font-weight: 400; font-size: 30pt; line-height: 1; margin-top: 3px; }
+  .when { text-align: right; font-size: 8.5pt; color: var(--soft); line-height: 1.5; }
+  .when b { color: var(--ink); font-weight: 400; }
+  .lede { font-size: 11pt; line-height: 1.42; margin: 10px 0 12px; }
+  .lede em { color: var(--rust); font-style: normal; font-weight: 700; }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 12px; }
+  .stat { background: var(--card); border: 1px solid var(--rule); border-top: 4px solid var(--green); padding: 7px 9px 8px; }
+  .stat.warn { border-top-color: var(--gold); }
+  .stat .n { font-family: "Rye", serif; font-size: 21pt; line-height: 1.05; }
+  .stat .n small { font-family: "PT Serif", serif; font-size: 9pt; color: var(--soft); }
+  .stat .t { font-size: 8.4pt; color: var(--soft); line-height: 1.3; margin-top: 2px; }
+  .stat .h { font-size: 7.6pt; text-transform: uppercase; color: var(--ink); }
+
+  .cols { display: grid; grid-template-columns: 1.08fr 1fr; gap: 16px; }
+  h2 { font-family: "Rye", serif; font-weight: 400; font-size: 13pt; margin: 0 0 5px; display: flex; align-items: center; gap: 7px; }
+  h2 .num { font-family: "Special Elite", monospace; font-size: 9pt; background: var(--ink); color: var(--paper); width: 18px; height: 18px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; }
+  section { margin-bottom: 11px; }
+  ul { list-style: none; }
+  li { padding-left: 13px; position: relative; margin: 2px 0; }
+  li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 700; font-size: 8.5pt; }
+  li.x::before { content: "→"; color: var(--rust); }
+  .muted { color: var(--soft); font-size: 8.6pt; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 8.6pt; margin-top: 3px; }
+  td { padding: 2.5px 0; border-bottom: 1px dotted var(--rule); vertical-align: top; }
+  td.c { text-align: right; font-family: "Special Elite", monospace; width: 34px; }
+  td .ok { color: var(--green); } td .watch { color: var(--gold); }
+
+  .alert { background: var(--ink); color: var(--paper); padding: 10px 12px 11px; margin-bottom: 11px; }
+  .alert h2 { color: var(--paper); }
+  .alert h2 .num { background: var(--rust); }
+  .alert li::before { color: #E4B25A; }
+  .alert .muted { color: #C9C1AE; }
+
+  .broke { border: 2px solid var(--rust); padding: 9px 11px 10px; background: #F8E9E1; margin-bottom: 11px; }
+  .broke h2 { color: var(--rust); }
+  .broke li::before { content: "✗"; color: var(--rust); }
+  .broke li.fixed::before { content: "✓"; color: var(--green); }
+
+  .needs { border-left: 4px solid var(--gold); padding: 6px 0 6px 10px; background: var(--card); }
+  .needs b { color: var(--rust); }
+  footer { position: absolute; left: 0.5in; right: 0.5in; bottom: 0.3in; border-top: 1px solid var(--ink); padding-top: 4px; font-size: 7.6pt; color: var(--soft); display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <div class="kicker label">The South Knoxville Ear · how the site stays findable</div>
+    <h1>SEO Health Check</h1>
+  </div>
+  <div class="when label">
+    Runs <b>1st &amp; 15th, 9:00 AM</b><br>
+    on the Mac mini, by Claude<br>
+    Status as of <b>Sat, Nov 14, 2026</b>
+  </div>
+</header>
+
+<p class="lede">Twice a month Claude checks that Google can find, read and credit every page on soknoear.com.
+It fixes what it can, logs the numbers, and <em>alerts you the moment anything is broken or can't be reached.</em> It stays silent only when everything works.</p>
+
+<div class="stats">
+  <div class="stat"><div class="h label">Site</div><div class="n">241<small> / 241</small></div><div class="t">pages in the sitemap, all live, all indexable, all pointing at the right canonical</div></div>
+  <div class="stat"><div class="h label">In Google</div><div class="n">187</div><div class="t">pages indexed. 106 not, and 43 of those are left out on purpose</div></div>
+  <div class="stat"><div class="h label">Clicks, 28 days</div><div class="n">50</div><div class="t">from 1,170 search appearances, avg. position 6.8. 84 in 90 days, so it's climbing</div></div>
+  <div class="stat warn"><div class="h label">Waiting on Google</div><div class="n">46</div><div class="t">pages found but not crawled yet, mostly July stories. Was 64 of 80 on Sep 1</div></div>
+</div>
+
+<div class="cols">
+  <div>
+    <section>
+      <h2><span class="num">1</span>Checks the site itself</h2>
+      <ul>
+        <li>Sitemap serves and grows with each episode. Every URL in it returns 200</li>
+        <li>robots.txt only hides <span class="label">/next</span>, <span class="label">/draft/</span>, <span class="label">/desk/</span></li>
+        <li>Canonicals: the newest episode credits the homepage. Older episodes and stories credit themselves. Feature stories credit their episode</li>
+        <li>Every story carries NewsArticle data, so Google reads it as news</li>
+        <li>Nothing public is accidentally hidden. www and http forward to soknoear.com</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="num">2</span>Reads Google Search Console</h2>
+      <ul>
+        <li>Opens the property as the <b>note15</b> Google account. The sparkpoint account has no access</li>
+        <li>Page indexing: how many pages are in, why the rest aren't, any new reason</li>
+        <li>Performance: clicks, appearances, top searches and pages</li>
+      </ul>
+      <table>
+        <tr><td>Alternate page with proper canonical <span class="muted">(feature stories)</span></td><td class="c"><span class="ok">43</span></td></tr>
+        <tr><td>Discovered, not yet crawled <span class="muted">(Google's queue)</span></td><td class="c"><span class="watch">46</span></td></tr>
+        <tr><td>Crawled, not indexed <span class="muted">(font files, plus 1 July story)</span></td><td class="c"><span class="ok">12</span></td></tr>
+        <tr><td>Page with redirect <span class="muted">(www / http)</span></td><td class="c"><span class="ok">4</span></td></tr>
+        <tr><td>Blocked by robots <span class="muted">(old /stats, from Sep 19, clearing)</span></td><td class="c"><span class="ok">1</span></td></tr>
+      </table>
+      <p class="muted" style="margin-top:4px">Top searches: scruffy roots festival, spooky streets knoxville, borderland playhouse.
+      Top pages: the homepage (20 clicks), Pink Is Punk Halloweemo (5), Scruffy Roots Fest (3), Bow Wow Bingo (3).</p>
+    </section>
+
+    <section>
+      <h2><span class="num">3</span>Fixes what it can, then records it</h2>
+      <ul>
+        <li>Redirects, robots rules, stale config, missing links are fixed, verified and reported as done. You don't get a to-do list</li>
+        <li>Logs every run in <span class="label">docs/seo-log.md</span>. Anything still open goes in <span class="label">docs/OPEN-ITEMS.md</span> with the date it opened</li>
+      </ul>
+    </section>
+  </div>
+
+  <div>
+    <div class="alert">
+      <h2><span class="num">!</span>When it alerts you</h2>
+      <ul>
+        <li>Anything on the site is broken</li>
+        <li>Anything it should read <b>can't be reached</b>: Search Console, the server, the site, a signed-out browser</li>
+        <li>Something needs your decision or your login</li>
+        <li><b>Every run</b> until it's fixed. Email plus a phone push, one line: what's wrong, how old, the one fix</li>
+      </ul>
+      <p class="muted" style="margin-top:5px">When everything works it sends nothing, so an alert always means something.</p>
+    </div>
+
+    <div class="broke">
+      <h2>What went wrong</h2>
+      <ul>
+        <li>Search Console went unread for <b>91 days</b> (Aug 15 to Nov 14). It was opened with the wrong Google account</li>
+        <li>Each run logged it as "not blocking", so it never alerted you</li>
+        <li>The alert command didn't load the server's keys, so even a real alert would have sent nothing</li>
+        <li class="fixed">Fixed today: note15 account, the alert rule above, and the email channel. A test alert landed</li>
+      </ul>
+    </div>
+
+    <div class="needs">
+      <b class="label">Needs you, once</b><br>
+      <b>Text alerts are off.</b> The server has no AgentPhone key and no phone number to text.
+      Send me both and alerts also come as texts. Until then: email, plus a phone push when Remote Control is on.
+    </div>
+  </div>
+</div>
+
+<footer class="label">
+  <span>soknoear.com · SEO health check</span>
+  <span>Next run Sun, Nov 15, 9:00 AM</span>
+</footer>
+</body>
+</html>
