@@ -89,7 +89,7 @@ characters, one link, asks for their social person's email).
 `venue-notify` like everyone else's. An email in the reply goes in `email`/`to`.
 
 ### 4. Text alerts are off
-**Opened:** 2026-11-14 · **Needs Andy** · alerting — email sent 2026-11-14
+**Opened:** 2026-11-14 · **Age: 1 day** (as of 2026-11-15) · **Needs Andy** · alerting — email sent 2026-11-14 and 2026-11-15 (SMS skipped, push not delivered both times)
 
 `scripts/notify.mjs` can text from the Ear's AgentPhone line, but `/var/www/soknoear/.env`
 has `AGENTPHONE_API_KEY` empty and no `ALERT_SMS_TO`, so no alert has ever gone out as a

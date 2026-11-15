@@ -8,6 +8,58 @@ entry.
 
 ---
 
+## 2026-11-15
+
+Seventh regular check, the day after the off-cycle run. Deltas vs. 2026-11-14. **Site and
+Search Console both read in full and healthy; nothing needed fixing.** Still alerting on one
+item: text alerts are off (open item 4).
+
+### Site-side audit
+
+| Check | Result | Delta |
+| --- | --- | --- |
+| `sitemap.xml` | 200, 38,237 bytes, **241 URLs** (4 static + 22 episodes + 215 stories), lastmod to 2026-11-11 | 0 (No. 23 not published yet) |
+| Full sweep | **241/241 200**, 0 noindexed, 0 canonical mismatches, NewsArticle on 215/215 stories | — |
+| Spot-check 5 | `/2026-10-07/dj-goblin-alliance`, `/2026-10-14/starlight-paddle`, `/2026-06-26`, `/2026-08-19/pink-cactus`, `/2026-11-11/specials-board` → all 200 | — |
+| Canonicals | `/` and latest `/2026-11-11` → `/`; older `/2026-10-28` → self; feature `/2026-11-11/aapi-night-market` → `/2026-11-11`, absent from sitemap | ✓ |
+| `robots.txt` | `Allow: /`, `Disallow: /next`, `/draft/`, `/desk/`, `Host:`, `Sitemap:` | unchanged |
+| Noindex | `/next`, `/draft/*` 404 + `noindex`; `/dashboard` `noindex, nofollow` | ✓ |
+| `www` / `http` → apex | 301 on all three probes | ✓ still fixed (since 2026-09-15) |
+| `/stats/script.js` | 200 | ✓ |
+
+### Search Console (as andy@note15.com)
+
+| Measure | Value | Delta |
+| --- | --- | --- |
+| Indexed / not indexed | **187 / 106** (page indexing still last updated 2026-11-08) | 0 / 0 |
+| Not-indexed reasons | alternate canonical 43, discovered not crawled 46, crawled not indexed 12, redirect 4, robots 1 (`/stats`) | no new reason |
+| Performance, 28 days (Oct 17 – Nov 13) | **52 clicks**, 1.21K impressions, CTR 4.3%, avg position 6.7 | +2 clicks, +40 impressions, position −0.1 |
+| Top queries | bow wow bingo 1/2, sokno rail trail and art walk 1/2, scruffy roots festival 0/21, spooky streets knoxville 0/12, borderland playhouse knoxville 0/9 | same five |
+
+### AI and agents (the Ear's own log, Nov 14 16:11 – Nov 15 14:11 UTC, 22 hours)
+
+The Ear's log started at 16:11 on Nov 14, so this period is 22 hours against the 15-day
+baseline; per-day rates are the comparison.
+
+| Measure | This period | Per day | Baseline per day (Oct 31 – Nov 14) |
+| --- | --- | --- | --- |
+| People from ChatGPT answers | **1 IP, 1 visit** (landed on `/`) | ~1 | 2.8 people, 3.3 visits |
+| OAI-SearchBot | 437 requests, 14 Ear pages | ~480 req | 414 req |
+| Googlebot / bingbot pages | 17 / 7 | — | 113 / 168 over 15 days |
+| Amazonbot / Applebot pages | 21 / 5 | — | 451 / 191 |
+| ChatGPT-User, GPTBot, ClaudeBot, Perplexity, Meta, CCBot, Bytespider | 1, 1 req, 0, 0, 0, 0, 0 | — | — |
+
+One ChatGPT visit in 22 hours is below the baseline rate; one day is too short to read.
+Page 3 of `docs/SEO-health-check.pdf` keeps the 15-day charts with a Nov 15 line; a 22-hour
+redraw would have replaced a real baseline with noise. The Dec 1 check redraws it from the
+Ear's own log (16 days). Pages 1–2: clicks 52, status Nov 15, next run Dec 1.
+
+### Alerting
+
+Alert sent for open item 4 (text alerts off, 1 day old): **email sent**; **SMS skipped** (`AGENTPHONE_API_KEY` still empty, no `ALERT_SMS_TO`); **PushNotification not sent** (Remote Control inactive). Email is the only channel that landed.
+
+---
+
 ## 2026-11-14 — off-cycle, after Andy asked
 
 Run by hand between checks, because Search Console had gone unread for 91 days and nobody
