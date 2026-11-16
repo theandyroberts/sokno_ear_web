@@ -190,6 +190,7 @@ coverage *about* them. The venue's name in our own type does the same job.
 Story **labels are geographic location pills** — make them accurate. Keep one color per
 place for recognition: **Old Sevier = rust, Ijams Nature Center = teal, Kern's = green.**
 
+- **The 808** is at 808 Sevier Avenue; say the address. Sevier Avenue has no "top" (Andy, 2026-11-16: "there is no top"), so never "the top of Sevier Avenue". Don't claim the name comes from the address unless the venue says so.
 - **Old Sevier** — the Sevier Avenue corridor (the main drag); Honeybee Coffee, Alliance
   Brewing, SouthSide Garage, the Pink Cactus, Fly by Night.
 - **Kern's** — the Kern's Bakery / Food Hall pocket. Its own SoKno section, **no water
