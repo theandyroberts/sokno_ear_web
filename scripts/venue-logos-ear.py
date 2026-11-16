@@ -28,13 +28,15 @@ RUST = np.array([0xA9, 0x4A, 0x34], float)
 SRC, OUT = "public/assets/venues", "public/assets/venues/ear"
 # Marks whose two colors would land on the same ink, or on ink over ink, and lose the lettering.
 #   cool: what greens/blues become   gold: what light yellows and golds become
+#   mid: what a muted mid-tone (a grayed green or blue the saturation test reads as gray) becomes
 OVERRIDES = {
     "hi-wire": {"cool": CREAM},           # blue lettering on a black sign: pine on ink is unreadable
     "old-sevier-market": {"gold": CREAM},  # gold lettering on a maroon block: rust on rust vanishes
+    "sokno-sourdough": {"mid": PINE},      # the sage circle is a muted green, not a gray (Andy, 2026-11-16)
 }
 
 
-def remap(rgb, cool=PINE, gold=None):
+def remap(rgb, cool=PINE, gold=None, mid=None):
     """rgb: float array (..., 3) in 0-255 -> the same shape in the four inks."""
     r, g, b = rgb[..., 0] / 255, rgb[..., 1] / 255, rgb[..., 2] / 255
     mx, mn = np.maximum(np.maximum(r, g), b), np.minimum(np.minimum(r, g), b)
@@ -57,7 +59,11 @@ def remap(rgb, cool=PINE, gold=None):
     pale = np.clip((lum - 0.72) / 0.28, 0, 1) * np.clip(1 - s / 0.5, 0, 1)
     body = body + (CREAM - body) * pale[..., None]
     k = np.clip((s - 0.16) / 0.2, 0, 1)[..., None] * np.clip(mx / 0.12, 0, 1)[..., None]
-    return gray + (body - gray) * k
+    out = gray + (body - gray) * k
+    if mid is not None:
+        m2 = np.clip((0.2 - s) / 0.06, 0, 1) * np.clip((lum - 0.38) / 0.08, 0, 1) * np.clip((0.72 - lum) / 0.08, 0, 1)
+        out = out + (mid - out) * m2[..., None]
+    return out
 
 
 def recolor_png(src, dst, **kw):
@@ -96,10 +102,12 @@ def main():
         if not orig or (only and key not in only):
             continue
         name = os.path.basename(orig)
-        src, dst = os.path.join(SRC, name), os.path.join(OUT, name)
+        # a re-inked file that was renamed (so no cache serves the old one) keeps its name
+        outname = os.path.basename(v["logo"]) if "/ear/" in (v.get("logo") or "") else name
+        src, dst = os.path.join(SRC, name), os.path.join(OUT, outname)
         (recolor_svg if name.endswith(".svg") else recolor_png)(src, dst, **OVERRIDES.get(key, {}))
         v["logoOriginal"] = f"/assets/venues/{name}"
-        v["logo"] = f"/assets/venues/ear/{name}"
+        v["logo"] = f"/assets/venues/ear/{outname}"
         print(f"{key}: {dst}")
     reg["_treatments"]["ear-inks"] = "every entry: `logo` is the mark re-inked in the Ear's four colors by scripts/venue-logos-ear.py (ink, cream, pine, rust; Andy, 2026-11-16); `logoOriginal` is the venue's own file, untouched, and `treatment` still describes how that original was prepared. To put a venue back, set `logo` to `logoOriginal`."
     json.dump(reg, open("content/venues.json", "w"), indent=2, ensure_ascii=False)
