@@ -697,14 +697,21 @@
       "instagram": "@soknosourdough",
       "website": "https://soknosourdough.com/",
       "contactPage": null,
-      "email": null,
-      "to": null,
+      "email": "stephanie@soknosourdough.com",
+      "to": "stephanie@soknosourdough.com",
       "phone": null,
-      "people": [],
-      "salutation": null,
+      "people": [
+        {
+          "name": "Stephanie",
+          "role": "contact address on soknosourdough.com",
+          "email": "stephanie@soknosourdough.com",
+          "source": "soknosourdough.com (printed on the site), given by Andy 2026-11-16"
+        }
+      ],
+      "salutation": "Hi Stephanie,",
       "introduced": "2026-11-10",
       "source": "the No. 21 First Friday story (sokno-sourdough-first-friday), 2026-11-06",
-      "notes": "Bakery on Sevier Ave. soknosourdough.com rendered empty on 2026-11-02, so no email is on file; the route is an Instagram DM. First Ear post Nov 6 (First Friday with Peter Riesing and Paradise Chocolate) read 170 with three shares and 13 profile visits before anyone had said hello. Added 2026-11-09 by the Instagram review; Andy sent the first DM on 2026-11-10 (move `sourdough-hello`, marked Done); it asked for their social person's email, so an answer goes in `email`/`to`. Until then the weekly note is a DM draft."
+      "notes": "Bakery on Sevier Ave. soknosourdough.com rendered empty on 2026-11-02, so no email is on file; the route is an Instagram DM. First Ear post Nov 6 (First Friday with Peter Riesing and Paradise Chocolate) read 170 with three shares and 13 profile visits before anyone had said hello. Added 2026-11-09 by the Instagram review; Andy sent the first DM on 2026-11-10 (move `sourdough-hello`, marked Done); it asked for their social person's email, so an answer goes in `email`/`to`. Until then the weekly note is a DM draft. Email from Andy 2026-11-16 (he typed 'stehpanie@'; the bakery's own site prints stephanie@soknosourdough.com, which is what is on file). Weekly notes go by email from No. 23 on."
     }
   }
 }
