@@ -462,6 +462,13 @@
    "verified": "the Instagram link on alchemyloungeandcigar.com, whose event page gives Nov 12, 7-9 PM, $40 at Kern's UpTop; Kern's own Nov 4 post links that page",
    "confidence": "high",
    "added": "2026-11-09"
+  },
+  "bigsomething": {
+   "handle": "@bigsomething",
+   "name": "Big Something (band)",
+   "kind": "act",
+   "verified": "the band's own profile, instagram.com/bigsomething/, read 2026-11-16: 'Big Something · Musician/band', 27.6K followers, followed by @808knox. Played The 808 on Nov 13 (No. 22) and the post tagged only the venue",
+   "confidence": "high"
   }
  }
 }

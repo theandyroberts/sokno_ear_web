@@ -36,60 +36,71 @@ tickets the Instagram reviews used until 2026-09-28 (A1–A16) meant nothing to 
 retired; where an old one appears below, its name is beside it. Things Andy can answer are
 **moves** on the dashboard (`node scripts/pub-status.mjs moves`).
 
-### 1. Half the posts go out a day early (the timing test) — first week Wed Oct 28, read it Nov 2
-**Opened:** 2026-10-26 · **Age: 14 days** (as of 2026-11-09) · **Claude's** · **Move:** `early-posts` · **Decision: Mon 2026-11-23**
+### 1. Half the posts go out a day early (the timing test) — first week Wed Oct 28, decision Mon Nov 23
+**Opened:** 2026-10-26 · **Age: 21 days** (as of 2026-11-16) · **Claude's** · **Move:** `early-posts` · **Decision: Mon 2026-11-23**
 
 Andy, Oct 23: every dated post went out about three hours before doors, so the venue and
-the act never had time to reshare, and the reshare is the account's reach (13 shared posts
-in three weeks average 148; the other 32 tagged posts average 22). `assignTimingArms` in
+the act never had time to reshare, and the reshare is the account's reach (27 shared posts
+in six weeks average 165; the other 60 tagged posts average 31). `assignTimingArms` in
 `scripts/ig-schedule.mjs` (`9c5ec6a`) splits each week's dated posts within each venue: half
 go exactly 24 hours before their old slot, half stay day-of, the split flips each week, and
-`timingArm` is stored on the post. Andy answered "go" Oct 30.
+`timingArm` is stored on the post. Andy answered "go" Oct 30 and again Nov 10.
 
-**2026-11-09:** age 14 days, week two read. Early 5 posts, 2 shared (Bow Wow Bingo 108, goat
-yoga 26); day-of 6 posts, 2 shared (Sourdough 170, Latin.Knox 85). Cumulative: early 3 of 12
-(25%), median 28; day-of 4 of 13 (31%), median 25. Within one share; no call. Week three runs
-with `flip` false. Table in `docs/ig-reviews/2026-11-09.md`.
+**2026-11-16:** age 21 days, week three read. Early 7 posts, 4 shared (Alchemy 180, After
+Brunch 101, SHOGUN 273, Fall Fungi 314), median 101; day-of 6 posts, 2 shared (Big Something
+275, Aero Dream 129), median 27. Cumulative, 19 a side: early **8 of 19 (42%)**, median 38;
+day-of **6 of 19 (32%)**, median 34. Ahead, not two-to-one, and not twenty a side: the rule
+says one more week. No. 23 runs with `flip` true. Table in `docs/ig-reviews/2026-11-16.md`.
+
+**2026-11-09:** age 14 days, week two read. Early 5 posts, 2 shared; day-of 6 posts, 2
+shared. Cumulative 3 of 12 against 4 of 13. Table in `docs/ig-reviews/2026-11-09.md`.
 
 **2026-11-02:** age 7 days. Week one (No. 20): early 7 posts, 1 shared, median 21; day-of 7
 posts, 2 shared, median 18. Too close to call. Table in `docs/ig-reviews/2026-11-02.md`.
 
 *Measures, every Monday:* posts, shared (≥1 share), share rate, median and mean reach, profile
-visits by arm, this week and cumulative. *Decide:* at the review of Nov 23, or sooner if one
-arm leads two-to-one on shares with at least 20 posts in each; then the winner becomes the
-rule in `assignTimingArms` and the move closes.
+visits by arm, this week and cumulative. *Decide:* at the review of Nov 23 (next run), or
+sooner if one arm leads two-to-one on shares with at least 20 posts in each; then the winner
+becomes the rule in `assignTimingArms` and the move closes.
 
-### 2. The roundup's slides carry the venue tag — first week Wed Nov 11, read it Nov 16
-**Opened:** 2026-11-09 · **Claude's** · **Move:** `roundup-slide-tags` · **Due: Wed 2026-11-11**
+### 2. The roundup's slides carry the venue tag — first week Wed Nov 11, closes after the No. 23 roundup
+**Opened:** 2026-11-09 · **Age: 7 days** (as of 2026-11-16) · **Claude's** · **Move:** `roundup-slide-tags` · Andy answered go Nov 10
 
 The weekend roundup read 260 on Nov 3 (14, 32, 81, 41, 100, 260), the account's fifth-best
 post ever, with two shares and a save and nothing tagged in any of its ten slides. Every
 single banner has carried its venue as an in-image tag since Oct 7 and the tagged posts are
-the ones venues find and share. This run: `buildRoundup` returns `slideTags` aligned with
-`slides` (cover untagged), `publishPost` sends each slide's `user_tags` on its own child
+the ones venues find and share. Shipped Nov 9: `buildRoundup` returns `slideTags` aligned
+with `slides` (cover untagged), `publishPost` sends each slide's `user_tags` on its own child
 container, `dropRefusedTags` strips a 2207018 handle from slides as well as single images,
 and `roundupSlideTagsOn(moves)` honours Andy's "Don't". Tests in `tests/ig-roundup.test.ts`
 and `tests/ig-untaggable.test.ts`.
 
-*Measures:* the No. 22 roundup publishes first time (a refused handle shows as a `✂` retry,
-not a failure); its reach and shares against 260 and 2. *Close:* after two roundups with
-tagged slides, whatever they read; this is a correction, not a test.
+**2026-11-16:** the first tagged roundup (No. 22, Nov 10) published first time after one
+refused handle (`@bradd27`) was dropped and the post retried in the same tick (`✂` in the
+log): **205 reach, one share, three profile visits**, against 264 and two the week before.
+Both over 200, both shared. One more roundup and it closes.
 
-### 3. Say hello to SoKno Sourdough
-**Opened:** 2026-11-09 · **Andy's** (a DM from the account) · **Move:** `sourdough-hello` · **Due: Wed 2026-11-11**
+*Close:* after the No. 23 roundup, whatever it reads; this is a correction, not a test.
 
-The bakery's first Ear post (First Friday with Peter Riesing and Paradise Chocolate, Nov 6)
-read 170 with three shares, 13 profile visits and a follow, from the image tag alone; the
-Ear has never written to them. No email anywhere (`soknosourdough.com` renders empty), so
-the first contact is a DM, which only Andy can send. `content/contacts.json` has
-`sokno-sourdough` with `introduced: null`; the move carries the DM text (under 900
-characters, one link, asks for their social person's email).
+### 3. Touring acts get looked up by name — first run Tue Nov 17
+**Opened:** 2026-11-16 · **Claude's** · **Move:** `act-lookup` · **Due: Tue 2026-11-17**
 
-*To close:* Andy marks it Done; the next run sets `introduced` and the weekly note runs from
-`venue-notify` like everyone else's. An email in the reply goes in `email`/`to`.
+Big Something played The 808 on Nov 13; the research wrote `igAct: { none: "the venue has
+not posted the show and its schedule names no handle for the band" }`, and the band is
+`@bigsomething`, 27,600 followers, followed by `@808knox`. The post reached 275 on the
+venue's share alone. SHOGUN and Ahee got the same reason. The act gate in the research task
+(`~/.claude/scheduled-tasks/tuesday-research-draft/SKILL.md`, step 1h) now says: when the
+venue's post names no handle, open `instagram.com/<the act's name>` and one or two variants
+before writing `none`; a live profile whose name and category match is a confirmed handle;
+"no handle in the venue's post" is not a reason, "searched `<names>`, no profile matches" is.
+`@bigsomething` is in `content/ig-handles.json`. Andy's Don't on the move leaves the gate as
+it was.
+
+*Measures:* No. 23's draft: stories with an act handle, and `none` reasons that name what
+was tried. *Close:* after two drafts run the rule.
 
 ### 4. Text alerts are off
-**Opened:** 2026-11-14 · **Age: 1 day** (as of 2026-11-15) · **Needs Andy** · alerting — email sent 2026-11-14 and 2026-11-15 (SMS skipped, push not delivered both times)
+**Opened:** 2026-11-14 · **Age: 2 days** (as of 2026-11-16) · **Needs Andy** · alerting — email sent 2026-11-14 and 2026-11-15 (SMS skipped, push not delivered both times)
 
 `scripts/notify.mjs` can text from the Ear's AgentPhone line, but `/var/www/soknoear/.env`
 has `AGENTPHONE_API_KEY` empty and no `ALERT_SMS_TO`, so no alert has ever gone out as a
@@ -103,6 +114,7 @@ that `.env`; then send a test with `node --env-file=.env scripts/notify.mjs`.
 
 | Item | Opened | Closed | What fixed it |
 | --- | --- | --- | --- |
+| Say hello to SoKno Sourdough (a DM only Andy can send) | 2026-11-09 | 2026-11-10 | Andy sent the DM on Nov 10 and marked the move Done; `content/contacts.json` sets `introduced: "2026-11-10"` (recorded by the Nov 16 review), and the weekly note runs from `venue-notify` the next time they are in an episode. No email on file yet, so until one comes the note is a DM draft |
 | Search Console unreadable from the Mac mini (missed 5 of 6 SEO checks) | 2026-08-15 | 2026-11-14 | The pane was opening the property as andy@sparkpoint.studio; it belongs to the note15 account. The task now opens it with `authuser=andy%40note15.com`, and read it in full on 2026-11-14 (187 indexed, 46 waiting on Google, was 64 of 80). The bigger failure was filing it as "not blocking" for 91 days: an unreachable source now alerts every run (rule above) |
 | SEO alerts never sent | 2026-11-14 | 2026-11-14 | The task ran `notify.mjs` without loading `.env`, so every channel reported "skipped". It now runs `node --env-file=.env`; test email landed |
 | Every post went out an hour early after the clocks went back (Nov 1 – Nov 7: eight dated posts a day, the feature, the Reel), because the scheduler wrote every slot with a constant `-04:00` | 2026-11-09 | 2026-11-09 | `etIso`/`toIso` in `scripts/ig-schedule.mjs` take the offset from the calendar (`America/New_York`); `scripts/ig-queue.mjs` uses them in all eight places; four tests in `tests/ig-schedule.test.ts` pin Oct 29 to `-04:00` and Nov 5 to `-05:00`. First live week is No. 22. Lesson below |

@@ -1,0 +1,136 @@
+{
+ "run": 16,
+ "date": "2026-11-16",
+ "next": "2026-11-23",
+ "episode": 22,
+ "kicker": "Week of Nov 11 · episode No. 22 · read Nov 16",
+ "railKind": "423 followers · 98 reach a post",
+ "headline": "The best week yet: 1,763 reach, seven posts past a hundred.",
+ "verdicts": [
+  { "label": "Growth", "tone": "ok", "text": "+45 followers, six to nine a day" },
+  { "label": "Reach", "tone": "ok", "text": "1,763 on 18 posts, the best week yet" },
+  { "label": "Timing test", "tone": "warn", "text": "Early 8/19 shared · day-of 6/19" },
+  { "label": "Tagged roundup", "tone": "ok", "text": "205 and one share; 264 and two before" }
+ ],
+ "tiles": [
+  {
+   "label": "Followers", "value": "423", "good": "up",
+   "series": [46, 49, 59, 66, 74, 86, 95, 100, 101, 111, 156, 195, 244, 333, 378, 423],
+   "vsLast": { "dir": "up", "tone": "ok", "text": "+45; six to nine a day all week, 0 on Sunday" },
+   "vsBase": "46 on Aug 11"
+  },
+  {
+   "label": "Reach per post", "value": "98", "good": "up",
+   "series": [16.1, 10.5, 10.5, 14.2, 10.4, 8.2, 8.1, 6.8, 7.8, 4.9, 5.9, 54.5, 37.5, 50.8, 60.1, 58.3, 97.9],
+   "vsLast": { "dir": "up", "tone": "ok", "text": "58 last week, same age; median 37, was 26" },
+   "vsBase": "10.5 in early Aug"
+  },
+  {
+   "label": "Reach, whole week", "value": "1,763", "good": "up",
+   "series": [113, 84, 63, 128, 104, 106, 89, 41, 101, 69, 47, 926, 675, 966, 1081, 874, 1763],
+   "vsLast": { "dir": "up", "tone": "ok", "text": "874 last week on 15 posts; 18 this week" },
+   "vsBase": "best before October was 128"
+  },
+  {
+   "label": "People reached this week", "value": "1,078", "good": "up",
+   "series": [19, 11, 21, 25, 20, 686, 517, 702, 709, 656, 1078],
+   "vsLast": { "dir": "up", "tone": "ok", "text": "656 last week; 980 of them don't follow us" },
+   "vsBase": "19 in September"
+  },
+  {
+   "label": "New people reached · 28 days", "value": "2,328", "good": "up",
+   "series": [10, 10, 6, 9, 12, 13, 675, 1059, 1595, 2147, 2118, 2328],
+   "vsLast": { "dir": "up", "tone": "ok", "text": "2,118 last Monday; climbing again" },
+   "vsBase": "10 in September"
+  }
+ ],
+ "tilesNote": "Lines run from July to now. Reach per post is read at the same age as last week's was (one to six days).",
+ "lifetime": { "posts": 221, "reach": 8747, "views": 13373, "likes": 217, "shares": 48, "comments": 8, "saves": 5 },
+ "week": [
+  { "id": "weekend-roundup", "day": "Tue", "time": "09:16", "reach": 205, "title": "Weekend roundup · 9 stories · every slide tagged · shared once", "img": "/insta/img/soknoear/2026-11-11_episode-drop.jpg", "group": "hot" },
+  { "id": "teaser", "day": "Tue", "time": "13:15", "reach": 45, "title": "Guess the week", "img": "/insta/img/soknoear/2026-11-11_teaser.jpg", "group": "lead" },
+  { "id": "rail-trail-murals", "day": "Tue", "time": "21:00", "reach": 36, "title": "Two more Rail Trail murals · undated", "img": "/insta/img/soknoear/2026-11-11_rail-trail-murals.jpg" },
+  { "id": "aapi-night-market", "day": "Wed", "time": "09:00", "reach": 38, "title": "The Asian Night Market at Hi-Wire · the feature", "img": "/insta/img/soknoear/2026-11-11_aapi-night-market.jpg" },
+  { "id": "reel", "day": "Wed", "time": "12:01", "reach": 22, "title": "The Reel · 25 seconds, watched half through", "img": "/insta/img/soknoear/2026-11-11_reel.jpg", "group": "lead" },
+  { "id": "alchemy-uptop-kerns", "day": "Wed", "time": "16:00", "reach": 180, "title": "Alchemy on the Kern's roof · a day early · shared", "img": "/insta/img/soknoear/2026-11-11_alchemy-uptop-kerns.jpg", "group": "hot" },
+  { "id": "ahee-808", "day": "Wed", "time": "18:00", "reach": 21, "title": "Ahee at The 808 · a day early", "img": "/insta/img/soknoear/2026-11-11_ahee-808.jpg" },
+  { "id": "alt-mart-pink-cactus", "day": "Thu", "time": "12:00", "reach": 26, "title": "Alt Mart at The Pink Cactus · a day early", "img": "/insta/img/soknoear/2026-11-11_alt-mart-pink-cactus.jpg" },
+  { "id": "nature-journaling-ijams", "day": "Thu", "time": "14:00", "reach": 10, "title": "Nature journaling at Ijams · a day early", "img": "/insta/img/soknoear/2026-11-11_nature-journaling-ijams.jpg" },
+  { "id": "feyleux-belltower-fbn", "day": "Thu", "time": "18:00", "reach": 29, "title": "Feyleux at Fly by Night · day-of", "img": "/insta/img/soknoear/2026-11-11_feyleux-belltower-fbn.jpg" },
+  { "id": "after-brunch-special", "day": "Fri", "time": "11:00", "reach": 101, "title": "The After Brunch Special at The Pink Cactus · a day early · shared twice", "img": "/insta/img/soknoear/2026-11-11_after-brunch-special.jpg", "group": "hot" },
+  { "id": "shogun-808", "day": "Fri", "time": "13:00", "reach": 273, "title": "SHOGUN at The 808 · a day early · shared twice", "img": "/insta/img/soknoear/2026-11-11_shogun-808.jpg", "group": "hot" },
+  { "id": "big-something-808", "day": "Fri", "time": "15:00", "reach": 275, "title": "Big Something at The 808 · day-of · shared", "img": "/insta/img/soknoear/2026-11-11_big-something-808.jpg", "group": "hot" },
+  { "id": "aero-dream-pink-cactus", "day": "Fri", "time": "17:00", "reach": 129, "title": "Aero Dream at The Pink Cactus · day-of · shared twice", "img": "/insta/img/soknoear/2026-11-11_aero-dream-pink-cactus.jpg", "group": "hot" },
+  { "id": "fall-fungi-ijams", "day": "Fri", "time": "19:00", "reach": 314, "title": "Fall Fungi ID at Ijams · a day early · shared", "img": "/insta/img/soknoear/2026-11-11_fall-fungi-ijams.jpg", "group": "hot" },
+  { "id": "block-printing-ijams", "day": "Sat", "time": "11:00", "reach": 22, "title": "Carve and Create at Ijams · day-of", "img": "/insta/img/soknoear/2026-11-11_block-printing-ijams.jpg" },
+  { "id": "cars-coffee-kerns", "day": "Sat", "time": "19:00", "reach": 25, "title": "Cars & Coffee at Kern's · day-of", "img": "/insta/img/soknoear/2026-11-11_cars-coffee-kerns.jpg" },
+  { "id": "bluegrass-jam-ijams", "day": "Sun", "time": "11:00", "reach": 12, "title": "Bluegrass jam at Ijams · day-of", "img": "/insta/img/soknoear/2026-11-11_bluegrass-jam-ijams.jpg" }
+ ],
+ "weekLegend": [
+  { "group": "hot", "label": "Over a hundred people" },
+  { "group": "lead", "label": "The teaser and the Reel" },
+  { "group": "plain", "label": "Single posts, the venue tagged in the image" }
+ ],
+ "worked": [
+  { "title": "Fall Fungi ID at Ijams", "reach": 314, "img": "/insta/img/soknoear/2026-11-11_fall-fungi-ijams.jpg", "why": "Ijams shared it: the second-best post ever. Friday evening for a Sunday walk, a day early." },
+  { "title": "Big Something at The 808", "reach": 275, "img": "/insta/img/soknoear/2026-11-11_big-something-808.jpg", "why": "The 808's first shares ever: two posts the same Friday, 275 and 273. Band untagged." },
+  { "title": "Alchemy on the Kern's roof", "reach": 180, "img": "/insta/img/soknoear/2026-11-11_alchemy-uptop-kerns.jpg", "why": "Wednesday afternoon, a day early, the act tagged beside the venue. Shared once." }
+ ],
+ "didnt": [
+  { "title": "Nature journaling at Ijams", "reach": 10, "img": "/insta/img/soknoear/2026-11-11_nature-journaling-ijams.jpg", "why": "The lowest post since October. Thursday at two, a day early, nobody shared it." },
+  { "title": "Bluegrass jam at Ijams", "reach": 12, "img": "/insta/img/soknoear/2026-11-11_bluegrass-jam-ijams.jpg", "why": "Sunday at eleven for a Sunday afternoon jam, day-of. Ijams' fourth post of the week." },
+  { "title": "Ahee at The 808", "reach": 21, "img": "/insta/img/soknoear/2026-11-11_ahee-808.jpg", "why": "A touring DJ, no act tagged. The 808 shared its other two posts, not this." }
+ ],
+ "learned": {
+  "title": "Week three of the timing test: a day early is ahead, not two-to-one",
+  "note": "Thirty-eight dated posts in three weeks, nineteen a side. A day early has been shared 8 times, day-of 6; this week it was 4 of 7 against 2 of 6, with a median of 101 against 27. The rule was two-to-one with twenty a side or the review of Nov 23. Next Monday decides it.",
+  "rows": [
+   { "label": "A day early", "value": 42, "note": "8 of 19 shared · median 38 · 314, 273, 203, 180", "tone": "ink" },
+   { "label": "Day-of, the old slot", "value": 32, "note": "6 of 19 shared · median 34 · 290, 275, 211, 184", "tone": "ink" }
+  ]
+ },
+ "dials": [
+  { "label": "Posts delivered", "value": 18, "max": 18, "display": "18/18", "note": "0 failed, 1 retry; every one on the hour", "tone": "ok" },
+  { "label": "Followers who saw a post", "value": 21, "max": 100, "display": "21%", "note": "89 of 423, this week; was 19%", "tone": "warn" },
+  { "label": "Reach that was new people", "value": 95, "max": 100, "display": "95%", "note": "2,328 of 2,450, in 28 days", "tone": "ok" },
+  { "label": "Of the Reel that got watched", "value": 49, "max": 100, "display": "49%", "note": "12.3 of 25 seconds; was 34%", "tone": "ok" }
+ ],
+ "bestEver": [
+  { "title": "The Enchanted Forest at Ijams", "reach": 354, "img": "/insta/img/soknoear/2026-10-21_enchanted-forest.jpg", "why": "Puppets and animal ambassadors at the quarry. Oct 24." },
+  { "title": "Fall Fungi ID at Ijams", "reach": 314, "img": "/insta/img/soknoear/2026-11-11_fall-fungi-ijams.jpg", "why": "A mushroom and lichen walk for beginners. Nov 13, a day early." },
+  { "title": "Feral Kitty at Fly by Night", "reach": 295, "img": "/insta/img/soknoear/2026-10-07_feral-kitty-release.jpg", "why": "A release show at a cocktail lounge. Oct 9." },
+  { "title": "Kern's Fall Festival", "reach": 290, "img": "/insta/img/soknoear/2026-10-14_kerns-fall-fest.jpg", "why": "A free fair on the bakery lawn. Oct 14." },
+  { "title": "Boos & Brews at Puckers", "reach": 290, "img": "/insta/img/soknoear/2026-10-28_puckers-boos-and-brews.jpg", "why": "A costume contest, beer pong and shot roulette. Oct 29." },
+  { "title": "Big Something at The 808", "reach": 275, "img": "/insta/img/soknoear/2026-11-11_big-something-808.jpg", "why": "A jam band's Friday show. The 808's first share. Nov 13." }
+ ],
+ "moves": [
+  {
+   "key": "early-posts", "owner": "claude",
+   "title": "Half the posts go out a day early",
+   "why": "Three weeks in: a day early shared 8 of 19, day-of 6 of 19. Ahead, not two-to-one. The call comes next Monday, Nov 23.",
+   "plan": "From Wed Oct 28 half of each week's dated posts go out 24 hours before their old slot, the other half at the old time, swapping each week, so the venue and the act have a day to reshare. The review reads the two sides every Monday and picks the winner by Nov 23. Say don't and every post stays day-of.",
+   "due": "2026-11-23"
+  },
+  {
+   "key": "act-lookup", "owner": "claude",
+   "title": "Touring acts get looked up by name",
+   "why": "Big Something is @bigsomething, 27,600 followers, and Friday's post reached 275 without tagging them. The research wrote 'no handle' because the venue's post had none.",
+   "plan": "From the Tuesday Nov 17 research pass, when a venue's post names no handle for an act, the research opens the act's own Instagram profile by name and tags it. Big Something is @bigsomething, 27,600 followers, followed by The 808, and Friday's post reached 275 without them. Say don't and the gate stays as it is.",
+   "due": "2026-11-17"
+  },
+  {
+   "key": "roundup-slide-tags", "owner": "claude",
+   "title": "The roundup's slides carry the venue tag",
+   "why": "You said go. The first tagged roundup read 205 with one share, against 264 and two. One refused handle was dropped and it posted first time.",
+   "plan": "From Wed Nov 11 every slide of the weekend roundup is tagged in the picture with its own venue and act, the way the single posts already are. The roundup read 260 this week, the account's fifth-best post ever, with nothing tagged in any slide. Say don't and the slides stay untagged.",
+   "due": "2026-11-11"
+  }
+ ],
+ "done": [
+  { "title": "Eighteen of eighteen posted, on the hour.", "text": "The clock fix held: every post went out at its slot. One retry, when Meta refused a handle on a roundup slide." },
+  { "title": "The best week on record.", "text": "1,763 reach on 18 posts, 98 a post, median 37. Seven posts past a hundred; ten shares, the most yet." },
+  { "title": "The 808 and Ijams started sharing.", "text": "The 808 shared two Friday posts, 275 and 273, its first ever. Ijams shared Fall Fungi: 314, the second-best post ever." },
+  { "title": "SoKno Sourdough got its hello.", "text": "You sent the DM on Nov 10. They're marked introduced; the weekly note goes out when they're next in an episode." },
+  { "title": "The Reel was watched half through.", "text": "25 seconds, 22 people, 12.3 seconds watched each: 49%. Reach where every Reel has been." }
+ ]
+}
