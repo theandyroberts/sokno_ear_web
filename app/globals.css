@@ -205,9 +205,12 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
     grid-template-columns: minmax(0, 1.9fr) minmax(260px, 1fr) !important;
     gap: 24px !important;
   }
-  .ear-story-view .ds-card-mobile { display: none; }
-  .ear-story-view .ds-card-desktop { display: block; }
 }
+/* A shared story opens on the story at every width: the Dirty South card never rides
+   under the header here. On a phone it comes after the story, the signup and the audio
+   briefing, where the stacked sidebar ends (Andy, 2026-11-16). */
+.ear-story-view .ds-card-mobile { display: none; }
+.ear-story-view .ds-card-desktop { display: block; }
 
 /* Navigation remains easy to find without competing with the article. */
 .ear-masthead-link { display: block; max-width: 1180px; margin: 0 auto; }

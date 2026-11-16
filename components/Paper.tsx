@@ -188,7 +188,9 @@ export function Paper({ episode, permalinks = true, storyView = false, venues }:
       <JsonLd episode={episode} storyUrl={storyView ? `https://soknoear.com/${episode.slug}/${feature.id}` : undefined} />
       <Masthead volLine={volLine} dateline={dateline} shortDate={shortDate} sections={sections} days={storyView ? undefined : episodeDays} />
 
-      {/* Phones: the Dirty South doorway rides directly under the header (see globals.css) */}
+      {/* Phones: the Dirty South doorway rides directly under the header on the episode page.
+          On a story page it is hidden here and shows at the foot of the sidebar instead,
+          below the story and the audio briefing (see globals.css). */}
       <div className="ds-card-mobile">
         <Page style={{ padding: "14px 24px 2px" }}>
           <DirtySouthCard />
