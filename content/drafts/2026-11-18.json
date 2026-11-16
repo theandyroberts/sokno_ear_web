@@ -91,7 +91,7 @@
         "Friday at seven, free"
       ]
     },
-    "image": "/assets/spots/no23_pitch_clicker_only.jpg"
+    "image": "/assets/spots/no23_pitch_clicker_table.jpg"
   },
   "scanner": [
     {
@@ -101,7 +101,7 @@
         "Fri"
       ],
       "hot": true,
-      "image": "/assets/spots/no23_pitch_clicker_only.jpg",
+      "image": "/assets/spots/no23_pitch_clicker_table.jpg",
       "title": "Pitch a Friend at Hi-Wire",
       "blurb": "Free, Friday at seven; your single friend, on slides, to a room of strangers.",
       "href": "#pitch-a-friend-hiwire"
