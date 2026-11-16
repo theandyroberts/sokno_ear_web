@@ -186,7 +186,7 @@
       ],
       "hot": false,
       "image": "/assets/spots/no23_orange_bliss_pour.jpg",
-      "title": "Earl's game-day board for LSU",
+      "title": "Earl's game-day specials for LSU",
       "blurb": "Kickoff at 3:30; drafts, buckets and pizza marked down all day.",
       "href": "#specials-board"
     }
@@ -1259,7 +1259,7 @@
         "image": "/assets/spots/ijams-nature-center-tickets.svg",
         "alt": "Get tickets at Ijams Nature Center"
       },
-      "image": "/assets/spots/no23_fern_on_blue_paper.jpg"
+      "image": "/assets/spots/no23_cyanotype_two_hands.jpg"
     },
     {
       "id": "renew-in-nature-ijams",
@@ -1419,7 +1419,7 @@
         "Sun"
       ],
       "layout": "imageLeft",
-      "title": "Earl's game-day board comes out for LSU at Neyland Saturday at 3:30, with a rita a day around it and Printshop's pints a dollar off at kickoff",
+      "title": "Earl's rolls out its game-day specials for LSU at Neyland Saturday at 3:30, with a rita a day around it and Printshop's pints a dollar off at kickoff",
       "deck": "A home game, so plan the bridges.",
       "facts": [
         {
@@ -1432,7 +1432,7 @@
         },
         {
           "label": "Saturday",
-          "value": "$8 house margaritas · the game-day board: $2 off drafts, $6 Orange Bliss, 6-for-5 beer buckets, $2 off pizza, $4 and $5 shots · LSU at Tennessee, 3:30 PM"
+          "value": "$8 house margaritas · game-day specials: $2 off drafts, $6 Orange Bliss, 6-for-5 beer buckets, $2 off pizza, $4 and $5 shots · LSU at Tennessee, 3:30 PM"
         },
         {
           "label": "Sunday",
@@ -1450,7 +1450,7 @@
       "body": [
         {
           "type": "paragraph",
-          "text": "Earl's, the bar and kitchen on Waterfront Drive at Suttree Landing, runs one special a day from eleven to ten, and Saturday the game-day board comes out on top of it. The Vols host LSU at Neyland at 3:30, which puts the stadium crowd on the bridges all afternoon and the game on every screen on this side of the river. Earl's board is the same for every Saturday: two dollars off drafts, six-dollar Orange Bliss cocktails, six beer buckets for the price of five, two dollars off pizza and four- and five-dollar shots all day, with eight-dollar house margaritas as the standing Saturday deal. Thursday is ten-dollar Patrón mango ritas, Friday nine-dollar spicy pineapple ritas, and Sunday seven-dollar mimosas and Bloody Marys, all four afternoons sunny and in the upper sixties."
+          "text": "Earl's, the bar and kitchen on Waterfront Drive at Suttree Landing, runs one special a day from eleven to ten, and Saturday the game-day specials go on top of it. The Vols host LSU at Neyland at 3:30, which puts the stadium crowd on the bridges all afternoon and the game on every screen on this side of the river. Earl's game-day list is the same every Saturday: two dollars off drafts, six-dollar Orange Bliss cocktails, six beer buckets for the price of five, two dollars off pizza and four- and five-dollar shots all day, with eight-dollar house margaritas as the standing Saturday deal. Thursday is ten-dollar Patrón mango ritas, Friday nine-dollar spicy pineapple ritas, and Sunday seven-dollar mimosas and Bloody Marys, all four afternoons sunny and in the upper sixties."
         },
         {
           "type": "paragraph",
@@ -1459,7 +1459,7 @@
       ],
       "sources": [
         {
-          "label": "Earl's — specials and the game-day board",
+          "label": "Earl's — daily and game-day specials",
           "url": "https://earlsknox.com/specials/"
         },
         {
@@ -1492,10 +1492,10 @@
           "earls"
         ],
         "igAct": {
-          "none": "a specials board; no act"
+          "none": "a drink-specials roundup; no act"
         },
         "igBanner": [
-          "Earl's game-day board for LSU, and a rita a day",
+          "Earl's game-day specials for LSU, and a rita a day",
           "Saturday, kickoff at three thirty"
         ],
         "standing": true,
@@ -1510,7 +1510,7 @@
       "title": "Weekend Audio Briefing",
       "intro": "Andy reads the weekend.",
       "description": "Vol. 1 No. 23 · Nov 19–22",
-      "duration": "5:46",
+      "duration": "5:49",
       "src": "/audio/2026-11-18.mp3"
     },
     "calendar": [
@@ -1597,8 +1597,8 @@
       {
         "month": "NOV",
         "day": "21",
-        "title": "LSU at Tennessee — game-day board at Earl's",
-        "meta": "3:30 PM kickoff · board all day",
+        "title": "LSU at Tennessee — game-day specials at Earl's",
+        "meta": "3:30 PM kickoff · specials all day",
         "starred": false,
         "href": "#specials-board"
       },
