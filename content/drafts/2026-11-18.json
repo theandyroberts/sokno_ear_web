@@ -368,13 +368,13 @@
         },
         {
           "label": "Parking",
-          "value": "If the lot is full, the Riverwalk Garage at 2011 Kay St is a three-minute walk and free after 6 PM"
+          "value": "If the lot is full, the Riverwalk Garage at the corner of Blount Ave and Kay St is a three-minute walk and free after 6 PM"
         }
       ],
       "body": [
         {
           "type": "paragraph",
-          "text": "Kern's movie nights are a Wednesday thing on the food hall's November slide, at 6:30, but this week runs two. The Chronicles of Narnia plays Wednesday the 18th, and Twilight, rescheduled from earlier in the month, plays Thursday the 19th, which Kern's bills as Team Edward and Team Jacob, assemble. It is free; the idea is a plate from the hall and a drink from the bar on the way in. Kern's posted a parking tip this week too: when the main lot fills, the Riverwalk Garage on Kay Street is a three-minute walk and free after six on weekdays."
+          "text": "Kern's movie nights are a Wednesday thing on the food hall's November slide, at 6:30, but this week runs two. The Chronicles of Narnia plays Wednesday the 18th, and Twilight, rescheduled from earlier in the month, plays Thursday the 19th, which Kern's bills as Team Edward and Team Jacob, assemble. It is free; the idea is a plate from the hall and a drink from the bar on the way in. Kern's posted a parking tip this week too: when the main lot fills, the Riverwalk Garage at the corner of Blount Avenue and Kay Street is a three-minute walk and free after six on weekdays."
         }
       ],
       "sources": [
@@ -1510,7 +1510,7 @@
       "title": "Weekend Audio Briefing",
       "intro": "Andy reads the weekend.",
       "description": "Vol. 1 No. 23 · Nov 19–22",
-      "duration": "5:46",
+      "duration": "5:48",
       "src": "/audio/2026-11-18.mp3"
     },
     "calendar": [

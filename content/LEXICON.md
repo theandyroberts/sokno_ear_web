@@ -16,6 +16,7 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
 | **Krutch Park** | **"crutch"** | The downtown park on Clinch Ave (KAT's football shuttle stop). Confirmed by Andy 2026-09-01. Reads correctly as spelled — no TTS respelling needed. |
 | **Neyland** | **"NEE-land"** — rhymes with *knee* | Neyland Stadium / Neyland Drive. Not "NAY-land." For TTS spell it **`Nee-land`**. Added 2026-09-01 for the No. 12 briefing (first home game of the season). |
 | **Patrón** | **"puh-TRONE"** — rhymes with *drone* | Andy's own pronunciation, 2026-08-25: *"I always say Patrón to rhyme with drone… it's what I'd say and I get my order."* Not "pa-TRON," not "PAT-ron," not three beats. For TTS spell it **`puh-trone`** — the earlier `Pa-trone` spelling read a little off in the No. 11 take. |
+| **Blount** (Avenue, County) | **"BLUNT"** | Local pronunciation; the spelling invites "blownt". For TTS spell it **`Blunt`**. Added 2026-11-16 for the Riverwalk Garage line (corner of Blount Ave and Kay St; say the corner, Kay St is tiny and not well known — Andy). |
 *(Add venue names, street names, and people as we confirm them.)*
 
 ---
