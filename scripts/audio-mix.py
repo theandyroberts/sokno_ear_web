@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Lay the Ear's music under the weekend briefing (Andy, 2026-11-02).
 
-A barely-there bed under the open. At each change of place the music rises under the
+The music opens alone at normal volume for about 1.2 seconds, so the listener knows the
+tune when it comes back between stories (Andy, 2026-11-16); the voice comes in and the music
+recedes over the next couple of seconds, still audible, down to a barely-there bed under the open. At each change of place the music rises under the
 last sentence, peaks in a tiny pause, and fades out under the next story. It swells over
 the sign-off and plays to the track's natural ending. Words are never touched.
 
@@ -21,6 +23,11 @@ import numpy as np
 SR = 44100
 MUSIC = "assets/soknoear-music-28s.mp3"
 
+INTRO = 1.2        # seconds of music alone before the first word
+INTRO_DB = 4        # "normal volume": the track opens soft (about -22 dB mean), so +4 dB puts it level with the voice
+RECEDE = (0.5, 2.6, 5.5)   # after the first word: seconds to INTRO_UNDER_DB, to RECEDE_DB, to BED_DB
+INTRO_UNDER_DB = -8        # just after the voice starts, clearly still there
+RECEDE_DB = -17     # a couple of seconds in: under the voice but audible
 BED_DB = -30        # under the open: "hmm, I think I hear banjo"
 UNDER_DB = -24      # under the last sentence and the next place's name
 PEAK_DB = -13       # in the pause, with the voice silent
@@ -50,7 +57,8 @@ def main():
     ap.add_argument("--music", default=MUSIC)
     args = ap.parse_args()
 
-    parts, cuts, last_start, at = [], [], 0.0, 0
+    lead = np.zeros(int(INTRO * SR), np.float32)
+    parts, cuts, last_start, at = [lead], [], 0.0, len(lead)
     for i, path in enumerate(args.sections):
         section = load(path)
         if i:
@@ -76,8 +84,11 @@ def main():
         env = np.interp(np.arange(count) / SR + start, times, gains)
         music[first:first + count] += clip[:count] * env
 
-    end = args.open_end
-    place(0, 0, end + 4, [0, 1.5, end, end + 3.5], [0, db(BED_DB), db(BED_DB), 0])
+    end = INTRO + args.open_end
+    a, b, c = RECEDE
+    place(0, 0, end + 4,
+          [0, 0.04, INTRO, INTRO + a, INTRO + b, INTRO + c, end, end + 3.5],
+          [0, db(INTRO_DB), db(INTRO_DB), db(INTRO_UNDER_DB), db(RECEDE_DB), db(BED_DB), db(BED_DB), 0])
 
     for b in cuts:
         place(b - RISE, HIT - RISE, RISE + FADE + 0.5,
