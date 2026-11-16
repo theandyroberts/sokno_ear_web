@@ -137,7 +137,7 @@
         "Fri"
       ],
       "hot": false,
-      "image": "/assets/spots/no23_pizza_peel_flame.jpg",
+      "image": "/assets/spots/no23_pizza_peel_square.jpg",
       "title": "Pizza buffet for Ujima Soccer at Printshop",
       "blurb": "All you can eat, five to eight, twenty-three dollars to a good cause.",
       "href": "#ujima-pizza-printshop"
@@ -185,7 +185,7 @@
         "Sat"
       ],
       "hot": false,
-      "image": "/assets/spots/no23_orange_bliss_pour.jpg",
+      "image": "/assets/spots/no23_orange_bliss_square.jpg",
       "title": "Earl's game-day specials for LSU",
       "blurb": "Kickoff at 3:30; drafts, buckets and pizza marked down all day.",
       "href": "#specials-board"
@@ -575,7 +575,7 @@
         "image": "/assets/spots/printshop-tickets.svg",
         "alt": "Get tickets at Printshop Beer Co."
       },
-      "image": "/assets/spots/no23_pizza_peel_flame.jpg"
+      "image": "/assets/spots/no23_pizza_peel_square.jpg"
     },
     {
       "id": "yeedm-pink-cactus",
@@ -903,7 +903,7 @@
           "Saturday at nine"
         ]
       },
-      "image": "/assets/spots/no23_synth_two_hands.jpg"
+      "image": "/assets/spots/no23_synth_two_hands_square.jpg"
     },
     {
       "id": "sourdough-saturdays",
@@ -1502,7 +1502,7 @@
         "standingKey": "specials-board"
       },
       "venueKey": "earls",
-      "image": "/assets/spots/no23_orange_bliss_pour.jpg"
+      "image": "/assets/spots/no23_orange_bliss_square.jpg"
     }
   ],
   "sidebar": {
