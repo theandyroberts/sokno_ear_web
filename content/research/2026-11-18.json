@@ -1,0 +1,328 @@
+{
+  "_comment": "Research log for No. 23 (Thu Nov 19 - Sun Nov 22, 2026; Vols host LSU at Neyland Saturday at 3:30 PM EST per ESPN). One entry per source in content/sources.json; every dated thing found for this Thu-Sun is a lead with a story id or a reason. Read Monday Nov 16 in the built-in browser (Instagram, Andy's session; the hub's November table read slide by slide, Kern's November slide at full size) and with scripts/research-sweep.mjs (websites). Forecast (NWS point 35.95,-83.90): Thu mostly sunny and 67 (37 overnight), Fri mostly sunny and 68 (38), Sat mostly sunny and 68 (42), Sun mostly sunny and 67 (41).",
+  "slug": "2026-11-18",
+  "checked": {
+    "old-sevier-district": {
+      "how": "both",
+      "found": 12,
+      "note": "Nothing new since the Nov 6 'November in Old Sevier' carousel (DfYVDCYDQUo); its slides 4 and 5 list Nov 19-22: KAANP and the Super Birthday Thu, Pitch a Friend 7, bud vases at Mighty Mud 6-8, the Ujima pizza party 5-8 and Planet Doom YeEDM Fri, Tennessee vs LSU (home), First Bass x Planet Doom and Marcel Sletten 9 Sat, Stained Glass Class at Hi-Wire 3, Goos:3 and the focaccia workshop Sun. A game-day post names every bar with screens. Site unchanged; ics stale (five events, last from June)."
+    },
+    "the-808": {
+      "how": "both",
+      "found": 3,
+      "note": "Site schedule: Thu 11/19 lespecial with Natalie Brooke (doors 7, show 8, 18+), Fri 11/20 Deadtronica feat. Aron Magner of The Disco Biscuits (doors 7, show 8, 18+), Sat 11/21 Summoner's Circle (doors 7, show 8, all ages). The venue's own grid has no post for the first two; NinjaWitch's reel and Truckstop Dickpill's reel on the grid name the Nov 21 bill (Summoner's Circle, War Clown, NinjaWitch, Truckstop Dickpill). TicketWeb refuses curl, so no prices run. Later: Echo album release Nov 27, I'm Not Okay emo night Nov 28 (9 PM, 18+, the venue's first emo show), The Resistance Dec 5, Crimson Armada Dec 9, TVBOO Dec 10, 2000's Rave Dec 11, Infekt Dec 19."
+    },
+    "alliance": {
+      "how": "both",
+      "found": 0,
+      "note": "Wed songwriter night, Mon yoga, happy hour 3-6; reels about beer. Nothing dated Thu-Sun. The Breadlosers' fourth-Sunday slot is not posted for Nov 22 by the brewery, and @thebreadlosers is a podcast, not the band; it does not run."
+    },
+    "hi-wire": {
+      "how": "both",
+      "found": 2,
+      "note": "Profile rendered (seen 12). Fri 11/20 Pitch a Friend, 7 PM, free, sign up to pitch at the link in bio, presenters get a drink, Single Mingle Mixer after (the venue's own Nov 10 post). Sun 11/22 Stained Glass Mobile Workshop: the hub lists 3 PM; Visualize Art Studio's own Nov 15 post names Sunday at Hi-Wire and its site books it at $80 for Nov 22; Hi-Wire itself has not posted it. Later: Black Friday half-price Mug Club from noon Nov 27; Santa Paws Dec 6, 2-5, with Humane Society adoptables and pet photos; closed Thanksgiving."
+    },
+    "fly-by-night": {
+      "how": "both",
+      "found": 2,
+      "note": "Thu 11/19 Super Birthday gran prix for owner Jocelyn and DJs Benicio, Minitiger and Tiny, 9 PM, $5 (Benicio's collab post on the venue's grid, Nov 12; the November lineup post). Sat 11/21 Marcel Sletten and Organically Programmed (Athens, GA) live, 9 PM, the Hardware vs. Software tour (the venue's lineup post; OP's bio lists 11/21 Knoxville at Fly by Night); no price posted. New menu live Nov 12. Later: Knoxtronica Deep Dished Chicago House Dec 3, 9-12, $5; Rolando Sedixon Dec 10."
+    },
+    "printshop": {
+      "how": "both",
+      "found": 3,
+      "note": "The venue's Nov 14 week-ahead post: Thu $1 wing night with Friends BBQ, Fri the Piethagorean pizza party for Ujima Soccer, next Sunday the KnoxFlows Friendsgiving, Nov 25 Good Guys cigars pop-up. The Ujima dinner: Fri 11/20 5-8, $23 all-you-can-eat pizza and Caesar buffet, all profits to Ujima (Piethagorean's ticket page; Ujima's reel on Piethagorean's grid). /specials/: Thu 10% off cases 4-9, Fri $12 flights noon-9, Sat $1 off pints from 30 minutes before kickoff to the final whistle (LSU at 3:30)."
+    },
+    "trailhead": {
+      "how": "instagram",
+      "found": 0,
+      "note": "Still no November flyer (last posts: the Halloween show, the sauna collab). Thursday trivia confirmed only by October posts; nothing dated for Nov 19-22."
+    },
+    "pink-cactus": {
+      "how": "both",
+      "found": 5,
+      "note": "The venue's Nov 3 month post and its own event posts, plus the promoter's: Thu 11/19 An Evening with KAANP (artist interviews, Polaroids by Ann Cooper; no time from the venue, the podcast or the hub, so it does not run); Fri 11/20 Planet Doom: yeEDM, a country-EDM crossover, 9 PM (Doomsayer's site; the promoter calls it Doomtown); Sat 11/21 First Bass x Planet Doom, 8 PM, two stages, Vegas guest Nofvcks Bivens and nine local DJs, vendors, harm reduction, tooth gems (Planet Doom's collab post on the venue's grid; Doomsayer's site); Sun 11/22 Eras of House with DJ Goos:3, 9 PM-midnight (the venue's own Nov 15 post); every Thursday the first karaoke-room hour is free; every Sunday trivia 6:30 with Knox Trivia Guys. Later: Big Pink House Party Vol. 6 Nov 26; BellTower NYE."
+    },
+    "southside-garage": {
+      "how": "both",
+      "found": 0,
+      "note": "/specials/: Fri open for lunch at 11 with a Dia de torta, Sat open noon to midnight, Sun Dia de brunch 11-3 with mimosa and Bloody Mary specials. /events/: Tuesday trivia only. Feed: game-day posts ($5 Vol Bombs, Dia de Foods), Dog of the Month. Nothing dated beyond the standing specials."
+    },
+    "sevier-ave-burger": {
+      "how": "instagram",
+      "found": 0,
+      "note": "Harvest Burger of the month; brunch Sat-Sun 11-2; Singo Wed. The Nov 9 pairing dinner is past."
+    },
+    "south-coast-pizza": {
+      "how": "both",
+      "found": 0,
+      "note": "No November pizza of the month posted; site events are the Thanksgiving closure and New Year's Eve."
+    },
+    "redbud": {
+      "how": "both",
+      "found": 0,
+      "note": "Daily lunch specials (tomato bisque and grilled cheese $11), Tuesday burgs and brews, Sunday brunch till 4, happy hour weekdays 4-6."
+    },
+    "mighty-mud": {
+      "how": "both",
+      "found": 0,
+      "note": "The hub lists Handbuild a Pair of Bud Vases Fri 11/20 6-8; the studio has not posted it and mightymud.com returns nothing for it, so it does not run. Raku Dec 11; December intensives (leads kept)."
+    },
+    "sokno-sourdough": {
+      "how": "both",
+      "found": 2,
+      "note": "The bakery's own Nov 15 post: open Saturdays 9-1 starting Nov 21, bagels and bread. Focaccia Decorating Workshop Nov 22, two sessions, via the link in bio (a Square store the sweep cannot read; no time or price reachable, so it stays out). Soup day with Mildred Baby Wed Nov 18, 3-7. Closed Nov 26-27, open Small Business Saturday."
+    },
+    "borderland": {
+      "how": "both",
+      "found": 0,
+      "note": "Shirts at the Ijams gift shop; no show on the Playhouse until the New Play Festival readings in January."
+    },
+    "knoxville-theatre-club": {
+      "how": "both",
+      "found": 0,
+      "note": "Alas, Ajax tickets 'on sale soon'; Nov 14 table read was at the library (off the beat); Ramsey House candlelight tours casting."
+    },
+    "old-sevier-market": {
+      "how": "both",
+      "found": 0,
+      "note": "Whoa Doggie hot sauce now stocked; fall items; no event."
+    },
+    "angry-dumplings": {
+      "how": "instagram",
+      "found": 0,
+      "note": "Feed is the Farragut opening; the Sevier Ave shop is the 6 PM stop in the party plan (Andy)."
+    },
+    "honeybee": {
+      "how": "both",
+      "found": 0,
+      "note": "South shop open till 5 on weekends; no event."
+    },
+    "kerns": {
+      "how": "both",
+      "found": 2,
+      "note": "Kern's November slide (read at full size) and the venue's own posts: movie nights 6:30 PM, with a double feature this week, Narnia Wed 11/18 and Twilight Thu 11/19 (rescheduled), free; every Saturday UT watch parties on the big screens (the venue's Nov 12 post for A&M names the screens); Thursday Roni's trivia 6:30. The Nov 9 week post names movie night, Cars & Coffee, trivia and the UpTop tasting. Momma's Soft Pretzels coming to the hall. Later: Stem to Stem bouquet making Nov 24 (Eventbrite), Santa and the Grinch Nov 28, Holiday Market the first three December weekends 11-6."
+    },
+    "puckers": {
+      "how": "instagram",
+      "found": 1,
+      "note": "The 404 page returned nothing again. The venue's own November lineup: Friday live music 6-9, Jimi Holscher on 11/20 (no handle given; party plan, not a story). Happy hour 5-6 weekdays; Nov 13 game-day specials post ($12 Big Orange Mule, $5 Vol Bomb, $8 pitcher) was for A&M; trivia night post undated."
+    },
+    "earls": {
+      "how": "both",
+      "found": 1,
+      "note": "/specials/ and the venue's own game-day posts (Nov 6 and 13): a rita a day (Thu $10 Patron mango, Fri $9 spicy pineapple, Sat $8 house, Sun $7 mimosas and Bloody Marys) and the game-day board ($2 off drafts, $6 Orange Bliss, 6-for-5 buckets, $2 off pizza, $4 and $5 shots). Vols host LSU Sat 3:30 (ESPN)."
+    },
+    "ijams": {
+      "how": "both",
+      "found": 8,
+      "note": "Calendar slugs and /event-details/ pages: Fri 11/20 Nature Nerd Hike 5:30-7 ($15, 14+); Sat 11/21 Visualize Art Studio hot glass 30-minute sessions 11-1 ($50) and stained glass 11-1 ($90), Storytime at the Playscape 10-12 (free), Playing 'Possum animal-ambassador meet and greet 1-2 ($10, ages 5+, the new opossum), Painting with the Sun cyanotype 2:30-4 ($18, 14+); Sun 11/22 Renew in Nature 10-12 at the Homesite ($40, yoga, sound bath, forest bathing, moved from Nov 1), Moss Meander 1-3 at Mead's Quarry ($15, 16+). Four run; the Geminid party in last week's leads is no longer on the calendar. Later: Full Moon Hike Nov 25 7 PM, Opt Outside family hike Nov 27 10-12, Fall Fungi Nov 27 1 PM, Art in Nature Nov 28, Native Landscape Nov 28, Carve and Create Nov 29 10 AM, Holiday Marketplace Dec 6 10-3."
+    },
+    "ambc": {
+      "how": "web",
+      "found": 0,
+      "note": "Monthly meeting at SouthSide Garage Nov 23 7 PM; Sharp's Ridge mega work party Dec 5 9-12; Tour de Lights Dec 12 (leads)."
+    },
+    "legacy-parks": {
+      "how": "both",
+      "found": 0,
+      "note": "Nov 11 site post and Nov 5-6 Instagram posts are the two murals and the tunnel lights, which ran last week. Nothing new."
+    },
+    "sokno-taco": {
+      "how": "web",
+      "found": 0,
+      "note": "Weekly specials unchanged: Thu Singo 7-9 and $13 pitchers, Fri frozen coronaritas, weekend brunch 10-2, Sunday all-day happy hour; happy hour Mon-Sat 4-7."
+    },
+    "blank-news": {
+      "how": "web",
+      "found": 0,
+      "note": "Nothing new on South Knoxville since The 808 feature."
+    },
+    "inside-of-knoxville": {
+      "how": "instagram",
+      "found": 0,
+      "note": "Site returned 403 to curl again. The Nov 8-17 planner's picks are downtown and campus; McClung Warehouses meeting Nov 30 is downtown."
+    }
+  },
+  "leads": [
+    {
+      "date": "2026-11-19",
+      "what": "lespecial with Natalie Brooke at The 808, doors 7, show 8, 18+",
+      "source": "the-808",
+      "story": "lespecial-808"
+    },
+    {
+      "date": "2026-11-19",
+      "what": "Super Birthday gran prix for Jocelyn, Benicio, Minitiger and Tiny at Fly by Night, 9 PM, $5",
+      "source": "fly-by-night",
+      "story": "super-birthday-fbn"
+    },
+    {
+      "date": "2026-11-19",
+      "what": "An Evening with KAANP at The Pink Cactus (artist interviews, Polaroids)",
+      "source": "pink-cactus",
+      "skipped": "no start time from the venue, the podcast or the hub"
+    },
+    {
+      "date": "2026-11-19",
+      "what": "Twilight movie night at Kern's, 6:30 PM, free (rescheduled)",
+      "source": "kerns",
+      "story": "twilight-kerns"
+    },
+    {
+      "date": "2026-11-19",
+      "what": "$1 wing night with Friends BBQ at Printshop",
+      "source": "printshop",
+      "skipped": "a standing Thursday; in the party plan"
+    },
+    {
+      "date": "2026-11-19",
+      "what": "Free first hour in the karaoke rooms at The Pink Cactus; Roni's trivia at Kern's 6:30; Trailhead trivia 7",
+      "source": "pink-cactus",
+      "skipped": "standing weeklies; in the party plan"
+    },
+    {
+      "date": "2026-11-20",
+      "what": "Pitch a Friend at Hi-Wire, 7 PM, free",
+      "source": "hi-wire",
+      "story": "pitch-a-friend-hiwire"
+    },
+    {
+      "date": "2026-11-20",
+      "what": "Deadtronica feat. Aron Magner at The 808, doors 7, show 8, 18+",
+      "source": "the-808",
+      "story": "deadtronica-808"
+    },
+    {
+      "date": "2026-11-20",
+      "what": "Piethagorean pizza and Caesar buffet for Ujima Soccer Academy at Printshop, 5-8, $23",
+      "source": "printshop",
+      "story": "ujima-pizza-printshop"
+    },
+    {
+      "date": "2026-11-20",
+      "what": "Planet Doom: yeEDM country-EDM night at The Pink Cactus, 9 PM",
+      "source": "pink-cactus",
+      "story": "yeedm-pink-cactus"
+    },
+    {
+      "date": "2026-11-20",
+      "what": "Handbuild a Pair of Bud Vases at Mighty Mud, 6-8 (the hub's table)",
+      "source": "old-sevier-district",
+      "skipped": "the studio has not posted it and its site does not list it"
+    },
+    {
+      "date": "2026-11-20",
+      "what": "Jimi Holscher live at Puckers, 6-9",
+      "source": "puckers",
+      "skipped": "the venue's Friday music series; no handle and nothing beyond the time, so it goes in the party plan"
+    },
+    {
+      "date": "2026-11-20",
+      "what": "Nature Nerd Hike at Ijams Nature Center, 5:30-7, $15",
+      "source": "ijams",
+      "skipped": "Ijams Nature Center cap; a guided walk like the moss one that runs"
+    },
+    {
+      "date": "2026-11-20",
+      "what": "SouthSide Garage opens for lunch at 11 with the Dia de torta",
+      "source": "southside-garage",
+      "skipped": "a standing Friday hour; in the party plan"
+    },
+    {
+      "date": "2026-11-21",
+      "what": "Summoner's Circle with War Clown, NinjaWitch and Truckstop Dickpill at The 808, doors 7, show 8, all ages",
+      "source": "the-808",
+      "story": "summoners-circle-808"
+    },
+    {
+      "date": "2026-11-21",
+      "what": "First Bass x Planet Doom at The Pink Cactus, 8 PM, two stages, Nofvcks Bivens from Las Vegas",
+      "source": "pink-cactus",
+      "story": "first-bass-pink-cactus"
+    },
+    {
+      "date": "2026-11-21",
+      "what": "Marcel Sletten and Organically Programmed live at Fly by Night, 9 PM",
+      "source": "fly-by-night",
+      "story": "sletten-op-fbn"
+    },
+    {
+      "date": "2026-11-21",
+      "what": "SoKno Sourdough's first Saturday, 9-1",
+      "source": "sokno-sourdough",
+      "story": "sourdough-saturdays"
+    },
+    {
+      "date": "2026-11-21",
+      "what": "Vols host LSU, 3:30: Earl's game-day board, Printshop's dollar-off pints, Kern's screens",
+      "source": "earls",
+      "story": "specials-board"
+    },
+    {
+      "date": "2026-11-21",
+      "what": "Playing 'Possum animal-ambassador meet and greet at Ijams Nature Center, 1-2, $10",
+      "source": "ijams",
+      "story": "possum-ijams"
+    },
+    {
+      "date": "2026-11-21",
+      "what": "Painting with the Sun cyanotype workshop at Ijams Nature Center, 2:30-4, $18",
+      "source": "ijams",
+      "story": "cyanotype-ijams"
+    },
+    {
+      "date": "2026-11-21",
+      "what": "Visualize Art Studio hot glass ($50) and stained glass ($90) at Ijams Nature Center, 11-1",
+      "source": "ijams",
+      "skipped": "Ijams Nature Center cap; the same studio's Hi-Wire workshop runs Sunday"
+    },
+    {
+      "date": "2026-11-21",
+      "what": "Storytime at the Ijams Nature Playscape: Winter Animals, 10-12, free",
+      "source": "ijams",
+      "skipped": "Ijams Nature Center cap; the weekly storytime"
+    },
+    {
+      "date": "2026-11-22",
+      "what": "Renew in Nature: yoga, a sound bath and forest bathing at the Ijams Homesite, 10-12, $40",
+      "source": "ijams",
+      "story": "renew-in-nature-ijams"
+    },
+    {
+      "date": "2026-11-22",
+      "what": "Moss Meander at Mead's Quarry, Ijams Nature Center, 1-3, $15",
+      "source": "ijams",
+      "story": "moss-meander-ijams"
+    },
+    {
+      "date": "2026-11-22",
+      "what": "Stained Glass Mobile Workshop at Hi-Wire, 3 PM, $80 (Visualize Art Studio)",
+      "source": "hi-wire",
+      "story": "stained-glass-hiwire"
+    },
+    {
+      "date": "2026-11-22",
+      "what": "Eras of House with DJ Goos:3 at The Pink Cactus, 9 PM-midnight",
+      "source": "pink-cactus",
+      "story": "eras-of-house-pink-cactus"
+    },
+    {
+      "date": "2026-11-22",
+      "what": "Focaccia Decorating Workshop at SoKno Sourdough, two sessions",
+      "source": "sokno-sourdough",
+      "skipped": "the booking page is a Square store the sweep cannot read; no time or price reachable"
+    },
+    {
+      "date": "2026-11-22",
+      "what": "KnoxFlows Friendsgiving potluck and clothing swap at Printshop",
+      "source": "printshop",
+      "skipped": "a members' potluck with no posted time"
+    },
+    {
+      "date": "2026-11-22",
+      "what": "Trivia Sunday with Knox Trivia Guys at The Pink Cactus, 6:30; SouthSide Dia de brunch 11-3",
+      "source": "pink-cactus",
+      "skipped": "standing weeklies; in the party plan"
+    }
+  ]
+}

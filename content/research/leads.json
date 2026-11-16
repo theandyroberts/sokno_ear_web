@@ -1,107 +1,7 @@
 {
   "_comment": "Dated things found during research that fall AFTER the episode being drafted. The next research pass starts here: confirm each against the venue, then it becomes a story or is dropped with a reason. Delete a lead once its date has passed.",
-  "updated": "2026-11-09",
+  "updated": "2026-11-16",
   "leads": [
-    {
-      "date": "2026-11-17",
-      "what": "Bingo Night for a Cause at Kern's (November lineup; Nov 4 was Knox Bingo for the Koinonia Foundation, 6:30-8)",
-      "source": "kerns"
-    },
-    {
-      "date": "2026-11-18",
-      "what": "Mildred Baby soup pop-up at SoKno Sourdough (postponed from October)",
-      "source": "sokno-sourdough"
-    },
-    {
-      "date": "2026-11-18",
-      "what": "Friendsgiving Pumpkin Bloom Party with Plant Bingo at Printshop, 6-8 PM, $35 package (Something Social)",
-      "source": "printshop"
-    },
-    {
-      "date": "2026-11-19",
-      "what": "lespecial and Natalie Brooke at The 808, 18+",
-      "source": "the-808"
-    },
-    {
-      "date": "2026-11-19",
-      "what": "An Evening with KAANP (artist podcast, interviews, Polaroids by Ann Cooper) at The Pink Cactus",
-      "source": "pink-cactus"
-    },
-    {
-      "date": "2026-11-19",
-      "what": "Super Birthday extravaganza for owner Jocelyn and DJs Benicio, Minitiger and Tiny at Fly by Night, 9 PM",
-      "source": "fly-by-night"
-    },
-    {
-      "date": "2026-11-20",
-      "what": "Deadtronica at The 808, 18+",
-      "source": "the-808"
-    },
-    {
-      "date": "2026-11-20",
-      "what": "Nature Nerd Hike at Ijams Nature Center, 5:30 PM",
-      "source": "ijams"
-    },
-    {
-      "date": "2026-11-20",
-      "what": "Pitch a Friend at Hi-Wire, 7 PM (hub table; the venue's November post names it)",
-      "source": "hi-wire"
-    },
-    {
-      "date": "2026-11-20",
-      "what": "Piethagorean pizza and Caesar buffet at Printshop benefiting Ujima Soccer Academy, 5-8 PM, ticketed",
-      "source": "printshop"
-    },
-    {
-      "date": "2026-11-20",
-      "what": "Planet Doom: YeEDM country-EDM night at The Pink Cactus",
-      "source": "pink-cactus"
-    },
-    {
-      "date": "2026-11-20",
-      "what": "Geminid Meteor Shower Viewing Party at Ijams Nature Center, 10:30 PM-midnight",
-      "source": "ijams"
-    },
-    {
-      "date": "2026-11-21",
-      "what": "Summoners Circle homecoming at The 808 with War Clown, Ninja Witch and Truckstop Dickpill, all ages",
-      "source": "the-808"
-    },
-    {
-      "date": "2026-11-21",
-      "what": "Playing 'Possum 1 PM and Painting with the Sun cyanotype 2:30 at Ijams Nature Center",
-      "source": "ijams"
-    },
-    {
-      "date": "2026-11-21",
-      "what": "First Bass x Planet Doom at The Pink Cactus with Nofvcks Bivens (Las Vegas), two stages",
-      "source": "pink-cactus"
-    },
-    {
-      "date": "2026-11-21",
-      "what": "Marcel Sletten and Organically Programmed (Athens, GA electronic) live at Fly by Night, 9 PM",
-      "source": "fly-by-night"
-    },
-    {
-      "date": "2026-11-21",
-      "what": "Hot glass and stained glass workshops 11-1 at Ijams Nature Center",
-      "source": "ijams"
-    },
-    {
-      "date": "2026-11-22",
-      "what": "Moss Meander 1 PM and Renew in Nature at Ijams Nature Center",
-      "source": "ijams"
-    },
-    {
-      "date": "2026-11-22",
-      "what": "Goos:3 multi-genre DJ debut at The Pink Cactus; Stained Glass Class at Hi-Wire 3 PM (hub table)",
-      "source": "pink-cactus"
-    },
-    {
-      "date": "2026-11-22",
-      "what": "Focaccia Decorating Workshop at SoKno Sourdough, two sessions; open Saturdays 9-1 from Nov 21",
-      "source": "sokno-sourdough"
-    },
     {
       "date": "2026-11-23",
       "what": "AMBC monthly meeting at SouthSide Garage, 7 PM",
@@ -123,6 +23,11 @@
       "source": "ijams"
     },
     {
+      "date": "2026-11-25",
+      "what": "Good Guys Cigars pop-up at Printshop (the venue's Nov 14 post); Riverfront Cigar Lounge pop-up (hub table)",
+      "source": "printshop"
+    },
+    {
       "date": "2026-11-26",
       "what": "The Big Pink House Party Vol. 6 with TJO and Colin O'Neal at The Pink Cactus (Thanksgiving night)",
       "source": "pink-cactus"
@@ -134,8 +39,13 @@
     },
     {
       "date": "2026-11-27",
-      "what": "Half-price Mug Club memberships at Hi-Wire from noon (Black Friday); Wine & Wheel at Mighty Mud 6-8",
+      "what": "Half-price Mug Club memberships at Hi-Wire from noon (Black Friday, $32.50); Echo album release at The 808 6 PM doors, all ages; Wine & Wheel at Mighty Mud 6-8",
       "source": "hi-wire"
+    },
+    {
+      "date": "2026-11-27",
+      "what": "Opt Outside guided family hike at Ijams Nature Center, 10-12; Fall Fungi ID 1 PM",
+      "source": "ijams"
     },
     {
       "date": "2026-11-28",
@@ -146,6 +56,26 @@
       "date": "2026-11-28",
       "what": "Small Business Saturday across Old Sevier; SoKno Sourdough open",
       "source": "old-sevier-district"
+    },
+    {
+      "date": "2026-11-28",
+      "what": "I'm Not Okay: Knoxville's Premier Emo Night at The 808, 9 PM, 18+, the venue's first emo show (its own Nov 11 post, TicketWeb)",
+      "source": "the-808"
+    },
+    {
+      "date": "2026-11-28",
+      "what": "Art in Nature: Ecosystem Explorers (ages 9-14) 10-12 at Ijams Nature Center",
+      "source": "ijams"
+    },
+    {
+      "date": "2026-11-29",
+      "what": "Carve and Create block printing 10 AM, Nature Nerd Hike 1 PM, Moss Meander 7 PM, Circles with Dizzy hooping at Ijams Nature Center",
+      "source": "ijams"
+    },
+    {
+      "date": "2026-12-03",
+      "what": "Knoxtronica presents Deep Dished Chicago House at Fly by Night, 9-12, $5 (Johnathan Thomas, Rick Styles, Break Bandits)",
+      "source": "fly-by-night"
     },
     {
       "date": "2026-12-05",
@@ -168,6 +98,11 @@
       "source": "ijams"
     },
     {
+      "date": "2026-12-06",
+      "what": "Santa Paws at Hi-Wire, 2-5: pet photos with Santa by Knoxville Pet Photographer, Humane Society adoptables, vendors (the venue's Nov 15 post)",
+      "source": "hi-wire"
+    },
+    {
       "date": "2026-12-09",
       "what": "The Crimson Armada at The 808, 5:30, all ages",
       "source": "the-808"
@@ -178,14 +113,29 @@
       "source": "fly-by-night"
     },
     {
+      "date": "2026-12-11",
+      "what": "2000's Rave at The 808, 9 PM, 18+; Raku class at Mighty Mud 6:30-8:45",
+      "source": "the-808"
+    },
+    {
       "date": "2026-12-12",
       "what": "Tour de Lights bike ride and holiday market, 3:30-7:30 PM (AMBC calendar; check the route touches SoKno)",
       "source": "ambc"
     },
     {
+      "date": "2026-12-19",
+      "what": "Infekt at The 808, doors 7, 18+; Visualize stained glass at Printshop Dec 19 and Hi-Wire Dec 20",
+      "source": "the-808"
+    },
+    {
       "date": "2026-12-21",
       "what": "Ijams Winter Break Camp Dec 21-22, ages 6-12",
       "source": "ijams"
+    },
+    {
+      "date": "2026-12-31",
+      "what": "BellTower New Year's Eve party at The Pink Cactus (details to come)",
+      "source": "pink-cactus"
     },
     {
       "date": "2027-01-19",
@@ -247,14 +197,15 @@
       "day": "4th Sun",
       "what": "The Breadlosers (bluegrass) at Alliance Brewing",
       "source": "alliance",
-      "seen": "2026-09-29"
+      "seen": "2026-09-29",
+      "note": "Not posted for Nov 22 by the brewery as of Nov 16; @thebreadlosers on Instagram is a podcast, not the band. Not in the plan until the brewery posts it."
     },
     {
       "day": "daily",
       "what": "Hi-Wire weekly lineup (Mug Mondays, Flagship Tuesday, Wed trivia at 7, half-off drafts Thu, Sat yoga at 11, Sunday Funday)",
       "source": "hi-wire",
-      "seen": "2026-11-07",
-      "note": "Wednesday trivia confirmed by the venue's Nov 7 bartender post (a \"Wednesday night trivia regular\"); the rest unverified since April. The profile rendered in the signed-in pane on Nov 9 (seen 12)."
+      "seen": "2026-11-15",
+      "note": "Wednesday trivia confirmed by the venue's Nov 7 bartender post; the rest unverified since April. The profile rendered in the signed-in pane on Nov 16 (seen 12)."
     },
     {
       "day": "Thu",
@@ -267,8 +218,8 @@
       "day": "Thu",
       "what": "$1 wing night with Friends BBQ at Printshop, 5-9 (Fri $12 flights all day, Sat yoga 10:30)",
       "source": "printshop",
-      "seen": "2026-10-30",
-      "note": "The venue's Oct 30 week-ahead post names Thursday wings with Friends BBQ, a Knox Trails social run and comedy, no times. /specials/ for Nov 3-7: Thu 10% off cases, Fri $12 flights, Sat $1 off pints around the Vols kickoff. Saturday yoga not posted for Nov 7."
+      "seen": "2026-11-14",
+      "note": "The venue's Nov 14 week-ahead post names Thursday $1 wing night with Friends BBQ again (no time). /specials/ for Nov 17-21: Tue $16 pitchers, Thu 10% off cases, Fri $12 flights, Sat $1 off pints around the Vols kickoff."
     },
     {
       "day": "Thu",
@@ -280,8 +231,8 @@
       "day": "Sun",
       "what": "Trivia Sunday with Knox Trivia Guys at The Pink Cactus, 6:30 PM, gift-card prizes",
       "source": "pink-cactus",
-      "seen": "2026-11-06",
-      "note": "New in November; the venue's own reel (DfYHo_kpuRY) says every Sunday."
+      "seen": "2026-11-14",
+      "note": "The venue's Nov 14 winners post says every Sunday, 6:30."
     },
     {
       "day": "3rd Sun",

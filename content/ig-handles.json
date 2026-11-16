@@ -469,6 +469,141 @@
    "kind": "act",
    "verified": "the band's own profile, instagram.com/bigsomething/, read 2026-11-16: 'Big Something · Musician/band', 27.6K followers, followed by @808knox. Played The 808 on Nov 13 (No. 22) and the post tagged only the venue",
    "confidence": "high"
+  },
+  "lespecial": {
+   "handle": "@lespecialmusic",
+   "name": "lespecial (progtronic power trio; The 808 Nov 19)",
+   "kind": "act",
+   "verified": "live profile read 2026-11-16: 'lespecial — Progtronic Power Trio', linktr.ee/lespecial; the show is on 808knox.com's schedule. @lespecial is someone else.",
+   "confidence": "high",
+   "added": "2026-11-16"
+  },
+  "deadtronica": {
+   "handle": "@deadtronica",
+   "name": "Deadtronica (Aron Magner and Cloudchord; The 808 Nov 20)",
+   "kind": "act",
+   "verified": "live profile read 2026-11-16: 'Deadtronica reimagines the Grateful Dead thru a vibrant electronic lens. We are @aronmagner and @cloudchord'; Aron Magner's own bio links it; the show is on 808knox.com's schedule",
+   "confidence": "high",
+   "added": "2026-11-16"
+  },
+  "aron-magner": {
+   "handle": "@aronmagner",
+   "name": "Aron Magner (The Disco Biscuits; Deadtronica)",
+   "kind": "act",
+   "verified": "live profile read 2026-11-16: 'Keys and lots of them: @thediscobiscuits @deadtronica'",
+   "confidence": "high",
+   "added": "2026-11-16"
+  },
+  "summoners-circle": {
+   "handle": "@summonerscircle",
+   "name": "Summoner's Circle (extreme symphonic metal; The 808 Nov 21)",
+   "kind": "act",
+   "verified": "tagged in NinjaWitch's and Truckstop Dickpill's own reels on The 808's grid (instagram.com/ninjawitch_official/reel/Dfe5MyZRz1u/, instagram.com/truckstopdickpilltn/reel/DfaPglttgAa/); live profile read 2026-11-16, followed by @808knox",
+   "confidence": "high",
+   "added": "2026-11-16"
+  },
+  "ninja-witch": {
+   "handle": "@ninjawitch_official",
+   "name": "NinjaWitch (cosmic space doom metal, Knoxville)",
+   "kind": "act",
+   "verified": "author of the Nov 8 reel on The 808's grid naming the Nov 21 bill; live profile read 2026-11-16",
+   "confidence": "high",
+   "added": "2026-11-16"
+  },
+  "war-clown": {
+   "handle": "@warclownband",
+   "name": "War Clown",
+   "kind": "act",
+   "verified": "tagged in NinjaWitch's and Truckstop Dickpill's reels on The 808's grid; live profile read 2026-11-16 links reverbnation.com/warclown",
+   "confidence": "medium",
+   "added": "2026-11-16"
+  },
+  "truckstop-dickpill": {
+   "handle": "@truckstopdickpilltn",
+   "name": "Truckstop Dickpill (Knoxville death metal)",
+   "kind": "act",
+   "verified": "author of the Nov 6 reel on The 808's grid naming the Nov 21 show; live profile read 2026-11-16",
+   "confidence": "high",
+   "added": "2026-11-16"
+  },
+  "jocelyn-fbn": {
+   "handle": "@_jocelot_",
+   "name": "Jocelyn Morin (owner, Fly by Night and Tern Club)",
+   "verified": "tagged in Benicio's Super Birthday collab post on Fly by Night's own grid (instagram.com/dj._.ba/p/DfpnSJRBAz4/) and the venue's November lineup; live profile read 2026-11-16: 'Follow our cocktail bars @ternclub @flybynightknox'",
+   "confidence": "high",
+   "added": "2026-11-16"
+  },
+  "tiny-shaver": {
+   "handle": "@tiny.shaver",
+   "name": "Tiny (DJ; Fly by Night)",
+   "kind": "act",
+   "verified": "tagged in Benicio's Super Birthday collab post on Fly by Night's own grid and the venue's November lineup; live profile read 2026-11-16",
+   "confidence": "high",
+   "added": "2026-11-16"
+  },
+  "marcel-sletten": {
+   "handle": "@marcelsletten",
+   "name": "Marcel Sletten (Athens, GA electronic musician; Primordial Void)",
+   "kind": "act",
+   "verified": "tagged in Fly by Night's own November lineup post (instagram.com/dj._.ba/p/DfYANaZvX2M/); live profile read 2026-11-16: 'Artist, @primordial.void'; his Nov 12 post says he and Oliver head to NC and TN next week",
+   "confidence": "high",
+   "added": "2026-11-16"
+  },
+  "organically-programmed": {
+   "handle": "@organicallyprogrammed",
+   "name": "Organically Programmed (Athens, GA)",
+   "kind": "act",
+   "verified": "tagged in Fly by Night's own November lineup post; live profile read 2026-11-16, bio reads '11/21 KNOXVILLE TN @flybynightknox'",
+   "confidence": "high",
+   "added": "2026-11-16"
+  },
+  "doomsayer": {
+   "handle": "@iamdoomsayer",
+   "name": "Doomsayer (bass producer; founder of Planet Doom)",
+   "kind": "act",
+   "verified": "named in Planet Doom's own First Bass post on The Pink Cactus's grid; live profile read 2026-11-16: 'shows @planetdoomshows', iamdoomsayer.com, followed by @808knox and @printshopbeer",
+   "confidence": "high",
+   "added": "2026-11-16"
+  },
+  "nofvcks-bivens": {
+   "handle": "@nofvcksbivens",
+   "name": "Nofvcks Bivens (Las Vegas DJ; First Bass x Planet Doom Nov 21)",
+   "kind": "act",
+   "verified": "tagged in Planet Doom's own First Bass post on The Pink Cactus's grid (instagram.com/planetdoomshows/p/DffsVnLvwls/); live profile read 2026-11-16: 'Vegas DJ and producer'",
+   "confidence": "high",
+   "added": "2026-11-16"
+  },
+  "goos3": {
+   "handle": "@goos.3sgander",
+   "name": "Goos:3 (DJ; Eras of House at The Pink Cactus Nov 22)",
+   "kind": "act",
+   "verified": "tagged in The Pink Cactus's own Nov 15 post (instagram.com/thepinkcactusknox/p/Dfxn4eKuHHk/) and its Nov 3 month post; live profile read 2026-11-16: 'Goos:3 — DJ, multi genre (EDM focused), Knoxville, TN'",
+   "confidence": "high",
+   "added": "2026-11-16"
+  },
+  "piethagorean": {
+   "handle": "@piethagoreantn",
+   "name": "Piethagorean (stone-fired pizza truck; the Ujima dinner at Printshop Nov 20)",
+   "kind": "act",
+   "verified": "its own collab posts on Printshop's grid (instagram.com/piethagoreantn/p/DfaBx9CCsU8/); Printshop's Nov 14 post names it; live profile read 2026-11-16, followed by @printshopbeer; tickets at buytickets.at/piethagorean/2496218",
+   "confidence": "high",
+   "added": "2026-11-16"
+  },
+  "ujima-soccer": {
+   "handle": "@ujimasoccer",
+   "name": "Ujima Soccer Academy (East Knoxville youth program)",
+   "kind": "act",
+   "verified": "tagged in Printshop's and Piethagorean's own posts; its own reel on Piethagorean's grid (instagram.com/ujimasoccer/reel/DfqjYF7xd2b/) gives $23; live profile read 2026-11-16 links ujimasoccer.org",
+   "confidence": "high",
+   "added": "2026-11-16"
+  },
+  "visualize-art": {
+   "handle": "@visualizeart_studio",
+   "name": "Visualize Art Studio (glass workshops; Hi-Wire Nov 22, Ijams Nov 21)",
+   "kind": "act",
+   "verified": "tagged in Printshop's own Nov 14 post and the Old Sevier District's October First Friday post; live profile read 2026-11-16: 'Knoxville's premiere glass art teaching studio', 201 Center Park Dr; its Nov 15 post names Sunday's workshop at @hiwirebrewing_knx and visualizeartstudio.com/events books it",
+   "confidence": "high",
+   "added": "2026-11-16"
   }
  }
 }

@@ -1,0 +1,1663 @@
+{
+  "slug": "2026-11-18",
+  "volume": 1,
+  "number": 23,
+  "episode": "Weekend Episode",
+  "date": "2026-11-18",
+  "dateLabel": "Thu–Sun, Nov 19–22, 2026",
+  "shortDate": "Nov 19–22",
+  "place": "South Knoxville, TN",
+  "newsletter": {
+    "subject": "Pitch a Friend at Hi-Wire, three nights at The 808, Planet Doom twice at The Pink Cactus, and an opossum at Ijams Nature Center"
+  },
+  "feature": {
+    "id": "pitch-a-friend-hiwire",
+    "label": "Old Sevier",
+    "labelColor": "rust",
+    "days": [
+      "Fri"
+    ],
+    "layout": "imageTop",
+    "title": "Pitch a Friend is back at Hi-Wire Friday night: put your single friend on a slideshow and make the case to a room full of strangers",
+    "deck": "Free, and the presenters drink free too.",
+    "facts": [
+      {
+        "label": "When",
+        "value": "Fri Nov 20 · 7 PM · the Single Mingle Mixer after the pitches"
+      },
+      {
+        "label": "Where",
+        "value": "Hi-Wire Brewing · 2020 Barber St, second floor · the taproom is open 3 – 11"
+      },
+      {
+        "label": "Cost",
+        "value": "Free to attend · pitch spots are limited, sign up ahead through the brewery's link in bio · presenters get a free drink"
+      },
+      {
+        "label": "How it works",
+        "value": "Short, lighthearted presentations about why your friend is great, what they want, and why someone in the room should ask them out"
+      },
+      {
+        "label": "Weather",
+        "value": "Mostly sunny and 68, down to 38 overnight · it is all indoors"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Hi-Wire runs the neighborhood's oddest dating night again on Friday, and it costs nothing to watch. Pitch a Friend is exactly what it sounds like: you have a single friend you know deserves to be somebody's next crush, so you sign them up, build a few slides and stand up in a taproom to make the case. The brewery's description of the format is online dating with your friends doing the matchmaking, and a lot more fun. The pitches are short and meant to be funny, covering who the friend is, what they are looking for and why someone in the room should probably ask them out."
+      },
+      {
+        "type": "subhead",
+        "text": "The rules of the room"
+      },
+      {
+        "type": "paragraph",
+        "text": "Pitch spots are limited and go by sign-up through the brewery's link in bio, and every presenter gets a complimentary drink for their trouble. Nobody has to pitch to come. Once the slideshows wrap, Hi-Wire keeps the room going with what it calls a Single Mingle Mixer, so the people who just got pitched and the people who watched can actually talk. It starts at seven on the brewery's second floor on Barber Street, and the whole thing is free. Friday is mostly sunny and 68 on the way in and 38 by closing, which is a good argument for the indoor decks."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Hi-Wire Brewing Knoxville on Instagram — Pitch a Friend is back, Nov 20",
+        "url": "https://www.instagram.com/hiwirebrewing_knx/p/DflHlRfDBuo/"
+      },
+      {
+        "label": "Hi-Wire Brewing Knoxville on Instagram — November at the taproom",
+        "url": "https://www.instagram.com/hiwirebrewing_knx/p/DfNChvjFwBV/"
+      },
+      {
+        "label": "Hi-Wire Brewing — Knoxville taproom hours",
+        "url": "https://hiwirebrewing.com/knoxville/"
+      },
+      {
+        "label": "National Weather Service — Knoxville forecast",
+        "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+      }
+    ],
+    "event": {
+      "startDate": "2026-11-20T19:00:00-05:00",
+      "locationName": "Hi-Wire Brewing Knoxville",
+      "locationAddress": "2020 Barber St, Knoxville, TN 37920"
+    },
+    "social": {
+      "igTags": [
+        "hiwire"
+      ],
+      "igAct": {
+        "none": "a venue-run night; the pitchers are the crowd and the brewery names no host"
+      },
+      "igBanner": [
+        "Pitch a Friend at Hi-Wire: your single friend, on slides",
+        "Friday at seven, free"
+      ]
+    },
+    "image": "/assets/spots/no23_pitch_clicker_grin.jpg"
+  },
+  "scanner": [
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "hot": true,
+      "image": "/assets/spots/no23_pitch_clicker_grin.jpg",
+      "title": "Pitch a Friend at Hi-Wire",
+      "blurb": "Free, Friday at seven; your single friend, on slides, to a room of strangers.",
+      "href": "#pitch-a-friend-hiwire"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/no23_subwoofer_hair_blast.jpg",
+      "title": "First Bass x Planet Doom at The Pink Cactus",
+      "blurb": "Two stages, ten DJs and a Las Vegas guest; Saturday from eight.",
+      "href": "#first-bass-pink-cactus"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no23_synth_keys_rose.jpg",
+      "title": "Deadtronica at The 808",
+      "blurb": "The Grateful Dead as dance music; doors at seven, 18+.",
+      "href": "#deadtronica-808"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no23_pizza_peel_flame.jpg",
+      "title": "Pizza buffet for Ujima Soccer at Printshop",
+      "blurb": "All you can eat, five to eight, twenty-three dollars to a good cause.",
+      "href": "#ujima-pizza-printshop"
+    },
+    {
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Thu"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no23_popcorn_plastic_fangs.jpg",
+      "title": "Twilight on the big screen at Kern's",
+      "blurb": "Thursday at six thirty, free; Narnia the night before.",
+      "href": "#twilight-kerns"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no23_bagel_tray_baker.jpg",
+      "title": "SoKno Sourdough's first Saturday",
+      "blurb": "Bagels and bread, nine to one, and every Saturday after.",
+      "href": "#sourdough-saturdays"
+    },
+    {
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/no23_opossum_child_sketch.jpg",
+      "title": "Meet the new opossum at Ijams Nature Center",
+      "blurb": "Saturday at one, ten dollars, ages five and up.",
+      "href": "#possum-ijams"
+    },
+    {
+      "label": "Suttree Landing",
+      "labelColor": "ink",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no23_orange_bliss_pour.jpg",
+      "title": "Earl's game-day board for LSU",
+      "blurb": "Kickoff at 3:30; drafts, buckets and pizza marked down all day.",
+      "href": "#specials-board"
+    }
+  ],
+  "stories": [
+    {
+      "id": "lespecial-808",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageLeft",
+      "title": "lespecial, the Connecticut progtronic trio, plays The 808 Thursday with Natalie Brooke opening, 18 and up",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Nov 19 · doors 7 PM · show 8 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The 808 · 808 Sevier Ave"
+        },
+        {
+          "label": "Ages",
+          "value": "18 and up"
+        },
+        {
+          "label": "Tickets",
+          "value": "808knox.com"
+        },
+        {
+          "label": "Parking",
+          "value": "The venue's map of the lots and street spaces around the block",
+          "zoom": "/assets/diagrams/the-808-parking.svg"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The 808, the music venue that opened at the top of Sevier Avenue in October, has three touring nights in a row again this week. Thursday it is lespecial, the trio that calls its sound progtronic, a mash of prog rock, metal and electronic music built around a drummer, a bassist and a guitarist who all sing, on its fall tour, with Natalie Brooke opening. Doors are at seven and the show at eight, eighteen and up, with tickets through the venue's page. The venue's parking map is below for the lots and street spaces around the block."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The 808 — live music schedule",
+          "url": "https://808knox.com/"
+        },
+        {
+          "label": "lespecial on Instagram",
+          "url": "https://www.instagram.com/lespecialmusic/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-19T20:00:00-05:00",
+        "locationName": "The 808",
+        "locationAddress": "808 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "the-808",
+          "lespecial"
+        ],
+        "igAct": {
+          "key": "lespecial"
+        },
+        "igBanner": [
+          "lespecial at The 808, Natalie Brooke opens",
+          "Thursday, doors at seven, eighteen and up"
+        ]
+      },
+      "ticket": {
+        "href": "https://808knox.com/",
+        "image": "/assets/spots/the-808-tickets.svg",
+        "alt": "Get tickets at The 808"
+      },
+      "image": "/assets/spots/no23_bass_trio_lights.jpg"
+    },
+    {
+      "id": "super-birthday-fbn",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageRight",
+      "title": "Fly by Night throws a Super Birthday gran prix Thursday for its owner and three of its DJs, five dollars at the door",
+      "deck": "Four birthdays, one dance floor.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Nov 19 · 9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Fly by Night · 906 Sevier Ave, Suite 126"
+        },
+        {
+          "label": "Cost",
+          "value": "$5"
+        },
+        {
+          "label": "The birthdays",
+          "value": "Owner Jocelyn Morin · DJs Benicio, Minitiger and Tiny"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly sunny and 67, 37 overnight · the lounge is indoors"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Four birthdays land in one week at Fly by Night, the seventies cocktail lounge on Sevier Avenue, so the bar is making a race of it. Thursday at nine it is the Super Birthday gran prix, celebrating, in the bar's words, your favorite club racers as they speed around the sun: Jocelyn Morin, the silversmith who owns Fly by Night and Tern Club, and the DJs Benicio, Minitiger and Tiny, who between them run most of the lounge's dance nights. Benicio's flyer is a racing poster. Five dollars at the door, and the new cocktail menu that went live last week is the one you will be drinking from."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Benicio on Instagram — the Fly By Night Superbirthday gran prix, Nov 19 (on the venue's grid)",
+          "url": "https://www.instagram.com/dj._.ba/p/DfpnSJRBAz4/"
+        },
+        {
+          "label": "Fly by Night on Instagram — the November lineup",
+          "url": "https://www.instagram.com/dj._.ba/p/DfYANaZvX2M/"
+        },
+        {
+          "label": "Fly by Night — hours",
+          "url": "https://www.flybynightknox.com/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-19T21:00:00-05:00",
+        "locationName": "Fly by Night",
+        "locationAddress": "906 Sevier Ave Suite 126, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "fly-by-night",
+          "benicio",
+          "minitiger",
+          "tiny-shaver",
+          "jocelyn-fbn"
+        ],
+        "igAct": {
+          "key": "benicio"
+        },
+        "igBanner": [
+          "Super Birthday gran prix at Fly by Night",
+          "Thursday at nine, five dollars"
+        ]
+      },
+      "image": "/assets/spots/no23_helmet_birthday_candles.jpg"
+    },
+    {
+      "id": "twilight-kerns",
+      "label": "Kern's",
+      "labelColor": "green",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageLeft",
+      "title": "Kern's shows Twilight on the big screen Thursday night, the second half of a free double-feature week",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Nov 19 · 6:30 PM · Narnia plays Wednesday the 18th"
+        },
+        {
+          "label": "Where",
+          "value": "Kern's · 2201 Kern's Rising Way"
+        },
+        {
+          "label": "Cost",
+          "value": "Free · the food hall and the bar are open"
+        },
+        {
+          "label": "Parking",
+          "value": "If the lot is full, the Riverwalk Garage at 2011 Kay St is a three-minute walk and free after 6 PM"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Kern's movie nights are a Wednesday thing on the food hall's November slide, at 6:30, but this week runs two. The Chronicles of Narnia plays Wednesday the 18th, and Twilight, rescheduled from earlier in the month, plays Thursday the 19th, which Kern's bills as Team Edward and Team Jacob, assemble. It is free; the idea is a plate from the hall and a drink from the bar on the way in. Kern's posted a parking tip this week too: when the main lot fills, the Riverwalk Garage on Kay Street is a three-minute walk and free after six on weekdays."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Kern's on Instagram — double feature week, Narnia Nov 18 and Twilight Nov 19",
+          "url": "https://www.instagram.com/kernsknox/p/DfnSjYGIP_0/"
+        },
+        {
+          "label": "Kern's on Instagram — Kern's in November (movie nights 6:30)",
+          "url": "https://www.instagram.com/kernsknox/p/DfNATfiiPz2/"
+        },
+        {
+          "label": "Kern's on Instagram — overflow parking at the Riverwalk Garage",
+          "url": "https://www.instagram.com/kernsknox/reel/DfsZm-noiEN/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-19T18:30:00-05:00",
+        "locationName": "Kern's",
+        "locationAddress": "2201 Kern's Rising Way, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "kerns"
+        ],
+        "igAct": {
+          "none": "a venue movie night; no performer"
+        },
+        "igBanner": [
+          "Twilight on the big screen at Kern's",
+          "Thursday at six thirty, free"
+        ]
+      },
+      "image": "/assets/spots/no23_popcorn_plastic_fangs.jpg"
+    },
+    {
+      "id": "deadtronica-808",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "title": "Deadtronica, Aron Magner of The Disco Biscuits playing the Grateful Dead as dance music, headlines The 808 Friday",
+      "deck": "A Disco Biscuit plays the Dead at rave tempo.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Nov 20 · doors 7 PM · show 8 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The 808 · 808 Sevier Ave"
+        },
+        {
+          "label": "Ages",
+          "value": "18 and up"
+        },
+        {
+          "label": "Tickets",
+          "value": "808knox.com"
+        },
+        {
+          "label": "Parking",
+          "value": "The venue's map of the lots and street spaces around the block",
+          "zoom": "/assets/diagrams/the-808-parking.svg"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Friday's show at The 808 is Deadtronica, which is Aron Magner, the keyboard player of The Disco Biscuits and Billy & The Kids, and the Emmy-winning guitarist and producer Cloudchord, taking Grateful Dead songs and rebuilding them as electronic dance music. The project's own line is that it merges the improvisational spirit of the Dead with the pulse of EDM, from the acid test to the dancefloor. Doors at seven, show at eight, eighteen and up, tickets on the venue's page, parking map below."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The 808 — live music schedule",
+          "url": "https://808knox.com/"
+        },
+        {
+          "label": "Deadtronica on Instagram",
+          "url": "https://www.instagram.com/deadtronica/"
+        },
+        {
+          "label": "Aron Magner on Instagram",
+          "url": "https://www.instagram.com/aronmagner/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-20T20:00:00-05:00",
+        "locationName": "The 808",
+        "locationAddress": "808 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "the-808",
+          "deadtronica",
+          "aron-magner"
+        ],
+        "igAct": {
+          "key": "deadtronica"
+        },
+        "igBanner": [
+          "Deadtronica at The 808: the Dead, as dance music",
+          "Friday, doors at seven, eighteen and up"
+        ]
+      },
+      "ticket": {
+        "href": "https://808knox.com/",
+        "image": "/assets/spots/the-808-tickets.svg",
+        "alt": "Get tickets at The 808"
+      },
+      "image": "/assets/spots/no23_synth_keys_rose.jpg"
+    },
+    {
+      "id": "ujima-pizza-printshop",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageLeft",
+      "title": "Piethagorean cooks an all-you-can-eat pizza and Caesar buffet at Printshop Friday to fund Ujima Soccer Academy",
+      "deck": "Four pizzas, a salad bar, and the kids win.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Nov 20 · 5 – 8 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Printshop Beer Co. · 1532 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$23 a ticket · all-you-can-eat, four pizzas plus salad · all profits to Ujima",
+          "href": "https://buytickets.at/piethagorean/2496218"
+        },
+        {
+          "label": "Also Friday",
+          "value": "$12 flights, noon to 9"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly sunny and 68 · the river patio is on till the sun goes"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Piethagorean, the stone-fired pizza truck out of Strawberry Plains, parks at Printshop on Friday and cooks a benefit dinner on site from five to eight: four kinds of pizza served hot off the stone, buffet style, and a house-made Caesar salad bar, all you can eat for twenty-three dollars. Every dollar of profit goes to Ujima Soccer Academy, the East Knoxville youth program that uses soccer to build leaders and get its students ready for school and work. Tickets are through Piethagorean's page, the beer is Printshop's, and Friday happens to be flight day, four pours for twelve dollars from noon."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Piethagorean — Pizza Fundraising Dinner for Ujima Soccer Academy, tickets",
+          "url": "https://buytickets.at/piethagorean/2496218"
+        },
+        {
+          "label": "Printshop Beer Co. on Instagram — the week before Thanksgiving",
+          "url": "https://www.instagram.com/printshopbeer/p/Dfuc2QlqlrK/"
+        },
+        {
+          "label": "Ujima Soccer Academy on Instagram — $23 for the buffet (on Piethagorean's grid)",
+          "url": "https://www.instagram.com/ujimasoccer/reel/DfqjYF7xd2b/"
+        },
+        {
+          "label": "Printshop Beer Co. — specials",
+          "url": "https://printshopbeer.com/specials/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-20T17:00:00-05:00",
+        "endDate": "2026-11-20T20:00:00-05:00",
+        "locationName": "Printshop Beer Co.",
+        "locationAddress": "1532 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "printshop",
+          "piethagorean",
+          "ujima-soccer"
+        ],
+        "igAct": {
+          "key": "piethagorean"
+        },
+        "igBanner": [
+          "Pizza buffet for Ujima Soccer at Printshop",
+          "Friday, five to eight, twenty-three dollars"
+        ]
+      },
+      "ticket": {
+        "href": "https://buytickets.at/piethagorean/2496218",
+        "image": "/assets/spots/printshop-tickets.svg",
+        "alt": "Get tickets at Printshop Beer Co."
+      },
+      "image": "/assets/spots/no23_pizza_peel_flame.jpg"
+    },
+    {
+      "id": "yeedm-pink-cactus",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "title": "Planet Doom tries a country-EDM crossover night called yeEDM at The Pink Cactus Friday",
+      "deck": "Boots on the dance floor, bass in the yard.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Nov 20 · 9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The Pink Cactus · 1147 Sevier Ave"
+        },
+        {
+          "label": "Tickets",
+          "value": "Presale at iamdoomsayer.com",
+          "href": "https://iamdoomsayer.com/"
+        },
+        {
+          "label": "The promoter",
+          "value": "Planet Doom, the Knoxville EDM night run by the bass producer Doomsayer"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Planet Doom, the recurring EDM night that Doomsayer has been running around Knoxville and lately at The Pink Cactus, is trying something new on Friday. The night is called yeEDM, the venue's word for it is a wild country EDM crossover, and the promoter's own post welcomes you to Doomtown. It starts at nine at the pink house on Sevier Avenue, with presale tickets on Doomsayer's site. It is also the warm-up: the same crew is back the next night with the bigger show."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Doomsayer — shows (Planet Doom: yeEDM Night, Nov 20, 9 PM)",
+          "url": "https://iamdoomsayer.com/"
+        },
+        {
+          "label": "Planet Doom on Instagram — welcome to Doomtown",
+          "url": "https://www.instagram.com/planetdoomshows/p/Dfh6mU8Pf8A/"
+        },
+        {
+          "label": "The Pink Cactus on Instagram — November at The Pink Cactus",
+          "url": "https://www.instagram.com/thepinkcactusknox/p/DfS6ojXGao_/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-20T21:00:00-05:00",
+        "locationName": "The Pink Cactus",
+        "locationAddress": "1147 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "pink-cactus",
+          "planet-doom",
+          "doomsayer"
+        ],
+        "igAct": {
+          "key": "planet-doom"
+        },
+        "igBanner": [
+          "yeEDM: country meets EDM at The Pink Cactus",
+          "Friday at nine"
+        ]
+      },
+      "ticket": {
+        "href": "https://iamdoomsayer.com/",
+        "image": "/assets/spots/the-pink-cactus-tickets.svg",
+        "alt": "Get tickets at The Pink Cactus"
+      },
+      "image": "/assets/spots/no23_cowboy_hat_headphones.jpg"
+    },
+    {
+      "id": "summoners-circle-808",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "title": "Summoner's Circle comes home to The 808 Saturday with War Clown, NinjaWitch and Truckstop Dickpill, all ages",
+      "deck": "Four Knoxville metal bands, no age limit.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Nov 21 · doors 7 PM · show 8 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The 808 · 808 Sevier Ave"
+        },
+        {
+          "label": "Ages",
+          "value": "All ages"
+        },
+        {
+          "label": "The bill",
+          "value": "Summoner's Circle · War Clown · NinjaWitch · Truckstop Dickpill"
+        },
+        {
+          "label": "Tickets",
+          "value": "808knox.com"
+        },
+        {
+          "label": "Game clock",
+          "value": "LSU at Neyland kicks off at 3:30 · the game is over before doors"
+        },
+        {
+          "label": "Parking",
+          "value": "The venue's map of the lots and street spaces around the block",
+          "zoom": "/assets/diagrams/the-808-parking.svg"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Saturday's night at The 808 is the local one, and the loud one. Summoner's Circle, the extreme symphonic metal band that toured with Children of Bodom on that band's last American run, plays a homecoming show with three Knoxville bands on the bill: War Clown, NinjaWitch, which describes itself as cosmic space doom metal, and Truckstop Dickpill, whose own post says this is its last Knoxville show for a while before it goes quiet to finish new songs and set up next year's tour. The same post calls the venue a big deal for booking national and local acts side by side. Doors at seven, show at eight, all ages, tickets on the venue's page. The Vols host LSU at 3:30, so the game is done before doors and the parking map below still matters."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The 808 — live music schedule",
+          "url": "https://808knox.com/"
+        },
+        {
+          "label": "NinjaWitch on Instagram — the Nov 21 bill (on The 808's grid)",
+          "url": "https://www.instagram.com/ninjawitch_official/reel/Dfe5MyZRz1u/"
+        },
+        {
+          "label": "Truckstop Dickpill on Instagram — last Knoxville show for a while (on The 808's grid)",
+          "url": "https://www.instagram.com/truckstopdickpilltn/reel/DfaPglttgAa/"
+        },
+        {
+          "label": "Summoner's Circle on Instagram",
+          "url": "https://www.instagram.com/summonerscircle/"
+        },
+        {
+          "label": "ESPN — Tennessee Volunteers schedule (LSU at Tennessee, Nov 21, 3:30 PM EST)",
+          "url": "https://www.espn.com/college-football/team/schedule/_/id/2633"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-21T20:00:00-05:00",
+        "locationName": "The 808",
+        "locationAddress": "808 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "the-808",
+          "summoners-circle",
+          "ninja-witch",
+          "truckstop-dickpill",
+          "war-clown"
+        ],
+        "igAct": {
+          "key": "summoners-circle"
+        },
+        "igBanner": [
+          "Summoner's Circle homecoming at The 808, all ages",
+          "Saturday, doors at seven"
+        ]
+      },
+      "ticket": {
+        "href": "https://808knox.com/",
+        "image": "/assets/spots/the-808-tickets.svg",
+        "alt": "Get tickets at The 808"
+      },
+      "image": "/assets/spots/no23_corpse_paint_roar.jpg"
+    },
+    {
+      "id": "first-bass-pink-cactus",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "title": "First Bass x Planet Doom returns to The Pink Cactus Saturday with two stages, ten DJs and a guest from Las Vegas",
+      "deck": "Ten DJs, two stages, and a Vegas headliner.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Nov 21 · 8 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The Pink Cactus · 1147 Sevier Ave · a 360 stage inside, a new stage outside"
+        },
+        {
+          "label": "Tickets",
+          "value": "iamdoomsayer.com",
+          "href": "https://iamdoomsayer.com/"
+        },
+        {
+          "label": "The lineup",
+          "value": "Nofvcks Bivens (Las Vegas) · Doomsayer · Kulatural Damage · JMO · Bass Hood · AK da Arsonist · Vasachi · Utter Lucidity · Visir · Vyllan"
+        },
+        {
+          "label": "Also",
+          "value": "Vendors · harm-reduction booths · tooth gems by Lustre & Lore"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly sunny and 68, 42 overnight · the outdoor stage is in the yard"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "First Bass x Planet Doom filled The Pink Cactus in October, and the venue's own November list says so: it was huge last month, so here we go again. Saturday's return brings Nofvcks Bivens, a DJ and producer from Las Vegas, as the special guest, with Doomsayer and eight more local bass DJs across two stages, a 360 stage in the bar and a new outdoor stage in the yard with, the promoter says, better lights and sound than last time. Vendors set up, harm-reduction booths are on, and Lustre & Lore does tooth gems. It starts at eight, with tickets on Doomsayer's site. Saturday night is clear and 42 by the end, so the yard stage wants a jacket."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Planet Doom on Instagram — First Bass x Planet Doom returns Nov 21 (on The Pink Cactus's grid)",
+          "url": "https://www.instagram.com/planetdoomshows/p/DffsVnLvwls/"
+        },
+        {
+          "label": "Doomsayer — shows (First Bass x Planet Doom, Nov 21, 8 PM, 10 DJs, 2 stages)",
+          "url": "https://iamdoomsayer.com/"
+        },
+        {
+          "label": "The Pink Cactus on Instagram — November at The Pink Cactus",
+          "url": "https://www.instagram.com/thepinkcactusknox/p/DfS6ojXGao_/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-21T20:00:00-05:00",
+        "locationName": "The Pink Cactus",
+        "locationAddress": "1147 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "pink-cactus",
+          "planet-doom",
+          "doomsayer",
+          "nofvcks-bivens"
+        ],
+        "igAct": {
+          "key": "planet-doom"
+        },
+        "igBanner": [
+          "First Bass x Planet Doom at The Pink Cactus, two stages",
+          "Saturday from eight"
+        ]
+      },
+      "ticket": {
+        "href": "https://iamdoomsayer.com/",
+        "image": "/assets/spots/the-pink-cactus-tickets.svg",
+        "alt": "Get tickets at The Pink Cactus"
+      },
+      "image": "/assets/spots/no23_subwoofer_hair_blast.jpg"
+    },
+    {
+      "id": "sletten-op-fbn",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "title": "Marcel Sletten and Organically Programmed bring Athens, Georgia's electronic scene to Fly by Night Saturday night",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Nov 21 · 9 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Fly by Night · 906 Sevier Ave, Suite 126"
+        },
+        {
+          "label": "The tour",
+          "value": "Hardware vs. Software, the two acts' first co-headlining run · Asheville the night before"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Saturday at Fly by Night is a live electronic double bill from Athens, Georgia. Marcel Sletten, who runs the label Primordial Void and whose label calls these his first shows outside Georgia in two years, and Organically Programmed, the keyboard-led ensemble whose debut album came out last year, are on their Hardware vs. Software tour through the Midwest and the Southeast, and Knoxville is the night after Asheville. The lounge's lineup post says rock the box, which is as good a description of a modular synth set in a seventies cocktail bar as any. Music at nine."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Fly by Night on Instagram — the November lineup (Marcel Sletten and Organically Programmed, Nov 21)",
+          "url": "https://www.instagram.com/dj._.ba/p/DfYANaZvX2M/"
+        },
+        {
+          "label": "Organically Programmed on Instagram — 11/21 Knoxville at Fly by Night",
+          "url": "https://www.instagram.com/organicallyprogrammed/"
+        },
+        {
+          "label": "Primordial Void on Instagram — the Hardware vs. Software tour",
+          "url": "https://www.instagram.com/primordial.void/p/DeHTZMdIBPi/"
+        },
+        {
+          "label": "Fly by Night — hours",
+          "url": "https://www.flybynightknox.com/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-21T21:00:00-05:00",
+        "locationName": "Fly by Night",
+        "locationAddress": "906 Sevier Ave Suite 126, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "fly-by-night",
+          "marcel-sletten",
+          "organically-programmed"
+        ],
+        "igAct": {
+          "key": "marcel-sletten"
+        },
+        "igBanner": [
+          "Marcel Sletten and Organically Programmed at Fly by Night",
+          "Saturday at nine"
+        ]
+      },
+      "image": "/assets/spots/no23_patch_cables_synth.jpg"
+    },
+    {
+      "id": "sourdough-saturdays",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "title": "SoKno Sourdough opens on a Saturday for the first time this week, bagels and bread from nine to one on Barber Street",
+      "deck": "The bakery's first weekend hours ever.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Nov 21 · 9 AM – 1 PM · then every Saturday"
+        },
+        {
+          "label": "Where",
+          "value": "SoKno Sourdough · 2006 Barber St, the loading dock between Redbud Kitchen and Hi-Wire"
+        },
+        {
+          "label": "Weekdays",
+          "value": "Tue, Thu and Fri 7:30 AM – about 2 PM · Wed 3 – 6 PM"
+        },
+        {
+          "label": "Thanksgiving",
+          "value": "Par-baked sourdough dinner rolls to order through the Wednesday before · closed Nov 26 and 27"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The bakery at the corner of Sevier and Barber has been a weekday-only place since its storefront opened in March, with hours built around the morning. This Saturday that changes: SoKno Sourdough opens at nine and sells until one, and the bakery says it will keep doing it every Saturday, slinging, in its own words, sourdough bagels and bread for you on weekends. It is the first weekend hour the shop has ever kept. The entrance is up the new stairs on the loading dock between Redbud and Hi-Wire, with an accessible way in to the left. The Thanksgiving dinner rolls, par-baked to finish at home, are on order through the website until the Wednesday before the holiday."
+        }
+      ],
+      "sources": [
+        {
+          "label": "SoKno Sourdough on Instagram — open Saturdays from Nov 21",
+          "url": "https://www.instagram.com/soknosourdough/p/DfyXdxXtqi0/"
+        },
+        {
+          "label": "SoKno Sourdough on Instagram — November at the bakery",
+          "url": "https://www.instagram.com/soknosourdough/p/DfXCpPTFYx2/"
+        },
+        {
+          "label": "SoKno Sourdough on Instagram — the front entrance and hours",
+          "url": "https://www.instagram.com/soknosourdough/p/DbQp3VNv-I9/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-21T09:00:00-05:00",
+        "endDate": "2026-11-21T13:00:00-05:00",
+        "locationName": "SoKno Sourdough",
+        "locationAddress": "2006 Barber St, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "sokno-sourdough"
+        ],
+        "igAct": {
+          "none": "a bakery's new hours; no act"
+        },
+        "igBanner": [
+          "SoKno Sourdough's first Saturday: bagels, nine to one",
+          "Saturday, and every Saturday after"
+        ]
+      },
+      "image": "/assets/spots/no23_bagel_tray_baker.jpg"
+    },
+    {
+      "id": "stained-glass-hiwire",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "title": "Visualize Art Studio sets up a stained glass workshop at Hi-Wire Sunday afternoon: a pumpkin, a boot or a bat in two hours",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Nov 22 · 3 PM · about two hours"
+        },
+        {
+          "label": "Where",
+          "value": "Hi-Wire Brewing · 2020 Barber St, second floor"
+        },
+        {
+          "label": "Cost",
+          "value": "$80, supplies and instruction included · book through the studio",
+          "href": "https://visualizeartstudio.com/events"
+        },
+        {
+          "label": "Designs",
+          "value": "Pumpkin · cowboy boot · bat"
+        },
+        {
+          "label": "Ages",
+          "value": "14 and up · under 18 with an adult · cotton clothes, closed shoes, hair tied back"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Visualize Art Studio, the glass-teaching studio out west on Center Park Drive, brings its mobile stained glass workshop to Hi-Wire's taproom on Sunday at three. The format is the studio's two-hour intro: you start with a pre-cut, pre-ground kit of glass in one of three November designs, a pumpkin, a cowboy boot or a bat, pick your colors, and learn to copper-foil and solder the pieces into a finished panel you take home. No experience is expected, everything is supplied, and the ticket is eighty dollars through the studio's site. The same studio runs hot-glass and stained-glass sessions at Ijams Nature Center on Saturday morning, if Sunday does not suit."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Visualize Art Studio — events (Hi-Wire Stained Glass Mobile Workshop, Nov 22, $80)",
+          "url": "https://visualizeartstudio.com/events"
+        },
+        {
+          "label": "Visualize Art Studio on Instagram — this week: Sunday at Hi-Wire",
+          "url": "https://www.instagram.com/visualizeart_studio/p/Dfx1ygDI6rE/"
+        },
+        {
+          "label": "Old Sevier District on Instagram — November in Old Sevier (Stained Glass Class, Hi-Wire, 3 PM)",
+          "url": "https://www.instagram.com/oldsevierdistrict/p/DfYVDCYDQUo/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-22T15:00:00-05:00",
+        "locationName": "Hi-Wire Brewing Knoxville",
+        "locationAddress": "2020 Barber St, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "hiwire",
+          "visualize-art"
+        ],
+        "igAct": {
+          "key": "visualize-art"
+        },
+        "igBanner": [
+          "Stained glass at Hi-Wire: a pumpkin, a boot or a bat",
+          "Sunday at three, eighty dollars"
+        ]
+      },
+      "ticket": {
+        "href": "https://visualizeartstudio.com/events",
+        "image": "/assets/spots/hi-wire-tickets.svg",
+        "alt": "Get tickets at Hi-Wire"
+      },
+      "image": "/assets/spots/no23_soldering_glass_boot.jpg"
+    },
+    {
+      "id": "eras-of-house-pink-cactus",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "title": "Goos:3 plays house music decade by decade at The Pink Cactus Sunday night, the DJ's first set at the pink house",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Nov 22 · 9 PM – midnight"
+        },
+        {
+          "label": "Where",
+          "value": "The Pink Cactus · 1147 Sevier Ave"
+        },
+        {
+          "label": "Earlier",
+          "value": "Trivia Sunday with Knox Trivia Guys at 6:30, gift-card prizes"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Sunday closes the week at The Pink Cactus with Eras of House, a set from Goos:3, the Knoxville DJ whose profile reads multi-genre, EDM focused, walking through the different eras of house music, from the early stuff to now, from nine to midnight. The venue's November list calls it the DJ's debut at the pink house. Trivia with Knox Trivia Guys runs at 6:30 the same evening, so the room is already warm when the decks come on."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The Pink Cactus on Instagram — Eras of House with Goos:3, Nov 22",
+          "url": "https://www.instagram.com/thepinkcactusknox/p/Dfxn4eKuHHk/"
+        },
+        {
+          "label": "The Pink Cactus on Instagram — Trivia Sunday winners, every Sunday 6:30",
+          "url": "https://www.instagram.com/thepinkcactusknox/p/DfvGVR1OWfo/"
+        },
+        {
+          "label": "Goos:3 on Instagram",
+          "url": "https://www.instagram.com/goos.3sgander/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-22T21:00:00-05:00",
+        "endDate": "2026-11-23T00:00:00-05:00",
+        "locationName": "The Pink Cactus",
+        "locationAddress": "1147 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "pink-cactus",
+          "goos3"
+        ],
+        "igAct": {
+          "key": "goos3"
+        },
+        "igBanner": [
+          "Eras of House with Goos:3 at The Pink Cactus",
+          "Sunday, nine to midnight"
+        ]
+      },
+      "image": "/assets/spots/no23_vinyl_to_the_light.jpg"
+    },
+    {
+      "id": "possum-ijams",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "title": "Ijams Nature Center introduces its newest animal ambassador, an opossum, at a Saturday meet and greet for ages five and up",
+      "deck": "The star eats ticks and plays dead.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Nov 21 · 1 – 2 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center · 2915 Island Home Ave · inside or out depending on the weather"
+        },
+        {
+          "label": "Cost",
+          "value": "$10 · register on the park's page · parking included",
+          "href": "https://www.ijams.org/event-details/playing-possum-animal-ambassador-meet-greet-2026-11-21-13-00"
+        },
+        {
+          "label": "Ages",
+          "value": "5 and up · a waiver once a year"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly sunny and 68"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Ijams Nature Center has a new animal ambassador, and it is an opossum. Playing 'Possum, Saturday at one, is the park's hour-long introduction: a naturalist presents the animal and makes the case for the misunderstood marsupial, which eats ticks, plays dead on purpose and carries its young in a pouch, and then the group learns the basics of nature journaling and draws its own opossum to take home. It is built for ages five and up, ten dollars a person, and the page says the program sits mostly in one place, so small kids are fine. Register ahead; there are no walk-ins at Ijams programs."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Playing 'Possum: Animal Ambassador Meet & Greet, Nov 21",
+          "url": "https://www.ijams.org/event-details/playing-possum-animal-ambassador-meet-greet-2026-11-21-13-00"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-21T13:00:00-05:00",
+        "endDate": "2026-11-21T14:00:00-05:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a park program; the naturalist is staff and the star is an opossum"
+        },
+        "igBanner": [
+          "Meet the new opossum at Ijams Nature Center",
+          "Saturday at one, ten dollars, ages five and up"
+        ]
+      },
+      "ticket": {
+        "href": "https://www.ijams.org/event-details/playing-possum-animal-ambassador-meet-greet-2026-11-21-13-00",
+        "image": "/assets/spots/ijams-nature-center-tickets.svg",
+        "alt": "Get tickets at Ijams Nature Center"
+      },
+      "image": "/assets/spots/no23_opossum_child_sketch.jpg"
+    },
+    {
+      "id": "cyanotype-ijams",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "title": "Painting with the Sun teaches cyanotype printing at Ijams Nature Center Saturday afternoon: forage the leaves, expose the paper, keep the prints",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Nov 21 · 2:30 – 4 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center visitor center · 2915 Island Home Ave · mostly indoors, a walk outside to gather"
+        },
+        {
+          "label": "Cost",
+          "value": "$18 · register on the park's page · parking included",
+          "href": "https://www.ijams.org/event-details/painting-with-the-sun-a-cyanotype-workshop-2026-11-21-14-30"
+        },
+        {
+          "label": "Ages",
+          "value": "14 and up"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly sunny and 68 · the sun is the point"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Cyanotype is the old blueprint process: paper coated with a UV-reacting solution, something laid on it, sunlight, and a white silhouette on Prussian blue. Saturday at 2:30 an Ijams naturalist walks a beginners' class through it. You forage your own leaves and seed heads around the visitor center, arrange them, expose the paper in the sun and rinse, and go home with several prints and the recipe to do it again. Eighteen dollars, ages fourteen and up, mostly indoors with the short walk out to gather. The forecast is mostly sunny, which for this class is the whole lesson plan."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Painting with the Sun: A Cyanotype Workshop, Nov 21",
+          "url": "https://www.ijams.org/event-details/painting-with-the-sun-a-cyanotype-workshop-2026-11-21-14-30"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-21T14:30:00-05:00",
+        "endDate": "2026-11-21T16:00:00-05:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a park class taught by staff; no act"
+        },
+        "igBanner": [
+          "Cyanotype printing at Ijams Nature Center",
+          "Saturday at two thirty, eighteen dollars"
+        ]
+      },
+      "ticket": {
+        "href": "https://www.ijams.org/event-details/painting-with-the-sun-a-cyanotype-workshop-2026-11-21-14-30",
+        "image": "/assets/spots/ijams-nature-center-tickets.svg",
+        "alt": "Get tickets at Ijams Nature Center"
+      },
+      "image": "/assets/spots/no23_fern_on_blue_paper.jpg"
+    },
+    {
+      "id": "renew-in-nature-ijams",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "title": "Renew in Nature puts yoga, a sound bath and a forest-bathing walk into one Sunday morning at the Ijams Homesite",
+      "deck": "Three ways to slow down, one morning.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Nov 22 · 10 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "The Miller Building and Homesite Pavilion at Ijams Nature Center · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$40 · pre-register on the park's page",
+          "href": "https://www.ijams.org/event-details/special-event-renew-in-nature-a-meditative-workshop-november-22"
+        },
+        {
+          "label": "Bring",
+          "value": "A yoga mat · a journal for the forest bathing · a pillow or eye cover for the sound bath if you like"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly sunny and 67 by afternoon, 41 at ten · layers for the mat"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The park's meditative morning, moved from the first of the month to this Sunday, runs ten to noon at the Homesite, the old Ijams family grounds up the hill from the visitor center. It goes in three movements: an outdoor yoga flow to start, a sound bath in the pavilion, and a forest-bathing session to finish, which is the slow, unhurried kind of walk in the trees that the Japanese call shinrin-yoku. The park's pitch is the research, lower stress and better focus, and the ticket is forty dollars with pre-registration required. Bring a mat; the morning starts at 41 degrees and climbs toward 67, so the first pose is the cold one."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Renew in Nature: A Meditative Workshop, Nov 22",
+          "url": "https://www.ijams.org/event-details/special-event-renew-in-nature-a-meditative-workshop-november-22"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-22T10:00:00-05:00",
+        "endDate": "2026-11-22T12:00:00-05:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a park special event; the page names no instructor"
+        },
+        "igBanner": [
+          "Yoga, a sound bath and forest bathing at Ijams Nature Center",
+          "Sunday, ten to noon, forty dollars"
+        ]
+      },
+      "ticket": {
+        "href": "https://www.ijams.org/event-details/special-event-renew-in-nature-a-meditative-workshop-november-22",
+        "image": "/assets/spots/ijams-nature-center-tickets.svg",
+        "alt": "Get tickets at Ijams Nature Center"
+      },
+      "image": "/assets/spots/no23_singing_bowl_mallet.jpg"
+    },
+    {
+      "id": "moss-meander-ijams",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "title": "A naturalist leads a Moss Meander around Mead's Quarry Sunday afternoon, learning the species on the rocks",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Nov 22 · 1 – 3 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Mead's Quarry at Ijams Nature Center · 3526 Island Home Ave · meet at the picnic tables by the quarry lot"
+        },
+        {
+          "label": "Cost",
+          "value": "$15 · register on the park's page · parking included",
+          "href": "https://www.ijams.org/event-details/moss-meander-2026-11-22-13-00"
+        },
+        {
+          "label": "Ages",
+          "value": "16 and up"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly sunny and 67"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Moss rocks, says the park, and Sunday afternoon it spends two hours proving it. The Moss Meander meets at the picnic tables in the Mead's Quarry lot at one and wanders the quarry's rocks and shaded banks with an Ijams naturalist, learning to tell the species apart and what each one is doing for the forest around it. The park's own pitch starts with the fairy stuff from childhood and ends with moss as the organism that holds the story of the forest in its structure. Fifteen dollars, sixteen and up, and a sunny 67-degree November afternoon at the quarry is about as good as the setting gets."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Moss Meander, Nov 22",
+          "url": "https://www.ijams.org/event-details/moss-meander-2026-11-22-13-00"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-22T13:00:00-05:00",
+        "endDate": "2026-11-22T15:00:00-05:00",
+        "locationName": "Mead's Quarry, Ijams Nature Center",
+        "locationAddress": "3526 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a guided walk led by park staff; no act"
+        },
+        "igBanner": [
+          "Moss Meander at Mead's Quarry, Ijams Nature Center",
+          "Sunday, one to three, fifteen dollars"
+        ]
+      },
+      "ticket": {
+        "href": "https://www.ijams.org/event-details/moss-meander-2026-11-22-13-00",
+        "image": "/assets/spots/ijams-nature-center-tickets.svg",
+        "alt": "Get tickets at Ijams Nature Center"
+      },
+      "image": "/assets/spots/no23_moss_hand_lens_smile.jpg"
+    },
+    {
+      "id": "specials-board",
+      "label": "Suttree Landing",
+      "labelColor": "ink",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "title": "Earl's game-day board comes out for LSU at Neyland Saturday at 3:30, with a rita a day around it and Printshop's pints a dollar off at kickoff",
+      "deck": "A home game, so plan the bridges.",
+      "facts": [
+        {
+          "label": "Thursday",
+          "value": "$10 Patrón mango ritas at Earl's"
+        },
+        {
+          "label": "Friday",
+          "value": "$9 spicy pineapple ritas"
+        },
+        {
+          "label": "Saturday",
+          "value": "$8 house margaritas · the game-day board: $2 off drafts, $6 Orange Bliss, 6-for-5 beer buckets, $2 off pizza, $4 and $5 shots · LSU at Tennessee, 3:30 PM"
+        },
+        {
+          "label": "Sunday",
+          "value": "$7 mimosas and Bloody Marys"
+        },
+        {
+          "label": "Around the beat Saturday",
+          "value": "Printshop: $1 off pints from 3 PM to the final whistle · Kern's: the game on the big screens · SouthSide Garage: open noon to midnight, $5 Vol Bombs"
+        },
+        {
+          "label": "Hours",
+          "value": "Earl's 11 AM – 10 PM daily · 610 Waterfront Dr"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Earl's, the bar and kitchen on Waterfront Drive at Suttree Landing, runs one special a day from eleven to ten, and Saturday the game-day board comes out on top of it. The Vols host LSU at Neyland at 3:30, which puts the stadium crowd on the bridges all afternoon and the game on every screen on this side of the river. Earl's board is the same for every Saturday: two dollars off drafts, six-dollar Orange Bliss cocktails, six beer buckets for the price of five, two dollars off pizza and four- and five-dollar shots all day, with eight-dollar house margaritas as the standing Saturday deal. Thursday is ten-dollar Patrón mango ritas, Friday nine-dollar spicy pineapple ritas, and Sunday seven-dollar mimosas and Bloody Marys, all four afternoons sunny and in the upper sixties."
+        },
+        {
+          "type": "paragraph",
+          "text": "Up on Sevier, Printshop takes a dollar off pints from half an hour before kickoff until the final whistle, Kern's puts the game on its big screens every Saturday, and SouthSide Garage, which has posted a five-dollar Vol Bomb for every game this month, is open noon to midnight."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Earl's — specials and the game-day board",
+          "url": "https://earlsknox.com/specials/"
+        },
+        {
+          "label": "Earl's on Instagram — the game-day specials, Nov 13",
+          "url": "https://www.instagram.com/earlsknoxville/p/Dfr9s39lm-8/"
+        },
+        {
+          "label": "Printshop Beer Co. — specials",
+          "url": "https://printshopbeer.com/specials/"
+        },
+        {
+          "label": "Kern's on Instagram — Kern's in November (UT watch parties every Saturday)",
+          "url": "https://www.instagram.com/kernsknox/p/DfNATfiiPz2/"
+        },
+        {
+          "label": "SouthSide Garage — specials",
+          "url": "https://www.southsidegarageknox.com/specials/"
+        },
+        {
+          "label": "ESPN — Tennessee Volunteers schedule (LSU at Tennessee, Nov 21, 3:30 PM EST)",
+          "url": "https://www.espn.com/college-football/team/schedule/_/id/2633"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.9"
+        }
+      ],
+      "social": {
+        "igTags": [
+          "earls"
+        ],
+        "igAct": {
+          "none": "a specials board; no act"
+        },
+        "igBanner": [
+          "Earl's game-day board for LSU, and a rita a day",
+          "Saturday, kickoff at three thirty"
+        ],
+        "standing": true,
+        "standingKey": "specials-board"
+      },
+      "venueKey": "earls",
+      "image": "/assets/spots/no23_orange_bliss_pour.jpg"
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "Andy reads the weekend.",
+      "description": "Vol. 1 No. 23 · Nov 19–22",
+      "duration": "5:46",
+      "src": "/audio/2026-11-18.mp3"
+    },
+    "calendar": [
+      {
+        "month": "NOV",
+        "day": "19",
+        "title": "lespecial at The 808, Natalie Brooke opens",
+        "meta": "doors 7 PM · 18+",
+        "starred": false,
+        "href": "#lespecial-808"
+      },
+      {
+        "month": "NOV",
+        "day": "19",
+        "title": "Twilight movie night at Kern's",
+        "meta": "6:30 PM · free",
+        "starred": false,
+        "href": "#twilight-kerns"
+      },
+      {
+        "month": "NOV",
+        "day": "19",
+        "title": "Super Birthday gran prix at Fly by Night",
+        "meta": "9 PM · $5",
+        "starred": true,
+        "href": "#super-birthday-fbn"
+      },
+      {
+        "month": "NOV",
+        "day": "20",
+        "title": "Piethagorean pizza buffet for Ujima Soccer at Printshop",
+        "meta": "5 – 8 PM · $23",
+        "starred": false,
+        "href": "#ujima-pizza-printshop"
+      },
+      {
+        "month": "NOV",
+        "day": "20",
+        "title": "Pitch a Friend at Hi-Wire",
+        "meta": "7 PM · free",
+        "starred": true,
+        "href": "#pitch-a-friend-hiwire"
+      },
+      {
+        "month": "NOV",
+        "day": "20",
+        "title": "Deadtronica at The 808",
+        "meta": "doors 7 PM · 18+",
+        "starred": false,
+        "href": "#deadtronica-808"
+      },
+      {
+        "month": "NOV",
+        "day": "20",
+        "title": "Planet Doom: yeEDM at The Pink Cactus",
+        "meta": "9 PM",
+        "starred": false,
+        "href": "#yeedm-pink-cactus"
+      },
+      {
+        "month": "NOV",
+        "day": "21",
+        "title": "SoKno Sourdough's first Saturday",
+        "meta": "9 AM – 1 PM",
+        "starred": false,
+        "href": "#sourdough-saturdays"
+      },
+      {
+        "month": "NOV",
+        "day": "21",
+        "title": "Playing 'Possum at Ijams Nature Center",
+        "meta": "1 – 2 PM · $10 · ages 5+",
+        "starred": true,
+        "href": "#possum-ijams"
+      },
+      {
+        "month": "NOV",
+        "day": "21",
+        "title": "Cyanotype workshop at Ijams Nature Center",
+        "meta": "2:30 – 4 PM · $18",
+        "starred": false,
+        "href": "#cyanotype-ijams"
+      },
+      {
+        "month": "NOV",
+        "day": "21",
+        "title": "LSU at Tennessee — game-day board at Earl's",
+        "meta": "3:30 PM kickoff · board all day",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "NOV",
+        "day": "21",
+        "title": "Summoner's Circle homecoming at The 808",
+        "meta": "doors 7 PM · all ages",
+        "starred": false,
+        "href": "#summoners-circle-808"
+      },
+      {
+        "month": "NOV",
+        "day": "21",
+        "title": "First Bass x Planet Doom at The Pink Cactus",
+        "meta": "8 PM · two stages",
+        "starred": true,
+        "href": "#first-bass-pink-cactus"
+      },
+      {
+        "month": "NOV",
+        "day": "21",
+        "title": "Marcel Sletten and Organically Programmed at Fly by Night",
+        "meta": "9 PM",
+        "starred": false,
+        "href": "#sletten-op-fbn"
+      },
+      {
+        "month": "NOV",
+        "day": "22",
+        "title": "Renew in Nature at the Ijams Homesite",
+        "meta": "10 AM – noon · $40",
+        "starred": false,
+        "href": "#renew-in-nature-ijams"
+      },
+      {
+        "month": "NOV",
+        "day": "22",
+        "title": "Moss Meander at Mead's Quarry",
+        "meta": "1 – 3 PM · $15",
+        "starred": false,
+        "href": "#moss-meander-ijams"
+      },
+      {
+        "month": "NOV",
+        "day": "22",
+        "title": "Stained glass workshop at Hi-Wire",
+        "meta": "3 PM · $80",
+        "starred": false,
+        "href": "#stained-glass-hiwire"
+      },
+      {
+        "month": "NOV",
+        "day": "22",
+        "title": "Eras of House with Goos:3 at The Pink Cactus",
+        "meta": "9 PM – midnight",
+        "starred": false,
+        "href": "#eras-of-house-pink-cactus"
+      }
+    ]
+  }
+}
