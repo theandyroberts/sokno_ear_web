@@ -163,7 +163,7 @@ describe("venue page", () => {
     const ui = await VenuePage({ params: Promise.resolve({ key: "kerns" }) });
     const { container } = render(ui);
     expect(screen.getByRole("heading", { level: 1 }).textContent).toBe("Kern's");
-    expect(container.querySelector('header img[src="/assets/venues/kerns.png"]')).toBeTruthy();
+    expect(container.querySelector('header img[src="/assets/venues/ear/kerns.png"]')).toBeTruthy();
     expect(expectRowShape(container).length).toBeGreaterThan(10);
     const { pastRows } = expectTwoHalves(container);
     expect(pastRows.length).toBeGreaterThan(3);
@@ -238,7 +238,7 @@ describe("search page", () => {
     expect(screen.getByRole("heading", { name: "Venues" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "Places" })).toBeInTheDocument();
     expect(screen.queryByRole("heading", { name: "Articles" })).toBeNull();
-    expect(container.querySelector('.ear-venue-tile img[src="/assets/venues/kerns.png"]')).toBeTruthy();
+    expect(container.querySelector('.ear-venue-tile img[src="/assets/venues/ear/kerns.png"]')).toBeTruthy();
     // Kern's is a venue and a place pill, so it shows up once in each list
     const kerns = screen.getAllByRole("link", { name: "Kern's" }).map((a) => a.getAttribute("href"));
     expect(kerns).toEqual(["/venue/kerns", "/place/kerns"]);

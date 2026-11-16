@@ -17,6 +17,13 @@ describe("venue registry", () => {
       expect(fs.existsSync(file), `${key} → ${v.logo}`).toBe(true);
     }
   });
+  it("every re-inked logo keeps the venue's own file beside it", () => {
+    for (const [key, v] of Object.entries(registry)) {
+      if (!v.logo) continue;
+      expect(v.logoOriginal, key).toBeTruthy();
+      expect(fs.existsSync(path.join(process.cwd(), "public", v.logoOriginal!.replace(/^\//, ""))), `${key} → ${v.logoOriginal}`).toBe(true);
+    }
+  });
   it("every entry records where its logo came from, or why there isn't one", () => {
     for (const [key, v] of Object.entries(registry)) {
       expect(v.name, key).toBeTruthy();
@@ -56,7 +63,7 @@ describe("venue registry", () => {
     expect(credited).toHaveLength(1);
     for (const item of credited) {
       expect(item.brand).toBe("AMBC");
-      expect(item.logo).toBe("/assets/venues/ambc-official.png");
+      expect(item.logo).toBe("/assets/venues/ear/ambc-official.png");
     }
     for (const item of Object.values(days).flat().filter((item) => !item.venueKey)) {
       expect(item.logo).toBe(matchVenue(item.venue, registry)?.logo ?? null);

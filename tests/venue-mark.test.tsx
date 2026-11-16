@@ -18,7 +18,7 @@ describe("the venue's framed mark in the facts box", () => {
     expect(storyVenue({ event: { locationName: "Hi-Wire Brewing Knoxville" } }, registry)?.key).toBe("hi-wire");
     expect(storyVenue({ event: { locationName: "Eggspectation at Kern's" } }, registry)?.key).toBe("kerns");
     expect(storyVenue({ event: { locationName: "UpTop at Kern's" } }, registry)?.key).toBe("kerns");
-    expect(storyVenue({ venueKey: "earls" }, registry)).toMatchObject({ key: "earls", name: "Earl's", logo: "/assets/venues/earls.png" });
+    expect(storyVenue({ venueKey: "earls" }, registry)).toMatchObject({ key: "earls", name: "Earl's", logo: "/assets/venues/ear/earls.png" });
     expect(storyVenue({}, registry)).toBeNull();
     // a place with no registry entry still gets a page key and a wordmark
     expect(storyVenue({ event: { locationName: "Borderland Playhouse" } }, registry)).toMatchObject({ key: "borderland-playhouse", logo: null });
@@ -34,7 +34,7 @@ describe("the venue's framed mark in the facts box", () => {
     expect(box.parentElement!.className).toBe("ear-facts-wrap");
     const mark = screen.getByRole("link", { name: "The 808: every story in the Ear" });
     expect(mark).toHaveAttribute("href", "/venue/the-808");
-    expect(mark.querySelector("img")).toHaveAttribute("src", "/assets/venues/the-808.png");
+    expect(mark.querySelector("img")).toHaveAttribute("src", "/assets/venues/ear/the-808.png");
     const dl = container.querySelector("dl")!;
     const ticketLink = screen.getByRole("link", { name: /Get tickets at The 808/ });
     expect(mark.compareDocumentPosition(dl) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();

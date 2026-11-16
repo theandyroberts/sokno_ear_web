@@ -3,7 +3,8 @@
   "_treatments": {
     "as-is": "the venue's file, trimmed to its bounding box and scaled down; colors untouched",
     "ink-recolor": "the mark was drawn light-on-dark (invisible on cream), so near-white strokes were repainted brand ink #171512 and the accent colors were left alone",
-    "cropped": "a sub-line irrelevant to us (another town, a tagline) was cropped off the bottom"
+    "cropped": "a sub-line irrelevant to us (another town, a tagline) was cropped off the bottom",
+    "ear-inks": "every entry: `logo` is the mark re-inked in the Ear's four colors by scripts/venue-logos-ear.py (ink, cream, pine, rust; Andy, 2026-11-16); `logoOriginal` is the venue's own file, untouched, and `treatment` still describes how that original was prepared. To put a venue back, set `logo` to `logoOriginal`."
   },
   "venues": {
     "angry-dumplings": {
@@ -13,13 +14,14 @@
         "Angry Dumpling"
       ],
       "site": "https://www.angrydumplingtn.com/",
-      "logo": "/assets/venues/angry-dumplings.png",
+      "logo": "/assets/venues/ear/angry-dumplings.png",
       "source": "https://www.angrydumplingtn.com/assets/angry-dumplings-logo-B_9ifeA1.png",
       "sourceNote": "the logo asset their own site loads (found in the site's JS bundle)",
       "treatment": "as-is",
       "fetched": "2026-08-29",
       "confidence": "high",
-      "note": "Not the same art as the Mon–Wed sponsor card — that's the Ear's own commissioned mascot engraving at /assets/spots/angry_dumpling_mascot.jpg. This is the restaurant's real logo."
+      "note": "Not the same art as the Mon–Wed sponsor card — that's the Ear's own commissioned mascot engraving at /assets/spots/angry_dumpling_mascot.jpg. This is the restaurant's real logo.",
+      "logoOriginal": "/assets/venues/angry-dumplings.png"
     },
     "earls": {
       "name": "Earl's",
@@ -27,12 +29,13 @@
         "Earl's"
       ],
       "site": "https://earlsknox.com/",
-      "logo": "/assets/venues/earls.png",
+      "logo": "/assets/venues/ear/earls.png",
       "source": "https://static.spotapps.co/website_images/ab_websites/620499_website_v1/logo_new_2.png",
       "sourceNote": "header logo on earlsknox.com (SpotHopper CDN, their site's own asset)",
       "treatment": "as-is",
       "fetched": "2026-08-29",
-      "confidence": "high"
+      "confidence": "high",
+      "logoOriginal": "/assets/venues/earls.png"
     },
     "hi-wire": {
       "name": "Hi-Wire Brewing",
@@ -40,13 +43,14 @@
         "Hi-Wire"
       ],
       "site": "https://hiwirebrewing.com/knoxville/",
-      "logo": "/assets/venues/hi-wire.svg",
+      "logo": "/assets/venues/ear/hi-wire.svg",
       "source": "inline <svg aria-label=\"weblogo\"> in the hiwirebrewing.com page header",
       "sourceNote": "vector, straight out of their site header — the tightrope walker plus the wordmark",
       "treatment": "ink-recolor",
       "fetched": "2026-08-29",
       "confidence": "high",
-      "note": "Their file paints the wordmark #fff9e8 for a dark header; that was swapped to #171512. The blue #00b5f0 accent is theirs, untouched."
+      "note": "Their file paints the wordmark #fff9e8 for a dark header; that was swapped to #171512. The blue #00b5f0 accent is theirs, untouched.",
+      "logoOriginal": "/assets/venues/hi-wire.svg"
     },
     "kerns": {
       "name": "Kern's",
@@ -56,12 +60,13 @@
         "Kern's Food Hall rooftop"
       ],
       "site": "https://kernsbakery.com/",
-      "logo": "/assets/venues/kerns.png",
+      "logo": "/assets/venues/ear/kerns.png",
       "source": "https://kernsbakery.com/wp-content/uploads/2025/10/KERNS-FINAL-LOGO-Black.png",
       "sourceNote": "the black lockup from their own media library — wordmark, bakery building, EST. 1931",
       "treatment": "as-is",
       "fetched": "2026-08-29",
-      "confidence": "high"
+      "confidence": "high",
+      "logoOriginal": "/assets/venues/kerns.png"
     },
     "the-pink-cactus": {
       "name": "The Pink Cactus",
@@ -70,12 +75,13 @@
         "Pink Cactus"
       ],
       "site": "https://www.thepinkcactusknox.com/",
-      "logo": "/assets/venues/the-pink-cactus.svg",
+      "logo": "/assets/venues/ear/the-pink-cactus.svg",
       "source": "inline 631×334 <svg> in the thepinkcactusknox.com header",
       "sourceNote": "vector, from their own site header",
       "treatment": "as-is",
       "fetched": "2026-08-29",
-      "confidence": "high"
+      "confidence": "high",
+      "logoOriginal": "/assets/venues/the-pink-cactus.svg"
     },
     "southside-garage": {
       "name": "SouthSide Garage",
@@ -84,12 +90,13 @@
         "Southside Garage"
       ],
       "site": "https://southsidegarageknox.com/",
-      "logo": "/assets/venues/southside-garage.png",
+      "logo": "/assets/venues/ear/southside-garage.png",
       "source": "https://static.spotapps.co/website_images/ab_websites/127050_website_v1/logo_new.png",
       "sourceNote": "header logo on southsidegarageknox.com — the neon-sign mark",
       "treatment": "as-is",
       "fetched": "2026-08-29",
-      "confidence": "high"
+      "confidence": "high",
+      "logoOriginal": "/assets/venues/southside-garage.png"
     },
     "sokno-taco": {
       "name": "SoKno Taco Cantina",
@@ -98,13 +105,14 @@
         "SoKno Taco"
       ],
       "site": "https://soknota.co/",
-      "logo": "/assets/venues/sokno-taco.png",
+      "logo": "/assets/venues/ear/sokno-taco.png",
       "source": "https://soknota.co/wp-content/uploads/2019/03/sokno-taco-cantina-logo.png",
       "sourceNote": "header logo on soknota.co",
       "treatment": "ink-recolor",
       "fetched": "2026-08-29",
       "confidence": "high",
-      "note": "Their file is white-on-dark. The white type became ink; the gold 'So' is theirs and stayed gold."
+      "note": "Their file is white-on-dark. The white type became ink; the gold 'So' is theirs and stayed gold.",
+      "logoOriginal": "/assets/venues/sokno-taco.png"
     },
     "south-coast-pizza": {
       "name": "South Coast Pizza",
@@ -112,13 +120,14 @@
         "South Coast Pizza"
       ],
       "site": "https://southcoastpizza.com/",
-      "logo": "/assets/venues/south-coast-pizza.png",
+      "logo": "/assets/venues/ear/south-coast-pizza.png",
       "source": "https://static.spotapps.co/website_images/ab_websites/120402_website_v1/logo.png",
       "sourceNote": "header logo on southcoastpizza.com",
       "treatment": "ink-recolor",
       "fetched": "2026-08-29",
       "confidence": "high",
-      "note": "White-on-dark original; repainted ink so it reads on the cream tile."
+      "note": "White-on-dark original; repainted ink so it reads on the cream tile.",
+      "logoOriginal": "/assets/venues/south-coast-pizza.png"
     },
     "puckers": {
       "name": "Puckers Sports Grill",
@@ -127,13 +136,14 @@
         "Puckers"
       ],
       "site": "https://puckersgatlinburg.com/",
-      "logo": "/assets/venues/puckers.png",
+      "logo": "/assets/venues/ear/puckers.png",
       "source": "https://puckersgatlinburg.com/wp-content/uploads/2024/07/Puckers-Full-Logo-2.19.25.png",
       "sourceNote": "full logo from the Puckers company site",
       "treatment": "cropped",
       "fetched": "2026-08-29",
       "confidence": "medium",
-      "note": "The company file ends with a 'Gatlinburg, Tennessee' line; that band was cropped off since this is the Knoxville room at 115 Mimosa Ave. Swap in a Knoxville-specific file if they publish one."
+      "note": "The company file ends with a 'Gatlinburg, Tennessee' line; that band was cropped off since this is the Knoxville room at 115 Mimosa Ave. Swap in a Knoxville-specific file if they publish one.",
+      "logoOriginal": "/assets/venues/puckers.png"
     },
     "alliance-brewing": {
       "name": "Alliance Brewing Company",
@@ -142,13 +152,14 @@
         "Alliance"
       ],
       "site": "https://alliancebrewing.com/",
-      "logo": "/assets/venues/alliance-brewing.png",
+      "logo": "/assets/venues/ear/alliance-brewing.png",
       "source": "https://alliancebrewing.com/wp-content/themes/alliancebrewing/images/abc--race--HOT.png",
       "sourceNote": "the badge mark shipped inside their own WordPress theme",
       "treatment": "as-is",
       "fetched": "2026-08-29",
       "confidence": "high",
-      "note": "Not on the listings yet — Alliance only shows up in 'sub' lines so far. Kept here so it's ready the week it gets its own row."
+      "note": "Not on the listings yet — Alliance only shows up in 'sub' lines so far. Kept here so it's ready the week it gets its own row.",
+      "logoOriginal": "/assets/venues/alliance-brewing.png"
     },
     "trailhead": {
       "name": "Trailhead Beer Market",
@@ -157,12 +168,13 @@
         "Trailhead"
       ],
       "site": "https://www.instagram.com/trailheadbeer/",
-      "logo": "/assets/venues/trailhead.png",
+      "logo": "/assets/venues/ear/trailhead.png",
       "source": "https://graph.facebook.com/trailheadbeermarket/picture?type=large&width=720&height=720",
       "sourceNote": "the bar's own Facebook page picture (facebook.com/trailheadbeermarket), the bottle-cap mark at 720px; the wood-wall background was removed and the cap trimmed to its edge. Instagram caps the same avatar at 150px and trailheadbeermarket.com is parked. Andy, 2026-10-06: the cap beats the typeset tile.",
       "treatment": "as-is",
       "fetched": "2026-10-06",
-      "confidence": "high"
+      "confidence": "high",
+      "logoOriginal": "/assets/venues/trailhead.png"
     },
     "mimosas": {
       "name": "Mimosas",
@@ -185,12 +197,13 @@
         "Printshop"
       ],
       "site": "https://printshopbeer.com/",
-      "logo": "/assets/venues/printshop.png",
+      "logo": "/assets/venues/ear/printshop.png",
       "source": "https://printshopbeer.com/ (header wordmark; the site's own file at static.spotapps.co/website_images/ab_websites/184025_website_v1/logo.png is 210x99)",
       "sourceNote": "Andy's capture of the wordmark from printshopbeer.com, 2026-10-06, at 1320px; white background knocked out to transparency, trimmed. The site's safari-pinned-tab.svg is only the P mark.",
       "treatment": "as-is",
       "fetched": "2026-10-06",
-      "confidence": "high"
+      "confidence": "high",
+      "logoOriginal": "/assets/venues/printshop.png"
     },
     "the-808": {
       "name": "The 808",
@@ -199,12 +212,13 @@
         "808 Sevier"
       ],
       "site": "https://808knox.com/",
-      "logo": "/assets/venues/the-808.png",
+      "logo": "/assets/venues/ear/the-808.png",
       "source": "https://808knox.com/wp-content/uploads/2026/09/808-Stacked-FullColor-WhiteType.png",
       "sourceNote": "header logo on 808knox.com, the venue's own upload (1346x1292)",
       "treatment": "ink-recolor",
       "fetched": "2026-10-06",
-      "confidence": "high"
+      "confidence": "high",
+      "logoOriginal": "/assets/venues/the-808.png"
     },
     "fly-by-night": {
       "name": "Fly by Night",
@@ -213,13 +227,14 @@
         "Fly By Night"
       ],
       "site": "https://www.flybynightknox.com/",
-      "logo": "/assets/venues/fly-by-night.svg",
+      "logo": "/assets/venues/ear/fly-by-night.svg",
       "source": "https://cdn.prod.website-files.com/644b370ea1ed9cd5259af021/645af7c4046e97c61eaebdfe_Horiz-dark.svg",
       "sourceNote": "the horizontal wordmark the lounge's own site loads in its header (alt text 'Fly By Night (Logo)')",
       "treatment": "as-is",
       "fetched": "2026-10-14",
       "confidence": "high",
-      "note": "Dark brown (#47372A) lettering on transparent, 360x76, so it sits on the cream chip untouched. Andy asked for it 2026-10-14."
+      "note": "Dark brown (#47372A) lettering on transparent, 360x76, so it sits on the cream chip untouched. Andy asked for it 2026-10-14.",
+      "logoOriginal": "/assets/venues/fly-by-night.svg"
     },
     "ijams-nature-center": {
       "name": "Ijams Nature Center",
@@ -235,13 +250,14 @@
         "Ijams Homesite"
       ],
       "site": "https://www.ijams.org/",
-      "logo": "/assets/venues/ijams-nature-center.png",
+      "logo": "/assets/venues/ear/ijams-nature-center.png",
       "source": "https://static.wixstatic.com/media/236ed8_a65597e0b2714d8faa1d2d5f3eb00ecc~mv2.png (Ijams-Logo-2023.png)",
       "sourceNote": "the horizontal 2023 lockup their own site header loads (674x191) — the bird-and-trees mark plus 'Ijams NATURE CENTER'; trimmed, colors untouched",
       "treatment": "as-is",
       "fetched": "2026-10-26",
       "confidence": "high",
-      "note": "Every Ijams location resolves here: the River Landing, Mead's Quarry, the Nature Playscape, the Miller Education Building, the Homesite. The organization asked to be called Ijams Nature Center (2026-10-06); the alias list only matches text, it never writes it."
+      "note": "Every Ijams location resolves here: the River Landing, Mead's Quarry, the Nature Playscape, the Miller Education Building, the Homesite. The organization asked to be called Ijams Nature Center (2026-10-06); the alias list only matches text, it never writes it.",
+      "logoOriginal": "/assets/venues/ijams-nature-center.png"
     },
     "old-sevier-district": {
       "name": "Old Sevier District",
@@ -250,13 +266,14 @@
         "Old Sevier"
       ],
       "site": "https://oldsevierdistrict.org/",
-      "logo": "/assets/venues/old-sevier-district.png",
+      "logo": "/assets/venues/ear/old-sevier-district.png",
       "source": "https://images.squarespace-cdn.com/content/v1/667367c053c505644f7e86a0/18048fd0-ca45-4e29-91d2-3a339695e6d5/SEVIER+AVE%2C-10-photoaidcom-cropped.png",
       "sourceNote": "the header logo on oldsevierdistrict.org (alt 'Old Sevier District'): the blue contour-map circle with the yellow ring and the S arrow. The site serves it at 380x380; that is the largest copy they publish.",
       "treatment": "as-is",
       "fetched": "2026-10-26",
       "confidence": "high",
-      "note": "'Old Sevier' is the district's merchant association, so the label 'Old Sevier' falls back here when a story names no venue of its own. 'Old Sevier Market' is longer and wins its own rows. Never add a bare 'Sevier' alias."
+      "note": "'Old Sevier' is the district's merchant association, so the label 'Old Sevier' falls back here when a story names no venue of its own. 'Old Sevier Market' is longer and wins its own rows. Never add a bare 'Sevier' alias.",
+      "logoOriginal": "/assets/venues/old-sevier-district.png"
     },
     "borderland-playhouse": {
       "name": "Borderland Playhouse",
@@ -297,13 +314,14 @@
         "Urban Wilderness"
       ],
       "site": "https://legacyparks.org/",
-      "logo": "/assets/venues/legacy-parks.png",
+      "logo": "/assets/venues/ear/legacy-parks.png",
       "source": "https://legacyparks.org/wp-content/uploads/2023/08/LegacyParksLogoHoriz.png",
       "sourceNote": "the horizontal tree-and-wordmark lockup their site header loads (390x189, their own upload); trimmed, colors untouched",
       "treatment": "as-is",
       "fetched": "2026-10-26",
       "confidence": "high",
-      "note": "Legacy Parks assembled the Urban Wilderness and owns Baker Creek Preserve, so trail-district rows with no narrower venue carry their mark. The Gateway Park is the City's; it resolves here through 'Urban Wilderness' because Legacy Parks is the name on the district."
+      "note": "Legacy Parks assembled the Urban Wilderness and owns Baker Creek Preserve, so trail-district rows with no narrower venue carry their mark. The Gateway Park is the City's; it resolves here through 'Urban Wilderness' because Legacy Parks is the name on the district.",
+      "logoOriginal": "/assets/venues/legacy-parks.png"
     },
     "ambc": {
       "name": "AMBC",
@@ -312,12 +330,13 @@
         "AMBC"
       ],
       "site": "https://ambcknox.org/",
-      "logo": "/assets/venues/ambc-official.png",
+      "logo": "/assets/venues/ear/ambc-official.png",
       "source": "https://ambcknox.org/site/wp-content/uploads/2026/01/JPG%C2%B7PNG-Screen.zip",
       "sourceNote": "AMBC logo-cog PREFERRED.png from the official screen-logo pack linked at https://ambcknox.org/brand/; preferred gold cog and blue type for light backgrounds, unchanged.",
       "treatment": "as-is",
       "fetched": "2026-11-02",
-      "confidence": "high"
+      "confidence": "high",
+      "logoOriginal": "/assets/venues/ambc-official.png"
     },
     "mighty-mud": {
       "name": "Mighty Mud",
@@ -325,12 +344,13 @@
         "Mighty Mud"
       ],
       "site": "https://mightymud.com/",
-      "logo": "/assets/venues/mighty-mud.png",
+      "logo": "/assets/venues/ear/mighty-mud.png",
       "source": "https://mightymud.com/wp-content/uploads/2020/05/Mighty-Mud-hi-res.png",
       "sourceNote": "the hi-res stacked logo in their own media library (2500x2125; the site's favicon is a crop of the same file); trimmed, colors untouched",
       "treatment": "as-is",
       "fetched": "2026-10-26",
-      "confidence": "high"
+      "confidence": "high",
+      "logoOriginal": "/assets/venues/mighty-mud.png"
     },
     "sokno-sourdough": {
       "name": "SoKno Sourdough",
@@ -339,12 +359,13 @@
         "So-Kno Sourdough"
       ],
       "site": "https://www.soknosourdough.com/",
-      "logo": "/assets/venues/sokno-sourdough.png",
+      "logo": "/assets/venues/ear/sokno-sourdough.png",
       "source": "https://www.soknosourdough.com/uploads/b/84c17c254fd40b3cf04dc4b4e3ed8dee7b7d23b57ca16836ac45f454c06b66ed/logo_circle_green_1624646491.png",
       "sourceNote": "the green circle with the Dutch oven, the logo file their own site declares (1264x1264); colors untouched",
       "treatment": "as-is",
       "fetched": "2026-10-26",
-      "confidence": "high"
+      "confidence": "high",
+      "logoOriginal": "/assets/venues/sokno-sourdough.png"
     },
     "redbud-kitchen": {
       "name": "Redbud Kitchen",
@@ -353,12 +374,13 @@
         "Redbud"
       ],
       "site": "https://www.redbudkitchen.com/",
-      "logo": "/assets/venues/redbud-kitchen.png",
+      "logo": "/assets/venues/ear/redbud-kitchen.png",
       "source": "https://images.squarespace-cdn.com/content/v1/60c10e6fb1480d2dddf512f1/7fbe4f33-dd0a-4633-9124-560ee14aedd9/RK_Logo_Final_Color.png",
       "sourceNote": "the header logo on redbudkitchen.com (alt 'Redbud Kitchen', 1500x1099) — the script wordmark in the sunburst; trimmed, colors untouched",
       "treatment": "as-is",
       "fetched": "2026-10-26",
-      "confidence": "high"
+      "confidence": "high",
+      "logoOriginal": "/assets/venues/redbud-kitchen.png"
     },
     "sevier-ave-burger": {
       "name": "Sevier Ave Burger Co.",
@@ -382,13 +404,14 @@
         "Honeybee"
       ],
       "site": "https://www.honeybeecoffeeco.com/",
-      "logo": "/assets/venues/honeybee-coffee.png",
+      "logo": "/assets/venues/ear/honeybee-coffee.png",
       "source": "https://images.squarespace-cdn.com/content/v1/66706c462687cb0236bf16b9/1ce78e70-99d2-4fc6-947e-09d6e1fd5ad6/16.9+Logo.png",
       "sourceNote": "the wide '16.9 Logo' from their own Squarespace library (1500x844) — the arched 'honeybee' script, COFFEE CO. and the bee; the header's 500px 'logo white' is the same art smaller",
       "treatment": "ink-recolor",
       "fetched": "2026-10-26",
       "confidence": "high",
-      "note": "Their file is pure white on transparent for a dark header; every visible pixel was repainted brand ink #171512, alpha kept."
+      "note": "Their file is pure white on transparent for a dark header; every visible pixel was repainted brand ink #171512, alpha kept.",
+      "logoOriginal": "/assets/venues/honeybee-coffee.png"
     },
     "old-sevier-market": {
       "name": "Old Sevier Market",
@@ -396,12 +419,13 @@
         "Old Sevier Market"
       ],
       "site": "https://oldseviermarket.com/",
-      "logo": "/assets/venues/old-sevier-market.png",
+      "logo": "/assets/venues/ear/old-sevier-market.png",
       "source": "https://graph.facebook.com/oldseviermarket/picture?type=large&width=720&height=720",
       "sourceNote": "the market's own Facebook page picture (facebook.com/oldseviermarket) at 720px — gold OLD SEVIER MARKET lettering on maroon; oldseviermarket.com is a GoDaddy page whose header is a photo and a text tagline, no logo file. Trimmed to the lettering, colors untouched.",
       "treatment": "as-is",
       "fetched": "2026-10-26",
-      "confidence": "medium"
+      "confidence": "medium",
+      "logoOriginal": "/assets/venues/old-sevier-market.png"
     },
     "knoxville-theatre-club": {
       "name": "Knoxville Theatre Club",
@@ -410,12 +434,13 @@
         "Knoxville Theater Club"
       ],
       "site": "https://knoxvilletheatreclub.org/",
-      "logo": "/assets/venues/knoxville-theatre-club.png",
+      "logo": "/assets/venues/ear/knoxville-theatre-club.png",
       "source": "https://images.squarespace-cdn.com/content/v1/543c8bd0e4b03bb4774ed0b8/d34b91b7-c0c3-410e-b9f6-aa3f5e4b95cf/Knoxville+Theatre+Club+LOGO+2500x2500+300dpi+007.png",
       "sourceNote": "the header logo on knoxvilletheatreclub.org (alt 'KNOXVILLE THEATRE CLUB') — the red rubber-stamp roundel; fetched at 1500px, trimmed, colors untouched",
       "treatment": "as-is",
       "fetched": "2026-10-26",
-      "confidence": "high"
+      "confidence": "high",
+      "logoOriginal": "/assets/venues/knoxville-theatre-club.png"
     },
     "marble-springs": {
       "name": "Marble Springs",
@@ -424,12 +449,13 @@
         "Marble Springs"
       ],
       "site": "https://www.marblesprings.net/",
-      "logo": "/assets/venues/marble-springs.png",
+      "logo": "/assets/venues/ear/marble-springs.png",
       "source": "https://static.wixstatic.com/media/6ad499_3fb93d3d0b1343a0b60d79eaf44ce542~mv2.jpg (MS_logo_knoxtenn.jpg)",
       "sourceNote": "the cabin engraving with MARBLE SPRINGS / STATE HISTORIC SITE / Knoxville, Tennessee, the logo their own site header loads (1252x993 JPEG). The JPEG's white ground was knocked out to transparency so the ink sits straight on the cream tile; the lettering and the blue-gray cabin tints are theirs.",
       "treatment": "as-is",
       "fetched": "2026-10-26",
-      "confidence": "high"
+      "confidence": "high",
+      "logoOriginal": "/assets/venues/marble-springs.png"
     }
   }
 }

@@ -12,12 +12,12 @@ const registry = loadVenues();
 describe("CalendarItem — venue tile", () => {
   it("draws the venue's logo on the tile when it has one", () => {
     const { container } = render(
-      <CalendarItem title="Pint night" meta="All-day happy hour" href="#pint" logo="/assets/venues/hi-wire.svg" logoTreatment="ink-recolor" venueName="Hi-Wire Brewing" />,
+      <CalendarItem title="Pint night" meta="All-day happy hour" href="#pint" logo="/assets/venues/ear/hi-wire.svg" logoTreatment="ink-recolor" venueName="Hi-Wire Brewing" />,
     );
     const tile = container.querySelector(".ear-cal-logo")!;
     expect(tile.getAttribute("aria-hidden")).toBe("true");
     expect(tile.getAttribute("data-treatment")).toBe("ink-recolor");
-    expect(tile.querySelector("img")!.getAttribute("src")).toBe("/assets/venues/hi-wire.svg");
+    expect(tile.querySelector("img")!.getAttribute("src")).toBe("/assets/venues/ear/hi-wire.svg");
     expect(container.querySelector(".ear-cal-logo--wordmark")).toBeNull();
   });
 
@@ -71,7 +71,7 @@ describe("calendarVenue — resolving a row's venue from its story", () => {
     const { container } = render(<Paper episode={episode} />);
     const tiles = container.querySelectorAll('.ear-soon-aside a[href="#ambc-fall-fest"] .ear-cal-logo img');
     expect(tiles).toHaveLength(2);
-    for (const tile of tiles) expect(tile.getAttribute("src")).toBe("/assets/venues/ambc-official.png");
+    for (const tile of tiles) expect(tile.getAttribute("src")).toBe("/assets/venues/ear/ambc-official.png");
   });
   const row = { title: "Pint night", meta: "All-day happy hour too · 2020 Barber St" };
   it("trusts the story's event location first", () => {
@@ -123,7 +123,7 @@ describe("Paper — calendar rows carry the venue tile and the day bar carries t
     const { container } = render(<Paper episode={withVenue} />);
     const tiles = [...container.querySelectorAll(".ear-soon-aside .ear-cal-logo")];
     expect(tiles).toHaveLength(2);
-    expect(tiles[0].querySelector("img")!.getAttribute("src")).toBe("/assets/venues/hi-wire.svg");
+    expect(tiles[0].querySelector("img")!.getAttribute("src")).toBe("/assets/venues/ear/hi-wire.svg");
     expect(tiles[1].querySelector("img")).toBeNull();
     expect(tiles[1].textContent).toBe("Feature"); // the fixture feature's label, no venue
   });

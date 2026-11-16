@@ -33,7 +33,7 @@ describe("buildIndex — the real episodes", () => {
   it("uses the registry's key for Kern's, Hi-Wire and the Pink Cactus, with the logo", () => {
     const kerns = index.venues.find((v) => v.key === "kerns")!;
     expect(kerns.name).toBe("Kern's");
-    expect(kerns.logo).toBe("/assets/venues/kerns.png");
+    expect(kerns.logo).toBe("/assets/venues/ear/kerns.png");
     expect(index.venues.find((v) => v.key === "hi-wire")?.name).toBe("Hi-Wire Brewing");
     expect(index.venues.find((v) => v.key === "the-pink-cactus")).toBeTruthy();
     expect(index.venues.some((v) => v.key === "kerns-food-hall" || v.key === "hi-wire-brewing-knoxville")).toBe(false);

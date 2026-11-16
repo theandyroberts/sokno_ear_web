@@ -12,6 +12,9 @@ export type Venue = {
   site?: string;
   /** Public path to the logo, or null when we haven't found a good source. */
   logo: string | null;
+  /** The venue's own file, untouched. `logo` is that mark re-inked in the Ear's four colors
+   *  (scripts/venue-logos-ear.py; Andy, 2026-11-16); point `logo` back here to undo one. */
+  logoOriginal?: string | null;
   source?: string | null;
   sourceNote?: string | null;
   treatment?: string | null;
