@@ -800,7 +800,7 @@ export function DirtySouth({
           {dayName} night
         </h2>
         <p style={{ fontFamily: "var(--font-label)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", margin: "0 0 18px", opacity: 0.75 }}>
-          {data.dates[day] ? `${data.dates[day]} · ` : ""}Check one in each, then share your game plan in step 3.
+          {data.dates[day] ? `${data.dates[day]} · ` : ""}Check one in each, then share the game plan in step 3.
         </p>
 
         {PLAN_CATS.filter((c) => types.includes(c)).map((cat) => (
