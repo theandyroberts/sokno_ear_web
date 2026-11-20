@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { catOf, nightDates, parsePlanParams, planQuery, lineup, shareText, buildFeatured, minutesOf, inTimeOrder, type PlanOption, type PlannerData } from "@/lib/planner";
+import { catOf, nightDates, parsePlanParams, planQuery, lineup, shareText, buildFeatured, minutesOf, inTimeOrder, weekKey, freshPlan, type PlanOption, type PlannerData } from "@/lib/planner";
 import { buildDirectory, buildMerryAll } from "@/lib/planner-data";
 import { loadVenues } from "@/lib/venues";
 import type { NightDay, NightItem } from "@/lib/nightlife";
@@ -26,6 +26,18 @@ describe("planner basics", () => {
     expect(nightDates("Dec 31–Jan 3", "2026-12-28").Fri).toBe("Fri, Jan 1");
     expect(nightDates("Nov 20–23", "2026-11-16")).toEqual({}); // Nov 20 2026 is a Friday
     expect(nightDates("whenever", "2026-11-16")).toEqual({});
+  });
+  it("stamps a plan link with its weekend, and a link from another week loses its picks", () => {
+    expect(weekKey("Nov 19–22")).toBe("nov-19-22");
+    expect(weekKey("Oct 29–Nov 1")).toBe("oct-29-nov-1");
+    const q = planQuery({ day: "Fri", picks: { eat: "fri-dumplings" }, types: ["eat", "drink", "merry"] }, "nov-19-22");
+    expect(q).toBe("day=Fri&eat=fri-dumplings&w=nov-19-22");
+    expect(planQuery({ day: "Fri", picks: {}, types: ["eat", "drink", "merry"] }, "nov-19-22")).toBe("day=Fri"); // no picks, no stamp
+    const data = { week: "nov-19-22" } as PlannerData;
+    const parsed = parsePlanParams(Object.fromEntries(new URLSearchParams(q)));
+    expect(freshPlan(parsed, data)).toEqual({ day: "Fri", picks: { eat: "fri-dumplings" }, week: "nov-19-22" });
+    expect(freshPlan(parsed, { week: "nov-26-29" } as PlannerData)).toEqual({ day: "Fri" });
+    expect(freshPlan({ day: "Fri", picks: { eat: "x" } }, data)).toEqual({ day: "Fri", picks: { eat: "x" } }); // unstamped: as is
   });
   it("round-trips a plan through the share link and ignores junk", () => {
     const q = planQuery({ day: "Sat", picks: { eat: "sat-burger", merry: "s:summoners" }, types: ["eat", "merry"] });

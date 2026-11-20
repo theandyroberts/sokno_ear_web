@@ -122,6 +122,7 @@ describe("Dirty South party planner", () => {
     expect(url.searchParams.get("day")).toBe("Fri");
     expect(url.searchParams.get("eat")).toBe("fri-dumplings");
     expect(url.searchParams.get("merry")).toBe("fri-pitch");
+    expect(url.hash).toBe("#game-plan"); // a friend lands on the plan, not the top of the page
     expect(await screen.findByText(/Link copied/)).toBeInTheDocument();
   });
 

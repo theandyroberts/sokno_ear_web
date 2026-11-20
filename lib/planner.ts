@@ -43,6 +43,9 @@ export type PlannerData = {
   merryAll: Record<NightDay, PlanOption[]>;
   /** "Fri, Nov 20" for each night, when the weekend label could be read. */
   dates: Partial<Record<NightDay, string>>;
+  /** The weekend a plan link belongs to ("nov-19-22"). Row ids repeat every week, and
+   *  link previews are cached per URL, so a link carries its week and goes stale with it. */
+  week?: string;
 };
 
 export type Picks = Partial<Record<PlanCat, string>>;
@@ -114,6 +117,11 @@ export function nightDates(weekend: string, updated: string): PlannerData["dates
   return out;
 }
 
+/** "Nov 19–22" → "nov-19-22", the week stamp on a plan link. */
+export function weekKey(weekend: string): string {
+  return weekend.toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
 /** The option a pick id points at for one night, or null when it's stale (last week's link). */
 export function resolvePick(data: PlannerData, day: NightDay, cat: PlanCat, id?: string): PlanOption | null {
   if (!id) return null;
@@ -122,14 +130,15 @@ export function resolvePick(data: PlannerData, day: NightDay, cat: PlanCat, id?:
 }
 
 export type PlanState = { day: NightDay; picks: Picks; types: PlanCat[] };
+export type ParsedPlan = Partial<PlanState> & { week?: string };
 
-/** Read the share link: ?day=Fri&eat=…&drink=…&merry=…&t=eat,merry */
-export function parsePlanParams(params: Record<string, string | string[] | undefined>): Partial<PlanState> {
+/** Read the share link: ?day=Fri&eat=…&drink=…&merry=…&t=eat,merry&w=nov-19-22 */
+export function parsePlanParams(params: Record<string, string | string[] | undefined>): ParsedPlan {
   const one = (k: string) => {
     const v = params[k];
     return (Array.isArray(v) ? v[0] : v)?.slice(0, 120) || undefined;
   };
-  const out: Partial<PlanState> = {};
+  const out: ParsedPlan = {};
   const day = one("day");
   if (day && (PLAN_DAYS as string[]).includes(day)) out.day = day as NightDay;
   const picks: Picks = {};
@@ -143,17 +152,36 @@ export function parsePlanParams(params: Record<string, string | string[] | undef
     const types = PLAN_CATS.filter((c) => t.split(",").includes(c));
     if (types.length) out.types = types;
   }
+  const w = one("w");
+  if (w) out.week = w;
   return out;
 }
 
+/** A link's picks only count in the week it was made: next week the same ids name
+ *  different events. A link with no week stamp (made before stamps) is taken as is. */
+export function freshPlan(parsed: ParsedPlan, data: PlannerData): ParsedPlan {
+  if (parsed.week && data.week && parsed.week !== data.week) {
+    const rest = { ...parsed };
+    delete rest.picks;
+    delete rest.week;
+    return rest;
+  }
+  return parsed;
+}
+
 /** The query string that brings a visitor back to exactly this plan. */
-export function planQuery(state: PlanState): string {
+export function planQuery(state: PlanState, week?: string): string {
   const q = new URLSearchParams();
   q.set("day", state.day);
+  let picked = false;
   for (const cat of PLAN_CATS) {
-    if (state.types.includes(cat) && state.picks[cat]) q.set(cat, state.picks[cat]!);
+    if (state.types.includes(cat) && state.picks[cat]) {
+      q.set(cat, state.picks[cat]!);
+      picked = true;
+    }
   }
   if (state.types.length < PLAN_CATS.length) q.set("t", state.types.join(","));
+  if (picked && week) q.set("w", week);
   return q.toString();
 }
 

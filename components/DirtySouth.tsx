@@ -8,7 +8,6 @@ import {
   CAT_LABEL, PLAN_CATS, PLAN_DAYS, buildFeatured, lineup, planQuery, resolvePick, shareText,
   type PlanCat, type PlanOption, type PlanState, type PlannerData, type Picks,
 } from "@/lib/planner";
-import { renderPlanImage } from "@/lib/planImage";
 
 // The night side of the Ear: acid green, brush-black — and since 2026-11-20 a party
 // planner. Visitors tick what their night includes (eat, drink, be merry), pick one
@@ -535,7 +534,6 @@ export function DirtySouth({
   const [planInView, setPlanInView] = React.useState(false);
   const touched = React.useRef(false);
   const fileRef = React.useRef<File | null>(null);
-  const fontProbe = React.useRef<HTMLSpanElement>(null);
   const planRef = React.useRef<HTMLElement>(null);
   const fromLink = Boolean(initial?.picks);
 
@@ -552,7 +550,7 @@ export function DirtySouth({
   const state: PlanState = React.useMemo(() => ({ day, picks: picks[day] ?? {}, types }), [day, picks, types]);
   const plan = React.useMemo(() => lineup(data, state), [data, state]);
   const dayName = DAY_NAMES[day];
-  const query = planQuery(state);
+  const query = planQuery(state, data.week);
 
   // Once the visitor has touched the plan, keep it in the address bar (so a refresh or a
   // copied URL brings it back) and on this device. Untouched visits leave the URL alone,
@@ -574,24 +572,26 @@ export function DirtySouth({
     return () => window.removeEventListener("keydown", onKey);
   }, [mapOpen]);
 
-  // The picture is drawn ahead of the tap: iOS refuses navigator.share once the tap's
-  // moment has passed, and loading fonts and logos inside the click would spend it.
+  // The picture comes from the server — the same card the link preview shows — and is
+  // fetched ahead of the tap: iOS refuses navigator.share once the tap's moment has
+  // passed, and a network round trip inside the click would spend it.
   React.useEffect(() => {
     fileRef.current = null;
     if (!plan.length) return;
     let cancelled = false;
     const t = window.setTimeout(async () => {
       try {
-        const display = fontProbe.current ? getComputedStyle(fontProbe.current).fontFamily : "Impact, sans-serif";
-        const label = getComputedStyle(document.documentElement).getPropertyValue("--font-label").trim() || "monospace";
-        const file = await renderPlanImage({ dayName, dateLabel: data.dates[day], plan, display, label });
-        if (!cancelled) fileRef.current = file;
+        const res = await fetch(`/dirtysouthparty/plan-image?${query}&size=tall`);
+        const blob = res.ok ? await res.blob() : null;
+        if (!cancelled && blob?.type === "image/png") {
+          fileRef.current = new File([blob], `dirty-south-${dayName.toLowerCase()}-game-plan.png`, { type: "image/png" });
+        }
       } catch {
-        /* no canvas (old browser, tests): share the words and the link */
+        /* offline or blocked: share the words and the link */
       }
     }, 250);
     return () => { cancelled = true; window.clearTimeout(t); };
-  }, [plan, dayName, day, data.dates]);
+  }, [plan, query, dayName]);
 
   // The sticky share bar steps aside while the game plan card itself is on screen.
   React.useEffect(() => {
@@ -639,7 +639,8 @@ export function DirtySouth({
     setDay(d);
   }
 
-  const shareUrl = () => `${window.location.origin}${window.location.pathname}?${query}`;
+  // A friend who taps the link lands on the plan itself, not the top of the page.
+  const shareUrl = () => `${window.location.origin}${window.location.pathname}?${query}#game-plan`;
 
   async function share() {
     const url = shareUrl();
@@ -697,8 +698,6 @@ export function DirtySouth({
           <span style={{ display: "block", transform: "rotate(-1.2deg)" }}>Dirty South</span>
           <span style={{ display: "block", transform: "rotate(0.9deg)" }}>Party Planner</span>
         </h1>
-        {/* measures the display face so the share picture is drawn in it */}
-        <span ref={fontProbe} className={fontClass} aria-hidden="true" style={{ position: "absolute", visibility: "hidden" }}>A</span>
         <p style={{ fontFamily: "var(--font-label)", fontSize: "0.78rem", letterSpacing: "0.14em", textTransform: "uppercase", margin: "14px 0 16px" }}>
           Build our night · {weekend}
         </p>

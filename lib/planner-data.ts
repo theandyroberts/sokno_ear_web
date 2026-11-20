@@ -1,9 +1,10 @@
 // Server half of the party planner: the builders that read the venue registry
 // (which loads from disk) live here so the page's client bundle never pulls in fs.
-import type { NightDay, NightItem } from "@/lib/nightlife";
+import { loadNightlife, withVenueLogos, type NightDay, type NightItem, type Nightlife } from "@/lib/nightlife";
 import type { Episode } from "@/lib/schema";
-import { calendarVenue, matchVenue, type VenueRegistry } from "@/lib/venues";
-import { PLAN_DAYS, catOf, minutesOf, sortName, type PlannerData } from "@/lib/planner";
+import { calendarVenue, loadVenues, matchVenue, type VenueRegistry } from "@/lib/venues";
+import { getBySlug, getDraftBySlug, getLatest } from "@/lib/episodes";
+import { PLAN_DAYS, buildFeatured, catOf, minutesOf, nightDates, sortName, weekKey, type PlannerData } from "@/lib/planner";
 
 /** The registry's eating and drinking spots (plus Kern's rooms), and any venue on this
  *  week's plan the registry doesn't know yet, so a new place is never missing from its list. */
@@ -92,3 +93,36 @@ export function buildMerryAll(
   return out;
 }
 
+
+/** Everything the party page, its link preview and its share picture need, read from
+ *  disk once per request: this week's plan with logos, and the planner's lists. */
+export function loadPlanner(): { nightlife: Nightlife; days: Record<NightDay, NightItem[]>; planner: PlannerData } {
+  const nightlife = loadNightlife();
+  const registry = loadVenues();
+  // Logos come from content/venues.json, not the nightlife file — one registry,
+  // reused wherever a venue shows up.
+  const days = withVenueLogos(nightlife.days, registry);
+  // The episode the plan's stories belong to: the slug its own links point at (on
+  // research day that's the draft), else the latest published episode.
+  const slugs = Object.values(nightlife.days).flat()
+    .map((i) => i.href?.match(/^\/(\d{4}-\d{2}-\d{2})\//)?.[1]).filter(Boolean) as string[];
+  const slug = slugs.sort((a, b) => slugs.filter((s) => s === b).length - slugs.filter((s) => s === a).length)[0];
+  let episode: Episode | null = null;
+  try {
+    episode = (slug && (getBySlug(undefined, slug) ?? getDraftBySlug(slug))) || getLatest();
+  } catch {
+    episode = null; // no episode to borrow stories from: be merry shows the plan's own rows
+  }
+  const featured = buildFeatured(days);
+  return {
+    nightlife,
+    days,
+    planner: {
+      featured,
+      directory: buildDirectory(registry, days),
+      merryAll: buildMerryAll(featured, days, episode, registry),
+      dates: nightDates(nightlife.weekend, nightlife.updated),
+      week: weekKey(nightlife.weekend),
+    },
+  };
+}
