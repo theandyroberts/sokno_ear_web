@@ -4,15 +4,18 @@ import localFont from "next/font/local";
 import { loadNightlife, pickDefaultDay, isSponsorDay, withVenueLogos } from "@/lib/nightlife";
 import { loadVenues } from "@/lib/venues";
 import { DirtySouth } from "@/components/DirtySouth";
+import { buildFeatured, nightDates, parsePlanParams, type PlannerData } from "@/lib/planner";
+import { buildDirectory, buildMerryAll } from "@/lib/planner-data";
+import { getBySlug, getDraftBySlug, getLatest } from "@/lib/episodes";
 import type { Metadata } from "next";
 
 // The flyer's landing page: soknoear.com/dirtysouthparty (QR codes add ?src=…
 // for attribution — same page). Day tabs default to tonight, Thu–Sun.
 export const dynamic = "force-dynamic";
 
-const TITLE = "Party in the Dirty South — South Knoxville Nightlife, Night by Night";
+const TITLE = "Dirty South Party Planner — South Knoxville Nightlife, Night by Night";
 const DESCRIPTION =
-  "South Knoxville nightlife tonight: happy hours, dinner, live music, karaoke, and the late hang across Old Sevier, the South Waterfront, and the Urban Wilderness — the Dirty South checklist from The South Knoxville Ear.";
+  "South Knoxville nightlife tonight: happy hours, dinner, live music, karaoke, and the late hang across Old Sevier, the South Waterfront, and the Urban Wilderness — pick a place to eat, a place to drink and something to do, and send the game plan to your crew. The Dirty South party planner from The South Knoxville Ear.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -52,10 +55,28 @@ export default async function DirtySouthParty({ searchParams }: { searchParams: 
     const name = i.venue.split(" · ")[0];
     return seen.has(name) ? false : (seen.add(name), true);
   });
+  // The episode the plan's stories belong to: the slug its own links point at (on
+  // research day that's the draft), else the latest published episode.
+  const slugs = Object.values(nightlife.days).flat().map((i) => i.href?.match(/^\/(\d{4}-\d{2}-\d{2})\//)?.[1]).filter(Boolean) as string[];
+  const slug = slugs.sort((a, b) => slugs.filter((s) => s === b).length - slugs.filter((s) => s === a).length)[0];
+  let episode = null;
+  try {
+    episode = (slug && (getBySlug(undefined, slug) ?? getDraftBySlug(slug))) || getLatest();
+  } catch {
+    episode = null; // no episode to borrow stories from: be merry shows the plan's own rows
+  }
+  const registry = loadVenues();
+  const featured = buildFeatured(days);
+  const planner: PlannerData = {
+    featured,
+    directory: buildDirectory(registry, days),
+    merryAll: buildMerryAll(featured, days, episode, registry),
+    dates: nightDates(nightlife.weekend, nightlife.updated),
+  };
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Party in the Dirty South — South Knoxville nightlife",
+    name: "Dirty South Party Planner — South Knoxville nightlife",
     description: DESCRIPTION,
     url: "https://soknoear.com/dirtysouthparty",
     numberOfItems: venues.length,
@@ -81,6 +102,8 @@ export default async function DirtySouthParty({ searchParams }: { searchParams: 
         fontClass={anton.className}
         mapSrc={findMap()}
         sponsor={showSponsor}
+        planner={planner}
+        initial={parsePlanParams(params)}
       />
     </>
   );

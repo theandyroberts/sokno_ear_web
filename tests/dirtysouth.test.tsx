@@ -27,7 +27,7 @@ describe("nightlife", () => {
   });
 });
 
-describe("DirtySouth checklist", () => {
+describe("DirtySouth page", () => {
   it("carries the main site's hero, and both it and the ribbon link home", () => {
     render(<DirtySouth days={nightlife.days} defaultDay="Fri" weekend={nightlife.weekend} fontClass="" />);
     const hero = screen.getByRole("img", { name: /Weekend Party Planner for the Dirty South/i });
@@ -63,27 +63,6 @@ describe("DirtySouth checklist", () => {
     fireEvent.click(screen.getByRole("tab", { name: "Sat" }));
     // The ticket travels with its own listing: Friday's goes when the Friday tab does.
     expect(screen.queryByRole("link", { name: new RegExp(`7:00 PM.*${headlineWords}`, "i") })).not.toBeInTheDocument();
-  });
-  it("checking a box persists to localStorage scoped to this weekend; tapping a link marks it done", () => {
-    render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" />);
-    const first = nightlife.days.Thu[0];
-    fireEvent.click(screen.getByRole("button", { name: `Check off ${first.headline}` }));
-    const stored = JSON.parse(window.localStorage.getItem("dirtysouth-checked-v2")!);
-    expect(stored.weekend).toBe(nightlife.weekend);
-    expect(stored.ids).toContain(first.id);
-    // and it renders checked
-    expect(screen.getByRole("button", { name: `Uncheck ${first.headline}` })).toHaveAttribute("aria-pressed", "true");
-  });
-  it("checks from a previous weekend don't carry into a fresh week", async () => {
-    const { waitFor } = await import("@testing-library/react");
-    const first = nightlife.days.Thu[0];
-    // same item id, but stored under LAST week's label — must render unchecked
-    window.localStorage.setItem("dirtysouth-checked-v2", JSON.stringify({ weekend: "Aug 20–23", ids: [first.id] }));
-    window.localStorage.setItem("dirtysouth-checked-v1", JSON.stringify([first.id])); // pre-scope leftovers too
-    render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" />);
-    await waitFor(() =>
-      expect(screen.getByRole("button", { name: `Check off ${first.headline}` })).toHaveAttribute("aria-pressed", "false"));
-    expect(window.localStorage.getItem("dirtysouth-checked-v1")).toBeNull(); // old format cleaned up
   });
   it("intro explains the page; map button only renders when a map image exists", () => {
     const { rerender } = render(<DirtySouth days={nightlife.days} defaultDay="Thu" weekend={nightlife.weekend} fontClass="" />);

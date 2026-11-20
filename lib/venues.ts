@@ -24,6 +24,12 @@ export type Venue = {
   /** Set (e.g. "2026-08") when the business has closed: kept so archived episodes still
    *  resolve, but never matched against a row's wording, only against an event location. */
   closed?: string;
+  /** Lists the venue under Eat and/or Drink in the party planner's "show all". */
+  serves?: ("eat" | "drink")[];
+  /** One-line street address, as the Ear has published it. */
+  address?: string;
+  /** Named rooms inside a hall (Kern's), for the same lists; they draw the hall's logo. */
+  inside?: { name: string; serves: ("eat" | "drink")[] }[];
 };
 
 export type VenueRegistry = Record<string, Venue>;

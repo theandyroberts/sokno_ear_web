@@ -1,5 +1,5 @@
 {
-  "_comment": "The Ear's venue-logo registry. One entry per business we put on a page, so the same mark gets reused everywhere instead of being re-sourced each week. Every logo here came from the business's OWN site or official profile — never a stock/clip-art lookalike — and `source` records exactly where, so anyone can re-fetch or check it. `match` is how a nightlife.json `venue` string resolves to this entry: the venue field is compared case-insensitively against each string, and the LONGEST match wins (that's how 'Kern's Food Hall rooftop' still lands on kerns). Entries with no `logo` fall back to a typeset wordmark tile on the party page — the layout stays identical, so a missing file is never a hole.",
+  "_comment": "The Ear's venue-logo registry. One entry per business we put on a page, so the same mark gets reused everywhere instead of being re-sourced each week. Every logo here came from the business's OWN site or official profile — never a stock/clip-art lookalike — and `source` records exactly where, so anyone can re-fetch or check it. `match` is how a nightlife.json `venue` string resolves to this entry: the venue field is compared case-insensitively against each string, and the LONGEST match wins (that's how 'Kern's Food Hall rooftop' still lands on kerns). Entries with no `logo` fall back to a typeset wordmark tile on the party page — the layout stays identical, so a missing file is never a hole. `serves` (eat / drink) puts a venue in the Dirty South party planner's \"show all\" lists, with `address` as its one-line location; leave `serves` off for stages, parks and organizations. `inside` lists the named rooms of a hall (Kern's) for the same lists — they draw the hall's logo.",
   "_treatments": {
     "as-is": "the venue's file, trimmed to its bounding box and scaled down; colors untouched",
     "ink-recolor": "the mark was drawn light-on-dark (invisible on cream), so near-white strokes were repainted brand ink #171512 and the accent colors were left alone",
@@ -21,7 +21,11 @@
       "fetched": "2026-08-29",
       "confidence": "high",
       "note": "Not the same art as the Mon–Wed sponsor card — that's the Ear's own commissioned mascot engraving at /assets/spots/angry_dumpling_mascot.jpg. This is the restaurant's real logo.",
-      "logoOriginal": "/assets/venues/angry-dumplings.png"
+      "logoOriginal": "/assets/venues/angry-dumplings.png",
+      "serves": [
+        "eat"
+      ],
+      "address": "1119 Sevier Ave"
     },
     "earls": {
       "name": "Earl's",
@@ -35,7 +39,12 @@
       "treatment": "as-is",
       "fetched": "2026-08-29",
       "confidence": "high",
-      "logoOriginal": "/assets/venues/earls.png"
+      "logoOriginal": "/assets/venues/earls.png",
+      "serves": [
+        "eat",
+        "drink"
+      ],
+      "address": "610 Waterfront Dr"
     },
     "hi-wire": {
       "name": "Hi-Wire Brewing",
@@ -50,7 +59,11 @@
       "fetched": "2026-08-29",
       "confidence": "high",
       "note": "Their file paints the wordmark #fff9e8 for a dark header; that was swapped to #171512. The blue #00b5f0 accent is theirs, untouched.",
-      "logoOriginal": "/assets/venues/hi-wire.svg"
+      "logoOriginal": "/assets/venues/hi-wire.svg",
+      "serves": [
+        "drink"
+      ],
+      "address": "2020 Barber St"
     },
     "kerns": {
       "name": "Kern's",
@@ -66,7 +79,45 @@
       "treatment": "as-is",
       "fetched": "2026-08-29",
       "confidence": "high",
-      "logoOriginal": "/assets/venues/kerns.png"
+      "logoOriginal": "/assets/venues/kerns.png",
+      "serves": [
+        "eat",
+        "drink"
+      ],
+      "address": "2201 Kern's Rising Way",
+      "inside": [
+        {
+          "name": "Roni's Mac Bar",
+          "serves": [
+            "eat"
+          ]
+        },
+        {
+          "name": "Eggspectation",
+          "serves": [
+            "eat",
+            "drink"
+          ]
+        },
+        {
+          "name": "Monday Night Proofing Co.",
+          "serves": [
+            "drink"
+          ]
+        },
+        {
+          "name": "UpTop Rooftop Bar",
+          "serves": [
+            "drink"
+          ]
+        },
+        {
+          "name": "Peter's Market Bar",
+          "serves": [
+            "drink"
+          ]
+        }
+      ]
     },
     "the-pink-cactus": {
       "name": "The Pink Cactus",
@@ -81,7 +132,11 @@
       "treatment": "as-is",
       "fetched": "2026-08-29",
       "confidence": "high",
-      "logoOriginal": "/assets/venues/the-pink-cactus.svg"
+      "logoOriginal": "/assets/venues/the-pink-cactus.svg",
+      "serves": [
+        "drink"
+      ],
+      "address": "1147 Sevier Ave"
     },
     "southside-garage": {
       "name": "SouthSide Garage",
@@ -96,7 +151,12 @@
       "treatment": "as-is",
       "fetched": "2026-08-29",
       "confidence": "high",
-      "logoOriginal": "/assets/venues/southside-garage.png"
+      "logoOriginal": "/assets/venues/southside-garage.png",
+      "serves": [
+        "eat",
+        "drink"
+      ],
+      "address": "1014 Sevier Ave"
     },
     "sokno-taco": {
       "name": "SoKno Taco Cantina",
@@ -112,7 +172,12 @@
       "fetched": "2026-08-29",
       "confidence": "high",
       "note": "Their file is white-on-dark. The white type became ink; the gold 'So' is theirs and stayed gold.",
-      "logoOriginal": "/assets/venues/sokno-taco.png"
+      "logoOriginal": "/assets/venues/sokno-taco.png",
+      "serves": [
+        "eat",
+        "drink"
+      ],
+      "address": "3701 Sevierville Pike"
     },
     "south-coast-pizza": {
       "name": "South Coast Pizza",
@@ -127,7 +192,11 @@
       "fetched": "2026-08-29",
       "confidence": "high",
       "note": "White-on-dark original; repainted ink so it reads on the cream tile.",
-      "logoOriginal": "/assets/venues/south-coast-pizza.png"
+      "logoOriginal": "/assets/venues/south-coast-pizza.png",
+      "serves": [
+        "eat"
+      ],
+      "address": "1103 Sevier Ave"
     },
     "puckers": {
       "name": "Puckers Sports Grill",
@@ -143,7 +212,12 @@
       "fetched": "2026-08-29",
       "confidence": "medium",
       "note": "The company file ends with a 'Gatlinburg, Tennessee' line; that band was cropped off since this is the Knoxville room at 115 Mimosa Ave. Swap in a Knoxville-specific file if they publish one.",
-      "logoOriginal": "/assets/venues/puckers.png"
+      "logoOriginal": "/assets/venues/puckers.png",
+      "serves": [
+        "eat",
+        "drink"
+      ],
+      "address": "115 Mimosa Ave"
     },
     "alliance-brewing": {
       "name": "Alliance Brewing Company",
@@ -159,7 +233,11 @@
       "fetched": "2026-08-29",
       "confidence": "high",
       "note": "Not on the listings yet — Alliance only shows up in 'sub' lines so far. Kept here so it's ready the week it gets its own row.",
-      "logoOriginal": "/assets/venues/alliance-brewing.png"
+      "logoOriginal": "/assets/venues/alliance-brewing.png",
+      "serves": [
+        "drink"
+      ],
+      "address": "1130 Sevier Ave"
     },
     "trailhead": {
       "name": "Trailhead Beer Market",
@@ -174,7 +252,11 @@
       "treatment": "as-is",
       "fetched": "2026-10-06",
       "confidence": "high",
-      "logoOriginal": "/assets/venues/trailhead.png"
+      "logoOriginal": "/assets/venues/trailhead.png",
+      "serves": [
+        "drink"
+      ],
+      "address": "1317 Island Home Ave"
     },
     "mimosas": {
       "name": "Mimosas",
@@ -203,7 +285,11 @@
       "treatment": "as-is",
       "fetched": "2026-10-06",
       "confidence": "high",
-      "logoOriginal": "/assets/venues/printshop.png"
+      "logoOriginal": "/assets/venues/printshop.png",
+      "serves": [
+        "drink"
+      ],
+      "address": "1532 Island Home Ave"
     },
     "the-808": {
       "name": "The 808",
@@ -218,7 +304,8 @@
       "treatment": "ink-recolor",
       "fetched": "2026-10-06",
       "confidence": "high",
-      "logoOriginal": "/assets/venues/the-808.png"
+      "logoOriginal": "/assets/venues/the-808.png",
+      "address": "808 Sevier Ave"
     },
     "fly-by-night": {
       "name": "Fly by Night",
@@ -234,7 +321,11 @@
       "fetched": "2026-10-14",
       "confidence": "high",
       "note": "Dark brown (#47372A) lettering on transparent, 360x76, so it sits on the cream chip untouched. Andy asked for it 2026-10-14.",
-      "logoOriginal": "/assets/venues/fly-by-night.svg"
+      "logoOriginal": "/assets/venues/fly-by-night.svg",
+      "serves": [
+        "drink"
+      ],
+      "address": "906 Sevier Ave"
     },
     "ijams-nature-center": {
       "name": "Ijams Nature Center",
@@ -257,7 +348,8 @@
       "fetched": "2026-10-26",
       "confidence": "high",
       "note": "Every Ijams location resolves here: the River Landing, Mead's Quarry, the Nature Playscape, the Miller Education Building, the Homesite. The organization asked to be called Ijams Nature Center (2026-10-06); the alias list only matches text, it never writes it.",
-      "logoOriginal": "/assets/venues/ijams-nature-center.png"
+      "logoOriginal": "/assets/venues/ijams-nature-center.png",
+      "address": "2915 Island Home Ave"
     },
     "old-sevier-district": {
       "name": "Old Sevier District",
@@ -288,7 +380,8 @@
       "sourceNote": "No mark to take, 2026-10-26: borderlandtees.com (GoDaddy builder) has no logo image at all — the header is text, the og:image is a photo strip of printed tees, the /playhouse page carries a stage photo, and the Facebook page picture is a photo of the press. The wordmark chip stands in until they publish one.",
       "treatment": null,
       "fetched": "2026-10-26",
-      "confidence": "none"
+      "confidence": "none",
+      "address": "802 Sevier Ave"
     },
     "suttree-landing": {
       "name": "Suttree Landing Park",
@@ -365,7 +458,11 @@
       "treatment": "as-is",
       "fetched": "2026-10-26",
       "confidence": "high",
-      "logoOriginal": "/assets/venues/sokno-sourdough.png"
+      "logoOriginal": "/assets/venues/sokno-sourdough.png",
+      "serves": [
+        "eat"
+      ],
+      "address": "2006 Barber St"
     },
     "redbud-kitchen": {
       "name": "Redbud Kitchen",
@@ -380,7 +477,12 @@
       "treatment": "as-is",
       "fetched": "2026-10-26",
       "confidence": "high",
-      "logoOriginal": "/assets/venues/redbud-kitchen.png"
+      "logoOriginal": "/assets/venues/redbud-kitchen.png",
+      "serves": [
+        "eat",
+        "drink"
+      ],
+      "address": "906 Sevier Ave"
     },
     "sevier-ave-burger": {
       "name": "Sevier Ave Burger Co.",
@@ -395,7 +497,11 @@
       "sourceNote": "No website (sevieraveburger.com and sevieravenueburger.com do not resolve) and no Facebook page under the handle; Instagram is their only presence and it serves no fetchable avatar. Wordmark chip until they publish a mark, or Andy saves one from the Instagram profile.",
       "treatment": null,
       "fetched": "2026-10-26",
-      "confidence": "none"
+      "confidence": "none",
+      "serves": [
+        "eat"
+      ],
+      "address": "Sevier Ave"
     },
     "honeybee-coffee": {
       "name": "Honeybee Coffee",
@@ -411,7 +517,11 @@
       "fetched": "2026-10-26",
       "confidence": "high",
       "note": "Their file is pure white on transparent for a dark header; every visible pixel was repainted brand ink #171512, alpha kept.",
-      "logoOriginal": "/assets/venues/honeybee-coffee.png"
+      "logoOriginal": "/assets/venues/honeybee-coffee.png",
+      "serves": [
+        "eat"
+      ],
+      "address": "Sevier Ave"
     },
     "old-sevier-market": {
       "name": "Old Sevier Market",
