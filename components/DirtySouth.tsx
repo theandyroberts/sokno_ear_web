@@ -598,7 +598,8 @@ export function DirtySouth({
   // pictures settle, so make the jump once the page is ready.
   React.useEffect(() => {
     if (window.location.hash !== "#game-plan") return;
-    const jump = () => planRef.current?.scrollIntoView({ block: "start" });
+    // Land on the "3 · Share the game plan" label, so the step reads above the card.
+    const jump = () => (document.getElementById("ds-step-3") ?? planRef.current)?.scrollIntoView({ block: "start" });
     const t = window.setTimeout(jump, 60);
     document.fonts?.ready.then(() => window.setTimeout(jump, 60)).catch(() => {});
     return () => window.clearTimeout(t);
@@ -818,7 +819,7 @@ export function DirtySouth({
         ))}
 
         {/* the game plan */}
-        <StepLabel n={3} id="ds-step-3" fontClass={fontClass}>Share your game plan</StepLabel>
+        <StepLabel n={3} id="ds-step-3" fontClass={fontClass}>Share the game plan</StepLabel>
         <section ref={planRef} id="game-plan" aria-labelledby="ds-plan-head" className="ds-plan">
           <h2 id="ds-plan-head" className={fontClass}>Our {dayName} game plan</h2>
           {plan.length ? (

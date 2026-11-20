@@ -148,7 +148,7 @@ describe("Dirty South party planner", () => {
     Element.prototype.scrollIntoView = scroll;
     page({ initial: { day: "Fri", picks: { drink: "fri-earls" } } });
     await waitFor(() => expect(scroll).toHaveBeenCalled());
-    expect((scroll.mock.contexts[0] as Element).id).toBe("game-plan");
+    expect((scroll.mock.contexts[0] as Element).id).toBe("ds-step-3");
   });
 
   it("a shared link opens on its day with its picks", () => {
