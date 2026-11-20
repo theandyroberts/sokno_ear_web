@@ -491,7 +491,7 @@
         "Sevier Ave Burger",
         "Sevier Avenue Burger"
       ],
-      "site": "https://www.instagram.com/sevieraveburgerco/",
+      "site": "https://sevieravenueburgerco.com/",
       "logo": null,
       "source": null,
       "sourceNote": "No website (sevieraveburger.com and sevieravenueburger.com do not resolve) and no Facebook page under the handle; Instagram is their only presence and it serves no fetchable avatar. Wordmark chip until they publish a mark, or Andy saves one from the Instagram profile.",
@@ -499,9 +499,10 @@
       "fetched": "2026-10-26",
       "confidence": "none",
       "serves": [
-        "eat"
+        "eat",
+        "drink"
       ],
-      "address": "Sevier Ave"
+      "address": "1120 Sevier Ave"
     },
     "honeybee-coffee": {
       "name": "Honeybee Coffee",
@@ -521,7 +522,7 @@
       "serves": [
         "eat"
       ],
-      "address": "Sevier Ave"
+      "address": "700 Sevier Ave"
     },
     "old-sevier-market": {
       "name": "Old Sevier Market",
