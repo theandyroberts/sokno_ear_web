@@ -178,11 +178,11 @@ describe("Dirty South party planner", () => {
 
   it("an explainer spells out three steps, and each links to its numbered step on the page", () => {
     const { container } = page();
-    const explainer = screen.getByRole("region", { name: "Three steps to your night" });
+    const explainer = screen.getByRole("region", { name: "Easy as 1, 2, 3" });
     const links = within(explainer).getAllByRole("link");
     // the demos are decoration (aria-hidden); the link reads as the step, spelled out
     expect(links).toHaveLength(3);
-    expect(links[0]).toHaveAccessibleName("Step 1: Pick your mix Tick what goes in your night: eat, drink, be merry.");
+    expect(links[0]).toHaveAccessibleName("Step 1: Pick your mix Tick what kind of party: eat, drink, be merry.");
     expect(links[1]).toHaveAccessibleName("Step 2: Pick your night Thursday, Friday, Saturday or Sunday.");
     expect(links[2]).toHaveAccessibleName("Step 3: Check & share Check one spot in each, then send the game plan to your crew.");
     links.forEach((a, i) => {
@@ -196,7 +196,7 @@ describe("Dirty South party planner", () => {
       expect(order[i - 1].compareDocumentPosition(order[i]) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     }
     // the badge digit stays out of the type chooser's accessible name
-    expect(screen.getByRole("group", { name: "What's in your night?" })).toBeInTheDocument();
+    expect(screen.getByRole("group", { name: "What kind of party?" })).toBeInTheDocument();
   });
 
   it("the sticky share bar appears once there is something to share", () => {

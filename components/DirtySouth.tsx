@@ -419,7 +419,7 @@ function StepLabel({ n, id, textId, fontClass, children }: {
   );
 }
 
-/** "Three steps to your night": the planner is a process now, not a page to read
+/** "Easy as 1, 2, 3": the planner is a process now, not a page to read
  *  (Andy, 2026-11-20). Each card acts out its step on a shared nine-second loop —
  *  boxes tick, the day slides to Friday, the plan fills in and flies off — and links
  *  down to that step. Under prefers-reduced-motion the cards sit still in their
@@ -429,7 +429,7 @@ function HowItWorks({ fontClass }: { fontClass: string }) {
     {
       n: 1,
       title: "Pick your mix",
-      text: "Tick what goes in your night: eat, drink, be merry.",
+      text: "Tick what kind of party: eat, drink, be merry.",
       demo: (
         <span className="ds-demo-mix">
           {["Eat", "Drink", "Be merry"].map((label, i) => (
@@ -469,7 +469,7 @@ function HowItWorks({ fontClass }: { fontClass: string }) {
   ];
   return (
     <section className="ds-steps" aria-labelledby="ds-steps-head">
-      <h2 id="ds-steps-head" className={`ds-steps-head ${fontClass}`}>Three steps to your night</h2>
+      <h2 id="ds-steps-head" className={`ds-steps-head ${fontClass}`}>Easy as 1, 2, 3</h2>
       <ol className="ds-steps-list">
         {steps.map((s) => (
           <li key={s.n} className={`ds-step ds-step--${s.n}`}>
@@ -738,7 +738,7 @@ export function DirtySouth({
         {/* what the night includes */}
         <div role="group" aria-labelledby="ds-types-label" className="ds-types">
           <StepLabel n={1} id="ds-step-1" textId="ds-types-label" fontClass={fontClass}>
-            What&apos;s in your night?
+            What kind of party?
           </StepLabel>
           <div className="ds-types-row">
             {PLAN_CATS.map((cat) => {
