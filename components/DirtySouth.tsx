@@ -403,6 +403,93 @@ function CategorySection({ cat, dayName, featured, all, pickId, onPick, expanded
   );
 }
 
+/** The numbered dot that marks each step on the page, matching the explainer's numerals. */
+function StepLabel({ n, id, textId, fontClass, children }: {
+  n: number;
+  id: string;
+  textId?: string;
+  fontClass: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div id={id} className={`ds-steplabel ${fontClass}`}>
+      <span aria-hidden="true" className="ds-stepbadge">{n}</span>
+      <span id={textId}>{children}</span>
+    </div>
+  );
+}
+
+/** "Three steps to your night": the planner is a process now, not a page to read
+ *  (Andy, 2026-11-20). Each card acts out its step on a shared nine-second loop —
+ *  boxes tick, the day slides to Friday, the plan fills in and flies off — and links
+ *  down to that step. Under prefers-reduced-motion the cards sit still in their
+ *  finished state (see .ds-steps in globals.css). */
+function HowItWorks({ fontClass }: { fontClass: string }) {
+  const steps = [
+    {
+      n: 1,
+      title: "Pick your mix",
+      text: "Tick what goes in your night: eat, drink, be merry.",
+      demo: (
+        <span className="ds-demo-mix">
+          {["Eat", "Drink", "Be merry"].map((label, i) => (
+            <span key={label} className="ds-demo-pill" style={{ "--i": i } as React.CSSProperties}>
+              <span className="ds-demo-box"><span className="ds-demo-tick">✓</span></span>
+              {label}
+            </span>
+          ))}
+        </span>
+      ),
+    },
+    {
+      n: 2,
+      title: "Pick your night",
+      text: "Thursday, Friday, Saturday or Sunday.",
+      demo: (
+        <span className="ds-demo-days">
+          {["Thu", "Fri", "Sat", "Sun"].map((d) => <span key={d}>{d}</span>)}
+          <span className="ds-demo-dayhl" />
+        </span>
+      ),
+    },
+    {
+      n: 3,
+      title: "Check & share",
+      text: "Check one spot in each, then send the game plan to your crew.",
+      demo: (
+        <span className="ds-demo-share">
+          <span className="ds-demo-card">
+            {[0, 1, 2].map((i) => <span key={i} className="ds-demo-line" style={{ "--i": i } as React.CSSProperties} />)}
+          </span>
+          <span className="ds-demo-btn">Share</span>
+          <span className="ds-demo-plane">➤</span>
+        </span>
+      ),
+    },
+  ];
+  return (
+    <section className="ds-steps" aria-labelledby="ds-steps-head">
+      <h2 id="ds-steps-head" className={`ds-steps-head ${fontClass}`}>Three steps to your night</h2>
+      <ol className="ds-steps-list">
+        {steps.map((s) => (
+          <li key={s.n} className={`ds-step ds-step--${s.n}`}>
+            <a href={`#ds-step-${s.n}`} className="ds-step-link">
+              <span aria-hidden="true" className={`ds-step-num ${fontClass}`}>{s.n}</span>
+              <span aria-hidden="true" className="ds-step-demo">{s.demo}</span>
+              <span className="ds-step-copy">
+                <span className={`ds-step-title ${fontClass}`}>
+                  <span className="ds-sr">Step {s.n}:</span>{" "}{s.title}
+                </span>{" "}
+                <span className="ds-step-text">{s.text}</span>
+              </span>
+            </a>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
 /** Without server data (tests, a stripped-down render) the page still works off the night's rows. */
 function plannerFromDays(days: Record<NightDay, NightItem[]>): PlannerData {
   const featured = buildFeatured(days);
@@ -644,13 +731,15 @@ export function DirtySouth({
           )}
         </div>
 
+        <HowItWorks fontClass={fontClass} />
+
         {sponsor && <SponsorCard sponsor={sponsor} fontClass={fontClass} />}
 
         {/* what the night includes */}
         <div role="group" aria-labelledby="ds-types-label" className="ds-types">
-          <div id="ds-types-label" className={fontClass} style={{ fontSize: "1.25rem", textTransform: "uppercase", marginBottom: 10 }}>
+          <StepLabel n={1} id="ds-step-1" textId="ds-types-label" fontClass={fontClass}>
             What&apos;s in your night?
-          </div>
+          </StepLabel>
           <div className="ds-types-row">
             {PLAN_CATS.map((cat) => {
               const on = types.includes(cat);
@@ -671,6 +760,7 @@ export function DirtySouth({
         </div>
 
         {/* day tabs */}
+        <StepLabel n={2} id="ds-step-2" fontClass={fontClass}>Pick your night</StepLabel>
         <div role="tablist" aria-label="Pick your night" style={{ display: "flex", gap: 8, marginBottom: 26 }}>
           {PLAN_DAYS.map((d) => {
             const active = d === day;
@@ -699,7 +789,7 @@ export function DirtySouth({
           {dayName} night
         </h2>
         <p style={{ fontFamily: "var(--font-label)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", margin: "0 0 18px", opacity: 0.75 }}>
-          {data.dates[day] ? `${data.dates[day]} · ` : ""}Check one in each and your game plan builds below.
+          {data.dates[day] ? `${data.dates[day]} · ` : ""}Check one in each, then share your game plan in step 3.
         </p>
 
         {PLAN_CATS.filter((c) => types.includes(c)).map((cat) => (
@@ -718,6 +808,7 @@ export function DirtySouth({
         ))}
 
         {/* the game plan */}
+        <StepLabel n={3} id="ds-step-3" fontClass={fontClass}>Share your game plan</StepLabel>
         <section ref={planRef} id="game-plan" aria-labelledby="ds-plan-head" className="ds-plan">
           <h2 id="ds-plan-head" className={fontClass}>Your {dayName} game plan</h2>
           {plan.length ? (

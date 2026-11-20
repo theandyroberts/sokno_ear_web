@@ -372,3 +372,94 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
   display: block; width: 100%; max-width: 720px; margin: 0 auto; padding: 12px; font-size: 1.3rem; text-transform: uppercase;
   cursor: pointer; background: #CDE24A; color: #131309; border: 3px solid #CDE24A;
 }
+
+/* Party planner steps (2026-11-20): numbered labels on the page, and the animated
+   "Three steps to your night" explainer. One nine-second loop drives every card —
+   card 1 is up for 0–3s (boxes tick), card 2 for 3–6s (the day slides to Friday),
+   card 3 for 6–9s (the plan fills in, Share pulses, the plane flies). Base styles
+   are each demo's finished state, so prefers-reduced-motion just switches the
+   animations off and the cards still read. */
+.ds-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ds-steplabel {
+  display: flex; align-items: center; gap: 10px; margin: 0 0 10px;
+  font-size: 1.25rem; text-transform: uppercase; scroll-margin-top: 16px;
+}
+.ds-stepbadge {
+  flex: 0 0 auto; width: 38px; height: 38px; border-radius: 50%; background: #131309; color: #CDE24A;
+  display: inline-grid; place-items: center; font-size: 1.35rem; line-height: 1; transform: rotate(-6deg);
+}
+.ds-steps { margin: 22px 0 26px; }
+.ds-steps-head { font-size: clamp(1.5rem, 6vw, 2.2rem); line-height: 1; text-transform: uppercase; margin: 0 0 12px; transform: rotate(-0.6deg); }
+.ds-steps-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.ds-step-link {
+  display: flex; flex-direction: column; gap: 10px; height: 100%; box-sizing: border-box; padding: 12px;
+  border: 3px solid #131309; color: #131309; text-decoration: none; background: rgba(253,250,235,0.35);
+  animation: ds-step-active 9s infinite;
+}
+.ds-step--2 .ds-step-link { animation-delay: -6s; }
+.ds-step--3 .ds-step-link { animation-delay: -3s; }
+.ds-step-link:focus-visible { outline: 3px solid #131309; outline-offset: 3px; }
+.ds-step-num {
+  flex: 0 0 auto; width: 44px; height: 44px; border-radius: 50%; background: #131309; color: #CDE24A;
+  display: grid; place-items: center; font-size: 1.6rem; line-height: 1;
+}
+.ds-step-demo { height: 58px; display: flex; align-items: center; }
+.ds-step-title { display: block; font-size: 1.25rem; line-height: 1.05; text-transform: uppercase; }
+.ds-step-text { display: block; margin-top: 4px; font-family: var(--font-label); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; line-height: 1.5; }
+@keyframes ds-step-active {
+  0%, 31% { box-shadow: 6px 6px 0 #131309; transform: translate(-3px, -3px); background: #FDFAEB; }
+  34%, 97% { box-shadow: 0 0 0 #131309; transform: none; background: rgba(253,250,235,0.35); }
+  100% { box-shadow: 6px 6px 0 #131309; transform: translate(-3px, -3px); background: #FDFAEB; }
+}
+/* step 1: three boxes tick in turn */
+.ds-demo-mix { display: flex; flex-direction: column; gap: 4px; font-family: var(--font-label); font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.ds-demo-pill { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.ds-demo-box {
+  width: 13px; height: 13px; border: 2px solid #131309; display: grid; place-items: center; background: #131309;
+  animation: ds-tick-box 9s infinite both; animation-delay: calc(0.4s + var(--i) * 0.55s);
+}
+.ds-demo-tick { color: #CDE24A; font-size: 10px; line-height: 1; animation: ds-tick-mark 9s infinite both; animation-delay: calc(0.4s + var(--i) * 0.55s); }
+@keyframes ds-tick-box { 0% { background: transparent; } 4%, 94% { background: #131309; } 97%, 100% { background: transparent; } }
+@keyframes ds-tick-mark { 0% { opacity: 0; } 4%, 94% { opacity: 1; } 97%, 100% { opacity: 0; } }
+/* step 2: the day box slides from Thursday to Friday */
+.ds-demo-days {
+  position: relative; display: grid; grid-template-columns: repeat(4, 1fr); width: 100%; max-width: 160px;
+  border: 2px solid #131309; font-family: var(--font-label); font-size: 0.6rem; letter-spacing: 0.06em; text-transform: uppercase; text-align: center;
+}
+.ds-demo-days > span:not(.ds-demo-dayhl) { padding: 7px 0; }
+.ds-demo-dayhl {
+  position: absolute; top: -4px; bottom: -4px; left: 0; width: 25%; box-sizing: border-box;
+  border: 3px solid #131309; background: rgba(19,19,9,0.14); transform: translateX(100%) rotate(-3deg);
+  animation: ds-day 9s infinite;
+}
+@keyframes ds-day {
+  0%, 38% { transform: translateX(0) rotate(-3deg); }
+  47%, 95% { transform: translateX(100%) rotate(-3deg); }
+  100% { transform: translateX(0) rotate(-3deg); }
+}
+/* step 3: the plan fills in, Share pulses, the plane flies off */
+.ds-demo-share { position: relative; display: flex; align-items: center; gap: 8px; }
+.ds-demo-card { display: flex; flex-direction: column; gap: 4px; width: 58px; padding: 5px; border: 2px solid #131309; background: #FDFAEB; }
+.ds-demo-line { display: block; height: 5px; background: #131309; animation: ds-line 9s infinite both; animation-delay: calc(var(--i) * 0.35s); }
+.ds-demo-line:nth-child(2) { width: 80%; }
+.ds-demo-line:nth-child(3) { width: 60%; }
+@keyframes ds-line { 0%, 69% { opacity: 0; transform: translateX(-6px); } 73%, 96% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+.ds-demo-btn { font-family: var(--font-label); font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; background: #131309; color: #CDE24A; padding: 4px 7px; animation: ds-pulse 9s infinite; }
+@keyframes ds-pulse { 0%, 80% { transform: none; } 84% { transform: scale(1.15) rotate(-3deg); } 88%, 100% { transform: none; } }
+.ds-demo-plane { position: absolute; right: -16px; top: -8px; font-size: 1rem; opacity: 0; animation: ds-plane 9s infinite; }
+@keyframes ds-plane {
+  0%, 84% { opacity: 0; transform: translate(-18px, 10px); }
+  87% { opacity: 1; transform: translate(-10px, 4px); }
+  96% { opacity: 0; transform: translate(16px, -14px) rotate(-15deg); }
+  100% { opacity: 0; }
+}
+@media (max-width: 560px) {
+  .ds-steps-list { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .ds-step-link { flex-direction: row; align-items: center; gap: 12px; padding: 10px 12px; }
+  .ds-step-num { width: 38px; height: 38px; font-size: 1.35rem; }
+  .ds-step-demo { flex: 0 0 104px; height: auto; }
+  .ds-step-title { font-size: 1.1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ds-steps, .ds-steps * { animation: none !important; }
+}
