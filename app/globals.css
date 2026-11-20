@@ -471,15 +471,17 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
 .ds-step-party { position: relative; padding: 0; overflow: hidden; justify-content: flex-end; }
 .ds-party-stage { position: absolute; inset: 0; }
 .ds-partier { position: absolute; bottom: -10%; left: var(--x); height: var(--h); transform: translateX(-50%); z-index: var(--z); }
-.ds-partier img { display: block; height: 100%; width: auto; max-width: none; transform-origin: 50% 100%; animation: 1s ease-in-out infinite; }
+/* Full shorthand on each figure: a name-less "animation: 1s …" was rewritten by the
+   production CSS optimizer to a 0s animation, so nobody danced (2026-11-20). */
+.ds-partier img { display: block; height: 100%; width: auto; max-width: none; transform-origin: 50% 100%; }
 .ds-partier--girl   { --x: 13%; --h: 104%; --z: 1; }
 .ds-partier--guy    { --x: 37%; --h: 112%; --z: 3; }
 .ds-partier--couple { --x: 64%; --h: 100%; --z: 2; }
 .ds-partier--dude   { --x: 86%; --h: 108%; --z: 4; }
-.ds-partier--girl img   { animation-name: ds-dance-bounce; animation-delay: 0s; }
-.ds-partier--guy img    { animation-name: ds-dance-jump;   animation-delay: -0.12s; }
-.ds-partier--couple img { animation-name: ds-dance-sway;   animation-delay: -0.05s; }
-.ds-partier--dude img   { animation-name: ds-dance-bob;    animation-delay: -0.2s; }
+.ds-partier--girl img   { animation: ds-dance-bounce 1s ease-in-out 0s infinite; }
+.ds-partier--guy img    { animation: ds-dance-jump 1s ease-in-out -0.12s infinite; }
+.ds-partier--couple img { animation: ds-dance-sway 1s ease-in-out -0.05s infinite; }
+.ds-partier--dude img   { animation: ds-dance-bob 1s ease-in-out -0.2s infinite; }
 @keyframes ds-dance-bounce { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-7%) rotate(3deg); } }
 @keyframes ds-dance-jump   { 0%, 100% { transform: translateY(0); } 35% { transform: translateY(-11%) scale(1.02); } 60% { transform: translateY(-2%); } }
 @keyframes ds-dance-sway   { 0%, 100% { transform: rotate(-3deg) translateY(0); } 50% { transform: rotate(3deg) translateY(-4%); } }
