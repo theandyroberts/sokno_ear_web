@@ -68,7 +68,7 @@ describe("Dirty South party planner", () => {
     const chip = within(eat).getByRole("button", { name: /Pick Open for lunch.* for eat instead/ });
     expect(chip).toHaveTextContent("SouthSide Garage");
     // the game plan has it
-    const plan = screen.getByRole("region", { name: "Your Friday game plan" });
+    const plan = screen.getByRole("region", { name: "Our Friday game plan" });
     expect(within(plan).getByText(/Dumplings before the pitches/)).toBeInTheDocument();
     // a chip swaps the pick
     fireEvent.click(chip);
@@ -88,7 +88,7 @@ describe("Dirty South party planner", () => {
     expect(within(list).getByText("Roni's Mac Bar")).toBeInTheDocument();
     expect(within(list).getByText(/at Kern's/)).toBeInTheDocument();
     fireEvent.click(within(list).getByRole("button", { name: "Pick Roni's Mac Bar for eat" }));
-    const plan = screen.getByRole("region", { name: "Your Friday game plan" });
+    const plan = screen.getByRole("region", { name: "Our Friday game plan" });
     expect(within(plan).getByText("Roni's Mac Bar")).toBeInTheDocument();
     // be merry's show all brings the episode's stories for the night
     const merry = screen.getByRole("region", { name: "Be merry" });
@@ -102,7 +102,7 @@ describe("Dirty South party planner", () => {
     fireEvent.click(screen.getByRole("button", { name: "Pick Pitch a Friend for be merry" }));
     fireEvent.click(screen.getByRole("button", { name: /Drink/, pressed: true }));
     expect(screen.queryByRole("region", { name: "Drink" })).not.toBeInTheDocument();
-    const plan = screen.getByRole("region", { name: "Your Friday game plan" });
+    const plan = screen.getByRole("region", { name: "Our Friday game plan" });
     expect(within(plan).queryByText(/spicy ritas/)).not.toBeInTheDocument();
     expect(within(plan).getByText(/Pitch a Friend/)).toBeInTheDocument();
     expect(window.location.search).toContain("t=eat%2Cmerry");
@@ -143,7 +143,7 @@ describe("Dirty South party planner", () => {
 
   it("a shared link opens on its day with its picks", () => {
     page({ initial: { day: "Fri", picks: { drink: "fri-printshop", merry: "s:deadtronica" } } });
-    const plan = screen.getByRole("region", { name: "Your Friday game plan" });
+    const plan = screen.getByRole("region", { name: "Our Friday game plan" });
     expect(within(plan).getByText(/Twelve-dollar flights/)).toBeInTheDocument();
     expect(within(plan).getByText(/Deadtronica/)).toBeInTheDocument();
     expect(screen.getByRole("tab", { name: "Fri" })).toHaveAttribute("aria-selected", "true");
@@ -163,7 +163,7 @@ describe("Dirty South party planner", () => {
     page();
     await waitFor(() => expect(window.localStorage.getItem("dirtysouth-checked-v2")).toBeNull());
     expect(screen.getByRole("region", { name: "Drink" })).toBeInTheDocument();
-    expect(within(screen.getByRole("region", { name: "Your Friday game plan" })).queryByRole("listitem")).not.toBeInTheDocument();
+    expect(within(screen.getByRole("region", { name: "Our Friday game plan" })).queryByRole("listitem")).not.toBeInTheDocument();
   });
 
   it("the game plan runs in time order: four o'clock drinks before six o'clock dumplings", () => {
@@ -171,7 +171,7 @@ describe("Dirty South party planner", () => {
     fireEvent.click(screen.getByRole("button", { name: "Pick Dumplings before the pitches for eat" }));
     fireEvent.click(screen.getByRole("button", { name: "Pick Nine-dollar spicy ritas for drink" }));
     fireEvent.click(screen.getByRole("button", { name: "Pick Pitch a Friend for be merry" }));
-    const plan = screen.getByRole("region", { name: "Your Friday game plan" });
+    const plan = screen.getByRole("region", { name: "Our Friday game plan" });
     const cats = within(plan).getAllByRole("listitem").map((li) => li.querySelector(".ds-plan-cat")?.textContent);
     expect(cats).toEqual(["Drink", "Eat", "Be merry"]);
   });

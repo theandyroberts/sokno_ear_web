@@ -700,7 +700,7 @@ export function DirtySouth({
         {/* measures the display face so the share picture is drawn in it */}
         <span ref={fontProbe} className={fontClass} aria-hidden="true" style={{ position: "absolute", visibility: "hidden" }}>A</span>
         <p style={{ fontFamily: "var(--font-label)", fontSize: "0.78rem", letterSpacing: "0.14em", textTransform: "uppercase", margin: "14px 0 16px" }}>
-          Build your night · {weekend}
+          Build our night · {weekend}
         </p>
 
         {/* why this page exists, with the map button beside it — four-fifths text,
@@ -810,7 +810,7 @@ export function DirtySouth({
         {/* the game plan */}
         <StepLabel n={3} id="ds-step-3" fontClass={fontClass}>Share your game plan</StepLabel>
         <section ref={planRef} id="game-plan" aria-labelledby="ds-plan-head" className="ds-plan">
-          <h2 id="ds-plan-head" className={fontClass}>Your {dayName} game plan</h2>
+          <h2 id="ds-plan-head" className={fontClass}>Our {dayName} game plan</h2>
           {plan.length ? (
             <>
               <ol className="ds-plan-list">
