@@ -157,11 +157,25 @@ export function planQuery(state: PlanState): string {
   return q.toString();
 }
 
-/** The picks that make the game plan, in eat → drink → be merry order. */
+/** Put a night in the order it happens (Andy, 2026-11-20: drinks at four come before
+ *  dinner at six). Timed picks trade places by start time; a pick with no time (a venue
+ *  from "show all") keeps its eat → drink → be merry slot, and equal times stay in that
+ *  order too — so the result never depends on how an untimed pick compares. */
+export function inTimeOrder<T extends { option: PlanOption }>(plan: T[]): T[] {
+  const timedSlots = plan.map((p, i) => (p.option.time && minutesOf(p.option.time) <= 24 * 60 ? i : -1)).filter((i) => i >= 0);
+  const timed = timedSlots.map((i) => plan[i]).sort((a, b) => minutesOf(a.option.time) - minutesOf(b.option.time));
+  const out = [...plan];
+  timedSlots.forEach((slot, k) => { out[slot] = timed[k]; });
+  return out;
+}
+
+/** The picks that make the game plan, in the order the night happens. */
 export function lineup(data: PlannerData, state: PlanState): { cat: PlanCat; option: PlanOption }[] {
-  return PLAN_CATS.filter((c) => state.types.includes(c))
-    .map((cat) => ({ cat, option: resolvePick(data, state.day, cat, state.picks[cat]) }))
-    .filter((x): x is { cat: PlanCat; option: PlanOption } => x.option !== null);
+  return inTimeOrder(
+    PLAN_CATS.filter((c) => state.types.includes(c))
+      .map((cat) => ({ cat, option: resolvePick(data, state.day, cat, state.picks[cat]) }))
+      .filter((x): x is { cat: PlanCat; option: PlanOption } => x.option !== null),
+  );
 }
 
 /** The words that travel with the picture. */

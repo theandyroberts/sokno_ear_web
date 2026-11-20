@@ -74,7 +74,7 @@ export async function renderPlanImage(opts: {
   ctx.font = `52px ${display}`;
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  ctx.fillText("DIRTY SOUTH PARTY PLANNER", W / 2, 56);
+  ctx.fillText("PARTY IN THE DIRTY SOUTH", W / 2, 56);
 
   // headline
   ctx.textAlign = "left";
@@ -83,8 +83,15 @@ export async function renderPlanImage(opts: {
   ctx.save();
   ctx.translate(70, 262);
   ctx.rotate(-0.018);
-  ctx.font = `124px ${display}`;
-  ctx.fillText(`MY ${dayName.toUpperCase()}`, 0, 0);
+  // "DIRTY SOUTH SATURDAY" is far wider than "DIRTY SOUTH FRIDAY": shrink to fit the card.
+  const headline = `DIRTY SOUTH ${dayName.toUpperCase()}`;
+  let size = 124;
+  ctx.font = `${size}px ${display}`;
+  while (size > 64 && ctx.measureText(headline).width > W - 150) {
+    size -= 4;
+    ctx.font = `${size}px ${display}`;
+  }
+  ctx.fillText(headline, 0, 0);
   ctx.restore();
   ctx.font = `30px ${label}`;
   ctx.fillText(`${(dateLabel ?? dayName).toUpperCase()} · SOUTH KNOXVILLE`, 74, 318);

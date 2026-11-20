@@ -166,6 +166,16 @@ describe("Dirty South party planner", () => {
     expect(within(screen.getByRole("region", { name: "Your Friday game plan" })).queryByRole("listitem")).not.toBeInTheDocument();
   });
 
+  it("the game plan runs in time order: four o'clock drinks before six o'clock dumplings", () => {
+    page();
+    fireEvent.click(screen.getByRole("button", { name: "Pick Dumplings before the pitches for eat" }));
+    fireEvent.click(screen.getByRole("button", { name: "Pick Nine-dollar spicy ritas for drink" }));
+    fireEvent.click(screen.getByRole("button", { name: "Pick Pitch a Friend for be merry" }));
+    const plan = screen.getByRole("region", { name: "Your Friday game plan" });
+    const cats = within(plan).getAllByRole("listitem").map((li) => li.querySelector(".ds-plan-cat")?.textContent);
+    expect(cats).toEqual(["Drink", "Eat", "Be merry"]);
+  });
+
   it("the sticky share bar appears once there is something to share", () => {
     page();
     expect(screen.queryByRole("button", { name: /Share my Friday game plan/ })).not.toBeInTheDocument();

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { catOf, nightDates, parsePlanParams, planQuery, lineup, shareText, buildFeatured, minutesOf, type PlannerData } from "@/lib/planner";
+import { catOf, nightDates, parsePlanParams, planQuery, lineup, shareText, buildFeatured, minutesOf, inTimeOrder, type PlanOption, type PlannerData } from "@/lib/planner";
 import { buildDirectory, buildMerryAll } from "@/lib/planner-data";
 import { loadVenues } from "@/lib/venues";
 import type { NightDay, NightItem } from "@/lib/nightlife";
@@ -83,5 +83,16 @@ describe("planner lists", () => {
     const plan = lineup(data, { day: "Fri", picks: { merry: "a", eat: "b", drink: "gone-stale" }, types: ["eat", "drink", "merry"] });
     expect(plan.map((p) => p.cat)).toEqual(["eat", "merry"]);
     expect(shareText("Friday", plan)).toBe("My Friday game plan in the Dirty South:\nEAT — 7:00 PM · Angry Dumplings: b\nBE MERRY — 7:00 PM · Hi-Wire Brewing: a");
+  });
+
+  it("runs the night in time order; untimed picks and ties keep eat, drink, be merry", () => {
+    const p = (cat: "eat" | "drink" | "merry", time?: string) => ({ cat, option: { id: cat, cat, kind: time ? "featured" : "venue", title: cat, brand: cat, icon: "star", time } as PlanOption });
+    const order = (plan: ReturnType<typeof p>[]) => inTimeOrder(plan).map((x) => x.cat);
+    expect(order([p("eat", "6:00 PM"), p("drink", "4:00 PM"), p("merry", "7:00 PM")])).toEqual(["drink", "eat", "merry"]);
+    expect(order([p("eat", "7:00 PM"), p("drink", "7:00 PM"), p("merry", "7:00 PM")])).toEqual(["eat", "drink", "merry"]);
+    expect(order([p("eat"), p("drink"), p("merry")])).toEqual(["eat", "drink", "merry"]);
+    // an untimed venue holds its slot while the timed picks trade places around it
+    expect(order([p("eat", "9:00 PM"), p("drink"), p("merry", "5:00 PM")])).toEqual(["merry", "drink", "eat"]);
+    expect(order([p("eat"), p("drink", "8:00 PM"), p("merry", "7:00 PM")])).toEqual(["eat", "merry", "drink"]);
   });
 });
