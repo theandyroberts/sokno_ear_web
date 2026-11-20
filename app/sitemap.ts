@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { loadEpisodes } from "@/lib/episodes";
+import { loadAlerts } from "@/lib/alerts";
 
 export const dynamic = "force-dynamic";
 
@@ -12,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/dirtysouthparty`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE}/archive`, changeFrequency: "weekly", priority: 0.5 },
     { url: `${BASE}/about`, changeFrequency: "yearly", priority: 0.4 },
+    ...loadAlerts().map((a) => ({ url: `${BASE}/alerts/${a.slug}`, lastModified: a.from, changeFrequency: "daily" as const, priority: 0.7 })),
     ...episodes.map((e) => ({
       url: `${BASE}/${e.slug}`,
       lastModified: e.date,

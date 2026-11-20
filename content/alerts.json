@@ -1,0 +1,27 @@
+{
+  "_comment": "Ear Alerts: short, time-boxed notices with their own page at /alerts/<slug>. The banner shows on episode pages from `from` through `until` (America/New_York, inclusive); the page stays up afterwards and says it has closed. First one outlined by Andy, 2026-11-20.",
+  "alerts": [
+    {
+      "slug": "knoxville-planning-survey",
+      "label": "Ear Alert · City Hall",
+      "banner": "ALERT: City Planning Survey Closes Sunday, Nov. 22",
+      "title": "City Planning Survey Closes Sunday, Nov. 22",
+      "deck": "More homes near downtown? More investment along busy roads? More room for duplexes and backyard cottages?",
+      "from": "2026-11-20",
+      "until": "2026-11-22",
+      "closedNote": "The survey closed Sunday, Nov. 22. What Knoxville said goes into the draft plan; the project's updates are at WhatsNextKnoxville.com.",
+      "image": "/assets/spots/alert_planning_map_neighbor.jpg",
+      "imageAlt": "Newspaper engraving of a neighbor marking a loop on a riverside street map at her kitchen table",
+      "body": [
+        "The city is updating its Comprehensive Plan, the guide it'll use to make decisions about land use, transportation and public investment over the next 25 years. This round asks how much Knoxville should lean on each of four options: more growth in and around downtown, redevelopment along commercial corridors, and two different approaches to adding homes in existing neighborhoods.",
+        "For South Knoxville, it's a chance to weigh in on where new homes should go and what it would take to make busy roads easier to walk, bike or cross. You don't have to pick one plan wholesale. The city says it'll use the feedback to put together a plan that draws from the options.",
+        "The survey is short and online. If you'd rather do it on paper, there's a scorecard at the What's Next Knoxville headquarters at 30 Market Square, and everyone who finishes goes into a weekly drawing for a $50 Visa gift card."
+      ],
+      "cta": { "text": "Take the survey by Sunday, Nov. 22", "href": "https://www.surveymonkey.com/r/knoxoptions" },
+      "links": [
+        { "text": "Compare the four options", "href": "https://whatsnextknoxville.com/options" },
+        { "text": "City of Knoxville announcement", "href": "https://www.knoxvilletn.gov/m/newsflash/Home/Detail/75" }
+      ]
+    }
+  ]
+}

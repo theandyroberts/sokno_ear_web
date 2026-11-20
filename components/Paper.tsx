@@ -14,6 +14,8 @@ import { SubscribeForm } from "@/components/SubscribeForm";
 import { ZoomableImage } from "@/components/ZoomableImage";
 import { PartyMapCard } from "@/components/PartyMapCard";
 import { DirtySouthCard } from "@/components/DirtySouthCard";
+import { AlertBanner } from "@/components/AlertBanner";
+import { activeAlerts, type EarAlert } from "@/lib/alerts";
 import { ArticleSources } from "@/components/ArticleSources";
 import { ShareStory } from "@/components/ShareStory";
 import { JsonLd } from "@/components/JsonLd";
@@ -37,7 +39,9 @@ const Well = ({ children, title }: { children: React.ReactNode; title?: string }
   </section>
 );
 
-export function Paper({ episode, permalinks = true, storyView = false, venues }: { episode: Episode; permalinks?: boolean; storyView?: boolean; venues?: VenueRegistry }) {
+export function Paper({ episode, permalinks = true, storyView = false, venues, alerts }: { episode: Episode; permalinks?: boolean; storyView?: boolean; venues?: VenueRegistry; alerts?: EarAlert[] }) {
+  // Open Ear Alerts (content/alerts.json) — tests may pass their own list.
+  const openAlerts = alerts ?? activeAlerts();
   const { feature, scanner, stories, sidebar } = episode;
   // The venue-logo registry (content/venues.json) for the calendar's tiles. Paper
   // renders on the server, so reading it here is fine; tests may pass their own.
@@ -196,6 +200,14 @@ export function Paper({ episode, permalinks = true, storyView = false, venues }:
           <DirtySouthCard />
         </Page>
       </div>
+
+      {/* EAR ALERTS — full width under the header (under the Dirty South card on phones)
+          while an alert is open; each opens its own page at /alerts/<slug>. */}
+      {openAlerts.length > 0 && (
+        <Page style={{ padding: "16px 24px 4px", display: "grid", gap: 12 }}>
+          {openAlerts.map((a) => <AlertBanner key={a.slug} alert={a} />)}
+        </Page>
+      )}
 
       {/* DAY BOARD — when a single day is picked, the calendar steps out of the sidebar and
           runs full width directly under the nav, so the chosen day always has something
