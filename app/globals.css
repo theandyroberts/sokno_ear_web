@@ -28,14 +28,6 @@ html { scroll-behavior: smooth; }
 @media (max-width: 820px) { .ear-scanner { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .ear-scanner { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
-/* Dirty South doorway: phones see it right under the header so flyer arrivals
-   catch the green without scrolling past the feature; desktop keeps it in the
-   sidebar. Same 820px breakpoint where the two-column layout stacks. */
-.ds-card-mobile { display: none; }
-@media (max-width: 820px) {
-  .ds-card-mobile { display: block; }
-  .ds-card-desktop { display: none; }
-}
 
 /* Super-header: full 3-section dateline on iPad + desktop, compact on phones */
 .ear-super-full { display: flex; }
@@ -206,11 +198,6 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
     gap: 24px !important;
   }
 }
-/* A shared story opens on the story at every width: the Dirty South card never rides
-   under the header here. On a phone it comes after the story, the signup and the audio
-   briefing, where the stacked sidebar ends (Andy, 2026-11-16). */
-.ear-story-view .ds-card-mobile { display: none; }
-.ear-story-view .ds-card-desktop { display: block; }
 
 /* Navigation remains easy to find without competing with the article. */
 .ear-masthead-link { display: block; max-width: 1180px; margin: 0 auto; }

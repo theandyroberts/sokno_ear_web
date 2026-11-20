@@ -109,5 +109,7 @@ describe("Paper — standalone article sidebar", () => {
     expect(aside.firstElementChild!.querySelector("form")).toBeTruthy();
     expect(aside.lastElementChild!.matches(".ds-card-desktop")).toBe(true);
     expect(container.querySelectorAll('input[name="subscribe-email"]')).toHaveLength(3);
+    // Phones and iPads too: no second copy of the card above the feature (Andy, 2026-11-20).
+    expect(container.querySelector(".ds-card-mobile")).toBeNull();
   });
 });

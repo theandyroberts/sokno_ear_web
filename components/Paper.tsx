@@ -192,14 +192,6 @@ export function Paper({ episode, permalinks = true, storyView = false, venues, a
       <JsonLd episode={episode} storyUrl={storyView ? `https://soknoear.com/${episode.slug}/${feature.id}` : undefined} />
       <Masthead volLine={volLine} dateline={dateline} shortDate={shortDate} sections={sections} days={storyView ? undefined : episodeDays} />
 
-      {/* Phones: the Dirty South doorway rides directly under the header on the episode page.
-          On a story page it is hidden here and shows at the foot of the sidebar instead,
-          below the story and the audio briefing (see globals.css). */}
-      <div className="ds-card-mobile">
-        <Page style={{ padding: "14px 24px 2px" }}>
-          <DirtySouthCard />
-        </Page>
-      </div>
 
       {/* EAR ALERTS — full width under the header (under the Dirty South card on phones)
           while an alert is open; each opens its own page at /alerts/<slug>. */}
@@ -265,6 +257,9 @@ export function Paper({ episode, permalinks = true, storyView = false, venues, a
                 </Well>
                 </div>
               )}
+              {/* The Dirty South card closes the column at every width — on a phone or
+                  iPad it comes after the feature, the signup and the audio briefing,
+                  never above the feature or an alert (Andy, 2026-11-16 and 2026-11-20). */}
               <div className="ds-card-desktop">
                 <DirtySouthCard />
               </div>
