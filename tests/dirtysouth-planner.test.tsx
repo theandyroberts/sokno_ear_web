@@ -142,6 +142,15 @@ describe("Dirty South party planner", () => {
     expect(writeText).toHaveBeenCalledTimes(1);
   });
 
+  it("a shared link that ends in #game-plan scrolls to the plan", async () => {
+    window.history.replaceState(null, "", "/dirtysouthparty?day=Fri&drink=fri-earls#game-plan");
+    const scroll = vi.fn();
+    Element.prototype.scrollIntoView = scroll;
+    page({ initial: { day: "Fri", picks: { drink: "fri-earls" } } });
+    await waitFor(() => expect(scroll).toHaveBeenCalled());
+    expect((scroll.mock.contexts[0] as Element).id).toBe("game-plan");
+  });
+
   it("a shared link opens on its day with its picks", () => {
     page({ initial: { day: "Fri", picks: { drink: "fri-printshop", merry: "s:deadtronica" } } });
     const plan = screen.getByRole("region", { name: "Our Friday game plan" });

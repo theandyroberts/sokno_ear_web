@@ -593,6 +593,17 @@ export function DirtySouth({
     return () => { cancelled = true; window.clearTimeout(t); };
   }, [plan, query, dayName]);
 
+  // A friend arriving from a shared link (…#game-plan) lands on the plan itself. The
+  // browser's own jump to the anchor gets undone as the page hydrates and its fonts and
+  // pictures settle, so make the jump once the page is ready.
+  React.useEffect(() => {
+    if (window.location.hash !== "#game-plan") return;
+    const jump = () => planRef.current?.scrollIntoView({ block: "start" });
+    const t = window.setTimeout(jump, 60);
+    document.fonts?.ready.then(() => window.setTimeout(jump, 60)).catch(() => {});
+    return () => window.clearTimeout(t);
+  }, []);
+
   // The sticky share bar steps aside while the game plan card itself is on screen.
   React.useEffect(() => {
     const el = planRef.current;
