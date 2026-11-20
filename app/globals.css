@@ -408,10 +408,6 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
 .ds-step-demo { height: 58px; display: flex; align-items: center; }
 .ds-step-title { display: block; font-size: 1.25rem; line-height: 1.05; text-transform: uppercase; }
 .ds-step-text { display: block; margin-top: 4px; font-family: var(--font-label); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; line-height: 1.5; }
-/* the party card: silhouettes on a transparent ground, so the card's own green or cream shows through */
-.ds-step-party { align-items: center; justify-content: flex-end; gap: 4px; padding: 10px 12px 8px; overflow: hidden; }
-.ds-step-party img { display: block; width: 100%; min-height: 0; flex: 1 1 auto; object-fit: contain; object-position: center bottom; animation: ds-party 12s infinite; }
-.ds-party-text { font-size: clamp(1.5rem, 5vw, 2rem); line-height: 1; text-transform: uppercase; transform: rotate(-2deg); animation: ds-party-text 12s infinite; }
 /* One twelve-second loop: card 1 is up 0–3s, card 2 3–6s, card 3 6–9s, the party 9–12s. */
 @keyframes ds-step-active {
   0%, 23% { box-shadow: 6px 6px 0 #131309; transform: translate(-3px, -3px); background: #FDFAEB; }
@@ -460,29 +456,47 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
   73% { opacity: 0; transform: translate(16px, -14px) rotate(-15deg); }
   100% { opacity: 0; }
 }
-/* the party: the crowd bounces twice and "Let's Goooo!" pops */
-@keyframes ds-party {
-  0%, 76% { transform: none; }
-  80% { transform: translateY(-6px); }
-  84% { transform: none; }
-  88% { transform: translateY(-6px); }
-  92%, 100% { transform: none; }
-}
-@keyframes ds-party-text {
-  0%, 76% { transform: rotate(-2deg); }
-  80% { transform: scale(1.14) rotate(-4deg); }
-  86%, 100% { transform: rotate(-2deg); }
-}
 @media (max-width: 560px) {
   .ds-steps-list { grid-template-columns: minmax(0, 1fr); gap: 10px; }
   .ds-step-link { flex-direction: row; align-items: center; gap: 12px; padding: 10px 12px; }
   .ds-step-num { width: 38px; height: 38px; font-size: 1.35rem; }
   .ds-step-demo { flex: 0 0 104px; height: auto; }
   .ds-step-title { font-size: 1.1rem; }
-  /* the party row: crowd on the left, the shout on the right, same height as the steps */
-  .ds-step-party { flex-direction: row; justify-content: space-between; align-items: flex-end; padding: 8px 12px; }
-  .ds-step-party img { width: auto; height: 100%; max-width: 62%; flex: 0 1 auto; }
-  .ds-party-text { font-size: 1.45rem; text-align: right; padding-bottom: 4px; }
+}
+/* The party card (2026-11-20): four partiers cut at the waist, each its own layer,
+   blown up past the frame so the bottom is a solid black crowd and only heads and
+   hands break against the card's green (or cream, when the loop lights it). White
+   "Let's Goooo!" rides on top. Each layer is placed by its centre (--x) and height
+   (--h), and dances to nearly the same beat in its own way. */
+.ds-step-party { position: relative; padding: 0; overflow: hidden; justify-content: flex-end; }
+.ds-party-stage { position: absolute; inset: 0; }
+.ds-partier { position: absolute; bottom: -10%; left: var(--x); height: var(--h); transform: translateX(-50%); z-index: var(--z); }
+.ds-partier img { display: block; height: 100%; width: auto; max-width: none; transform-origin: 50% 100%; animation: 1s ease-in-out infinite; }
+.ds-partier--girl   { --x: 13%; --h: 104%; --z: 1; }
+.ds-partier--guy    { --x: 37%; --h: 112%; --z: 3; }
+.ds-partier--couple { --x: 64%; --h: 100%; --z: 2; }
+.ds-partier--dude   { --x: 86%; --h: 108%; --z: 4; }
+.ds-partier--girl img   { animation-name: ds-dance-bounce; animation-delay: 0s; }
+.ds-partier--guy img    { animation-name: ds-dance-jump;   animation-delay: -0.12s; }
+.ds-partier--couple img { animation-name: ds-dance-sway;   animation-delay: -0.05s; }
+.ds-partier--dude img   { animation-name: ds-dance-bob;    animation-delay: -0.2s; }
+@keyframes ds-dance-bounce { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-7%) rotate(3deg); } }
+@keyframes ds-dance-jump   { 0%, 100% { transform: translateY(0); } 35% { transform: translateY(-11%) scale(1.02); } 60% { transform: translateY(-2%); } }
+@keyframes ds-dance-sway   { 0%, 100% { transform: rotate(-3deg) translateY(0); } 50% { transform: rotate(3deg) translateY(-4%); } }
+@keyframes ds-dance-bob    { 0%, 100% { transform: translateY(-1%) rotate(2deg); } 50% { transform: translateY(-8%) rotate(-2deg); } }
+.ds-party-text {
+  position: relative; z-index: 10; align-self: stretch; text-align: center; padding: 0 8px 10px;
+  color: #FFFFFF; font-size: clamp(1.7rem, 5.6vw, 2.4rem); line-height: 1; text-transform: uppercase;
+  transform: rotate(-2deg); text-shadow: 0 2px 0 #131309, 0 0 10px rgba(19,19,9,0.6);
+}
+@media (max-width: 560px) {
+  /* a wide, short row: smaller layers, spread a touch, still past the top edge */
+  .ds-partier--girl   { --x: 11%; --h: 118%; }
+  .ds-partier--guy    { --x: 33%; --h: 126%; }
+  .ds-partier--couple { --x: 60%; --h: 112%; }
+  .ds-partier--dude   { --x: 88%; --h: 122%; }
+  .ds-step-party { flex-direction: column; padding: 0; }
+  .ds-party-text { font-size: 1.6rem; padding-bottom: 8px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .ds-steps, .ds-steps * { animation: none !important; }

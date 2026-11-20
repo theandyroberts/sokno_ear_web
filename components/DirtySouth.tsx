@@ -488,8 +488,16 @@ function HowItWorks({ fontClass }: { fontClass: string }) {
             the fourth beat of the loop, so it lights up right after "Choose & share". */}
         <li className="ds-step ds-step--4">
           <div className="ds-step-link ds-step-party">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/dirtysouth_party.png" alt="Silhouettes of friends dancing with their hands in the air" />
+            {/* Four partiers cut at the waist and blown up past the frame — girl, guy,
+                couple, dude — each on its own layer, dancing to nearly the same beat. */}
+            <span className="ds-party-stage" role="img" aria-label="Silhouettes of friends dancing with their hands in the air">
+              {["girl", "guy", "couple", "dude"].map((name) => (
+                <span key={name} className={`ds-partier ds-partier--${name}`}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={`/assets/party/${name}.png`} alt="" />
+                </span>
+              ))}
+            </span>
             <span className={`ds-party-text ${fontClass}`}>Let&apos;s Goooo!</span>
           </div>
         </li>
