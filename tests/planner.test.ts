@@ -82,7 +82,7 @@ describe("planner lists", () => {
     const data: PlannerData = { featured, directory: { eat: [], drink: [] }, merryAll: { ...{ Thu: [], Sat: [], Sun: [] }, Fri: featured.Fri.merry }, dates: {} };
     const plan = lineup(data, { day: "Fri", picks: { merry: "a", eat: "b", drink: "gone-stale" }, types: ["eat", "drink", "merry"] });
     expect(plan.map((p) => p.cat)).toEqual(["eat", "merry"]);
-    expect(shareText("Friday", plan)).toBe("My Friday game plan in the Dirty South:\nEAT — 7:00 PM · Angry Dumplings: b\nBE MERRY — 7:00 PM · Hi-Wire Brewing: a");
+    expect(shareText("Friday", plan)).toBe("The Friday game plan in the Dirty South:\nEAT — 7:00 PM · Angry Dumplings: b\nBE MERRY — 7:00 PM · Hi-Wire Brewing: a");
   });
 
   it("runs the night in time order; untimed picks and ties keep eat, drink, be merry", () => {

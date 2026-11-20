@@ -644,7 +644,7 @@ export function DirtySouth({
   async function share() {
     const url = shareUrl();
     const text = shareText(dayName, plan);
-    const title = `My ${dayName} game plan — Dirty South Party Planner`;
+    const title = `The ${dayName} game plan — Dirty South Party Planner`;
     const file = fileRef.current;
     try {
       if (typeof navigator.share === "function") {
@@ -834,7 +834,7 @@ export function DirtySouth({
                 ))}
               </ol>
               <button onClick={share} className={`ds-share-btn ${fontClass}`}>
-                ★ Share my game plan
+                ★ Share the game plan
               </button>
             </>
           ) : (
@@ -877,7 +877,7 @@ export function DirtySouth({
       {plan.length > 0 && !planInView && (
         <div className="ds-sharebar">
           <button onClick={share} className={fontClass}>
-            ★ Share my {dayName} game plan · {plan.length}
+            ★ Share the {dayName} game plan · {plan.length}
           </button>
         </div>
       )}

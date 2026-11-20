@@ -115,7 +115,7 @@ describe("Dirty South party planner", () => {
     page();
     fireEvent.click(screen.getByRole("button", { name: "Pick Dumplings before the pitches for eat" }));
     fireEvent.click(screen.getByRole("button", { name: "Pick Pitch a Friend for be merry" }));
-    fireEvent.click(screen.getByRole("button", { name: "★ Share my game plan" }));
+    fireEvent.click(screen.getByRole("button", { name: "★ Share the game plan" }));
     await waitFor(() => expect(writeText).toHaveBeenCalled());
     const url = new URL((writeText.mock.calls[0] as unknown as [string])[0]);
     expect(url.pathname).toBe("/dirtysouthparty");
@@ -132,11 +132,11 @@ describe("Dirty South party planner", () => {
     Object.defineProperty(navigator, "share", { value: share, configurable: true });
     page();
     fireEvent.click(screen.getByRole("button", { name: "Pick Nine-dollar spicy ritas for drink" }));
-    fireEvent.click(screen.getByRole("button", { name: "★ Share my game plan" }));
+    fireEvent.click(screen.getByRole("button", { name: "★ Share the game plan" }));
     await waitFor(() => expect(writeText).toHaveBeenCalledTimes(1));
     expect(share).toHaveBeenCalledWith(expect.objectContaining({ text: expect.stringContaining("DRINK — 4:00 PM · Earl's: Nine-dollar spicy ritas") }));
     share.mockImplementationOnce(async () => { throw new DOMException("closed", "AbortError"); });
-    fireEvent.click(screen.getByRole("button", { name: "★ Share my game plan" }));
+    fireEvent.click(screen.getByRole("button", { name: "★ Share the game plan" }));
     await waitFor(() => expect(share).toHaveBeenCalledTimes(2));
     expect(writeText).toHaveBeenCalledTimes(1);
   });
@@ -201,8 +201,8 @@ describe("Dirty South party planner", () => {
 
   it("the sticky share bar appears once there is something to share", () => {
     page();
-    expect(screen.queryByRole("button", { name: /Share my Friday game plan/ })).not.toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /Share the Friday game plan/ })).not.toBeInTheDocument();
     fireEvent.click(screen.getByRole("button", { name: "Pick Pitch a Friend for be merry" }));
-    expect(screen.getByRole("button", { name: "★ Share my Friday game plan · 1" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "★ Share the Friday game plan · 1" })).toBeInTheDocument();
   });
 });

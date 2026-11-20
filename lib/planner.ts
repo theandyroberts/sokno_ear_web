@@ -185,5 +185,5 @@ export function shareText(dayLabel: string, plan: { cat: PlanCat; option: PlanOp
     const what = option.kind === "venue" ? option.title : `${option.brand}: ${option.title}`;
     return `${CAT_LABEL[cat].toUpperCase()} — ${when}${what}`;
   });
-  return [`My ${dayLabel} game plan in the Dirty South:`, ...lines].join("\n");
+  return [`The ${dayLabel} game plan in the Dirty South:`, ...lines].join("\n");
 }
