@@ -52,12 +52,15 @@ export default async function AlertPage({ params }: Props) {
             <img src={a.image} alt={a.imageAlt ?? ""} width={1350} height={900} />
           </figure>
         )}
-        {a.body.map((para, i) => <p key={i} className="ear-alert-body">{para}</p>)}
+        {/* The ask sits right under the picture, before the copy (Andy, 2026-11-20). */}
         {a.cta && !closed && (
-          <a className="ear-alert-button" href={a.cta.href} target="_blank" rel="noopener">
-            {a.cta.text} <span aria-hidden="true">→</span>
-          </a>
+          <div style={{ margin: "-6px 0 18px" }}>
+            <a className="ear-alert-button" style={{ margin: 0 }} href={a.cta.href} target="_blank" rel="noopener">
+              {a.cta.text} <span aria-hidden="true">→</span>
+            </a>
+          </div>
         )}
+        {a.body.map((para, i) => <p key={i} className="ear-alert-body">{para}</p>)}
         {a.links && a.links.length > 0 && (
           <p className="ear-alert-links">
             {a.links.map((l, i) => (
