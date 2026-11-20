@@ -443,7 +443,7 @@ function HowItWorks({ fontClass }: { fontClass: string }) {
     },
     {
       n: 2,
-      title: "Pick your night",
+      title: "Pick the night",
       text: "Thursday, Friday, Saturday or Sunday.",
       demo: (
         <span className="ds-demo-days">
@@ -760,8 +760,8 @@ export function DirtySouth({
         </div>
 
         {/* day tabs */}
-        <StepLabel n={2} id="ds-step-2" fontClass={fontClass}>Pick your night</StepLabel>
-        <div role="tablist" aria-label="Pick your night" style={{ display: "flex", gap: 8, marginBottom: 26 }}>
+        <StepLabel n={2} id="ds-step-2" fontClass={fontClass}>Pick the night</StepLabel>
+        <div role="tablist" aria-label="Pick the night" style={{ display: "flex", gap: 8, marginBottom: 26 }}>
           {PLAN_DAYS.map((d) => {
             const active = d === day;
             return (
