@@ -313,6 +313,7 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
 }
 .ds-catsection { margin: 0 0 30px; }
 .ds-cathead {
+  scroll-margin-top: 14px;
   display: flex; align-items: center; gap: 12px; margin: 0 0 6px;
   font-size: clamp(2.4rem, 9vw, 3.8rem); line-height: 1; text-transform: uppercase;
   border-bottom: 6px solid #131309; padding-bottom: 6px; transform: rotate(-0.4deg);
@@ -354,11 +355,23 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
 .ds-share-btn:hover, .ds-share-btn:focus-visible { transform: rotate(0.4deg) scale(1.01); }
 .ds-share-status { font-family: var(--font-label); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; margin: 10px 0 0; min-height: 1em; }
 .ds-share-url { width: 100%; box-sizing: border-box; margin-top: 6px; padding: 8px; font-family: var(--font-label); border: 3px solid #131309; background: #FDFAEB; color: #131309; }
-.ds-sharebar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: #131309; }
+.ds-sharebar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; padding: 8px 14px calc(10px + env(safe-area-inset-bottom)); background: #131309; }
 .ds-sharebar button {
-  display: block; width: 100%; max-width: 720px; margin: 0 auto; padding: 12px; font-size: 1.3rem; text-transform: uppercase;
-  cursor: pointer; background: #CDE24A; color: #131309; border: 3px solid #CDE24A;
+  display: block; width: 100%; max-width: 720px; margin: 0 auto; padding: 11px; font-size: 1.25rem; text-transform: uppercase;
+  cursor: pointer; background: transparent; color: #CDE24A; border: 3px solid #CDE24A;
 }
+.ds-sharebar[data-done] button { background: #CDE24A; color: #131309; font-size: 1.35rem; }
+.ds-progress {
+  display: flex; justify-content: center; gap: 16px; max-width: 720px; margin: 0 auto 8px;
+  font-family: var(--font-label); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: #CDE24A;
+}
+.ds-progress > span { display: inline-flex; align-items: center; gap: 6px; opacity: 0.6; }
+.ds-progress > span[data-done] { opacity: 1; }
+.ds-progress-box {
+  width: 14px; height: 14px; border: 2px solid #CDE24A; display: inline-grid; place-items: center;
+  font-size: 0.7rem; line-height: 1; color: #131309;
+}
+.ds-progress > span[data-done] .ds-progress-box { background: #CDE24A; }
 
 /* Party planner steps (2026-11-20): numbered labels on the page, and the animated
    "Three steps to your night" explainer. One nine-second loop drives every card —

@@ -209,10 +209,34 @@ describe("Dirty South party planner", () => {
     expect(screen.getByRole("group", { name: "What kind of party?" })).toBeInTheDocument();
   });
 
-  it("the sticky share bar appears once there is something to share", () => {
+  it("the sticky bar tracks progress until the plan is complete, then shares", async () => {
+    const share = vi.fn(async () => {});
+    Object.defineProperty(navigator, "share", { value: share, configurable: true });
+    Object.defineProperty(navigator, "canShare", { value: () => false, configurable: true });
+    const scroll = vi.fn();
+    Element.prototype.scrollIntoView = scroll;
     page();
-    expect(screen.queryByRole("button", { name: /Share the Friday game plan/ })).not.toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /picked/ })).not.toBeInTheDocument();
     fireEvent.click(screen.getByRole("button", { name: "Pick Pitch a Friend for be merry" }));
-    expect(screen.getByRole("button", { name: "★ Share the Friday game plan · 1" })).toBeInTheDocument();
+    // progress, not a share: the next missing kind is eat
+    const bar = screen.getByRole("button", { name: "1 of 3 picked. Next, pick eat." });
+    expect(bar).toHaveTextContent("1 of 3 picked — Eat next ↓");
+    fireEvent.click(bar);
+    expect((scroll.mock.contexts.at(-1) as Element).id).toBe("ds-eat");
+    expect(share).not.toHaveBeenCalled();
+    fireEvent.click(screen.getByRole("button", { name: "Pick Dumplings before the pitches for eat" }));
+    expect(screen.getByRole("button", { name: "2 of 3 picked. Next, pick drink." })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole("button", { name: "Pick Nine-dollar spicy ritas for drink" }));
+    // complete: now it shares
+    const done = screen.getByRole("button", { name: "★ Share the Friday game plan" });
+    fireEvent.click(done);
+    await waitFor(() => expect(share).toHaveBeenCalled());
+  });
+
+  it("the progress count follows the kinds of party ticked in step 1", () => {
+    page();
+    fireEvent.click(screen.getByRole("button", { name: /Drink/, pressed: true }));
+    fireEvent.click(screen.getByRole("button", { name: "Pick Pitch a Friend for be merry" }));
+    expect(screen.getByRole("button", { name: "1 of 2 picked. Next, pick eat." })).toBeInTheDocument();
   });
 });

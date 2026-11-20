@@ -532,6 +532,8 @@ export function DirtySouth({
   const [mapOpen, setMapOpen] = React.useState(false);
   const [status, setStatus] = React.useState<null | "shared" | "copied" | "failed">(null);
   const [planInView, setPlanInView] = React.useState(false);
+  const [pastDays, setPastDays] = React.useState(false);
+  const tabsRef = React.useRef<HTMLDivElement>(null);
   const touched = React.useRef(false);
   const fileRef = React.useRef<File | null>(null);
   const planRef = React.useRef<HTMLElement>(null);
@@ -550,6 +552,10 @@ export function DirtySouth({
   const state: PlanState = React.useMemo(() => ({ day, picks: picks[day] ?? {}, types }), [day, picks, types]);
   const plan = React.useMemo(() => lineup(data, state), [data, state]);
   const dayName = DAY_NAMES[day];
+  // Progress through step 3: which of the night's chosen kinds have a pick yet.
+  const pickedCats = new Set(plan.map((p) => p.cat));
+  const wanted = PLAN_CATS.filter((c) => types.includes(c));
+  const nextCat = wanted.find((c) => !pickedCats.has(c));
   const query = planQuery(state, data.week);
 
   // Once the visitor has touched the plan, keep it in the address bar (so a refresh or a
@@ -603,6 +609,16 @@ export function DirtySouth({
     const t = window.setTimeout(jump, 60);
     document.fonts?.ready.then(() => window.setTimeout(jump, 60)).catch(() => {});
     return () => window.clearTimeout(t);
+  }, []);
+
+  // The progress bar joins the visitor once they've scrolled past the day tabs into the
+  // picking — even before the first check — so the steps keep leading the way.
+  React.useEffect(() => {
+    const el = tabsRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    const io = new IntersectionObserver(([entry]) => setPastDays(!entry.isIntersecting && entry.boundingClientRect.top < 0));
+    io.observe(el);
+    return () => io.disconnect();
   }, []);
 
   // The sticky share bar steps aside while the game plan card itself is on screen.
@@ -772,7 +788,7 @@ export function DirtySouth({
 
         {/* day tabs */}
         <StepLabel n={2} id="ds-step-2" fontClass={fontClass}>Pick the night</StepLabel>
-        <div role="tablist" aria-label="Pick the night" style={{ display: "flex", gap: 8, marginBottom: 26 }}>
+        <div ref={tabsRef} role="tablist" aria-label="Pick the night" style={{ display: "flex", gap: 8, marginBottom: 26 }}>
           {PLAN_DAYS.map((d) => {
             const active = d === day;
             return (
@@ -884,12 +900,32 @@ export function DirtySouth({
         SOKNOEAR.COM
       </div>
 
-      {/* the share button follows the visitor once there's something to share */}
-      {plan.length > 0 && !planInView && (
-        <div className="ds-sharebar">
-          <button onClick={share} className={fontClass}>
-            ★ Share the {dayName} game plan · {plan.length}
-          </button>
+      {/* The bar that follows the visitor: progress while the plan fills in ("2 of 3
+          picked — Be merry next", tap to go there), then the share button once every
+          kind of party they ticked has its pick (Andy, 2026-11-20). */}
+      {(plan.length > 0 || pastDays) && !planInView && (
+        <div className="ds-sharebar" data-done={nextCat ? undefined : true}>
+          <div className="ds-progress" aria-hidden="true">
+            {wanted.map((c) => (
+              <span key={c} data-done={pickedCats.has(c) || undefined}>
+                <span className="ds-progress-box">{pickedCats.has(c) ? "✓" : ""}</span>
+                {CAT_LABEL[c]}
+              </span>
+            ))}
+          </div>
+          {nextCat ? (
+            <button
+              className={fontClass}
+              onClick={() => document.getElementById(`ds-${nextCat}`)?.scrollIntoView({ behavior: "smooth", block: "start" })}
+              aria-label={`${plan.length} of ${wanted.length} picked. Next, pick ${CAT_LABEL[nextCat].toLowerCase()}.`}
+            >
+              {plan.length} of {wanted.length} picked — {CAT_LABEL[nextCat]} next ↓
+            </button>
+          ) : (
+            <button className={fontClass} onClick={share}>
+              ★ Share the {dayName} game plan
+            </button>
+          )}
         </div>
       )}
 
