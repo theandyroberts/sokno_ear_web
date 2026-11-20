@@ -419,9 +419,9 @@ function StepLabel({ n, id, textId, fontClass, children }: {
 }
 
 /** "Easy as 1, 2, 3": the planner is a process now, not a page to read
- *  (Andy, 2026-11-20). Each card acts out its step on a shared nine-second loop —
- *  boxes tick, the day slides to Friday, the plan fills in and flies off — and links
- *  down to that step. Under prefers-reduced-motion the cards sit still in their
+ *  (Andy, 2026-11-20). Each card acts out its step on a shared twelve-second loop —
+ *  boxes tick, the day slides to Friday, the plan fills in and flies off, then the
+ *  party card gets its turn — and the numbered cards link down to their step. Under prefers-reduced-motion the cards sit still in their
  *  finished state (see .ds-steps in globals.css). */
 function HowItWorks({ fontClass }: { fontClass: string }) {
   const steps = [
@@ -453,8 +453,8 @@ function HowItWorks({ fontClass }: { fontClass: string }) {
     },
     {
       n: 3,
-      title: "Check & share",
-      text: "Check one spot in each, then send the game plan to your crew.",
+      title: "Choose & share",
+      text: "Choose one spot in each, then send the game plan to your crew.",
       demo: (
         <span className="ds-demo-share">
           <span className="ds-demo-card">
@@ -484,6 +484,15 @@ function HowItWorks({ fontClass }: { fontClass: string }) {
             </a>
           </li>
         ))}
+        {/* The payoff, no number: friends with their hands up (Andy, 2026-11-20). It takes
+            the fourth beat of the loop, so it lights up right after "Choose & share". */}
+        <li className="ds-step ds-step--4">
+          <div className="ds-step-link ds-step-party">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/dirtysouth_party.png" alt="Silhouettes of friends dancing with their hands in the air" />
+            <span className={`ds-party-text ${fontClass}`}>Let&apos;s Goooo!</span>
+          </div>
+        </li>
       </ol>
     </section>
   );
@@ -816,7 +825,7 @@ export function DirtySouth({
           {dayName} night
         </h2>
         <p style={{ fontFamily: "var(--font-label)", fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", margin: "0 0 18px", opacity: 0.75 }}>
-          {data.dates[day] ? `${data.dates[day]} · ` : ""}Check one in each, then share the game plan in step 3.
+          {data.dates[day] ? `${data.dates[day]} · ` : ""}Choose one in each, then share the game plan in step 3.
         </p>
 
         {PLAN_CATS.filter((c) => types.includes(c)).map((cat) => (

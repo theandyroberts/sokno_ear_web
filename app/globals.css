@@ -390,14 +390,16 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
 }
 .ds-steps { margin: 22px 0 26px; }
 .ds-steps-head { font-size: clamp(1.5rem, 6vw, 2.2rem); line-height: 1; text-transform: uppercase; margin: 0 0 12px; transform: rotate(-0.6deg); }
-.ds-steps-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+/* 2×2 on desktop so the party card is the same size as the three steps; equal rows on a phone */
+.ds-steps-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 14px; }
 .ds-step-link {
   display: flex; flex-direction: column; gap: 10px; height: 100%; box-sizing: border-box; padding: 12px;
   border: 3px solid #131309; color: #131309; text-decoration: none; background: rgba(253,250,235,0.35);
-  animation: ds-step-active 9s infinite;
+  animation: ds-step-active 12s infinite;
 }
-.ds-step--2 .ds-step-link { animation-delay: -6s; }
-.ds-step--3 .ds-step-link { animation-delay: -3s; }
+.ds-step--2 .ds-step-link { animation-delay: -9s; }
+.ds-step--3 .ds-step-link { animation-delay: -6s; }
+.ds-step--4 .ds-step-link { animation-delay: -3s; }
 .ds-step-link:focus-visible { outline: 3px solid #131309; outline-offset: 3px; }
 .ds-step-num {
   flex: 0 0 auto; width: 44px; height: 44px; border-radius: 50%; background: #131309; color: #CDE24A;
@@ -406,9 +408,14 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
 .ds-step-demo { height: 58px; display: flex; align-items: center; }
 .ds-step-title { display: block; font-size: 1.25rem; line-height: 1.05; text-transform: uppercase; }
 .ds-step-text { display: block; margin-top: 4px; font-family: var(--font-label); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; line-height: 1.5; }
+/* the party card: silhouettes on a transparent ground, so the card's own green or cream shows through */
+.ds-step-party { align-items: center; justify-content: flex-end; gap: 4px; padding: 10px 12px 8px; overflow: hidden; }
+.ds-step-party img { display: block; width: 100%; min-height: 0; flex: 1 1 auto; object-fit: contain; object-position: center bottom; animation: ds-party 12s infinite; }
+.ds-party-text { font-size: clamp(1.5rem, 5vw, 2rem); line-height: 1; text-transform: uppercase; transform: rotate(-2deg); animation: ds-party-text 12s infinite; }
+/* One twelve-second loop: card 1 is up 0–3s, card 2 3–6s, card 3 6–9s, the party 9–12s. */
 @keyframes ds-step-active {
-  0%, 31% { box-shadow: 6px 6px 0 #131309; transform: translate(-3px, -3px); background: #FDFAEB; }
-  34%, 97% { box-shadow: 0 0 0 #131309; transform: none; background: rgba(253,250,235,0.35); }
+  0%, 23% { box-shadow: 6px 6px 0 #131309; transform: translate(-3px, -3px); background: #FDFAEB; }
+  25%, 98% { box-shadow: 0 0 0 #131309; transform: none; background: rgba(253,250,235,0.35); }
   100% { box-shadow: 6px 6px 0 #131309; transform: translate(-3px, -3px); background: #FDFAEB; }
 }
 /* step 1: three boxes tick in turn */
@@ -416,9 +423,9 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
 .ds-demo-pill { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
 .ds-demo-box {
   width: 13px; height: 13px; border: 2px solid #131309; display: grid; place-items: center; background: #131309;
-  animation: ds-tick-box 9s infinite both; animation-delay: calc(0.4s + var(--i) * 0.55s);
+  animation: ds-tick-box 12s infinite both; animation-delay: calc(0.4s + var(--i) * 0.55s);
 }
-.ds-demo-tick { color: #CDE24A; font-size: 10px; line-height: 1; animation: ds-tick-mark 9s infinite both; animation-delay: calc(0.4s + var(--i) * 0.55s); }
+.ds-demo-tick { color: #CDE24A; font-size: 10px; line-height: 1; animation: ds-tick-mark 12s infinite both; animation-delay: calc(0.4s + var(--i) * 0.55s); }
 @keyframes ds-tick-box { 0% { background: transparent; } 4%, 94% { background: #131309; } 97%, 100% { background: transparent; } }
 @keyframes ds-tick-mark { 0% { opacity: 0; } 4%, 94% { opacity: 1; } 97%, 100% { opacity: 0; } }
 /* step 2: the day box slides from Thursday to Friday */
@@ -430,28 +437,41 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
 .ds-demo-dayhl {
   position: absolute; top: -4px; bottom: -4px; left: 0; width: 25%; box-sizing: border-box;
   border: 3px solid #131309; background: rgba(19,19,9,0.14); transform: translateX(100%) rotate(-3deg);
-  animation: ds-day 9s infinite;
+  animation: ds-day 12s infinite;
 }
 @keyframes ds-day {
-  0%, 38% { transform: translateX(0) rotate(-3deg); }
-  47%, 95% { transform: translateX(100%) rotate(-3deg); }
+  0%, 29% { transform: translateX(0) rotate(-3deg); }
+  35%, 95% { transform: translateX(100%) rotate(-3deg); }
   100% { transform: translateX(0) rotate(-3deg); }
 }
 /* step 3: the plan fills in, Share pulses, the plane flies off */
 .ds-demo-share { position: relative; display: flex; align-items: center; gap: 8px; }
 .ds-demo-card { display: flex; flex-direction: column; gap: 4px; width: 58px; padding: 5px; border: 2px solid #131309; background: #FDFAEB; }
-.ds-demo-line { display: block; height: 5px; background: #131309; animation: ds-line 9s infinite both; animation-delay: calc(var(--i) * 0.35s); }
+.ds-demo-line { display: block; height: 5px; background: #131309; animation: ds-line 12s infinite both; animation-delay: calc(var(--i) * 0.35s); }
 .ds-demo-line:nth-child(2) { width: 80%; }
 .ds-demo-line:nth-child(3) { width: 60%; }
-@keyframes ds-line { 0%, 69% { opacity: 0; transform: translateX(-6px); } 73%, 96% { opacity: 1; transform: none; } 100% { opacity: 0; } }
-.ds-demo-btn { font-family: var(--font-label); font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; background: #131309; color: #CDE24A; padding: 4px 7px; animation: ds-pulse 9s infinite; }
-@keyframes ds-pulse { 0%, 80% { transform: none; } 84% { transform: scale(1.15) rotate(-3deg); } 88%, 100% { transform: none; } }
-.ds-demo-plane { position: absolute; right: -16px; top: -8px; font-size: 1rem; opacity: 0; animation: ds-plane 9s infinite; }
+@keyframes ds-line { 0%, 51% { opacity: 0; transform: translateX(-6px); } 55%, 96% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+.ds-demo-btn { font-family: var(--font-label); font-size: 0.6rem; letter-spacing: 0.08em; text-transform: uppercase; background: #131309; color: #CDE24A; padding: 4px 7px; animation: ds-pulse 12s infinite; }
+@keyframes ds-pulse { 0%, 63% { transform: none; } 66% { transform: scale(1.15) rotate(-3deg); } 69%, 100% { transform: none; } }
+.ds-demo-plane { position: absolute; right: -16px; top: -8px; font-size: 1rem; opacity: 0; animation: ds-plane 12s infinite; }
 @keyframes ds-plane {
-  0%, 84% { opacity: 0; transform: translate(-18px, 10px); }
-  87% { opacity: 1; transform: translate(-10px, 4px); }
-  96% { opacity: 0; transform: translate(16px, -14px) rotate(-15deg); }
+  0%, 64% { opacity: 0; transform: translate(-18px, 10px); }
+  66% { opacity: 1; transform: translate(-10px, 4px); }
+  73% { opacity: 0; transform: translate(16px, -14px) rotate(-15deg); }
   100% { opacity: 0; }
+}
+/* the party: the crowd bounces twice and "Let's Goooo!" pops */
+@keyframes ds-party {
+  0%, 76% { transform: none; }
+  80% { transform: translateY(-6px); }
+  84% { transform: none; }
+  88% { transform: translateY(-6px); }
+  92%, 100% { transform: none; }
+}
+@keyframes ds-party-text {
+  0%, 76% { transform: rotate(-2deg); }
+  80% { transform: scale(1.14) rotate(-4deg); }
+  86%, 100% { transform: rotate(-2deg); }
 }
 @media (max-width: 560px) {
   .ds-steps-list { grid-template-columns: minmax(0, 1fr); gap: 10px; }
@@ -459,6 +479,10 @@ main:has(#df-sun:checked) .ear-daynav--board label[for="df-sun"] { background: v
   .ds-step-num { width: 38px; height: 38px; font-size: 1.35rem; }
   .ds-step-demo { flex: 0 0 104px; height: auto; }
   .ds-step-title { font-size: 1.1rem; }
+  /* the party row: crowd on the left, the shout on the right, same height as the steps */
+  .ds-step-party { flex-direction: row; justify-content: space-between; align-items: flex-end; padding: 8px 12px; }
+  .ds-step-party img { width: auto; height: 100%; max-width: 62%; flex: 0 1 auto; }
+  .ds-party-text { font-size: 1.45rem; text-align: right; padding-bottom: 4px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .ds-steps, .ds-steps * { animation: none !important; }

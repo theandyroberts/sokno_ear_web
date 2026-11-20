@@ -194,7 +194,7 @@ describe("Dirty South party planner", () => {
     expect(links).toHaveLength(3);
     expect(links[0]).toHaveAccessibleName("Step 1: Pick your mix Tick what kind of party: eat, drink, be merry.");
     expect(links[1]).toHaveAccessibleName("Step 2: Pick the night Thursday, Friday, Saturday or Sunday.");
-    expect(links[2]).toHaveAccessibleName("Step 3: Check & share Check one spot in each, then send the game plan to your crew.");
+    expect(links[2]).toHaveAccessibleName("Step 3: Choose & share Choose one spot in each, then send the game plan to your crew.");
     links.forEach((a, i) => {
       const target = container.querySelector(a.getAttribute("href")!);
       expect(target).not.toBeNull();
