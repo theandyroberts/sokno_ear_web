@@ -274,19 +274,40 @@ export function placeDaySlots(items, opts = {}) {
  * Pure and timezone-free, like placeDaySlots: days are "YYYY-MM-DD", hours local.
  *
  * @param {Array<{key: string, day: string, hour: number, venue?: string}>} items  the dated posts
- * @param {{floorDay?: string, flip?: boolean}} [opts]
+ * @param {{floorDay?: string, flip?: boolean, mode?: "all-early"|"split"|"day-of"}} [opts]
+ *   `mode` defaults to "all-early", the rule since 2026-11-23 (timingMode); "split" is the
+ *   test as it ran, "day-of" the old way.
  * @returns {Map<string, {arm: "early"|"day-of"|"no-room", day: string, hour: number}>}
  */
-/** The dashboard move that runs the timing test. Andy's "Don't" puts every dated post
- *  back to its day-of slot and the review's arm table stays empty for that week. */
+/** The dashboard move that ran the timing test (Oct 28 – Nov 22). Andy's "Don't" puts
+ *  every dated post back to its day-of slot. */
 export const EARLY_POSTS_MOVE = "early-posts";
+/** The move that made a day early the rule (decided 2026-11-23): every dated post goes
+ *  out 24 hours before its old slot. Andy's "Don't" keeps the half-and-half split running. */
+export const ALL_EARLY_MOVE = "all-posts-early";
 
 export function earlyPostsOn(moves) {
   return !(moves ?? []).some((m) => m.key === EARLY_POSTS_MOVE && m.answer === "no");
 }
 
+/**
+ * How the dated posts are timed, from Andy's answers on the dashboard:
+ *   "all-early" — the rule since 2026-11-23: every dated post goes out the day before.
+ *                 Four weeks of the split read early shared 9 of 27 (33%) against day-of
+ *                 6 of 27 (22%), ahead three weeks of four; the share is the reach.
+ *   "split"     — the test as it ran: half early, half day-of, flipping each week
+ *                 (Andy answered "Don't" to making it the rule).
+ *   "day-of"    — the old way, nothing moved (Andy answered "Don't" to the test itself).
+ * @returns {"all-early"|"split"|"day-of"}
+ */
+export function timingMode(moves) {
+  if (!earlyPostsOn(moves)) return "day-of";
+  if ((moves ?? []).some((m) => m.key === ALL_EARLY_MOVE && m.answer === "no")) return "split";
+  return "all-early";
+}
+
 export function assignTimingArms(items, opts = {}) {
-  const { floorDay, flip = false } = opts;
+  const { floorDay, flip = false, mode = "all-early" } = opts;
   const dayBefore = (day) => {
     const [y, m, d] = day.split("-").map(Number);
     return new Date(Date.UTC(y, m - 1, d - 1)).toISOString().slice(0, 10);
@@ -294,13 +315,14 @@ export function assignTimingArms(items, opts = {}) {
   const out = new Map();
   const eligible = [];
   for (const it of items) {
-    if (floorDay && dayBefore(it.day) < floorDay) out.set(it.key, { arm: "no-room", day: it.day, hour: it.hour });
+    if (mode === "day-of") out.set(it.key, { arm: "day-of", day: it.day, hour: it.hour });
+    else if (floorDay && dayBefore(it.day) < floorDay) out.set(it.key, { arm: "no-room", day: it.day, hour: it.hour });
     else eligible.push(it);
   }
   eligible.sort((a, b) =>
     (a.venue ?? "~").localeCompare(b.venue ?? "~") || a.day.localeCompare(b.day) || a.hour - b.hour || a.key.localeCompare(b.key));
   eligible.forEach((it, i) => {
-    const early = (i % 2 === 0) !== flip;
+    const early = mode === "all-early" || (i % 2 === 0) !== flip;
     out.set(it.key, early
       ? { arm: "early", day: dayBefore(it.day), hour: it.hour }
       : { arm: "day-of", day: it.day, hour: it.hour });

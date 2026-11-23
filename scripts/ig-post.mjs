@@ -30,10 +30,13 @@
 //     Those usernames come out of `userTags` (the caption still @s them), go on
 //     `droppedTags`, and the post is retried at once without spending an attempt.
 //     ig-queue.mjs reads `droppedTags` back so the handle is never image-tagged again.
+//   · a container refused for any other non-transient reason while it carried a
+//     collaborator invite (`collaborators`, since 2026-11-25) loses the invite and is
+//     retried at once; `droppedCollaborators` records it for the Monday review.
 process.env.TZ = "America/New_York"; // all slot math is SoKno-local
 import fs from "node:fs";
 import path from "node:path";
-import { publishPost, untaggableUsernames, dropRefusedTags } from "./ig-container.mjs";
+import { publishPost, untaggableUsernames, dropRefusedTags, dropCollaborators, isTransient } from "./ig-container.mjs";
 import { downgradeCarousel } from "./ig-roundup.mjs";
 
 const GRAPH = process.env.IG_GRAPH_BASE || "https://graph.instagram.com/v22.0";
@@ -94,6 +97,7 @@ for (const file of files) {
       console.log(`  tags:  ${post.tags.join(" ") || "(none)"}`);
       if (post.userTags?.length) console.log(`  user_tags: ${post.userTags.map((t) => "@" + t.username).join(" ")}${post.abGroup ? `  [A/B: ${post.abGroup}]` : ""}`);
       else if (post.abGroup) console.log(`  user_tags: (none)  [A/B: ${post.abGroup}]`);
+      if (post.collaborators?.length) console.log(`  collaborators: ${post.collaborators.map((u) => "@" + u).join(" ")}`);
       console.log(post.caption.split("\n").map((l) => "    " + l).join("\n"));
       continue;
     }
@@ -114,8 +118,18 @@ for (const file of files) {
           // An untaggable handle: drop it from the picture and go again this run. Only
           // when it actually removes a tag — otherwise the same error would loop.
           const refused = untaggableUsernames(err.graph);
-          if (!dropRefusedTags(post, refused)) throw err;
-          console.warn(`✂ ${q.slug}/${post.id}: Meta cannot tag ${refused.map((u) => "@" + u).join(" ")} — dropped from the image, retrying now`);
+          if (dropRefusedTags(post, refused)) {
+            console.warn(`✂ ${q.slug}/${post.id}: Meta cannot tag ${refused.map((u) => "@" + u).join(" ")} — dropped from the image, retrying now`);
+            continue;
+          }
+          // A container refused for some other, non-transient reason while it carried a
+          // collaborator invite: the invite is the newest thing on the request, so it goes
+          // and the post is retried without it. The post matters more than the invite.
+          if (err.graph && !isTransient(err.graph) && dropCollaborators(post)) {
+            console.warn(`✂ ${q.slug}/${post.id}: container refused with a collaborator invite (${String(err.message).slice(0, 160)}) — invite dropped (@${post.droppedCollaborators.join(" @")}), retrying now`);
+            continue;
+          }
+          throw err;
         }
       }
 

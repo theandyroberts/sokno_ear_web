@@ -32,6 +32,11 @@ describe("the weekly Reel", () => {
     expect(p.caption.trim().endsWith("#SoKno")).toBe(true);
   });
 
+  it("takes its offset from the calendar: one o'clock is -05:00 after the clocks go back (No. 22 and 23 went at noon)", () => {
+    const p = buildReelPost({ episode: { ...episode, number: 23, date: "2026-11-18" }, videoUrl: "https://s/reel.mp4", coverUrl: "https://s/reel.jpg" });
+    expect(p.postAt).toBe(`2026-11-18T${REEL_HOUR}:00:00-05:00`);
+  });
+
   it("publishes as one REELS container that is given the video wait, then the publish", async () => {
     const calls: Array<{ url: string; body?: Record<string, string> }> = [];
     let polls = 0;

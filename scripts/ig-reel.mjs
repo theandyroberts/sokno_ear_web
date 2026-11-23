@@ -14,6 +14,8 @@
 // queue with no run in between (ig-queue.mjs reads the answer directly, the way it
 // does for the roundup). The older `weekly-reel` move's "Don't" still keeps it out.
 
+import { etIso } from "./ig-schedule.mjs";
+
 /** The move that took the Reel out (Claude's, 2026-11-02). Andy's "Don't" keeps it running. */
 export const REEL_OUT_MOVE = "reel-comes-out";
 /** The move key Andy answered on the dashboard while the Reel ran (Oct 14 – Nov 1). */
@@ -76,7 +78,7 @@ export function buildReelPost({ episode, videoUrl, coverUrl, hashtags = "", site
     imageUrl: coverUrl,
     caption: lines.join("\n"),
     tags: [],
-    postAt: `${episode.date}T${String(REEL_HOUR).padStart(2, "0")}:00:00-04:00`,
+    postAt: etIso(episode.date, REEL_HOUR),
     permalink: site,
     dated: false,
     status: "pending",

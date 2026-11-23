@@ -53,6 +53,48 @@ export const AD_HELD = true;
 /** Instagram allows 20 tags on an image; a banner never needs more than this. */
 export const MAX_IMAGE_TAGS = 5;
 
+/**
+ * The dashboard move that invites the venue onto its post (decided 2026-11-23). A tag
+ * puts the post in the venue's "tagged" tab; a collaborator invite is a notification
+ * that asks them to put it on their own grid, where their followers see it. The No. 23
+ * week read 505 on 20 posts with one share after 1,763 and ten the week before, every
+ * post tagged both weeks: the tag is seen and not acted on. Andy's "Don't" keeps tags only.
+ */
+export const COLLAB_MOVE = "collab-invites";
+/** Instagram allows three collaborators on a post; the venue alone is the ask. */
+export const MAX_COLLABORATORS = 1;
+
+export function collabInvitesOn(moves) {
+  return !(moves ?? []).some((m) => m.key === COLLAB_MOVE && m.answer === "no");
+}
+
+/**
+ * Who a story banner invites as a collaborator: the venue, the first handle the story
+ * names, lower-case and without the @. Undefined when there is nobody to invite or the
+ * handle is one Meta has refused (`untaggable`), so the publish never trips on it.
+ * @param {string[]} tags  the story's handles, venue first (resolveTags)
+ * @returns {string[]|undefined}
+ */
+export function collaboratorsFor(tags, { max = MAX_COLLABORATORS, untaggable = new Set() } = {}) {
+  const handles = (tags ?? []).map((t) => String(t).replace(/^@/, "").toLowerCase()).filter((h) => h && !untaggable.has(h));
+  return handles.length ? handles.slice(0, max) : undefined;
+}
+
+/**
+ * Take the collaborator invite off a post whose container Meta refused for a reason that
+ * is not a tag and not transient, so the post still goes out. Remembers who was dropped
+ * (`droppedCollaborators`) for the Monday review. Returns how many were removed.
+ * @param {object} post  mutated in place
+ * @returns {number}
+ */
+export function dropCollaborators(post) {
+  const n = post.collaborators?.length ?? 0;
+  if (!n) return 0;
+  post.droppedCollaborators = [...new Set([...(post.droppedCollaborators ?? []), ...post.collaborators])];
+  delete post.collaborators;
+  return n;
+}
+
 /** Every tagged banner is tagged in the image unless Andy said "Don't" — then back to the 50/50 test. */
 export function imageTagsOn(moves) {
   return !(moves ?? []).some((m) => m.key === TAG_EVERY_POST_MOVE && m.answer === "no");
@@ -137,7 +179,7 @@ export function dropRefusedTags(post, refused) {
 }
 
 /**
- * @param {object} post   a queue entry: imageUrl, caption, optional slides[] (+ slideTags[]), userTags[], videoUrl + coverUrl (a Reel)
+ * @param {object} post   a queue entry: imageUrl, caption, optional slides[] (+ slideTags[]), userTags[], collaborators[], videoUrl + coverUrl (a Reel)
  * @param {object} io
  * @param {string} io.graph  API base
  * @param {string} io.userId
@@ -196,6 +238,9 @@ export async function publishPost(post, { graph, userId, token, fetchImpl = fetc
     // story banner (userTagsFor); until 2026-10-05 it was a 50/50 test (`abGroup`).
     const body = { image_url: post.imageUrl, caption: post.caption };
     if (post.userTags?.length) body.user_tags = JSON.stringify(post.userTags);
+    // `collaborators` invites the venue to carry the post on its own grid (since
+    // 2026-11-25; collaboratorsFor). Up to three usernames; the venue alone is sent.
+    if (post.collaborators?.length) body.collaborators = JSON.stringify(post.collaborators);
     creationId = await container(body, "container");
   }
 

@@ -10,11 +10,11 @@
 process.env.TZ = "America/New_York"; // all slot math is SoKno-local
 import fs from "node:fs";
 import path from "node:path";
-import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, placeDaySlots, assignTimingArms, earlyPostsOn, SAME_DAY_GAP_H, MAX_VENUE_POSTS_PER_DAY , etIso, toIso } from "./ig-schedule.mjs";
+import { spaceOutPosts, MIN_GAP_MIN, nextLeadWindow, placeDaySlots, assignTimingArms, timingMode, SAME_DAY_GAP_H, MAX_VENUE_POSTS_PER_DAY , etIso, toIso } from "./ig-schedule.mjs";
 import { priorRunsById, pickRepeatsToDrop, standingKeyOf, MAX_REPEATS_PER_EPISODE } from "./ig-repeats.mjs";
 import { checkBanner } from "./ig-banner-check.mjs";
 import { buildRoundup, buildVenueRoundup, pickSingles, roundupIsOn, roundupSlideTagsOn, venueCarouselsOn, MAX_SINGLES_PER_VENUE } from "./ig-roundup.mjs";
-import { userTagsFor, imageTagsOn, artistTagsOn, adIsOn, abBucket } from "./ig-container.mjs";
+import { userTagsFor, imageTagsOn, artistTagsOn, adIsOn, abBucket, collaboratorsFor, collabInvitesOn } from "./ig-container.mjs";
 import { reelIsOn, buildReelPost } from "./ig-reel.mjs";
 
 const SITE = "https://soknoear.com";
@@ -191,6 +191,11 @@ for (const s of stories) {
   // names goes in the picture, not only the venue (Andy: "tags the venue and artist";
   // the No. 17 posts that reached hundreds were the ones with a tagged audience).
   const userTags = userTagsFor(tags, { everyone: artistTagsOn(moves), untaggable });
+  // Since 2026-11-25 the venue is also invited as a collaborator (collaboratorsFor): a
+  // tag lands in its "tagged" tab, an invite asks it to carry the post on its own grid.
+  // No. 23 read 505 on 20 tagged posts with one share, after 1,763 and ten; the tag is
+  // seen and not acted on. Andy's "Don't" on `collab-invites` keeps tags only.
+  const collaborators = collabInvitesOn(moves) ? collaboratorsFor(tags, { untaggable }) : undefined;
 
   if (s.__isFeature) featureIds.add(s.id);
   posts.push({
@@ -207,6 +212,7 @@ for (const s of stories) {
     // than silence) but always publishes an undated one late.
     dated: Boolean(dated),
     ...(userTags ? { userTags } : {}),
+    ...(collaborators ? { collaborators } : {}),
     status: "pending",
   });
 }
@@ -249,6 +255,8 @@ const queuePath = path.join(process.cwd(), "content", "ig-queue", `${episode.slu
 let prevQueue = null;
 try { prevQueue = JSON.parse(fs.readFileSync(queuePath, "utf8")); } catch { /* first staging */ }
 const wentOutTheOldWay = Boolean(prevQueue?.posts?.some((p) => p.id === "episode-drop" && p.status !== "pending"));
+
+if (!collabInvitesOn(moves)) warnings.push("collaborator invites off — Andy answered “Don't” on the dashboard; the venue is tagged, not invited");
 
 // Andy answering "Don't" to tagging every picture puts the old 50/50 split back.
 if (!imageTagsOn(moves)) {
@@ -313,17 +321,19 @@ else {
   }
 }
 
-// ── The timing test: half the dated posts go out the day before (assignTimingArms in
-// scripts/ig-schedule.mjs). Runs before the spacing pass so an early post is spaced
-// against whatever else is on its new day. The arm is kept on the post for the
-// Monday review, which compares shares and reach between the two. Andy's "Don't" on
-// the dashboard move `early-posts` leaves every dated post at its day-of slot.
-if (!earlyPostsOn(moves)) warnings.push("timing test off — Andy answered “Don't” on the dashboard; every dated post goes out day-of");
-else {
+// ── Timing: every dated post goes out the day before (assignTimingArms in
+// scripts/ig-schedule.mjs). The rule since 2026-11-23, when four weeks of the half-and-
+// half test read early shared 9 of 27 against day-of 6 of 27, ahead three weeks of four
+// (the share is the reach). Runs before the spacing pass so an early post is spaced
+// against whatever else is on its new day. The arm is kept on the post for the Monday
+// review. Andy's answers on the dashboard: "Don't" on `all-posts-early` keeps the split
+// running; "Don't" on `early-posts` puts every dated post back to its day-of slot.
+{
+  const mode = timingMode(moves);
   const dated = posts.filter((p) => p.dated);
   const arms = assignTimingArms(
     dated.map((p) => ({ key: p.id, day: p.postAt.slice(0, 10), hour: Number(p.postAt.slice(11, 13)), venue: p.tags[0]?.toLowerCase() })),
-    { floorDay: episode.date, flip: Number(episode.number) % 2 === 1 },
+    { floorDay: episode.date, flip: Number(episode.number) % 2 === 1, mode },
   );
   for (const p of dated) {
     const a = arms.get(p.id);
@@ -331,7 +341,10 @@ else {
     p.postAt = etIso(a.day, a.hour);
   }
   const n = (arm) => dated.filter((p) => p.timingArm === arm).length;
-  warnings.push(`timing test: ${n("early")} posts the day before, ${n("day-of")} day-of${n("no-room") ? `, ${n("no-room")} too close to publish to move` : ""}`);
+  const room = n("no-room") ? `, ${n("no-room")} too close to publish to move` : "";
+  if (mode === "day-of") warnings.push("timing: every dated post goes out day-of — Andy answered “Don't” to posting early on the dashboard");
+  else if (mode === "split") warnings.push(`timing test (Andy answered “Don't” to making early the rule): ${n("early")} posts the day before, ${n("day-of")} day-of${room}`);
+  else warnings.push(`timing: ${n("early")} dated posts go out the day before${room}`);
 }
 
 // ── Same-day spacing (A15) and the venue cap (A16). Stories were stamped with the
