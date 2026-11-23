@@ -1,81 +1,26 @@
 {
   "_comment": "Dated things found during research that fall AFTER the episode being drafted. The next research pass starts here: confirm each against the venue, then it becomes a story or is dropped with a reason. Delete a lead once its date has passed.",
-  "updated": "2026-11-16",
+  "updated": "2026-11-23",
   "leads": [
     {
-      "date": "2026-11-23",
-      "what": "AMBC monthly meeting at SouthSide Garage, 7 PM",
-      "source": "ambc"
-    },
-    {
-      "date": "2026-11-24",
-      "what": "Last Tuesdays comedy at The Pink Cactus (Comedy Sphere); Stem to Stem bouquet making at Kern's",
-      "source": "pink-cactus"
-    },
-    {
-      "date": "2026-11-24",
-      "what": "Dungeons & Dragons at Hi-Wire, 6:30 (hub table)",
-      "source": "hi-wire"
-    },
-    {
-      "date": "2026-11-25",
-      "what": "Full Moon Hike at Ijams Nature Center, 7 PM",
+      "date": "2026-12-01",
+      "what": "GivingTuesday at Ijams Nature Center: gifts, memberships and animal adoptions doubled by a board and donor challenge",
       "source": "ijams"
     },
     {
-      "date": "2026-11-25",
-      "what": "Good Guys Cigars pop-up at Printshop (the venue's Nov 14 post); Riverfront Cigar Lounge pop-up (hub table)",
-      "source": "printshop"
-    },
-    {
-      "date": "2026-11-26",
-      "what": "The Big Pink House Party Vol. 6 with TJO and Colin O'Neal at The Pink Cactus (Thanksgiving night)",
-      "source": "pink-cactus"
-    },
-    {
-      "date": "2026-11-27",
-      "what": "Echo album release at The 808, all ages",
-      "source": "the-808"
-    },
-    {
-      "date": "2026-11-27",
-      "what": "Half-price Mug Club memberships at Hi-Wire from noon (Black Friday, $32.50); Echo album release at The 808 6 PM doors, all ages; Wine & Wheel at Mighty Mud 6-8",
-      "source": "hi-wire"
-    },
-    {
-      "date": "2026-11-27",
-      "what": "Opt Outside guided family hike at Ijams Nature Center, 10-12; Fall Fungi ID 1 PM",
-      "source": "ijams"
-    },
-    {
-      "date": "2026-11-28",
-      "what": "Pictures with Santa and the Grinch at Kern's; Carve and Create block printing 10 AM and Native Landscape workshop at Ijams Nature Center",
+      "date": "2026-12-02",
+      "what": "Free movie at Kern's: Elf, 6:30 PM (Kern's holiday carousel)",
       "source": "kerns"
-    },
-    {
-      "date": "2026-11-28",
-      "what": "Small Business Saturday across Old Sevier; SoKno Sourdough open",
-      "source": "old-sevier-district"
-    },
-    {
-      "date": "2026-11-28",
-      "what": "I'm Not Okay: Knoxville's Premier Emo Night at The 808, 9 PM, 18+, the venue's first emo show (its own Nov 11 post, TicketWeb)",
-      "source": "the-808"
-    },
-    {
-      "date": "2026-11-28",
-      "what": "Art in Nature: Ecosystem Explorers (ages 9-14) 10-12 at Ijams Nature Center",
-      "source": "ijams"
-    },
-    {
-      "date": "2026-11-29",
-      "what": "Carve and Create block printing 10 AM, Nature Nerd Hike 1 PM, Moss Meander 7 PM, Circles with Dizzy hooping at Ijams Nature Center",
-      "source": "ijams"
     },
     {
       "date": "2026-12-03",
       "what": "Knoxtronica presents Deep Dished Chicago House at Fly by Night, 9-12, $5 (Johnathan Thomas, Rick Styles, Break Bandits)",
       "source": "fly-by-night"
+    },
+    {
+      "date": "2026-12-04",
+      "what": "Dark Market Krampuslauf at Hi-Wire, 5:30-9: 30+ vendors and the Krampus Stomp down Sevier Ave (the venue's Nov 20 post); Owl Prowl at Ijams Nature Center 6-8; December First Friday at SoKno Sourdough with John Moses's work",
+      "source": "hi-wire"
     },
     {
       "date": "2026-12-05",
@@ -93,6 +38,11 @@
       "source": "kerns"
     },
     {
+      "date": "2026-12-05",
+      "what": "Ijams Nature Center: hot glass and stained glass workshops 11-1, cyanotype 11-12:30; Kern's Holiday Market 11-6 with Santa's ornament workshop; Sharp's Ridge mega work party 9-12 (AMBC)",
+      "source": "ijams"
+    },
+    {
       "date": "2026-12-06",
       "what": "Ijams Holiday Marketplace, 10-3 (vendor applications by Nov 1)",
       "source": "ijams"
@@ -103,9 +53,24 @@
       "source": "hi-wire"
     },
     {
+      "date": "2026-12-06",
+      "what": "Kern's Holiday Market 11-6 with Santa photos 2-5 and Letters to Santa; Ijams Holiday Marketplace 10-3, Winter Fungi 10-12, Moss Meander 2-4, Family Owl Prowl 6-8",
+      "source": "kerns"
+    },
+    {
+      "date": "2026-12-07",
+      "what": "Service Industry Night Mondays at The 808 start, 8 PM, 18+ (the venue's Nov 19 post); Rooted Monday sauna and yoga at Printshop 6:30-8:30, $10 sauna sessions",
+      "source": "the-808"
+    },
+    {
       "date": "2026-12-09",
       "what": "The Crimson Armada at The 808, 5:30, all ages",
       "source": "the-808"
+    },
+    {
+      "date": "2026-12-09",
+      "what": "Free movie at Kern's: How the Grinch Stole Christmas, 6:30; The Crimson Armada at The 808 5:30, all ages",
+      "source": "kerns"
     },
     {
       "date": "2026-12-10",
@@ -123,14 +88,39 @@
       "source": "ambc"
     },
     {
+      "date": "2026-12-12",
+      "what": "Kern's Holiday Market with Santa photos noon-3 (also Dec 13 with the snow globe workshop); Sauna House opening weekend at the quarry Dec 12-13",
+      "source": "kerns"
+    },
+    {
+      "date": "2026-12-16",
+      "what": "Free movie at Kern's: The Polar Express, 6:30; Dec 17 Alchemy x UpTop ugly sweater whiskey tasting 7 PM",
+      "source": "kerns"
+    },
+    {
+      "date": "2026-12-18",
+      "what": "Wine & Wheel at Mighty Mud, 6-8, $60",
+      "source": "mighty-mud"
+    },
+    {
       "date": "2026-12-19",
       "what": "Infekt at The 808, doors 7, 18+; Visualize stained glass at Printshop Dec 19 and Hi-Wire Dec 20",
       "source": "the-808"
     },
     {
+      "date": "2026-12-19",
+      "what": "Kern's Holiday Market with Santa's gingerbread workshop (Dec 20 Santa photos 1-4); Infekt at The 808",
+      "source": "kerns"
+    },
+    {
       "date": "2026-12-21",
       "what": "Ijams Winter Break Camp Dec 21-22, ages 6-12",
       "source": "ijams"
+    },
+    {
+      "date": "2026-12-23",
+      "what": "Free movie at Kern's: The Santa Clause, 6:30; Ijams Full Moon Hike 6 PM",
+      "source": "kerns"
     },
     {
       "date": "2026-12-31",
@@ -140,6 +130,11 @@
     {
       "date": "2027-01-19",
       "what": "Ekoh at The 808 (tickets on sale Nov 6)",
+      "source": "the-808"
+    },
+    {
+      "date": "2027-02-03",
+      "what": "The Bends at The 808 (Grapevine Entertainment)",
       "source": "the-808"
     },
     {
@@ -153,7 +148,8 @@
       "day": "Tue",
       "what": "Free Casino Rueda salsa at Alliance Brewing, 7 PM",
       "source": "alliance",
-      "seen": "2026-10-05"
+      "seen": "2026-11-17",
+      "note": "The brewery's Nov 17 reel: every Tuesday at 7 in the side two room, free."
     },
     {
       "day": "Tue",
@@ -165,7 +161,7 @@
       "day": "Wed",
       "what": "Singer & Songwriter Night open mic at Alliance Brewing, 7-10, led by Tom Smith",
       "source": "alliance",
-      "seen": "2026-10-28"
+      "seen": "2026-11-12"
     },
     {
       "day": "Wed",
@@ -184,28 +180,28 @@
       "what": "Free first hour in the karaoke rooms at The Pink Cactus, every Thursday in November (open at 5)",
       "source": "pink-cactus",
       "seen": "2026-11-03",
-      "note": "The venue re-posted it for November in its Nov 3 month post."
+      "note": "The venue's Nov 3 month post: every Thursday in November. Nov 26 is Thanksgiving; the venue has not said otherwise."
     },
     {
       "day": "Sun",
       "what": "Karaoke at Fly by Night, 8 PM",
       "source": "fly-by-night",
-      "seen": "2026-09-23",
-      "note": "No post for any October or November Sunday as of Nov 9. Not in the plan until the host posts again."
+      "seen": "2026-11-21",
+      "note": "The host Cattie posted it for Sunday Nov 22 at 8 (KaraFun). One Sunday at a time: in the plan only for a Sunday she has posted."
     },
     {
       "day": "4th Sun",
       "what": "The Breadlosers (bluegrass) at Alliance Brewing",
       "source": "alliance",
-      "seen": "2026-09-29",
-      "note": "Not posted for Nov 22 by the brewery as of Nov 16; @thebreadlosers on Instagram is a podcast, not the band. Not in the plan until the brewery posts it."
+      "seen": "2026-11-22",
+      "note": "Played Sunday Nov 22 at 4 (the band's own reel on the brewery's grid). The band is @breadlosersbluegrass; @thebreadlosers is a podcast."
     },
     {
       "day": "daily",
-      "what": "Hi-Wire weekly lineup (Mug Mondays, Flagship Tuesday, Wed trivia at 7, half-off drafts Thu, Sat yoga at 11, Sunday Funday)",
+      "what": "Hi-Wire weekly lineup ($5 Mug Monday 20 oz flagship, Tue $5 flagship pints, Wed trivia at 7, Sat yoga at 11, Sunday mimosas and Bloodys)",
       "source": "hi-wire",
-      "seen": "2026-11-15",
-      "note": "Wednesday trivia confirmed by the venue's Nov 7 bartender post; the rest unverified since April. The profile rendered in the signed-in pane on Nov 16 (seen 12)."
+      "seen": "2026-11-21",
+      "note": "The venue's Nov 21 week post names all of these; yoga skipped Nov 28-29. The profile renders in the signed-in pane but its own captions only read when each post is opened there."
     },
     {
       "day": "Thu",

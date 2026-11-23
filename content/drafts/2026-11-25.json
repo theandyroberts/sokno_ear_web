@@ -1,0 +1,913 @@
+{
+  "slug": "2026-11-25",
+  "volume": 1,
+  "number": 24,
+  "episode": "Weekend Episode",
+  "date": "2026-11-25",
+  "dateLabel": "Thu–Sun, Nov 26–29, 2026",
+  "shortDate": "Nov 26–29",
+  "place": "South Knoxville, TN",
+  "newsletter": {
+    "subject": "Black Friday at Hi-Wire, an album release and an emo night at The 808, Small Business Saturday in Old Sevier, and Opt Outside at Ijams Nature Center"
+  },
+  "feature": {
+    "id": "black-friday-mug-club-hiwire",
+    "label": "Old Sevier",
+    "labelColor": "rust",
+    "days": [
+      "Fri"
+    ],
+    "layout": "imageTop",
+    "title": "Hi-Wire opens at noon on Black Friday with Mug Club memberships at half price, one day only",
+    "deck": "A year of perks for $32.50.",
+    "facts": [
+      {
+        "label": "When",
+        "value": "Fri Nov 27 · doors at noon, early · the deal runs all day"
+      },
+      {
+        "label": "Where",
+        "value": "Hi-Wire Brewing · 2020 Barber St, second floor"
+      },
+      {
+        "label": "The deal",
+        "value": "Mug Club membership $32.50 instead of $65 · 25% off to-go beer and merch, an extra 4 oz on every in-house pour, and the mug, for a year"
+      },
+      {
+        "label": "Thanksgiving",
+        "value": "Closed Thursday · back at noon Friday"
+      },
+      {
+        "label": "Weather",
+        "value": "Partly sunny and 51 Friday, 31 overnight · the decks are covered, the taproom is warm"
+      }
+    ],
+    "body": [
+      {
+        "type": "paragraph",
+        "text": "Hi-Wire closes on Thanksgiving so its staff can eat with their families, and comes back Friday at noon, three hours early, for the one day a year it cuts the Mug Club in half. The brewery's membership normally runs $65. On Black Friday it is $32.50, and the brewery is plain about who it is for: people renewing, people who have been meaning to join, and people shopping for the beer drinker on their list."
+      },
+      {
+        "type": "subhead",
+        "text": "What the mug gets you"
+      },
+      {
+        "type": "paragraph",
+        "text": "A membership is good for a year. It takes 25 percent off to-go beer and the merch wall, adds four ounces to every pour you drink in the taproom, and comes with the privilege, in the brewery's words, of drinking out of a Mug Club mug. Once Black Friday is over the price goes back up, so the people who want it tend to be there early. The taproom is the whole second floor of the building on Barber Street, with the covered deck, the rooftop deck, pinball and foosball, and food ordered from Redbud Kitchen downstairs. Saturday the Vols are at Vanderbilt on the big screen; the weekend yoga classes are skipped for the holiday."
+      }
+    ],
+    "sources": [
+      {
+        "label": "Hi-Wire Brewing Knoxville on Instagram — Black Friday Mug Club special",
+        "url": "https://www.instagram.com/hiwirebrewing_knx/p/Dfvei8ajD7A/"
+      },
+      {
+        "label": "Hi-Wire Brewing Knoxville on Instagram — the Thanksgiving week lineup",
+        "url": "https://www.instagram.com/hiwirebrewing_knx/p/DgAbU7LjGu7/"
+      },
+      {
+        "label": "Hi-Wire Brewing — Knoxville taproom",
+        "url": "https://hiwirebrewing.com/knoxville/"
+      },
+      {
+        "label": "National Weather Service — Knoxville forecast",
+        "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.90"
+      }
+    ],
+    "event": {
+      "startDate": "2026-11-27T12:00:00-05:00",
+      "locationName": "Hi-Wire Brewing Knoxville",
+      "locationAddress": "2020 Barber St, Knoxville, TN 37920"
+    },
+    "social": {
+      "igTags": [
+        "hiwire"
+      ],
+      "igAct": {
+        "none": "a brewery's own one-day deal; there is no act"
+      },
+      "igBanner": [
+        "Half-price Mug Club at Hi-Wire on Black Friday",
+        "Friday from noon, one day only"
+      ]
+    },
+    "image": "/assets/spots/no24_mug_toast_half.jpg"
+  },
+  "scanner": [
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "hot": true,
+      "image": "/assets/spots/no24_mug_toast_half.jpg",
+      "title": "Half-price Mug Club at Hi-Wire",
+      "blurb": "Black Friday from noon; a year of perks for $32.50, one day only.",
+      "href": "#black-friday-mug-club-hiwire"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "hot": true,
+      "image": "/assets/spots/no24_eyeliner_singalong_fist.jpg",
+      "title": "Emo night at The 808",
+      "blurb": "The room's first; Saturday nine to one, 18+, five dollars plus fees.",
+      "href": "#emo-night-808"
+    },
+    {
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "hot": true,
+      "image": "/assets/spots/no24_binoculars_girl_leaves.jpg",
+      "title": "Opt Outside at Ijams Nature Center",
+      "blurb": "A family hike on Black Friday morning, ten dollars, ages six and up.",
+      "href": "#opt-outside-ijams"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no24_shared_mic_two_friends.jpg",
+      "title": "Free karaoke hour at The Pink Cactus",
+      "blurb": "Thanksgiving night from five; the first hour in a room is on the house.",
+      "href": "#karaoke-hour-pink-cactus"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no24_vinyl_held_to_light.jpg",
+      "title": "Echo's album release at The 808",
+      "blurb": "All ages, doors at six, five dollars plus fees.",
+      "href": "#echo-album-release-808"
+    },
+    {
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no24_baker_bag_handoff.jpg",
+      "title": "Small Business Saturday in Old Sevier",
+      "blurb": "The bakery from nine, the grocery from seven, the pottery gallery all day.",
+      "href": "#small-business-saturday-old-sevier"
+    },
+    {
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no24_gouge_lino_curls.jpg",
+      "title": "Block printing at Ijams Nature Center",
+      "blurb": "Carve a block Sunday morning and print your own shirt; eighteen dollars.",
+      "href": "#block-printing-ijams"
+    },
+    {
+      "label": "Suttree Landing",
+      "labelColor": "ink",
+      "days": [
+        "Sat"
+      ],
+      "hot": false,
+      "image": "/assets/spots/no24_beer_bucket_ice_pull.jpg",
+      "title": "Earl's game-day board for Vols at Vanderbilt",
+      "blurb": "Kickoff at seven; buckets, drafts and pizza marked down, and a rita a day.",
+      "href": "#specials-board"
+    }
+  ],
+  "stories": [
+    {
+      "id": "karaoke-hour-pink-cactus",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Thu"
+      ],
+      "layout": "imageRight",
+      "title": "The Pink Cactus gives away the first hour in its karaoke rooms on Thanksgiving night, the last free Thursday of November",
+      "deck": "Sing off the turkey.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Thu Nov 26 · the bar opens at 5 PM · the first hour in a room is free every Thursday in November"
+        },
+        {
+          "label": "Where",
+          "value": "The Pink Cactus · 1147 Sevier Ave · the private karaoke rooms upstairs, the bar and front-yard patio below"
+        },
+        {
+          "label": "How",
+          "value": "Rooms book online in one-hour blocks · 21 and up after 9 PM"
+        },
+        {
+          "label": "Weather",
+          "value": "Rain showers and 55, down to 35 · the rooms are indoors"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The Pink Cactus has run the same Thursday deal all month: book one of the private karaoke rooms upstairs and the first hour is on the house. Thanksgiving is the last Thursday in November, so this is the final one, and the bar on Sevier Avenue opens at five that day as it does every Thursday. The rooms go in one-hour blocks through the bar's online booking, and the bar's own advice is to add a second hour, since one never feels like enough once the playlist gets going. Downstairs is the cocktail bar with Latin-inspired food and the big front yard; after nine the whole place is twenty-one and up. It is the one Old Sevier thing with a door open on Thursday night that has said so in its own words, and the rooms are indoors, which matters with showers in the forecast."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The Pink Cactus on Instagram — November at The Pink Cactus",
+          "url": "https://www.instagram.com/thepinkcactusknox/p/DfS6ojXGao_/"
+        },
+        {
+          "label": "The Pink Cactus — karaoke rooms and hours",
+          "url": "https://www.thepinkcactusknox.com/"
+        },
+        {
+          "label": "The Pink Cactus on Toast — room booking and policies",
+          "url": "https://toast.app/r/the-pink-cactus"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-26T17:00:00-05:00",
+        "locationName": "The Pink Cactus",
+        "locationAddress": "1147 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "pink-cactus"
+        ],
+        "igAct": {
+          "none": "a standing room deal; the singers are the customers and there is no act"
+        },
+        "igBanner": [
+          "Free first karaoke hour at The Pink Cactus",
+          "Thanksgiving night, from five"
+        ],
+        "standing": true,
+        "standingKey": "karaoke-hour-pink-cactus"
+      },
+      "image": "/assets/spots/no24_shared_mic_two_friends.jpg"
+    },
+    {
+      "id": "echo-album-release-808",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageLeft",
+      "title": "Echo plays its album release at The 808 on Black Friday, all ages, doors at six",
+      "deck": "Five dollars at the hometown room.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Nov 27 · doors 6 PM · show 7 PM"
+        },
+        {
+          "label": "Where",
+          "value": "The 808 · 808 Sevier Ave"
+        },
+        {
+          "label": "Ages",
+          "value": "All ages · under 18 with a parent or guardian"
+        },
+        {
+          "label": "Tickets",
+          "value": "$5 plus $3.71 in fees online · general admission, standing room"
+        },
+        {
+          "label": "Parking",
+          "value": "The venue's map of the lots and street spaces around the block",
+          "zoom": "/assets/diagrams/the-808-parking.svg"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The night after Thanksgiving, the music venue at 808 Sevier Avenue gives its stage to an album release. Echo celebrates a new record with an early, all-ages show: doors at six, music at seven, and the venue's note that anyone under eighteen comes in with a parent or guardian. Tickets are five dollars before fees through the venue's page, the cheapest ticket on The 808's calendar this season, and the room is standing only. For anyone home for the holiday with a younger sibling in tow, it is the show on the weekend that lets everyone in. The venue's parking map is below for the lots and street spaces around the block."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The 808 — Echo Album Release",
+          "url": "https://808knox.com/tm-event/echo-album-release/"
+        },
+        {
+          "label": "TicketWeb — Echo Album Release at The 808",
+          "url": "https://www.ticketweb.com/event/echo-album-release-the-808-tickets/14341404"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-27T19:00:00-05:00",
+        "locationName": "The 808",
+        "locationAddress": "808 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "the-808"
+        ],
+        "igAct": {
+          "none": "searched echoknoxville, echobandknox and echoknox (a personal account) and an Instagram keyword search; no profile matches the band, and TicketWeb lists no lineup"
+        },
+        "igBanner": [
+          "Echo's album release at The 808, all ages",
+          "Friday, doors at six, five dollars"
+        ]
+      },
+      "ticket": {
+        "href": "https://808knox.com/tm-event/echo-album-release/",
+        "image": "/assets/spots/the-808-tickets.svg",
+        "alt": "Get tickets at The 808"
+      },
+      "image": "/assets/spots/no24_vinyl_held_to_light.jpg"
+    },
+    {
+      "id": "emo-night-808",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageRight",
+      "title": "I'm Not Okay, the first emo night at The 808, runs Saturday from nine to one, eighteen and up",
+      "deck": "Eyeliner on, flannel optional.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Nov 28 · 9 PM – 1 AM"
+        },
+        {
+          "label": "Where",
+          "value": "The 808 · 808 Sevier Ave"
+        },
+        {
+          "label": "Ages",
+          "value": "18 and up · ID at the door"
+        },
+        {
+          "label": "Tickets",
+          "value": "$5 plus $3.71 in fees online · general admission, standing room"
+        },
+        {
+          "label": "Parking",
+          "value": "The venue's map of the lots and street spaces around the block",
+          "zoom": "/assets/diagrams/the-808-parking.svg"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The 808 bills Saturday as its premier emo night, and the venue said when it announced the date that it is the first one the room has held. The name is I'm Not Okay, a title anyone who owned a My Chemical Romance record will recognize, and the format is the one these nights run on everywhere: the songs from the middle 2000s that a certain age of South Knoxville knows every word to, played loud, from nine until one in the morning. It is eighteen and up with ID checked at the door, and tickets are five dollars before fees through the venue's page. The Vols finish at Vanderbilt around ten, so the room fills late. The venue's parking map is below."
+        }
+      ],
+      "sources": [
+        {
+          "label": "The 808 — I'm Not Okay: The 808's Premier Emo Night",
+          "url": "https://808knox.com/tm-event/im-not-okay-knoxvilles-premier-emo-night/"
+        },
+        {
+          "label": "TicketWeb — I'm Not Okay at The 808",
+          "url": "https://www.ticketweb.com/event/im-not-okay-the-808s-the-808-tickets/14440774"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-28T21:00:00-05:00",
+        "endDate": "2026-11-29T01:00:00-05:00",
+        "locationName": "The 808",
+        "locationAddress": "808 Sevier Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "the-808"
+        ],
+        "igAct": {
+          "none": "a venue-run DJ night; searched imnotokayemonight, imnotokay.emonight and imnotokayknox, all page-not-found, and the venue names no DJ"
+        },
+        "igBanner": [
+          "Emo night at The 808, the room's first",
+          "Saturday, nine to one, eighteen and up"
+        ]
+      },
+      "ticket": {
+        "href": "https://808knox.com/tm-event/im-not-okay-knoxvilles-premier-emo-night/",
+        "image": "/assets/spots/the-808-tickets.svg",
+        "alt": "Get tickets at The 808"
+      },
+      "image": "/assets/spots/no24_eyeliner_singalong_fist.jpg"
+    },
+    {
+      "id": "small-business-saturday-old-sevier",
+      "label": "Old Sevier",
+      "labelColor": "rust",
+      "days": [
+        "Sat"
+      ],
+      "layout": "imageLeft",
+      "title": "Small Business Saturday in Old Sevier: the bakery is open, the grocery is stocked and the pottery gallery has the holiday show up",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sat Nov 28 · all day across the district"
+        },
+        {
+          "label": "SoKno Sourdough",
+          "value": "9 AM – 2 PM · 2006 Barber St, the loading dock between Redbud and Hi-Wire · closed Thu and Fri"
+        },
+        {
+          "label": "Old Sevier Market",
+          "value": "7 AM – 7 PM · 906 Sevier Ave, Unit 130"
+        },
+        {
+          "label": "Mighty Mud",
+          "value": "Gallery and shop 9 AM – 5 PM · 1528 Island Home Ave"
+        },
+        {
+          "label": "Weather",
+          "value": "Mostly sunny and 58"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The Old Sevier District's November list puts Small Business Saturday across the whole neighborhood, and the shops have said what they are doing with it. SoKno Sourdough closes for Thanksgiving and the day after, then opens Saturday at nine for bagels and bread until two, its second Saturday ever; the door is up the new stairs on the loading dock on Barber Street. Old Sevier Market, the grocery that opened on Sevier Avenue in October, keeps its seven-to-seven hours and has spent the month filling the cases: Joyce Farms turkeys, new fish, Whoa Doggie hot sauces, and the South Knoxville Elementary tote, thirty dollars with every cent to the school's PTO. Mighty Mud's gallery on Island Home Avenue is open nine to five with its current show of work by the studio's own potters, which is where the one-of-a-kind mug comes from. Sunny and 58 for the walk between them."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Old Sevier District on Instagram — November in Old Sevier (slide 6)",
+          "url": "https://www.instagram.com/oldsevierdistrict/p/DfYVDCYDQUo/"
+        },
+        {
+          "label": "SoKno Sourdough on Instagram — November at the bakery",
+          "url": "https://www.instagram.com/soknosourdough/p/DfXCpPTFYx2/"
+        },
+        {
+          "label": "SoKno Sourdough on Instagram — open Saturdays",
+          "url": "https://www.instagram.com/soknosourdough/p/DfyXdxXtqi0/"
+        },
+        {
+          "label": "Old Sevier Market on Instagram",
+          "url": "https://www.instagram.com/oldseviermarket/"
+        },
+        {
+          "label": "South Knoxville Elementary PTO on Instagram — the tote",
+          "url": "https://www.instagram.com/southknoxpto/p/Dfzq45Dlloy/"
+        },
+        {
+          "label": "Mighty Mud — hours and gallery",
+          "url": "https://mightymud.com/"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-28T09:00:00-05:00",
+        "locationName": "Old Sevier District",
+        "locationAddress": "Sevier Ave, Knoxville, TN 37920"
+      },
+      "venueKey": "old-sevier-district",
+      "social": {
+        "igTags": [
+          "old-sevier",
+          "sokno-sourdough",
+          "old-sevier-market"
+        ],
+        "igAct": {
+          "none": "a shopping day; the shops are the subject and there is no act"
+        },
+        "igBanner": [
+          "Small Business Saturday in Old Sevier",
+          "Saturday, the bakery from nine"
+        ]
+      },
+      "image": "/assets/spots/no24_baker_bag_handoff.jpg"
+    },
+    {
+      "id": "opt-outside-ijams",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageRight",
+      "title": "Opt Outside: a naturalist leads a family hike at Ijams Nature Center on Black Friday morning, ages six and up",
+      "deck": "Trail games instead of the mall.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Nov 27 · 10 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center · 2915 Island Home Ave · check in at the Visitor Center for a free parking pass"
+        },
+        {
+          "label": "Cost",
+          "value": "$10 plus a 25-cent fee · register on the park's page · no walk-ins"
+        },
+        {
+          "label": "Ages",
+          "value": "6 and up · up to 1.5 miles on rocks, roots and gravel, with stops"
+        },
+        {
+          "label": "Weather",
+          "value": "Partly sunny and 51 by noon, after a 31-degree start"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Ijams Nature Center takes the day after Thanksgiving the way REI started taking it in 2015: outside, on purpose, instead of in a line. Friday from ten to noon a park naturalist walks families up to a mile and a half of trail, teaching the plants and animals that live in East Tennessee backyards through what the park calls observation and immersive trail games, which is to say the kids are looking for things. It is for ages six and up, ten dollars a person, and small enough that registration on the park's page is the only way in. Every participant signs the park's once-a-year risk form. The park's own post on it makes the case plainly: fresh air, fall color, birds, fungi, and, in its words, overall coolness. Dress for 31 at the start and low fifties by the end."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Opt Outside: Guided Family Hike",
+          "url": "https://www.ijams.org/event-details/opt-outside-guided-family-hike-3"
+        },
+        {
+          "label": "Ijams Nature Center on Instagram — Opt Outside",
+          "url": "https://www.instagram.com/ijamsnaturecenter/p/Df-g0CflzqZ/"
+        },
+        {
+          "label": "National Weather Service — Knoxville forecast",
+          "url": "https://forecast.weather.gov/MapClick.php?lat=35.95&lon=-83.90"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-27T10:00:00-05:00",
+        "endDate": "2026-11-27T12:00:00-05:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a guided hike led by park staff; no act"
+        },
+        "igBanner": [
+          "Opt Outside family hike at Ijams Nature Center",
+          "Black Friday, ten to noon, ten dollars"
+        ]
+      },
+      "ticket": {
+        "href": "https://www.ijams.org/event-details/opt-outside-guided-family-hike-3",
+        "image": "/assets/spots/ijams-nature-center-tickets.svg",
+        "alt": "Register at Ijams Nature Center"
+      },
+      "image": "/assets/spots/no24_binoculars_girl_leaves.jpg"
+    },
+    {
+      "id": "fall-fungi-ijams",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Fri"
+      ],
+      "layout": "imageLeft",
+      "title": "The season's last Fall Fungi ID walk at Ijams Nature Center goes out Friday afternoon, fourteen and up",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Fri Nov 27 · 1 – 3 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center · 2915 Island Home Ave · free parking pass at check-in"
+        },
+        {
+          "label": "Cost",
+          "value": "$15 plus a 38-cent fee · register on the park's page"
+        },
+        {
+          "label": "Ages",
+          "value": "14 and up · up to 1.5 miles of uneven trail, with stops"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "After the Black Friday hike clears out, a different naturalist, the park calls them fun-guides, takes a smaller group into the woods for two hours of mushrooms and lichen. The workshop is the beginner's version: what a fungus actually is, the parts you look at to tell one from another, why the lichens on the quarry rock count, and what all of it is doing for the forest. Late November is a good time for it; the leaves are down, the logs are wet, and the bracket fungi and jelly fungi that show in cold weather are easy to find. It is the last date on this fall's calendar, fifteen dollars, fourteen and up, and registration is through the park's page."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Fall Fungi ID: Beginner Workshop",
+          "url": "https://www.ijams.org/event-details/fall-fungi-id-beginner-workshop-2026-11-27-13-00"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-27T13:00:00-05:00",
+        "endDate": "2026-11-27T15:00:00-05:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a naturalist-led workshop; no act"
+        },
+        "igBanner": [
+          "Fall fungi walk at Ijams Nature Center, the season's last",
+          "Friday, one to three, fifteen dollars"
+        ]
+      },
+      "ticket": {
+        "href": "https://www.ijams.org/event-details/fall-fungi-id-beginner-workshop-2026-11-27-13-00",
+        "image": "/assets/spots/ijams-nature-center-tickets.svg",
+        "alt": "Register at Ijams Nature Center"
+      },
+      "image": "/assets/spots/no24_hand_lens_bracket_fungi.jpg"
+    },
+    {
+      "id": "block-printing-ijams",
+      "label": "Ijams Nature Center",
+      "labelColor": "teal",
+      "days": [
+        "Sun"
+      ],
+      "layout": "imageRight",
+      "title": "Carve and Create: a beginner's block-printing class at Ijams Nature Center on Sunday morning, bring a shirt to print",
+      "deck": "One block, printed as many times as you like.",
+      "facts": [
+        {
+          "label": "When",
+          "value": "Sun Nov 29 · 10 AM – noon"
+        },
+        {
+          "label": "Where",
+          "value": "Ijams Nature Center · 2915 Island Home Ave"
+        },
+        {
+          "label": "Cost",
+          "value": "$18 plus a 45-cent fee, parking included · register on the park's page"
+        },
+        {
+          "label": "Ages",
+          "value": "14 and up"
+        },
+        {
+          "label": "Bring",
+          "value": "Any tightly woven fabric you want to print: a T-shirt, a bandana, a tote · paper and all the carving and inking supplies are provided"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "Sunday morning's class at the park is the one that sends you home with a tool you can keep using. Each person designs a four-by-six-inch block, carves it, inks it in whatever colors they like, and hand-presses it onto paper or fabric. The park supplies the blocks, the gouges, the ink and the paper; what it asks you to bring is something out of your own closet, because the point of the class is that block printing is an easy and sustainable way, in the park's words, to breathe new life into old clothes. Smooth, tightly woven fabric prints best. It is eighteen dollars, fourteen and up, the parking fee is folded into the ticket, and registration is on the park's page. A second session runs December 20 for anyone whose Sunday is already spoken for."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Ijams Nature Center — Carve and Create: Block Printing for Beginners",
+          "url": "https://www.ijams.org/event-details/carve-and-create-block-printing-for-beginners-2026-11-29-10-00"
+        }
+      ],
+      "event": {
+        "startDate": "2026-11-29T10:00:00-05:00",
+        "endDate": "2026-11-29T12:00:00-05:00",
+        "locationName": "Ijams Nature Center",
+        "locationAddress": "2915 Island Home Ave, Knoxville, TN 37920"
+      },
+      "social": {
+        "igTags": [
+          "ijams"
+        ],
+        "igAct": {
+          "none": "a park class; no act"
+        },
+        "igBanner": [
+          "Block printing for beginners at Ijams Nature Center",
+          "Sunday, ten to noon, eighteen dollars"
+        ]
+      },
+      "ticket": {
+        "href": "https://www.ijams.org/event-details/carve-and-create-block-printing-for-beginners-2026-11-29-10-00",
+        "image": "/assets/spots/ijams-nature-center-tickets.svg",
+        "alt": "Register at Ijams Nature Center"
+      },
+      "image": "/assets/spots/no24_gouge_lino_curls.jpg"
+    },
+    {
+      "id": "specials-board",
+      "label": "Suttree Landing",
+      "labelColor": "ink",
+      "days": [
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ],
+      "layout": "imageLeft",
+      "title": "Earl's game-day specials for Saturday night's Vols at Vanderbilt, and a rita a day through the holiday weekend",
+      "facts": [
+        {
+          "label": "Saturday",
+          "value": "Vols at Vanderbilt · 7 PM kickoff · $2 off drafts, $6 Orange Bliss cocktails, 6 beer buckets for the price of 5, $2 off pizza, $4 and $5 shots · $8 house margaritas all day"
+        },
+        {
+          "label": "Thursday",
+          "value": "$10 Patrón mango margaritas · rain showers and 55"
+        },
+        {
+          "label": "Friday",
+          "value": "$9 spicy pineapple margaritas"
+        },
+        {
+          "label": "Sunday",
+          "value": "$7 mimosas and Bloody Marys · 11 AM – 10 PM"
+        },
+        {
+          "label": "Where",
+          "value": "Earl's · 610 Waterfront Dr · the patio is weatherized for winter"
+        },
+        {
+          "label": "Up on Sevier",
+          "value": "Printshop takes $1 off pints from 30 minutes before kickoff to the final whistle · Hi-Wire has the game on the big screen · Puckers is open for every snap"
+        },
+        {
+          "label": "Thanksgiving Day",
+          "value": "Closed: Hi-Wire, Kern's, SoKno Sourdough, South Coast Pizza · SouthSide lists no Thursday special"
+        }
+      ],
+      "body": [
+        {
+          "type": "paragraph",
+          "text": "The regular season ends Saturday night in Nashville, which for the South Knoxville watch rooms means a seven o'clock kickoff and a late crowd. Earl's on Waterfront Drive runs its game-day board for it: two dollars off drafts, six-dollar Orange Bliss cocktails, six beer buckets for the price of five, two dollars off pizza, and four- and five-dollar shots, with the Saturday house margarita at eight dollars on top. The rest of the weekend is the rita calendar, a different one each day: ten-dollar Patrón mango on Thanksgiving, nine-dollar spicy pineapple Friday, and seven-dollar mimosas and Bloody Marys Sunday. The patio has been weatherized, in the restaurant's words, so the outdoor seats are in play all winter."
+        },
+        {
+          "type": "subhead",
+          "text": "The other screens"
+        },
+        {
+          "type": "paragraph",
+          "text": "Printshop on Island Home Avenue takes a dollar off pints from half an hour before kickoff to the final whistle. Hi-Wire puts the game on the big screen on Barber Street. Puckers, the sports grill on Mimosa Avenue, says it will be open for every snap of the last regular-season game. For Thursday itself, know before you drive: Hi-Wire, Kern's, SoKno Sourdough and South Coast Pizza are closed for Thanksgiving, and SouthSide Garage's weekly list has no Thursday on it."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Earl's Knoxville — specials",
+          "url": "https://earlsknox.com/specials/"
+        },
+        {
+          "label": "Earl's Knoxville on Instagram — the patio, weatherized",
+          "url": "https://www.instagram.com/earlsknoxville/p/Df7llS2Frxx/"
+        },
+        {
+          "label": "Printshop Beer Co. — specials",
+          "url": "https://printshopbeer.com/specials/"
+        },
+        {
+          "label": "Hi-Wire Brewing Knoxville on Instagram — the Thanksgiving week lineup",
+          "url": "https://www.instagram.com/hiwirebrewing_knx/p/DgAbU7LjGu7/"
+        },
+        {
+          "label": "Puckers Sports Grill on Instagram — one more regular-season game",
+          "url": "https://www.instagram.com/puckersknoxville/reel/DgFeZJaiRdK/"
+        },
+        {
+          "label": "Kern's — holiday hours",
+          "url": "https://kernsbakery.com/"
+        },
+        {
+          "label": "South Coast Pizza — events",
+          "url": "https://southcoastpizza.com/"
+        },
+        {
+          "label": "ESPN — Tennessee at Vanderbilt, Sat Nov 28, 7 PM EST",
+          "url": "https://www.espn.com/college-football/team/schedule/_/id/2633"
+        }
+      ],
+      "venueKey": "earls",
+      "social": {
+        "igTags": [
+          "earls"
+        ],
+        "igAct": {
+          "none": "a drink-specials roundup; no act"
+        },
+        "igBanner": [
+          "Earl's game-day specials for the Vols at Vanderbilt, and a rita a day",
+          "Saturday, kickoff at seven"
+        ],
+        "standing": true,
+        "standingKey": "specials-board"
+      },
+      "image": "/assets/spots/no24_beer_bucket_ice_pull.jpg"
+    }
+  ],
+  "sidebar": {
+    "audio": {
+      "title": "Weekend Audio Briefing",
+      "intro": "Andy reads the weekend.",
+      "description": "Vol. 1 No. 24 · Nov 26–29",
+      "duration": "4:31",
+      "src": "/audio/2026-11-25.mp3"
+    },
+    "calendar": [
+      {
+        "month": "NOV",
+        "day": "26",
+        "title": "Free first karaoke hour at The Pink Cactus",
+        "meta": "from 5 PM · book a room",
+        "starred": false,
+        "href": "#karaoke-hour-pink-cactus"
+      },
+      {
+        "month": "NOV",
+        "day": "26",
+        "title": "Thanksgiving: $10 Patrón mango ritas at Earl's",
+        "meta": "11 AM – 10 PM · Hi-Wire and Kern's closed",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "NOV",
+        "day": "27",
+        "title": "Black Friday Mug Club at Hi-Wire, half price",
+        "meta": "from noon · $32.50",
+        "starred": true,
+        "href": "#black-friday-mug-club-hiwire"
+      },
+      {
+        "month": "NOV",
+        "day": "27",
+        "title": "Opt Outside family hike at Ijams Nature Center",
+        "meta": "10 AM – noon · $10 · ages 6+",
+        "starred": false,
+        "href": "#opt-outside-ijams"
+      },
+      {
+        "month": "NOV",
+        "day": "27",
+        "title": "Fall Fungi ID walk at Ijams Nature Center",
+        "meta": "1 – 3 PM · $15 · 14+",
+        "starred": false,
+        "href": "#fall-fungi-ijams"
+      },
+      {
+        "month": "NOV",
+        "day": "27",
+        "title": "Echo album release at The 808, all ages",
+        "meta": "doors 6 PM · $5 + fees",
+        "starred": true,
+        "href": "#echo-album-release-808"
+      },
+      {
+        "month": "NOV",
+        "day": "28",
+        "title": "Small Business Saturday in Old Sevier",
+        "meta": "SoKno Sourdough 9 – 2 · Old Sevier Market 7 – 7",
+        "starred": false,
+        "href": "#small-business-saturday-old-sevier"
+      },
+      {
+        "month": "NOV",
+        "day": "28",
+        "title": "Vols at Vanderbilt: game-day board at Earl's",
+        "meta": "kickoff 7 PM",
+        "starred": false,
+        "href": "#specials-board"
+      },
+      {
+        "month": "NOV",
+        "day": "28",
+        "title": "I'm Not Okay emo night at The 808",
+        "meta": "9 PM – 1 AM · 18+ · $5 + fees",
+        "starred": true,
+        "href": "#emo-night-808"
+      },
+      {
+        "month": "NOV",
+        "day": "29",
+        "title": "Block printing for beginners at Ijams Nature Center",
+        "meta": "10 AM – noon · $18 · 14+",
+        "starred": false,
+        "href": "#block-printing-ijams"
+      },
+      {
+        "month": "NOV",
+        "day": "29",
+        "title": "$7 mimosas and Bloody Marys at Earl's",
+        "meta": "11 AM – 10 PM",
+        "starred": false,
+        "href": "#specials-board"
+      }
+    ]
+  }
+}

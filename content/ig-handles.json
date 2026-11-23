@@ -604,6 +604,13 @@
    "verified": "tagged in Printshop's own Nov 14 post and the Old Sevier District's October First Friday post; live profile read 2026-11-16: 'Knoxville's premiere glass art teaching studio', 201 Center Park Dr; its Nov 15 post names Sunday's workshop at @hiwirebrewing_knx and visualizeartstudio.com/events books it",
    "confidence": "high",
    "added": "2026-11-16"
+  },
+  "breadlosers": {
+   "handle": "@breadlosersbluegrass",
+   "name": "The Breadlosers (bluegrass; Alliance Brewing's fourth-Sunday band)",
+   "kind": "act",
+   "verified": "the band's own reel on Alliance Brewing's grid announcing Sunday Nov 22 at 4 (instagram.com/breadlosersbluegrass/reel/DgDE8SVxpub/); read 2026-11-23. NOT @thebreadlosers, which is a podcast.",
+   "confidence": "high"
   }
  }
 }

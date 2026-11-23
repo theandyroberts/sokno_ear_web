@@ -1,0 +1,262 @@
+{
+  "_comment": "Research log for No. 24 (Thu Nov 26 - Sun Nov 29, 2026: Thanksgiving weekend; Vols at Vanderbilt Saturday at 7 PM EST per ESPN, an away game). One entry per source in content/sources.json; every dated thing found for this Thu-Sun is a lead with a story id or a reason. Read Monday Nov 23 in the built-in browser (Instagram, Andy's session; the hub's November table read slide by slide, Kern's holiday carousel slide by slide, TicketWeb in the pane) and with scripts/research-sweep.mjs (websites). Forecast (NWS point 35.95,-83.90): Thanksgiving Day rain showers and 55 (35 overnight), Fri partly sunny and 51 (31), Sat mostly sunny and 58 (35), Sun mostly sunny and 61 (37).",
+  "slug": "2026-11-25",
+  "checked": {
+    "old-sevier-district": {
+      "how": "both",
+      "found": 5,
+      "note": "Nothing new since the Nov 6 'November in Old Sevier' carousel (DfYVDCYDQUo) but a Nov 19 'we're thankful for YOU' post. Slide 6 of the carousel lists the holiday week: D&D at Hi-Wire 11/24 6:30, Riverfront Cigar Lounge pop-up at Printshop 11/25 6-9, The Big Pink House Party Vol. 6 at The Pink Cactus 11/26 (no time), half-price Mug Club at Hi-Wire 11/27 from noon, Wine & Wheel at Mighty Mud 11/27 6-8, Small Business Saturday across the district 11/28 all day, Tennessee at Vanderbilt 11/28 (TBD). The Nov 5 game-day post names every bar with screens. Site unchanged; ics stale."
+    },
+    "the-808": {
+      "how": "both",
+      "found": 2,
+      "note": "Site schedule and TicketWeb (read in the pane): Fri 11/27 Echo album release, doors 6, show 7-11, all ages, under 18 with a parent, $5 plus $3.71 in fees ($8.71) online; Sat 11/28 I'm Not Okay: The 808's Premier Emo Night, 9 PM-1 AM, 18+, $5 plus $3.71 in fees online. The venue's own grid this week is last weekend's three shows (lespecial, Deadtronica with Rossdafareye, Summoner's Circle) and the Dec 7 start of Service Industry Mondays; its Nov 11 post called the emo night its first. No handle found for Echo: tried echoknoxville, echobandknox, echoknox (a personal account) and an Instagram keyword search; TicketWeb lists no lineup. No profile for the emo night either (imnotokayemonight, imnotokay.emonight, imnotokayknox are all page-not-found). Later: The Resistance Dec 5, Service Industry Night Mondays from Dec 7, Crimson Armada Dec 9, TVBOO Dec 10, 2000's Rave Dec 11, Infekt Dec 19, The Bends Feb 3 (Grapevine)."
+    },
+    "alliance": {
+      "how": "both",
+      "found": 0,
+      "note": "Tuesday Rueda de Casino salsa at 7 (the brewery's Nov 17 reel), Wednesday Singer/Songwriter Night 7-10, Monday yoga, happy hour weekdays 3-6 ($2 off pints). The Breadlosers played Sunday Nov 22 at 4 (their own reel on the brewery's grid; the band is @breadlosersbluegrass, not @thebreadlosers). Nothing dated Nov 26-29; the site lists no holiday hours."
+    },
+    "hi-wire": {
+      "how": "both",
+      "found": 3,
+      "note": "Profile rendered (seen 12); captions read by opening each post in the signed-in pane. The venue's Nov 21 week post: closed Thanksgiving Day; Friday open at noon for Black Friday with half-price Mug Club memberships all day; Saturday no yoga, TN at Vanderbilt on the TVs and big screen; Sunday no yoga, mimosas and Bloodys. The Nov 14 post has the deal: $65 to $32.50 for a year, 25% off to-go beer and merch, an extra 4 oz on in-house pours, the mug. Also: Dark Market Krampuslauf Dec 4 5:30-9 (30+ vendors, the Krampus Stomp down Sevier Ave), Santa Paws Dec 6 2-5. simpletix lists only a January event; the site's hours page is unchanged (Fri 3-11, Sat 12-11, Sun 12-9)."
+    },
+    "fly-by-night": {
+      "how": "both",
+      "found": 0,
+      "note": "The November lineup ended with Marcel Sletten on Nov 21 (Primordial Void's poster adds Poor Faulkner and Je Smith). Karaoke with KaraFun ran Sunday Nov 22 at 8, posted by the host Cattie for that Sunday only. Nothing posted for Nov 26-29; the site lists Thu-Sat 4 PM-1 AM, Sun 2-midnight, no holiday hours. Later: Knoxtronica Deep Dished Chicago House Dec 3, 9-12, $5; Rolando Sedixon Dec 10."
+    },
+    "printshop": {
+      "how": "both",
+      "found": 1,
+      "note": "/specials/ for the week: Tue $16 pitchers, Thu 11/26 10% off cases 4-9, Fri 11/27 $12 flights noon-9, Sat 11/28 $1 off pints from 30 minutes before the Vols kickoff to the final whistle (listed 7-10 PM). The venue's Nov 14 week post ends with the Nov 25 Good Guys Cigars pop-up; nothing posted for the holiday weekend. Later: Rooted Monday sauna and yoga Dec 7, the Rogue River Blue cheese pairing (reserve by Dec 9, $50)."
+    },
+    "trailhead": {
+      "how": "instagram",
+      "found": 0,
+      "note": "Still no November flyer; the Nov 17 post was the Vols basketball game on the screens. Nothing dated Nov 26-29."
+    },
+    "pink-cactus": {
+      "how": "both",
+      "found": 3,
+      "note": "The venue's Nov 3 month post names The Big Pink House Party Vol. 6 with @tjo.bpm and @colinoneal_ and the hub's table dates it Thanksgiving night, but neither the venue, TJO's profile (last post: the Oct 23 Vol. 5), Colin O'Neal's profile (7 posts, nothing public) nor the venue's Toast page gives a time or a price, so it does not run. Last Tuesdays Variety Show Nov 24, doors 7:30, show 8, free, for Second Harvest (Joel Palilla's collab post). Every Thursday in November the first karaoke-room hour is free; Trivia Sunday with Knox Trivia Guys 6:30 every Sunday (the venue's Nov 14 post). Later: BellTower NYE."
+    },
+    "southside-garage": {
+      "how": "both",
+      "found": 1,
+      "note": "/specials/: Fri 11/27 open for lunch at 11 with the Dia de torta; Wed $5 frose; no Thursday entry, so it reads closed Thanksgiving. /events/: Tuesday trivia only. The feed posted $5 Vol Bombs and Dia de Foods for the LSU game and the A&M away game; nothing yet for Vanderbilt."
+    },
+    "sevier-ave-burger": {
+      "how": "instagram",
+      "found": 0,
+      "note": "Poutine, the Harvest Burger, lunch; brunch Sat-Sun 11-2, Singo Wed 7. Nothing dated."
+    },
+    "south-coast-pizza": {
+      "how": "both",
+      "found": 0,
+      "note": "Closed Thanksgiving Day, regular hours Friday (site). Cold Mountain on tap (Nov 21 post)."
+    },
+    "redbud": {
+      "how": "instagram",
+      "found": 0,
+      "note": "Site returned 403 to the sweep. The feed: daily specials, Thanksgiving whole-cake orders, Sunday brunch, happy hour weekdays 4-6 with half-off bottles Wednesday. Nothing dated for the weekend."
+    },
+    "mighty-mud": {
+      "how": "both",
+      "found": 1,
+      "note": "Wine & Wheel Fri 11/27 6-8 is sold out on mightymud.com ($60), so it does not run. Gallery show up through the month; Raku Dec 11; the December intensives. Studio hours Tue-Fri 11-6, Sat 9-5."
+    },
+    "sokno-sourdough": {
+      "how": "both",
+      "found": 1,
+      "note": "The bakery's own month post: closed Nov 26 and 27, open Small Business Saturday Nov 28; the Nov 15 post and the bio say Saturdays 9-2 from Nov 21. John Moses's collab post announces his work on the wall for December First Friday. The site is a loading shell to curl."
+    },
+    "borderland": {
+      "how": "both",
+      "found": 0,
+      "note": "Shirts at Ijams and Ye Olde Steak House; the Playhouse's next thing is the New Play Festival readings in January."
+    },
+    "knoxville-theatre-club": {
+      "how": "both",
+      "found": 0,
+      "note": "Casting the Ramsey House candlelight tours (Dec 4-5, off the beat); Alas, Ajax tickets on sale soon."
+    },
+    "old-sevier-market": {
+      "how": "both",
+      "found": 0,
+      "note": "Joyce Farms turkeys ($5.50 a pound, 32 of them), new fish, student Thursdays 10% off, the SKE PTO tote. Open 7-7 daily per the bio; no holiday hours posted."
+    },
+    "angry-dumplings": {
+      "how": "instagram",
+      "found": 0,
+      "note": "Feed is the Farragut shop; the Sevier Ave shop is the 6 PM stop in the party plan (Andy)."
+    },
+    "honeybee": {
+      "how": "both",
+      "found": 0,
+      "note": "Fall flavors ending, winter specials coming; no event."
+    },
+    "kerns": {
+      "how": "both",
+      "found": 1,
+      "note": "Kern's holiday carousel (Nov 21, read slide by slide): the Holiday Market Dec 5-6, 12-13, 19-20, Santa photos Dec 6, 12 and 20, free movies Dec 2 (Elf), 9 (the Grinch), 16 (Polar Express), 23 (Santa Clause), Alchemy x UpTop ugly sweater whiskey tasting Dec 17. So last week's 'Santa and the Grinch Nov 28' lead is not on the venue's own list and is dropped. A Charlie Brown Thanksgiving plays Wed Nov 25 at 6:30 in the West Market (the poster). The site's holiday hours: Thanksgiving Eve closes 9, closed Thanksgiving Day, Black Friday open till 11. Nothing dated Thu-Sun."
+    },
+    "puckers": {
+      "how": "instagram",
+      "found": 0,
+      "note": "The 404 page returned nothing. The venue's reel says it will be open for the last regular-season game; happy hour 5-6 weekdays; trivia post undated; Preds on the screens. Nothing dated for the weekend."
+    },
+    "earls": {
+      "how": "both",
+      "found": 1,
+      "note": "/specials/: a rita a day (Thu $10 Patron mango, Fri $9 spicy pineapple, Sat $8 house, Sun $7 mimosas and Bloody Marys) and the game-day board ($2 off drafts, $6 Orange Bliss, 6-for-5 buckets, $2 off pizza, $4 and $5 shots). The venue's Nov 20 post ran the board for LSU; the patio is weatherized for winter (Nov 19 post). No holiday hours posted."
+    },
+    "ijams": {
+      "how": "both",
+      "found": 7,
+      "note": "Calendar slugs and /event-details/ pages: Wed 11/25 Full Moon Hike 7-8:30 (publish day, outside the window); Fri 11/27 Opt Outside guided family hike 10-12 ($10, ages 6+, up to 1.5 miles, trail games; the park's own Nov 20 post) and Fall Fungi ID 1-3 ($15, 14+, the season's last); Sat 11/28 Art in Nature: Ecosystem Explorers 10-12 (ages 9-14, $10 child) and the Native Landscape workshop (registered Weed Warriors only); Sun 11/29 Carve and Create block printing 10-12 (14+) and Nature Nerd Hike 1-2:30 ($15, 14+). The Moss Meander and the hooping in last week's leads are not on the calendar for Nov 29 (Moss Meander moved to Dec 6). Three run. Later: GivingTuesday match Dec 1, Owl Prowl Dec 4, Holiday Marketplace Dec 6 10-3, Winter Camp Dec 21-22."
+    },
+    "ambc": {
+      "how": "web",
+      "found": 0,
+      "note": "Monthly meeting at SouthSide Garage tonight (Nov 23); Sharp's Ridge mega work party Dec 5; Tour de Lights Dec 12."
+    },
+    "legacy-parks": {
+      "how": "both",
+      "found": 0,
+      "note": "Profile rendered (seen 12) with nothing posted since Nov 9; the site's latest is the Nov 11 murals post."
+    },
+    "sokno-taco": {
+      "how": "web",
+      "found": 0,
+      "note": "Weekly specials unchanged: Thu Singo 7-9 and $13 pitchers, Fri frozen coronaritas, weekend brunch 10-2, Sunday all-day happy hour; no holiday hours on the site."
+    },
+    "blank-news": {
+      "how": "web",
+      "found": 0,
+      "note": "Nothing new on South Knoxville."
+    },
+    "inside-of-knoxville": {
+      "how": "instagram",
+      "found": 0,
+      "note": "Site returned 403 to curl again. The Nov 15-24 planner's picks are downtown; McClung Warehouses meeting Nov 30 is downtown."
+    }
+  },
+  "leads": [
+    {
+      "date": "2026-11-26",
+      "what": "The Big Pink House Party Vol. 6 with TJO and Colin O'Neal at The Pink Cactus",
+      "source": "old-sevier-district",
+      "skipped": "no time or price from the venue, the DJs' profiles or the venue's Toast page"
+    },
+    {
+      "date": "2026-11-26",
+      "what": "Thanksgiving Day: Hi-Wire, Kern's, SoKno Sourdough and South Coast Pizza closed; SouthSide lists no Thursday special",
+      "source": "hi-wire",
+      "story": "specials-board"
+    },
+    {
+      "date": "2026-11-26",
+      "what": "Free first karaoke-room hour at The Pink Cactus, the last free Thursday of November",
+      "source": "pink-cactus",
+      "story": "karaoke-hour-pink-cactus"
+    },
+    {
+      "date": "2026-11-26",
+      "what": "Singo at SoKno Taco 7-9; Earl's $10 Patron mango ritas; Alliance and Fly by Night on their posted hours",
+      "source": "sokno-taco",
+      "skipped": "standing weeklies; in the party plan"
+    },
+    {
+      "date": "2026-11-27",
+      "what": "Black Friday at Hi-Wire: open at noon, Mug Club half price ($32.50) all day",
+      "source": "hi-wire",
+      "story": "black-friday-mug-club-hiwire"
+    },
+    {
+      "date": "2026-11-27",
+      "what": "Echo album release at The 808, doors 6, show 7, all ages, $5 plus fees",
+      "source": "the-808",
+      "story": "echo-album-release-808"
+    },
+    {
+      "date": "2026-11-27",
+      "what": "Wine & Wheel at Mighty Mud, 6-8, $60",
+      "source": "mighty-mud",
+      "skipped": "sold out on the studio's site"
+    },
+    {
+      "date": "2026-11-27",
+      "what": "Opt Outside guided family hike at Ijams Nature Center, 10-12, $10, ages 6+",
+      "source": "ijams",
+      "story": "opt-outside-ijams"
+    },
+    {
+      "date": "2026-11-27",
+      "what": "Fall Fungi ID beginner workshop at Ijams Nature Center, 1-3, $15, 14+",
+      "source": "ijams",
+      "story": "fall-fungi-ijams"
+    },
+    {
+      "date": "2026-11-27",
+      "what": "SouthSide Garage opens for lunch at 11 with the Dia de torta; Printshop $12 flights noon-9; Kern's open till 11",
+      "source": "southside-garage",
+      "skipped": "standing Friday hours; in the party plan"
+    },
+    {
+      "date": "2026-11-28",
+      "what": "Small Business Saturday across Old Sevier: SoKno Sourdough open 9-2, Old Sevier Market 7-7, Mighty Mud's gallery 9-5",
+      "source": "old-sevier-district",
+      "story": "small-business-saturday-old-sevier"
+    },
+    {
+      "date": "2026-11-28",
+      "what": "I'm Not Okay: The 808's Premier Emo Night, 9 PM-1 AM, 18+, $5 plus fees",
+      "source": "the-808",
+      "story": "emo-night-808"
+    },
+    {
+      "date": "2026-11-28",
+      "what": "Vols at Vanderbilt, 7 PM: Earl's game-day board, Printshop's dollar-off pints, Hi-Wire's screens",
+      "source": "earls",
+      "story": "specials-board"
+    },
+    {
+      "date": "2026-11-28",
+      "what": "Art in Nature: Ecosystem Explorers (ages 9-14) at Ijams Nature Center, 10-12, $10",
+      "source": "ijams",
+      "skipped": "Ijams Nature Center cap; a kids' class"
+    },
+    {
+      "date": "2026-11-28",
+      "what": "Native Landscape Certification Level 1 workshop at Ijams Nature Center, 10:30-12",
+      "source": "ijams",
+      "skipped": "open only to registered Weed Warriors"
+    },
+    {
+      "date": "2026-11-28",
+      "what": "Pictures with Santa and the Grinch at Kern's (last week's lead)",
+      "source": "kerns",
+      "skipped": "not on Kern's own holiday lineup (Nov 21 carousel); Santa photos are Dec 6, 12 and 20"
+    },
+    {
+      "date": "2026-11-29",
+      "what": "Carve and Create: Block Printing for Beginners at Ijams Nature Center, 10-12, 14+",
+      "source": "ijams",
+      "story": "block-printing-ijams"
+    },
+    {
+      "date": "2026-11-29",
+      "what": "Nature Nerd Hike at Ijams Nature Center, 1-2:30, $15, 14+",
+      "source": "ijams",
+      "skipped": "Ijams Nature Center cap; a guided walk like last week's"
+    },
+    {
+      "date": "2026-11-29",
+      "what": "Trivia Sunday with Knox Trivia Guys at The Pink Cactus, 6:30; Hi-Wire mimosas and Bloodys; SouthSide Dia de brunch 11-3",
+      "source": "pink-cactus",
+      "skipped": "standing weeklies; in the party plan"
+    }
+  ]
+}

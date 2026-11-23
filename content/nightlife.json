@@ -1,17 +1,17 @@
 {
   "_flow": "Each day reads as the night's arc: happy hour → dinner → events/concerts/comedy/drink specials → the closing-time hang. Bars, restaurants, music venues only.",
-  "updated": "2026-11-16",
-  "weekend": "Nov 19–22",
+  "updated": "2026-11-23",
+  "weekend": "Nov 26–29",
   "days": {
     "Thu": [
       {
         "id": "thu-earls",
         "time": "11:00 AM",
         "venue": "Earl's · 610 Waterfront Dr",
-        "headline": "Ten-dollar Patrón mango ritas",
-        "sub": "All day till 10 · mostly sunny and 67 · 610 Waterfront Dr",
+        "headline": "Ten-dollar Patrón mango ritas on Thanksgiving",
+        "sub": "All day till 10 · rain showers and 55 · the patio is weatherized · 610 Waterfront Dr",
         "cat": "drink",
-        "href": "/2026-11-18/specials-board"
+        "href": "/2026-11-25/specials-board"
       },
       {
         "id": "thu-alliance",
@@ -23,67 +23,40 @@
         "href": "https://www.instagram.com/alliancebrewing/p/DfPf-v4tsvP/"
       },
       {
-        "id": "thu-redbud",
-        "time": "4:00 PM",
-        "venue": "Redbud Kitchen · 906 Sevier Ave",
-        "headline": "Weekday happy hour, four to six",
-        "sub": "Double rewards points Thursdays · 906 Sevier Ave",
-        "cat": "drink",
-        "href": "https://www.redbudkitchen.com/"
-      },
-      {
         "id": "thu-printshop",
         "time": "4:00 PM",
         "venue": "Printshop Beer Co. · 1532 Island Home Ave",
-        "headline": "Dollar wing night with Friends BBQ, and ten percent off cases",
-        "sub": "Cases 4–9 · wings in the taproom · 1532 Island Home Ave",
-        "cat": "food",
-        "href": "https://www.instagram.com/printshopbeer/p/Dfuc2QlqlrK/"
+        "headline": "Ten percent off cases to carry to dinner",
+        "sub": "4–9 · mixed cases too · 1532 Island Home Ave",
+        "cat": "drink",
+        "href": "https://printshopbeer.com/specials/"
+      },
+      {
+        "id": "thu-flybynight",
+        "time": "4:00 PM",
+        "venue": "Fly by Night · 906 Sevier Ave",
+        "headline": "The seventies cocktail lounge, open till one",
+        "sub": "New cocktail menu · 906 Sevier Ave, Suite 126",
+        "cat": "drink",
+        "href": "https://www.flybynightknox.com/"
       },
       {
         "id": "thu-pinkcactus-karaoke",
         "time": "5:00 PM",
         "venue": "The Pink Cactus · 1147 Sevier Ave",
-        "headline": "Free first hour in a karaoke room",
-        "sub": "Every Thursday in November · book a room · 1147 Sevier Ave",
+        "headline": "Free first hour in a karaoke room, the last one of November",
+        "sub": "Opens at 5 · book a room online · 21+ after 9 · 1147 Sevier Ave",
         "cat": "mic",
-        "href": "https://www.instagram.com/thepinkcactusknox/p/DfS6ojXGao_/"
+        "href": "/2026-11-25/karaoke-hour-pink-cactus"
       },
       {
         "id": "thu-dumplings",
         "time": "6:00 PM",
         "venue": "Angry Dumplings · 1119 Sevier Ave",
-        "headline": "Dumplings before the movie or the show",
+        "headline": "Dumplings for the ones who skipped the turkey",
         "sub": "Hand-wrapped dumplings, noodles and boba · 1119 Sevier Ave",
         "cat": "food",
         "href": "https://www.instagram.com/dumplingsteaknoxville/"
-      },
-      {
-        "id": "thu-twilight",
-        "time": "6:30 PM",
-        "venue": "Kern's · 2201 Kern's Rising Way",
-        "headline": "Twilight on the big screen, free",
-        "sub": "Team Edward, Team Jacob, a plate from the hall · 2201 Kern's Rising Way",
-        "cat": "star",
-        "href": "/2026-11-18/twilight-kerns"
-      },
-      {
-        "id": "thu-ronis",
-        "time": "6:30 PM",
-        "venue": "Roni's Mac Bar at Kern's · 2201 Kern's Rising Way",
-        "headline": "Themed trivia on the Scruffy Bar screens",
-        "sub": "Every Thursday at 6:30 · 2201 Kern's Rising Way",
-        "cat": "mic",
-        "href": "https://www.instagram.com/kernsknox/p/DfIKp8HoGkm/"
-      },
-      {
-        "id": "thu-trailhead",
-        "time": "7:00 PM",
-        "venue": "Trailhead Beer Market · 1317 Island Home Ave",
-        "headline": "Trivia at seven",
-        "sub": "Gato Peligroso in the kitchen · 1317 Island Home Ave",
-        "cat": "mic",
-        "href": "https://www.instagram.com/trailheadbeer/"
       },
       {
         "id": "thu-soknotaco",
@@ -93,29 +66,6 @@
         "sub": "$13 domestic pitchers all day · 3701 Sevierville Pike",
         "cat": "mic",
         "href": "https://soknotaco.com/"
-      },
-      {
-        "id": "thu-808",
-        "time": "7:00 PM",
-        "venue": "The 808 · 808 Sevier Ave",
-        "headline": "lespecial, with Natalie Brooke opening",
-        "sub": "Doors 7, show 8 · 18+ · tickets on the venue's page · 808 Sevier Ave",
-        "cat": "music",
-        "href": "/2026-11-18/lespecial-808",
-        "ticket": {
-          "href": "https://808knox.com/",
-          "image": "/assets/spots/the-808-tickets-dirty-south.svg",
-          "alt": "Get tickets at The 808"
-        }
-      },
-      {
-        "id": "thu-superbirthday",
-        "time": "9:00 PM",
-        "venue": "Fly by Night · 906 Sevier Ave",
-        "headline": "Super Birthday gran prix for Jocelyn, Benicio, Minitiger and Tiny",
-        "sub": "9 PM · $5 · the new cocktail menu · 906 Sevier Ave",
-        "cat": "dance",
-        "href": "/2026-11-18/super-birthday-fbn"
       }
     ],
     "Fri": [
@@ -123,78 +73,73 @@
         "id": "fri-southside",
         "time": "11:00 AM",
         "venue": "SouthSide Garage · 1014 Sevier Ave",
-        "headline": "Open for lunch, and the Friday torta",
-        "sub": "Dia de Foods' torta special · 11–4 · 1014 Sevier Ave",
+        "headline": "Open for lunch at eleven, with the Dia de torta",
+        "sub": "Fridays 11–4 · open till midnight · 1014 Sevier Ave",
         "cat": "food",
         "href": "https://www.southsidegarageknox.com/specials/"
       },
       {
-        "id": "fri-printshop-flights",
+        "id": "fri-earls",
+        "time": "11:00 AM",
+        "venue": "Earl's · 610 Waterfront Dr",
+        "headline": "Nine-dollar spicy pineapple ritas",
+        "sub": "All day till 10 · partly sunny and 51 · 610 Waterfront Dr",
+        "cat": "drink",
+        "href": "/2026-11-25/specials-board"
+      },
+      {
+        "id": "fri-hiwire",
+        "time": "12:00 PM",
+        "venue": "Hi-Wire Brewing · 2020 Barber St",
+        "headline": "Black Friday: doors at noon, Mug Club half price",
+        "sub": "$32.50 for the year, one day only · 2020 Barber St",
+        "cat": "drink",
+        "href": "/2026-11-25/black-friday-mug-club-hiwire"
+      },
+      {
+        "id": "fri-printshop",
         "time": "12:00 PM",
         "venue": "Printshop Beer Co. · 1532 Island Home Ave",
-        "headline": "Twelve-dollar flights, you pick four",
-        "sub": "Noon to 9 every Friday · 1532 Island Home Ave",
+        "headline": "Twelve-dollar flights all day",
+        "sub": "Noon–9 · 1532 Island Home Ave",
         "cat": "drink",
         "href": "https://printshopbeer.com/specials/"
       },
       {
-        "id": "fri-earls",
+        "id": "fri-redbud",
         "time": "4:00 PM",
-        "venue": "Earl's · 610 Waterfront Dr",
-        "headline": "Nine-dollar spicy pineapple ritas",
-        "sub": "All day till 10 · mostly sunny and 68 · 610 Waterfront Dr",
+        "venue": "Redbud Kitchen · 906 Sevier Ave",
+        "headline": "Weekday happy hour, four to six",
+        "sub": "Order from the Hi-Wire taproom upstairs too · 906 Sevier Ave",
         "cat": "drink",
-        "href": "/2026-11-18/specials-board"
+        "href": "https://www.redbudkitchen.com/"
       },
       {
-        "id": "fri-ujima",
+        "id": "fri-kerns",
         "time": "5:00 PM",
-        "venue": "Printshop Beer Co. · 1532 Island Home Ave",
-        "headline": "Piethagorean's all-you-can-eat pizza and Caesar buffet for Ujima Soccer",
-        "sub": "5–8 · $23 · four pizzas off the stone · all profits to Ujima · 1532 Island Home Ave",
-        "cat": "star",
-        "href": "/2026-11-18/ujima-pizza-printshop",
-        "ticket": {
-          "href": "https://buytickets.at/piethagorean/2496218",
-          "image": "/assets/spots/printshop-tickets-dirty-south.svg",
-          "alt": "Get tickets at Printshop Beer Co."
-        }
-      },
-      {
-        "id": "fri-puckers",
-        "time": "5:00 PM",
-        "venue": "Puckers Sports Grill · 222 E Blount Ave",
-        "headline": "Pucker Hour from five to six, every screen on",
-        "sub": "Pucker Hour 5–6 · open till 11 · bottom of The Davy",
-        "cat": "drink",
-        "href": "https://www.instagram.com/puckersknoxville/"
+        "venue": "Kern's · 2201 Kern's Rising Way",
+        "headline": "The food hall is open till eleven on Black Friday",
+        "sub": "Three bars, twenty vendors · 2201 Kern's Rising Way",
+        "cat": "food",
+        "href": "https://kernsbakery.com/"
       },
       {
         "id": "fri-dumplings",
         "time": "6:00 PM",
         "venue": "Angry Dumplings · 1119 Sevier Ave",
-        "headline": "Dumplings before the pitches",
+        "headline": "Dumplings before the show",
         "sub": "Hand-wrapped dumplings, noodles and boba · 1119 Sevier Ave",
         "cat": "food",
         "href": "https://www.instagram.com/dumplingsteaknoxville/"
       },
       {
-        "id": "fri-pitch",
-        "time": "7:00 PM",
-        "venue": "Hi-Wire Brewing · 2020 Barber St",
-        "headline": "Pitch a Friend: your single friend, on slides, then a singles mixer",
-        "sub": "7 PM · free · presenters drink free · 2020 Barber St",
-        "cat": "star",
-        "href": "/2026-11-18/pitch-a-friend-hiwire"
-      },
-      {
         "id": "fri-808",
         "time": "7:00 PM",
         "venue": "The 808 · 808 Sevier Ave",
-        "headline": "Deadtronica: the Grateful Dead as dance music",
-        "sub": "Doors 7, show 8 · 18+ · tickets on the venue's page · 808 Sevier Ave",
+        "headline": "Echo's album release, all ages",
+        "sub": "Doors 6, show 7 · $5 plus fees · under 18 with a parent · 808 Sevier Ave",
         "cat": "music",
-        "href": "/2026-11-18/deadtronica-808",
+        "href": "/2026-11-25/echo-album-release-808",
         "ticket": {
           "href": "https://808knox.com/",
           "image": "/assets/spots/the-808-tickets-dirty-south.svg",
@@ -202,25 +147,11 @@
         }
       },
       {
-        "id": "fri-yeedm",
+        "id": "fri-flybynight",
         "time": "9:00 PM",
-        "venue": "The Pink Cactus · 1147 Sevier Ave",
-        "headline": "Planet Doom: yeEDM, a country-EDM crossover night",
-        "sub": "9 PM · presale on Doomsayer's site · 1147 Sevier Ave",
-        "cat": "dance",
-        "href": "/2026-11-18/yeedm-pink-cactus",
-        "ticket": {
-          "href": "https://iamdoomsayer.com/",
-          "image": "/assets/spots/the-pink-cactus-tickets-dirty-south.svg",
-          "alt": "Get tickets at The Pink Cactus"
-        }
-      },
-      {
-        "id": "fri-fbn",
-        "time": "10:00 PM",
         "venue": "Fly by Night · 906 Sevier Ave",
-        "headline": "The seventies lounge, open till one",
-        "sub": "New cocktail menu · 906 Sevier Ave",
+        "headline": "The late hang, cocktails till one",
+        "sub": "906 Sevier Ave, Suite 126",
         "cat": "drink",
         "href": "https://www.flybynightknox.com/"
       }
@@ -230,122 +161,81 @@
         "id": "sat-sourdough",
         "time": "9:00 AM",
         "venue": "SoKno Sourdough · 2006 Barber St",
-        "headline": "The bakery's first Saturday: bagels and bread, nine to one",
-        "sub": "Up the stairs on the loading dock · every Saturday from here · 2006 Barber St",
+        "headline": "Small Business Saturday: bagels and bread, nine to two",
+        "sub": "Up the loading-dock stairs between Redbud and Hi-Wire · 2006 Barber St",
         "cat": "food",
-        "href": "/2026-11-18/sourdough-saturdays"
+        "href": "/2026-11-25/small-business-saturday-old-sevier"
       },
       {
-        "id": "sat-burger",
+        "id": "sat-burger-brunch",
         "time": "11:00 AM",
-        "venue": "Sevier Ave Burger Co. · Sevier Ave",
-        "headline": "Brunch eleven to two",
-        "sub": "Pancakes, donuts, eggs, the new skillet potatoes · Sevier Ave",
+        "venue": "Sevier Ave Burger Co. · 1120 Sevier Ave",
+        "headline": "Weekend brunch, eleven to two",
+        "sub": "Poutine on the menu · 1120 Sevier Ave",
         "cat": "food",
-        "href": "https://www.instagram.com/sevieraveburgerco/p/DeztiYSH8ji/"
+        "href": "https://www.instagram.com/sevieraveburgerco/"
       },
       {
         "id": "sat-earls",
         "time": "11:00 AM",
         "venue": "Earl's · 610 Waterfront Dr",
-        "headline": "Game-day specials for LSU, plus eight-dollar house margs",
-        "sub": "$2 off drafts, $6 Orange Bliss, 6-for-5 buckets, $2 off pizza · kickoff 3:30 · 610 Waterfront Dr",
+        "headline": "Eight-dollar house margaritas, and the game-day board at seven",
+        "sub": "Vols at Vanderbilt, kickoff 7 PM · $2 off drafts, 6-for-5 buckets · 610 Waterfront Dr",
         "cat": "drink",
-        "href": "/2026-11-18/specials-board"
+        "href": "/2026-11-25/specials-board"
       },
       {
-        "id": "sat-southside",
+        "id": "sat-hiwire",
         "time": "12:00 PM",
-        "venue": "SouthSide Garage · 1014 Sevier Ave",
-        "headline": "Open noon to midnight for the game",
-        "sub": "$5 Vol Bombs, Dia de Foods, the patio · 1014 Sevier Ave",
+        "venue": "Hi-Wire Brewing · 2020 Barber St",
+        "headline": "Vols at Vanderbilt on the big screen",
+        "sub": "Opens at noon · kickoff 7 PM · no yoga this weekend · 2020 Barber St",
         "cat": "drink",
-        "href": "https://www.southsidegarageknox.com/specials/"
-      },
-      {
-        "id": "sat-printshop",
-        "time": "3:00 PM",
-        "venue": "Printshop Beer Co. · 1532 Island Home Ave",
-        "headline": "A dollar off pints from 30 minutes before kickoff to the final whistle",
-        "sub": "LSU at 3:30 · the Vols on the big screen · 1532 Island Home Ave",
-        "cat": "drink",
-        "href": "https://printshopbeer.com/specials/"
-      },
-      {
-        "id": "sat-kerns",
-        "time": "3:30 PM",
-        "venue": "Kern's · 2201 Kern's Rising Way",
-        "headline": "Vols watch party on the big screens",
-        "sub": "Every Saturday · the hall and the bar · 2201 Kern's Rising Way",
-        "cat": "drink",
-        "href": "https://www.instagram.com/kernsknox/p/DfNATfiiPz2/"
+        "href": "https://www.instagram.com/hiwirebrewing_knx/p/DgAbU7LjGu7/"
       },
       {
         "id": "sat-dumplings",
         "time": "6:00 PM",
         "venue": "Angry Dumplings · 1119 Sevier Ave",
-        "headline": "Dumplings after the game",
+        "headline": "Dumplings before kickoff",
         "sub": "Hand-wrapped dumplings, noodles and boba · 1119 Sevier Ave",
         "cat": "food",
         "href": "https://www.instagram.com/dumplingsteaknoxville/"
       },
       {
-        "id": "sat-808",
+        "id": "sat-printshop",
+        "time": "6:30 PM",
+        "venue": "Printshop Beer Co. · 1532 Island Home Ave",
+        "headline": "A dollar off pints from half an hour before kickoff",
+        "sub": "Till the final whistle · 1532 Island Home Ave",
+        "cat": "drink",
+        "href": "https://printshopbeer.com/specials/"
+      },
+      {
+        "id": "sat-puckers",
         "time": "7:00 PM",
+        "venue": "Puckers Sports Grill · 115 Mimosa Ave",
+        "headline": "The last regular-season game, every screen",
+        "sub": "Vols at Vanderbilt, 7 PM · 115 Mimosa Ave",
+        "cat": "drink",
+        "href": "https://www.instagram.com/puckersknoxville/reel/DgFeZJaiRdK/"
+      },
+      {
+        "id": "sat-808-emo",
+        "time": "9:00 PM",
         "venue": "The 808 · 808 Sevier Ave",
-        "headline": "Summoner's Circle homecoming with War Clown, NinjaWitch and Truckstop Dickpill",
-        "sub": "Doors 7, show 8 · all ages · 808 Sevier Ave",
-        "cat": "music",
-        "href": "/2026-11-18/summoners-circle-808",
+        "headline": "I'm Not Okay: the room's first emo night",
+        "sub": "9 PM–1 AM · 18+ · $5 plus fees · 808 Sevier Ave",
+        "cat": "dance",
+        "href": "/2026-11-25/emo-night-808",
         "ticket": {
           "href": "https://808knox.com/",
           "image": "/assets/spots/the-808-tickets-dirty-south.svg",
           "alt": "Get tickets at The 808"
         }
-      },
-      {
-        "id": "sat-firstbass",
-        "time": "8:00 PM",
-        "venue": "The Pink Cactus · 1147 Sevier Ave",
-        "headline": "First Bass x Planet Doom: two stages, ten DJs, Nofvcks Bivens from Las Vegas",
-        "sub": "8 PM · vendors, tooth gems, a new yard stage · 42 degrees by the end · 1147 Sevier Ave",
-        "cat": "dance",
-        "href": "/2026-11-18/first-bass-pink-cactus",
-        "ticket": {
-          "href": "https://iamdoomsayer.com/",
-          "image": "/assets/spots/the-pink-cactus-tickets-dirty-south.svg",
-          "alt": "Get tickets at The Pink Cactus"
-        }
-      },
-      {
-        "id": "sat-sletten",
-        "time": "9:00 PM",
-        "venue": "Fly by Night · 906 Sevier Ave",
-        "headline": "Marcel Sletten and Organically Programmed, live electronic from Athens",
-        "sub": "9 PM · the Hardware vs. Software tour · 906 Sevier Ave",
-        "cat": "music",
-        "href": "/2026-11-18/sletten-op-fbn"
       }
     ],
     "Sun": [
-      {
-        "id": "sun-soknotaco",
-        "time": "10:00 AM",
-        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
-        "headline": "Brunch, then all-day happy hour",
-        "sub": "Brunch 10–2 · $4 wells, $4 bubbles, $4 domestics all day · 3701 Sevierville Pike",
-        "cat": "food",
-        "href": "https://soknotaco.com/"
-      },
-      {
-        "id": "sun-earls",
-        "time": "11:00 AM",
-        "venue": "Earl's · 610 Waterfront Dr",
-        "headline": "Seven-dollar mimosas and Bloody Marys",
-        "sub": "All day till 10 · mostly sunny and 67 · 610 Waterfront Dr",
-        "cat": "drink",
-        "href": "/2026-11-18/specials-board"
-      },
       {
         "id": "sun-southside",
         "time": "11:00 AM",
@@ -356,27 +246,31 @@
         "href": "https://www.southsidegarageknox.com/specials/"
       },
       {
-        "id": "sun-redbud",
+        "id": "sun-earls",
         "time": "11:00 AM",
-        "venue": "Redbud Kitchen · 906 Sevier Ave",
-        "headline": "Brunch till four, the Backwoods Benedict",
-        "sub": "Biscuits, pimento, baked eggs, hollandaise · 906 Sevier Ave",
-        "cat": "food",
-        "href": "https://www.redbudkitchen.com/"
+        "venue": "Earl's · 610 Waterfront Dr",
+        "headline": "Seven-dollar mimosas and Bloody Marys",
+        "sub": "All day till 10 · mostly sunny and 61 · 610 Waterfront Dr",
+        "cat": "drink",
+        "href": "/2026-11-25/specials-board"
       },
       {
-        "id": "sun-glass",
-        "time": "3:00 PM",
+        "id": "sun-hiwire",
+        "time": "12:00 PM",
         "venue": "Hi-Wire Brewing · 2020 Barber St",
-        "headline": "Stained glass workshop with Visualize Art Studio: a pumpkin, a boot or a bat",
-        "sub": "3 PM · two hours · $80, supplies included · 2020 Barber St",
-        "cat": "star",
-        "href": "/2026-11-18/stained-glass-hiwire",
-        "ticket": {
-          "href": "https://visualizeartstudio.com/events",
-          "image": "/assets/spots/hi-wire-tickets-dirty-south.svg",
-          "alt": "Get tickets at Hi-Wire"
-        }
+        "headline": "Sunday hangs, mimosas and Bloodys",
+        "sub": "Opens at noon · no yoga this weekend · 2020 Barber St",
+        "cat": "drink",
+        "href": "https://www.instagram.com/hiwirebrewing_knx/p/DgAbU7LjGu7/"
+      },
+      {
+        "id": "sun-soknotaco",
+        "time": "12:00 PM",
+        "venue": "SoKno Taco Cantina · 3701 Sevierville Pike",
+        "headline": "All-day happy hour: $4 wells, $4 champagne, $4 domestics",
+        "sub": "Brunch 10–2 first · 3701 Sevierville Pike",
+        "cat": "drink",
+        "href": "https://soknotaco.com/"
       },
       {
         "id": "sun-dumplings",
@@ -395,15 +289,6 @@
         "sub": "Every Sunday at 6:30 · gift-card prizes · 1147 Sevier Ave",
         "cat": "mic",
         "href": "https://www.instagram.com/thepinkcactusknox/p/DfvGVR1OWfo/"
-      },
-      {
-        "id": "sun-eras",
-        "time": "9:00 PM",
-        "venue": "The Pink Cactus · 1147 Sevier Ave",
-        "headline": "Eras of House: Goos:3 plays house music decade by decade",
-        "sub": "9 PM – midnight · the DJ's first set at the pink house · 1147 Sevier Ave",
-        "cat": "dance",
-        "href": "/2026-11-18/eras-of-house-pink-cactus"
       }
     ]
   },
