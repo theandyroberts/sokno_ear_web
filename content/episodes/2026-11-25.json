@@ -137,7 +137,7 @@
         "Thu"
       ],
       "hot": false,
-      "image": "/assets/spots/no24_karaoke_shared_mic_four.jpg",
+      "image": "/assets/spots/no24_karaoke_duet_no_hands.jpg",
       "title": "Free karaoke hour at The Pink Cactus",
       "blurb": "Thanksgiving night from five; the first hour in a room is on the house.",
       "href": "#karaoke-hour-pink-cactus"
@@ -259,7 +259,7 @@
         "standing": true,
         "standingKey": "karaoke-hour-pink-cactus"
       },
-      "image": "/assets/spots/no24_karaoke_shared_mic_four.jpg"
+      "image": "/assets/spots/no24_karaoke_duet_no_hands.jpg"
     },
     {
       "id": "echo-album-release-808",
