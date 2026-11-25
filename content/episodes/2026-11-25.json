@@ -185,7 +185,7 @@
         "Sat"
       ],
       "hot": false,
-      "image": "/assets/spots/no24_bartender_pint_slide.jpg",
+      "image": "/assets/spots/no24_dude_bucket_grab.jpg",
       "title": "Earl's game-day board for Vols at Vanderbilt",
       "blurb": "Kickoff at seven; buckets, drafts and pizza marked down, and a rita a day.",
       "href": "#specials-board"
@@ -808,7 +808,7 @@
         "standing": true,
         "standingKey": "specials-board"
       },
-      "image": "/assets/spots/no24_bartender_pint_slide.jpg"
+      "image": "/assets/spots/no24_dude_bucket_grab.jpg"
     }
   ],
   "sidebar": {
