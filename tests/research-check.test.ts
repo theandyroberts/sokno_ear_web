@@ -25,6 +25,11 @@ describe("the source list", () => {
 });
 
 describe("checkResearch", () => {
+  it("fails a draft that mentions SoKno Sourdough anywhere (Andy, 2026-11-27: excluded for good)", () => {
+    const withBakery = { ...balanced, stories: [...balanced.stories, { id: "g", label: "Old Sevier", text: "Bagels at So-Kno Sourdough" }] };
+    const r = checkResearch(registry, { checked: allChecked(), leads: [hubLead] }, withBakery);
+    expect(r.errors.some((e) => /excluded from the Ear/.test(e))).toBe(true);
+  });
   it("passes a week that read everything and is spread across the beat", () => {
     const r = checkResearch(registry, { checked: allChecked(), leads: [hubLead] }, balanced);
     expect(r.errors).toEqual([]);

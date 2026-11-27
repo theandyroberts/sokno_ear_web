@@ -690,6 +690,7 @@
     },
     "sokno-sourdough": {
       "name": "SoKno Sourdough",
+      "excluded": "Andy, 2026-11-27: no more notes, tags or mentions. The Ear does not reference, promote or mention SoKno Sourdough in any future issue.",
       "match": [
         "SoKno Sourdough",
         "Sokno Sourdough"

@@ -447,6 +447,7 @@
     },
     "sokno-sourdough": {
       "name": "SoKno Sourdough",
+      "excluded": "Andy, 2026-11-27: never reference, promote or mention SoKno Sourdough in a future issue; kept only so past episodes still resolve. Not offered in the party planner.",
       "match": [
         "SoKno Sourdough",
         "So-Kno Sourdough"

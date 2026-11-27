@@ -11,7 +11,7 @@ import { PLAN_DAYS, buildFeatured, catOf, minutesOf, nightDates, sortName, weekK
 export function buildDirectory(registry: VenueRegistry, days: Record<NightDay, NightItem[]>): PlannerData["directory"] {
   const out: PlannerData["directory"] = { eat: [], drink: [] };
   for (const [key, v] of Object.entries(registry)) {
-    if (v.closed) continue;
+    if (v.closed || v.excluded) continue;
     for (const cat of v.serves ?? []) {
       out[cat].push({
         id: `v:${key}`, cat, kind: "venue", title: v.name, brand: v.name,

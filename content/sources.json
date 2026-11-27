@@ -4,6 +4,13 @@
     "ijamsMaxStories": 4,
     "ijamsMaxShare": 0.34,
     "oldSevierMinStories": 3,
+    "excluded": [
+      {
+        "key": "sokno-sourdough",
+        "names": ["SoKno Sourdough", "So-Kno Sourdough", "Sokno Sourdough", "soknosourdough"],
+        "why": "Andy, 2026-11-27: do not reference, promote or mention SoKno Sourdough in any future issue. No story, no tag, no party-plan stop, no venue note, no Instagram post. Past episodes stay as published, with the owner taken out of the pictures (bread and bagels only)."
+      }
+    ],
     "why": "Andy, 2026-10-02: No. 16 ran nine Ijams Nature Center stories and one from Old Sevier on the weekend a music venue opened on Sevier Ave. Ijams Nature Center is a drive for most readers; Old Sevier is where they are."
   },
   "sources": [
@@ -148,6 +155,8 @@
     {
       "key": "sokno-sourdough",
       "name": "SoKno Sourdough",
+      "weekly": false,
+      "excluded": "Andy, 2026-11-27: never reference, promote or mention in a future issue (see _rules.excluded). Do not read this feed.",
       "district": "Old Sevier",
       "address": "2006 Barber St",
       "instagram": "soknosourdough",

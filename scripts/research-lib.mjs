@@ -69,6 +69,15 @@ export function checkResearch(registry, log, episode, handles = null) {
     warnings.push(`no leads logged from ${hub.name}; it posts every week`);
   }
 
+  // 2b. Excluded places never appear (Andy, 2026-11-27: SoKno Sourdough is out of the Ear
+  //     for good — no story, mention, tag or party stop). Searches the whole draft, so a
+  //     passing mention in another venue's story or an Instagram tag fails it too.
+  const draftText = JSON.stringify(episode).toLowerCase();
+  for (const ex of rules.excluded ?? []) {
+    const hit = (ex.names ?? []).find((n) => draftText.includes(String(n).toLowerCase()));
+    if (hit || draftText.includes(`"${ex.key}"`)) errors.push(`the draft mentions ${ex.names?.[0] ?? ex.key} ("${hit ?? ex.key}"); it is excluded from the Ear: ${ex.why}`);
+  }
+
   // 3. The week is spread across the beat.
   const total = allStories(episode).length;
   const ijams = table["Ijams Nature Center"] ?? 0;

@@ -161,7 +161,7 @@
         "Sat"
       ],
       "hot": false,
-      "image": "/assets/spots/no23_bagel_tray_baker.jpg",
+      "image": "/assets/spots/no23_bagel_tray_loaves.jpg",
       "title": "SoKno Sourdough's first Saturday",
       "blurb": "Bagels and bread, nine to one, and every Saturday after.",
       "href": "#sourdough-saturdays"
@@ -971,7 +971,7 @@
           "Saturday, and every Saturday after"
         ]
       },
-      "image": "/assets/spots/no23_bagel_tray_baker.jpg"
+      "image": "/assets/spots/no23_bagel_tray_loaves.jpg"
     },
     {
       "id": "stained-glass-hiwire",

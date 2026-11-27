@@ -24,6 +24,9 @@ export type Venue = {
   /** Set (e.g. "2026-08") when the business has closed: kept so archived episodes still
    *  resolve, but never matched against a row's wording, only against an event location. */
   closed?: string;
+  /** Set when Andy has taken a place out of the Ear for good (SoKno Sourdough, 2026-11-27):
+   *  kept so archived episodes still resolve, but never offered in the party planner. */
+  excluded?: string;
   /** Lists the venue under Eat and/or Drink in the party planner's "show all". */
   serves?: ("eat" | "drink")[];
   /** One-line street address, as the Ear has published it. */
