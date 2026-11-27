@@ -118,6 +118,9 @@ export type ResolvedVenue = { key: string; name: string; logo: string | null; si
 export function resolveVenue(locationName: string | undefined, registry: VenueRegistry): ResolvedVenue | null {
   const name = (locationName ?? "").trim();
   if (!name) return null;
+  // An excluded place (SoKno Sourdough, Andy 2026-11-27) gets no venue page, no search
+  // entry and no framed mark: old stories keep their text but link nowhere.
+  if (matchVenue(name, registry)?.excluded) return null;
 
   const fromRegistry = (key: string): ResolvedVenue | null => {
     const v = registry[key];
@@ -147,6 +150,7 @@ export function storyVenue(
 ): ResolvedVenue | null {
   if (story.venueKey) {
     const v = registry[story.venueKey];
+    if (v?.excluded) return null;
     if (v) return { key: story.venueKey, name: v.name, logo: v.logo ?? null, site: v.site, aliases: v.match };
   }
   return resolveVenue(story.event?.locationName, registry);

@@ -161,9 +161,9 @@
         "Sat"
       ],
       "hot": false,
-      "image": "/assets/spots/no24_bagel_bag_loaf.jpg",
+      "image": "/assets/spots/no24_grocer_produce_crate.jpg",
       "title": "Small Business Saturday in Old Sevier",
-      "blurb": "The bakery from nine, the grocery from seven, the pottery gallery all day.",
+      "blurb": "The grocery from seven, the pottery gallery from nine.",
       "href": "#small-business-saturday-old-sevier"
     },
     {
@@ -416,15 +416,11 @@
         "Sat"
       ],
       "layout": "imageLeft",
-      "title": "Small Business Saturday in Old Sevier: the bakery is open, the grocery is stocked and the pottery gallery has the holiday show up",
+      "title": "Small Business Saturday in Old Sevier: the grocery has filled its cases and the pottery gallery has the holiday show up",
       "facts": [
         {
           "label": "When",
           "value": "Sat Nov 28 · all day across the district"
-        },
-        {
-          "label": "SoKno Sourdough",
-          "value": "9 AM – 2 PM · 2006 Barber St, the loading dock between Redbud and Hi-Wire · closed Thu and Fri"
         },
         {
           "label": "Old Sevier Market",
@@ -442,21 +438,13 @@
       "body": [
         {
           "type": "paragraph",
-          "text": "The Old Sevier District's November list puts Small Business Saturday across the whole neighborhood, and the shops have said what they are doing with it. SoKno Sourdough closes for Thanksgiving and the day after, then opens Saturday at nine for bagels and bread until two, its second Saturday ever; the door is up the new stairs on the loading dock on Barber Street. Old Sevier Market, the grocery that opened on Sevier Avenue in October, keeps its seven-to-seven hours and has spent the month filling the cases: Joyce Farms turkeys, new fish, Whoa Doggie hot sauces, and the South Knoxville Elementary tote, thirty dollars with every cent to the school's PTO. Mighty Mud's gallery on Island Home Avenue is open nine to five with its current show of work by the studio's own potters, which is where the one-of-a-kind mug comes from. Sunny and 58 for the walk between them."
+          "text": "The Old Sevier District's November list puts Small Business Saturday across the whole neighborhood, and two of the shops have said what they are doing with it. Old Sevier Market, the grocery that opened on Sevier Avenue in October, keeps its seven-to-seven hours and has spent the month filling the cases: Joyce Farms turkeys, new fish, Whoa Doggie hot sauces, and the South Knoxville Elementary tote, thirty dollars with every cent to the school's PTO. Mighty Mud's gallery on Island Home Avenue is open nine to five with its current show of work by the studio's own potters, which is where the one-of-a-kind mug comes from. Sunny and 58 for the walk between them."
         }
       ],
       "sources": [
         {
           "label": "Old Sevier District on Instagram — November in Old Sevier (slide 6)",
           "url": "https://www.instagram.com/oldsevierdistrict/p/DfYVDCYDQUo/"
-        },
-        {
-          "label": "SoKno Sourdough on Instagram — November at the bakery",
-          "url": "https://www.instagram.com/soknosourdough/p/DfXCpPTFYx2/"
-        },
-        {
-          "label": "SoKno Sourdough on Instagram — open Saturdays",
-          "url": "https://www.instagram.com/soknosourdough/p/DfyXdxXtqi0/"
         },
         {
           "label": "Old Sevier Market on Instagram",
@@ -480,7 +468,6 @@
       "social": {
         "igTags": [
           "old-sevier",
-          "sokno-sourdough",
           "old-sevier-market"
         ],
         "igAct": {
@@ -488,10 +475,10 @@
         },
         "igBanner": [
           "Small Business Saturday in Old Sevier",
-          "Saturday, the bakery from nine"
+          "Saturday, the market from seven"
         ]
       },
-      "image": "/assets/spots/no24_bagel_bag_loaf.jpg"
+      "image": "/assets/spots/no24_grocer_produce_crate.jpg"
     },
     {
       "id": "opt-outside-ijams",
@@ -742,7 +729,7 @@
         },
         {
           "label": "Thanksgiving Day",
-          "value": "Closed: Hi-Wire, Kern's, SoKno Sourdough, South Coast Pizza · SouthSide lists no Thursday special"
+          "value": "Closed: Hi-Wire, Kern's, South Coast Pizza · SouthSide lists no Thursday special"
         }
       ],
       "body": [
@@ -756,7 +743,7 @@
         },
         {
           "type": "paragraph",
-          "text": "Printshop on Island Home Avenue takes a dollar off pints from half an hour before kickoff to the final whistle. Hi-Wire puts the game on the big screen on Barber Street. Puckers, the sports grill on Mimosa Avenue, says it will be open for every snap of the last regular-season game. For Thursday itself, know before you drive: Hi-Wire, Kern's, SoKno Sourdough and South Coast Pizza are closed for Thanksgiving, and SouthSide Garage's weekly list has no Thursday on it."
+          "text": "Printshop on Island Home Avenue takes a dollar off pints from half an hour before kickoff to the final whistle. Hi-Wire puts the game on the big screen on Barber Street. Puckers, the sports grill on Mimosa Avenue, says it will be open for every snap of the last regular-season game. For Thursday itself, know before you drive: Hi-Wire, Kern's and South Coast Pizza are closed for Thanksgiving, and SouthSide Garage's weekly list has no Thursday on it."
         }
       ],
       "sources": [
@@ -872,7 +859,7 @@
         "month": "NOV",
         "day": "28",
         "title": "Small Business Saturday in Old Sevier",
-        "meta": "SoKno Sourdough 9 – 2 · Old Sevier Market 7 – 7",
+        "meta": "Old Sevier Market 7 – 7 · Mighty Mud gallery 9 – 5",
         "starred": false,
         "href": "#small-business-saturday-old-sevier"
       },

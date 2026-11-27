@@ -2,6 +2,8 @@ import { describe, it, expect } from "vitest";
 import fs from "node:fs";
 import path from "node:path";
 import { checkResearch, districtTable, ACT_GATE_FROM } from "../scripts/research-lib.mjs";
+import { resolveVenue, storyVenue } from "../lib/search";
+import { loadVenues } from "../lib/venues";
 
 const registry = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../content/sources.json"), "utf8"));
 const story = (id: string, label: string) => ({ id, label });
@@ -103,5 +105,14 @@ describe("the act in the picture (from No. 19)", () => {
   it("leaves the weeks before the gate alone", () => {
     const old = { ...balanced, date: "2026-10-14" };
     expect(checkResearch(registry, log, old, handles).errors).toEqual([]);
+  });
+});
+
+describe("an excluded venue", () => {
+  it("has no venue page, search entry or facts-box mark (SoKno Sourdough, Andy 2026-11-27)", () => {
+    const reg = loadVenues();
+    expect(resolveVenue("SoKno Sourdough", reg)).toBeNull();
+    expect(storyVenue({ venueKey: "sokno-sourdough" }, reg)).toBeNull();
+    expect(resolveVenue("Old Sevier Market", reg)?.key).toBe("old-sevier-market");
   });
 });

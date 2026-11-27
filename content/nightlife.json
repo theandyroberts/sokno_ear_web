@@ -158,11 +158,11 @@
     ],
     "Sat": [
       {
-        "id": "sat-sourdough",
-        "time": "9:00 AM",
-        "venue": "SoKno Sourdough · 2006 Barber St",
-        "headline": "Small Business Saturday: bagels and bread, nine to two",
-        "sub": "Up the loading-dock stairs between Redbud and Hi-Wire · 2006 Barber St",
+        "id": "sat-market",
+        "time": "7:00 AM",
+        "venue": "Old Sevier Market · 906 Sevier Ave",
+        "headline": "Small Business Saturday: the grocery, seven to seven",
+        "sub": "Joyce Farms turkeys, Whoa Doggie hot sauces and the school PTO tote · 906 Sevier Ave, Unit 130",
         "cat": "food",
         "href": "/2026-11-25/small-business-saturday-old-sevier"
       },
