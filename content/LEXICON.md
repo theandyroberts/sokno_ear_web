@@ -18,6 +18,7 @@ A living reference for how words are **said** (audio briefings / ElevenLabs) and
 | **Patrón** | **"puh-TRONE"** — rhymes with *drone* | Andy's own pronunciation, 2026-08-25: *"I always say Patrón to rhyme with drone… it's what I'd say and I get my order."* Not "pa-TRON," not "PAT-ron," not three beats. For TTS spell it **`puh-trone`** — the earlier `Pa-trone` spelling read a little off in the No. 11 take. |
 | **Blount** (Avenue, County) | **"BLUNT"** | Local pronunciation; the spelling invites "blownt". For TTS spell it **`Blunt`**. Added 2026-11-16 for the Riverwalk Garage line (corner of Blount Ave and Kay St; say the corner, Kay St is tiny and not well known — Andy). |
 | **LSU** | **"the Bengal Tigers"** | Spelled out as letters, the voice reads L, S, U unnaturally separated (Andy, 2026-11-16). In the audio script write **`the Bengal Tigers`**; written copy keeps LSU. For any opponent whose name is initials, say the mascot instead. |
+| **fungi** | **"FUN-guy"** — hard g, like *fun guy* | Andy's own way of saying it (2026-11-27). Left as "fungi", the voice says "FUN-jai" (No. 24's fungi walk). For TTS spell it **`fun-guy`**; written copy keeps "fungi". |
 *(Add venue names, street names, and people as we confirm them.)*
 
 ---
