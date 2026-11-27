@@ -170,8 +170,8 @@ export function Paper({ episode, permalinks = true, storyView = false, venues, a
         <SectionHeader>{s.label}</SectionHeader>
         <Article id={s.id} label={s.label} labelColor={s.labelColor} days={s.days} image={s.image} imageCaption={s.imageCaption} imageZoom={s.imageZoom} ticket={s.ticket} venue={storyVenue(s, registry)} title={s.title} deck={s.deck} facts={factNodes(s.facts)} layout={s.layout}>
           <ArticleBody blocks={s.body} />
-          <ArticleSources sources={s.sources} />
-          {permalinks && <ShareStory slug={episode.slug} id={s.id} title={s.title} />}
+          {!s.hideLinks && <ArticleSources sources={s.sources} />}
+          {permalinks && !s.hideLinks && <ShareStory slug={episode.slug} id={s.id} title={s.title} />}
         </Article>
       </section>
     </div>
@@ -230,8 +230,8 @@ export function Paper({ episode, permalinks = true, storyView = false, venues, a
             <div className="ear-maincol">
               <Article id={feature.id} label={feature.label} labelColor={feature.labelColor} days={feature.days} image={feature.image} imageCaption={feature.imageCaption} imageZoom={feature.imageZoom} ticket={feature.ticket} venue={storyVenue(feature, registry)} title={feature.title} deck={feature.deck} facts={factNodes(feature.facts)} layout={feature.layout}>
                 <ArticleBody blocks={feature.body} />
-                <ArticleSources sources={feature.sources} />
-                {permalinks && <ShareStory slug={episode.slug} id={feature.id} title={feature.title} />}
+                {!feature.hideLinks && <ArticleSources sources={feature.sources} />}
+                {permalinks && !feature.hideLinks && <ShareStory slug={episode.slug} id={feature.id} title={feature.title} />}
               </Article>
               {lifted.map((s) => renderStory(s, true))}
             </div>

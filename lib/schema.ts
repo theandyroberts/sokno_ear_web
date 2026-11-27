@@ -99,6 +99,9 @@ export const StorySchema = z.object({
   facts: z.array(Fact).default([]),
   body: z.array(Block).min(1),
   sources: z.array(Source).optional(),
+  /** Hide the sources line and the share button; the data stays (Andy, 2026-11-27: the
+   *  old SoKno Sourdough stories stay up but give no way to link out or share). */
+  hideLinks: z.boolean().optional(),
   event: EventDetails.optional(),
   social: Social.optional(),
   /** Registry key (content/venues.json) for the framed mark in the facts box when it is not

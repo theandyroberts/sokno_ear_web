@@ -907,6 +907,7 @@
     },
     {
       "id": "sourdough-saturdays",
+      "hideLinks": true,
       "label": "Old Sevier",
       "labelColor": "rust",
       "days": [

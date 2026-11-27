@@ -395,6 +395,7 @@
     },
     {
       "id": "sokno-sourdough-first-friday",
+      "hideLinks": true,
       "label": "Old Sevier",
       "labelColor": "rust",
       "days": [
